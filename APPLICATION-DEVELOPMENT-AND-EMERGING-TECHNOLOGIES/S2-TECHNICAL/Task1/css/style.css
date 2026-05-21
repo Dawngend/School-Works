@@ -1,0 +1,67 @@
+body {
+    font-family: 'Times New Roman', Times, serif; /* Matches the academic document style */
+    background-color: #f4f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    background-color: #fff;
+    padding: 10px;
+}
+
+table {
+    width: 900px;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: 1px solid black; /* Outer border */
+}
+
+th, td {
+    border: 1px solid black; /* Inner borders */
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: normal;
+    padding: 15px;
+}
+
+th {
+    font-weight: normal;
+    font-size: 18px;
+}
+
+/* Specific Column Sizing and Alignment */
+.img-cell {
+    width: 20%;
+}
+
+.img-cell img {
+    width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.name-cell {
+    width: 15%;
+    font-size: 18px;
+}
+
+.desc-cell {
+    width: 20%;
+    font-size: 16px;
+}
+
+.facts-cell {
+    width: 45%;
+    text-align: left; /* Align facts to the left for better readability */
+    font-size: 16px;
+    padding: 20px;
+    line-height: 1.5;
+}
