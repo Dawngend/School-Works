@@ -2,6 +2,8 @@ import os
 import json
 import re
 import sys
+import time
+import math
 from google import genai
 from google.genai import types
 
@@ -13,7 +15,7 @@ from database import create_deck, add_card
 # MODEL CHOICES: 
 # Set to "gemini-3.5-flash" for rapid, standard generation
 # Set to "gemini-3.1-pro" for ultra-complex reasoning or massive files
-MODEL_NAME = "gemini-3.5-flash"
+MODEL_NAME = "gemini-3.1-pro"
 
 MAX_CHUNK_CHARS = 12_000
 
@@ -26,6 +28,22 @@ SYSTEM_PROMPT = (
     '(string), "options" (array of exactly 4 strings), and '
     '"correct_answer" (string matching one option exactly).'
 )
+
+
+def get_andy_prompt(target_count: int) -> str:
+    """
+    Build a dynamic system prompt so the model targets an exact question count.
+    """
+    return (
+        f"You are Andy, a brilliant, friendly, and rigorous Computer Science study buddy. "
+        f"Your goal is to help the user ace their exams. Analyze the provided module text. "
+        f"Generate exactly {target_count} multiple-choice flashcards. "
+        f"CRITICAL: Do not just ask for basic vocabulary definitions. The questions MUST be "
+        f"highly situational, scenario-based applications of the concepts. Make them think! "
+        f"Output a strictly formatted JSON array where each object has: "
+        f'"type" (must be "multiple_choice"), "question" (string), '
+        f'"options" (array of exactly 4 strings), and "correct_answer" (string matching one option exactly).'
+    )
 
 # ── Gemini client ─────────────────────────────────────────────────────────────
 
@@ -111,7 +129,7 @@ def _strip_json_fences(raw: str) -> str:
 
 # ── LLM interaction ───────────────────────────────────────────────────────────
 
-def _query_gemini(client: genai.Client, text_chunk: str) -> list[dict]:
+def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str = SYSTEM_PROMPT) -> list[dict]:
     """
     Send a single *text_chunk* to Gemini and return the parsed list of
     question dicts.  Returns an empty list on any error so the caller can
@@ -126,7 +144,7 @@ def _query_gemini(client: genai.Client, text_chunk: str) -> list[dict]:
         response = client.models.generate_content(
             model=MODEL_NAME,
             config=types.GenerateContentConfig(
-                system_instruction=SYSTEM_PROMPT,
+                system_instruction=system_prompt,
                 # Instruct the API to return clean JSON without extra prose
                 response_mime_type="application/json",
                 temperature=0.7,
@@ -194,6 +212,95 @@ def _validate_card(card: dict, index: int) -> bool:
         return False
 
     return True
+
+
+def generate_custom_deck(
+    selected_files: list[str],
+    deck_name: str,
+    subject: str,
+    total_questions: int,
+) -> int | None:
+    """
+    Build a deck from multiple selected files and target a specific question count.
+    """
+    print(f"\n[1/4] Processing {len(selected_files)} module(s)...")
+    combined_text = ""
+
+    for filename in selected_files:
+        file_path = os.path.join("uploads", filename)
+        if not os.path.exists(file_path) and os.path.exists(filename):
+            file_path = filename
+
+        text = process_module_file(file_path)
+        if not text.startswith("Error") and not text.startswith("Unsupported"):
+            combined_text += f"\n\n--- Content from {filename} ---\n\n" + text
+        else:
+            print(f"  [Warning] Skipping {filename}: {text}")
+
+    text_length = len(combined_text)
+    print(f"  Extracted {text_length:,} characters from all selected modules.")
+
+    if text_length < 50:
+        print("  [Abort] Not enough valid text extracted to generate meaningful questions.")
+        return None
+
+    chunks = _chunk_text(combined_text)
+    print(f"\n[2/4] Split into {len(chunks)} chunk(s) (max {MAX_CHUNK_CHARS:,} chars each).")
+
+    questions_per_chunk = math.ceil(total_questions / len(chunks))
+
+    print(f"\n[3/4] Andy is generating {total_questions} situational questions using '{MODEL_NAME}'...")
+    client = _get_client()
+    all_raw_cards: list[dict] = []
+
+    for i, chunk in enumerate(chunks, start=1):
+        print(f"  Chunk {i}/{len(chunks)} ...", end=" ", flush=True)
+        prompt = get_andy_prompt(questions_per_chunk)
+        cards = _query_gemini(client, chunk, system_prompt=prompt)
+        print(f"received {len(cards)} card(s).")
+        all_raw_cards.extend(cards)
+
+        if i < len(chunks):
+            print("  [Pausing for 15 seconds to respect free API limits...]")
+            time.sleep(15)
+
+    all_raw_cards = all_raw_cards[:total_questions]
+    print(f"  Total raw cards finalized for validation: {len(all_raw_cards)}")
+
+    print(f"\n[4/4] Validating and saving to database...")
+
+    valid_cards = [
+        card for i, card in enumerate(all_raw_cards, start=1)
+        if _validate_card(card, i)
+    ]
+
+    if not valid_cards:
+        print("  [Abort] No valid cards were generated. Deck will not be created.")
+        return None
+
+    modules_included_string = ", ".join(selected_files)
+
+    deck_id = create_deck(
+        name=deck_name,
+        modules_included=modules_included_string,
+        subject=subject,
+    )
+
+    for card in valid_cards:
+        add_card(
+            deck_id=deck_id,
+            card_type=card["type"],
+            question=card["question"],
+            correct_answer=card["correct_answer"],
+            options=card["options"],
+        )
+
+    print(f"\n  Deck '{deck_name}' created successfully by Andy.")
+    print(f"  Deck ID       : {deck_id}")
+    print(f"  Cards saved   : {len(valid_cards)}")
+    print(f"  Cards skipped : {len(all_raw_cards) - len(valid_cards)}")
+
+    return deck_id
 
 
 # ── Core public function ──────────────────────────────────────────────────────

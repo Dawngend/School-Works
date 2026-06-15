@@ -216,7 +216,10 @@ elif app_mode == "📚 Study Dashboard":
         # Visual Progress Bar
         progress_val = st.session_state.current_index / len(st.session_state.cards_queue)
         st.progress(progress_val)
-        st.caption(f"<div style='text-align: center; color: #94A3B8;'>Question {st.session_state.current_index + 1} of {len(st.session_state.cards_queue)}</div>", unsafe_allow_html=True)
+        st.markdown(
+            f"<div style='text-align: center; color: #94A3B8;'>Question {st.session_state.current_index + 1} of {len(st.session_state.cards_queue)}</div>",
+            unsafe_allow_html=True,
+        )
         
         # Centralized Cream Question Card
         st.markdown(f"""
