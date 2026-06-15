@@ -63,6 +63,8 @@ if "failed_cards_pool" not in st.session_state:
     st.session_state.failed_cards_pool = [] 
 if "card_status" not in st.session_state:
     st.session_state.card_status = "unanswered" 
+if "answered_correctly" not in st.session_state:         # NEW
+    st.session_state.answered_correctly = False
 
 # ── App Navigation ───────────────────────────────────────────────────────────
 st.sidebar.title("🤖 Andy's Dashboard")
@@ -97,7 +99,7 @@ if app_mode == "✨ Create New Reviewer":
             selected_files = st.multiselect("Select modules to include in this reviewer:", available_files)
             deck_name = st.text_input("Reviewer Name (e.g., Midterm Coverage)")
             subject_name = st.text_input("Subject (e.g., Computer Science)")
-            target_questions = st.slider("How many situational questions do you want?", min_value=5, max_value=50, value=15, step=5)
+            target_questions = st.number_input("How many total questions do you want Andy to generate?", min_value=1, max_value=100, value=15, step=1)
             
             submit_button = st.form_submit_button("🚀 Generate with Andy")
             
@@ -141,6 +143,8 @@ elif app_mode == "📚 Study Dashboard":
             if not raw_cards:
                 st.error("This deck has no questions!")
             else:
+                random.shuffle(raw_cards)
+                
                 st.session_state.cards_queue = []
                 for c in raw_cards:
                     st.session_state.cards_queue.append({
@@ -154,7 +158,7 @@ elif app_mode == "📚 Study Dashboard":
                 st.session_state.current_index = 0
                 st.session_state.wrong_attempts_on_card = set()
                 st.session_state.failed_cards_pool = []
-                st.session_state.card_status = "unanswered"
+                st.session_state.answered_correctly = False
                 st.session_state.quiz_started = True
 
     st.divider()
@@ -169,23 +173,39 @@ elif app_mode == "📚 Study Dashboard":
             options = current_card["options"]
             correct = current_card["correct_answer"]
             
-            for option in options:
-                if option in st.session_state.wrong_attempts_on_card:
-                    st.button(f"❌ {option} (Incorrect Try Again)", key=option, disabled=True)
-                else:
-                    if st.button(option, key=option):
-                        if option == correct:
-                            st.success("🎯 Correct!")
-                            st.session_state.current_index += 1
-                            st.session_state.wrong_attempts_on_card.clear()
-                            st.rerun()
-                        else:
-                            st.session_state.wrong_attempts_on_card.add(option)
-                            if current_card not in st.session_state.failed_cards_pool:
-                                st.session_state.failed_cards_pool.append(current_card)
-                                db.update_card_miss_count(current_card["id"]) 
-                            st.warning("That's not quite right. You have one more shot!")
-                            st.rerun()
+            # --- PHASE 1: USER IS STILL GUESSING ---
+            if not st.session_state.answered_correctly:
+                for option in options:
+                    if option in st.session_state.wrong_attempts_on_card:
+                        st.button(f"❌ {option}", key=f"wrong_{st.session_state.current_index}_{option}", disabled=True)
+                    else:
+                        if st.button(option, key=f"opt_{st.session_state.current_index}_{option}"):
+                            if option == correct:
+                                st.session_state.answered_correctly = True # Flip the state to pause!
+                                st.rerun()
+                            else:
+                                st.session_state.wrong_attempts_on_card.add(option)
+                                if current_card not in st.session_state.failed_cards_pool:
+                                    st.session_state.failed_cards_pool.append(current_card)
+                                    db.update_card_miss_count(current_card["id"]) 
+                                st.warning("That's not quite right. You have one more shot!")
+                                st.rerun()
+
+            # --- PHASE 2: USER GOT IT RIGHT (REVIEW MODE) ---
+            else:
+                for option in options:
+                    if option == correct:
+                        # The "type='primary'" makes the button stand out natively in Streamlit
+                        st.button(f"✅ {option}", key=f"correct_{st.session_state.current_index}_{option}", disabled=True, type="primary")
+                    else:
+                        st.button(option, key=f"gray_{st.session_state.current_index}_{option}", disabled=True)
+                
+                st.success("🎯 Correct! Take your time to review.")
+                if st.button("➡️ Next Question"):
+                    st.session_state.current_index += 1
+                    st.session_state.wrong_attempts_on_card.clear()
+                    st.session_state.answered_correctly = False # Reset for the next card
+                    st.rerun()
 
     elif st.session_state.quiz_started:
         st.balloons()
@@ -198,10 +218,12 @@ elif app_mode == "📚 Study Dashboard":
                 st.session_state.failed_cards_pool = []
                 st.session_state.current_index = 0
                 st.session_state.wrong_attempts_on_card.clear()
+                st.session_state.answered_correctly = False
                 st.rerun()
                 
         if st.button("🔄 Reflash Entire Reviewer Deck"):
             st.session_state.current_index = 0
             st.session_state.wrong_attempts_on_card.clear()
             st.session_state.failed_cards_pool = []
+            st.session_state.answered_correctly = False
             st.rerun()

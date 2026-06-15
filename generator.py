@@ -2,6 +2,8 @@ import os
 import json
 import re
 import sys
+import time
+import math 
 from google import genai
 from google.genai import types
 
@@ -13,7 +15,7 @@ from database import create_deck, add_card
 # MODEL CHOICES: 
 # "gemini-2.0-flash" for rapid, standard generation
 # "gemini-1.5-pro" for ultra-complex reasoning
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.5-flash"
 
 MAX_CHUNK_CHARS = 12_000
 
@@ -236,7 +238,7 @@ def generate_custom_deck(
     print(f"\n[2/4] Split into {len(chunks)} chunk(s) (max {MAX_CHUNK_CHARS:,} chars each).")
     
     # Math: Distribute the total requested questions evenly across text chunks
-    questions_per_chunk = max(1, total_questions // len(chunks))
+    questions_per_chunk = math.ceil(total_questions / len(chunks))
     
     # Query Gemini
     print(f"\n[3/4] Andy is generating {total_questions} situational questions using '{MODEL_NAME}'...")
@@ -250,6 +252,13 @@ def generate_custom_deck(
         cards = _query_gemini(client, chunk, system_prompt=prompt) 
         print(f"received {len(cards)} card(s).")
         all_raw_cards.extend(cards)
+        
+        # ── ANTI-CRASH SPEED LIMIT FIX ──
+        # If this isn't the last chunk, wait 15 seconds before asking Gemini again.
+        # This guarantees we stay safely under the 5 requests-per-minute Free Tier limit.
+        if i < len(chunks):
+            print("  [Pausing for 15 seconds to respect free API limits...]")
+            time.sleep(15)
 
     # Trim the list if Gemini returned slightly more than the exact requested total
     all_raw_cards = all_raw_cards[:total_questions]
