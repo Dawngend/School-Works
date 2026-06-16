@@ -1,5 +1,1 @@
-.venv/
-.streamlit/
-__pycache__/
-reviewer.db
-uploads/
+.streamlit/secrets.toml
