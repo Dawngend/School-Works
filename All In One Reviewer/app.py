@@ -3,33 +3,80 @@ import random
 import json
 import os
 import database as db 
-from generator import generate_custom_deck # Hooking up Andy's brain!
+from generator import generate_custom_deck 
 
 # ── Theme & Configuration ────────────────────────────────────────────────────
-st.set_page_config(page_title="Andy: Your Study Buddy", layout="wide")
+# We set layout to "centered" natively, but our CSS will strictly enforce the width
+st.set_page_config(page_title="Andy: Study Buddy", page_icon="🤖", layout="centered")
 
-# Baseline Blue & Cream CSS (You can overwrite this later with your UI app)
+# The Premium "Dark Navy & Cream" CSS Injection
 st.markdown("""
     <style>
+    /* 1. Force the main background to a rich, dark navy for Dark Mode compatibility */
     .stApp {
-        background-color: #FDFDF9; /* Soft Cream */
-        color: #1A365D; /* Navy Blue */
+        background-color: #0D1B2A !important; 
     }
-    h1, h2, h3, h4, h5, h6, p, label, .stMarkdown {
-        color: #1A365D !important; 
+    
+    /* 2. Centralize and restrict the width of the main content block */
+    .main .block-container {
+        max-width: 750px !important;
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+        margin: 0 auto !important;
     }
-    .stButton>button {
-        background-color: #2B6CB0; /* Nice readable blue */
+
+    /* 3. The "Cream Card" styling for questions and forms */
+    .quiz-card {
+        background-color: #FDFDF9 !important;
+        color: #1A365D !important;
+        padding: 30px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4) !important;
+        margin-bottom: 25px !important;
+        text-align: center;
+        border-top: 5px solid #2B6CB0;
+    }
+    
+    /* Typography inside the card */
+    .quiz-card h3 {
+        color: #1A365D !important;
+        font-weight: 700 !important;
+        margin-bottom: 10px !important;
+    }
+    .quiz-card p {
+        font-size: 1.1rem !important;
+        color: #334155 !important;
+    }
+
+    /* 4. Upgrade Button Aesthetics */
+    div.stButton > button {
+        width: 100%;
+        border-radius: 12px;
+        background-color: #1E293B; /* Dark slate for default buttons */
         color: #FDFDF9;
-        border-radius: 8px;
+        font-weight: 600;
+        border: 2px solid transparent;
+        transition: all 0.2s ease-in-out;
+        padding: 10px;
     }
-    .stButton>button:hover {
-        background-color: #1A365D;
-        color: #FDFDF9;
+    div.stButton > button:hover {
+        border: 2px solid #2B6CB0;
+        background-color: #0D1B2A;
     }
-    .stSelectbox>div>div>div {
-        background-color: #FFFFFF;
+    
+    /* Primary buttons (Correct answers / Submit) */
+    div.stButton > button[kind="primary"] {
+        background-color: #2B6CB0 !important;
+        color: #FDFDF9 !important;
+        border: none !important;
     }
+    div.stButton > button[kind="primary"]:hover {
+        background-color: #1A365D !important;
+    }
+
+    /* Remove Streamlit default header/footer for an app-like feel */
+    header {visibility: hidden;}
+    footer {visibility: hidden;}
     </style>
 """, unsafe_allow_html=True)
 
@@ -38,14 +85,12 @@ UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def save_module_for_andy(uploaded_file) -> str:
-    """Takes a file uploaded in the browser and saves it for Andy to read."""
     file_path = os.path.join(UPLOAD_DIR, uploaded_file.name)
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     return file_path
 
 def get_available_modules() -> list[str]:
-    """Returns a list of PDF/PPTX files currently in the uploads folder."""
     if not os.path.exists(UPLOAD_DIR):
         return []
     return [f for f in os.listdir(UPLOAD_DIR) if f.endswith(('.pdf', '.pptx'))]
@@ -63,45 +108,54 @@ if "failed_cards_pool" not in st.session_state:
     st.session_state.failed_cards_pool = [] 
 if "card_status" not in st.session_state:
     st.session_state.card_status = "unanswered" 
-if "answered_correctly" not in st.session_state:         # NEW
-    st.session_state.answered_correctly = False
+if "answered_correctly" not in st.session_state:         
+    st.session_state.answered_correctly = False          
 
 # ── App Navigation ───────────────────────────────────────────────────────────
-st.sidebar.title("🤖 Andy's Dashboard")
+st.sidebar.title("🤖 Andy's Hub")
 app_mode = st.sidebar.radio("Navigation", ["📚 Study Dashboard", "✨ Create New Reviewer"])
-
 st.sidebar.divider()
+st.sidebar.caption("Designed for optimal focus. Blue & Cream Theme Active.")
 
 # =============================================================================
 # MODE 1: CREATE NEW REVIEWER (ANDY'S WORKSHOP)
 # =============================================================================
 if app_mode == "✨ Create New Reviewer":
-    st.title("✨ Ask Andy to Build a Reviewer")
-    st.write("Upload your modules, set your parameters, and Andy will generate situational flashcards to test your knowledge.")
-
-    # 1. File Upload Section
-    st.subheader("1. Upload Modules")
-    uploaded_files = st.file_uploader("Upload PDF or PPTX files", type=['pdf', 'pptx'], accept_multiple_files=True)
+    st.markdown("<h1 style='color: #FDFDF9; text-align: center;'>✨ Craft a Reviewer</h1>", unsafe_allow_html=True)
+    
+    st.markdown("""
+        <div class="quiz-card">
+            <h3>1. Upload Materials</h3>
+            <p>Feed Andy your PDFs or PPTs so he can analyze the concepts.</p>
+        </div>
+    """, unsafe_allow_html=True)
+    uploaded_files = st.file_uploader("Drop files here", type=['pdf', 'pptx'], accept_multiple_files=True, label_visibility="collapsed")
     
     if uploaded_files:
         for file in uploaded_files:
             save_module_for_andy(file)
-        st.success(f"Successfully saved {len(uploaded_files)} file(s) to Andy's workspace!")
+        st.success(f"Successfully saved {len(uploaded_files)} file(s)!")
 
-    # 2. Configuration Form
-    st.subheader("2. Configure Reviewer")
+    st.markdown("""
+        <div class="quiz-card" style="margin-top: 2rem;">
+            <h3>2. Configure Output</h3>
+            <p>Set your parameters for the perfect situational quiz.</p>
+        </div>
+    """, unsafe_allow_html=True)
     available_files = get_available_modules()
     
     if not available_files:
-        st.info("Upload some files above to get started.")
+        st.info("Upload some files above to unlock the generator.")
     else:
         with st.form("generation_form"):
-            selected_files = st.multiselect("Select modules to include in this reviewer:", available_files)
+            selected_files = st.multiselect("Select modules to include:", available_files)
             deck_name = st.text_input("Reviewer Name (e.g., Midterm Coverage)")
             subject_name = st.text_input("Subject (e.g., Computer Science)")
-            target_questions = st.number_input("How many total questions do you want Andy to generate?", min_value=1, max_value=100, value=15, step=1)
             
-            submit_button = st.form_submit_button("🚀 Generate with Andy")
+            # The upgraded exact number input we discussed
+            target_questions = st.number_input("How many total situational questions do you want?", min_value=1, max_value=100, value=20, step=1)
+            
+            submit_button = st.form_submit_button("🚀 Generate with Andy", type="primary")
             
             if submit_button:
                 if not selected_files:
@@ -109,42 +163,38 @@ if app_mode == "✨ Create New Reviewer":
                 elif not deck_name or not subject_name:
                     st.error("Please fill out the Reviewer Name and Subject.")
                 else:
-                    with st.spinner("Andy is reading your modules and crafting tricky scenarios... This might take a minute!"):
-                        # Call the backend function!
+                    with st.spinner(f"Andy is reading and crafting exactly {target_questions} tricky scenarios..."):
                         new_deck_id = generate_custom_deck(
                             selected_files=selected_files,
                             deck_name=deck_name,
                             subject=subject_name,
                             total_questions=target_questions
                         )
-                        
                         if new_deck_id:
-                            st.success(f"Done! Andy created '{deck_name}' with {target_questions} questions. Head over to the Study Dashboard to try it out!")
+                            st.success(f"Done! Andy created '{deck_name}'. Switch to the Study Dashboard!")
                             st.balloons()
                         else:
-                            st.error("Andy couldn't generate the deck. Check the terminal for errors (the PDF might be empty or unreadable).")
+                            st.error("Andy couldn't generate the deck. Check terminal logs.")
 
 # =============================================================================
-# MODE 2: STUDY DASHBOARD (YOUR ORIGINAL CODE)
+# MODE 2: STUDY DASHBOARD 
 # =============================================================================
 elif app_mode == "📚 Study Dashboard":
-    st.title("📚 Study Dashboard")
+    st.markdown("<h1 style='color: #FDFDF9; text-align: center;'>📚 The Dojo</h1>", unsafe_allow_html=True)
     decks = db.get_decks()
 
     if not decks:
-        st.warning("No decks found. Head over to 'Create New Reviewer' to have Andy make one!")
+        st.warning("No decks found. Head over to 'Create New Reviewer'!")
     else:
         deck_options = {d[0]: f"{d[1]} ({d[3]})" for d in decks}
-        selected_deck_id = st.selectbox("Select a Reviewer Deck", options=list(deck_options.keys()), format_func=lambda x: deck_options[x])
+        selected_deck_id = st.selectbox("Select a Reviewer Deck", options=list(deck_options.keys()), format_func=lambda x: deck_options[x], label_visibility="collapsed")
 
-        if st.button("Launch Reviewer Session"):
+        if st.button("Launch Session", type="primary"):
             raw_cards = db.get_cards_for_deck(selected_deck_id)
-            
             if not raw_cards:
                 st.error("This deck has no questions!")
             else:
                 random.shuffle(raw_cards)
-                
                 st.session_state.cards_queue = []
                 for c in raw_cards:
                     st.session_state.cards_queue.append({
@@ -154,76 +204,99 @@ elif app_mode == "📚 Study Dashboard":
                         "correct_answer": c[4],
                         "options": json.loads(c[5]) if c[5] else []
                     })
-                    
                 st.session_state.current_index = 0
                 st.session_state.wrong_attempts_on_card = set()
                 st.session_state.failed_cards_pool = []
                 st.session_state.answered_correctly = False
                 st.session_state.quiz_started = True
 
-    st.divider()
-
     if st.session_state.quiz_started and st.session_state.current_index < len(st.session_state.cards_queue):
         current_card = st.session_state.cards_queue[st.session_state.current_index]
         
-        st.write(f"### Question {st.session_state.current_index + 1} of {len(st.session_state.cards_queue)}")
-        st.info(current_card["question"])
+        # Visual Progress Bar
+        progress_val = st.session_state.current_index / len(st.session_state.cards_queue)
+        st.progress(progress_val)
+        st.markdown(
+            f"<div style='text-align: center; color: #94A3B8;'>Question {st.session_state.current_index + 1} of {len(st.session_state.cards_queue)}</div>",
+            unsafe_allow_html=True,
+        )
         
-        if current_card["type"] == "multiple_choice":
-            options = current_card["options"]
-            correct = current_card["correct_answer"]
-            
-            # --- PHASE 1: USER IS STILL GUESSING ---
-            if not st.session_state.answered_correctly:
-                for option in options:
-                    if option in st.session_state.wrong_attempts_on_card:
-                        st.button(f"❌ {option}", key=f"wrong_{st.session_state.current_index}_{option}", disabled=True)
-                    else:
-                        if st.button(option, key=f"opt_{st.session_state.current_index}_{option}"):
-                            if option == correct:
-                                st.session_state.answered_correctly = True # Flip the state to pause!
-                                st.rerun()
-                            else:
-                                st.session_state.wrong_attempts_on_card.add(option)
-                                if current_card not in st.session_state.failed_cards_pool:
-                                    st.session_state.failed_cards_pool.append(current_card)
-                                    db.update_card_miss_count(current_card["id"]) 
-                                st.warning("That's not quite right. You have one more shot!")
-                                st.rerun()
+        # Centralized Cream Question Card
+        st.markdown(f"""
+            <div class="quiz-card">
+                <h3 style="font-size: 1rem; color: #64748B !important;">🤖 Andy Asks:</h3>
+                <p style="font-weight: 500;">{current_card["question"]}</p>
+            </div>
+        """, unsafe_allow_html=True)
+        
+        options = current_card["options"]
+        correct = current_card["correct_answer"]
+        
+        # --- PHASE 1: GUESSING ---
+        if not st.session_state.answered_correctly:
+            for option in options:
+                if option in st.session_state.wrong_attempts_on_card:
+                    st.button(f"❌ {option}", key=f"wrong_{st.session_state.current_index}_{option}", disabled=True)
+                else:
+                    if st.button(option, key=f"opt_{st.session_state.current_index}_{option}"):
+                        if option == correct:
+                            st.session_state.answered_correctly = True 
+                            st.rerun()
+                        else:
+                            st.session_state.wrong_attempts_on_card.add(option)
+                            if current_card not in st.session_state.failed_cards_pool:
+                                st.session_state.failed_cards_pool.append(current_card)
+                                db.update_card_miss_count(current_card["id"]) 
+                            st.rerun()
 
-            # --- PHASE 2: USER GOT IT RIGHT (REVIEW MODE) ---
-            else:
-                for option in options:
-                    if option == correct:
-                        # The "type='primary'" makes the button stand out natively in Streamlit
-                        st.button(f"✅ {option}", key=f"correct_{st.session_state.current_index}_{option}", disabled=True, type="primary")
-                    else:
-                        st.button(option, key=f"gray_{st.session_state.current_index}_{option}", disabled=True)
-                
-                st.success("🎯 Correct! Take your time to review.")
-                if st.button("➡️ Next Question"):
+            if st.session_state.wrong_attempts_on_card:
+                st.warning("Not quite right. Analyze the scenario and try again.")
+
+        # --- PHASE 2: REVIEW MODE ---
+        else:
+            for option in options:
+                if option == correct:
+                    st.button(f"✅ {option}", key=f"correct_{st.session_state.current_index}_{option}", disabled=True, type="primary")
+                else:
+                    st.button(option, key=f"gray_{st.session_state.current_index}_{option}", disabled=True)
+            
+            st.success("🎯 Spot on! Take a moment to review your logic before moving on.")
+            
+            # Use columns to center the Next Question button nicely
+            col1, col2, col3 = st.columns([1, 2, 1])
+            with col2:
+                if st.button("➡️ Next Question", type="primary"):
                     st.session_state.current_index += 1
                     st.session_state.wrong_attempts_on_card.clear()
-                    st.session_state.answered_correctly = False # Reset for the next card
+                    st.session_state.answered_correctly = False 
                     st.rerun()
 
     elif st.session_state.quiz_started:
         st.balloons()
-        st.success("🏁 You've cleared this reviewing round!")
+        st.markdown("""
+            <div class="quiz-card" style="margin-top: 3rem;">
+                <h3>🏁 Round Cleared!</h3>
+                <p>Excellent work. Andy has recorded your stats.</p>
+            </div>
+        """, unsafe_allow_html=True)
         
-        if st.session_state.failed_cards_pool:
-            st.write(f"You have {len(st.session_state.failed_cards_pool)} questions that weren't fully aced on the first try.")
-            if st.button("🔴 Focus Review: Practice Missed Questions Only"):
-                st.session_state.cards_queue = list(st.session_state.failed_cards_pool)
-                st.session_state.failed_cards_pool = []
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🔄 Reflash Entire Deck"):
                 st.session_state.current_index = 0
                 st.session_state.wrong_attempts_on_card.clear()
+                st.session_state.failed_cards_pool = []
                 st.session_state.answered_correctly = False
                 st.rerun()
                 
-        if st.button("🔄 Reflash Entire Reviewer Deck"):
-            st.session_state.current_index = 0
-            st.session_state.wrong_attempts_on_card.clear()
-            st.session_state.failed_cards_pool = []
-            st.session_state.answered_correctly = False
-            st.rerun()
+        with col2:
+            if st.session_state.failed_cards_pool:
+                if st.button(f"🔴 Practice Missed ({len(st.session_state.failed_cards_pool)})"):
+                    st.session_state.cards_queue = list(st.session_state.failed_cards_pool)
+                    st.session_state.failed_cards_pool = []
+                    st.session_state.current_index = 0
+                    st.session_state.wrong_attempts_on_card.clear()
+                    st.session_state.answered_correctly = False
+                    st.rerun()
+            else:
+                st.button("✨ Perfect Score Achieved!", disabled=True, type="primary")
