@@ -1,0 +1,49 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #FDFBF7;
+    color: #0F2A5F; 
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.table-container {
+    background-color: #FFFFFF;
+    padding: 15px;
+    border: 2px solid #0F2A5F; 
+    box-shadow: 4px 4px 10px rgba(15, 42, 95, 0.1);
+}
+
+table {
+    width: 700px;
+    border-collapse: separate;
+    border-spacing: 2px;
+    border: 1px solid #0F2A5F;
+}
+
+th, td {
+    border: 1px solid #0F2A5F; 
+    padding: 12px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.main-title {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #0F2A5F; 
+    color: #FDFBF7; 
+}
+
+.sub-header th {
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #E8EDF5; 
+    color: #0F2A5F;
+}
+
+td {
+    font-size: 18px;
+    background-color: #FAFAEA; 
+}

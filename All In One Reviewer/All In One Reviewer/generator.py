@@ -3,7 +3,7 @@ import json
 import re
 import sys
 import time
-import math 
+import math
 from google import genai
 from google.genai import types
 
@@ -13,18 +13,26 @@ from database import create_deck, add_card
 # ── Constants & Configuration ────────────────────────────────────────────────
 
 # MODEL CHOICES: 
-# "gemini-2.0-flash" for rapid, standard generation
-# "gemini-1.5-pro" for ultra-complex reasoning
+# Set to "gemini-3.5-flash" for rapid, standard generation
+# Set to "gemini-3.1-pro" for ultra-complex reasoning or massive files
 MODEL_NAME = "gemini-3.5-flash"
 
 MAX_CHUNK_CHARS = 12_000
 
-# ── Andy Persona Prompt ──────────────────────────────────────────────────────
+SYSTEM_PROMPT = (
+    "You are an elite Computer Science professor writing a tricky "
+    "application-based exam. Analyze the provided module text. Instead of "
+    "asking for basic definitions, generate practical, conceptual, and "
+    "scenario-based questions. Output a strictly formatted JSON array where "
+    'each object has: "type" (must be "multiple_choice"), "question" '
+    '(string), "options" (array of exactly 4 strings), and '
+    '"correct_answer" (string matching one option exactly).'
+)
+
 
 def get_andy_prompt(target_count: int) -> str:
     """
-    Dynamically generates the system prompt for Andy, enforcing the required
-    question count and the situational/scenario-based rule.
+    Build a dynamic system prompt so the model targets an exact question count.
     """
     return (
         f"You are Andy, a brilliant, friendly, and rigorous Computer Science study buddy. "
@@ -56,7 +64,7 @@ def _get_client() -> genai.Client:
                     secrets = tomllib.load(f)
                     api_key = secrets.get("GEMINI_API_KEY")
         except Exception:
-            pass 
+            pass # Fall through to the error raise below
 
     if not api_key:
         raise RuntimeError(
@@ -74,7 +82,8 @@ def _get_client() -> genai.Client:
 
 def _chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
     """
-    Split text into chunks, breaking on paragraph boundaries.
+    Split *text* into chunks of at most *max_chars* characters, breaking only
+    on paragraph boundaries so that context is never cut mid-sentence.
     """
     if len(text) <= max_chars:
         return [text]
@@ -84,6 +93,7 @@ def _chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
     current_chunk = ""
 
     for paragraph in paragraphs:
+        # A single paragraph that is itself too long gets hard-split.
         if len(paragraph) > max_chars:
             if current_chunk:
                 chunks.append(current_chunk.strip())
@@ -106,8 +116,10 @@ def _chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
 
 def _strip_json_fences(raw: str) -> str:
     """
-    Strip markdown code fences so json.loads never fails due to stray backticks.
+    Gemini sometimes wraps its JSON output in markdown code fences.
+    Strip them so json.loads never fails due to stray backticks.
     """
+    # Using [`]{3} to match triple backticks safely without breaking parsers!
     pattern = r"[`]{3}(?:json)?\s*([\s\S]*?)[`]{3}"
     match = re.search(pattern, raw)
     if match:
@@ -117,9 +129,11 @@ def _strip_json_fences(raw: str) -> str:
 
 # ── LLM interaction ───────────────────────────────────────────────────────────
 
-def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str) -> list[dict]:
+def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str = SYSTEM_PROMPT) -> list[dict]:
     """
-    Send a chunk to Gemini with the dynamic system prompt.
+    Send a single *text_chunk* to Gemini and return the parsed list of
+    question dicts.  Returns an empty list on any error so the caller can
+    continue processing the remaining chunks.
     """
     prompt = (
         "Generate exam questions based ONLY on the following module content:\n\n"
@@ -131,6 +145,7 @@ def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str) -> 
             model=MODEL_NAME,
             config=types.GenerateContentConfig(
                 system_instruction=system_prompt,
+                # Instruct the API to return clean JSON without extra prose
                 response_mime_type="application/json",
                 temperature=0.7,
             ),
@@ -162,6 +177,7 @@ def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str) -> 
 def _validate_card(card: dict, index: int) -> bool:
     """
     Return True only if *card* has every required field in the correct shape.
+    Logs a descriptive warning and returns False for every malformed entry.
     """
     required_keys = {"type", "question", "options", "correct_answer"}
 
@@ -198,24 +214,19 @@ def _validate_card(card: dict, index: int) -> bool:
     return True
 
 
-# ── Core public function ──────────────────────────────────────────────────────
-
 def generate_custom_deck(
-    selected_files: list[str], 
-    deck_name: str, 
-    subject: str, 
-    total_questions: int
+    selected_files: list[str],
+    deck_name: str,
+    subject: str,
+    total_questions: int,
 ) -> int | None:
     """
-    Full pipeline to handle multiple files, specific question counts, and
-    save the validated cards into the database.
+    Build a deck from multiple selected files and target a specific question count.
     """
     print(f"\n[1/4] Processing {len(selected_files)} module(s)...")
     combined_text = ""
-    
-    # Combine text from all selected files
+
     for filename in selected_files:
-        # Check 'uploads' folder first, fallback to current directory for local testing
         file_path = os.path.join("uploads", filename)
         if not os.path.exists(file_path) and os.path.exists(filename):
             file_path = filename
@@ -233,40 +244,31 @@ def generate_custom_deck(
         print("  [Abort] Not enough valid text extracted to generate meaningful questions.")
         return None
 
-    # Chunking
     chunks = _chunk_text(combined_text)
     print(f"\n[2/4] Split into {len(chunks)} chunk(s) (max {MAX_CHUNK_CHARS:,} chars each).")
-    
-    # Math: Distribute the total requested questions evenly across text chunks
+
     questions_per_chunk = math.ceil(total_questions / len(chunks))
-    
-    # Query Gemini
+
     print(f"\n[3/4] Andy is generating {total_questions} situational questions using '{MODEL_NAME}'...")
     client = _get_client()
     all_raw_cards: list[dict] = []
-    
+
     for i, chunk in enumerate(chunks, start=1):
         print(f"  Chunk {i}/{len(chunks)} ...", end=" ", flush=True)
-        # Dynamically inject the target question count and persona into the prompt
-        prompt = get_andy_prompt(questions_per_chunk) 
-        cards = _query_gemini(client, chunk, system_prompt=prompt) 
+        prompt = get_andy_prompt(questions_per_chunk)
+        cards = _query_gemini(client, chunk, system_prompt=prompt)
         print(f"received {len(cards)} card(s).")
         all_raw_cards.extend(cards)
-        
-        # ── ANTI-CRASH SPEED LIMIT FIX ──
-        # If this isn't the last chunk, wait 15 seconds before asking Gemini again.
-        # This guarantees we stay safely under the 5 requests-per-minute Free Tier limit.
+
         if i < len(chunks):
             print("  [Pausing for 15 seconds to respect free API limits...]")
             time.sleep(15)
 
-    # Trim the list if Gemini returned slightly more than the exact requested total
     all_raw_cards = all_raw_cards[:total_questions]
     print(f"  Total raw cards finalized for validation: {len(all_raw_cards)}")
 
-    # Validation & Saving
     print(f"\n[4/4] Validating and saving to database...")
-    
+
     valid_cards = [
         card for i, card in enumerate(all_raw_cards, start=1)
         if _validate_card(card, i)
@@ -276,7 +278,6 @@ def generate_custom_deck(
         print("  [Abort] No valid cards were generated. Deck will not be created.")
         return None
 
-    # Save multiple filenames as a single string reference for the database
     modules_included_string = ", ".join(selected_files)
 
     deck_id = create_deck(
@@ -302,33 +303,121 @@ def generate_custom_deck(
     return deck_id
 
 
+# ── Core public function ──────────────────────────────────────────────────────
+
+def generate_deck_from_file(
+    file_path: str,
+    deck_name: str,
+    subject: str,
+) -> int | None:
+    """
+    Full pipeline:
+      1. Extract text from *file_path* (PDF or PPTX) via extractor.py.
+      2. Chunk the text and query Gemini once per chunk.
+      3. Validate every returned card.
+      4. Persist the deck and all valid cards to SQLite via database.py.
+    """
+
+    # ── Step 1 · Extract text ────────────────────────────────────────────────
+    print(f"\n[1/4] Extracting text from: {file_path}")
+    raw_text = process_module_file(file_path)
+
+    if raw_text.startswith("Error") or raw_text.startswith("Unsupported"):
+        print(f"  [Abort] Extraction failed: {raw_text}")
+        return None
+
+    text_length = len(raw_text)
+    print(f"  Extracted {text_length:,} characters.")
+
+    if text_length < 50:
+        print("  [Abort] Extracted text is too short to generate meaningful questions.")
+        return None
+
+    # ── Step 2 · Chunk ───────────────────────────────────────────────────────
+    chunks = _chunk_text(raw_text)
+    print(f"\n[2/4] Split into {len(chunks)} chunk(s) (max {MAX_CHUNK_CHARS:,} chars each).")
+
+    # ── Step 3 · Query Gemini ────────────────────────────────────────────────
+    print(f"\n[3/4] Querying Gemini using '{MODEL_NAME}' ({len(chunks)} request(s))...")
+    client = _get_client()
+
+    all_raw_cards: list[dict] = []
+    for i, chunk in enumerate(chunks, start=1):
+        print(f"  Chunk {i}/{len(chunks)} ({len(chunk):,} chars) ...", end=" ", flush=True)
+        cards = _query_gemini(client, chunk)
+        print(f"received {len(cards)} card(s).")
+        all_raw_cards.extend(cards)
+
+    print(f"  Total raw cards received: {len(all_raw_cards)}")
+
+    # ── Step 4 · Validate & save ─────────────────────────────────────────────
+    print(f"\n[4/4] Validating and saving to database...")
+    module_filename = os.path.basename(file_path)
+
+    valid_cards = [
+        card for i, card in enumerate(all_raw_cards, start=1)
+        if _validate_card(card, i)
+    ]
+
+    if not valid_cards:
+        print("  [Abort] No valid cards were generated. Deck will not be created.")
+        return None
+
+    deck_id = create_deck(
+        name=deck_name,
+        modules_included=module_filename,
+        subject=subject,
+    )
+
+    for card in valid_cards:
+        add_card(
+            deck_id=deck_id,
+            card_type=card["type"],
+            question=card["question"],
+            correct_answer=card["correct_answer"],
+            options=card["options"],
+        )
+
+    print(f"\n  Deck '{deck_name}' created successfully.")
+    print(f"  Deck ID       : {deck_id}")
+    print(f"  Cards saved   : {len(valid_cards)}")
+    print(f"  Cards skipped : {len(all_raw_cards) - len(valid_cards)}")
+
+    return deck_id
+
+
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    # Updated CLI entry point to handle the new function signature for testing
-    if len(sys.argv) >= 5:
-        TEST_FILES   = sys.argv[1:-3]       # All arguments except the last 3 are treated as files
-        TEST_DECK    = sys.argv[-3]
-        TEST_SUBJECT = sys.argv[-2]
-        try:
-            TEST_COUNT   = int(sys.argv[-1])
-        except ValueError:
-            print("[Error] Final argument must be an integer (total questions).")
-            sys.exit(1)
-    else:
-        # Default fallback tests
-        TEST_FILES   = ["sample_module.pdf"] 
-        TEST_DECK    = "Sample Custom Deck"
-        TEST_SUBJECT = "Computer Science"
-        TEST_COUNT   = 5
-        print(f"Usage: python generator.py <file1.pdf> [file2.pdf ...] <deck_name> <subject> <total_questions>")
-        print(f"Running default test with {TEST_FILES[0]} for {TEST_COUNT} questions...\n")
+    # Usage (default hardcoded values):
+    #   python generator.py
+    #
+    # Usage (pass everything via CLI — no code edits needed):
+    #   python generator.py "path/to/module.pdf" "Deck Name" "Subject"
 
-    deck_id = generate_custom_deck(
-        selected_files=TEST_FILES,
+    if len(sys.argv) == 4:
+        TEST_FILE    = sys.argv[1]
+        TEST_DECK    = sys.argv[2]
+        TEST_SUBJECT = sys.argv[3]
+    elif len(sys.argv) == 1:
+        # ── Default test values ──────────────────────────────────────────────
+        # Edit these three lines to point to a real file before running.
+        TEST_FILE    = "sample_module.pdf"   # supports .pdf and .pptx
+        TEST_DECK    = "Sample CS Deck"
+        TEST_SUBJECT = "Computer Science"
+    else:
+        print("Usage: python generator.py [<file_path> <deck_name> <subject>]")
+        sys.exit(1)
+
+    if not os.path.isfile(TEST_FILE):
+        print(f"[Error] File not found: '{TEST_FILE}'")
+        print("Please set TEST_FILE to the path of a real PDF or PPTX file.")
+        sys.exit(1)
+
+    deck_id = generate_deck_from_file(
+        file_path=TEST_FILE,
         deck_name=TEST_DECK,
         subject=TEST_SUBJECT,
-        total_questions=TEST_COUNT
     )
 
     if deck_id is not None:

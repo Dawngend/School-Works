@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Resume Preview</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #FDFBF7; /* Cream background */
+            color: #0F2A5F; /* Deep Blue text */
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resume-container {
+            width: 850px;
+            background-color: #FFFFFF;
+            border: 3px double #0F2A5F; /* Double blue border */
+            box-shadow: 5px 5px 15px rgba(15, 42, 95, 0.1);
+        }
+
+        .top-section {
+            display: flex;
+            border-bottom: 1px solid #0F2A5F;
+        }
+
+        .profile-pic {
+            width: 30%;
+            border-right: 1px solid #0F2A5F;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #FAFAEA; /* Light cream */
+        }
+
+        .profile-pic img {
+            width: 150px;
+            height: 150px;
+            border: 2px solid #0F2A5F;
+            object-fit: cover;
+        }
+
+        .personal-info {
+            width: 70%;
+            padding: 20px;
+            background-color: #E8EDF5; /* Light blue tint */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .section-title {
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px solid #0F2A5F;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            border-bottom: 1px solid #0F2A5F;
+            padding: 15px 20px;
+            background-color: #FFFFFF;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .strip-title {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 10px;
+            background-color: #0F2A5F;
+            color: #FDFBF7;
+            padding: 5px;
+            font-size: 18px;
+        }
+
+        ul {
+            margin: 0;
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 5px;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        
+        <div class="top-section">
+            <div class="profile-pic">
+                <img src="images/profile.jpg" alt="Profile Picture">
+            </div>
+            <div class="personal-info">
+                <h2 class="section-title">Personal Information</h2>
+                <p><strong>Name:</strong> Dawn Andrei Pamesa</p>
+                <p><strong>Age:</strong> 20</p>
+                <p><strong>Date of Birth:</strong> April 20, 2006</p>
+                <p><strong>Status:</strong> Academic Scholar & Student-Athlete</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="strip-title">Career Objective</h3>
+            <p>A dedicated Computer Science student specializing in Data Science, seeking to leverage a strong academic foundation and technical skills in programming and web development to contribute to innovative tech solutions. Aiming to apply analytical problem-solving abilities and a strong work ethic in a professional environment.</p>
+        </div>
+
+        <div class="section">
+            <h3 class="strip-title">Educational Attainment</h3>
+            <ul>
+                <li><strong>FEU Institute of Technology</strong> - Bachelor of Science in Computer Science, Specialization in Data Science (Second-Year)</li>
+                <li>Relevant Coursework: Web Development, Database Procedures (PL/SQL), Transcendental Functions</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="strip-title">Skills</h3>
+            <ul>
+                <li><strong>Programming Languages:</strong> PHP, Java, Python, PL/SQL</li>
+                <li><strong>Technical Skills:</strong> Web Development, JSON Data Integration, PC Hardware Configuration</li>
+                <li><strong>Soft Skills:</strong> Team Collaboration, Project Coordination, Time Management, Leadership</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="strip-title">Affiliations</h3>
+            <ul>
+                <li><strong>CRYteria Hackathon Development Team</strong> - Core Member</li>
+                <li><strong>University Taekwondo Team</strong> - Athlete & Coach</li>
+                <li><strong>Local Community Service Organization</strong> - Coordinator</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3 class="strip-title">Work Experience & Projects</h3>
+            <ul>
+                <li><strong>Hackathon Developer:</strong> Developed a narrative-driven visual novel game template using JSON data and GitHub for Team CRYteria.</li>
+                <li><strong>Community Coordinator:</strong> Managed administrative tasks, drafted official documentation, and formulated budget estimates for group events.</li>
+                <li><strong>Taekwondo Coach:</strong> Conducted physical fitness training, taught discipline, and tracked running performance metrics.</li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>
