@@ -15,19 +15,23 @@ def extract_text_from_pdf(file_path):
         with pdfplumber.open(file_path) as pdf:
             for i, page in enumerate(pdf.pages):
                 text = page.extract_text()
-                
+
                 if text:
                     extracted_text += text + "\n\n"
-                
+
                 # Scan full-page screenshots
                 if not text or len(text.strip()) < 50:
                     print(f"  -> Scanning image on PDF page {i + 1}...")
-                    pil_image = page.to_image(resolution=300).original
-                    ocr_text = pytesseract.image_to_string(pil_image)
-                    
-                    if ocr_text.strip():
-                        extracted_text += "\n[Scanned from Image]:\n" + ocr_text + "\n\n"
-                        
+                    try:
+                        pil_image = page.to_image(resolution=300).original
+                        ocr_text = pytesseract.image_to_string(pil_image)
+
+                        if ocr_text.strip():
+                            extracted_text += "\n[Scanned from Image]:\n" + ocr_text + "\n\n"
+                    except Exception as e:
+                        print(f"  [Warning] Failed to OCR image on page {i + 1}: {e}")
+                        continue
+
         return extracted_text
     except Exception as e:
         return f"Error reading PDF: {e}"
