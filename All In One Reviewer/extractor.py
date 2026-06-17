@@ -2,6 +2,7 @@ import os
 import io
 import pdfplumber
 import pytesseract
+import streamlit as st
 from PIL import Image
 from pptx import Presentation
 from pptx.enum.shapes import MSO_SHAPE_TYPE
@@ -59,6 +60,7 @@ def extract_text_from_pptx(file_path):
     except Exception as e:
         return f"Error reading PPTX: {e}"
 
+@st.cache_data # <--- The magic caching command
 def process_module_file(file_path):
     _, file_extension = os.path.splitext(file_path)
     file_extension = file_extension.lower()
