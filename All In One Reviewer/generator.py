@@ -15,7 +15,7 @@ from database import create_deck, add_card
 # MODEL CHOICES: 
 # Set to "gemini-2.0-flash" for rapid, standard generation
 # Set to "gemini-1.5-pro" for ultra-complex reasoning or massive files
-MODEL_NAME = "gemini-2.0-flash"
+MODEL_NAME = "gemini-3.5-flash"
 
 MAX_CHUNK_CHARS = 12_000
 
