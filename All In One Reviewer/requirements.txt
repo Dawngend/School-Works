@@ -1,3 +1,6 @@
 streamlit
 google-genai
-PyMuPDF
+pdfplumber
+pytesseract
+Pillow
+python-pptx
