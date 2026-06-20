@@ -4,55 +4,51 @@ import re
 import sys
 import time
 import math
-from google import genai
-from google.genai import types
-
-from extractor import process_module_file
+from groq import Groq
+from rag_engine import add_to_memory, get_historical_context
+from extractor import process_module_file_v2
 from database import create_deck, add_card
 
 # ── Constants & Configuration ────────────────────────────────────────────────
 
 # MODEL CHOICES: 
-# Set to "gemini-2.0-flash" for rapid, standard generation
-# Set to "gemini-1.5-pro" for ultra-complex reasoning or massive files
-MODEL_NAME = "gemini-3.5-flash"
+MODEL_NAME = "llama-3.3-70b-versatile"
 
 MAX_CHUNK_CHARS = 12_000
 
 SYSTEM_PROMPT = (
     "You are an elite Computer Science professor writing a tricky "
     "application-based exam. Analyze the provided module text. Instead of "
-    "asking for basic definitions, generate practical, conceptual, and "
-    "scenario-based questions. Output a strictly formatted JSON array where "
-    'each object has: "type" (must be "multiple_choice"), "question" '
+    "asking for basic definitions, you MUST generate highly practical, conceptual, and "
+    "situational scenario-based questions. "
+    "If 'PAST RELEVANT KNOWLEDGE' is provided, try to create at least one conceptual question "
+    "that connects the current module's concepts to the past knowledge. "
+    "Output a strictly formatted JSON object with a single key 'questions' containing an array of objects. "
+    'Each object must have: "type" (must be "multiple_choice"), "question" '
     '(string), "options" (array of exactly 4 strings), and '
     '"correct_answer" (string matching one option exactly).'
 )
 
 
 def get_andy_prompt(target_count: int) -> str:
-    """
-    Build a dynamic system prompt so the model targets an exact question count.
-    """
     return (
-        f"You are Andy, a brilliant, friendly, and rigorous Computer Science study buddy. "
-        f"Your goal is to help the user ace their exams. Analyze the provided module text. "
+        f"You are Andy, an elite Computer Science study buddy. "
         f"Generate exactly {target_count} multiple-choice flashcards. "
-        f"CRITICAL: Do not just ask for basic vocabulary definitions. The questions MUST be "
-        f"highly situational, scenario-based applications of the concepts. Make them think! "
-        f"Output a strictly formatted JSON array where each object has: "
-        f'"type" (must be "multiple_choice"), "question" (string), '
-        f'"options" (array of exactly 4 strings), and "correct_answer" (string matching one option exactly).'
+        f"CRITICAL: Make them highly situational, practical, and scenario-based. "
+        f"If 'PAST RELEVANT KNOWLEDGE' is provided, try to create at least one conceptual question "
+        f"that connects the current module's concepts to the past knowledge. "
+        f"Output a strictly formatted JSON object with a single key 'questions' containing an array of objects. "
+        f'Each object must have: "type" (must be "multiple_choice"), "question", "options" (4 strings), and "correct_answer".'
     )
 
-# ── Gemini client ─────────────────────────────────────────────────────────────
+# ── Groq client ─────────────────────────────────────────────────────────────
 
-def _get_client() -> genai.Client:
+def _get_client() -> Groq:
     """
-    Create and return an authenticated Gemini client.
+    Create and return an authenticated Groq client.
     Checks environment variables first, then falls back to Streamlit secrets.
     """
-    api_key = os.environ.get("GEMINI_API_KEY")
+    api_key = os.environ.get("GROQ_API_KEY")
     
     # Fallback to loading Streamlit secrets if running locally
     if not api_key:
@@ -62,20 +58,20 @@ def _get_client() -> genai.Client:
             if os.path.exists(secrets_path):
                 with open(secrets_path, "rb") as f:
                     secrets = tomllib.load(f)
-                    api_key = secrets.get("GEMINI_API_KEY")
+                    api_key = secrets.get("GROQ_API_KEY")
         except Exception:
             pass # Fall through to the error raise below
 
     if not api_key:
         raise RuntimeError(
-            "GEMINI_API_KEY not found in environment variables or .streamlit/secrets.toml. "
+            "GROQ_API_KEY not found in environment variables or .streamlit/secrets.toml. "
             "Please ensure your key is configured."
         )
     
-    # Clean up any accidental whitespaces or quotes added by Git Bash exports
+    # Clean up any accidental whitespaces or quotes
     api_key = api_key.strip().strip('"').strip("'")
     
-    return genai.Client(api_key=api_key)
+    return Groq(api_key=api_key)
 
 
 # ── Text helpers ──────────────────────────────────────────────────────────────
@@ -93,7 +89,6 @@ def _chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
     current_chunk = ""
 
     for paragraph in paragraphs:
-        # A single paragraph that is itself too long gets hard-split.
         if len(paragraph) > max_chars:
             if current_chunk:
                 chunks.append(current_chunk.strip())
@@ -116,10 +111,8 @@ def _chunk_text(text: str, max_chars: int = MAX_CHUNK_CHARS) -> list[str]:
 
 def _strip_json_fences(raw: str) -> str:
     """
-    Gemini sometimes wraps its JSON output in markdown code fences.
-    Strip them so json.loads never fails due to stray backticks.
+    Remove markdown code fences to ensure pure JSON parsing.
     """
-    # Using [`]{3} to match triple backticks safely without breaking parsers!
     pattern = r"[`]{3}(?:json)?\s*([\s\S]*?)[`]{3}"
     match = re.search(pattern, raw)
     if match:
@@ -129,11 +122,10 @@ def _strip_json_fences(raw: str) -> str:
 
 # ── LLM interaction ───────────────────────────────────────────────────────────
 
-def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str = SYSTEM_PROMPT) -> list[dict]:
+def _query_groq(client: Groq, text_chunk: str, system_prompt: str = SYSTEM_PROMPT) -> list[dict]:
     """
-    Send a single *text_chunk* to Gemini and return the parsed list of
-    question dicts.  Returns an empty list on any error so the caller can
-    continue processing the remaining chunks.
+    Send a single *text_chunk* to Groq and return the parsed list of
+    question dicts. Returns an empty list on any error.
     """
     prompt = (
         "Generate exam questions based ONLY on the following module content:\n\n"
@@ -141,34 +133,35 @@ def _query_gemini(client: genai.Client, text_chunk: str, system_prompt: str = SY
     )
 
     try:
-        response = client.models.generate_content(
+        response = client.chat.completions.create(
             model=MODEL_NAME,
-            config=types.GenerateContentConfig(
-                system_instruction=system_prompt,
-                # Instruct the API to return clean JSON without extra prose
-                response_mime_type="application/json",
-                temperature=0.7,
-            ),
-            contents=prompt,
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": prompt}
+            ],
+            response_format={"type": "json_object"},
+            temperature=0.7,
         )
 
-        raw_text = response.text
+        raw_text = response.choices[0].message.content
         cleaned = _strip_json_fences(raw_text)
-        questions = json.loads(cleaned)
+        data = json.loads(cleaned)
+        
+        questions = data.get("questions", [])
 
         if not isinstance(questions, list):
-            print("  [Warning] Gemini returned JSON but it is not a list — skipping chunk.")
+            print("  [Warning] Groq returned JSON but 'questions' is not a list — skipping chunk.")
             return []
 
         return questions
 
     except json.JSONDecodeError as e:
-        print(f"  [Warning] JSON parse error: {e}. Raw response saved to 'gemini_raw_error.txt'.")
-        with open("gemini_raw_error.txt", "w", encoding="utf-8") as f:
+        print(f"  [Warning] JSON parse error: {e}. Raw response saved to 'groq_raw_error.txt'.")
+        with open("groq_raw_error.txt", "w", encoding="utf-8") as f:
             f.write(raw_text if 'raw_text' in locals() else "No response text")
         return []
     except Exception as e:
-        print(f"  [Error] Gemini request failed using {MODEL_NAME}: {e}")
+        print(f"  [Error] Groq request failed using {MODEL_NAME}: {e}")
         return []
 
 
@@ -222,6 +215,7 @@ def generate_custom_deck(
 ) -> int | None:
     """
     Build a deck from multiple selected files and target a specific question count.
+    Includes persistent memory (RAG) to connect past modules to current ones.
     """
     print(f"\n[1/4] Processing {len(selected_files)} module(s)...")
     combined_text = ""
@@ -231,7 +225,7 @@ def generate_custom_deck(
         if not os.path.exists(file_path) and os.path.exists(filename):
             file_path = filename
 
-        text = process_module_file(file_path)
+        text = process_module_file_v2(file_path)
         if not text.startswith("Error") and not text.startswith("Unsupported"):
             combined_text += f"\n\n--- Content from {filename} ---\n\n" + text
         else:
@@ -255,14 +249,22 @@ def generate_custom_deck(
 
     for i, chunk in enumerate(chunks, start=1):
         print(f"  Chunk {i}/{len(chunks)} ...", end=" ", flush=True)
+        
+        # --- RAG RETRIEVAL STEP ---
+        historical_context = get_historical_context(chunk, subject)
+        augmented_chunk = chunk + historical_context
+        
         prompt = get_andy_prompt(questions_per_chunk)
-        cards = _query_gemini(client, chunk, system_prompt=prompt)
+        cards = _query_groq(client, augmented_chunk, system_prompt=prompt)
+        
         print(f"received {len(cards)} card(s).")
         all_raw_cards.extend(cards)
 
         if i < len(chunks):
-            print("  [Pausing for 15 seconds to respect free API limits...]")
-            time.sleep(15)
+            time.sleep(2)
+
+    # --- RAG INGESTION STEP ---
+    add_to_memory(deck_name, subject, chunks)
 
     all_raw_cards = all_raw_cards[:total_questions]
     print(f"  Total raw cards finalized for validation: {len(all_raw_cards)}")
@@ -311,16 +313,10 @@ def generate_deck_from_file(
     subject: str,
 ) -> int | None:
     """
-    Full pipeline:
-      1. Extract text from *file_path* (PDF or PPTX) via extractor.py.
-      2. Chunk the text and query Gemini once per chunk.
-      3. Validate every returned card.
-      4. Persist the deck and all valid cards to SQLite via database.py.
+    Full pipeline for a single file. Includes RAG context retrieval and insertion.
     """
-
-    # ── Step 1 · Extract text ────────────────────────────────────────────────
     print(f"\n[1/4] Extracting text from: {file_path}")
-    raw_text = process_module_file(file_path)
+    raw_text = process_module_file_v2(file_path)
 
     if raw_text.startswith("Error") or raw_text.startswith("Unsupported"):
         print(f"  [Abort] Extraction failed: {raw_text}")
@@ -333,26 +329,32 @@ def generate_deck_from_file(
         print("  [Abort] Extracted text is too short to generate meaningful questions.")
         return None
 
-    # ── Step 2 · Chunk ───────────────────────────────────────────────────────
     chunks = _chunk_text(raw_text)
     print(f"\n[2/4] Split into {len(chunks)} chunk(s) (max {MAX_CHUNK_CHARS:,} chars each).")
 
-    # ── Step 3 · Query Gemini ────────────────────────────────────────────────
-    print(f"\n[3/4] Querying Gemini using '{MODEL_NAME}' ({len(chunks)} request(s))...")
+    print(f"\n[3/4] Querying Groq using '{MODEL_NAME}' ({len(chunks)} request(s))...")
     client = _get_client()
 
     all_raw_cards: list[dict] = []
     for i, chunk in enumerate(chunks, start=1):
         print(f"  Chunk {i}/{len(chunks)} ({len(chunk):,} chars) ...", end=" ", flush=True)
-        cards = _query_gemini(client, chunk)
+        
+        # --- RAG RETRIEVAL STEP ---
+        historical_context = get_historical_context(chunk, subject)
+        augmented_chunk = chunk + historical_context
+        
+        cards = _query_groq(client, augmented_chunk)
+        
         print(f"received {len(cards)} card(s).")
         all_raw_cards.extend(cards)
 
+    # --- RAG INGESTION STEP ---
+    module_filename = os.path.basename(file_path)
+    add_to_memory(module_filename, subject, chunks)
+
     print(f"  Total raw cards received: {len(all_raw_cards)}")
 
-    # ── Step 4 · Validate & save ─────────────────────────────────────────────
     print(f"\n[4/4] Validating and saving to database...")
-    module_filename = os.path.basename(file_path)
 
     valid_cards = [
         card for i, card in enumerate(all_raw_cards, start=1)
@@ -389,20 +391,12 @@ def generate_deck_from_file(
 # ── Entry point ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    # Usage (default hardcoded values):
-    #   python generator.py
-    #
-    # Usage (pass everything via CLI — no code edits needed):
-    #   python generator.py "path/to/module.pdf" "Deck Name" "Subject"
-
     if len(sys.argv) == 4:
         TEST_FILE    = sys.argv[1]
         TEST_DECK    = sys.argv[2]
         TEST_SUBJECT = sys.argv[3]
     elif len(sys.argv) == 1:
-        # ── Default test values ──────────────────────────────────────────────
-        # Edit these three lines to point to a real file before running.
-        TEST_FILE    = "sample_module.pdf"   # supports .pdf and .pptx
+        TEST_FILE    = "sample_module.pdf"   
         TEST_DECK    = "Sample CS Deck"
         TEST_SUBJECT = "Computer Science"
     else:
