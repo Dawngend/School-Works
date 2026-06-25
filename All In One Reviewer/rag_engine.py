@@ -2,8 +2,9 @@ import os
 import chromadb
 from chromadb.utils import embedding_functions
 
-# Initialize a local persistent database folder
-DB_DIR = os.path.join(os.getcwd(), "course_brain_db")
+# Initialize a local persistent database folder relative to this file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_DIR = os.path.join(BASE_DIR, "course_brain_db")
 chroma_client = chromadb.PersistentClient(path=DB_DIR)
 
 # Use Chroma's default sentence-transformers model

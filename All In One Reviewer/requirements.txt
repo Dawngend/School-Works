@@ -5,3 +5,4 @@ pdfplumber
 pytesseract
 Pillow
 python-pptx
+pysqlite3-binary; sys_platform == 'linux'

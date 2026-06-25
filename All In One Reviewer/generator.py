@@ -1,13 +1,21 @@
 import os
+import sys
+
+# --- Dynamic sys.path addition to support running from repository root ---
+dir_path = os.path.dirname(os.path.realpath(__file__))
+if dir_path not in sys.path:
+    sys.path.insert(0, dir_path)
+
 import json
 import re
-import sys
 import time
 import math
 from groq import Groq
 from rag_engine import add_to_memory, get_historical_context
 from extractor import process_module_file_v2
 from database import create_deck, add_card
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # ── Constants & Configuration ────────────────────────────────────────────────
 
@@ -221,7 +229,7 @@ def generate_custom_deck(
     combined_text = ""
 
     for filename in selected_files:
-        file_path = os.path.join("uploads", filename)
+        file_path = os.path.join(BASE_DIR, "uploads", filename)
         if not os.path.exists(file_path) and os.path.exists(filename):
             file_path = filename
 

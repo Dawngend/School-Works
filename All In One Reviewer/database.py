@@ -2,8 +2,9 @@ import sqlite3
 import json
 import os
 
-# Save the db inside the Database subfolder you created
-DB_PATH = os.path.join("Database", "reviewer.db")
+# Save the db inside the Database subfolder relative to this file
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_PATH = os.path.join(BASE_DIR, "Database", "reviewer.db")
 
 def init_db():
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)

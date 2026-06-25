@@ -1,7 +1,22 @@
+# --- Pysqlite3 override for Streamlit Cloud / Linux environments (ChromaDB requirement) ---
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
+import os
+import sys
+
+# --- Dynamic sys.path addition to support running from repository root ---
+dir_path = os.path.dirname(os.path.realpath(__file__))
+if dir_path not in sys.path:
+    sys.path.insert(0, dir_path)
+
 import streamlit as st
 import random
 import json
-import os
 import database as db 
 from generator import generate_custom_deck 
 
@@ -81,7 +96,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Backend Storage Setup ────────────────────────────────────────────────────
-UPLOAD_DIR = "uploads"
+UPLOAD_DIR = os.path.join(dir_path, "uploads")
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
 def save_module_for_andy(uploaded_file) -> str:
