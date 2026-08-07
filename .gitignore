@@ -1,0 +1,18 @@
+# Syncthing files
+.stfolder/
+*.sync-conflict-*
+
+# Sensitive configuration & API key files
+DataViz/api-keys-for-hackaton.txt
+DataViz/ai-config.txt
+*.env
+
+# Python & Jupyter temp files
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+
+# OS metadata
+.DS_Store
+Thumbs.db
