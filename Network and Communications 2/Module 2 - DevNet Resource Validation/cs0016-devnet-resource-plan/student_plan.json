@@ -1,0 +1,39 @@
+{
+  "student_name": "Dawn Andrei C. Pamesa",
+  "section": "TS31",
+  "ai_tool": "Claude (Anthropic)",
+  "entries": [
+    {
+      "use_case_id": "UC1",
+      "selected_resource_type": "always-on-sandbox",
+      "official_evidence_url": "https://developer.cisco.com/docs/sandbox/",
+      "ai_recommendation_summary": "AI recommended always-on-sandbox, saying the team can connect immediately without any reservation and that safe read-only API practice fits a shared environment.",
+      "verification_status": "verified",
+      "rationale": "The decisive requirement here is immediate access with no provisioning wait, which is exactly what an Always-On Sandbox is meant for. The Cisco sandbox documentation describes Always-On sandboxes as shared environments that are reachable right away and do not need to be reserved, and the scenario itself states that the team only needs safe read-only requests and no administrative changes. A Reservation Sandbox would technically work too, yet it would fail the one requirement that actually matters, which is that the team cannot wait for provisioning."
+    },
+    {
+      "use_case_id": "UC2",
+      "selected_resource_type": "reservation-sandbox",
+      "official_evidence_url": "https://developer.cisco.com/docs/sandbox/",
+      "ai_recommendation_summary": "AI recommended reservation-sandbox, but it also claimed that every reservation sandbox always grants full administrator rights on every device in the pod.",
+      "verification_status": "partially-verified",
+      "rationale": "The decisive requirement is administrative control inside a private environment, and the scenario already accepts scheduling, VPN, and setup time, which are the exact trade-offs Cisco lists for this option. The sandbox documentation describes the Reservation Sandbox as a dedicated environment that is held for a block of time so the developer gets their own instance to configure, and that is what configuration testing needs. I marked this partially-verified because the privilege level is documented per individual sandbox rather than as one blanket guarantee, so the AI overstated it. An Always-On Sandbox was rejected for this case because it is shared and restricts administrative access, so configuration changes there would either fail or affect other users."
+    },
+    {
+      "use_case_id": "UC3",
+      "selected_resource_type": "learning-lab",
+      "official_evidence_url": "https://developer.cisco.com/learning/",
+      "ai_recommendation_summary": "AI recommended learning-lab, however it added a claim that the labs hand the learner their own admin-level devices to keep after the lesson ends.",
+      "verification_status": "partially-verified",
+      "rationale": "The immediate need is guided, step-by-step content before the beginner attempts anything independently, and that is the stated role of DevNet Learning Labs on the Cisco learning page. I marked this partially-verified because the extra claim about keeping admin devices is not supported, and the module decision guide itself warns that Learning Labs are learning content and are not a substitute for choosing an execution environment. I still kept the selection as learning-lab because the scenario says the immediate goal is guided practice rather than access to administrative devices. Once the beginner moves on to the independent activity, a sandbox becomes the correct follow-up choice, but that is a later step and not this one."
+    },
+    {
+      "use_case_id": "UC4",
+      "selected_resource_type": "code-exchange",
+      "official_evidence_url": "https://developer.cisco.com/codeexchange/",
+      "ai_recommendation_summary": "AI first recommended always-on-sandbox so the developer could immediately browse and run automation code in a live environment.",
+      "verification_status": "rejected",
+      "rationale": "I rejected this recommendation because the AI answered a requirement that the scenario never asked for. The developer wants to examine existing community and Cisco-maintained repositories before designing anything, so the need is existing source code and not a device to execute it on. The Code Exchange page documents it as a curated index of community and Cisco-maintained repositories, which matches the scenario directly, and the module also notes that Automation Exchange has already been consolidated into Code Exchange. A sandbox would only become relevant later, after a repository is chosen and the code actually has to be reviewed and tested."
+    }
+  ]
+}
