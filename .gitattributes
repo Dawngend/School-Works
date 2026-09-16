@@ -1,0 +1,15 @@
+# Keep submitted documents byte-for-byte. Without this, core.autocrlf=true can
+# classify a PDF as text and rewrite its line endings on checkout, corrupting it.
+*.pdf   binary
+*.docx  binary
+*.doc   binary
+*.pptx  binary
+*.ppt   binary
+*.xlsx  binary
+*.xls   binary
+*.zip   binary
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ipynb binary
