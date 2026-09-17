@@ -1,0 +1,10 @@
+*   2231fcf (HEAD -> main) merge: reconcile AI and test validation notes
+|\  
+| * 60da78a (docs/ai-note) docs: record AI review status
+* | 270c869 docs: record test validation status
+|/  
+* 0173419 (feature/data-parsers) feat: parse maintenance YAML with safe_load and integrate build_summary
+* 96e7d6a feat: derive device summary from JSON with order-stable role de-duplication
+* c6bf96b feat: parse NETCONF XML with explicit default-namespace binding
+* 6377448 docs: record pre-AI predictions for the XML, JSON, and YAML formats
+* 6446875 chore: add parser lab starter files
