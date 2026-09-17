@@ -1,0 +1,11 @@
+test_all_devices_appear_in_rendered_lines (test_network_inventory.NetworkInventoryTests.test_all_devices_appear_in_rendered_lines) ... ok
+test_average_online_latency (test_network_inventory.NetworkInventoryTests.test_average_online_latency) ... ok
+test_classification (test_network_inventory.NetworkInventoryTests.test_classification) ... ok
+test_complete_report (test_network_inventory.NetworkInventoryTests.test_complete_report) ... ok
+test_count_online (test_network_inventory.NetworkInventoryTests.test_count_online) ... ok
+test_find_slow_devices (test_network_inventory.NetworkInventoryTests.test_find_slow_devices) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.000s
+
+OK

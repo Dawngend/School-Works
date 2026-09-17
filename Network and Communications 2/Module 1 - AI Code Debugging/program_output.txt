@@ -1,0 +1,10 @@
+NETWORK DEVICE INVENTORY REPORT
+Total devices: 5
+Online devices: 3
+Average online latency: 62.33 ms
+Slow online devices (> 100 ms): 1
+- edge-router-1 | 192.0.2.1 | up | 12 ms | HEALTHY
+- core-switch-1 | 192.0.2.2 | up | 150 ms | SLOW
+- branch-router-1 | 192.0.2.3 | down | n/a | OFFLINE
+- firewall-1 | 192.0.2.4 | up | 25 ms | HEALTHY
+- wireless-ap-1 | 192.0.2.5 | down | n/a | OFFLINE
