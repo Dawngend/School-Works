@@ -1,0 +1,13 @@
+PASS  JSON file loads
+PASS  Student and AI-tool disclosure completed
+PASS  Credentials are declared redacted
+PASS  All seven request scenarios are present
+PASS  Methods, paths, and authentication labels are correct
+PASS  Expected status codes are correct
+PASS  R2 includes includeISBN=true and sortBy=author
+PASS  R4 declares JSON and includes book fields
+PASS  Every scenario records an AI decision
+PASS  Every scenario records validation evidence
+PASS  No sensitive-value field names are stored
+
+Result: 11/11 checks passed

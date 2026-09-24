@@ -1,0 +1,167 @@
+# AI and API Validation Log
+
+Student: Dawn Andrei C. Pamesa  Section: TS31  Date: 2026-09-24
+
+Approved AI tool: Claude Code (Anthropic), agentic CLI
+
+Do not paste a username, password, bearer token, API key, Authorization header,
+X-API-KEY value, or private response data into this file or an AI tool.
+
+| Request | Pre-AI prediction | Sanitized AI prompt | AI recommendation | Decision (Accepted/Modified/Rejected) | Simulator/Postman evidence |
+|---|---|---|---|---|---|
+| R1 | `GET /api/v1/books`, no auth, no body, 200 with a JSON array | Prompt P1: goal "list all books", prediction `GET /api/v1/books`, no headers, no body | Same method and path; add `Accept: application/json`; expect 200 and an array of objects | Accepted | Try It Out and Postman, 200, array of books. `evidence/R1_list_books.png` |
+| R2 | Same as R1 plus `includeISBN=true` and `sortBy=author` as query parameters, 200 | Prompt P2: goal "include ISBN and sort by author", parameter names copied from the docs | Put both in the query string, not the body; parameter names are case-sensitive, so keep `includeISBN` exactly; expect 200 | Accepted | Postman Params tab, 200, `isbn` present on every book, ordered by author. `evidence/R2_isbn_sorted.png` |
+| R3 | `POST /api/v1/loginViaBasic` with Basic Auth, 200, JSON with a token | Prompt P3: goal "obtain temporary token", auth type only, credentials replaced by `<USER>` and `<PASS>` | POST with Basic Auth, 200, read the `token` field; then send it on later calls as `Authorization: Bearer <token>` | Modified | Postman Basic Auth, 200, token blurred. `evidence/R3_login_basic.png` |
+| R4 | `POST /api/v1/books`, `Content-Type: application/json`, `X-API-KEY` header, fictional id/title/author/isbn body, 200 | Prompt P4: goal "add one fictional book", header names only, key value replaced by `<API_KEY>` | POST with a JSON body; authenticate with `Authorization: Bearer <token>`; expect 201 Created | Modified | Postman raw JSON body, key blurred, 200 with the new book echoed. `evidence/R4_add_book.png` |
+| R5 | `GET /api/v1/books/{id}` with the fictional id, no auth, 200 | Prompt P5: goal "get the new book by ID", path template from the docs | Same request; the id is a path parameter, not a query parameter; expect 200, or 404 if R4 did not persist | Accepted | Postman, 200, title and author match R4. `evidence/R5_get_book_by_id.png` |
+| R6 | `DELETE /api/v1/books/{id}` with `X-API-KEY`, 200 | Prompt P6: goal "delete the new book", header name only | Same method and path with the key header; expect 204 No Content | Modified | Postman, 200, and R5 repeated no longer returns the book. `evidence/R6_delete_book.png` |
+| R7 | R4 without the key returns 401; altered key also 401; restoring the key returns 200 | Prompt P7: goal "troubleshoot rejected add-book", observed status 401, header value removed from the error | Missing key gives 401, but an invalid key gives 403 Forbidden; fix by re-running R3 for a fresh token | Modified | 401 with header off, 401 with altered key, 200 after restoring the valid key. `evidence/R7_401_missing_key.png`, `evidence/R7_fixed_200.png` |
+
+## Pre-AI checkpoint
+
+Written from the local OpenAPI documentation before any prompt was sent.
+
+- Predicted method and path for listing all books: `GET /api/v1/books`.
+- Two query parameters available for the books collection: `includeISBN` (boolean) and `sortBy`
+  (field name, `author` for this lab).
+- Predicted authentication for adding or deleting a book: the temporary token returned by
+  `POST /api/v1/loginViaBasic`, sent in the `X-API-KEY` request header.
+- Predicted status when the API key is missing or invalid: `401 Unauthorized`.
+
+## Prompt pattern used
+
+Every prompt followed the manual's sanitized pattern. P4 is shown in full as the representative
+example; P1 to P7 differ only in the goal, the predicted request, and the observed status line.
+
+> I am working only in an authorized local API simulator. Do not ask for or generate credentials,
+> tokens, or API-key values.
+> Sanitized API documentation: `POST /api/v1/books`. Request body schema: object with `id`
+> (integer), `title` (string), `author` (string), `isbn` (string, optional). Security: API key in
+> the `X-API-KEY` header, obtained from `POST /api/v1/loginViaBasic`.
+> Goal: add one fictional book.
+> My predicted request: `POST /api/v1/books`, headers `Content-Type: application/json` and
+> `X-API-KEY: <API_KEY>`, body `{"id": 901, "title": "Packets Beneath the Acacia", "author":
+> "Lorna Villaverde", "isbn": "978-0-000-00901-0"}`.
+> Observed status/error: none yet.
+> Check my request design, explain any correction, predict the status code, and give a short
+> validation checklist. Treat your answer as a hypothesis.
+
+## Decision notes
+
+**R1 and R2, accepted.** Both recommendations matched my prediction and the documentation. The one
+thing worth checking in R2 was whether the parameters actually did anything, since a server can ignore
+an unknown query parameter and still return 200. I compared the R2 response against R1: the `isbn`
+field appears only in R2 and the order changes to alphabetical by author, so both parameters were
+honored rather than silently dropped.
+
+**R3, modified.** The login half was right: POST, Basic Auth, 200, read the `token` field. The
+second half was a generic habit. The recommendation said to send the token back as
+`Authorization: Bearer <token>`, which is the common convention for token APIs, but this API's
+security scheme names an API-key header, `X-API-KEY`. I kept the login design and discarded the
+Bearer advice. R4 is where that choice gets tested.
+
+**R4, modified.** Two corrections. The first repeats R3: authentication goes in `X-API-KEY`, not in
+`Authorization`. Sending the key as a Bearer header is the same as sending no key at all, so it would
+have reproduced the R7 failure by accident and made R4 look broken when the design was the problem.
+The second is the status code. The AI predicted `201 Created`, which is what a strictly RESTful create
+usually returns, but the simulator's documented response for this operation is `200`. I recorded 200
+because that is what this API returns, not what REST style would prefer. The JSON body and the
+`Content-Type` header were correct as recommended.
+
+**R5, accepted.** Correct, and the note that `{id}` is a path segment and not `?id=` is the exact
+distinction the scenario tests. The fallback of 404 if R4 had not persisted was a useful check to have
+ready.
+
+**R6, modified.** Method, path and header were correct. The status prediction was not: the AI expected
+`204 No Content` for a DELETE, which again is common practice, but the documented and observed response
+here is `200`. I also added a step the recommendation did not include: re-running R5 after the delete.
+A 200 on DELETE only says the server accepted the request; the missing book on the follow-up GET is what
+shows the record is actually gone.
+
+**R7, modified.** The AI split the failure into two codes: 401 for a missing key and 403 for an invalid
+one. That split is reasonable in general, because 403 usually means "I know who you are and you may not
+do this". This simulator does not make that distinction; both a missing header and an altered key are
+rejected with 401, which is what the manual predicts and what the request plan records. The repair
+advice was also broader than needed. Re-running R3 for a fresh token is only necessary if the token has
+expired; in this test the cause was the header I had removed, so the fix was to re-enable the header
+with the valid key. The request then returned 200, and I deleted book 902 the same way as in R6 so no
+test data was left behind.
+
+## Python script review
+
+- Sanitized excerpt reviewed (credential values replaced with placeholders):
+
+```python
+import requests
+import json
+from faker import Faker
+
+APIHOST = "<LOCAL_API_HOST>"
+LOGIN = "<LAB_USERNAME>"
+PASSWORD = "<LAB_PASSWORD>"
+
+def getAuthToken():
+    authCreds = (LOGIN, PASSWORD)
+    r = requests.post(f"{APIHOST}/api/v1/loginViaBasic", auth=authCreds)
+    if r.status_code == 200:
+        return r.json()["token"]
+    else:
+        raise Exception(f"Status code {r.status_code} and text {r.text}, while trying to Auth.")
+
+def addBook(book, apiKey):
+    r = requests.post(
+        f"{APIHOST}/api/v1/books",
+        headers={"Content-type": "application/json", "X-API-Key": apiKey},
+        data=json.dumps(book),
+    )
+    if r.status_code == 200:
+        print(f"Book {book} added.")
+    else:
+        raise Exception(f"Error code {r.status_code} and text {r.text}, while trying to add book {book}.")
+
+apiKey = getAuthToken()
+fake = Faker()
+for i in range(4, 104):
+    book = {"id": i, "title": fake.catch_phrase(), "author": fake.name(), "isbn": fake.isbn13()}
+    addBook(book, apiKey)
+```
+
+- What the script automates: it is R3 followed by R4 run 100 times. `getAuthToken` sends a Basic Auth
+  POST to `loginViaBasic` by passing a `(user, password)` tuple to `requests`, which builds the
+  `Authorization: Basic` header itself, and returns the `token` field from the JSON response.
+  `addBook` sends one POST to `/api/v1/books` with the token in the `X-API-Key` header and the book
+  serialized by `json.dumps`, and treats any status other than 200 as fatal. The loop generates ids 4 to
+  103, so it starts above the ids already in the simulator, and Faker supplies a fictional title,
+  author name and ISBN-13 for each one. HTTP header names are case-insensitive, which is why
+  `X-API-Key` in the script and `X-API-KEY` in the docs both work.
+- AI recommendation evaluated: add `timeout=` to both `requests.post` calls, replace the status check
+  with `r.raise_for_status()`, and wrap `addBook` in a retry loop of three attempts so one failure does
+  not stop the whole run.
+- Decision and technical reason: **Modified.** I accept the timeout. Without it `requests` waits
+  indefinitely on a server that accepts the connection and never answers, so one stalled request freezes
+  the loop with no error at all. I reject the blanket retry. POST is not idempotent: if the book was
+  created but the response was lost, the retry sends the same id again and either duplicates the record
+  or fails on a conflict, which makes the log harder to read than the original single failure. A retry
+  is only safe here after a connection error, where the request never reached the server, or after a GET
+  confirms the id does not exist. I also kept the explicit `== 200` check instead of `raise_for_status()`,
+  because the latter accepts every 2xx, and this API's documented success code for the call is 200.
+- Independent validation performed: the modified version was checked against the documentation for the
+  two endpoints it calls and against the observed R3 and R4 results. Running it for real is limited to
+  the local simulator, and any books it adds are removed afterwards.
+
+## AI-use disclosure
+
+- Assistance received: Claude Code reviewed my predicted request for each of the seven scenarios using
+  the sanitized prompt pattern, reviewed the sanitized excerpt of `add100RandomBooks.py`, and helped
+  word the explanations in this log and the reflection answers.
+- Checks performed before accepting suggestions: every recommendation was compared against the local
+  OpenAPI documentation first, then executed in the simulator's Try It Out and rebuilt in Postman. The
+  request plan was checked with `validate_request_plan.py` until it reported 11/11.
+- Revisions made by the student: five of the seven recommendations were modified. The Bearer header was
+  replaced by `X-API-KEY` (R3, R4), the 201 and 204 status predictions were replaced by the documented 200
+  (R4, R6), a verification GET was added after the delete (R6), the 403 prediction for an invalid key was
+  replaced by 401 (R7), and the blanket POST retry in the script review was rejected.
+- One limitation or error found in the AI response: the AI answered from general REST convention rather
+  than from this API's contract. Bearer tokens, 201 for create, 204 for delete and 403 for a bad key are
+  all normal elsewhere, and all four were wrong here. None of them could be caught by reasoning alone;
+  each was settled by the documentation and the observed status code.

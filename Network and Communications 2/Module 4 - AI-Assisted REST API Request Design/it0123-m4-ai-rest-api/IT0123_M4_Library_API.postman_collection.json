@@ -1,0 +1,458 @@
+{
+  "info": {
+    "name": "IT0123 M4 School Library API (R1-R7)",
+    "description": "Local DEVASC simulator only. Set labUser and labPass as collection variables inside Postman before running. Do not export this collection after running, because apiKey will hold the temporary token.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "R1 List all books",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R1: status 200\", function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ]
+        }
+      }
+    },
+    {
+      "name": "R2 Books with ISBN, sorted by author",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R2: status 200\", function () { pm.response.to.have.status(200); });",
+              "pm.test(\"R2: every book has an isbn\", function () { pm.response.json().forEach(function (b) { pm.expect(b).to.have.property(\"isbn\"); }); });",
+              "pm.test(\"R2: sorted by author\", function () { var a = pm.response.json().map(function (b) { return b.author; }); pm.expect(a).to.eql(a.slice().sort()); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books?includeISBN=true&sortBy=author",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ],
+          "query": [
+            {
+              "key": "includeISBN",
+              "value": "true"
+            },
+            {
+              "key": "sortBy",
+              "value": "author"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "R3 Login via Basic Auth",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R3: status 200\", function () { pm.response.to.have.status(200); });",
+              "pm.test(\"R3: token returned\", function () { pm.expect(pm.response.json()).to.have.property(\"token\"); });",
+              "pm.collectionVariables.set(\"apiKey\", pm.response.json().token);"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/loginViaBasic",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "loginViaBasic"
+          ]
+        },
+        "auth": {
+          "type": "basic",
+          "basic": [
+            {
+              "key": "username",
+              "value": "{{labUser}}",
+              "type": "string"
+            },
+            {
+              "key": "password",
+              "value": "{{labPass}}",
+              "type": "string"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "R4 Add fictional book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R4: status 200\", function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 901,\n  \"title\": \"Packets Beneath the Acacia\",\n  \"author\": \"Lorna Villaverde\",\n  \"isbn\": \"978-0-000-00901-0\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "R5 Get new book by ID",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R5: status 200\", function () { pm.response.to.have.status(200); });",
+              "pm.test(\"R5: matches R4 payload\", function () { var b = pm.response.json(); pm.expect(b.title).to.eql(\"Packets Beneath the Acacia\"); pm.expect(b.author).to.eql(\"Lorna Villaverde\"); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books/901",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books",
+            "901"
+          ]
+        }
+      }
+    },
+    {
+      "name": "R6 Delete new book",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R6: status 200\", function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books/901",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books",
+            "901"
+          ]
+        }
+      }
+    },
+    {
+      "name": "R6 check: book is gone",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R6 check: book 901 no longer returned (status \" + pm.response.code + \")\", function () { pm.expect(pm.response.code).to.not.eql(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books/901",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books",
+            "901"
+          ]
+        }
+      }
+    },
+    {
+      "name": "R7a Add book, key missing",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R7a: status 401\", function () { pm.response.to.have.status(401); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 902,\n  \"title\": \"Packets Beneath the Acacia, Second Printing\",\n  \"author\": \"Lorna Villaverde\",\n  \"isbn\": \"978-0-000-00902-0\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "R7b Add book, key invalid",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R7b: status 401\", function () { pm.response.to.have.status(401); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "invalid-key-for-r7"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 902,\n  \"title\": \"Packets Beneath the Acacia, Second Printing\",\n  \"author\": \"Lorna Villaverde\",\n  \"isbn\": \"978-0-000-00902-0\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "R7c Add book, key restored",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R7c: status 200\", function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 902,\n  \"title\": \"Packets Beneath the Acacia, Second Printing\",\n  \"author\": \"Lorna Villaverde\",\n  \"isbn\": \"978-0-000-00902-0\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "R7d Cleanup: delete book 902",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"R7d: status 200\", function () { pm.response.to.have.status(200); });"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "X-API-KEY",
+            "value": "{{apiKey}}"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/api/v1/books/902",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "books",
+            "902"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://library.demo.local"
+    },
+    {
+      "key": "labUser",
+      "value": ""
+    },
+    {
+      "key": "labPass",
+      "value": ""
+    },
+    {
+      "key": "apiKey",
+      "value": ""
+    }
+  ]
+}
