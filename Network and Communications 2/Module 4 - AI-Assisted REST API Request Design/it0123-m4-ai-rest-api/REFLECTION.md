@@ -4,7 +4,7 @@ Student: Dawn Andrei C. Pamesa  Section: TS31
 
 ## 1. Which AI recommendation did you modify or reject, and what documentation or execution result justified the decision?
 
-The clearest case was R4. The AI recommended authenticating with an Authorization: Bearer header and predicted 201 Created. I modified both. The local OpenAPI security scheme names an API-key header, X-API-KEY, so a Bearer header is treated as no key at all and would have reproduced the R7 failure by accident. The documented and observed success code for adding a book is 200, not 201. The same pattern repeated in R6 (AI predicted 204, the API returns 200) and R7 (AI predicted 403 for an invalid key, the simulator returns 401). Each correction was settled by the documentation and then confirmed by the status code in Postman, not by argument.
+The clearest case was R4. The AI recommended authenticating with an Authorization: Bearer header and predicted 201 Created. I modified both. The local OpenAPI security scheme names an API-key header, X-API-KEY, so a Bearer header is treated as no key at all and would have reproduced the R7 failure by accident. The documented success code for adding a book is 200, not 201. The same pattern repeated in R6 (AI predicted 204, the API returns 200) and R7 (AI predicted 403 for an invalid key, the simulator returns 401). Each correction was settled by the documentation and then checked against the expected status code in the simulated run, not by argument.
 
 ## 2. How do method, path, headers, parameters, payload, and status code work together in a REST request?
 
