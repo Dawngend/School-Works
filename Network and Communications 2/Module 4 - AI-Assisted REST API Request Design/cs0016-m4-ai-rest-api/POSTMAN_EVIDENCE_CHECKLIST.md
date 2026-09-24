@@ -22,7 +22,7 @@ replaces the simulated files with real captures.
 - [x] Final successful verification after correcting R7 (`evidence/R7_fixed_200.json` and `.png`)
 - [x] Offline validator output showing all checks passed (`validator_output.txt`)
 
-The requests were built as the Postman collection `IT0123_M4_Library_API.postman_collection.json`,
+The requests were built as the Postman collection `CS0016_M4_Library_API.postman_collection.json`,
 which carries a status-code test for every step, so each screenshot also shows the test result.
 The collection's credential and token variables are blank in the submitted copy.
 

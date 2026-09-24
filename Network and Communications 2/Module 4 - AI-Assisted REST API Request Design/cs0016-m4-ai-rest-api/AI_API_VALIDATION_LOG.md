@@ -2,6 +2,8 @@
 
 Student: Dawn Andrei C. Pamesa  Section: TS31  Date: 2026-09-24
 
+Course: CS0016, Network and Communications 2 / IT Specialization 7: Development Network
+
 Approved AI tool: Claude Code (Anthropic), agentic CLI
 
 Do not paste a username, password, bearer token, API key, Authorization header,

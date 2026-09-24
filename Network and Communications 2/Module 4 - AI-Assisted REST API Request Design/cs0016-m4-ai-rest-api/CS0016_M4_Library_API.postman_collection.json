@@ -1,6 +1,6 @@
 {
   "info": {
-    "name": "IT0123 M4 School Library API (R1-R7)",
+    "name": "CS0016 M4 School Library API (R1-R7)",
     "description": "Local DEVASC simulator only. Set labUser and labPass as collection variables inside Postman before running. Do not export this collection after running, because apiKey will hold the temporary token.",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
   },
