@@ -17,7 +17,7 @@
       "payload": null,
       "expected_status": 200,
       "ai_decision": "Accepted",
-      "validation_evidence": "Simulator Try It Out and Postman: GET on the local books collection, status 200 and a JSON array of book objects (id, title, author). Screenshot evidence/R1_list_books.png."
+      "validation_evidence": "Simulator Try It Out and Postman: GET on the local books collection, status 200 and a JSON array of book objects (id, title, author). Response evidence/R1_list_books.json."
     },
     {
       "id": "R2",
@@ -35,7 +35,7 @@
       "payload": null,
       "expected_status": 200,
       "ai_decision": "Accepted",
-      "validation_evidence": "Postman Params tab with includeISBN=true and sortBy=author, status 200, every object now carries an isbn field and the list is ordered by author. Compared against R1 to confirm both parameters changed the response. Screenshot evidence/R2_isbn_sorted.png."
+      "validation_evidence": "Postman Params tab with includeISBN=true and sortBy=author, status 200, every object now carries an isbn field and the list is ordered by author. Compared against R1 to confirm both parameters changed the response. Response evidence/R2_isbn_sorted.json."
     },
     {
       "id": "R3",
@@ -50,7 +50,7 @@
       "payload": null,
       "expected_status": 200,
       "ai_decision": "Modified",
-      "validation_evidence": "Postman Authorization tab set to Basic Auth with the instructor-provided lab credentials, status 200, response body contains a token field whose value is fully blurred. Screenshot evidence/R3_login_basic.png."
+      "validation_evidence": "Postman Authorization tab set to Basic Auth with the instructor-provided lab credentials, status 200, response body contains a token field whose value is fully blurred. Response evidence/R3_login_basic.json."
     },
     {
       "id": "R4",
@@ -71,7 +71,7 @@
       },
       "expected_status": 200,
       "ai_decision": "Modified",
-      "validation_evidence": "Postman Body set to raw JSON with the fictional record, X-API-KEY header value blurred, status 200 and a response echoing the new book. Screenshot evidence/R4_add_book.png."
+      "validation_evidence": "Postman Body set to raw JSON with the fictional record, X-API-KEY header value blurred, status 200 and a response echoing the new book. Response evidence/R4_add_book.json."
     },
     {
       "id": "R5",
@@ -86,7 +86,7 @@
       "payload": null,
       "expected_status": 200,
       "ai_decision": "Accepted",
-      "validation_evidence": "Postman GET with the fictional ID from R4 in the path, status 200, returned title and author match the R4 payload exactly. Screenshot evidence/R5_get_book_by_id.png."
+      "validation_evidence": "Postman GET with the fictional ID from R4 in the path, status 200, returned title and author match the R4 payload exactly. Response evidence/R5_get_book_by_id.json."
     },
     {
       "id": "R6",
@@ -101,7 +101,7 @@
       "payload": null,
       "expected_status": 200,
       "ai_decision": "Modified",
-      "validation_evidence": "Postman DELETE with the fictional ID and the X-API-KEY header value blurred, status 200. Repeating R5 afterwards no longer returns the book, which confirms the cleanup. Screenshot evidence/R6_delete_book.png."
+      "validation_evidence": "Postman DELETE with the fictional ID and the X-API-KEY header value blurred, status 200. Repeating R5 afterwards no longer returns the book, which confirms the cleanup. Response evidence/R6_delete_book.json."
     },
     {
       "id": "R7",
@@ -121,7 +121,7 @@
       },
       "expected_status": 401,
       "ai_decision": "Modified",
-      "validation_evidence": "Postman R4 duplicate with the X-API-KEY header unticked returns 401; re-enabled with a deliberately altered key also returns 401. Restoring the valid key from R3 returns 200, and the book is then deleted as in R6. Screenshots evidence/R7_401_missing_key.png and evidence/R7_fixed_200.png."
+      "validation_evidence": "Postman R4 duplicate with the X-API-KEY header unticked returns 401; re-enabled with a deliberately altered key also returns 401. Restoring the valid key from R3 returns 200, and the book is then deleted as in R6. Response evidence/R7_401_missing_key.json and evidence/R7_fixed_200.json."
     }
   ]
 }
