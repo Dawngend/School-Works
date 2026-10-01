@@ -1,0 +1,455 @@
+{
+ "deck_id": 3,
+ "cards": [
+  [
+   81,
+   3,
+   "multiple_choice",
+   "Your team is developing a safety\u2011critical medical device with a strict regulatory deadline and a large, distributed team of 20 engineers. Which software development methodology is most appropriate for this scenario?",
+   "Waterfall, because it provides a linear, well\u2011documented process suitable for strict regulatory compliance",
+   "[\"Agile Scrum, because it allows frequent customer feedback\", \"Waterfall, because it provides a linear, well\\u2011documented process suitable for strict regulatory compliance\", \"Lean, because it focuses on eliminating waste and fast delivery\", \"Extreme Programming (XP), because it emphasizes pair programming and test\\u2011driven development\"]",
+   0
+  ],
+  [
+   82,
+   3,
+   "multiple_choice",
+   "During a daily Scrum stand\u2011up, a developer says, \"I\u2019m stuck on integrating the new authentication API, so I won\u2019t finish my task today.\" According to Scrum best practices, what should the Scrum Master do next?",
+   "Encourage the developer to seek help from a teammate immediately and note the impediment for the Scrum Master to resolve",
+   "[\"Extend the stand\\u2011up by 10 minutes to let the developer explain the issue in detail\", \"Ask the team to re\\u2011estimate the remaining work and adjust the sprint backlog\", \"Encourage the developer to seek help from a teammate immediately and note the impediment for the Scrum Master to resolve\", \"Tell the developer to continue working on the task and report progress tomorrow\"]",
+   0
+  ],
+  [
+   83,
+   3,
+   "multiple_choice",
+   "A development team notices that they often switch between fixing bugs, writing new features, and reviewing code, causing delays. Which of the seven Lean wastes does this situation illustrate?",
+   "Task switching",
+   "[\"Extra features\", \"Task switching\", \"Partially done work\", \"Motion\"]",
+   0
+  ],
+  [
+   84,
+   3,
+   "multiple_choice",
+   "A product owner writes the following user story: \"As a network engineer, I want to generate a daily report of bandwidth usage, so that I can identify congestion trends.\" Which part of this story is most critical for the development team to estimate effort?",
+   "The action (generate a daily report)",
+   "[\"The role (network engineer)\", \"The action (generate a daily report)\", \"The benefit (identify congestion trends)\", \"The wording of the story\"]",
+   0
+  ],
+  [
+   85,
+   3,
+   "multiple_choice",
+   "Your team uses Git for version control. You need to start work on a new feature without affecting the stable release branch. Which Git workflow best supports this need?",
+   "Create a new feature branch from the release branch, develop, then merge back via a pull request",
+   "[\"Commit directly to the main branch and push after testing\", \"Create a new feature branch from the release branch, develop, then merge back via a pull request\", \"Rebase the release branch onto your local master before starting work\", \"Delete the release branch and work on a temporary branch\"]",
+   0
+  ],
+  [
+   86,
+   3,
+   "multiple_choice",
+   "After functional, integration, and performance testing, the QA team reports that all test cases pass but the product manager requests a minor UI tweak. According to the testing\u2011deployment\u2011maintenance phase, what is the most appropriate next step?",
+   "Release the build to production and address the UI tweak as a post\u2011deployment maintenance task",
+   "[\"Deploy the current build to production immediately and schedule the UI tweak for the next sprint\", \"Delay production deployment until the UI tweak is completed and retested\", \"Add the UI tweak to the current release candidate and perform a quick regression test before deployment\", \"Release the build to production and address the UI tweak as a post\\u2011deployment maintenance task\"]",
+   0
+  ],
+  [
+   87,
+   3,
+   "multiple_choice",
+   "In a legacy codebase, you need to add a new logging mechanism without modifying existing classes that already implement a data\u2011processing interface. Which design pattern, described in the past relevant knowledge, best solves this problem?",
+   "Adapter, to allow the new logger to work with the existing interface",
+   "[\"Singleton, to ensure only one logger instance exists\", \"Factory Method, to create logger objects based on configuration\", \"Adapter, to allow the new logger to work with the existing interface\", \"Strategy, to select different logging algorithms at runtime\"]",
+   0
+  ],
+  [
+   88,
+   3,
+   "multiple_choice",
+   "You are building a real\u2011time dashboard that displays live sensor data. Each widget on the dashboard must update automatically when the underlying sensor object changes. Which design pattern best fits this requirement and what is the key responsibility of the subject in this pattern?",
+   "Observer pattern; the subject stores a list of observers and notifies them of changes",
+   "[\"Observer pattern; the subject stores a list of observers and notifies them of changes\", \"Singleton pattern; the subject ensures only one instance of the sensor exists\", \"Factory pattern; the subject creates widget objects on demand\", \"Decorator pattern; the subject adds new behavior to the sensor at runtime\"]",
+   0
+  ],
+  [
+   89,
+   3,
+   "multiple_choice",
+   "A team is adding a new form to an existing web application that follows the MVC pattern. The form collects user input and must validate it before updating the database. Which component should handle the validation logic?",
+   "Controller, because it mediates between the view and the model",
+   "[\"View, because it directly interacts with the user\", \"Model, because it encapsulates the application's data and business rules\", \"Controller, because it mediates between the view and the model\", \"Repository, because it manages data persistence\"]",
+   0
+  ],
+  [
+   90,
+   3,
+   "multiple_choice",
+   "A startup with three developers needs a version control system that allows them to work offline and later synchronize changes without a central server. Which type of VCS should they adopt?",
+   "Distributed Version Control System (DVCS)",
+   "[\"Local Version Control System (LVCS)\", \"Centralized Version Control System (CVCS)\", \"Distributed Version Control System (DVCS)\", \"File\\u2011based manual backup system\"]",
+   0
+  ],
+  [
+   91,
+   3,
+   "multiple_choice",
+   "Developer Alice creates a feature branch called `login\u2011ui` from `master`, completes her work, and wants to integrate the changes back into `master`. Which Git command should she use to combine the two histories?",
+   "git merge login\u2011ui",
+   "[\"git pull origin master\", \"git merge login\\u2011ui\", \"git rebase master\", \"git checkout login\\u2011ui\"]",
+   0
+  ],
+  [
+   92,
+   3,
+   "multiple_choice",
+   "After pushing his changes to the remote repository, Bob receives a conflict error because another teammate modified the same function. What does Git do to help resolve this situation?",
+   "It stops the push and marks the conflicting files as needing manual resolution",
+   "[\"It automatically discards Bob's changes and keeps the remote version\", \"It creates a new branch named `conflict\\u2011resolution` for manual merging\", \"It stops the push and marks the conflicting files as needing manual resolution\", \"It rewrites the commit history to hide the conflict\"]",
+   0
+  ],
+  [
+   93,
+   3,
+   "multiple_choice",
+   "A developer wants to stage all files that have been modified, deleted, or added in the working directory for the next commit. Which Git command accomplishes this in a single step?",
+   "git add .",
+   "[\"git add .\", \"git commit -a\", \"git stage *\", \"git push --all\"]",
+   0
+  ],
+  [
+   94,
+   3,
+   "multiple_choice",
+   "The GoF principle 'Program to an interface, not an implementation' aligns closely with which aspect of the Observer pattern?",
+   "Observers interact with the Subject through a defined interface, allowing any Subject implementation",
+   "[\"Observers depend on a concrete Subject class, ensuring tight coupling\", \"Subjects expose a concrete method to add observers, limiting flexibility\", \"Observers interact with the Subject through a defined interface, allowing any Subject implementation\", \"The pattern requires inheritance hierarchies for both observers and subjects\"]",
+   0
+  ],
+  [
+   95,
+   3,
+   "multiple_choice",
+   "You accidentally added a large confidential file to the staging area and realize you need to keep it in your working directory but stop tracking it in the repository. Which command should you use?",
+   "git rm --cached <file>",
+   "[\"git rm <file>\", \"git rm --cached <file>\", \"git reset <file>\", \"git checkout -- <file>\"]",
+   0
+  ],
+  [
+   96,
+   3,
+   "multiple_choice",
+   "Your team decides to permanently delete a deprecated script from the repository. Which two-step process will correctly remove the file from both the working directory and the repository?",
+   "rm <file> then git add <file>",
+   "[\"rm <file> then git add <file>\", \"git rm <file> then git commit\", \"rm <file> then git add <file>\", \"git rm --cached <file> then git commit\"]",
+   0
+  ],
+  [
+   97,
+   3,
+   "multiple_choice",
+   "After staging several changes, you want to create a commit with the message \"Add login feature\". Which command accomplishes this in a single step?",
+   "git commit -m \"Add login feature\"",
+   "[\"git commit -a -m \\\"Add login feature\\\"\", \"git commit -m \\\"Add login feature\\\"\", \"git push -m \\\"Add login feature\\\"\", \"git add -m \\\"Add login feature\\\"\"]",
+   0
+  ],
+  [
+   98,
+   3,
+   "multiple_choice",
+   "You run `git push origin develop` but receive an error about conflicts with the remote repository. What is the best immediate action to resolve this?",
+   "Pull the remote changes, resolve any conflicts, then push",
+   "[\"Force push with `git push -f`\", \"Delete the remote branch and push again\", \"Pull the remote changes, resolve any conflicts, then push\", \"Create a new branch and push there\"]",
+   0
+  ],
+  [
+   99,
+   3,
+   "multiple_choice",
+   "When executing `git pull`, which of the following occurs first?",
+   "The .git directory is updated with the latest commit and history",
+   "[\"A new merge commit is created on the local branch\", \"The working directory is updated with the latest content\", \"The .git directory is updated with the latest commit and history\", \"All remote branches are deleted locally\"]",
+   0
+  ],
+  [
+   100,
+   3,
+   "multiple_choice",
+   "Your project uses a main branch called `master`. You need to start work on a new feature, then delete the feature branch after merging. Which sequence of commands is correct?",
+   "git checkout -b feature master && git merge feature && git branch -d feature",
+   "[\"git branch feature && git checkout master && git branch -d feature\", \"git checkout -b feature master && git merge feature && git branch -d feature\", \"git checkout master && git branch -d feature && git merge feature\", \"git branch -d feature && git checkout -b feature master && git merge feature\"]",
+   0
+  ],
+  [
+   101,
+   3,
+   "multiple_choice",
+   "During a merge, Git cannot automatically combine changes and reports a merge conflict. Which of the following symbols in a .diff file indicates a line that was removed in one branch?",
+   "-",
+   "[\"+\", \"-\", \"@@\", \"/dev/null\"]",
+   0
+  ],
+  [
+   102,
+   3,
+   "multiple_choice",
+   "A developer just finished implementing a new feature and ran all unit tests, which all passed. Before merging the changes, the team follows a process where a reviewer watches the developer type the final commit and provides feedback on the spot. Which type of code review is this?",
+   "Over-the-shoulder code review",
+   "[\"Formal code review\", \"Change-based code review\", \"Over-the-shoulder code review\", \"Email pass-around\"]",
+   0
+  ],
+  [
+   103,
+   3,
+   "multiple_choice",
+   "During a code review, a teammate points out that a function name does not follow the project's naming convention, making the code harder to read. Which primary goal of code reviews does this observation address?",
+   "Improving code readability",
+   "[\"Ensuring functional correctness\", \"Detecting security vulnerabilities\", \"Improving code readability\", \"Verifying performance benchmarks\"]",
+   0
+  ],
+  [
+   104,
+   3,
+   "multiple_choice",
+   "You are writing unit tests for a Python module using the unittest framework. Which of the following is required to correctly define a test case class?",
+   "Inherit from unittest.TestCase and prefix test methods with 'test_'",
+   "[\"Inherit from unittest.TestCase and prefix test methods with 'test_'\", \"Create any class and name test methods with 'check_'\", \"Use only functions named 'unit_test' without a class\", \"Inherit from pytest.TestCase and use 'assert' statements\"]",
+   0
+  ],
+  [
+   105,
+   3,
+   "multiple_choice",
+   "Your team adopts Test\u2011Driven Development (TDD) for a new API client. After writing a failing test, you notice the test fails because the authentication token is missing, which is unrelated to the feature you are implementing. According to the TDD five\u2011step cycle, what should you do next?",
+   "Refactor the test to isolate the new feature\u2019s behavior",
+   "[\"Ignore the failure and proceed to write the feature code\", \"Refactor the test to isolate the new feature\\u2019s behavior\", \"Write additional code to handle authentication before fixing the feature\", \"Run the test suite again to see if the failure persists\"]",
+   0
+  ],
+  [
+   106,
+   3,
+   "multiple_choice",
+   "A CI pipeline runs both unit and integration tests. The unit tests pass, but the integration test suite reports a failure when two modules interact. Which testing level is most likely being exercised?",
+   "Integration testing",
+   "[\"Functional testing\", \"Non\\u2011functional testing\", \"Unit testing\", \"Integration testing\"]",
+   0
+  ],
+  [
+   107,
+   3,
+   "multiple_choice",
+   "You need to consume a REST API that returns data in XML, JSON, or YAML based on the Accept header. Which format would you choose if you want the simplest human\u2011readable representation while still being able to embed JSON directly if needed?",
+   "YAML",
+   "[\"XML\", \"JSON\", \"YAML\", \"CSV\"]",
+   0
+  ],
+  [
+   108,
+   3,
+   "multiple_choice",
+   "In a previous module you learned that code reviews happen after code changes are complete and tested. Why is it important to perform the review after testing, according to that past knowledge?",
+   "So reviewers can verify that the code already meets functional requirements before checking readability and best practices",
+   "[\"Because reviewers need to see failing tests to suggest fixes\", \"To ensure reviewers focus on code style rather than bugs\", \"So reviewers can verify that the code already meets functional requirements before checking readability and best practices\", \"Because testing automatically resolves all code quality issues\"]",
+   0
+  ],
+  [
+   109,
+   3,
+   "multiple_choice",
+   "You are editing a YAML configuration file that stores API keys. You need to add a comment explaining the purpose of each key. Where can you safely insert a comment?",
+   "Anywhere in the file except inside a long string literal, preceded by '# '",
+   "[\"At the beginning of the file, before any content\", \"Inside a multiline string literal that holds a secret token\", \"Anywhere in the file except inside a long string literal, preceded by '# '\", \"Only on lines that start with a dash '-'\"]",
+   0
+  ],
+  [
+   110,
+   3,
+   "multiple_choice",
+   "A Python script receives a response from a REST API that may be either JSON or YAML, depending on a query parameter. Which pair of functions should you use to safely parse the response based on its Content-Type header?",
+   "json.loads for JSON and yaml.safe_load for YAML",
+   "[\"json.loads for JSON and yaml.safe_load for YAML\", \"yaml.load for JSON and json.dump for YAML\", \"json.dump for both JSON and YAML\", \"yaml.safe_load for JSON and json.loads for YAML\"]",
+   0
+  ],
+  [
+   111,
+   3,
+   "multiple_choice",
+   "Your team is designing an endpoint that triggers a long-running data analysis job. The client should not wait for the job to finish before continuing other work. Which API design style best fits this requirement?",
+   "Asynchronous API that acknowledges receipt and provides a later callback",
+   "[\"Synchronous API that returns the final result directly\", \"Asynchronous API that acknowledges receipt and provides a later callback\", \"Batch API that processes multiple requests at once\", \"Polling API that requires the client to repeatedly request status\"]",
+   0
+  ],
+  [
+   112,
+   3,
+   "multiple_choice",
+   "When sending a POST request to create a new user via a REST API, which HTTP header must be included to correctly describe the format of the request body containing JSON data?",
+   "Content-Type: application/json",
+   "[\"Accept: application/json\", \"Content-Type: application/json\", \"Authorization: Bearer <token>\", \"Cache-Control: no-cache\"]",
+   0
+  ],
+  [
+   113,
+   3,
+   "multiple_choice",
+   "A SOAP message is returned with an error. Which element of the SOAP envelope contains the error details?",
+   "<Fault>",
+   "[\"<Header>\", \"<Body>\", \"<Fault>\", \"<Envelope>\"]",
+   0
+  ],
+  [
+   114,
+   3,
+   "multiple_choice",
+   "In a YAML file that will be converted to JSON for an API payload, you need to ensure the value 12345 is treated as a string, not a number. Which tag should you use?",
+   "!!str 12345",
+   "[\"!!int 12345\", \"!!str 12345\", \"!!float 12345\", \"!!bool 12345\"]",
+   0
+  ],
+  [
+   115,
+   3,
+   "multiple_choice",
+   "Your application receives an HTTP 429 response from an API indicating you have exceeded the rate limit. What is the most appropriate immediate action?",
+   "Wait for the duration specified in the Retry-After header before retrying",
+   "[\"Immediately retry the request with the same parameters\", \"Wait for the duration specified in the Retry-After header before retrying\", \"Switch to a different API endpoint that has no limits\", \"Ignore the response and continue as if the request succeeded\"]",
+   0
+  ],
+  [
+   116,
+   3,
+   "multiple_choice",
+   "A mobile app receives a response from a REST service and wants to store it for future use. Which HTTP response header tells the client that the data can be cached?",
+   "Cache-Control",
+   "[\"Authorization\", \"Cache-Control\", \"Set-Cookie\", \"Content-Type\"]",
+   0
+  ],
+  [
+   117,
+   3,
+   "multiple_choice",
+   "Your company\u2019s REST API is deployed in a layered architecture. Which advantage does this layering primarily provide?",
+   "Enhanced security and encapsulation of services",
+   "[\"Direct communication between client and database\", \"Enhanced security and encapsulation of services\", \"Elimination of the need for authentication\", \"Reduced need for HTTP status codes\"]",
+   0
+  ],
+  [
+   118,
+   3,
+   "multiple_choice",
+   "A REST service returns JavaScript code as part of a response to extend client functionality. What is the main security concern with this code\u2011on\u2011demand feature?",
+   "Potential security vulnerabilities from executing third\u2011party code",
+   "[\"Higher network latency\", \"Potential security vulnerabilities from executing third\\u2011party code\", \"Increased bandwidth usage\", \"Inability to cache the response\"]",
+   0
+  ],
+  [
+   119,
+   3,
+   "multiple_choice",
+   "You need to build a request URI for a user resource. The scheme is https, the host is api.example.com, the port is 443, the path is /users/42, and the query string is ?verbose=true. Which part of the URI is the authority?",
+   "api.example.com:443",
+   "[\"https\", \"api.example.com:443\", \"/users/42\", \"verbose=true\"]",
+   0
+  ],
+  [
+   120,
+   3,
+   "multiple_choice",
+   "An application must change only the email address of an existing user record without sending the entire user object. Which HTTP method should it use?",
+   "PATCH",
+   "[\"POST\", \"PUT\", \"PATCH\", \"DELETE\"]",
+   0
+  ],
+  [
+   121,
+   3,
+   "multiple_choice",
+   "A client authenticates to a REST API using Basic authentication with the credentials alice:secret. Which exact header value should be included in the request?",
+   "Basic YWxpY2U6c2VjcmV0",
+   "[\"Basic YWxpY2U6c2VjcmV0\", \"Bearer YWxpY2U6c2VjcmV0\", \"Basic alice:secret\", \"Authorization: Basic\"]",
+   0
+  ],
+  [
+   122,
+   3,
+   "multiple_choice",
+   "When sending a POST request that creates a new resource with a JSON payload, which header must be set to correctly describe the body format?",
+   "Content-Type: application/json",
+   "[\"Accept: application/xml\", \"Content-Type: application/json\", \"Authorization: Bearer <token>\", \"Cache-Control: no-cache\"]",
+   0
+  ],
+  [
+   123,
+   3,
+   "multiple_choice",
+   "While using Postman you receive a 429 Too Many Requests response. Which response header tells you exactly when the rate\u2011limit window will reset?",
+   "X-Rate Limit-Reset",
+   "[\"X-Rate Limit-Limit\", \"X-Rate Limit-Remaining\", \"X-Rate Limit-Reset\", \"Retry-After\"]",
+   0
+  ],
+  [
+   124,
+   3,
+   "multiple_choice",
+   "Your client implements a token\u2011bucket limiter with a capacity of 10 tokens and a refill rate of 1 token per second. After being idle for 5 seconds you immediately send 8 requests back\u2011to\u2011back. How many of those requests will be rejected?",
+   "0",
+   "[\"0\", \"2\", \"3\", \"5\"]",
+   0
+  ],
+  [
+   125,
+   3,
+   "multiple_choice",
+   "You are configuring a webhook that will notify your application whenever a new book is added. Which of the following is a mandatory requirement for the consuming application?",
+   "The client must register a URI with the provider",
+   "[\"The server must poll the webhook provider\", \"The client must register a URI with the provider\", \"The client must use GET requests to receive notifications\", \"The provider must send data in XML format\"]",
+   0
+  ],
+  [
+   126,
+   3,
+   "multiple_choice",
+   "A REST API call returns HTTP\u202f400 with the message \u201cNo id field provided\u201d. Which is the most likely cause of this error?",
+   "A required field is missing from the request body",
+   "[\"You used the wrong HTTP method (e.g., GET instead of POST)\", \"A required field is missing from the request body\", \"Your authentication token is invalid or expired\", \"The server is currently overloaded\"]",
+   0
+  ],
+  [
+   127,
+   3,
+   "multiple_choice",
+   "In a lab you need to call an HTTPS API that uses a self\u2011signed certificate. Which parameter should you add to the Python\u202frequests call to ignore certificate verification?",
+   "verify=False",
+   "[\"timeout\", \"verify=False\", \"cert\", \"proxies\"]",
+   0
+  ],
+  [
+   128,
+   3,
+   "multiple_choice",
+   "When sending a POST request with a JSON payload to add a new book, which HTTP header must you include to correctly describe the request body?",
+   "Content-Type",
+   "[\"Accept\", \"Authorization\", \"Content-Type\", \"User-Agent\"]",
+   0
+  ],
+  [
+   129,
+   3,
+   "multiple_choice",
+   "An API uses a sliding\u2011window counter that permits 100 requests per 60\u2011second window. You send 60 requests at time\u202ft=0, wait 30\u202fseconds, then send another 50 requests. Will the 50th request of the second batch be accepted?",
+   "No, because the sliding window still includes the first 60 requests",
+   "[\"Yes, because only 90 requests are in the current 60\\u2011second window\", \"No, because the sliding window still includes the first 60 requests\", \"Yes, because the sliding window resets after each request\", \"No, because the limit applies to a fixed window, not a sliding one\"]",
+   0
+  ],
+  [
+   130,
+   3,
+   "multiple_choice",
+   "A client receives a 403 Forbidden response when using the credentials person1/great. Which change will most likely resolve the error?",
+   "Switch to credentials person2/super",
+   "[\"Switch to credentials person2/super\", \"Add an API key to the request header\", \"Change the request method from GET to POST\", \"Disable SSL verification\"]",
+   0
+  ]
+ ]
+}

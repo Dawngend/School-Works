@@ -1,0 +1,723 @@
+{
+ "SE1 Module 3 Agile Methodologies": {
+  "deck_id": 7,
+  "cards": [
+   [
+    355,
+    7,
+    "multiple_choice",
+    "During a sprint, the team discovers a critical bug that blocks progress on the current sprint goal. According to Scrum guidelines, who should decide how to handle this issue?",
+    "The Development Team",
+    "[\"The Scrum Master\", \"The Product Owner\", \"The Development Team\", \"The Stakeholders\"]",
+    0
+   ],
+   [
+    356,
+    7,
+    "multiple_choice",
+    "A new stakeholder requests a feature change two days into a two\u2011week sprint. What is the most appropriate Scrum\u2011compliant response?",
+    "Ask the Product Owner to prioritize it for the next sprint",
+    "[\"Add the change to the sprint backlog immediately\", \"Ask the Product Owner to prioritize it for the next sprint\", \"Cancel the current sprint and start a new one\", \"Implement the change without informing the team\"]",
+    0
+   ],
+   [
+    357,
+    7,
+    "multiple_choice",
+    "In a daily scrum, a developer consistently arrives five minutes late, causing the meeting to start late. Which Scrum role is primarily responsible for addressing this impediment?",
+    "The Scrum Master",
+    "[\"The Product Owner\", \"The Scrum Master\", \"The Development Team member themselves\", \"The Project Sponsor\"]",
+    0
+   ],
+   [
+    358,
+    7,
+    "multiple_choice",
+    "During sprint retrospective, the team identifies that they spend too much time clarifying user stories. Which improvement is most aligned with Agile principles?",
+    "Introduce a dedicated backlog refinement session each week",
+    "[\"Increase the length of the sprint planning meeting\", \"Introduce a dedicated backlog refinement session each week\", \"Reduce the number of user stories per sprint\", \"Eliminate the daily scrum to save time\"]",
+    0
+   ],
+   [
+    359,
+    7,
+    "multiple_choice",
+    "A Scrum team of eight members is preparing for sprint planning. The Product Owner presents 30 backlog items, but the team estimates they can only complete 12. What should the team do?",
+    "Select the 12 highest\u2011priority items and leave the rest for later sprints",
+    "[\"Select the 12 highest\\u2011priority items and leave the rest for later sprints\", \"Ask the Product Owner to add more developers to increase capacity\", \"Force the team to work overtime to finish all 30 items\", \"Skip the sprint planning and start coding immediately\"]",
+    0
+   ],
+   [
+    360,
+    7,
+    "multiple_choice",
+    "The Scrum Master notices that the Development Team is frequently breaking the Definition of Done by delivering partially tested code. Which action best addresses this problem?",
+    "Facilitate a workshop to revisit and reinforce the Definition of Done",
+    "[\"Ask the Product Owner to lower the acceptance criteria\", \"Facilitate a workshop to revisit and reinforce the Definition of Done\", \"Replace the Development Team with a new group\", \"Extend the sprint length to allow more testing\"]",
+    0
+   ],
+   [
+    361,
+    7,
+    "multiple_choice",
+    "During a sprint review, a stakeholder asks to see a feature that was not completed. According to Scrum rules, what should the team do?",
+    "Explain that only completed work can be demonstrated and discuss it for future sprints",
+    "[\"Demonstrate the incomplete feature anyway\", \"Explain that only completed work can be demonstrated and discuss it for future sprints\", \"Cancel the sprint and start a new one to finish the feature\", \"Add the feature to the current sprint backlog and continue the review\"]",
+    0
+   ],
+   [
+    362,
+    7,
+    "multiple_choice",
+    "A new developer joins the Scrum team mid\u2011sprint and is unfamiliar with the product backlog. What is the most effective way to integrate them quickly?",
+    "Pair them with an experienced team member during the next daily scrum",
+    "[\"Assign them a separate project outside the sprint\", \"Ask the Scrum Master to update the sprint backlog with extra tasks for them\", \"Pair them with an experienced team member during the next daily scrum\", \"Have them wait until the next sprint to start work\"]",
+    0
+   ],
+   [
+    363,
+    7,
+    "multiple_choice",
+    "The Product Owner receives a high\u2011priority request from the business that conflicts with the current sprint goal. Which Scrum event is the appropriate place to discuss this conflict?",
+    "Sprint Review",
+    "[\"Sprint Retrospective\", \"Sprint Review\", \"Sprint Planning\", \"Backlog Refinement\"]",
+    0
+   ],
+   [
+    364,
+    7,
+    "multiple_choice",
+    "A Scrum team consistently delivers work early in the sprint but struggles to finish the last few story points. Which adjustment aligns best with Agile\u2019s principle of sustainable pace?",
+    "Reduce the amount of work taken into the sprint to match realistic capacity",
+    "[\"Increase the sprint length by two weeks\", \"Reduce the amount of work taken into the sprint to match realistic capacity\", \"Add more developers to the team\", \"Eliminate the sprint goal to allow flexibility\"]",
+    0
+   ],
+   [
+    365,
+    7,
+    "multiple_choice",
+    "During backlog refinement, the team discovers that several items lack clear acceptance criteria. What should they do before moving these items into sprint planning?",
+    "Collaborate with the Product Owner to define clear acceptance criteria",
+    "[\"Estimate them anyway and hope for the best\", \"Ask the Scrum Master to write the acceptance criteria\", \"Collaborate with the Product Owner to define clear acceptance criteria\", \"Delete the items from the backlog\"]",
+    0
+   ],
+   [
+    366,
+    7,
+    "multiple_choice",
+    "In an Agile project, the team decides to adopt a hybrid approach, using Scrum for development and Waterfall for documentation. Which Agile value does this hybrid model risk violating?",
+    "Working software over comprehensive documentation",
+    "[\"Individuals and interactions over processes and tools\", \"Working software over comprehensive documentation\", \"Customer collaboration over contract negotiation\", \"Responding to change over following a plan\"]",
+    0
+   ],
+   [
+    367,
+    7,
+    "multiple_choice",
+    "A Scrum Master notices that the same three people are always speaking during the daily scrum while others stay silent. What is the best way to encourage full participation?",
+    "Assign speaking order to each team member",
+    "[\"Extend the daily scrum to 30 minutes\", \"Assign speaking order to each team member\", \"Ask the silent members to write their updates in a chat instead\", \"Ignore it; the meeting is still within the timebox\"]",
+    0
+   ],
+   [
+    368,
+    7,
+    "multiple_choice",
+    "The team is about to start a two\u2011week sprint, but the Product Owner is unavailable for the sprint planning meeting. What should the Scrum Master do?",
+    "Reschedule the sprint planning to a time when the Product Owner can attend",
+    "[\"Proceed with planning using the last known backlog priorities\", \"Cancel the sprint and wait for the Product Owner\\u2019s return\", \"Ask the Development Team to create their own backlog items\", \"Reschedule the sprint planning to a time when the Product Owner can attend\"]",
+    0
+   ],
+   [
+    369,
+    7,
+    "multiple_choice",
+    "During a sprint, the Development Team discovers that a story\u2019s estimate was significantly off. Which Scrum practice helps mitigate this risk in future sprints?",
+    "Conducting a sprint retrospective to improve estimation techniques",
+    "[\"Increasing the sprint duration\", \"Conducting a sprint retrospective to improve estimation techniques\", \"Having the Product Owner re\\u2011estimate the story\", \"Skipping backlog refinement\"]",
+    0
+   ],
+   [
+    370,
+    7,
+    "multiple_choice",
+    "A stakeholder asks for a detailed technical design document before any code is written. Which Agile principle best guides the team\u2019s response?",
+    "Working software over comprehensive documentation",
+    "[\"Customer collaboration over contract negotiation\", \"Working software over comprehensive documentation\", \"Individuals and interactions over processes and tools\", \"Responding to change over following a plan\"]",
+    0
+   ],
+   [
+    371,
+    7,
+    "multiple_choice",
+    "The Scrum team is considering increasing the sprint length from two weeks to four weeks. Which outcome is most likely according to Scrum guidelines?",
+    "Reduced ability to adapt to change",
+    "[\"Higher flexibility and faster feedback\", \"Reduced ability to adapt to change\", \"More frequent releases\", \"Better alignment with Agile\\u2019s incremental delivery\"]",
+    0
+   ],
+   [
+    372,
+    7,
+    "multiple_choice",
+    "During backlog refinement, a dependency between two user stories is identified. What is the most appropriate action?",
+    "Re\u2011order the backlog so the dependent story is placed after its prerequisite",
+    "[\"Ignore the dependency and hope it resolves itself\", \"Split the dependent story into smaller tasks that can be done independently\", \"Re\\u2011order the backlog so the dependent story is placed after its prerequisite\", \"Remove both stories from the backlog\"]",
+    0
+   ],
+   [
+    373,
+    7,
+    "multiple_choice",
+    "A new product owner is unfamiliar with writing effective user stories. Which technique should the Scrum Master introduce to help improve story quality?",
+    "Use the INVEST criteria for user stories",
+    "[\"Use the INVEST criteria for user stories\", \"Adopt a waterfall style requirement specification\", \"Require the product owner to write detailed technical specifications\", \"Eliminate user stories and use use cases instead\"]",
+    0
+   ],
+   [
+    374,
+    7,
+    "multiple_choice",
+    "The team consistently finishes the sprint backlog early and has idle capacity. Which Scrum\u2011aligned practice can they adopt to make better use of this time?",
+    "Pull additional high\u2011priority backlog items into the sprint (if Definition of Done allows)",
+    "[\"Start a new sprint early\", \"Add unrelated features to the product backlog without stakeholder input\", \"Pull additional high\\u2011priority backlog items into the sprint (if Definition of Done allows)\", \"Extend the sprint duration to fill the time\"]",
+    0
+   ],
+   [
+    375,
+    7,
+    "multiple_choice",
+    "During a sprint review, the stakeholders request a major architectural change that would affect all current work. What should the Scrum team do?",
+    "Discuss the impact with the Product Owner and consider adding it to the product backlog for future sprints",
+    "[\"Implement the change immediately to please the stakeholders\", \"Reject the change outright because it disrupts the sprint\", \"Discuss the impact with the Product Owner and consider adding it to the product backlog for future sprints\", \"Ignore the request until the next sprint\"]",
+    0
+   ],
+   [
+    376,
+    7,
+    "multiple_choice",
+    "A project team using Crystal methodology is in the Chartering phase. Which activity is most appropriate?",
+    "Performing preliminary feasibility analysis",
+    "[\"Conducting post\\u2011deployment review\", \"Performing preliminary feasibility analysis\", \"Integrating product with real users\", \"Defining timeboxes for iterations\"]",
+    0
+   ],
+   [
+    377,
+    7,
+    "multiple_choice",
+    "In DSDM, a stakeholder asks to add a low\u2011priority feature when the project is out of budget. What should the team do?",
+    "Defer it because MoSCoW says low\u2011priority can be omitted",
+    "[\"Add it and request extra budget\", \"Defer it because MoSCoW says low\\u2011priority can be omitted\", \"Replace a Must\\u2011have with it\", \"Ignore the request\"]",
+    0
+   ],
+   [
+    378,
+    7,
+    "multiple_choice",
+    "A development team practicing XP plans its next iteration. Which artifact helps them capture user requirements?",
+    "Storyboard",
+    "[\"Gantt chart\", \"Storyboard\", \"Use case diagram\", \"Risk register\"]",
+    0
+   ],
+   [
+    379,
+    7,
+    "multiple_choice",
+    "During a Lean Software Development project, the team notices many partially written code files that are later abandoned. According to Lean principles, this activity is considered:",
+    "Eliminating waste",
+    "[\"Amplifying learning\", \"Defer commitment\", \"Eliminating waste\", \"Building integrity\"]",
+    0
+   ],
+   [
+    380,
+    7,
+    "multiple_choice",
+    "A Scrum master wants to incorporate DSDM timeboxing into a Scrum sprint. Which statement best describes the alignment?",
+    "Both use fixed\u2011length intervals to deliver increments",
+    "[\"Timeboxing in DSDM is longer than a Scrum sprint\", \"Both use fixed\\u2011length intervals to deliver increments\", \"DSDM timeboxing requires variable scope\", \"Scrum does not allow timeboxing\"]",
+    0
+   ],
+   [
+    381,
+    7,
+    "multiple_choice",
+    "In Feature\u2011Driven Development, which phase directly follows \u201cDomain object Modeling\u201d?",
+    "Development by feature",
+    "[\"Development by feature\", \"Component/Class Ownership\", \"Inspections\", \"Regular Builds\"]",
+    0
+   ],
+   [
+    382,
+    7,
+    "multiple_choice",
+    "A team using XP notices that test automation is lagging behind coding. Which XP practice should they strengthen?",
+    "Continuous integration",
+    "[\"Pair programming\", \"Continuous integration\", \"Refactoring\", \"On\\u2011site customer\"]",
+    0
+   ],
+   [
+    383,
+    7,
+    "multiple_choice",
+    "During the Wrap Up phase of Crystal, the team should:",
+    "Conduct post\u2011deployment reviews",
+    "[\"Create the initial development plan\", \"Deploy into the user environment\", \"Conduct post\\u2011deployment reviews\", \"Update the release plan\"]",
+    0
+   ],
+   [
+    384,
+    7,
+    "multiple_choice",
+    "In a DSDM project, the product owner classifies requirements as Must have, Should have, Could have, Won\u2019t have. Which category is most likely to be cut if time runs out?",
+    "Could have",
+    "[\"Must have\", \"Should have\", \"Could have\", \"Won\\u2019t have\"]",
+    0
+   ],
+   [
+    385,
+    7,
+    "multiple_choice",
+    "A software company wants to adopt Lean principles. Which of the following actions aligns with \u201cDefer Commitment\u201d?",
+    "Delay UI design until user feedback is available",
+    "[\"Decide on database technology at project start\", \"Delay UI design until user feedback is available\", \"Freeze all requirements early\", \"Assign all tasks before any iteration\"]",
+    0
+   ],
+   [
+    386,
+    7,
+    "multiple_choice",
+    "While using XP, a team schedules a \u201cmid\u2011iteration review\u201d. What is the primary purpose of this meeting?",
+    "To adjust the iteration scope based on feedback",
+    "[\"To finalize the product release\", \"To adjust the iteration scope based on feedback\", \"To rewrite all user stories\", \"To conduct performance testing\"]",
+    0
+   ],
+   [
+    387,
+    7,
+    "multiple_choice",
+    "In Crystal methodology, which factor is considered most critical to project success?",
+    "Team members\u2019 communication skills",
+    "[\"Strict adherence to tools\", \"Team members\\u2019 communication skills\", \"Number of documentation pages\", \"Length of the project charter\"]",
+    0
+   ],
+   [
+    388,
+    7,
+    "multiple_choice",
+    "A project manager using DSDM wants to ensure frequent delivery. Which practice directly supports this goal?",
+    "Timeboxing each development slice",
+    "[\"Conducting a single big release at the end\", \"Timeboxing each development slice\", \"Writing all requirements upfront\", \"Avoiding stakeholder meetings\"]",
+    0
+   ],
+   [
+    389,
+    7,
+    "multiple_choice",
+    "An XP team is planning its iteration tasks. Which technique helps them estimate effort quickly?",
+    "Planning poker",
+    "[\"Function point analysis\", \"Planning poker\", \"Critical path method\", \"Monte Carlo simulation\"]",
+    0
+   ],
+   [
+    390,
+    7,
+    "multiple_choice",
+    "During a Lean project, the team identifies that a report generation feature is rarely used by customers. According to Lean, what should they do?",
+    "Consider removing it to eliminate waste",
+    "[\"Prioritize its enhancement\", \"Keep it unchanged\", \"Consider removing it to eliminate waste\", \"Add more features to it\"]",
+    0
+   ],
+   [
+    391,
+    7,
+    "multiple_choice",
+    "A software development group is transitioning from Waterfall to an Agile method and wants to keep the \u201cdaily stand\u2011up\u201d practice. Which Agile methodology explicitly includes this ceremony?",
+    "Scrum",
+    "[\"DSDM\", \"Crystal\", \"Scrum\", \"FDD\"]",
+    0
+   ],
+   [
+    392,
+    7,
+    "multiple_choice",
+    "In a DSDM feasibility study, which activity is performed first?",
+    "Pre\u2011project assessment",
+    "[\"Business study\", \"Functional model iteration\", \"Pre\\u2011project assessment\", \"Implementation planning\"]",
+    0
+   ],
+   [
+    393,
+    7,
+    "multiple_choice",
+    "A team using Feature\u2011Driven Development wants to increase visibility of progress. Which practice best achieves this?",
+    "Regular builds",
+    "[\"Daily burndown charts\", \"Regular builds\", \"Pair programming\", \"Retrospective meetings\"]",
+    0
+   ],
+   [
+    394,
+    7,
+    "multiple_choice",
+    "While applying XP, a developer suggests refactoring a module that works correctly but is hard to understand. Which XP principle justifies this suggestion?",
+    "Simple design",
+    "[\"Simple design\", \"Continuous integration\", \"Customer involvement\", \"Small releases\"]",
+    0
+   ]
+  ]
+ },
+ "SE1 Module 4 System Models and Requirements": {
+  "deck_id": 8,
+  "cards": [
+   [
+    395,
+    8,
+    "multiple_choice",
+    "A satellite attitude control team is creating a functional block diagram. Which symbol is used to represent an external entity that interacts with the system?",
+    "Rectangle with an open side",
+    "[\"Rectangle with an open side\", \"Circle\", \"Rounded rectangle\", \"Diamond\"]",
+    0
+   ],
+   [
+    396,
+    8,
+    "multiple_choice",
+    "In a Functional Flow Block Diagram (FFBD), which gate symbol indicates that functions are executed in parallel?",
+    "And gate",
+    "[\"And gate\", \"Or gate\", \"XOR gate\", \"Not gate\"]",
+    0
+   ],
+   [
+    397,
+    8,
+    "multiple_choice",
+    "A manufacturing firm wants to reduce its process cycle time. Which modeling technique is most appropriate for analyzing and improving the current process?",
+    "BPMN (Business Process Model and Notation)",
+    "[\"Functional modeling\", \"BPMN (Business Process Model and Notation)\", \"Data Flow Diagram\", \"Entity\\u2011Relationship Diagram\"]",
+    0
+   ],
+   [
+    398,
+    8,
+    "multiple_choice",
+    "During system architecture design, which diagram best shows high\u2011level components and their interactions?",
+    "System architecture diagram",
+    "[\"Functional block diagram\", \"System architecture diagram\", \"Data flow diagram\", \"BPMN diagram\"]",
+    0
+   ],
+   [
+    399,
+    8,
+    "multiple_choice",
+    "In data modeling, which artifact explicitly defines how entity types are related to each other?",
+    "Relationships",
+    "[\"Attributes\", \"Integrity rules\", \"Relationships\", \"Keys\"]",
+    0
+   ],
+   [
+    400,
+    8,
+    "multiple_choice",
+    "When drawing a Data Flow Diagram (DFD), which symbol is used for a process that transforms data?",
+    "Rounded rectangle",
+    "[\"Rectangle\", \"Rounded rectangle\", \"Open\\u2011ended rectangle\", \"Diamond\"]",
+    0
+   ],
+   [
+    401,
+    8,
+    "multiple_choice",
+    "A project team is preparing an FFBD for a stakeholder meeting. Which level of detail is most appropriate for that audience?",
+    "Conceptual overview",
+    "[\"Detailed step\\u2011by\\u2011step flow\", \"Multi\\u2011tier time\\u2011sequenced flow\", \"Conceptual overview\", \"Physical data model\"]",
+    0
+   ],
+   [
+    402,
+    8,
+    "multiple_choice",
+    "In BPMN, which element is used to represent a decision point in a workflow?",
+    "Gateway",
+    "[\"Task\", \"Event\", \"Gateway\", \"Flow line\"]",
+    0
+   ],
+   [
+    403,
+    8,
+    "multiple_choice",
+    "A company is documenting its supporting processes. Which of the following processes is classified as a supporting process?",
+    "Technical support",
+    "[\"Corporate governance\", \"Manufacturing\", \"Technical support\", \"Sales\"]",
+    0
+   ],
+   [
+    404,
+    8,
+    "multiple_choice",
+    "Which modeling perspective focuses on describing the dynamic processes of a system?",
+    "Functional modeling perspective",
+    "[\"Functional modeling perspective\", \"Behavioral perspective\", \"Organizational perspective\", \"Informational perspective\"]",
+    0
+   ],
+   [
+    405,
+    8,
+    "multiple_choice",
+    "In a functional block diagram, how are the inputs and outputs of a block typically shown?",
+    "Arrows",
+    "[\"Dashed lines\", \"Solid lines\", \"Arrows\", \"No lines\"]",
+    0
+   ],
+   [
+    406,
+    8,
+    "multiple_choice",
+    "A Scrum team wants to incorporate modeling without violating the iterative nature of sprints. Which activity aligns best with Agile principles?",
+    "Using functional flow block diagrams to refine processes each sprint",
+    "[\"Creating a complete system architecture upfront\", \"Developing a detailed data model before any coding\", \"Using functional flow block diagrams to refine processes each sprint\", \"Defining all business processes before the first sprint\"]",
+    0
+   ],
+   [
+    407,
+    8,
+    "multiple_choice",
+    "In a Data Flow Diagram, which symbol denotes an external entity that provides input to or receives output from the system?",
+    "Open\u2011ended rectangle",
+    "[\"Rounded rectangle\", \"Open\\u2011ended rectangle\", \"Circle\", \"Square\"]",
+    0
+   ],
+   [
+    408,
+    8,
+    "multiple_choice",
+    "In functional modeling, what does a \"store\" symbol represent?",
+    "Data collection or material",
+    "[\"Process\", \"Data collection or material\", \"External entity\", \"Flow\"]",
+    0
+   ],
+   [
+    409,
+    8,
+    "multiple_choice",
+    "An analyst needs to illustrate how data moves between processes in a new application. Which diagram is most suitable?",
+    "Data flow diagram",
+    "[\"Functional block diagram\", \"Data flow diagram\", \"BPMN diagram\", \"Entity\\u2011relationship diagram\"]",
+    0
+   ],
+   [
+    410,
+    8,
+    "multiple_choice",
+    "Which of the following is NOT a typical purpose of functional modeling?",
+    "Defining user interface colors",
+    "[\"Discovering information needs\", \"Establishing product and service costs\", \"Describing functions and processes\", \"Defining user interface colors\"]",
+    0
+   ],
+   [
+    411,
+    8,
+    "multiple_choice",
+    "In the system architecture diagram shown, which component most likely represents the \"Semantic Workflow Engine\"?",
+    "Backend service",
+    "[\"Frontend\", \"Backend service\", \"Database\", \"External Entity\"]",
+    0
+   ],
+   [
+    412,
+    8,
+    "multiple_choice",
+    "When converting a conceptual data model to a physical data model, which element is added?",
+    "Tables",
+    "[\"Entities\", \"Attributes\", \"Tables\", \"Integrity rules\"]",
+    0
+   ],
+   [
+    413,
+    8,
+    "multiple_choice",
+    "Design diagrams help troubleshoot system failures. Which feature most directly supports this purpose?",
+    "Visual representation of data flow",
+    "[\"Visual representation of data flow\", \"Color coding of components\", \"Inclusion of source code\", \"Detailed user manuals\"]",
+    0
+   ],
+   [
+    414,
+    8,
+    "multiple_choice",
+    "In business process management, which type of process creates the primary value stream for customers?",
+    "Operational process",
+    "[\"Management process\", \"Operational process\", \"Supporting process\", \"Administrative process\"]",
+    0
+   ],
+   [
+    415,
+    8,
+    "multiple_choice",
+    "A business analyst is creating a Level 1 DFD for an online bookstore. Which symbol should they use to represent the \"Customer Database\" that stores order histories permanently?",
+    "A rectangle with an open end and a vertical line near the closed side",
+    "[\"A rectangle with an open end\", \"A rectangle with an open end and a vertical line near the closed side\", \"A circle labeled \\\"Customer Database\\\"\", \"A double-headed arrow labeled \\\"Customer Database\\\"\"]",
+    0
+   ],
+   [
+    416,
+    8,
+    "multiple_choice",
+    "During a walkthrough, a reviewer points out that a data flow line in a DFD has arrows at both ends. What does this indicate?",
+    "The data flow is bidirectional",
+    "[\"The data flow is optional\", \"The data flow is bidirectional\", \"The data flow is a mistake and should be removed\", \"The data flow represents a data store\"]",
+    0
+   ],
+   [
+    417,
+    8,
+    "multiple_choice",
+    "In a DFD for a hospital's patient admission system, which of the following would be best represented as an external entity?",
+    "Patient",
+    "[\"Patient Registration Form\", \"Medical Records Database\", \"Insurance Verification Process\", \"Patient\"]",
+    0
+   ],
+   [
+    418,
+    8,
+    "multiple_choice",
+    "A developer is drafting a DFD using Gane & Sarson notation but accidentally mixes in Yourdon symbols. Which guideline does this violate?",
+    "Select one notation style and use it consistently",
+    "[\"Do not mix levels of detail on one chart\", \"Use a template to draw uniformly sized symbols\", \"Select one notation style and use it consistently\", \"Label the top of each diagram with system name\"]",
+    0
+   ],
+   [
+    419,
+    8,
+    "multiple_choice",
+    "When documenting a DFD, the analyst includes the date, system name, and preparer's name at the top. This follows which recommended practice?",
+    "Label the top of each DFD with pertinent information",
+    "[\"Correlate symbols to other DFDs using reference numbers\", \"Label the top of each DFD with pertinent information\", \"Connect symbols with flow lines using pipes\", \"Desk check all DFDs for logical connections\"]",
+    0
+   ],
+   [
+    420,
+    8,
+    "multiple_choice",
+    "In the Purchase Order system DFD, the \"Price Quotation\" data flow originates from which process?",
+    "\"Estimating\"",
+    "[\"\\\"Preparing Contact\\\"\", \"\\\"Estimating\\\"\", \"\\\"Scheduling\\\"\", \"\\\"Production\\\"\"]",
+    0
+   ],
+   [
+    421,
+    8,
+    "multiple_choice",
+    "A team is creating a DFD for a mobile app that must run on iOS 14 or later. Which system requirement category does this specification belong to?",
+    "Operating System (OS)",
+    "[\"Minimum CPU speed\", \"Operating System (OS)\", \"Audio hardware\", \"Wireless connectivity\"]",
+    0
+   ],
+   [
+    422,
+    8,
+    "multiple_choice",
+    "Which of the following is NOT typically considered a flexible system requirement?",
+    "Required operating system version",
+    "[\"Minimum RAM\", \"Required operating system version\", \"Recommended GPU\", \"Minimum CPU speed\"]",
+    0
+   ],
+   [
+    423,
+    8,
+    "multiple_choice",
+    "During requirements gathering, the analyst decides to use a closed-ended questionnaire. What is the primary advantage of this approach?",
+    "It provides quantitative results that are easy to analyze",
+    "[\"It captures detailed personal experiences\", \"It provides quantitative results that are easy to analyze\", \"It encourages respondents to elaborate in their own words\", \"It reduces the cost of printing questionnaires\"]",
+    0
+   ],
+   [
+    424,
+    8,
+    "multiple_choice",
+    "An analyst observes the workflow in a manufacturing plant to understand data movement. Which fact\u2011finding technique is being employed?",
+    "Observation",
+    "[\"Interview\", \"Observation\", \"Research\", \"Record inspection\"]",
+    0
+   ],
+   [
+    425,
+    8,
+    "multiple_choice",
+    "When performing a desk check of a DFD, the analyst discovers a process that has no incoming data flow. What does this indicate?",
+    "The DFD is missing a data flow that should feed the process",
+    "[\"The process is a data store, not a process\", \"The DFD is missing a data flow that should feed the process\", \"The process is optional and can be removed\", \"The process should be converted to an external entity\"]",
+    0
+   ],
+   [
+    426,
+    8,
+    "multiple_choice",
+    "A software project follows Scrum sprints of two weeks. The team wants to include DFD updates in each sprint. Which Scrum ceremony is most appropriate for reviewing the DFD changes?",
+    "Sprint Review",
+    "[\"Sprint Planning\", \"Daily Stand\\u2011up\", \"Sprint Review\", \"Sprint Retrospective\"]",
+    0
+   ],
+   [
+    427,
+    8,
+    "multiple_choice",
+    "In an Agile environment, which practice helps ensure that DFD symbols remain consistent across multiple team members?",
+    "Create a shared style guide and template for DFD symbols",
+    "[\"Allow each member to use their preferred notation\", \"Create a shared style guide and template for DFD symbols\", \"Update the DFD only at the end of the project\", \"Rotate the responsibility of drawing DFDs weekly\"]",
+    0
+   ],
+   [
+    428,
+    8,
+    "multiple_choice",
+    "A system requires a minimum of 8\u202fGB RAM but recommends 16\u202fGB for optimal performance. Which statement best reflects this requirement?",
+    "The software will run, but may be slower with only 8\u202fGB RAM",
+    "[\"The software will not install on a machine with 8\\u202fGB RAM\", \"The software will run, but may be slower with only 8\\u202fGB RAM\", \"The software will automatically upgrade the RAM to 16\\u202fGB\", \"The software will only function if 16\\u202fGB RAM is present\"]",
+    0
+   ],
+   [
+    429,
+    8,
+    "multiple_choice",
+    "Which DFD element is best used to represent a temporary cache that holds data for a short period during processing?",
+    "Automated data store",
+    "[\"Automated data store\", \"Manual data store\", \"External entity\", \"Data flow\"]",
+    0
+   ],
+   [
+    430,
+    8,
+    "multiple_choice",
+    "A project manager asks the analyst to produce a Level 0 DFD that shows only the major processes of a payroll system. Which guideline does this request follow?",
+    "Do not mix levels of detail on one chart",
+    "[\"Do not mix levels of detail on one chart\", \"Connect symbols with flow lines using pipes\", \"Correlate symbols to other DFDs using reference numbers\", \"Label all symbols with descriptive names\"]",
+    0
+   ],
+   [
+    431,
+    8,
+    "multiple_choice",
+    "During a requirements interview, a user mentions that the current system sometimes loses data after a power outage. Which DFD component should the analyst focus on to address this issue?",
+    "Data store representing persistent storage",
+    "[\"External entity representing the user\", \"Data store representing persistent storage\", \"Data flow showing user input\", \"Process that validates input\"]",
+    0
+   ],
+   [
+    432,
+    8,
+    "multiple_choice",
+    "In the context of DFDs, what does placing a label next to a data flow line accomplish?",
+    "It describes the transformation or content of the data",
+    "[\"It indicates the direction of the flow\", \"It describes the transformation or content of the data\", \"It defines the size of the data being transferred\", \"It marks the flow as optional\"]",
+    0
+   ],
+   [
+    433,
+    8,
+    "multiple_choice",
+    "A team is using a template to draw DFD symbols uniformly. Which of the following benefits does this provide?",
+    "It improves readability and consistency for documentation",
+    "[\"It eliminates the need for a desk check\", \"It ensures symbols are drawn freehand for flexibility\", \"It improves readability and consistency for documentation\", \"It allows mixing of Gane & Sarson and Yourdon notations\"]",
+    0
+   ]
+  ]
+ }
+}
