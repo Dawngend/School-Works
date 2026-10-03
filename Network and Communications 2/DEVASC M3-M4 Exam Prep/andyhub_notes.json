@@ -1,0 +1,2679 @@
+{
+ "Module 3 Software Development and Design": {
+  "sections": [
+   {
+    "heading": "Software Development Life Cycle (SDLC)",
+    "summary": "The SDLC describes the end\u2011to\u2011end process of creating software, from an initial idea through delivery and maintenance. It consists of six sequential phases\u2014Requirements & Analysis, Design, Implementation, Testing, Deployment, and Maintenance\u2014each feeding its output into the next. The model emphasizes that software development is more than coding; it includes gathering stakeholder needs, creating specifications, building high\u2011 and low\u2011level designs, testing, and ongoing support.",
+    "key_terms": [
+     {
+      "term": "SDLC",
+      "definition": "Software Development Life Cycle, a structured process for delivering software."
+     },
+     {
+      "term": "SRS",
+      "definition": "Software Requirements Specification, a document that records functional and non\u2011functional requirements."
+     },
+     {
+      "term": "HLD",
+      "definition": "High\u2011Level Design, outlines system architecture and major components."
+     },
+     {
+      "term": "LLD",
+      "definition": "Low\u2011Level Design, details module\u2011level design and interfaces."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Requirements & Analysis",
+      "statement": "Identify stakeholder needs, assess feasibility, risks, budget, and define test strategy."
+     },
+     {
+      "name": "Design",
+      "statement": "Produce HLD and LLD documents that translate requirements into a blueprint for implementation."
+     },
+     {
+      "name": "Implementation",
+      "statement": "Write functional code that fulfills the design specifications; typically the longest phase."
+     },
+     {
+      "name": "Testing",
+      "statement": "Perform functional, integration, performance, and security testing until the code is bug\u2011free."
+     },
+     {
+      "name": "Deployment",
+      "statement": "Install the validated software into the production environment and release it to users."
+     },
+     {
+      "name": "Maintenance",
+      "statement": "Provide support, fix defects, and incorporate new requests for future releases."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Map a simple mobile\u2011app project to the SDLC phases.",
+      "steps": [
+       "1. Requirements: Gather user stories such as \"As a driver, I want to see nearby gas stations.\"",
+       "2. Design: Create HLD showing UI screens, API services, and data storage; LLD for each screen's layout.",
+       "3. Implementation: Code the UI in React Native and backend services in Node.js.",
+       "4. Testing: Write unit tests for API endpoints, perform UI integration tests, and run performance tests on network calls.",
+       "5. Deployment: Publish the app to the App Store and configure backend on cloud servers.",
+       "6. Maintenance: Monitor crash reports, release patches, and add new features like payment integration."
+      ],
+      "answer": "The project follows the six SDLC phases, ensuring each step builds on the previous deliverable."
+     }
+    ],
+    "common_mistakes": [
+     "Skipping the Requirements phase and assuming the problem is already fully understood.",
+     "Treating design documents as optional, leading to re\u2011work during implementation.",
+     "Deploying before thorough testing, resulting in production bugs."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Software Development Methodologies",
+    "summary": "Methodologies are structured approaches that guide how the SDLC is executed. The three most common models are Waterfall (sequential), Agile (iterative and flexible), and Lean (waste\u2011reduction focus). The choice depends on project size, duration, and team composition.",
+    "key_terms": [
+     {
+      "term": "Waterfall",
+      "definition": "A linear, phase\u2011by\u2011phase methodology where each stage must be completed before the next begins."
+     },
+     {
+      "term": "Agile",
+      "definition": "An adaptive methodology that delivers working software in short, iterative cycles called sprints."
+     },
+     {
+      "term": "Lean",
+      "definition": "A methodology that emphasizes eliminating waste and delivering value quickly."
+     }
+    ],
+    "properties": [
+     {
+      "name": "When to use Waterfall",
+      "statement": "Projects with well\u2011defined, unchanging requirements and a fixed scope."
+     },
+     {
+      "name": "When to use Agile",
+      "statement": "Projects that expect changing requirements, need frequent stakeholder feedback, and have small to medium\u2011sized teams."
+     },
+     {
+      "name": "When to use Lean",
+      "statement": "Environments where minimizing waste and maximizing flow are critical, often combined with Agile practices."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Select a methodology for a 12\u2011month government compliance system with fixed regulations.",
+      "steps": [
+       "1. Identify requirement stability: Regulations are fixed \u2192 low volatility.",
+       "2. Assess timeline: Long, predictable schedule.",
+       "3. Evaluate team size: Large, multi\u2011disciplinary team.",
+       "4. Match to methodology: Waterfall fits best because requirements are stable and the project is large."
+      ],
+      "answer": "Waterfall methodology is the most appropriate choice."
+     }
+    ],
+    "common_mistakes": [
+     "Choosing Agile for a project with immutable legal requirements, causing scope creep.",
+     "Applying Lean without measuring waste, leading to premature removal of needed features."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Agile Scrum and Practices",
+    "summary": "Scrum is the most widely used Agile framework. It organizes work into time\u2011boxed sprints (2\u20114 weeks), maintains a prioritized backlog, and uses user stories to capture functional needs. Scrum teams are cross\u2011functional, self\u2011organizing, and limited to ten members. Daily stand\u2011up meetings keep the team aligned.",
+    "key_terms": [
+     {
+      "term": "Sprint",
+      "definition": "A fixed\u2011length iteration (usually 2\u20114 weeks) during which a set of user stories is completed."
+     },
+     {
+      "term": "Backlog",
+      "definition": "An ordered list of all desired features, enhancements, and fixes."
+     },
+     {
+      "term": "User Story",
+      "definition": "A short, role\u2011based description of a feature: \"As a <role>, I want <action> so that <benefit>.\""
+     },
+     {
+      "term": "Scrum Master",
+      "definition": "Facilitates the Scrum process, removes impediments, and ensures the team follows Agile principles."
+     },
+     {
+      "term": "Daily Stand\u2011up",
+      "definition": "A 15\u2011minute meeting where each member states what they did, will do, and any blockers."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Sprint Duration",
+      "statement": "Typically 2\u20114 weeks and set before the sprint starts; should remain stable."
+     },
+     {
+      "name": "Team Size",
+      "statement": "Maximum of 10 members to maintain effective communication."
+     },
+     {
+      "name": "Backlog Prioritization",
+      "statement": "Product Owner orders items based on business value and risk."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Write a user story for a banking app feature that allows users to transfer money.",
+      "steps": [
+       "1. Identify the role: \"As a bank customer\".",
+       "2. Define the action: \"I would like to transfer funds to another account\".",
+       "3. State the benefit: \"so that I can pay bills quickly\".",
+       "4. Combine using the template."
+      ],
+      "answer": "As a bank customer, I would like to transfer funds to another account, so that I can pay bills quickly."
+     }
+    ],
+    "common_mistakes": [
+     "Allowing sprint length to change mid\u2011sprint, which disrupts predictability.",
+     "Overloading the backlog with low\u2011priority items, causing the team to lose focus."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Lean Software Development Principles",
+    "summary": "Lean adapts manufacturing principles to software, aiming to maximize customer value while minimizing waste. Its seven principles guide teams to eliminate non\u2011value\u2011adding activities, learn quickly through short iterations, defer decisions until necessary, deliver fast, empower teams, build integrity, and optimize the whole system.",
+    "key_terms": [
+     {
+      "term": "Eliminate Waste",
+      "definition": "Identify and remove activities that do not add value (e.g., partially done work, extra features)."
+     },
+     {
+      "term": "Amplify Learning",
+      "definition": "Use short sprints and frequent feedback to accelerate knowledge acquisition."
+     },
+     {
+      "term": "Decide as Late as Possible",
+      "definition": "Delay decisions until the last responsible moment to base them on facts."
+     },
+     {
+      "term": "Deliver as Fast as Possible",
+      "definition": "Release small increments quickly to get early customer feedback."
+     },
+     {
+      "term": "Empower the Team",
+      "definition": "Give team members authority over decisions in their expertise area."
+     },
+     {
+      "term": "Build Integrity In",
+      "definition": "Ensure the software continuously meets customer needs and maintains quality."
+     },
+     {
+      "term": "Optimize the Whole",
+      "definition": "Consider the impact of decisions on the entire system, not just individual components."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Seven Wastes of Software Development",
+      "statement": "Partially done work, extra processes, extra features, task switching, waiting, motion, defects."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Identify the waste type in the scenario: Developers frequently switch between fixing bugs and adding new features.",
+      "steps": [
+       "1. List the seven wastes.",
+       "2. Recognize that moving between unrelated tasks creates overhead.",
+       "3. Match to \"Task switching\" waste."
+      ],
+      "answer": "The waste is \"Task switching\"."
+     }
+    ],
+    "common_mistakes": [
+     "Attempting to eliminate all waste at once, which can halt progress.",
+     "Delaying decisions too far, causing bottlenecks when critical information finally arrives."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Software Design Patterns Overview",
+    "summary": "Design patterns are reusable, language\u2011independent solutions to common design problems. First codified by the Gang of Four in 1994, patterns promote principles such as programming to an interface, favoring composition over inheritance, and separating concerns. Understanding patterns helps architects create flexible, maintainable systems.",
+    "key_terms": [
+     {
+      "term": "Design Pattern",
+      "definition": "A proven template for solving a recurring design problem."
+     },
+     {
+      "term": "Gang of Four (GoF)",
+      "definition": "Authors of the seminal book that catalogued 23 classic object\u2011oriented patterns."
+     },
+     {
+      "term": "Program to an Interface",
+      "definition": "Depend on abstractions rather than concrete implementations."
+     },
+     {
+      "term": "Composition over Inheritance",
+      "definition": "Prefer assembling behavior from objects rather than extending classes."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Pattern Categories (GoF)",
+      "statement": "Creational, Structural, and Behavioral patterns."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Apply the \"Program to an Interface\" principle to a logging component.",
+      "steps": [
+       "1. Define an ILogger interface with a method log(message).",
+       "2. Implement ConsoleLogger and FileLogger classes that satisfy ILogger.",
+       "3. In application code, depend on ILogger, not on a concrete logger.",
+       "4. At runtime, inject the desired logger implementation."
+      ],
+      "answer": "The application can switch between console and file logging without code changes, demonstrating the principle."
+     }
+    ],
+    "common_mistakes": [
+     "Using a pattern blindly without assessing whether the problem truly matches the pattern.",
+     "Over\u2011engineering by stacking multiple patterns, leading to unnecessary complexity."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Software Design Patterns \u2013 Overview",
+    "summary": "Design patterns are reusable, language\u2011independent solutions to common software problems. The Gang of Four (GoF) introduced 23 patterns in 1994, emphasizing principles such as programming to an interface and favoring composition over inheritance. Using proven patterns speeds development and improves maintainability.",
+    "key_terms": [
+     {
+      "term": "Design Pattern",
+      "definition": "A general, reusable solution to a commonly occurring problem within a given context in software design."
+     },
+     {
+      "term": "Gang of Four (GoF)",
+      "definition": "Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides, authors of the seminal design\u2011pattern book."
+     },
+     {
+      "term": "Program to an interface, not an implementation",
+      "definition": "Code should depend on abstract contracts rather than concrete classes."
+     },
+     {
+      "term": "Favor composition over inheritance",
+      "definition": "Prefer assembling behavior from objects rather than extending classes."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [],
+    "common_mistakes": [
+     "Treating a pattern as a strict recipe rather than a guideline.",
+     "Applying a pattern where a simpler solution would suffice."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Original Design Pattern Categories",
+    "summary": "The GoF grouped the 23 patterns into three families: Creational (object creation), Structural (object composition), and Behavioral (object interaction). Two frequently cited patterns are Observer (Behavioral) and Model\u2011View\u2011Controller (MVC, Structural/Behavioral hybrid).",
+    "key_terms": [
+     {
+      "term": "Creational Pattern",
+      "definition": "Patterns that abstract the instantiation process."
+     },
+     {
+      "term": "Structural Pattern",
+      "definition": "Patterns that simplify how classes and objects are composed."
+     },
+     {
+      "term": "Behavioral Pattern",
+      "definition": "Patterns that define communication between objects."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [],
+    "common_mistakes": [
+     "Misclassifying a pattern, which can lead to misuse of its intent."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Observer Design Pattern",
+    "summary": "The Observer pattern creates a subscription\u2011notification mechanism. A subject maintains a list of observers and notifies them of state changes, enabling real\u2011time updates without polling.",
+    "key_terms": [
+     {
+      "term": "Subject",
+      "definition": "The object being observed; it holds references to observers and notifies them of changes."
+     },
+     {
+      "term": "Observer",
+      "definition": "An object that registers with a subject to receive update notifications."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Loose Coupling",
+      "statement": "Subjects and observers interact through an abstract interface, reducing dependencies."
+     },
+     {
+      "name": "Push vs Pull",
+      "statement": "Observers can be pushed full state or pull only needed data when notified."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Implement a weather\u2011station system where multiple display devices show temperature updates.",
+      "steps": [
+       "Define an IObserver interface with an update(temperature) method.",
+       "Define a Subject class (WeatherStation) with methods attach(observer), detach(observer), and notify().",
+       "WeatherStation stores a list of IObserver objects.",
+       "When temperature changes, WeatherStation calls notify(), which iterates over observers and calls update().",
+       "Each display class implements IObserver and updates its UI in the update() method."
+      ],
+      "answer": "All displays receive the new temperature instantly without the WeatherStation needing to know their concrete types."
+     }
+    ],
+    "common_mistakes": [
+     "Forgetting to detach observers, causing memory leaks.",
+     "Using polling instead of the notification mechanism, negating performance benefits."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Model\u2011View\u2011Controller (MVC)",
+    "summary": "MVC separates an application into three components: Model (data and business logic), View (UI representation), and Controller (handles input, updates Model, selects View). This separation enables parallel development and easier maintenance.",
+    "key_terms": [
+     {
+      "term": "Model",
+      "definition": "Encapsulates application data, rules, and logic."
+     },
+     {
+      "term": "View",
+      "definition": "Renders the Model\u2019s data for the user."
+     },
+     {
+      "term": "Controller",
+      "definition": "Interprets user input, manipulates the Model, and selects a View."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Separation of Concerns",
+      "statement": "Each component has a distinct responsibility, reducing inter\u2011dependency."
+     },
+     {
+      "name": "Parallel Development",
+      "statement": "Teams can work on Model, View, and Controller simultaneously."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Design a simple login screen using MVC.",
+      "steps": [
+       "Model: Create a User class with username and password fields and a method validateCredentials().",
+       "View: Build a LoginForm UI with text fields and a submit button.",
+       "Controller: On button click, retrieve input from the View, call Model.validateCredentials(), and instruct the View to display success or error."
+      ],
+      "answer": "The UI can be changed (e.g., to a mobile layout) without altering the Model or Controller logic."
+     }
+    ],
+    "common_mistakes": [
+     "Placing business logic in the View, which creates tight coupling.",
+     "Allowing the Controller to directly manipulate UI elements instead of delegating to the View."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Version Control Systems \u2013 Concepts",
+    "summary": "Version control tracks changes to files over time, providing collaboration, accountability, isolation, safety, and remote work capabilities. It is known as revision control or source control.",
+    "key_terms": [
+     {
+      "term": "Repository",
+      "definition": "A data store that holds all versions of files and metadata."
+     },
+     {
+      "term": "Commit",
+      "definition": "A snapshot of the repository at a point in time."
+     },
+     {
+      "term": "Branch",
+      "definition": "An independent line of development within a repository."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [],
+    "common_mistakes": [
+     "Committing large binary files that bloat the repository.",
+     "Skipping commit messages, losing context for changes."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Types of Version Control Systems",
+    "summary": "Three VCS models exist: Local (simple file\u2011based database), Centralized (client\u2011server with locking), and Distributed (peer\u2011to\u2011peer, each clone has full history). Distributed systems like Git enable concurrent work without file locking.",
+    "key_terms": [
+     {
+      "term": "Local VCS",
+      "definition": "Tracks changes on a single machine using a simple database of deltas."
+     },
+     {
+      "term": "Centralized VCS",
+      "definition": "Uses a single server repository; users lock files to edit."
+     },
+     {
+      "term": "Distributed VCS",
+      "definition": "Each user has a complete copy of the repository, allowing offline work and parallel edits."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Locking",
+      "statement": "Required in CVCS to prevent concurrent edits; not needed in DVCS."
+     },
+     {
+      "name": "Offline Capability",
+      "statement": "DVCS allows commits without network access; LVCS and CVCS are limited."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "A team using a CVCS tries to edit the same file simultaneously.",
+      "steps": [
+       "Developer A checks out and locks the file.",
+       "Developer B attempts to check out the same file and receives a lock error.",
+       "Developer B must wait until Developer A checks in and releases the lock."
+      ],
+      "answer": "Only one developer can modify the file at a time, which can slow collaboration."
+     },
+     {
+      "problem": "The same team migrates to a DVCS (Git).",
+      "steps": [
+       "Both developers clone the repository.",
+       "Each creates a local branch and makes changes independently.",
+       "When ready, they push; Git detects any conflicts and prompts resolution."
+      ],
+      "answer": "Parallel work proceeds without locking, improving productivity."
+     }
+    ],
+    "common_mistakes": [
+     "Assuming a DVCS eliminates the need for code reviews; pull requests are still essential."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Git \u2013 Core Concepts",
+    "summary": "Git is an open\u2011source DVCS that stores data as snapshots, not deltas. It has three stages (Repository, Working Directory, Staging Area) and three file states (Committed, Modified, Staged). Snapshots are cheap; unchanged files reference previous snapshots.",
+    "key_terms": [
+     {
+      "term": "Snapshot",
+      "definition": "A complete picture of the project at a given commit."
+     },
+     {
+      "term": "Staging Area",
+      "definition": "An intermediate area where changes are gathered before committing."
+     },
+     {
+      "term": "Remote Repository",
+      "definition": "A repository hosted on another machine or service (e.g., GitHub)."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Three\u2011Stage Model",
+      "statement": "Repository (.git), Working Directory, and Staging Area work together to manage changes."
+     },
+     {
+      "name": "Reference Linking",
+      "statement": "If a file hasn't changed, Git reuses the previous snapshot via a reference, saving space."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Show the transition of a file from Modified to Committed.",
+      "steps": [
+       "Edit file.txt in the working directory (state: Modified).",
+       "Run git add file.txt (state: Staged).",
+       "Run git commit -m \"Update file\" (state: Committed)."
+      ],
+      "answer": "The file is now part of a new snapshot in the repository."
+     }
+    ],
+    "common_mistakes": [
+     "Skipping the staging step and using git commit -a without reviewing changes."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Git Commands \u2013 Common Operations",
+    "summary": "Essential Git commands include configuration (git config), repository creation (git init), cloning (git clone), status checking (git status), diffing (git diff), staging (git add), removing (git rm), committing (git commit), and pushing/pulling to remote repositories.",
+    "key_terms": [
+     {
+      "term": "git init",
+      "definition": "Initializes a new Git repository in a directory."
+     },
+     {
+      "term": "git clone",
+      "definition": "Creates a copy of an existing repository, including its full history."
+     },
+     {
+      "term": "git add",
+      "definition": "Adds file changes to the staging area."
+     },
+     {
+      "term": "git commit",
+      "definition": "Records a snapshot of the staged changes."
+     },
+     {
+      "term": "git push",
+      "definition": "Transfers local commits to a remote repository."
+     },
+     {
+      "term": "git pull",
+      "definition": "Fetches and merges changes from a remote repository."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [
+     {
+      "problem": "Initialize a new project, add a file, and push to a remote repository.",
+      "steps": [
+       "$ mkdir MyApp && cd MyApp",
+       "$ git init",
+       "Create README.md with content.",
+       "$ git add README.md",
+       "$ git commit -m \"Initial commit\"",
+       "$ git remote add origin <remote\u2011url>",
+       "$ git push -u origin master"
+      ],
+      "answer": "The repository now exists locally and remotely with an initial commit."
+     }
+    ],
+    "common_mistakes": [
+     "Using git add . without reviewing which files are staged, potentially adding unwanted files."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Branching and Merging in Git",
+    "summary": "Branching lets developers work on isolated lines of development. Git branches are lightweight; switching updates the working directory and staging area while the .git repository stays unchanged. Merging integrates changes, and conflicts must be resolved manually.",
+    "key_terms": [
+     {
+      "term": "Branch",
+      "definition": "A movable pointer to a commit, representing an independent line of development."
+     },
+     {
+      "term": "Merge",
+      "definition": "Combines two branches, creating a new commit that incorporates changes from both."
+     },
+     {
+      "term": "Conflict",
+      "definition": "A situation where Git cannot automatically reconcile differing changes to the same part of a file."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Lightweight",
+      "statement": "Creating a branch only creates a new pointer; no file copies are made."
+     },
+     {
+      "name": "Fast Switching",
+      "statement": "git checkout changes the working directory instantly."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a feature branch, make a change, and merge back to master.",
+      "steps": [
+       "$ git checkout -b feature-login",
+       "Edit login.js and save.",
+       "$ git add login.js",
+       "$ git commit -m \"Add login feature\"",
+       "$ git checkout master",
+       "$ git merge feature-login"
+      ],
+      "answer": "The master branch now includes the login feature; the feature branch can be deleted."
+     }
+    ],
+    "common_mistakes": [
+     "Merging without pulling latest changes, leading to avoidable conflicts.",
+     "Deleting a branch before ensuring it has been merged."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "GitHub and Pull Requests",
+    "summary": "GitHub is a hosted service that adds collaboration features to Git, such as code review, issue tracking, and pull requests. A pull request is a formal request to merge changes from a contributor\u2019s branch into a target branch after review.",
+    "key_terms": [
+     {
+      "term": "GitHub",
+      "definition": "A cloud\u2011based platform for hosting Git repositories and facilitating collaboration."
+     },
+     {
+      "term": "Pull Request",
+      "definition": "A request to merge a set of commits from one branch into another, typically accompanied by discussion and review."
+     },
+     {
+      "term": "Fork",
+      "definition": "A personal copy of another user's repository, allowing independent development."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [
+     {
+      "problem": "Contribute a bug fix to an open\u2011source project using a pull request.",
+      "steps": [
+       "Fork the upstream repository on GitHub.",
+       "Clone your fork locally.",
+       "Create a new branch: git checkout -b fix\u2011null\u2011pointer.",
+       "Make the code change, add, and commit.",
+       "Push the branch to your fork: git push origin fix\u2011null\u2011pointer.",
+       "Open a pull request on GitHub from fix\u2011null\u2011pointer to upstream's main branch."
+      ],
+      "answer": "Project maintainers review the PR; after approval, they merge it, incorporating the fix."
+     }
+    ],
+    "common_mistakes": [
+     "Opening a pull request without a clear description or without referencing related issues."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Adding and Removing Files",
+    "summary": "Git provides commands to stage file deletions, keep files in the working directory while removing them from the index, and to delete files entirely. The two main approaches are using git rm (with or without --cached) and the manual filesystem delete followed by git add.",
+    "key_terms": [
+     {
+      "term": "git rm",
+      "definition": "Removes files from both the working directory and the index (staging area)."
+     },
+     {
+      "term": "git rm --cached",
+      "definition": "Removes files from the index only, leaving them in the working directory."
+     },
+     {
+      "term": "staging area",
+      "definition": "Intermediate area where changes are gathered before committing."
+     }
+    ],
+    "properties": [
+     {
+      "name": "git rm <file>",
+      "statement": "Deletes <file> from the working directory and stages the deletion."
+     },
+     {
+      "name": "git rm --cached <file>",
+      "statement": "Unstages <file> without deleting it from the working directory."
+     },
+     {
+      "name": "rm <file> && git add <file>",
+      "statement": "Manual two\u2011step removal; equivalent to git rm <file>."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "You accidentally added a large log file to the index but want to keep it locally.",
+      "steps": [
+       "Run: git rm --cached logs/debug.log",
+       "Verify with: git status (the file should appear as 'deleted' in the index only).",
+       "Commit the change: git commit -m \"Remove debug.log from repository\""
+      ],
+      "answer": "The log file remains on disk, but is no longer tracked by Git."
+     },
+     {
+      "problem": "Delete a configuration file from the project and stage the deletion.",
+      "steps": [
+       "Run: rm config/settings.yaml",
+       "Run: git add config/settings.yaml",
+       "Run: git commit -m \"Remove obsolete settings file\""
+      ],
+      "answer": "The file is removed from both the working directory and the repository."
+     }
+    ],
+    "common_mistakes": [
+     "Running git rm on a file that is already staged with modifications \u2013 Git will refuse.",
+     "Using git rm --cached on a file that is not yet tracked \u2013 nothing happens."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Updating Repositories",
+    "summary": "Changes flow from the working directory \u2192 staging area \u2192 local repository (commit) \u2192 remote repository (push). Pulling synchronizes the local copy with remote changes, creating a merge commit if needed.",
+    "key_terms": [
+     {
+      "term": "git commit",
+      "definition": "Creates a new snapshot of staged changes in the local repository."
+     },
+     {
+      "term": "git push",
+      "definition": "Transfers local commits to a remote branch."
+     },
+     {
+      "term": "git pull",
+      "definition": "Fetches remote changes and merges them into the current branch."
+     }
+    ],
+    "properties": [
+     {
+      "name": "git commit -m \"msg\"",
+      "statement": "Commits staged changes with a descriptive message."
+     },
+     {
+      "name": "git push origin <branch>",
+      "statement": "Updates the specified remote branch with local commits."
+     },
+     {
+      "name": "git pull",
+      "statement": "Fetches and merges remote changes into the current branch, creating a merge commit if necessary."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Commit all staged files with a message and push to the remote master branch.",
+      "steps": [
+       "git add .",
+       "git commit -m \"Add feature X\"",
+       "git push origin master"
+      ],
+      "answer": "All changes are now stored in the remote repository on master."
+     },
+     {
+      "problem": "A teammate pushed new commits; update your local branch.",
+      "steps": [
+       "git pull"
+      ],
+      "answer": "Local repository now includes teammate's commits; a merge commit is created if there were divergent changes."
+     }
+    ],
+    "common_mistakes": [
+     "Attempting git push when local and remote histories have diverged \u2013 results in a non\u2011fast\u2011forward error.",
+     "Running git pull without committing local changes, leading to merge conflicts."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Branching and Merging",
+    "summary": "Branches let developers work in isolation. Git can create, list, delete, and switch branches. Merging integrates changes; fast\u2011forward merges happen when the target has no new commits, while merge conflicts require manual resolution.",
+    "key_terms": [
+     {
+      "term": "branch",
+      "definition": "A lightweight movable pointer to a commit."
+     },
+     {
+      "term": "fast\u2011forward merge",
+      "definition": "A merge that simply moves the target pointer forward because there are no divergent commits."
+     },
+     {
+      "term": "merge conflict",
+      "definition": "A situation where Git cannot automatically combine changes from two branches."
+     }
+    ],
+    "properties": [
+     {
+      "name": "git branch <new>",
+      "statement": "Creates a new branch named <new> from the current HEAD."
+     },
+     {
+      "name": "git checkout -b <new>",
+      "statement": "Creates and switches to <new> in one step."
+     },
+     {
+      "name": "git merge <source>",
+      "statement": "Merges <source> into the current branch."
+     },
+     {
+      "name": "git branch -d <branch>",
+      "statement": "Deletes the specified local branch."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a feature branch, make a change, and merge it back without conflicts.",
+      "steps": [
+       "git checkout -b feature/login",
+       "# edit files, then:",
+       "git add .",
+       "git commit -m \"Add login UI\"",
+       "git checkout main",
+       "git merge feature/login"
+      ],
+      "answer": "If main had no new commits, Git performs a fast\u2011forward merge; otherwise a merge commit is created."
+     },
+     {
+      "problem": "Resolve a merge conflict after merging a branch that edited the same line.",
+      "steps": [
+       "git merge feature/edit",
+       "# Git reports conflict in file.txt",
+       "Open file.txt, edit to desired final version,",
+       "git add file.txt",
+       "git commit -m \"Resolve conflict in file.txt\""
+      ],
+      "answer": "Conflict is resolved and a new merge commit records the resolution."
+     }
+    ],
+    "common_mistakes": [
+     "Deleting a branch that still has unmerged commits \u2013 loss of work.",
+     "Assuming git merge always fast\u2011forwards; forgetting to check for conflicts."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": ".diff Files",
+    "summary": "A unified diff file records line\u2011by\u2011line changes between two file versions using symbols (+, -, @@, etc.). It is the basis for patches and code review tools.",
+    "key_terms": [
+     {
+      "term": "+",
+      "definition": "Line added in the new version."
+     },
+     {
+      "term": "-",
+      "definition": "Line removed from the old version."
+     },
+     {
+      "term": "@@",
+      "definition": "Hunk header showing the line range of the change."
+     },
+     {
+      "term": "/dev/null",
+      "definition": "Represents a file that does not exist in one of the versions (added or deleted)."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [
+     {
+      "problem": "Generate a diff for changes made to script.py.",
+      "steps": [
+       "git diff > changes.diff",
+       "Open changes.diff to see + and - lines."
+      ],
+      "answer": "The .diff file lists added (+) and removed (-) lines with context."
+     }
+    ],
+    "common_mistakes": [
+     "Applying a diff without checking the target version, leading to patch failures."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Clean Code and Python Basics",
+    "summary": "Clean code emphasizes readability, modularity, and maintainability. Functions encapsulate reusable logic; modules group related functions; classes bundle data and behavior. Proper naming, comments, and separation of concerns aid collaboration and testing.",
+    "key_terms": [
+     {
+      "term": "function",
+      "definition": "A reusable block of code that performs a specific task."
+     },
+     {
+      "term": "method",
+      "definition": "A function that belongs to a class (object\u2011oriented context)."
+     },
+     {
+      "term": "module",
+      "definition": "A file containing related functions, classes, and variables."
+     },
+     {
+      "term": "class",
+      "definition": "A blueprint for creating objects with attributes and methods."
+     },
+     {
+      "term": "clean code",
+      "definition": "Code that is easy to read, understand, and maintain."
+     }
+    ],
+    "properties": [
+     {
+      "name": "def func(arg1, arg2):",
+      "statement": "Defines a Python function with parameters."
+     },
+     {
+      "name": "return value",
+      "statement": "Exits the function and sends back a result to the caller."
+     },
+     {
+      "name": "class MyClass:",
+      "statement": "Begins a class definition; methods are defined with def inside the class."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Write a function that returns the area of a circle given its radius.",
+      "steps": [
+       "def circle_area(r):",
+       "    import math",
+       "    return math.pi * r * r"
+      ],
+      "answer": "Calling circle_area(3) returns 28.274333882308138."
+     },
+     {
+      "problem": "Create a simple class with a method that prints a greeting.",
+      "steps": [
+       "class Greeter:",
+       "    def __init__(self, name):",
+       "        self.name = name",
+       "    def greet(self):",
+       "        print(f\"Hello, {self.name}!\")",
+       "",
+       "g = Greeter('Alice')",
+       "g.greet()"
+      ],
+      "answer": "Output: Hello, Alice!"
+     }
+    ],
+    "common_mistakes": [
+     "Writing large blocks of code without extracting functions, leading to duplication.",
+     "Naming variables with non\u2011descriptive names, reducing readability."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "YAML Basics and Advanced Features",
+    "summary": "YAML is a human\u2011readable data\u2011serialization format. It supports comments, flexible typing, schemas, and tags that let you control how values are interpreted. Understanding these features is essential for writing clear configuration files and for converting YAML to/from JSON or other formats.",
+    "key_terms": [
+     {
+      "term": "Comment",
+      "definition": "Text preceded by a hash sign (#) and a space; ignored by the parser and can appear anywhere except inside a long\u2011string literal."
+     },
+     {
+      "term": "Schema",
+      "definition": "A collection of type definitions that tells a YAML processor how to interpret scalar values (e.g., the Failsafe schema)."
+     },
+     {
+      "term": "Tag",
+      "definition": "A prefix like !!str that explicitly forces a scalar to be treated as a specific type."
+     },
+     {
+      "term": "!!str",
+      "definition": "A tag that forces the following scalar to be interpreted as a string, even if it looks like a number."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Comment Placement",
+      "statement": "Comments may be placed on their own line or after a value, but never inside a block scalar (| or >)."
+     },
+     {
+      "name": "Tag Usage",
+      "statement": "A tag is written directly before a scalar, e.g., !!str 123, to override the default type inference."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Force the numeric value 42 to be read as a string in a YAML file.",
+      "steps": [
+       "Write the scalar with the !!str tag.",
+       "Place the tag immediately before the value.",
+       "Save the file and load it with a YAML parser."
+      ],
+      "answer": "!!str 42"
+     },
+     {
+      "problem": "Add a comment describing a configuration key without breaking the document.",
+      "steps": [
+       "Start the line with '# '.",
+       "Write the explanatory text.",
+       "Ensure the comment is not inside a multiline string."
+      ],
+      "answer": "# This sets the timeout in seconds"
+     }
+    ],
+    "common_mistakes": [
+     "Placing a comment inside a block scalar, which becomes part of the string value.",
+     "Omitting the space after the hash sign, causing the line to be treated as data.",
+     "Assuming tags are required for all non\u2011string values; YAML infers types automatically."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Parsing and Serializing Data Formats",
+    "summary": "Parsing converts a textual representation (XML, JSON, YAML) into an in\u2011memory data structure; serializing does the reverse. Most high\u2011level languages provide built\u2011in libraries that hide the low\u2011level details, allowing developers to focus on the logical content.",
+    "key_terms": [
+     {
+      "term": "Parsing",
+      "definition": "Analyzing a message, breaking it into component parts, and constructing a semantically equivalent internal data structure."
+     },
+     {
+      "term": "Serializing",
+      "definition": "Transforming an internal data structure into a textual representation suitable for storage or transmission."
+     },
+     {
+      "term": "Deserializer",
+      "definition": "A function or method that performs parsing."
+     },
+     {
+      "term": "Serializer",
+      "definition": "A function or method that performs serializing."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Idempotence",
+      "statement": "Serializing a parsed object should produce a representation that, when parsed again, yields an equivalent object."
+     },
+     {
+      "name": "Data Type Preservation",
+      "statement": "A correct parser must preserve the original data types (e.g., numbers remain numbers, strings remain strings) unless explicitly coerced."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Parse a JSON string in Python and then serialize it back to JSON.",
+      "steps": [
+       "Import the json module.",
+       "Call json.loads() with the JSON string to obtain a Python dict.",
+       "Modify the dict if desired.",
+       "Call json.dumps() to convert the dict back to a JSON string."
+      ],
+      "answer": "Original string: '{\"count\": 5}' \u2192 dict: {'count': 5} \u2192 serialized: '{\"count\": 5}'"
+     },
+     {
+      "problem": "Parse a YAML file containing a tagged string and verify the tag is respected in Python.",
+      "steps": [
+       "Import the yaml module (PyYAML).",
+       "Load the file with yaml.safe_load().",
+       "Inspect the resulting Python object; the !!str tag forces a string type.",
+       "Print the type to confirm."
+      ],
+      "answer": "YAML line: '!!str 007' \u2192 Python value: '007' (type str)"
+     }
+    ],
+    "common_mistakes": [
+     "Confusing parsing errors with data\u2011type errors; a well\u2011formed document can still produce wrong types if tags are omitted.",
+     "Serializing with the wrong encoding (e.g., forgetting UTF\u20118), leading to corrupted characters.",
+     "Assuming that the order of keys in a JSON object is preserved after a round\u2011trip."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "Software Development Life Cycle, Version Control, and MVC",
+    "summary": "The SDLC defines six phases that guide a project from idea to maintenance. Development models (Waterfall, Agile, Lean) apply these phases in different ways. MVC separates concerns in GUI applications, while version\u2011control systems (Git, CVS, SVN) track changes and enable collaboration.",
+    "key_terms": [
+     {
+      "term": "SDLC",
+      "definition": "Software Development Life Cycle \u2013 the six phases: Requirements & Analysis, Design, Implementation, Testing, Deployment, Maintenance."
+     },
+     {
+      "term": "Agile",
+      "definition": "An iterative development model that delivers working software in short sprints."
+     },
+     {
+      "term": "MVC",
+      "definition": "Model\u2011View\u2011Controller pattern that isolates data (Model), UI (View), and user interaction logic (Controller)."
+     },
+     {
+      "term": "Git",
+      "definition": "A distributed version\u2011control system with local and remote repositories."
+     },
+     {
+      "term": "Branch",
+      "definition": "An independent line of development within a repository."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Branching Model",
+      "statement": "Feature branches are created from the main line, merged back after code review and testing."
+     },
+     {
+      "name": "MVC Interaction",
+      "statement": "The Controller updates the Model; the Model notifies the View; the View renders the updated state."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a new Git feature branch, add a file, and push it to a remote repository.",
+      "steps": [
+       "git checkout -b feature/login",
+       "echo \"print('Hello')\" > hello.py",
+       "git add hello.py",
+       "git commit -m \"Add hello script\"",
+       "git push origin feature/login"
+      ],
+      "answer": "Remote branch 'feature/login' now contains hello.py."
+     },
+     {
+      "problem": "Explain how a user action in a GUI triggers MVC components.",
+      "steps": [
+       "User clicks a button (View).",
+       "The View forwards the event to the Controller.",
+       "Controller updates the Model (e.g., changes a data value).",
+       "Model emits a change notification.",
+       "View receives the notification and redraws the UI."
+      ],
+      "answer": "The UI reflects the new data without the View directly manipulating the Model."
+     }
+    ],
+    "common_mistakes": [
+     "Treating Git as a centralized system and forgetting to pull before pushing, causing merge conflicts.",
+     "Mixing responsibilities in MVC (e.g., placing business logic in the View).",
+     "Skipping the Testing phase in Agile sprints, leading to technical debt."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   },
+   {
+    "heading": "REST API Request Body and Content\u2011Type Header",
+    "summary": "When a client sends a POST, PUT, or PATCH request, the body carries the resource representation. The server must know how to interpret the body, which is declared with the Content\u2011Type header (e.g., application/json, application/xml, text/yaml).",
+    "key_terms": [
+     {
+      "term": "Request Body",
+      "definition": "The payload of an HTTP request that contains data to create or modify a resource."
+     },
+     {
+      "term": "Content\u2011Type",
+      "definition": "An HTTP header that specifies the media type of the request body."
+     },
+     {
+      "term": "POST",
+      "definition": "HTTP method used to create a new resource; typically includes a body."
+     },
+     {
+      "term": "PUT",
+      "definition": "HTTP method used to replace a resource entirely; includes a body."
+     },
+     {
+      "term": "PATCH",
+      "definition": "HTTP method used to apply partial modifications to a resource; includes a body."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Body Requirement",
+      "statement": "POST, PUT, and PATCH usually require a body; GET and DELETE generally do not."
+     },
+     {
+      "name": "Header Consistency",
+      "statement": "The media type declared in Content\u2011Type must match the actual format of the body."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Send a JSON payload to create a new user via a REST API using curl.",
+      "steps": [
+       "Create a JSON file user.json with {\"name\":\"Alice\",\"role\":\"admin\"}.",
+       "Run: curl -X POST https://api.example.com/users \\",
+       "  -H \"Content-Type: application/json\" \\",
+       "  -d @user.json"
+      ],
+      "answer": "Server receives a JSON body and creates the user; response includes 201 Created."
+     },
+     {
+      "problem": "What happens if the Content\u2011Type header is omitted on a POST request with a JSON body?",
+      "steps": [
+       "Server receives the raw bytes.",
+       "Without a Content\u2011Type, the server may default to a generic parser or reject the request.",
+       "Result is typically a 415 Unsupported Media Type error."
+      ],
+      "answer": "The request fails because the server cannot determine how to parse the body."
+     }
+    ],
+    "common_mistakes": [
+     "Sending a YAML body but labeling it as application/json, causing parsing errors.",
+     "Including a body in a GET request, which many servers ignore or reject.",
+     "Forgetting to set Content\u2011Type when using tools that do not add it automatically."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_3.pdf"
+    ]
+   }
+  ],
+  "formula_sheet": [
+   {
+    "name": "Git Commit",
+    "expression": "git commit -m \"<message>\"",
+    "when_to_use": "After staging desired changes to record a new snapshot in the local repository."
+   },
+   {
+    "name": "Git Push",
+    "expression": "git push origin <branch>",
+    "when_to_use": "When you want to upload local commits to the specified remote branch."
+   },
+   {
+    "name": "Git Pull",
+    "expression": "git pull [origin] [<branch>]",
+    "when_to_use": "To synchronize your local branch with the latest remote changes."
+   },
+   {
+    "name": "Git Merge (Fast\u2011Forward)",
+    "expression": "git merge <branch>",
+    "when_to_use": "When the target branch has no new commits; Git can simply move the pointer forward."
+   },
+   {
+    "name": "Git Merge (Conflict)",
+    "expression": "git merge <branch> (resolve conflicts manually, then git add + git commit)",
+    "when_to_use": "When divergent changes prevent an automatic fast\u2011forward merge."
+   },
+   {
+    "name": "Python Function Definition",
+    "expression": "def function_name(param1, param2, ...):",
+    "when_to_use": "Whenever you need reusable logic with optional input parameters."
+   },
+   {
+    "name": "Python Return Statement",
+    "expression": "return <value>",
+    "when_to_use": "To output a result from a function and terminate its execution."
+   },
+   {
+    "name": "Parsing \u2194 Serializing Cycle",
+    "expression": "Serialized Text \u21c4 (parse) \u21c4 Internal Data Structure \u21c4 (serialize) \u21c4 Serialized Text",
+    "when_to_use": "Use to verify that a parser and serializer are compatible; helpful for testing data interchange."
+   },
+   {
+    "name": "Git Branch Creation",
+    "expression": "git checkout -b <new\u2011branch>",
+    "when_to_use": "When starting work on a new feature or bug fix to keep changes isolated."
+   },
+   {
+    "name": "HTTP Content\u2011Type Header",
+    "expression": "Content\u2011Type: <media\u2011type>/<subtype>",
+    "when_to_use": "Every request with a body (POST, PUT, PATCH) must declare the media type of that body."
+   }
+  ],
+  "self_check": [
+   {
+    "question": "What are the six phases of the SDLC and what primary output does each produce?",
+    "answer": "1. Requirements & Analysis \u2013 SRS document; 2. Design \u2013 High\u2011Level and Low\u2011Level Design documents; 3. Implementation \u2013 functional source code; 4. Testing \u2013 validated test reports; 5. Deployment \u2013 installed production system; 6. Maintenance \u2013 support tickets, patches, and enhancement requests."
+   },
+   {
+    "question": "List the four values of the Agile Manifesto.",
+    "answer": "Individuals and interactions over processes and tools; Working software over comprehensive documentation; Customer collaboration over contract negotiation; Responding to change over following a plan."
+   },
+   {
+    "question": "Name three types of waste identified in Lean software development.",
+    "answer": "Extra features, task switching, and defects (any three of the seven wastes are acceptable)."
+   },
+   {
+    "question": "Write a correctly formatted user story for a feature that allows users to reset their password.",
+    "answer": "As a registered user, I would like to reset my password, so that I can regain access if I forget it."
+   },
+   {
+    "question": "Explain the principle \"Program to an Interface, not an Implementation\" with a short example.",
+    "answer": "Define an abstract interface (e.g., IDataStore) and code against it; concrete classes (SQLDataStore, NoSQLDataStore) implement the interface. The application uses IDataStore, allowing the underlying storage to be swapped without changing business logic."
+   },
+   {
+    "question": "What are the three main categories of GoF design patterns?",
+    "answer": "Creational, Structural, and Behavioral."
+   },
+   {
+    "question": "In the Observer pattern, what responsibility does the Subject have?",
+    "answer": "It maintains a list of observers and notifies them when its state changes."
+   },
+   {
+    "question": "Name the three stages and three states used by Git.",
+    "answer": "Stages: Repository (.git), Working Directory, Staging Area. States: Committed, Modified, Staged."
+   },
+   {
+    "question": "Explain the difference between a centralized VCS and a distributed VCS.",
+    "answer": "A centralized VCS uses a single server repository with file locking; a distributed VCS gives each user a full copy of the repository, allowing concurrent work without locking."
+   },
+   {
+    "question": "What is a pull request and why is it useful?",
+    "answer": "A pull request is a formal request to merge changes from one branch into another, enabling code review, discussion, and quality control before integration."
+   },
+   {
+    "question": "What command removes a file from the Git index but keeps it in the working directory?",
+    "answer": "git rm --cached <file>"
+   },
+   {
+    "question": "After editing files, which two commands are typically run to record the changes in the remote repository?",
+    "answer": "git add . followed by git commit -m \"message\" and then git push origin <branch>"
+   },
+   {
+    "question": "Explain the difference between a fast\u2011forward merge and a merge conflict.",
+    "answer": "A fast\u2011forward merge moves the target branch pointer forward because there are no new commits on the target; a merge conflict occurs when both branches have diverged changes that Git cannot automatically reconcile."
+   },
+   {
+    "question": "In a .diff file, what does a line starting with '+' indicate?",
+    "answer": "It indicates that the line has been added in the newer version of the file."
+   },
+   {
+    "question": "Name one best practice for writing clean Python code.",
+    "answer": "Encapsulate repeated logic into functions or methods to improve readability and reusability."
+   },
+   {
+    "question": "How do you force a numeric scalar to be interpreted as a string in YAML?",
+    "answer": "Prefix the value with the !!str tag, e.g., !!str 123."
+   },
+   {
+    "question": "What are the three HTTP methods that typically include a request body?",
+    "answer": "POST, PUT, and PATCH."
+   },
+   {
+    "question": "Name the six phases of the Software Development Life Cycle (SDLC).",
+    "answer": "Requirements & Analysis, Design, Implementation, Testing, Deployment, Maintenance."
+   },
+   {
+    "question": "In MVC, which component directly updates the user interface after the Model changes?",
+    "answer": "The View receives a notification from the Model and redraws the UI."
+   },
+   {
+    "question": "What header must accompany a JSON body in an HTTP request?",
+    "answer": "Content-Type: application/json."
+   }
+  ]
+ },
+ "Module 4 Understanding and Using APIs": {
+  "sections": [
+   {
+    "heading": "Introducing APIs",
+    "summary": "An Application Programming Interface (API) is a set of rules that allows one software component to communicate with another. APIs expose selected data, services, and functionality in a controlled, secure manner, enabling automation, data integration, and functional extension across applications.",
+    "key_terms": [
+     {
+      "term": "API",
+      "definition": "Application Programming Interface \u2013 a contract that defines how software components interact."
+     },
+     {
+      "term": "Integration",
+      "definition": "The process of connecting two or more systems so they can exchange data or functionality."
+     },
+     {
+      "term": "Automation",
+      "definition": "Using scripts or programs to perform tasks that would otherwise be manual."
+     }
+    ],
+    "properties": [],
+    "worked_examples": [],
+    "common_mistakes": [],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "API Design Styles",
+    "summary": "APIs can be designed as synchronous or asynchronous. A synchronous API returns data immediately, suitable when the requested information is readily available. An asynchronous API acknowledges receipt of a request and processes it later, allowing the client to continue without waiting for a response.",
+    "key_terms": [
+     {
+      "term": "Synchronous API",
+      "definition": "An API that returns a response with data in the same request/response cycle."
+     },
+     {
+      "term": "Asynchronous API",
+      "definition": "An API that returns an immediate acknowledgment and completes processing later, often via callbacks, polling, or webhooks."
+     }
+    ],
+    "properties": [
+     {
+      "name": "When to use Synchronous",
+      "statement": "When the data needed is instantly available and low latency is required."
+     },
+     {
+      "name": "When to use Asynchronous",
+      "statement": "When processing is long\u2011running, involves external systems, or the data is not immediately ready."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "A client needs to check the current stock level of a product that is stored in a fast\u2011access cache.",
+      "steps": [
+       "Choose a synchronous API because the data is instantly available.",
+       "Send a GET request to /inventory/12345.",
+       "Receive a 200 OK response with the stock quantity in the body."
+      ],
+      "answer": "Synchronous GET request returns stock level immediately."
+     },
+     {
+      "problem": "A client submits a large video file for transcoding, which may take several minutes.",
+      "steps": [
+       "Choose an asynchronous API because processing is time\u2011consuming.",
+       "Send a POST request to /transcode with the video metadata.",
+       "Receive a 202 Accepted response containing a job\u2011id.",
+       "Poll /transcode/status/{job\u2011id} or receive a webhook when processing completes."
+      ],
+      "answer": "Asynchronous POST returns 202 and later provides result via polling or webhook."
+     }
+    ],
+    "common_mistakes": [
+     "Using a synchronous call for a long\u2011running operation, causing client timeouts.",
+     "Assuming an asynchronous API will return data in the initial response."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "API Architectural Styles",
+    "summary": "Three dominant architectural styles are RPC, SOAP, and REST. RPC follows a request\u2011response model and can be transported over various protocols (XML\u2011RPC, JSON\u2011RPC). SOAP is an XML\u2011based messaging protocol that is platform\u2011independent and extensible. REST is an HTTP\u2011based style defined by six constraints (client\u2011server, stateless, cacheable, uniform interface, layered system, code\u2011on\u2011demand).",
+    "key_terms": [
+     {
+      "term": "RPC",
+      "definition": "Remote Procedure Call \u2013 a request/response model where the client invokes a method on a remote server."
+     },
+     {
+      "term": "SOAP",
+      "definition": "Simple Object Access Protocol \u2013 an XML\u2011based protocol for exchanging structured information in web services."
+     },
+     {
+      "term": "REST",
+      "definition": "Representational State Transfer \u2013 an architectural style that uses standard HTTP methods to manipulate resources."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Uniform Interface (REST)",
+      "statement": "Resources are identified by URIs and manipulated using standard HTTP verbs."
+     },
+     {
+      "name": "Stateless (REST)",
+      "statement": "Each request contains all information needed to understand and process it; the server does not store client context."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Retrieve a user profile using a REST API.",
+      "steps": [
+       "Identify the resource URI: https://api.example.com/users/42",
+       "Choose the HTTP method GET (read).",
+       "Send the GET request with appropriate Authorization header.",
+       "Receive a 200 OK response containing the user JSON representation."
+      ],
+      "answer": "GET https://api.example.com/users/42 returns user data."
+     }
+    ],
+    "common_mistakes": [
+     "Confusing SOAP envelope structure with REST JSON payloads.",
+     "Omitting the required SOAP Header when security tokens are needed."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "REST API Fundamentals",
+    "summary": "REST APIs operate over HTTP and consist of four components: URI, HTTP method, headers, and optional body. The URI identifies the target resource; the method indicates the action (POST, GET, PUT, PATCH, DELETE); headers convey metadata such as authentication and content type; the body carries the payload for methods that create or modify resources.",
+    "key_terms": [
+     {
+      "term": "URI",
+      "definition": "Uniform Resource Identifier \u2013 the address that uniquely identifies a resource on the server."
+     },
+     {
+      "term": "HTTP Method",
+      "definition": "Verb that defines the desired action on a resource (e.g., GET, POST)."
+     },
+     {
+      "term": "Header",
+      "definition": "Name\u2011value pair that provides metadata about the request or response."
+     },
+     {
+      "term": "Body",
+      "definition": "Optional payload containing data for POST, PUT, PATCH requests."
+     }
+    ],
+    "properties": [
+     {
+      "name": "URI Components",
+      "statement": "scheme://authority[:port]/path?query"
+     },
+     {
+      "name": "Header Types",
+      "statement": "Request headers (e.g., Authorization) and entity headers (e.g., Content-Type)."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a new ticket via a REST API.",
+      "steps": [
+       "Define the URI: https://api.support.com/tickets",
+       "Select HTTP method POST (create).",
+       "Add Header: Content-Type: application/json",
+       "Add Header: Authorization: Bearer <token>",
+       "Compose JSON body: {\"title\":\"Login issue\",\"priority\":\"high\"}",
+       "Send the POST request.",
+       "Receive 201 Created with Location header pointing to the new ticket URI."
+      ],
+      "answer": "Ticket created; server returns 201 and new resource location."
+     }
+    ],
+    "common_mistakes": [
+     "Using GET with a request body (not standard).",
+     "Omitting Content-Type header when sending JSON data."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "REST API Request Body",
+    "summary": "The request body carries the data that the client wants to create, update, or partially modify a resource. It is typically used with POST, PUT, and PATCH methods and must be described by a Content-Type header.",
+    "key_terms": [
+     {
+      "term": "Request Body",
+      "definition": "The payload of an HTTP request that contains resource data to be processed by the server."
+     },
+     {
+      "term": "Content-Type",
+      "definition": "Header that specifies the media type of the request body (e.g., application/json)."
+     },
+     {
+      "term": "POST",
+      "definition": "HTTP method used to create a new resource; usually includes a body."
+     },
+     {
+      "term": "PUT",
+      "definition": "HTTP method used to replace an existing resource; usually includes a body."
+     },
+     {
+      "term": "PATCH",
+      "definition": "HTTP method used to partially update a resource; usually includes a body."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Body Required",
+      "statement": "Required for POST, PUT, PATCH; optional for GET, DELETE, HEAD."
+     },
+     {
+      "name": "Content-Type Header",
+      "statement": "Must be present when a body is sent to inform the server of the payload format."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a new user with name and email using POST.",
+      "steps": [
+       "Set HTTP method to POST and target URL to https://api.example.com/users.",
+       "Add header Content-Type: application/json.",
+       "Create JSON body: {\"name\":\"Alice\",\"email\":\"alice@example.com\"}.",
+       "Send the request and capture the response."
+      ],
+      "answer": "Server returns 201 Created with a Location header pointing to /users/123."
+     }
+    ],
+    "common_mistakes": [
+     "Omitting the Content-Type header, causing the server to reject the body.",
+     "Sending a body with a GET request, which is ignored by most servers."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "REST API Responses",
+    "summary": "Responses consist of an HTTP status line, headers, and an optional body. Status codes indicate success or error categories, headers convey metadata, and bodies carry the payload. Pagination and compression are optional response features.",
+    "key_terms": [
+     {
+      "term": "HTTP Status Code",
+      "definition": "Three\u2011digit code where the first digit denotes the response class (1xx\u20115xx)."
+     },
+     {
+      "term": "Header",
+      "definition": "Name\u2011value pairs that provide metadata about the response or its body."
+     },
+     {
+      "term": "Response Header",
+      "definition": "Headers unrelated to the body content (e.g., Set-Cookie, Cache-Control)."
+     },
+     {
+      "term": "Entity Header",
+      "definition": "Headers that describe the body content (e.g., Content-Type)."
+     },
+     {
+      "term": "Pagination",
+      "definition": "Technique to split large result sets into discrete pages using query parameters."
+     },
+     {
+      "term": "Content-Encoding",
+      "definition": "Header that indicates compression applied to the response body (e.g., gzip)."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Status Code Classes",
+      "statement": "1xx Informational, 2xx Success, 3xx Redirection, 4xx Client Error, 5xx Server Error."
+     },
+     {
+      "name": "Common Success Codes",
+      "statement": "200 OK, 201 Created, 202 Accepted."
+     },
+     {
+      "name": "Common Error Codes",
+      "statement": "400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests, 500 Internal Server Error."
+     },
+     {
+      "name": "Pagination Parameter",
+      "statement": "Typically a query string like ?page=2&size=50."
+     },
+     {
+      "name": "Compression Values",
+      "statement": "gzip, compress, deflate, br, identity, *."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Retrieve page 3 of a user list with 20 items per page, requesting JSON compressed with gzip.",
+      "steps": [
+       "Set HTTP method to GET and URL to https://api.example.com/users?page=3&size=20.",
+       "Add header Accept: application/json.",
+       "Add header Accept-Encoding: gzip.",
+       "Send request and note response headers: Content-Type: application/json, Content-Encoding: gzip.",
+       "Decompress body to view JSON payload."
+      ],
+      "answer": "Response status 200 OK with a gzipped JSON array of 20 user objects."
+     }
+    ],
+    "common_mistakes": [
+     "Confusing response headers with entity headers; e.g., placing Content-Type in the wrong section.",
+     "Forgetting to include Accept-Encoding, resulting in uncompressed large payloads."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Authentication vs. Authorization",
+    "summary": "Authentication verifies a user's identity, while authorization determines what actions the authenticated user is permitted to perform on resources.",
+    "key_terms": [
+     {
+      "term": "Authentication",
+      "definition": "Process of confirming the identity of a client (e.g., username/password, biometrics)."
+     },
+     {
+      "term": "Authorization",
+      "definition": "Process of granting or denying access to specific resources based on permissions."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Sequence",
+      "statement": "Authentication always occurs before authorization."
+     },
+     {
+      "name": "Result",
+      "statement": "Authentication yields an identity token; authorization yields an access decision."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "A user logs in with credentials and then attempts to delete a device.",
+      "steps": [
+       "POST /login with username/password \u2192 server returns JWT token (authentication).",
+       "Client includes Authorization: Bearer <token> header in DELETE /devices/42 request.",
+       "Server validates token and checks user\u2019s role; if role includes 'admin', deletion proceeds."
+      ],
+      "answer": "If the user is an admin, response 204 No Content; otherwise 403 Forbidden."
+     }
+    ],
+    "common_mistakes": [
+     "Treating a successful authentication as automatic permission to perform all actions.",
+     "Storing passwords in plain text instead of using secure hashing."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Authentication Mechanisms",
+    "summary": "Common methods to prove identity include Basic authentication (Base64\u2011encoded credentials), Bearer token authentication (JWT or opaque token), and API keys (public or private).",
+    "key_terms": [
+     {
+      "term": "Basic Authentication",
+      "definition": "Credentials sent as Base64\u2011encoded username:password in the Authorization header."
+     },
+     {
+      "term": "Bearer Token",
+      "definition": "Opaque string (often JWT) presented in the Authorization header as Bearer <token>."
+     },
+     {
+      "term": "API Key",
+      "definition": "A unique string assigned to a client, usually passed in a custom header or query parameter."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Security Consideration",
+      "statement": "Basic auth should be used over HTTPS only; tokens should be short\u2011lived."
+     },
+     {
+      "name": "Header Format",
+      "statement": "Basic: Authorization: Basic <Base64>, Bearer: Authorization: Bearer <token>."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Call an endpoint using an API key passed as a custom header X-API-Key.",
+      "steps": [
+       "Set HTTP method to GET and URL to https://api.example.com/data.",
+       "Add header X-API-Key: abcdef1234567890.",
+       "Send request over HTTPS."
+      ],
+      "answer": "Server returns 200 OK with the requested data."
+     }
+    ],
+    "common_mistakes": [
+     "Including the API key in the URL query string where it can be logged.",
+     "Reusing the same Basic auth credentials across multiple services without rotation."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Authorization Mechanisms \u2013 OAuth 2.0",
+    "summary": "OAuth 2.0 separates authentication from authorization, allowing a third\u2011party app to obtain limited access via an access token after the user authenticates with an identity provider.",
+    "key_terms": [
+     {
+      "term": "OAuth 2.0",
+      "definition": "Authorization framework that issues access tokens to client applications after user consent."
+     },
+     {
+      "term": "Access Token",
+      "definition": "Bearer token that grants the client limited rights to call protected APIs."
+     },
+     {
+      "term": "Authorization Grant",
+      "definition": "Credential representing the user's authorization (e.g., authorization code, client credentials)."
+     },
+     {
+      "term": "Token Endpoint",
+      "definition": "Server URL where the client exchanges a grant for an access token."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Grant Types",
+      "statement": "Authorization Code, Implicit, Resource Owner Password Credentials, Client Credentials."
+     },
+     {
+      "name": "Flow",
+      "statement": "User \u2192 Authorization Server (grant) \u2192 Token Endpoint \u2192 Access Token \u2192 Resource Server."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Obtain an access token using the Authorization Code grant.",
+      "steps": [
+       "Redirect user to https://auth.example.com/authorize?response_type=code&client_id=abc&redirect_uri=https://app.example.com/callback.",
+       "User logs in and consents; server redirects back with ?code=XYZ.",
+       "POST to https://auth.example.com/token with grant_type=authorization_code, code=XYZ, redirect_uri, client_id, client_secret.",
+       "Server returns JSON with access_token."
+      ],
+      "answer": "access_token = \"eyJhbGciOi...\" (JWT) which can be used in subsequent API calls."
+     }
+    ],
+    "common_mistakes": [
+     "Storing access tokens in client\u2011side local storage where XSS can steal them.",
+     "Using the Implicit grant for confidential clients instead of Authorization Code with PKCE."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "API Rate Limiting",
+    "summary": "Rate limits protect APIs from overload and abuse by restricting the number of requests a client can make within a time window. Various algorithms (leaky bucket, token bucket, fixed window, sliding window) enforce limits, and servers communicate limits via response headers.",
+    "key_terms": [
+     {
+      "term": "Rate Limit",
+      "definition": "Maximum number of allowed requests per defined time interval."
+     },
+     {
+      "term": "Leaky Bucket",
+      "definition": "Queue\u2011based algorithm that processes requests at a constant rate, rejecting when the queue is full."
+     },
+     {
+      "term": "Token Bucket",
+      "definition": "Algorithm that gives a client a bucket of tokens; each request consumes a token."
+     },
+     {
+      "term": "Fixed Window Counter",
+      "definition": "Counts requests in a static time window; resets at window boundary."
+     },
+     {
+      "term": "Sliding Window Counter",
+      "definition": "Counts requests over a rolling time period, providing smoother limits."
+     },
+     {
+      "term": "Rate\u2011Limit Headers",
+      "definition": "X-Rate-Limit-Limit, X-Rate-Limit-Remaining, X-Rate-Limit-Reset."
+     }
+    ],
+    "properties": [
+     {
+      "name": "X-Rate-Limit-Limit",
+      "statement": "Maximum requests allowed in the current window."
+     },
+     {
+      "name": "X-Rate-Limit-Remaining",
+      "statement": "Requests still available before hitting the limit."
+     },
+     {
+      "name": "X-Rate-Limit-Reset",
+      "statement": "Epoch time when the current window resets."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Client receives a 429 Too Many Requests response and wants to retry after the limit resets.",
+      "steps": [
+       "Read X-Rate-Limit-Reset header value (e.g., 1696185600).",
+       "Calculate wait time: reset_time - current_epoch_time.",
+       "Sleep for the calculated seconds.",
+       "Retry the original request."
+      ],
+      "answer": "After waiting the indicated time, the request succeeds with status 200."
+     }
+    ],
+    "common_mistakes": [
+     "Ignoring the Retry\u2011After or X-Rate-Limit-Reset header, causing repeated 429 errors.",
+     "Assuming a fixed limit across all endpoints; many APIs have per\u2011endpoint limits."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "What is a Webhook",
+    "summary": "A webhook is an HTTP callback (POST) to a registered URL that notifies an application when a specific event occurs in a resource. It eliminates the need for polling, acting as a reverse API where applications subscribe to a webhook provider. Multiple applications can subscribe to the same webhook server.",
+    "key_terms": [
+     {
+      "term": "Webhook",
+      "definition": "An HTTP POST sent to a pre\u2011registered URL to deliver event data to a consumer application."
+     },
+     {
+      "term": "HTTP callback",
+      "definition": "A request initiated by a server toward a client\u2011provided endpoint."
+     },
+     {
+      "term": "Reverse API",
+      "definition": "An API model where the provider pushes data to the consumer instead of the consumer pulling it."
+     },
+     {
+      "term": "Subscription",
+      "definition": "The act of registering a consumer URI with a webhook provider to receive events."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Notification method",
+      "statement": "Uses an HTTP POST with a JSON payload containing event details."
+     },
+     {
+      "name": "Efficiency",
+      "statement": "Reduces network traffic and latency by removing periodic polling."
+     },
+     {
+      "name": "Scalability",
+      "statement": "One webhook server can serve many subscriber applications."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a webhook that notifies a local Flask app when a new message is posted in a Cisco Webex Teams room.",
+      "steps": [
+       "Log in to the Webex Teams developer portal and create a new webhook.",
+       "Set the target URL to https://<public\u2011ngrok\u2011url>/webhook.",
+       "Choose the event type \"messages\" and the specific room ID.",
+       "Save the webhook; Webex will send a POST request to the URL each time a message appears.",
+       "In Flask, define a route @app.route('/webhook', methods=['POST']) that parses request.json and prints the message text."
+      ],
+      "answer": "When a new message is posted, the Flask endpoint receives a JSON payload like {\"data\": {\"roomId\": \"...\", \"personEmail\": \"...\", \"text\": \"Hello\"}} and can process it immediately."
+     }
+    ],
+    "common_mistakes": [
+     "Forgetting to keep the consumer application running 24/7, causing missed events.",
+     "Registering an incorrect or non\u2011public URI, so the provider cannot reach the endpoint.",
+     "Not validating the incoming POST payload, leading to processing errors."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Consuming a Webhook",
+    "summary": "To receive webhook notifications an application must be continuously reachable, must register its URI with the provider, and must correctly handle incoming HTTP POST requests. Testing tools (e.g., ngrok, requestbin) help verify receipt of events.",
+    "key_terms": [
+     {
+      "term": "URI registration",
+      "definition": "The process of providing the webhook provider with the endpoint address that will receive POSTs."
+     },
+     {
+      "term": "Always\u2011on service",
+      "definition": "A server or service that remains reachable for the duration of the subscription."
+     },
+     {
+      "term": "Payload handling",
+      "definition": "Parsing and acting on the JSON data sent in the webhook POST."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Always\u2011on requirement",
+      "statement": "The consumer must listen on the registered port at all times."
+     },
+     {
+      "name": "URI registration",
+      "statement": "The consumer sends the endpoint URL to the provider via the provider\u2019s API or UI."
+     },
+     {
+      "name": "Notification handling",
+      "statement": "The consumer validates signatures (if provided) and processes the JSON payload."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Test a webhook endpoint using ngrok and curl.",
+      "steps": [
+       "Start a simple HTTP server: python -m http.server 8080.",
+       "Expose it: ngrok http 8080 (note the https forwarding URL).",
+       "Register the ngrok URL with the webhook provider.",
+       "From a terminal, simulate a webhook: curl -X POST -H \"Content-Type: application/json\" -d '{\"event\":\"test\"}' <ngrok\u2011url>/webhook.",
+       "Observe the server logs to confirm receipt of the JSON payload."
+      ],
+      "answer": "The server logs show \"POST /webhook HTTP/1.1\" and the JSON body, confirming the consumer can receive and parse webhook data."
+     }
+    ],
+    "common_mistakes": [
+     "Using a localhost URL without a tunneling service, making the provider unable to reach the endpoint.",
+     "Neglecting to set the correct Content\u2011Type header, causing the provider to reject the request.",
+     "Failing to handle SSL verification errors when using self\u2011signed certificates."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Troubleshooting API Calls",
+    "summary": "When an API request does not return the expected response, use the API reference and authentication details to diagnose client\u2011side and server\u2011side problems. Common issues include malformed URIs, connectivity problems, SSL errors, and server outages.",
+    "key_terms": [
+     {
+      "term": "Client\u2011side error",
+      "definition": "Issues originating from the requestor, such as bad syntax or wrong credentials."
+     },
+     {
+      "term": "Server\u2011side error",
+      "definition": "Problems on the API host, like downtime or misconfiguration."
+     },
+     {
+      "term": "SSL handshake",
+      "definition": "The process of establishing a secure TLS connection; failures often stem from invalid certificates."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Reference guide",
+      "statement": "Keep the API documentation and authentication method handy while debugging."
+     },
+     {
+      "name": "Check URI",
+      "statement": "Verify scheme (http/https), domain, and path are correct."
+     },
+     {
+      "name": "Inspect status code",
+      "statement": "Use the returned HTTP status to narrow the problem category."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "A script fails with a traceback indicating a missing scheme in the URL.",
+      "steps": [
+       "Run the script: requests.get('api.example.com/resource').",
+       "Observe the error: MissingSchema: Invalid URL 'api.example.com/resource': No scheme supplied.",
+       "Fix the URL by adding the scheme: 'https://api.example.com/resource'.",
+       "Rerun the script; the request now reaches the server."
+      ],
+      "answer": "The corrected request returns the expected JSON payload, confirming the issue was an invalid URI."
+     }
+    ],
+    "common_mistakes": [
+     "Assuming a 4xx response is a server problem and not checking client credentials.",
+     "Ignoring SSL verification errors instead of fixing the certificate chain."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Interpreting HTTP Status Codes",
+    "summary": "HTTP status codes are grouped by their first digit: 1xx informational, 2xx success, 3xx redirection, 4xx client error, 5xx server error. Knowing the class helps direct troubleshooting steps.",
+    "key_terms": [
+     {
+      "term": "1xx",
+      "definition": "Informational responses; request received and processing continues."
+     },
+     {
+      "term": "2xx",
+      "definition": "Success; the request was received, understood, and accepted."
+     },
+     {
+      "term": "3xx",
+      "definition": "Redirection; further action needed to complete the request."
+     },
+     {
+      "term": "4xx",
+      "definition": "Client error; the request contains bad syntax or cannot be fulfilled."
+     },
+     {
+      "term": "5xx",
+      "definition": "Server error; the server failed to fulfill a valid request."
+     }
+    ],
+    "properties": [
+     {
+      "name": "2xx",
+      "statement": "Indicates successful processing (e.g., 200 OK, 201 Created)."
+     },
+     {
+      "name": "4xx",
+      "statement": "Signals a problem with the request; check syntax, authentication, or permissions."
+     },
+     {
+      "name": "5xx",
+      "statement": "Points to a server\u2011side issue; client can usually only retry or contact the provider."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "API returns 400 Bad Request with body \"No id field provided\".",
+      "steps": [
+       "Inspect the request payload; notice the missing \"id\" attribute.",
+       "Add \"id\": \"12345\" to the JSON body.",
+       "Resend the request.",
+       "Receive 200 OK confirming the fix."
+      ],
+      "answer": "The corrected request succeeds, demonstrating that 400 errors often stem from malformed request data."
+     }
+    ],
+    "common_mistakes": [
+     "Treating a 4xx code as a server fault and not correcting the request.",
+     "Overlooking the response body, which often contains a human\u2011readable error message."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Common 4xx Errors and Fixes",
+    "summary": "Typical client\u2011side HTTP errors include 400 (Bad Request), 401 (Unauthorized), 403 (Forbidden), 407 (Proxy Authentication Required), 409 (Conflict), and 415 (Unsupported Media Type). Each has a specific cause and remediation.",
+    "key_terms": [
+     {
+      "term": "400 Bad Request",
+      "definition": "The server cannot parse the request due to malformed syntax."
+     },
+     {
+      "term": "401 Unauthorized",
+      "definition": "Authentication credentials are missing or invalid."
+     },
+     {
+      "term": "403 Forbidden",
+      "definition": "Authenticated but not authorized to perform the operation."
+     },
+     {
+      "term": "407 Proxy Auth Required",
+      "definition": "Client must authenticate with an intervening proxy."
+     },
+     {
+      "term": "409 Conflict",
+      "definition": "Request conflicts with the current state of the target resource."
+     },
+     {
+      "term": "415 Unsupported Media Type",
+      "definition": "Request payload format is not supported by the server."
+     }
+    ],
+    "properties": [
+     {
+      "name": "400",
+      "statement": "Check JSON syntax, required fields, and spelling of resource names."
+     },
+     {
+      "name": "401",
+      "statement": "Verify username/password, API key, token, and that they are sent in the correct header."
+     },
+     {
+      "name": "403",
+      "statement": "Ensure the authenticated user has the necessary role/permissions."
+     },
+     {
+      "name": "407",
+      "statement": "Provide proxy credentials via the Proxy\u2011Authorization header."
+     },
+     {
+      "name": "409",
+      "statement": "Resolve the conflict (e.g., wait for another edit to finish) before retrying."
+     },
+     {
+      "name": "415",
+      "statement": "Set the Content\u2011Type header to a format the server accepts (e.g., application/json)."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "GET request to a protected endpoint returns 401 Unauthorized.",
+      "steps": [
+       "Inspect the code: requests.get('https://api.example.com/data').",
+       "Add authentication: requests.get('https://api.example.com/data', auth=('user','pass')).",
+       "Rerun; server now returns 200 OK."
+      ],
+      "answer": "Providing correct basic auth resolves the 401 error."
+     },
+     {
+      "problem": "POST request returns 415 Unsupported Media Type.",
+      "steps": [
+       "Original request lacked a Content\u2011Type header.",
+       "Add header: {'Content-Type':'application/json'} to the POST call.",
+       "Resend the request.",
+       "Server responds with 201 Created."
+      ],
+      "answer": "Specifying the proper Content\u2011Type fixes the 415 error."
+     }
+    ],
+    "common_mistakes": [
+     "Sending JSON data without the appropriate Content\u2011Type header, leading to 415 errors.",
+     "Using the wrong credentials format (e.g., forgetting to base64\u2011encode for Basic auth).",
+     "Assuming a 403 error is due to bad credentials rather than insufficient privileges."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Common 5xx Errors",
+    "summary": "Server\u2011side HTTP errors (5xx) indicate that the server could not fulfill a valid request. These include 500 Internal Server Error, 501 Not Implemented, 502 Bad Gateway, 503 Service Unavailable, and 504 Gateway Timeout.",
+    "key_terms": [
+     {
+      "term": "500 Internal Server Error",
+      "definition": "A generic error when the server encounters an unexpected condition."
+     },
+     {
+      "term": "501 Not Implemented",
+      "definition": "The server does not support the requested functionality."
+     },
+     {
+      "term": "502 Bad Gateway",
+      "definition": "A gateway or proxy received an invalid response from an upstream server."
+     },
+     {
+      "term": "503 Service Unavailable",
+      "definition": "The server is overloaded or under maintenance."
+     },
+     {
+      "term": "504 Gateway Timeout",
+      "definition": "The gateway did not receive a timely response from an upstream server."
+     }
+    ],
+    "properties": [
+     {
+      "name": "500",
+      "statement": "Check server logs; client cannot fix the issue."
+     },
+     {
+      "name": "501",
+      "statement": "Confirm the API endpoint actually exists and is supported."
+     },
+     {
+      "name": "502",
+      "statement": "Validate any intermediate proxies or load balancers."
+     },
+     {
+      "name": "503",
+      "statement": "Retry after a delay or contact the service provider."
+     },
+     {
+      "name": "504",
+      "statement": "Investigate network latency or upstream service health."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "A request to a test server returns 503 Service Unavailable.",
+      "steps": [
+       "Observe the response body: \"Service temporarily down\".",
+       "Wait 30 seconds and resend the request.",
+       "Server now returns 200 OK."
+      ],
+      "answer": "The temporary overload resolved; 503 indicates a transient server condition."
+     }
+    ],
+    "common_mistakes": [
+     "Attempting to modify request headers to fix a 5xx error, which is a server\u2011side problem.",
+     "Ignoring retry\u2011after headers that suggest when to resend the request."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Launching the DEVASC Virtual Machine",
+    "summary": "The DEVASC VM provides a pre\u2011configured Linux environment with Python, required libraries, and network tools. Students must power on the VM, ensure network connectivity, and open a terminal to begin API work.",
+    "key_terms": [
+     {
+      "term": "VM",
+      "definition": "A virtual machine that emulates a complete computer system within host hardware."
+     },
+     {
+      "term": "Hypervisor",
+      "definition": "Software layer (e.g., VirtualBox, VMware) that creates and runs VMs."
+     },
+     {
+      "term": "DEVASC",
+      "definition": "Cisco DevNet Associate Self\u2011Study Curriculum VM used for labs."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Power\u2011On Procedure",
+      "statement": "Open VirtualBox \u2192 select DEVASC VM \u2192 click \u2018Start\u2019 \u2192 log in with provided credentials."
+     },
+     {
+      "name": "Network Check",
+      "statement": "Run `ping 8.8.8.8` to verify internet access before API calls."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Start the DEVASC VM and confirm internet connectivity.",
+      "steps": [
+       "Open VirtualBox on host machine.",
+       "Select the \u2018DEVASC\u2011VM\u2019 entry and click \u2018Start\u2019.",
+       "Log in using username \u2018devnet\u2019 and password \u2018cisco123\u2019.",
+       "In the terminal, execute `ping -c 3 8.8.8.8`.",
+       "Observe successful replies indicating network access."
+      ],
+      "answer": "VM is running and can reach the internet, ready for API work."
+     }
+    ],
+    "common_mistakes": [
+     "Forgetting to enable the network adapter in VM settings.",
+     "Using the host\u2019s SSH key instead of the VM\u2019s default credentials."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Demonstrating the MapQuest Directions Application",
+    "summary": "MapQuest provides a public Directions API that returns route information in JSON. The lab first runs a sample script supplied by Cisco to show a basic request/response cycle.",
+    "key_terms": [
+     {
+      "term": "MapQuest API",
+      "definition": "A RESTful service offering geocoding, routing, and map data."
+     },
+     {
+      "term": "Directions Endpoint",
+      "definition": "`https://www.mapquestapi.com/directions/v2/route` \u2013 returns turn\u2011by\u2011turn routing data."
+     },
+     {
+      "term": "JSON",
+      "definition": "JavaScript Object Notation, a lightweight data\u2011interchange format used for API payloads."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Base URL",
+      "statement": "https://www.mapquestapi.com/directions/v2/route"
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Send a GET request to the Directions endpoint with origin and destination parameters.",
+      "steps": [
+       "Import `requests` library.",
+       "Define `params = {'key':API_KEY,'from':'Boston,MA','to':'New+York,NY'}`.",
+       "Call `response = requests.get('https://www.mapquestapi.com/directions/v2/route', params=params)`.",
+       "Print `response.json()` to view the route object."
+      ],
+      "answer": "JSON response containing distance, time, and a list of maneuver objects."
+     }
+    ],
+    "common_mistakes": [
+     "Using POST instead of GET for a simple retrieval request.",
+     "Omitting the required `key` query parameter, which results in a 403 error."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Obtaining a MapQuest API Key",
+    "summary": "MapQuest requires each developer to register for an API key. The key authenticates requests and enforces rate limits.",
+    "key_terms": [
+     {
+      "term": "API Key",
+      "definition": "A unique token issued by a service to identify and authorize a client\u2019s requests."
+     },
+     {
+      "term": "Rate Limit",
+      "definition": "Maximum number of API calls allowed within a time window (e.g., 15,000 per month for free tier)."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Acquisition Steps",
+      "statement": "1. Visit developer.mapquest.com 2. Create an account 3. Navigate to \u2018My Apps\u2019 4. Generate a new key and copy it."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create and store an API key for use in Python scripts.",
+      "steps": [
+       "Open a web browser and go to https://developer.mapquest.com/",
+       "Log in or sign up for a free account.",
+       "Click \u2018Create New App\u2019, give it a name, and submit.",
+       "Copy the generated key string.",
+       "In Python, assign `API_KEY = 'YOUR_KEY_HERE'`."
+      ],
+      "answer": "`API_KEY` variable now holds a valid MapQuest key for subsequent requests."
+     }
+    ],
+    "common_mistakes": [
+     "Copying the key with surrounding quotes or whitespace, causing authentication failures.",
+     "Using the same key across multiple unrelated projects without monitoring individual usage."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Building the Basic MapQuest Directions Application",
+    "summary": "Students write a Python script that constructs a request, sends it via the `requests` library, parses the JSON response, and prints human\u2011readable directions.",
+    "key_terms": [
+     {
+      "term": "requests library",
+      "definition": "A Python package that simplifies HTTP calls (GET, POST, etc.)."
+     },
+     {
+      "term": "Maneuver",
+      "definition": "An individual step in a route (e.g., \u2018Turn left onto Main St.\u2019)."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Core Code Structure",
+      "statement": "Import \u2192 Define API key & parameters \u2192 `requests.get()` \u2192 `response.json()` \u2192 Loop through `maneuvers` and print instructions."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Write a script that prints each maneuver for a Boston\u2011to\u2011NYC trip.",
+      "steps": [
+       "import requests",
+       "API_KEY='YOUR_KEY'",
+       "params={'key':API_KEY,'from':'Boston,MA','to':'New+York,NY'}",
+       "resp=requests.get('https://www.mapquestapi.com/directions/v2/route',params=params)",
+       "data=resp.json()",
+       "for m in data['route']['legs'][0]['maneuvers']:\n    print(m['narrative'])"
+      ],
+      "answer": "A list of turn\u2011by\u2011turn directions displayed on the console."
+     }
+    ],
+    "common_mistakes": [
+     "Attempting to access `data['route']` before confirming `resp.status_code == 200`.",
+     "Using `json.loads(resp.text)` instead of `resp.json()`, which can raise decoding errors on malformed responses."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Upgrading the Application with Additional Features",
+    "summary": "The lab adds optional parameters (e.g., avoid tolls, provide alternative routes) and introduces error handling to make the app robust.",
+    "key_terms": [
+     {
+      "term": "Optional Parameters",
+      "definition": "Query string values that modify API behavior, such as `avoidTollRoads=true`."
+     },
+     {
+      "term": "Exception Handling",
+      "definition": "Python `try/except` blocks that catch network or parsing errors."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Enhanced Parameter Set",
+      "statement": "`params.update({'avoidTollRoads':'true','routeType':'fastest','unit':'k'})`"
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Modify the basic script to avoid toll roads and handle HTTP errors gracefully.",
+      "steps": [
+       "import requests",
+       "API_KEY='YOUR_KEY'",
+       "base_params={'key':API_KEY,'from':'Boston,MA','to':'New+York,NY'}",
+       "base_params.update({'avoidTollRoads':'true'})",
+       "try:\n    resp=requests.get('https://www.mapquestapi.com/directions/v2/route',params=base_params)\n    resp.raise_for_status()\n    data=resp.json()\n    for m in data['route']['legs'][0]['maneuvers']:\n        print(m['narrative'])\nexcept requests.exceptions.HTTPError as e:\n    print(f'HTTP error: {e}')\nexcept requests.exceptions.RequestException as e:\n    print(f'Network error: {e}')"
+      ],
+      "answer": "Directions printed without toll roads; any HTTP/network issue is reported instead of crashing."
+     }
+    ],
+    "common_mistakes": [
+     "Appending optional parameters to the URL string manually, which can lead to missing `&` separators.",
+     "Catching a generic `Exception` and hiding the real cause of a failed API call."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   },
+   {
+    "heading": "Testing Full Application Functionality",
+    "summary": "Final lab stage validates that the script works for multiple origin/destination pairs, checks response codes, and confirms that error handling behaves as expected.",
+    "key_terms": [
+     {
+      "term": "Unit Test",
+      "definition": "Automated test that verifies a small piece of code (e.g., a function that builds the request URL)."
+     },
+     {
+      "term": "Mocking",
+      "definition": "Replacing real network calls with simulated responses during tests."
+     }
+    ],
+    "properties": [
+     {
+      "name": "Test Cases",
+      "statement": "1. Valid route returns 200 and non\u2011empty maneuvers. 2. Invalid API key returns 403. 3. Missing \u2018to\u2019 parameter returns 400."
+     }
+    ],
+    "worked_examples": [
+     {
+      "problem": "Create a simple unittest that verifies a 403 response when an invalid API key is used.",
+      "steps": [
+       "import unittest, requests",
+       "class TestMapQuest(unittest.TestCase):\n    def test_invalid_key(self):\n        params={'key':'BAD_KEY','from':'Boston,MA','to':'New+York,NY'}\n        resp=requests.get('https://www.mapquestapi.com/directions/v2/route',params=params)\n        self.assertEqual(resp.status_code,403)"
+      ],
+      "answer": "Test passes, confirming the API correctly rejects an invalid key."
+     }
+    ],
+    "common_mistakes": [
+     "Running tests without internet access, causing false failures.",
+     "Hard\u2011coding expected JSON structures that change between API versions."
+    ],
+    "source_refs": [
+     "D:\\School-Works\\Network and Communications 2\\DEVASC M3-M4 Exam Prep\\DEVASC_Module_4.pdf"
+    ]
+   }
+  ],
+  "formula_sheet": [
+   {
+    "name": "URI Structure",
+    "expression": "{scheme}://{authority}{:port}/{path}{?query}",
+    "when_to_use": "Use to construct the endpoint address for any REST request."
+   },
+   {
+    "name": "HTTP Method Mapping",
+    "expression": "POST\u2192Create, GET\u2192Read, PUT\u2192Replace/Update, PATCH\u2192Partial Update, DELETE\u2192Remove",
+    "when_to_use": "Select the appropriate verb based on the desired CRUD operation."
+   },
+   {
+    "name": "Common HTTP Status Codes",
+    "expression": "200 OK, 201 Created, 202 Accepted, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 500 Internal Server Error",
+    "when_to_use": "Interpret server responses to determine success or required error handling."
+   },
+   {
+    "name": "Authorization Header (Basic)",
+    "expression": "Authorization: Basic {base64(username:password)}",
+    "when_to_use": "When the API uses HTTP Basic authentication over HTTPS."
+   },
+   {
+    "name": "Content-Type Header for JSON",
+    "expression": "Content-Type: application/json",
+    "when_to_use": "When sending JSON payloads in the request body."
+   },
+   {
+    "name": "HTTP Status Code Category",
+    "expression": "FirstDigit(statusCode) \u2192 Category",
+    "when_to_use": "To quickly determine if a response is informational, successful, a redirect, client error, or server error."
+   },
+   {
+    "name": "Remaining Requests",
+    "expression": "Remaining = Limit - Used",
+    "when_to_use": "When processing X-Rate-Limit-Limit and X-Rate-Limit-Remaining headers to track quota."
+   },
+   {
+    "name": "Token Bucket Availability",
+    "expression": "If tokens > 0 then allow request and tokens-- else reject",
+    "when_to_use": "Conceptual check for token\u2011bucket rate\u2011limit implementations."
+   },
+   {
+    "name": "Fixed Window Reset Time",
+    "expression": "ResetTime = WindowStart + WindowSize",
+    "when_to_use": "To compute X-Rate-Limit-Reset for fixed\u2011window counters."
+   },
+   {
+    "name": "HTTP Status Code Category",
+    "expression": "1xx \u2192 Informational, 2xx \u2192 Success, 3xx \u2192 Redirection, 4xx \u2192 Client Error, 5xx \u2192 Server Error",
+    "when_to_use": "Use to quickly classify any HTTP response code during API troubleshooting."
+   },
+   {
+    "name": "Webhook POST Request Skeleton",
+    "expression": "POST <registered\u2011URL>\\nHeaders: Content-Type: application/json\\nBody: {\"event\":\"<event\u2011type>\",\"data\":{...}}",
+    "when_to_use": "Use as a template when simulating webhook deliveries or documenting webhook payloads."
+   },
+   {
+    "name": "Python requests SSL Verification Toggle",
+    "expression": "requests.get(url, verify=False)",
+    "when_to_use": "Use in lab environments with self\u2011signed certificates to bypass SSL verification (not for production)."
+   },
+   {
+    "name": "HTTP Request Line",
+    "expression": "METHOD SP REQUEST-URI SP HTTP-VERSION CRLF",
+    "when_to_use": "Construct the start line of any HTTP request (e.g., GET /path HTTP/1.1)."
+   },
+   {
+    "name": "Typical REST API URL",
+    "expression": "https://{host}/{resource}/{id}?{query_parameters}",
+    "when_to_use": "Forming endpoint URLs for GET requests with optional query strings."
+   },
+   {
+    "name": "Status Code Categories",
+    "expression": "1xx Informational, 2xx Success, 3xx Redirection, 4xx Client Error, 5xx Server Error",
+    "when_to_use": "Interpreting the meaning of an API response code."
+   },
+   {
+    "name": "Python requests GET Syntax",
+    "expression": "response = requests.get(url, params=payload)",
+    "when_to_use": "Sending a GET request with query parameters encoded automatically."
+   },
+   {
+    "name": "Raise for HTTP Errors",
+    "expression": "response.raise_for_status()",
+    "when_to_use": "Immediately raise an exception for non\u20112xx responses during troubleshooting."
+   }
+  ],
+  "self_check": [
+   {
+    "question": "What is the primary difference between synchronous and asynchronous APIs?",
+    "answer": "Synchronous APIs return the response data in the same request/response cycle, while asynchronous APIs acknowledge receipt and complete processing later, allowing the client to continue without waiting."
+   },
+   {
+    "question": "Which HTTP method would you use to partially update a resource, and what header must you include when sending JSON data?",
+    "answer": "Use PATCH for a partial update and include the header Content-Type: application/json."
+   },
+   {
+    "question": "List the six constraints that define the REST architectural style.",
+    "answer": "Client\u2011server, Stateless, Cacheable, Uniform interface, Layered system, Code\u2011on\u2011demand."
+   },
+   {
+    "question": "In a SOAP message, what are the four main XML elements?",
+    "answer": "Envelope, Header, Body, Fault."
+   },
+   {
+    "question": "Which HTTP methods typically include a request body, and what header must accompany the body?",
+    "answer": "POST, PUT, and PATCH usually include a body, and the Content-Type header must specify the media type."
+   },
+   {
+    "question": "What is the difference between a response header and an entity header?",
+    "answer": "Response headers convey metadata unrelated to the body (e.g., Set-Cookie), while entity headers describe the body content (e.g., Content-Type)."
+   },
+   {
+    "question": "Name two authentication mechanisms and a key security consideration for each.",
+    "answer": "Basic authentication \u2013 must be used over HTTPS to protect Base64\u2011encoded credentials; Bearer token \u2013 tokens should be short\u2011lived and stored securely (not in local storage accessible to XSS)."
+   },
+   {
+    "question": "If an API returns X-Rate-Limit-Remaining: 0 and X-Rate-Limit-Reset: 1696185600, what should a client do?",
+    "answer": "The client should wait until the epoch time 1696185600 (or use Retry\u2011After if provided) before sending another request."
+   },
+   {
+    "question": "Explain the token bucket algorithm in one sentence.",
+    "answer": "Each request consumes a token from a bucket that refills at a fixed rate; if no token is available, the request is rejected."
+   },
+   {
+    "question": "What is the primary advantage of using a webhook over polling?",
+    "answer": "Webhooks push events to the consumer as they happen, eliminating the need for the consumer to repeatedly request (poll) the server for updates."
+   },
+   {
+    "question": "Which HTTP status code indicates that the client supplied malformed JSON?",
+    "answer": "400 Bad Request."
+   },
+   {
+    "question": "If you receive a 401 response, what is the most likely cause?",
+    "answer": "Missing or invalid authentication credentials (e.g., wrong API key, username/password, or token)."
+   },
+   {
+    "question": "Name two client\u2011side issues that can cause a \"No response\" error from an API server.",
+    "answer": "Incorrect URI (missing scheme or wrong domain) and SSL certificate verification failures."
+   },
+   {
+    "question": "When should you contact the API server administrator during troubleshooting?",
+    "answer": "When the issue is identified as a server\u2011side problem (e.g., 5xx errors, server downtime, or network communication failures that cannot be resolved from the client side)."
+   },
+   {
+    "question": "Which HTTP method is most appropriate for retrieving routing information from a REST API?",
+    "answer": "GET"
+   },
+   {
+    "question": "What query parameter must always be included when calling the MapQuest Directions API?",
+    "answer": "The `key` parameter containing a valid API key."
+   },
+   {
+    "question": "If a Python script receives a 401 status code from the MapQuest API, what is the likely cause and how should you fix it?",
+    "answer": "The API key is missing or invalid; obtain a correct key from the MapQuest developer portal and ensure it is passed in the `key` query parameter."
+   },
+   {
+    "question": "Name one common mistake when handling JSON responses in Python and the correct approach to avoid it.",
+    "answer": "Mistake: treating `response.text` as a dict. Correct approach: call `response.json()` to parse the JSON into a Python dictionary."
+   }
+  ]
+ }
+}

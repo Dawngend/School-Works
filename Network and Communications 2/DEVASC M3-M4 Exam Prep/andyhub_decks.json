@@ -1,0 +1,732 @@
+{
+ "DEVASC Module 3 Software Development and Design": {
+  "deck_id": 1,
+  "cards": [
+   [
+    1,
+    1,
+    "multiple_choice",
+    "Your team is developing a small internal tool with a fixed deadline of 4 weeks and only two developers. Which SDLC methodology is most appropriate for this project?",
+    "Lean",
+    "[\"Waterfall\", \"Agile Scrum\", \"Lean\", \"Spiral\"]",
+    0
+   ],
+   [
+    2,
+    1,
+    "multiple_choice",
+    "During sprint planning, the product owner presents the user story: \"As a network engineer, I would like to generate a daily report of device uptime, so that I can quickly identify outages.\" Which characteristic of a good user story does this example illustrate?",
+    "It follows the INVEST model by being valuable to the user.",
+    "[\"It includes acceptance criteria.\", \"It follows the INVEST model by being valuable to the user.\", \"It specifies the exact technical implementation.\", \"It is a large epic that will span multiple sprints.\"]",
+    0
+   ],
+   [
+    3,
+    1,
+    "multiple_choice",
+    "Your Scrum team notices that a developer frequently switches between tasks, causing delays. Which of the seven wastes of Lean does this behavior represent?",
+    "Task switching",
+    "[\"Extra features\", \"Task switching\", \"Motion\", \"Waiting\"]",
+    0
+   ],
+   [
+    4,
+    1,
+    "multiple_choice",
+    "During the Requirements and Analysis phase, the team discovers that the budget will not cover all requested features. According to the phase\u2019s objectives, what should the team do next?",
+    "Create a revised Software Requirement Specification (SRS) that prioritizes feasible features.",
+    "[\"Proceed with development and cut corners later.\", \"Create a revised Software Requirement Specification (SRS) that prioritizes feasible features.\", \"Skip testing to save costs.\", \"Switch to a Waterfall model to enforce strict scope control.\"]",
+    0
+   ],
+   [
+    5,
+    1,
+    "multiple_choice",
+    "A developer commits code directly to the main branch without a pull request, causing a merge conflict that halts the build pipeline. Which best practice from the version control topic does this violate?",
+    "Branching and merging via feature branches with pull\u2011request reviews.",
+    "[\"Using descriptive commit messages.\", \"Branching and merging via feature branches with pull\\u2011request reviews.\", \"Tagging releases with semantic versioning.\", \"Committing after every 5 lines of code.\"]",
+    0
+   ],
+   [
+    6,
+    1,
+    "multiple_choice",
+    "In the testing phase, your team decides to run functional, integration, and performance tests. Which type of testing specifically verifies that new code does not break existing functionality?",
+    "Regression testing",
+    "[\"Unit testing\", \"Regression testing\", \"Load testing\", \"Smoke testing\"]",
+    0
+   ],
+   [
+    7,
+    1,
+    "multiple_choice",
+    "Your project manager asks the team to decide on the database schema before any user requirements are finalized. Which Lean principle does this decision contradict?",
+    "Decide as late as possible",
+    "[\"Eliminate waste\", \"Decide as late as possible\", \"Deliver as fast as possible\", \"Empower the team\"]",
+    0
+   ],
+   [
+    8,
+    1,
+    "multiple_choice",
+    "During a daily stand\u2011up, a team member reports that a critical bug was found in the code just released to production. According to the Agile Manifesto values, what should the team prioritize to address this situation?",
+    "Responding to change over following a plan.",
+    "[\"Comprehensive documentation of the bug.\", \"Individuals and interactions over processes and tools.\", \"Customer collaboration over contract negotiation.\", \"Responding to change over following a plan.\"]",
+    0
+   ],
+   [
+    9,
+    1,
+    "multiple_choice",
+    "Your team is building a stock\u2011ticker dashboard that must update the displayed prices instantly whenever the price service receives new data. Which design pattern best fits this requirement?",
+    "Observer",
+    "[\"Factory Method\", \"Observer\", \"Singleton\", \"Decorator\"]",
+    0
+   ],
+   [
+    10,
+    1,
+    "multiple_choice",
+    "You are developing a web application with a complex UI. To allow designers to work on the layout while developers implement business logic, which architectural pattern should you apply?",
+    "Model\u2011View\u2011Controller (MVC)",
+    "[\"Model\\u2011View\\u2011Controller (MVC)\", \"Adapter\", \"Prototype\", \"Facade\"]",
+    0
+   ],
+   [
+    11,
+    1,
+    "multiple_choice",
+    "Your company uses a single central server for source code storage, and developers must lock files before editing to avoid conflicts. Which type of version control system are they using?",
+    "Centralized Version Control System (CVCS)",
+    "[\"Distributed Version Control System (DVCS)\", \"Local Version Control System (LVCS)\", \"Centralized Version Control System (CVCS)\", \"Hybrid Version Control System\"]",
+    0
+   ],
+   [
+    12,
+    1,
+    "multiple_choice",
+    "A developer is traveling with intermittent internet access and needs to commit changes locally, then push them later when back online. Which version control model supports this workflow without requiring a lock on the remote repository?",
+    "Distributed Version Control System (DVCS)",
+    "[\"Centralized Version Control System (CVCS)\", \"Distributed Version Control System (DVCS)\", \"Local Version Control System (LVCS)\", \"File\\u2011based versioning\"]",
+    0
+   ],
+   [
+    13,
+    1,
+    "multiple_choice",
+    "You have just created a new folder for a project and want to start tracking it with Git. Which command should you run first?",
+    "git init",
+    "[\"git clone <repo>\", \"git init\", \"git add .\", \"git commit -m \\\"initial\\\"\"]",
+    0
+   ],
+   [
+    14,
+    1,
+    "multiple_choice",
+    "While working on a new authentication feature, you create a branch called 'auth\u2011feature' from 'master'. After completing the work, you want to integrate it back into 'master' without losing the commit history. Which Git sequence is most appropriate?",
+    "git merge auth\u2011feature while on master",
+    "[\"git merge auth\\u2011feature while on master\", \"git rebase master onto auth\\u2011feature\", \"git checkout auth\\u2011feature; git pull origin master\", \"git reset --hard auth\\u2011feature\"]",
+    0
+   ],
+   [
+    15,
+    1,
+    "multiple_choice",
+    "Your teammate has pushed a set of changes to a remote repository and opened a pull request on GitHub. What is the primary purpose of this pull request?",
+    "Notify reviewers and allow discussion before merging",
+    "[\"Automatically merge the changes without review\", \"Notify reviewers and allow discussion before merging\", \"Create a new branch on the remote repository\", \"Delete the source branch after merging\"]",
+    0
+   ],
+   [
+    16,
+    1,
+    "multiple_choice",
+    "You need to see exactly what lines were added, removed, or modified in 'config.yaml' between your current working directory and the last commit. Which Git command provides this information?",
+    "git diff config.yaml",
+    "[\"git status\", \"git log\", \"git diff config.yaml\", \"git show\"]",
+    0
+   ],
+   [
+    17,
+    1,
+    "multiple_choice",
+    "You accidentally added a local configuration file to the staging area but want to keep the file in your working directory while removing it from the next commit. Which command should you use?",
+    "git rm --cached <file>",
+    "[\"git rm <file>\", \"git rm --cached <file>\", \"git reset <file>\", \"git reset --hard\"]",
+    0
+   ],
+   [
+    18,
+    1,
+    "multiple_choice",
+    "After manually deleting a source file from the filesystem, you need to record its removal in the repository. Which two-step sequence of commands accomplishes this?",
+    "rm <file> then git add <file>",
+    "[\"git rm <file> then git commit\", \"rm <file> then git add <file>\", \"rm <file> then git add -u\", \"git reset <file> then git commit\"]",
+    0
+   ],
+   [
+    19,
+    1,
+    "multiple_choice",
+    "All desired changes have been staged and you want to create a commit with the message \"Update login flow\". Which command will achieve this?",
+    "git commit -m \"Update login flow\"",
+    "[\"git commit -a -m \\\"Update login flow\\\"\", \"git commit -m \\\"Update login flow\\\"\", \"git push -m \\\"Update login flow\\\"\", \"git merge -m \\\"Update login flow\\\"\"]",
+    0
+   ],
+   [
+    20,
+    1,
+    "multiple_choice",
+    "You try to push your local 'feature' branch to the remote repository, but the remote already contains new commits on that branch. Which command will fail unless you first integrate the remote changes?",
+    "git push origin feature",
+    "[\"git push origin feature\", \"git pull origin feature\", \"git merge feature\", \"git fetch origin\"]",
+    0
+   ],
+   [
+    21,
+    1,
+    "multiple_choice",
+    "A teammate has merged changes into the remote 'master' branch. You are on the local 'master' branch and need to incorporate those updates. Which command should you run?",
+    "git pull origin master",
+    "[\"git push origin master\", \"git pull origin master\", \"git fetch origin master\", \"git merge origin/master\"]",
+    0
+   ],
+   [
+    22,
+    1,
+    "multiple_choice",
+    "You want to create a new branch called 'ui-improvement' based on the current 'develop' branch and switch to it immediately. Which command correctly does this?",
+    "git checkout -b ui-improvement develop",
+    "[\"git branch ui-improvement develop\", \"git checkout -b ui-improvement develop\", \"git checkout develop -b ui-improvement\", \"git switch -c ui-improvement develop\"]",
+    0
+   ],
+   [
+    23,
+    1,
+    "multiple_choice",
+    "After successfully merging 'ui-improvement' into 'develop', you decide to delete the now\u2011redundant local branch. Which command removes it?",
+    "git branch -d ui-improvement",
+    "[\"git branch -d ui-improvement\", \"git branch -D ui-improvement\", \"git delete branch ui-improvement\", \"git rm -b ui-improvement\"]",
+    0
+   ],
+   [
+    24,
+    1,
+    "multiple_choice",
+    "Two branches, 'featureA' and 'featureB', both modify line 42 of the same file in different ways. When you attempt to merge 'featureB' into 'featureA', what will Git report?",
+    "A merge conflict will occur",
+    "[\"A fast\\u2011forward merge will be performed automatically\", \"A merge conflict will occur\", \"Git will silently choose the version from featureA\", \"Git will abort the merge without any message\"]",
+    0
+   ],
+   [
+    25,
+    1,
+    "multiple_choice",
+    "After completing a new feature, you submit the changes to the repository and want a review that focuses only on the modified lines. Which type of code review is most appropriate for this scenario?",
+    "Change-based code review",
+    "[\"Formal code review\", \"Change-based code review\", \"Over-the-shoulder code review\", \"Email pass-around\"]",
+    0
+   ],
+   [
+    26,
+    1,
+    "multiple_choice",
+    "You are using pytest and want the test runner to automatically discover your test files. Which of the following file names will NOT be auto\u2011discovered by pytest?",
+    "mycode_testcase.py",
+    "[\"test_mycode.py\", \"mycode_test.py\", \"mytestcode.py\", \"mycode_testcase.py\"]",
+    0
+   ],
+   [
+    27,
+    1,
+    "multiple_choice",
+    "In a Test\u2011Driven Development (TDD) workflow, you have just written a failing unit test. What is the next step you should take?",
+    "Write application code to make the test pass",
+    "[\"Refactor the existing code\", \"Write application code to make the test pass\", \"Run all tests again to confirm the failure\", \"Deploy the code to production\"]",
+    0
+   ],
+   [
+    28,
+    1,
+    "multiple_choice",
+    "Your project includes both unit and integration tests written in Python. Which tool mentioned in the module can you use to execute the integration tests?",
+    "PyTest",
+    "[\"PyTest\", \"unittest\", \"Git\", \"Jenkins\"]",
+    0
+   ],
+   [
+    29,
+    1,
+    "multiple_choice",
+    "While reviewing a REST API response, you need to add explanatory notes directly in the payload file. Which data format, as described in the module, explicitly supports comments?",
+    "XML",
+    "[\"XML\", \"JSON\", \"YAML\", \"None of the above\"]",
+    0
+   ],
+   [
+    30,
+    1,
+    "multiple_choice",
+    "You open a YAML configuration file and see three dashes (---) on the first line. What does this line signify?",
+    "The beginning of a YAML document",
+    "[\"The start of a comment\", \"The beginning of a YAML document\", \"The end of the file\", \"A declaration of a list\"]",
+    0
+   ],
+   [
+    31,
+    1,
+    "multiple_choice",
+    "When parsing a JSON response that contains nested objects, which statement about JSON is true according to the module?",
+    "JSON basic data types include numbers, strings, Booleans, and nulls",
+    "[\"JSON allows comments within the file\", \"Whitespace is significant in JSON\", \"JSON basic data types include numbers, strings, Booleans, and nulls\", \"Keys must be enclosed in single quotes\"]",
+    0
+   ],
+   [
+    32,
+    1,
+    "multiple_choice",
+    "During a code review, a teammate points out inconsistent indentation in a Python script. Which code\u2011review goal does this issue primarily violate?",
+    "Using correct formatting",
+    "[\"Ensuring the code is free of bugs\", \"Using correct formatting\", \"Providing proper comments and documentation\", \"Making the code easy to understand\"]",
+    0
+   ],
+   [
+    33,
+    1,
+    "multiple_choice",
+    "You are editing a YAML configuration file and need to add comments. In which location are comments NOT allowed?",
+    "Inside a long string literal",
+    "[\"At the beginning of a line before any content\", \"After a key-value pair on the same line\", \"Inside a long string literal\", \"On a line by itself preceding a section\"]",
+    0
+   ],
+   [
+    34,
+    1,
+    "multiple_choice",
+    "To force the value 123 to be interpreted as a string rather than a number in a YAML file, which tag should you use?",
+    "!!str",
+    "[\"!!str\", \"!!int\", \"!!float\", \"!!bool\"]",
+    0
+   ],
+   [
+    35,
+    1,
+    "multiple_choice",
+    "A Python script reads a JSON response from a web API using a file object. Which function from the json module correctly parses the file into a Python dictionary?",
+    "json.load",
+    "[\"json.load\", \"json.loads\", \"json.dump\", \"json.dumps\"]",
+    0
+   ],
+   [
+    36,
+    1,
+    "multiple_choice",
+    "You need to write a Python dictionary to a YAML file for application configuration. Which library and function are most appropriate?",
+    "yaml.dump",
+    "[\"yaml.dump\", \"yaml.load\", \"json.dump\", \"xml.etree.ElementTree\"]",
+    0
+   ],
+   [
+    37,
+    1,
+    "multiple_choice",
+    "During which SDLC phase would you primarily perform unit testing and apply test\u2011driven development practices?",
+    "Testing",
+    "[\"Design\", \"Testing\", \"Deployment\", \"Maintenance\"]",
+    0
+   ],
+   [
+    38,
+    1,
+    "multiple_choice",
+    "Your team pushes code to a repository hosted on GitHub. What type of repository is the GitHub repository?",
+    "Remote",
+    "[\"Local\", \"Remote\", \"Forked\", \"Staging\"]",
+    0
+   ],
+   [
+    39,
+    1,
+    "multiple_choice",
+    "In a code review aimed at improving clean code, which practice most directly enhances readability?",
+    "Using descriptive variable names",
+    "[\"Writing concise functions\", \"Using descriptive variable names\", \"Adding inline comments for every line\", \"Ensuring the code is hard to understand\"]",
+    0
+   ],
+   [
+    40,
+    1,
+    "multiple_choice",
+    "To extract specific elements from an XML document in Python, which standard library module should you import?",
+    "xml.etree.ElementTree",
+    "[\"xml.etree.ElementTree\", \"csv\", \"yaml\", \"json\"]",
+    0
+   ]
+  ]
+ },
+ "DEVASC Module 4 Understanding and Using APIs": {
+  "deck_id": 2,
+  "cards": [
+   [
+    41,
+    2,
+    "multiple_choice",
+    "Your script needs to fetch the current temperature from a public weather REST API over HTTPS. Which HTTP method should you use for this request?",
+    "GET",
+    "[\"POST\", \"GET\", \"PUT\", \"DELETE\"]",
+    0
+   ],
+   [
+    42,
+    2,
+    "multiple_choice",
+    "Your application uploads a video for processing, which can take several minutes. You decide to use an API that immediately returns a receipt and processes the video in the background. Which API design style is most appropriate?",
+    "Asynchronous API",
+    "[\"Synchronous API\", \"Asynchronous API\", \"RPC API\", \"SOAP API\"]",
+    0
+   ],
+   [
+    43,
+    2,
+    "multiple_choice",
+    "When designing a REST API, you want to ensure it follows the stateless constraint. Which of the following best describes a stateless interaction?",
+    "Each request contains all information needed to understand and process it",
+    "[\"The server stores session data for each client between requests\", \"Each request contains all information needed to understand and process it\", \"The client must maintain a persistent TCP connection with the server\", \"Responses are cached indefinitely on the client side\"]",
+    0
+   ],
+   [
+    44,
+    2,
+    "multiple_choice",
+    "While calling a third\u2011party API you receive an HTTP 429 response. What is the recommended action for your client?",
+    "Wait for the time indicated in the Retry\u2011After header before retrying",
+    "[\"Immediately resend the request\", \"Ignore the response and continue\", \"Wait for the time indicated in the Retry\\u2011After header before retrying\", \"Switch to a different API endpoint\"]",
+    0
+   ],
+   [
+    45,
+    2,
+    "multiple_choice",
+    "Your service needs to notify an external system whenever a new user registers. Which mechanism is most suitable?",
+    "You send a webhook POST to the external system\u2019s URL when registration occurs",
+    "[\"The external system polls your API every minute\", \"You send a webhook POST to the external system\\u2019s URL when registration occurs\", \"The external system reads a shared database table\", \"You embed the external system\\u2019s API key in the registration page\"]",
+    0
+   ],
+   [
+    46,
+    2,
+    "multiple_choice",
+    "Which statement about SOAP is correct?",
+    "SOAP messages are XML documents that contain an Envelope element",
+    "[\"SOAP messages are always sent using the HTTP GET method\", \"SOAP is a JSON\\u2011based protocol\", \"SOAP messages are XML documents that contain an Envelope element\", \"SOAP does not support any form of security\"]",
+    0
+   ],
+   [
+    47,
+    2,
+    "multiple_choice",
+    "Your API client must include credentials in each request to a protected REST endpoint. Which HTTP header is typically used for this purpose?",
+    "Authorization",
+    "[\"Content-Type\", \"User-Agent\", \"Authorization\", \"Cache-Control\"]",
+    0
+   ],
+   [
+    48,
+    2,
+    "multiple_choice",
+    "You need to update only the email address field of an existing user resource. Which HTTP method should you use?",
+    "PATCH",
+    "[\"PUT\", \"PATCH\", \"POST\", \"DELETE\"]",
+    0
+   ],
+   [
+    49,
+    2,
+    "multiple_choice",
+    "In Module 3 you learned the design pattern \u201cprogram to an interface, not an implementation.\u201d How does this principle relate to designing RESTful resources?",
+    "Resources are identified by URIs that represent abstract concepts, not internal implementations",
+    "[\"Resources should be exposed as concrete classes with fixed fields\", \"Clients should depend on the specific database schema of the server\", \"Resources are identified by URIs that represent abstract concepts, not internal implementations\", \"Endpoints must return raw binary data only\"]",
+    0
+   ],
+   [
+    50,
+    2,
+    "multiple_choice",
+    "Your REST API call returns HTTP 500 Internal Server Error. What is the most appropriate first step in troubleshooting?",
+    "Check the server logs for error details",
+    "[\"Assume the client request is wrong and change the HTTP method\", \"Check the server logs for error details\", \"Immediately increase the API rate limit\", \"Retry the request three times in rapid succession\"]",
+    0
+   ],
+   [
+    51,
+    2,
+    "multiple_choice",
+    "You are using Postman to create a new user via a POST request. The request body is JSON. Which header must you include to correctly describe the body format?",
+    "Content-Type: application/json",
+    "[\"Content-Type: application/xml\", \"Content-Type: text/plain\", \"Content-Type: application/json\", \"Content-Type: multipart/form-data\"]",
+    0
+   ],
+   [
+    52,
+    2,
+    "multiple_choice",
+    "After sending a GET request for a device, the API returns a 404 status code. What is the most probable reason?",
+    "The requested resource URL does not exist on the server.",
+    "[\"The server is overloaded and cannot process the request.\", \"The requested resource URL does not exist on the server.\", \"The client is not authorized to view the resource.\", \"The request payload is malformed.\"]",
+    0
+   ],
+   [
+    53,
+    2,
+    "multiple_choice",
+    "Your client receives a 202 HTTP status after submitting a data processing job. What does this status indicate?",
+    "The request has been accepted for processing but is not yet complete.",
+    "[\"The request was successful and the resource was created.\", \"The request has been accepted for processing but is not yet complete.\", \"The request was malformed and cannot be processed.\", \"The server encountered an internal error while handling the request.\"]",
+    0
+   ],
+   [
+    54,
+    2,
+    "multiple_choice",
+    "An API supports pagination via a query parameter named \"page\". To retrieve the third page of results, which request URL is correct?",
+    "GET /api/devices?page=3",
+    "[\"GET /api/devices?page=3\", \"GET /api/devices?limit=3\", \"GET /api/devices/page=3\", \"GET /api/devices?offset=3\"]",
+    0
+   ],
+   [
+    55,
+    2,
+    "multiple_choice",
+    "You want the server to compress the response using gzip. Which request header should you add?",
+    "Accept-Encoding: gzip",
+    "[\"Accept-Encoding: gzip\", \"Content-Encoding: gzip\", \"Transfer-Encoding: gzip\", \"Cache-Control: gzip\"]",
+    0
+   ],
+   [
+    56,
+    2,
+    "multiple_choice",
+    "Your application receives a 429 Too Many Requests response. Which response header tells you when you can retry the request?",
+    "Retry-After",
+    "[\"X-Rate-Limit-Remaining\", \"X-Rate-Limit-Reset\", \"Retry-After\", \"Cache-Control\"]",
+    0
+   ],
+   [
+    57,
+    2,
+    "multiple_choice",
+    "A service uses the token bucket algorithm with a bucket capacity of 10 tokens and refills 1 token per second. If the client currently has 5 tokens and makes 3 requests in quick succession, how many tokens remain?",
+    "2 tokens",
+    "[\"2 tokens\", \"5 tokens\", \"8 tokens\", \"10 tokens\"]",
+    0
+   ],
+   [
+    58,
+    2,
+    "multiple_choice",
+    "Which authentication mechanism transmits the credentials as a Base64\u2011encoded \"username:password\" string?",
+    "Basic authentication",
+    "[\"Bearer authentication\", \"API Key authentication\", \"Basic authentication\", \"OAuth 2.0\"]",
+    0
+   ],
+   [
+    59,
+    2,
+    "multiple_choice",
+    "A user logs into a system using a government\u2011issued ID and then attempts to access a restricted API endpoint. Which step is the system performing when it checks the user's ticket for entry?",
+    "Authorization",
+    "[\"Authentication\", \"Authorization\", \"Encryption\", \"Rate limiting\"]",
+    0
+   ],
+   [
+    60,
+    2,
+    "multiple_choice",
+    "You need to send a request body formatted in YAML to a REST API. Which Content\u2011Type header correctly identifies the payload format?",
+    "Content-Type: application/x-yaml",
+    "[\"Content-Type: application/json\", \"Content-Type: text/yaml\", \"Content-Type: application/x-yaml\", \"Content-Type: application/yaml\"]",
+    0
+   ],
+   [
+    61,
+    2,
+    "multiple_choice",
+    "Your application must receive Cisco DNA Center webhook notifications about device alerts. Which of the following is NOT a required step to successfully consume the webhook?",
+    "Implement OAuth2 token refresh for the webhook endpoint",
+    "[\"Register a URI with the webhook provider\", \"Ensure the application is continuously running to accept HTTP POST requests\", \"Implement OAuth2 token refresh for the webhook endpoint\", \"Handle incoming POST notifications appropriately\"]",
+    0
+   ],
+   [
+    62,
+    2,
+    "multiple_choice",
+    "During testing, no POST requests reach your webhook listener. Which client\u2011side mistake is most likely the cause?",
+    "The webhook URL is missing the scheme (e.g., \"example.com/webhook\")",
+    "[\"The webhook URL is missing the scheme (e.g., \\\"example.com/webhook\\\")\", \"The server\\u2019s SSL certificate has expired\", \"The API server is undergoing maintenance\", \"The webhook payload exceeds the size limit\"]",
+    0
+   ],
+   [
+    63,
+    2,
+    "multiple_choice",
+    "After adding a new webhook subscription, your API call returns HTTP\u202f401. What does this status code indicate?",
+    "The client is not authorized to access the resource",
+    "[\"The request payload is malformed\", \"The client is not authorized to access the resource\", \"The server could not understand the request method\", \"The requested resource was not found\"]",
+    0
+   ],
+   [
+    64,
+    2,
+    "multiple_choice",
+    "Your webhook endpoint receives HTTP\u202f415 when sending a JSON payload. Which of the following is the most probable reason?",
+    "The Content\u2011Type header is set to \"application/xml\" instead of \"application/json\"",
+    "[\"The Content\\u2011Type header is set to \\\"application/xml\\\" instead of \\\"application/json\\\"\", \"The request URL contains a typo\", \"The server requires basic authentication\", \"The client exceeded the rate limit\"]",
+    0
+   ],
+   [
+    65,
+    2,
+    "multiple_choice",
+    "When a script makes a request to a webhook URL and you see a long silence followed by a traceback, which side of the problem does this most likely indicate?",
+    "Server\u2011side connectivity or availability issue",
+    "[\"Client\\u2011side configuration error\", \"Server\\u2011side connectivity or availability issue\", \"Network firewall blocking the request\", \"Incorrect HTTP method used\"]",
+    0
+   ],
+   [
+    66,
+    2,
+    "multiple_choice",
+    "You need to test how your system reacts when two users try to update the same resource via a webhook. Which HTTP status code should you simulate to represent this conflict?",
+    "409 Conflict",
+    "[\"409 Conflict\", \"403 Forbidden\", \"500 Internal Server Error\", \"200 OK\"]",
+    0
+   ],
+   [
+    67,
+    2,
+    "multiple_choice",
+    "Your webhook listener runs on a local machine behind NAT, and external services cannot reach it directly. Which free tool can expose your local endpoint to the internet for testing?",
+    "ngrok",
+    "[\"ngrok\", \"Wireshark\", \"Postman\", \"cURL\"]",
+    0
+   ],
+   [
+    68,
+    2,
+    "multiple_choice",
+    "When designing the component that processes incoming webhook events, which software design pattern best embodies the principle \"program to an interface, not an implementation\" for handling different event types?",
+    "Strategy pattern",
+    "[\"Strategy pattern\", \"Singleton pattern\", \"Factory pattern\", \"Decorator pattern\"]",
+    0
+   ],
+   [
+    69,
+    2,
+    "multiple_choice",
+    "Your application sends rapid acknowledgments to a webhook provider and receives HTTP\u202f429 responses. What does this status code mean?",
+    "Too Many Requests \u2013 rate limit exceeded",
+    "[\"Too Many Requests \\u2013 rate limit exceeded\", \"Bad Request \\u2013 malformed payload\", \"Gateway Timeout \\u2013 upstream server did not respond\", \"Forbidden \\u2013 insufficient permissions\"]",
+    0
+   ],
+   [
+    70,
+    2,
+    "multiple_choice",
+    "A webhook POST is routed through a reverse proxy and the client receives HTTP\u202f502. Which scenario most likely caused this response?",
+    "The upstream service behind the proxy returned an invalid response",
+    "[\"The upstream service behind the proxy returned an invalid response\", \"The client failed to provide valid authentication credentials\", \"The request payload was larger than the proxy's limit\", \"The webhook URL was incorrectly spelled\"]",
+    0
+   ],
+   [
+    71,
+    2,
+    "multiple_choice",
+    "You run a Python script that calls the MapQuest Directions API and receive an HTTP 401 Unauthorized response. What is the most likely cause?",
+    "Your API key is invalid or missing",
+    "[\"The API endpoint URL is misspelled\", \"Your network connection is down\", \"Your API key is invalid or missing\", \"The request payload is too large\"]",
+    0
+   ],
+   [
+    72,
+    2,
+    "multiple_choice",
+    "During testing you start getting HTTP 429 Too Many Requests from the MapQuest API. What is the best immediate action?",
+    "Add exponential back\u2011off and retry logic",
+    "[\"Increase the request rate to finish faster\", \"Add exponential back\\u2011off and retry logic\", \"Switch the request method from GET to POST\", \"Ignore the error and continue sending requests\"]",
+    0
+   ],
+   [
+    73,
+    2,
+    "multiple_choice",
+    "After upgrading the application you notice the JSON response no longer contains the \"distance\" field. Which debugging step should you take first?",
+    "Check the MapQuest API documentation for version changes",
+    "[\"Restart the DEVASC VM\", \"Clear the local cache of API responses\", \"Check the MapQuest API documentation for version changes\", \"Assume the field is optional and ignore it\"]",
+    0
+   ],
+   [
+    74,
+    2,
+    "multiple_choice",
+    "You store the MapQuest API key in a YAML configuration file. Which line correctly adds a comment without breaking the file?",
+    "# api_key: abc123",
+    "[\"# api_key: abc123\", \"// api_key: abc123\", \"/* api_key: abc123 */\", \"#api_key: abc123\"]",
+    0
+   ],
+   [
+    75,
+    2,
+    "multiple_choice",
+    "To add support for bicycle and walking routes in the MapQuest Directions app, which request parameter should you modify?",
+    "routeType",
+    "[\"routeType\", \"transportMode\", \"mode\", \"travelMode\"]",
+    0
+   ],
+   [
+    76,
+    2,
+    "multiple_choice",
+    "Your integration intermittently receives HTTP 500 Internal Server Error responses. Which systematic troubleshooting step is most appropriate?",
+    "Enable detailed logging of the request and response",
+    "[\"Check the MapQuest server status page\", \"Add a try/except block with a simple retry\", \"Enable detailed logging of the request and response\", \"Contact MapQuest support immediately\"]",
+    0
+   ],
+   [
+    77,
+    2,
+    "multiple_choice",
+    "You want to unit\u2011test the function that assembles the MapQuest request URL. Which design pattern helps you isolate URL construction for testing?",
+    "Builder",
+    "[\"Singleton\", \"Factory\", \"Builder\", \"Observer\"]",
+    0
+   ],
+   [
+    78,
+    2,
+    "multiple_choice",
+    "Your team follows Agile methodology for this API integration project. Which Agile artifact best captures the specific API endpoints to be delivered each sprint?",
+    "User story",
+    "[\"User story\", \"Gantt chart\", \"Use case diagram\", \"Test case matrix\"]",
+    0
+   ],
+   [
+    79,
+    2,
+    "multiple_choice",
+    "After moving the application to production, API calls fail with SSL verification errors. What quick fix can you apply in Python's requests library while planning a secure solution?",
+    "Set verify=False in the request call",
+    "[\"Set verify=False in the request call\", \"Switch the request URL from https to http\", \"Disable the firewall on the server\", \"Increase the request timeout value\"]",
+    0
+   ],
+   [
+    80,
+    2,
+    "multiple_choice",
+    "Given a JSON response stored in the variable resp, which Python expression correctly extracts the total travel time returned by MapQuest?",
+    "resp['route']['time']",
+    "[\"resp['route']['time']\", \"resp.time['route']\", \"resp['time']['route']\", \"resp['route']['duration']\"]",
+    0
+   ]
+  ]
+ }
+}
