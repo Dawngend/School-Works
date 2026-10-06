@@ -1,0 +1,489 @@
+
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 1 ===
+Modeling and Simulation
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 2 ===
+MODULE 3
+MODELING CONTINUOUS SYSTEMS
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 3 ===
+SUBTOPIC 1
+CONTINUOUS SYSTEMS
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 4 ===
+•
+Describe a continuous systems framework.
+•
+Illustrate the mechanics of modeling continuous
+systems.
+•
+Identify
+numerical
+techniques
+associated
+with
+modeling continuous systems.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 5 ===
+What is a continuous system?
+• Continuous systems are those types of systems in which input and output
+signals are the same at both the ends.
+• In this type of system, variable changes with time and any type of variation is not
+found in the input and output signal.
+• In response to the input signal, a continuous system generates an output signal.
+Source: https://www.javatpoint.com/continuous-systems-vs-discrete-systems
+Example:
+Two variables x and y and both vary with time. Continuous signals are represented within 
+parenthesis.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 6 ===
+Another example:
+https://slideplayer.com/slide/5735712/
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 7 ===
+Application Areas
+•
+In civil engineering for the construction of dam embankment and tunnel constructions.
+•
+In military applications for simulation of missile trajectory, simulation of fighter aircraft training,
+and designing & testing of intelligent controller for underwater vehicles.
+•
+In logistics for designing of toll plaza, passenger flow analysis at the airport terminal, and
+proactive flight schedule evaluation.
+•
+In business development for product development planning, staff management planning, and
+market study analysis.
+https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_continuous_simulation.htm
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 8 ===
+Mathematical Classes of Continuous Systems
+NOTE:
+a
+very
+large
+fraction of continuous
+systems are governed
+by
+second
+-
+order
+differential equations
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 9 ===
+Modeling and Simulation Strategy
+1.
+Understanding the physics of the system.
+Note: Physics means translation of a real-world system into a set of
+quantitative mathematical equations.
+2.
+Identifying the appropriate numerical implementation for solving the resulting
+equations.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 10 ===
+State Variables
+•
+Evolve in time continuously
+•
+Continuous, meaning real or complex rather than integer valued
+•
+Must be complete
+•
+Must contain sufficient information to elicit all the relevant phenomena
+associated with the system with adequate accuracy and precision, as set forth
+during requirements definition.
+Examples:
+position, velocity, mass, rate, angle, fraction, current, voltage
+State Variable Equations
+•
+Equations dictate how the state of the system changes with respect to the
+independent variable
+•
+In most M&S cases = time
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 11 ===
+Output Equations
+•
+What quantities does the consumer of the simulation want or need?
+•
+These issues are usually addressed during the requirements definition phase of
+development.
+Example: Planetary orbits
+The state variables at hand are simply the 3D position and velocity of the planet
+relative to the sun, collectively called the state vector.
+where G is Newton’s constant, M is the
+mass of the sun, and m is the mass of the
+planet.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 12 ===
+Predator-Prey Models
+These models are intended to model two species
+whose populations are very closely dependent on
+each other, much in a way they are expected to
+work in the wild.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 13 ===
+The predator-scenario usually produces cycles in the population numbers
+of both species:
+(1) Prey population increases
+(2) Predators feast on plentiful prey
+(3) Predator population increases
+(4) Copious predators overhunt the prey population
+(5) Prey population decreases
+(6) Predators starve
+(7) Predator population goes down
+(8) Prey is less vulnerable to dwindled predator population
+(9) Prey species thrives
+(Repeat from step 1)
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 14 ===
+Usually the predator-prey model is specified mathematically by the
+following two equations:
+referred to as Kolmogorov’s predator-prey model
+where x – population of prey & y – population of predator.
+Note that in each equation, the change in population is proportional to the
+current population, such that f(x, y) and g(x, y) define the fractional, or
+per capita, growth rates in the populations ( f is the derivative ln x).
+In the model, it is said that as the predator population, y, increases, the
+growth rate of the prey population of x, declines. (steps 3-5).
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 15 ===
+It is further assumed that as the prey population, x, increases, the
+predator growth rate increases. (steps 1-3).
+Lotka-Volterra Model
+f = b – py
+g = rx – d
+NOTE: The model is designed such that f is linear in y with a negative
+slope, and g is linear in x with a positive slope.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 16 ===
+After simplifying the equations using formulas by Kolmogorov’s and
+Lotka-Volterra models:
+C = b ln y – py – x + d ln x
+This is a conservation law that holds for all x(t) and y(t).
+The particular forms of x(t) and y(t) depend on the choices of b, p, r and
+d, and the initial conditions at time zero.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 17 ===
+Example:
+Lotka-Volterra predator-prey model: “orbits” for different values of C, with
+r = b = d = p = 1.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 18 ===
+Numerical Solution Techniques – used since most systems yield
+equations that are not integrable.
+1. Euler’s Method (Tangential Method)
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 19 ===
+2. Runge-Kutta Method
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 20 ===
+Check Canvas for instructions
+Formative Assessment 4
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 21 ===
+Check Canvas for instructions
+Summative Assessment 3
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 22 ===
+Online:
+https://www.javatpoint.com/continuous-systems-vs-discrete-systems
+https://slideplayer.com/slide/5735712/
+https://www.tutorialspoint.com/
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 23 ===
+Simulation
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 24 ===
+and Simulation
+Subtopic 2
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 25 ===
+•
+Construct MATLAB scripts.
+•
+Create user-defined functions that returns a single value.
+•
+Identify and use MATLAB basic input and output commands.
+•
+Construct MATLAB scripts with selections and looping.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 26 ===
+Out put
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 27 ===
+Toolstrip and Editor
+* Scripts are stored as <filename>.m
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 28 ===
+
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 29 ===
+The M Files
+MATLAB allows writing two kinds of program files:
+•Scripts −script files are program files with .m extension. In these files, you write series of
+commands, which you want to execute together. Scripts do not accept inputs and do not return any
+outputs. They operate on data in the workspace.
+•Functions −functions files are also program files with .m extension. Functions can accept inputs
+and return outputs. Internal variables are local to the function.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 30 ===
+Creating and Running Script File
+To create scripts files, you need to use a text editor.
+You can open the MATLAB editor in two ways:
+•
+Using the command prompt
+•
+Using the IDE
+If you are using the command prompt, type edit in the command prompt. This will open the editor.
+You can directly type edit and then the filename (with .m extension)
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 31 ===
+Creating Directory for Saving Scripts
+Example:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 32 ===
+Example of Scripts
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 33 ===
+Examples of script
+s1 = ["Red" "Blue" "Green"]
+s2 = ["Truck" "Sky" "Tree"]
+s = s1 + s2
+A = [1 0; 2 4];
+B = [5 9; 2 1];
+C = A + B
+a = 1:2;
+b = (1:3)';
+a + b
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 34 ===
+Examples of Using Input Commands (script)
+% entering an integer
+input("Enter an integer : ")
+% entering a string
+input("Enter a string : ", "s")
+Output :
+Enter an integer : 10
+ans =  10
+Enter a string : FEU_Tech
+ans = FEU_Tech
+x = input("Enter a number")
+y = input("Enter another number")
+z1 = x + y
+z2 = x - y
+z3 = x * y
+z4 = (x + y)/2
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 35 ===
+x = input("Enter a number ")
+y = input("Enter another number ")
+z1 = x + y
+z2 = x - y
+z3 = x * y
+z4 = (x + y)/2
+fprintf('\n Sum is. %d ',z1);
+fprintf('\n Difference is. %d',z2);
+fprintf('\n Product is. %d',z3);
+fprintf('\n Average is. %d',z4);
+•Functions −functions files are also program files with .m extension. Functions can accept inputs
+and
+return outputs. Internal variables are local to the function.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 36 ===
+disp(X) displays the value of variable X without printing the variable name. 
+Another way to display a variable is to type its name, which displays a 
+leading “X =” before the value.
+A = [15 150];
+disp(A)
+S = 'Hello World.';
+disp(S)
+disp('Corn      Oats      Hay')
+X = rand(5,3);
+disp(X)
+X = '<a href = 
+"https://www.mathworks.com">MathWorks 
+Web Site</a>';
+disp(X)
+name = 'Alice';   
+age = 12;
+fprintf('%s will be %d this year.\n',name,age);
+fprintf to directly display the text without creating a variable. 
+However, to terminate the display properly, you must end the 
+text with the newline (\n) metacharacter.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 37 ===
+Input and Output Commands
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 38 ===
+Input and Output Commands
+The fscanf and fprintf commands behave like C scanf and printf functions. They support the  
+following format codes.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 39 ===
+Input and Output Commands
+The format function has the following forms used for numeric display:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 40 ===
+Examples of Using Input Commands Interactively
+If character or string input is desired, ‘s’ must be added as a second argument to the input function:
+* user hit ENTER key without typing any characters
+* user types four spaces before ‘go’
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 41 ===
+Examples of Using Output Commands Interactively
+With formatting:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 42 ===
+Printing Vectors and Matrices Interactively
+Examples:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 43 ===
+Vector, Matrix and Array Commands
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 44 ===
+Vector, Matrix and Array Commands
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 45 ===
+Scripts with Input and Output
+Example:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 46 ===
+Plotting Commands
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 47 ===
+To plot  the graph of a function:
+• Define x, by specifying the range of values for the variable x, for which the function is to be plotted
+• Define the function, y = f(x)
+• Call the plot command, as plot(x, y)
+To add titles, labels, grid lines and scaling on the graph
+• The xlabel and ylabel commands generate labels along x-axis and y-axis.
+• The title command allows putting a title on the graph.
+• The grid on command allows putting grid lines on the graph.
+• The axis equal command allows generating the plot with the same scale factors and the spaces on
+both axes.
+• The axis square command generates a square plot.
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 48 ===
+Customizing a Plot: Color, Line Types, Marker Types
+The LineSpec, or line specification, can specify up to three different properties in a string, including the color, line type, 
+and the symbol or marker used for the data points.
+The plot symbols, or markers, 
+that can be used are:
+Line types can also be specified by the 
+following:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 49 ===
+Scripts to Produce Plots
+Example 1:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 50 ===
+Scripts to Produce Plots
+Example 2:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 51 ===
+Scripts to Produce Plots
+Example 3:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 52 ===
+Scripts to Produce Plots
+Example 4:
+Can be omitted but:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 53 ===
+Scripts to Produce Plots
+Example 5:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 54 ===
+Scripts to Produce Plots
+Example 6:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 55 ===
+MATLAB Simple Program
+General Form:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 56 ===
+User Defined Functions
+•
+Functions that the programmer defines, and then uses, in either the Command Window or in a
+script.
+•
+Stored in M-file, which is why they are commonly called “M-file functions”.
+General Form:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 57 ===
+Example 1:
+User Defined Functions
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 58 ===
+Example 2:
+User Defined Functions
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 59 ===
+Looping
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 60 ===
+The IF Statement
+Example :
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 61 ===
+Determine if the data is negative or 
+positive
+.x = input("Enter a number ");
+if x < 0
+fprintf('Negative');
+else 
+fprintf('Positive');
+end
+Determine if the data is 
+negative or positive
+Odd or even number
+x = input("Enter a number ");
+if x < 0
+fprintf('Negative');
+else 
+fprintf('Positive');
+end
+y = x % 2; 
+if y == 0
+fprintf('Even number');
+else
+fprintf('Even number');
+end
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 62 ===
+Age problem
+age = input("Enter a age ");
+if age > 0 && age <=13 
+fprintf('young \n ');
+elseif age > 13 && age <20 
+fprintf('teen \n ');
+elseif age > 20 && age <60 
+fprintf('adult \n ');
+elseif age <=100 
+fprintf('senior \n ');
+else
+fprintf('sorry \n ');
+end
+fprintf("Thanks, keep safe");
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 63 ===
+The Switch Statement
+Example :
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 64 ===
+grade = 'B';
+switch(grade)
+case 'A' 
+fprintf('Excellent!\n' );
+case 'B' 
+fprintf('Well done\n' );
+case 'C' 
+fprintf('Well done\n' );
+case 'D'
+fprintf('You passed\n' );
+case 'F' 
+fprintf('Better try again\n' );
+otherwise
+fprintf('Invalid grade\n' );
+end
+x = 3, y = 3;
+switch x
+case x*(x==y)
+disp('x and y are equal');
+case x*(x>y)
+disp('x is greater than y');
+otherwise
+disp('x is less than y');
+end
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 65 ===
+The Menu Function
+• MATLAB has a built-in function called menu that will display a Figure Window with pushbuttons 
+for the options.
+• The first string passed to the menu function is the heading (an instruction), and the rest are labels 
+that appear on the pushbuttons.
+•
+The function returns the number of the button that is pushed.
+Example:
+%This is script as the user for a type of pizza
+% and prints which type to order using a switch
+pick = menu('Pick a Pizza','Cheese','Sausage','Mushroom');
+switch pick
+case 1
+disp('Order a cheese pizza')
+case 2
+disp('Order a Sausage pizza')
+case 3
+disp('Order a Mushroom pizza')
+otherwise
+disp('No pizza for us today')
+end
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 66 ===
+The For Loop
+Example 1:
+for v = [1:10]
+disp(v)
+end
+====================
+for v = [1 5 8 17]
+disp(v)
+end
+====================
+for v = 1.0:-0.2:0.0
+disp(v)
+end
+======================
+for v = [1:10]
+disp("Hello")
+end
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 67 ===
+The While Loop
+Example 1:
+Example 2:
+Example 3:
+=== M3-MAIN - Modeling Continuous Systems.pdf | page 68 ===
+Online:
+www. tutorialspoint.com
+E-Books and Textbooks:
+• Attaway, Stormy (2013). MATLAB ®. A Practical Introduction to Programming
+and Problem Solving Third Edition. Elsevier, Inc.

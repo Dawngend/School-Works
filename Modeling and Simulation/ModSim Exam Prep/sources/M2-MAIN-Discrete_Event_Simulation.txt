@@ -1,0 +1,977 @@
+
+=== M2-MAIN-Discrete Event Simulation.pdf | page 1 ===
+Modeling and Simulation
+=== M2-MAIN-Discrete Event Simulation.pdf | page 2 ===
+MODULE 2
+DISCRETE EVENT SIMULATION
+=== M2-MAIN-Discrete Event Simulation.pdf | page 3 ===
+SUBTOPIC 1
+STATISTICAL CONCEPTS
+FOR DES
+=== M2-MAIN-Discrete Event Simulation.pdf | page 4 ===
+• Demonstrate understanding of the several statistical concepts necessary for
+developing and using discrete event simulation.
+• Identify statistical methods associated with including randomness as part of a
+system model.
+• Identify methods associated with processing the simulation output to assess
+system performance.
+• Recall properties of sets and functions that are used to define a probability space.
+• Investigate some of the input data modeling associated with including randomness
+as part of a system model.
+• Investigate some of the output data analysis associated with processing the
+simulation output to assess system performance.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 5 ===
+• Probability
+is
+a
+fundamental
+building
+block
+of
+statistics.
+• Statistics is the source of several very powerful
+techniques used to:
+represent randomness
+generate the random variate streams that drive a
+stochastic simulation
+interpret
+the
+output
+data
+obtained
+from
+conducting a stochastic simulation experiment.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 6 ===
+Set – collection of objects and usually denoted by capital letters.
+Element – objects of the set ( )
+Null or Empty Set – a set having no elements. ( or { } )
+Examples: S = { x, y, z }
+x S
+A = { }
+Note:
+•
+There are no repeated occurrences of an element in the definition of 
+a set.
+•
+An object is either an element of a set or it is  not.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 7 ===
+Set Characteristics
+1)
+A set is said to be countable if the elements of the set can be put in a one-to-
+one correspondence with the positive integers,
+2)
+A set is called finite if it is empty or if it has elements that can counted with the
+counting process terminating. A set that is not finite is called infinite.
+3)
+If every element of set A is also an element of set B, then A is said to be
+contained in B and A is called a subset of B denoted as A B.
+4)
+Two sets are said to be disjoint if they have no common elements.
+5)
+The largest or all-encompassing set of elements under discussion in a given
+situation is called the universal set denoted by U.
+6)
+Two sets A and B are said to be equal, denoted A = B, if set A and set B
+contained exactly the same elements.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 8 ===
+Set Operations
+1)
+The union of two sets A and B, denoted A B, is the set consisting of all
+elements that are contained either in set A or in set B.
+2)
+The intersection of two sets A and B, denoted A B, is the set consisting of all
+elements that are contained in both sets A and B.
+3)
+The difference of two sets A and B, denoted A – B, is the set consisting of the
+elements contained in set A that are not contained in set B. It should be
+observed that, in general, A – B B – A.
+4)
+Let U be the universal set and let A be a subset of the universal set. The
+complement of set A, denoted by AC, is the set U – A.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 9 ===
+Example:
+Let
+U = { 2, 4, 6, 8, 10, 12 }
+A = { 2, 4, 10 }
+B = { 4, 6, 8, 10 }
+What is A B? _____________
+What is A – B ? ________
+What is A B? _____________
+What is B – A ? ________
+What is AC ? ________
+=== M2-MAIN-Discrete Event Simulation.pdf | page 10 ===
+Function
+•
+A mathematical construct consisting of three components:
+1) A set of elements called the domain set X.
+2) A set of elements called the codomain set Y.
+3) A rule of correspondence f that associates each element of
+the domain set with exactly one element of the codomain set.
+For x X and y Y, a function is denoted by f:X Y or f(x) = y.
+Two functions are equal if they have the same domain set, the
+same codomain set and the same rule of correspondence.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 11 ===
+Properties of Functions
+1) The range of a function f is the set of elements in the codomain Y
+that are associated with some element of the domain X under the
+rule of correspondence f.
+2) If the codomain of a function and the range of the function are
+equal, then the function is said to onto.
+3) If each element of the domain X maps to a unique element of the
+codomain Y, then the function is said to be one-to-one.
+4) A function f has an inverse, denoted f-1, if and only if f is one-to-
+one and onto.
+5) For function f:X Y one-to-one and onto, the inverse is a function
+f-1:Y X such that f-1[f(x)] = x for all x X.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 12 ===
+Example:
+Let
+R denote set of real numbers, domain X = R, codomain Y = R,
+rule of correspondence
+y = f(x) = mx + b where m and b are real-valued constants.
+Graph:
+For m 0, the function is one-to-one and onto.
+Thus, it has an inverse function: x = f-1(y) = (1/m)y – (b/m).
+For m = 0, the function becomes y = f(x) = b. All points in the domain map to a single point in the
+codomain. Range of function is the set {b}. Hence, function is neither one-to-one nor onto, and no
+inverse function exists.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 13 ===
+Probability Space
+•
+Essential to developing a conceptual understanding of
+problems involving probability.
+•
+It
+is
+a
+mathematical
+construct
+consisting
+of
+three
+components:
+a) Sample space S
+b) Sigma algebra of events A
+c) Probability measure P
+=== M2-MAIN-Discrete Event Simulation.pdf | page 14 ===
+Random Experiment
+•
+A well-defined experiment in which the experimental outcome
+cannot be predicted before conducting the experiment.
+Sample Space (S)
+•
+A set consisting of the possible outcomes for a random
+experiment.
+Event (E)
+•
+A subset of the sample space from a random experiment.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 15 ===
+Sigma algebra of events (A)
+•
+A set of events from a random experiment that satisfies the following
+properties:
+1)
+If E A, then EC A
+2)
+If E1 A and E2 A, then E1 E2 A
+3)
+If E1 A and E2 A, then E1 E2 A
+4)
+S A
+•
+In general, if the discrete sample space S contains k outcomes,
+the associated sigma algebra of events A will contain 2k events.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 16 ===
+Probability Measure (P)
+•
+A function
+having
+domain
+A,
+codomain
+[0,
+1]
+
+R,
+and
+rule
+of
+correspondence P such that the following properties hold:
+1)
+P(E) 0 for all E A
+2)
+P(S) = 1
+3)
+P(E1 E2) = P(E1) + P(E2) when E1 E2 = { }
+=== M2-MAIN-Discrete Event Simulation.pdf | page 17 ===
+Example:
+A discrete random experiment consisting of rolling a three-sided die.
+The sides of the die are labeled as B, C and D. When the die is rolled, it
+is found out that side B shows one-sixth of the time, C shows one-third
+of the time and side D shows one-half of the time. It is desired to
+construct a probability space for this random experiment.
+Solution: Possible outcomes: Side B showing; side C showing; or side
+D showing.
+Sample space S = { B, C, D }
+=== M2-MAIN-Discrete Event Simulation.pdf | page 18 ===
+Sigma algebra of events A:
+Since S contains 3 elements, then A must contain 23 events which is
+equal to 8 including the null set and S.
+Therefore, A = { { }, {B}, {C}, {D}, {B, C}, {B, D}, {C, D}, {B, C, D} }
+Probability measure P:
+=== M2-MAIN-Discrete Event Simulation.pdf | page 19 ===
+Random Variable
+•
+A means of associating real numbers with experimental outcomes.
+Let = (S, A, P)
+where: – probability space
+S – sample space
+A – sigma algebra of events
+P – probability measure
+Let X = random variable, which is simply a
+function that assigns to each experimental
+outcome s S a real number X(s).
+NOTE: 
+X has:
+•
+S – domain set
+•
+R – codomain set
+•
+X:SR – rule of correspondence   such that  
+{ X x } = {s | s S and X(s) x } is an event 
+in A for all x in R.
+To qualify as a random variable, the set of
+outcomes s that satisfy X(s) x must be an
+event in A for all values of x R.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 20 ===
+Functions associated with random variable X
+1. Cumulative probability distribution function F(x)
+•
+Also referred to as Cumulative Distribution Function or Distribution Function.
+•
+It has:
+Domain R
+Codomain [0, 1] R
+Rule of correspondence F:R[0, 1] such that F(x) = P({X(s) x})
+Properties of F(x):
+=== M2-MAIN-Discrete Event Simulation.pdf | page 21 ===
+Example: Three-sided die
+where u(x) is the unit
+step function defined
+as:
+=== M2-MAIN-Discrete Event Simulation.pdf | page 22 ===
+Functions associated with random variable X
+2. Probability density function f(x)
+•
+Also referred to as density function.
+•
+It has:
+Domain R
+Codomain R
+Rule of correspondence p:RR such that f(x) = dF(x) / dx.
+Properties of f(x):
+1) f(x) 0 for all x R.
+2) The total area under the f(x) curve is 1. That is ׬−∞
+∞𝑓𝑥𝑑𝑥= 1.
+3) The distribution function is related to the density function via integration; that is, 𝐹𝑥= ׬−∞
+𝑥𝑓𝜎𝑑𝜎.
+4) P({x1< X x2} ) = ׬𝑥1
+𝑥2 𝑓𝑥𝑑𝑥.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 23 ===
+Theoretical Distribution Functions Used Commonly in M&S
+1.
+Uniform Distribution
+• Often used when a random variable having equally likely values over a finite
+range is needed.
+• Denoted as UNIFORM (a, b)
+where: a – minimum value of the random variable
+b – maximum value of the random variable
+a, b R and -< a < b < 
+• The probability density function for this distribution is
+f(x)
+=== M2-MAIN-Discrete Event Simulation.pdf | page 24 ===
+Theoretical Distribution Functions Used Commonly in M&S
+2. Triangular Distribution
+•
+Used in situations in which the exact form of the distribution is not known, but approximate
+values are known for the minimum, maximum and most likely values.
+•
+Denoted as TRIANGULAR(a, m, b)
+where: a – minimum value of the distribution
+b – maximum value of distribution
+m – mode or most likely value of the distribution
+a, m, b R and -< a < m < b < 
+•
+The probability density function for this distribution is:
+f(x)
+f(x)
+=== M2-MAIN-Discrete Event Simulation.pdf | page 25 ===
+Theoretical Distribution Functions Used Commonly in M&S
+3. Exponential Distribution
+•
+Used to model interarrival times for entities arriving at a system.
+•
+Denoted as EXPONENTIAL(m)
+where: m – the mean of the distribution
+m R and 0 < m < 
+•
+The probability density function for this distribution is:
+x
+f(x)
+0
+m
+units of time
+- average number of events in
+one unit of time
+𝑚=
+1
+
+𝑓𝑥= ൝𝑒−𝑥
+, 𝑥≥0
+0
+, 𝑜𝑡ℎ𝑒𝑟𝑤𝑖𝑠𝑒
+𝑃𝑋> 𝑥= 𝑒−𝑥
+𝑃𝑋< 𝑥= 1 −𝑒−𝑥
+=== M2-MAIN-Discrete Event Simulation.pdf | page 26 ===
+Theoretical Distribution Functions Used Commonly in M&S
+4. Normal Distribution
+•
+Used to represent variability of quantities about some average value.
+•
+This distribution also represents the distribution of a random variable formed as the sum of a
+large number of other random variables, even when the other random variables are not
+normally distributed.
+•
+Denoted as NORMAL(m, )
+where: m – the mean of the distribution
+- standard deviation of the distribution
+m, R, -< m < , and 0 < < .
+•
+The probability density function for this distribution is
+f(x)
+𝑓𝑥=
+1
+𝜎
+2𝜋
+𝑒−1
+2 ( 𝑥−𝜇
+𝜎)2
+=== M2-MAIN-Discrete Event Simulation.pdf | page 27 ===
+Generation of Random Variates
+Random Variates
+•
+The independent samples selected from a random variable having a theoretical
+distribution.
+Note: The capability to quickly and efficiently generate random variates is an
+essential requirement for all DES software systems.
+Steps in generating random variates:
+1. A random number is generated.
+2. The random number is transformed to a random variate.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 28 ===
+Generation of Random Variates
+Random Variates
+•
+The independent samples selected from a random variable having a theoretical distribution.
+Note: The capability to quickly and efficiently generate random variates is an essential requirement
+for all DES software systems.
+Steps in generating random variates:
+1.
+A random number is generated.
+•
+A random number is defined as a sample selected randomly from the uniform distribution
+UNIFORM(0, 1).
+•
+A random number is a real number between zero and one, wherein at each random
+number draw, each real number in the range [0, 1] has an equal chance of being selected.
+2.
+The random number is transformed to a random variate.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 29 ===
+Generation of Random Variates
+•
+In simulation, random numbers are generated on a computer using a recursive algorithm. Most
+common algorithms used to simulate random number generation are called Linear Congruential
+Generators (LCG).
+•
+Using an LCG, a sequence of integers is generated using the recursive formula:
+constant multiplier
+increment
+modulus
+Note: a, c , m nonnegative integers
+Z0 seed
+Z 1 , Z2, Z3, … sequence of integers generated, called linear congruential sequences,  
+and limited to the range 0 Zk m – 1. (Pseudorandom numbers)
+The output of the LCG, Uk, is obtained by dividing each integer Zk by m.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 30 ===
+Note:
+Each seed Z0 will produce a sequence of p distinct integers, p m, and then the sequence will begin
+to repeat. Generators with p = m are called full-cycle or full-period generators.
+Thus, to be useful in simulation, the constants in the LCG and the initial seed must be selected to
+produce a very long cycle length.
+Source: Olivar, A. (2015). Stochastic Simulation of Random Numbers Using Linear Congruential Method. Unpublished Thesis, AMA University
+=== M2-MAIN-Discrete Event Simulation.pdf | page 31 ===
+Source: Olivar, A. (2015). Stochastic Simulation of Random Numbers Using Linear Congruential Method. Unpublished Thesis, AMA University
+=== M2-MAIN-Discrete Event Simulation.pdf | page 32 ===
+Components in the development of a system model
+1. Structural Modeling
+•
+The entities, locations, resources and processes describing the structure and operation of
+the system are defined.
+•
+The result is a mathematical or logical representation (i.e., Queuing System Model)
+2. Data Modeling
+•
+Descriptive data required to execute the structural model are developed.
+•
+Data include entity interarrival times, process service times, resource schedules and
+failure rates, entity travel times and all of the other system data needed to describe the
+operation of the system quantitatively.
+•
+The data model is used to generate the many random variate streams that must be
+supplied during the simulation of the system model.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 33 ===
+Choice for generating the random variate stream required for
+simulation
+1. Direct Use of Sample Data
+2. Use of Empirical Distribution
+3. Use of Theoretical Distribution
+=== M2-MAIN-Discrete Event Simulation.pdf | page 34 ===
+Direct Use of Sample Data
+•
+Sample values are stored in a data file.
+Advantage: Generates only legal and realistic random variates.
+Disadvantages:
+a. In a limited set of sample values, legal and realistic values that occur
+infrequently may not be present.
+b. Making repeated calls to data memory to retrieve stored sample values is
+computationally very slow.
+c. Each simulation execution may require a large number of random variate
+draws.
+Note: This approach is not often used due to practical limitations.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 35 ===
+Use of Empirical Distribution
+•
+A nonparametric distribution constructed to exactly represent the available
+set of sample values.
+Advantages:
+a. Facilitates the generation of random variate stream of unlimited length.
+b. It can be used to transform a stream of random numbers of arbitrary length
+to the desired random variate stream.
+c. Each random variate will be a legal and realistic value.
+Disadvantage: It cannot generate outlying values that may actually occur but
+are only infrequently observed.
+Note: Generally used when a good fit to the sample data using a theoretical
+distribution cannot be found.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 36 ===
+Use of Theoretical Distribution
+•
+A distribution function that is defined mathematically in terms of distribution
+parameters.
+•
+Parameters are often related to the position, scale or shape of the
+theoretical distribution.
+Examples:
+a. Exponential Distribution
+b. Normal Distribution
+c. Triangular Distribution
+=== M2-MAIN-Discrete Event Simulation.pdf | page 37 ===
+Use of Theoretical Distribution
+Advantages:
+a. Smooths irregularities resulting from using a limited number of sample
+values.
+b. Use of this approach is computational efficient.
+Disadvantage: The computational effort required to fit a distribution to sample
+data and, for some sample data sets, the difficulty in finding a good fit.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 38 ===
+
+=== M2-MAIN-Discrete Event Simulation.pdf | page 39 ===
+Output Data Analysis
+•
+The process of analyzing simulation output data to produce useful information concerning
+system performance.
+Steps:
+a.
+A simple queuing system example is presented and used to illustrate why output data
+analysis is necessary.
+b.
+The confidence interval estimate of the mean is described.
+c.
+Some of the more complex output data analysis situations are identified , and the
+approaches for addressing these situations are briefly discussed.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 40 ===
+Check Canvas for instructions
+Formative Assessment 2
+=== M2-MAIN-Discrete Event Simulation.pdf | page 41 ===
+SUBTOPIC 2
+DISCRETE EVENT SIMULATION
+=== M2-MAIN-Discrete Event Simulation.pdf | page 42 ===
+• Understand concepts on discrete event simulation.
+• Discuss the construction and performance of a queuing
+system model.
+• Illustrate a simulation methodology by describing a
+general DES framework and further illustrate the
+mechanics of the simulation.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 43 ===
+After the completion of the topics and laboratory activities, students can:
+• Understand concepts on discrete event simulation.
+• Discuss the construction and performance of a queuing system model. 
+• Illustrate a simulation methodology by describing a general DES
+framework and further illustrate the mechanics of the simulation.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 44 ===
+What is Discrete Event Simulation (DES) ?
+•
+Modeling of a system as it evolves over time by a representation
+where the state variables change instantaneously at separated
+points in time. (Law:Simulation Modeling and Analysis)
+• It is a model of a physical system that has changes at precise points
+in simulated time.
+NOTE: DES is stochastic, dynamic and discrete.
+• It is a method of simulating the behavior and performance of a real-
+life process, facility or system.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 45 ===
+Example:
+In Discrete Event Modeling, the movement of the train from Point A to Point B will be modelled by these two events:
+TIME DELAY or INTERVAL
+This will model the actual 
+movement of the train
+=== M2-MAIN-Discrete Event Simulation.pdf | page 46 ===
+Other Examples:
+=== M2-MAIN-Discrete Event Simulation.pdf | page 47 ===
+Other Examples:
+=== M2-MAIN-Discrete Event Simulation.pdf | page 48 ===
+In DES, we calculate the 
+solution for every change of 
+events. For example, in a 
+queuing system, we 
+calculate the system when 
+an entity arrives, or when 
+an entity leaves the system.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 49 ===
+DES finds its applications 
+in simulating queuing of 
+people in a hospital, 
+queuing of cars in an 
+intersection, queuing of 
+products in manufacturing 
+line, etc.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 50 ===
+1.
+Entity
+•
+An object that can interact with 
+each other or competes with 
+each other for a resource.
+Resource
+Entity
+Entity
+=== M2-MAIN-Discrete Event Simulation.pdf | page 51 ===
+2. Attribute
+• Variable (s) that pertains to an individual entity and is carried along with the
+entity as it goes through the system.
+NOTE:
+In DES, there is some sort of a memory that records
+experience of an entity as it goes through a system.
+This memory is represented by changes in attributes.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 52 ===
+3. Resources
+Capacity of a Resource:
+Number of entities to be served at a time.
+Example: ATM capacity is 1
+Bank with three tellers: Bank capacity  is 3
+Resource Utilization
+-
+one of the outcomes of DES
+Busy time / Total time
+=== M2-MAIN-Discrete Event Simulation.pdf | page 53 ===
+4. Queue
+•
+The list that an entity enters if a resource is occupied.
+•
+Queue logic: FIFO / LIFO / HVF
+Resource
+=== M2-MAIN-Discrete Event Simulation.pdf | page 54 ===
+5. Events
+•
+Any change in the state of the system.
+Examples:
+Entity is created
+Entity interacts/competes with another entity
+Entity leaves the system
+=== M2-MAIN-Discrete Event Simulation.pdf | page 55 ===
+Discrete event simulation is generally carried out by a software designed in high level
+programming languages such as Pascal, C++, or any specialized simulation
+language.
+Following are the five key features:
+Entities −These are the representation of real elements like the parts of machines.
+Relationships −It means to link entities together.
+Simulation Executive −It is responsible for controlling the advance time and
+executing discrete events.
+Random Number Generator −It helps to simulate different data coming into the
+simulation model.
+Results & Statistics −It validates the model and provides its performance
+measures.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 56 ===
+Time Graph Representation
+Every system depends on a time parameter. In a graphical representation it is
+referred to as clock time or time counter and initially it is set to zero.
+Time is updated based on the following two factors:
+Time Slicing −It is the time defined by a model for each event until the absence
+of any event.
+Next Event −It is the event defined by the model for the next event to be
+executed instead of a time interval. It is more efficient than Time Slicing.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 57 ===
+Common Terminology Associated with Discrete Event Simulation
+• System State. A characterization of the state of the system at a particular
+moment; expressed as state variables.
+• Simulation Clock. A tool that provides the elapsed real -world time.
+• Next-Event List. An ordered list of times that each event will take place.
+• Statistical Counter or Accumulator. A tool that both records and expresses a
+system’s evolving performance; it accumulates information as the simulation
+unfolds.
+• Initialization
+Subprogram.
+A protocol
+utilized
+in
+the
+initialization
+of
+the
+simulation, usually setting the start time to zero.
+• Timing Subprogram. A protocol that, drawing from a next-event list, sets the next
+event and progresses the simulation clock to the moment when an event is to
+happen.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 58 ===
+•
+Event Subprogram. A protocol that launches a routine that updates the state
+of the system with the occurrence of each event.
+•
+Library Subprogram. A protocol used to produce random observations drawn
+generally from predetermined probability distributions.
+•
+Report Generator. A tool that calculates and reports statistics that describe the
+performance of the system.
+•
+Main Program. A routine that coordinates the concert of subordinate routines,
+executing these in the correct sequence. It initializes the timing subprogram
+that determines the subsequent event, passes control to the related event
+subprogram, and updates the system state. This routine verifies for termination
+and triggers the report generator once the simulation ends.
+Common Terminology Associated with Discrete Event Simulation
+=== M2-MAIN-Discrete Event Simulation.pdf | page 59 ===
+DES Simulation Flowchart
+=== M2-MAIN-Discrete Event Simulation.pdf | page 60 ===
+Classification of Systems
+1. Discrete Systems
+• The state variables are updated instantaneously at specified times 
+(e.g., t1 , t2 , t3 … ).
+Example: 
+A lunch queue and server utilization at a local fast - food restaurant 
+throughout the peak midday business hours.
+2. Continuous Systems
+• The state variables change continuously with the progression of time.
+Example: State variable “ volume ” exhibits continuous change over time as
+a tank is filled with fluid.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 61 ===
+Approaches for Advancing the Simulation Clock
+1. Fixed-increment Advance
+• Uncommon in simulation software.
+• Initializes at time zero and then advances at fixed time increments.
+• Events such as an entity’s arrival to, or departure from, the system, as
+generated by the probability distribution and recorded in the event list, may
+fall between successive moments that demarcate the time interval.
+• The updating of the state variables takes place not with the occurrence of an
+event, but with the passing of a time increment moment.
+• For the purpose of recording data and updating state variables, the event is
+artificially forced in sync with the interval.
+• The size of the time increment is subjective. The choice of increment has
+implications for the performance measures of the system.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 62 ===
+Approaches for Advancing the Simulation Clock
+2. Next-Event Time Advance
+• Employed within most simulation software.
+• Initializes the simulation clock at zero, progresses to the most proximate,
+forthcoming event as tendered by the event list, and then updates the state
+variables.
+• Once this is complete, the simulation clock is again progressed to the
+moment of the next most forthcoming event, and the state of the system is
+again revised.
+• The updating of the state variables is in sync with the occurrence of events.
+• Omits periods of inactivity.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 63 ===
+- Represents a certain number of customers waiting for service.
+Examples:
+Banks
+Ships
+Post Offices
+Railway Ticket Counters
+What causes queues?
+* Arrival Variation
+* Service Variation
+Transaction very brief
+Transaction took more time
+Transaction simultaneous 
+with other customer
+=== M2-MAIN-Discrete Event Simulation.pdf | page 64 ===
+• A representation that captures and quantifies the 
+phenomenon of waiting in lines.
+Basic Elements
+1. Entities – Customers or objects
+2. Servers – Persons or production stations that treat or interact 
+with the entity
+3. Queues – Holding or waiting position of entities
+=== M2-MAIN-Discrete Event Simulation.pdf | page 65 ===
+1. Arrivals of Customers
+• It defines the way customers enter into the system.
+• Mostly the arrivals are random with random intervals between two adjacent
+arrivals.
+• The arrivals are described by a random distribution of intervals referred to as Arrival
+Pattern.
+2. Service Mechanism
+• A customer who arrives and finds the server idle enters service immediately, and
+the service time of the successive customers are independent and identically
+distributed (IID) random variables that are independent of inter arrival times.
+• A customer who arrives and finds the server busy joins the end of a single queue.
+NOTE: IID means that the arrival times of the entities are independent, or
+autonomous, of each other and that the probability distribution is identical, or alike,
+for all entities.
+=== M2-MAIN-Discrete Event Simulation.pdf | page 66 ===
+3. Queuing Discipline
+• It represents the way the queue is organized or it is the order in 
+which service is provided such as:      
+o FIFO – First in, First Out also called FCFS
+o FIFO – Last in, First Out also called LCFS.
+o Priority Queue It maybe viewed as a number of queues for 
+various priorities
+o SIRO Serve in random order
+• The order that either customers or objects are selected from a 
+queue to advance to receive service.
+Two common disciplines:
+1.
+FCFS – First come, first served
+2.
+STP - Shortest process time
+=== M2-MAIN-Discrete Event Simulation.pdf | page 67 ===
+1. Analytic Model
+- using differential equations
+- for simple cases
+Example:  Model for a fast food restaurant
+2. Simulation Model
+- used for complex systems with multiple stations
+Example:  Low Observable (LO) aircraft maintenance system
+=== M2-MAIN-Discrete Event Simulation.pdf | page 68 ===
+1. Balance two costs
+• Service cost Cost of providing service
+• Waiting cost Cost of not providing service
+* Bulk : Leave without buying because the line is too long
+* Buy and never return           
+2. Goal is to minimize cost
+=== M2-MAIN-Discrete Event Simulation.pdf | page 69 ===
+•
+Jockeying
+When the customer enters one line and then switches to a
+different one in an effort to reduce the waiting time
+•
+Reneging
+The customer enters the line but decides to leave before being
+served
+•
+Balking
+The customer decides not to enter the waiting line
+•
+Faffing
+Time delay when a person gathers his things after paying at the
+checkout
+•
+FIFO
+=== M2-MAIN-Discrete Event Simulation.pdf | page 70 ===
+Arrival and Service Time
+Stochastic
+• Random
+• Non deterministic
+Arrival Process
+• Characterized by the interarrival time, or the interval of time between
+successive customers or objects entering the system in preparation to receive
+service
+Arrival time
+• Independent,
+or
+autonomous,
+of
+each
+other
+and
+that
+the
+probability
+distribution is identical for all entities
+=== M2-MAIN-Discrete Event Simulation.pdf | page 71 ===
+1. Arrival rate How fast are customers will show up ?
+2. Service rate How fast will the server handle the customer ?
+3. Number of servers  How many servers are needed to provide
+service to the customers ?
+4. Maximum queue length  Optional
+5. Population size  Optional
+=== M2-MAIN-Discrete Event Simulation.pdf | page 72 ===
+1. Single Server, Single Phase (McDonald’s, ATMs)
+- Providing service to a single line
+=== M2-MAIN-Discrete Event Simulation.pdf | page 73 ===
+2. Single Server, Multi Phase (Chipotle)
+=== M2-MAIN-Discrete Event Simulation.pdf | page 74 ===
+3. Multiple Server, Single Phase (Chick-fil-A)
+- Multiple servers serving a single line
+=== M2-MAIN-Discrete Event Simulation.pdf | page 75 ===
+4. Multiple Server, Multiple Phase (Laundromat)
+- Multiple servers serving a single line
+=== M2-MAIN-Discrete Event Simulation.pdf | page 76 ===
+
+=== M2-MAIN-Discrete Event Simulation.pdf | page 77 ===
+Formulas to be used
+1. Time since last arrival for (i + 1) customer = Arrival time of ith customer – Arrival time of (i – 1)th customer
+2. Time customer wait in queue for ith customer = Arrival time of  ith customer – Time service begin of  ith customer
+3. Time service ends of  ith customer = Time service begin of  ith customer (min) + Service Time of  ith customer
+4. Time customer spends in system = Time service ends of  ith customer – Arrival time of  ith customer
+5. Idle time of server for  ith customer = Time service begins of  ith customer – Time service ends of (i – 1)th
+customer
+6. Time service begins:
+For first customer, it is zero (always).
+For rest of customer, it is a maximum between arrival of  ith customer and time service ends
+of (i – 1)th customer. i.e. Max. (Arrival of (ith) customer, Time service ends of (i – 1)th
+customer)
+=== M2-MAIN-Discrete Event Simulation.pdf | page 78 ===
+Example: 
+Customer
+1
+2
+3
+4
+5
+6
+Inter-arrival time (IAT) OR (AT)
+-
+4
+1
+4
+2
+4
+Arrival time on clock
+0
+4
+5
+9
+11
+15
+Service Time
+2
+3
+1
+4
+2
+3
+Calculate the different parameter for the single server queueing
+system when inter-arrival time and service times are given below:
+=== M2-MAIN-Discrete Event Simulation.pdf | page 79 ===
+Solution:
+Customer
+Time
+service
+last 
+arrival
+Arrival
+Time
+Service
+time
+Time
+service
+begin
+Waiting
+in
+queue
+Time
+service
+ends
+Time
+customer
+spends
+in
+system
+Idle
+time
+of
+queue
+1
+-
+0
+2
+0
+(0 – 0) = 0
+(0 + 2) = 2
+(2 – 0) = 2
+0 – 0 = 0
+2
+4
+4
+3
+4
+(4 – 4) = 0
+(4 + 3) = 7
+(7 – 4) = 3
+4 – 2 = 2
+3
+1
+5
+1
+7
+(7 – 5) = 2
+(7 + 1) = 8
+(8 – 7) + 2 = 3
+or
+8 – 5 = 3
+7 – 7 = 0
+4
+4
+9
+4
+9
+(9 – 9) = 0
+(9 + 4) = 13
+(13 – 9) = 4
+9 – 8 = 1
+5
+2
+11
+2
+13
+(13 – 11) = 2
+(13 + 2) = 15
+(15 – 13) + 2 = 4
+or
+15 – 11 = 4
+13 – 13 = 0
+6
+4
+15
+3
+15
+(15 – 15) = 0
+(15 + 3) = 18
+(18 – 15) = 3
+15 – 15 = 0
+15
+15
+4
+19
+3
+=== M2-MAIN-Discrete Event Simulation.pdf | page 80 ===
+Check Canvas for instructions
+Formative Assessment 3
+=== M2-MAIN-Discrete Event Simulation.pdf | page 81 ===
+Check Canvas for instructions
+Summative Assessment 2
+=== M2-MAIN-Discrete Event Simulation.pdf | page 82 ===
+Online:
+www. tutorialspoint.com
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons

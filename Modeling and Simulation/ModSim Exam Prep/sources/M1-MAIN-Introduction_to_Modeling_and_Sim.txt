@@ -1,0 +1,1242 @@
+
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 1 ===
+Modeling and Simulation
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 2 ===
+MODULE 1
+INTRODUCTION TO MODELING 
+AND SIMULATION
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 3 ===
+SUBTOPIC 1
+BASIC CONCEPTS ON
+MODELING AND SIMULATION
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 4 ===
+Demonstrate understanding of the basic concepts on
+modeling and simulation.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 5 ===
+What is Modeling and Simulation (M & S)?
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+M & S is a problem-based discipline that allows for repeated testing 
+of a hypothesis.
+The foundation of an M & S program of study is its curriculum built 
+upon four precepts:
+•
+Modeling
+•
+Simulation
+•
+Visualization
+•
+Analysis
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 6 ===
+What is a system?
+• A construct or collection of different elements that together produces results not
+obtainable by the elements alone. The elements can include people, hardware,
+software, facilities, policies and documents – all things required to produce
+system-level
+qualities,
+properties,
+characteristics,
+functions,
+behavior
+an
+performance. (International Council of Systems Engineering (INCOSE)).
+• An aggregation of objects joined in some regular interaction or interdependence
+for achievement of a common goal.
+• An organized set of interrelated ideas or principles.
+• A collection of entities (people, parts, messages, machines, servers, …) that act
+and interact together toward some end.
+Sources: Modeling and Simulation: Singh & Singh
+Modeling and Analysis: Schmidt and Taylor, 1970
+Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 7 ===
+Types of system
+1. Physical System – Something that already exist
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 8 ===
+Types of system
+2. Notional System – A plan or concept for something physical that
+does not exist.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 9 ===
+1. System
+•
+It refers to the subject of model development.
+•
+It is the subject or thing that will be investigated or studied using
+M & S.
+Types of systems
+a) Discrete – state variables (variables that completely describe a
+system at any given moment in time) change instantaneously at
+separate points in time.
+b) Continuous – state variables change continuously with respect
+to time.
+Principal concepts in M & S
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 10 ===
+Ways to study a system
+a)
+The actual system vs. a model of the system
+b)
+A physical vs. mathematical representation
+c)
+Analytic solution vs. simulation solution
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+Primary concerns of the modeler in the study of systems
+a)
+The quantitative analysis of the systems
+b)
+The techniques for system design, control or use
+c)
+The measurement or evaluation of the system performance
+Principal concepts in M & S
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 11 ===
+2. Model
+•
+A physical, mathematical or otherwise logical representation of a
+system, entity, phenomenon or process.
+•
+It serves as representations of events and/or things that are real
+(such as historic case study) or contrived (a use case).
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+Principal concepts in M & S
+Examples:
+Electromagnetic field model
+Modulating sound with acoustic metafiber bundles
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 12 ===
+Types of models
+a) Physical
+b) Notional
+Principal concepts in M & S
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 13 ===
+3. Simulation
+•
+An applied methodology that can describe the behavior of that system
+using either a mathematical model or a symbolic model.
+•
+It can be the imitation of the operation of a real-world process or system
+over a period of time.
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+Examples: 
+Tabular and Graphic Simulations
+Principal concepts in M & S
+Software Simulation
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 14 ===
+4. M & S
+•
+The overall process of developing a model and then simulating that model
+to gather data concerning performance of a system.
+•
+It used models and simulations to develop data as a basis for making
+managerial, technical and training decisions.
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+Steps:
+a) Developing computer simulation or a design based on a model of an
+actual or theoretical physical system.
+b) Executing that model on a digital computer.
+c) Analyzing the output.
+Principal concepts in M & S
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 15 ===
+Source: Modeling and Simulation: Singh & Singh
+Components of a System
+1. Entity
+It is used to denote an object of interest in a system.
+2. Attribute It is used to denote a property of an entity.
+3. Activity
+Process that causes changes in the system
+State of the System
+- Collection of all the entities, attributes and activities at one point of
+time.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 16 ===
+Ways to Study a System
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 17 ===
+Source: Modeling and Simulation: Singh & Singh
+Examples of System
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 18 ===
+Source: Modeling and Simulation: Singh & Singh
+System Environment
+4. Stochastic Activities wherein the outputs cannot be described in 
+terms of its input or outputs
+Types of Activities
+1. Endogenous Activities that occur within the system
+2. Exogenous    Activities that occur outside the system
+3. Deterministic Activities wherein the outputs can be described 
+completely in terms of its input
+- It is where changes occurring outside the system are said to happen.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 19 ===
+Source: Modeling and Simulation: Singh & Singh
+Examples:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 20 ===
+Source: Modeling and Simulation: Singh & Singh
+Types of System
+1. Open
+A system which has exogenous activities.
+2. Closed
+A system which don’t have any exogenous activities.
+3. Continuous
+A system in which the changes are predominantly 
+smooth. (Ex: Aircraft system)
+4. Discrete
+A system in which the changes are predominantly 
+discontinuous. (Ex: Factory system)
+5. Sampled-data
+A system which is intrinsically continuous but information
+about them is only available at discrete points in time.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 21 ===
+Why model a system?
+1) The system might not be accessible.
+2) The system might be dangerous to engage.
+3) The system might be unacceptable to engage.
+4) The system might simply not exist.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 22 ===
+Subtasks in Deriving a Model
+1. Establishing the model structure is possible by:
+a. Determining the system boundary
+b. Identifying the entities, attributes and activities of the system.
+2. Supplying the data means
+a. Provides the values of attributes
+b. Defines the relationships involved in the activities.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 23 ===
+Types of Models
+Models
+Physical
+Static
+Dynamic
+Mathematical
+Static
+Dynamic
+Numerical 
+Technique
+Analytical 
+Technique
+Numerical 
+Technique
+System simulation
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 24 ===
+Definition of Modeling (Modelling)
+• It is the process of representing a model which includes its construction
+and working.
+• It is the process of creating a model which represents a system
+including their properties.
+• It is an act of building a model.
+NOTE: This model is similar to a real system, which helps the analyst
+predict the effect of changes to the system. In other words, modelling
+Source: www.tutorialspoint.com
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 25 ===
+Principles used in Modeling
+1. Block Building
+•
+A system can be described in series of blocks.
+•
+Each block describe a part of the system.
+•
+It depends upon few input variables and results in a few output variables.
+•
+The system can be described as interconnection between the blocks.
+•
+The system can be represented graphically as a simple block diagram.
+2. Relevance
+• The model should only include relevant aspect of the system.
+3. Accuracy
+• The information gathered for the model must be correct and accurate.
+4. Aggregation
+• It is the extend to which the number of individual entities can be grouped 
+together into larger entities.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 26 ===
+What is Simulation?
+• It is the process of imitating the operations of a facility or process, usually via 
+computer.
+o What’s being simulated is the system.
+o To study system, often make assumptions/approximations, both logical and
+mathematical, about how it works.
+o These assumptions form a model of the system.
+o If model structure is simple enough, could use mathematical methods to get
+exact information on questions of interest — analytical solution.
+(Source: Law: Simulation Modeling and Analysis)
+• It is the operation of a model in terms of time or space, which helps analyze the
+performance of an existing or a proposed system. In other words, simulation is
+the process of using a model to study the performance of a system. It is an act of
+using a model for simulation. (Source: www.tutorialspoint.com)
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 27 ===
+History of Simulation
+• 1940 −A method named ‘Monte Carlo’ was developed by researchers (John von
+Neumann, Stanislaw Ulan, Edward Teller, Herman Kahn) and physicists working on a
+Manhattan project to study neutron scattering.
+• 1960 −The first special-purpose simulation languages were developed, such as
+SIMSCRIPT by Harry Markowitz at the RAND Corporation.
+• 1970 −During this period, research was initiated on mathematical foundations of
+simulation.
+• 1980 −During this period, PC-based simulation software, graphical user interfaces
+and object-oriented programming were developed.
+• 1990 −During this period, web-based simulation, fancy animated graphics,
+simulation-based optimization, Markov-chain Monte Carlo methods were developed.
+(Source: www.tutorialspoint.com)
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 28 ===
+Some (not all) application areas for simulation:
+• Designing and analyzing manufacturing systems
+• Evaluating military weapons systems or their logistics requirements
+• Determining hardware requirements or protocols for communications 
+networks
+• Determining hardware and software requirements for a computer system
+• Designing and operating transportation systems such as airports, 
+freeways, ports, and subways
+• Evaluating designs for service organizations such as call centers, fast-food 
+restaurants, hospitals, and post offices
+• Reengineering of business processes
+• Determining ordering policies for an inventory system
+• Analyzing financial or economic systems
+Source: Law: Simulation Modeling and Analysis
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 29 ===
+The Process of Simulation
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 30 ===
+Static vs. dynamic
+Deterministic vs. stochastic
+Continuous vs. discrete
+Classification of Simulation Models
+Most operational models are dynamic, stochastic, and discrete – will be
+called discrete-event simulation models
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 31 ===
+Other Types of Simulation
+1.Hybrid Simulation
+2.Real-time Simulation
+3.Web-based Simulation
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 32 ===
+System Simulation
+• The technique of solving problems by the observation of the performance, over
+time, of a dynamic model of the system.
+Analytical Method
+• Used
+when
+models
+are
+simple
+and
+easy
+to
+understand.
+• Mathematical
+methods
+(such as algebra, calculus
+or probability theory) are
+used
+to
+get
+exact
+information needed to solve
+the problem.
+Simulation Method
+• Used when systems are too complex
+to
+allow
+realistic
+models
+to
+be
+evaluated analytically.
+• Computers are used to evaluate the
+model
+numerically
+and
+data
+are
+gathered
+in
+order
+to
+estimate
+the
+desired true properties.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 33 ===
+System Simulation
+Analytical Method
+1.
+Gives general solution.
+2.
+It considers all the conditions to solve a 
+problem.
+3.
+There is limited problem that can be 
+solved mathematically.
+4.
+Analytical results occur in the form of 
+complex series or integrals that still 
+require extensive evaluation.
+5.
+Expensive and time consuming.
+6.
+There are many simple limitations such 
+as physical stops, finite time delays or 
+nonlinear forces.
+7.
+Employs the deductive reasoning of 
+mathematics to solve the model.
+Simulation Method
+1.
+Gives specific solutions.
+2.
+Tells only about particular conditions.
+3.
+It is an extension of mathematical solution.
+4.
+Provides a quicker or more convenient way
+of deriving results.
+5.
+Gives results in few minutes at a very low
+cost.
+6.
+Easily removes limitations such as physical
+stops.
+7.
+Employs numerical methods.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 34 ===
+Advantages of Modeling and Simulation
+Source: www.tutorialspoint.com
+Easy to understand −Allows to understand how the system really operates
+without working on real-time systems.
+Easy to test −Allows to make changes into the system and their effect on the
+output without working on real-time systems.
+Easy to upgrade −Allows to determine the system requirements by applying
+different configurations.
+Easy to identifying constraints −Allows to perform bottleneck analysis that
+causes delay in the work process, information, etc.
+Easy to diagnose problems −Certain systems are so complex that it is not
+easy to understand their interaction at a time. However, Modelling & Simulation
+allows to understand all the interactions and analyze their effect. Additionally,
+new policies, operations, and procedures can be explored without affecting the
+real system.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 35 ===
+Disadvantages of Modeling and Simulation
+Designing a model is an art which requires domain knowledge, training and
+experience.
+Operations are performed on the system using random number, hence difficult to
+predict the result.
+Simulation requires manpower and it is a time-consuming process.
+Simulation results are difficult to translate. It requires experts to understand.
+Simulation process is expensive.
+Source: www.tutorialspoint.com
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 36 ===
+Steps in Simulation and Model Building
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 37 ===
+M & S Development Process Cycle & Relevant Technologies
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 38 ===
+Source: Modeling and Simulation Fundamentals: Theoretical Underpinnings and Practical Domains, Sokolowski and Banks, 2010
+Phases of a Cyclic Movement  of Process of M&S 
+1. Model Phase = modeling technologies
+2. Code Phase = development technologies
+3. Execute Phase = computational technologies
+4. Analyze Phase = data/information technologies
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 39 ===
+1. Probability and Statistics
+•
+Generation of random variates to model system random input variables that
+represent uncertainty and variability.
+•
+To analyze the output from stochastic models or systems.
+Example:
+Uncertainty in the movement of cars at a stop light:
+a) How long before the first car acknowledges the light change to green?
+b) How fast does that car take off?
+c) At what time does the second car start moving?
+d) What is the spatial interval between cars?
+e) What happens if one of the cars in the chain stalls?
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 40 ===
+2. Analysis and Operations Research
+• The conduct of a simulation study results in the generation of system
+performance data, most often in large quantities. These data are stored in a
+computer system as large arrays of numbers.
+Analysis: Process of converting the data into meaningful information that
+describes the behavior of the system.
+Operations Research: The development and use of the techniques and
+approaches for analysis.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 41 ===
+3. Computer Visualization
+• Visualization: Ability to represent data as a way to interface with the model.
+• Computer Animations: Offshoots of computational science that allow for 
+additional variations in modeling.
+4. Human Factors
+• Designer must have a basic understanding of human cognition and perception.
+5. Project Management
+• Required when computer simulation is the only method available to investigate 
+a large-scale project.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 42 ===
+1.Monte Carlo Simulation
+•
+It randomly samples values from each input variable distribution and
+uses that sample to calculate the model’s output. This process of
+random sampling is repeated until there is a sense of how the output
+varies given the random input values.
+•
+It uses probabilities.
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 43 ===
+2. Continuous Simulation
+•
+The system variables are continuous functions of time.
+•
+Time is the independent variable and the system variables evolve
+as time progresses.
+•
+Uses differential equations in developing the model.
+Example:
+Graph Representing Continuous Behavior for
+a depletion mode transistor acting as a pull up
+for a capacitive load
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 44 ===
+3. Discrete-Event Simulation
+•
+The system variables are discrete functions of time.
+•
+These discrete functions in time result in system variables that change only at
+distinct instants of time.
+•
+The changes are associated with an occurrence of a system event.
+•
+It advances time from one event to the next event.
+•
+It adheres to queuing theory models.
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 45 ===
+1. Fidelity
+•
+The term used to describe how the model or simulation closely matches
+reality.
+High Fidelity – when the model or simulation closely matches or behaves
+like the real system. Not easy to attain because models can never capture
+every aspect of a system.
+Low Fidelity – tolerated with regard to the components of the system that
+are not important to the investigation.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 46 ===
+2. Resolution
+•
+It is also known as granularity.
+•
+It is the degree of detail with which the real world is simulated.
+High Resolution – when the model or simulation includes more details.
+3. Scale
+•
+It is also known as level.
+•
+The size of the overall scenario or event the simulation represents.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 47 ===
+
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 48 ===
+1. Physics-Based Modeling
+•
+Method of modeling that used mathematical models where the model
+equations are derived from basic physical principles.
+Example: Newton’s law of gravity
+2. Finite Element Modeling (FEM)
+•
+Method used for modeling large or complicated objects by decomposing these
+elements into a set of small elements and then modeling the small elements.
+•
+It is widely used for engineering simulations.
+Example: Aerospace Engineering
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 49 ===
+3. Data-Based Modeling
+•
+Results from models based on data describing represented aspects of the
+subject of the model.
+•
+Often used when the real system cannot be engaged or when the subject of
+the model is notional.
+4. Agent-Based Modeling (ABM)
+• An important modeling paradigm for investigating many types of human and
+social phenomena.
+5. Aggregate Modeling
+• This method facilitates a number of smaller objects and actions represented in
+a combined, or aggregated, manner.
+• Most often used in constructive models.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 50 ===
+6. Hybrid Modeling
+•
+Entails combining more than one modeling paradigm.
+Note:
+Other model types
+•
+Markov Chains
+•
+Finite-state Automata
+•
+Particle Systems
+•
+Queuing Models
+•
+Bond Graphs
+•
+Petri Nets
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 51 ===
+1. Live Simulation
+•
+Involves real people operating real systems.
+•
+Often involves real equipment or systems.
+Example:
+Worcester Preparatory School 10th grade
+students in AP Biology got a glimpse of
+what it would be like to be a doctor on a
+mission trip with the CyberSurgeons live
+simulation program. It tasked students
+with determining how to treat patients
+suffering from a variety of diseases and
+injuries as they took a simulated voyage
+down the Amazon River.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 52 ===
+2. Virtual Simulation
+•
+Involves real people operating in simulated systems.
+•
+These systems are recreated with simulators, and they are designed to
+immerse the user in a realistic environment.
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 53 ===
+3. Constructive Simulation
+•
+Involves real people making inputs into a simulation that carry out those
+inputs by simulated people operating in simulated systems.
+Example:
+US military’s modular semiautomated forces (ModSAF), a constructive combat model designed 
+to train doctrine and rules of engagement.
+ModSAF Simulated Environment
+ModSAF view of Simulated Helicopters
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 54 ===
+Table 1.4
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 55 ===
+• Applications are the purposes for developing models and simulations.
+1. Training Applications
+•
+Its intent is to produce learning in the user or participant.
+2. Analysis Applications
+• The process of conducting a detailed study of a system to prepare for the
+design, testing, performance, evaluation and/or prediction of behavior in
+different environments.
+3. Experimentation Applications
+• Its intent is to explore design or solution spaces.
+• It also serves to gain insight into an incompletely understood situation.
+• It is an iterative process of collecting, developing and exploring concepts to
+identify and recommend value-added solutions for change.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 56 ===
+4. Engineering Applications
+•
+Used to design systems which can be tested or changed in the simulation.
+•
+The desired end product is validity.
+•
+Simulation tools used include finite element M & S tools, MATLAB (for
+modeling continuous systems) and ARENA (for modeling discrete-event
+systems).
+5. Acquisition Applications
+• Entails the process of specifying, designing, developing and implementing
+new systems.
+• The process includes the entire life cycle of a system from concept to
+disposal.
+• Its intent is to use the simulation to evaluate cost-effectiveness and
+correctness before committing funds for an acquisition.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 57 ===
+• It asks the following question: Does an M&S process include uncertainty and
+variability?
+• Comprised of two types of simulations:
+1.
+Deterministic Simulation
+•
+Takes place when a given set of inputs produce a determined, unique set of outputs.
+•
+This simulation include no uncertainty and no variability.
+Examples:
+Physics-based simulations
+Engineering simulations
+2. Stochastic Simulation
+•
+Accepts random variables as inputs, which logically lead to random outputs.
+•
+More difficult to represent and analyze because appropriate statistical techniques must be
+used.
+•
+This simulation include uncertainty and variability.
+Example: Discrete-event systems models
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 58 ===
+• The domain of an M&S process refers to the subject area of the process.
+Examples:
+• Military Simulations
+• Transportation Simulations
+• Decision Support Simulations
+• Game-based Learning Simulations
+• Medical Simulations
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 59 ===
+Check Canvas for instructions
+Formative Assessment 1
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 60 ===
+Check Canvas for instructions
+Summative Assessment 1
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 61 ===
+Online:
+www. tutorialspoint.com
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons
+• Singh, P. & Singh, N. (2012). Modeling and Simulation. S K Kataria and Sons
+• Schmidt and Taylor. (1970). Modeling and Analysis
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 62 ===
+Lab Activity
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 63 ===
+and Simulation
+Subtopic 2
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 64 ===
+•
+Know what is Modeling and Simulation
+•
+Know what is Matlab and it’s function
+•
+Demonstrate understanding of the basics of MATLAB.
+•
+Identify built-in functions that can be used in interactive expressions.
+•
+Demonstrate understanding of concepts on vectors and matrices.
+•
+Identify operations on vectors and matrices.
+•
+Use build-in functions to simplify codes involving vectors and  
+matrices.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 65 ===
+What  is Modeling
+Modeling
+•the act or an instance of making a model
+•the practice or occupation of a person who model objects
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 66 ===
+What  is Simulation
+A simulation model is a mathematical model that calculates the impact of uncertain inputs and 
+decisions we make on outcome that we care about, such as profit and loss, investment returns, etc.
+A simulation model will include:
+•Model input that are uncertain numbers. uncertain variables
+•Intermediate calculations are required
+•Model outputs that depend on the inputs -- These are uncertain functions.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 67 ===
+What  is Simulation
+Simulation is imitation of some real thing, or a process.
+The act of simulating something generally involved representation of certain
+key characteristics or  behaviors  of a selected physical or abstract system
+Simulation involves the use of models to represent real life situation.
+Simulation is the process of designing a model of a real system and conducting experiments 
+with this model for the purpose of understand the behavior for the operation of the system.
+.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 68 ===
+Simulation techniques
+Simulation techniques can be used to assist management decision-making, where analytical 
+methods are either not available or inappropriate.
+Typical business problems where simulation could be used to aid management decision 
+making are: 
+• inventory control
+• queuing problems
+• production planning
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 69 ===
+Simulation Application Sample
+AnyLogic simulation software provides the unique ability to use GIS maps within your simulation 
+models. Maps can be applied to model systems like supply chains, logistics networks, and other 
+cases when you need to take into account locations, roads, routes, or regions.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 70 ===
+Simulation Application Sample
+GeoFS is a flight simulator with a global environment generated from 
+satellite images and digital geographic data.
+You can run it for free in your web browser without anything to install, 
+subscribe to worldwide HD aerial images (suitable for VFR flight) or 
+install one of the two available Apps on your mobile device.
+Leading supplier of VR training solutions to the 
+maritime sector.
+https://www.morildinteraktiv.no/custom
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 71 ===
+Simulation Application Sample
+List of 10+ Network Simulation Tools & Softwares:
+GNS3 (Graphical Network System3)
+Cisco Packet Tracer
+Putty 
+Secure CRT
+Microsoft Visio
+PRTG Network Monitor
+WIRESHARK 
+EVE-NG
+Network Simulator -NS3
+SNMP Agent Simulator
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 72 ===
+MATLAB
+Subtopic 2
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 73 ===
+What  is MATLAB
+MATLAB is a software package for high-performance mathematical computation, visualization, and 
+programming environment. It provides an interactive environment with hundreds of built-in functions for 
+technical computing, graphics, and animations.
+MATLAB stands for Matrix Laboratory. MATLAB was written initially to implement a simple approach to 
+matrix software developed by the LINPACK (Linear system package) and EISPACK (Eigen system 
+package) projects.
+MATLAB is a modern programming language environment, and it has refined data structures, includes 
+built-in editing and debugging tools, and supports object-oriented programming.
+MATLAB® is a programming platform designed specifically for engineers and scientists to analyze and 
+design systems and products that transform our world. The heart of MATLAB is the MATLAB language, a 
+matrix-based language allowing the most natural expression of computational mathematics.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 74 ===
+What  is MATLAB
+MATLAB is Multi-paradigm. So, it can work with multiple types of programming approaches, 
+such as Functional, Object-Oriented, and Visual.
+MATLAB lets you take your ideas from research to production by deploying to enterprise 
+applications and embedded devices, as well as integrating with Simulink® and Model-Based 
+Design.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 75 ===
+What  is MATLAB
+MATLAB allows several types of tasks, such as 
+manipulations with matrix, algorithm implementation, 
+data, and functions plotting, and can interact with 
+programs written in other programming languages.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 76 ===
+MATLAB Pro
+gramming
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 77 ===
+BASICS  OF
+ MATLAB
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 78 ===
+•
+Demonstrate understanding of the basics of MATLAB.
+•
+Identify built-in functions that can be used in interactive
+expressions.
+•
+Demonstrate
+understanding
+of
+concepts
+on
+vectors
+and
+matrices.
+•
+Identify operations on vectors and matrices.
+•
+Use build-in functions to simplify codes involving vectors and
+matrices.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 79 ===
+Local Environment
+Use MATLAB via remote access. Contact your IT administrator.
+Install a trial version (which is about 5G and takes about 20
+minutes
+to
+install)
+through
+MathWorks
+website
+:
+https://www.mathworks.com/downloads/web_downloads/
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 80 ===
+the prompt
+Current Folder 
+Window
+where files are to 
+be saved
+Command History 
+Window 
+shows commands that 
+have been entered
+Workspace Window
+The workspace 
+shows all the 
+variables created 
+and/or imported from 
+files.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 81 ===
+Interactive Commands
+
+demo will bring up MATLAB examples in the Help Browser, which has examples of some of the
+features of MATLAB
+
+help will explain any function; help help will explain how help works
+
+lookfor searches through the help for a specific word or phrase (note: this can take a long time)
+
+doc will bring up a documentation page in the Help Browser.
+NOTE:
+To exit from MATLAB, either type quit or exit at the prompt, or click on MATLAB, then Quit
+MATLAB from the menu.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 82 ===
+MATLAB Variables
+•
+To store a value in a MATLAB session, or in a program, a variable is used.
+•
+In MATLAB environment, every variable is an array or matrix.
+Rules for Variable Names
+The name must begin with a letter of the alphabet followed by letters, digits,
+and the underscore character (e.g., value_1).
+There is a limit to the length of the name; the built-in function namelengthmax
+tells what this maximum length is (any extra characters are truncated).
+MATLAB is case-sensitive.
+Although underscore characters are valid in a name, their use can cause
+problems
+with
+some
+programs
+that
+interact
+with
+MATLAB,
+so
+some
+programmers
+use
+mixed
+case
+instead
+(e.g.,
+partNumber
+instead
+of
+part_number).
+Reserved words, or keywords cannot be used as variable names.
+Names of built-in functions can, but should not, be used as variable names.
+Examples:
+* mynum is a 1 x 1 
+matrix
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 83 ===
+Commands that Relate to Variables
+
+who shows variables that have been defined in this Command
+Window
+
+whos shows variables that have been defined in this Command
+Window (this shows more information on the variables, similar to
+what is in the Workspace Window)
+
+clear clears out all variables so they no longer exist
+
+clear variablename clears out a particular variable
+
+clear variablename1 variablename2 . . . clears out a list of
+variables
+(note: separate the names with spaces).
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 84 ===
+Variable Types (Classes)
+For float or real numbers single, double
+For signed  integers int8 – uses eight bits (one bit for sign, seven bits for actual number)
+int16, int32, int64
+For unsigned  integers uint8 – uses eight bits (sign not stored, actual number must only be positive)
+uint16, uint32, uint64
+For single characters or strings char (Both characters and strings are enclosed in single quotes)
+For logical values logical (used to store true/false values)
+Note: 
+•
+By default, numbers are stored as the type double 
+in MATLAB.
+•
+To convert from one type to another, type casting 
+is used.
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 85 ===
+Range
+•
+Indicates the smallest and largest numbers that can be stored in the type
+•
+The range can be found for any type by passing the name of the type as a string (which means in single
+quotes) to the functions intmin and intmax.
+Example:
+Note: Use the type int32 when an integer type is required
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 86 ===
+The Format Function
+•
+It can be used to specify the output format of expressions.
+•
+There are many options, including making the format short (the default) or long
+•
+It can also be used to control the spacing between the MATLAB command or expression and the result. It
+can be either loose (the default) or compact.
+Examples:
+Scientific or Exponential Notation
+•
+Uses e for the exponent of 10 raised to a power.
+Example:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 87 ===
+Operators
+Operator Precedence:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 88 ===
+Common Built-in Functions
+fix
+floor
+ceil
+round
+mod returns the remainder
+rem returns the remainder (i.e. rem(13, 5) returns 3 )
+sign returns 1 if the argument is positive. Otherwise returns -1. (i.e. sign(-5) returns -1 )
+sqrt
+nthroot returns the nth root of a number (i.e. nthroot(64, 3) returns 4 )
+log(x)  returns the natural logarithm  ( equals e which has a value of 2.7183)
+log2(x) returns the base 2 logarithm  (used in many computing applications)
+log10(x) returns the base 10 logarithm.
+exp(n) returns the constant en
+sin sine function in radians
+sind sine function in degrees
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 89 ===
+Special Variables and Constants
+Characters and Encoding
+•
+MATLAB uses ASCII character set in encoding characters.
+•
+A character can be converted to its equivalent numerical value and vice-versa.
+Examples:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 90 ===
+Relational Operators and Expressions
+Examples:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 91 ===
+Logical Operators
+Example:
+Note: 
+In addition to these logical operators, MATLAB also has a function xor, which is the exclusive or function.
+Example:
+Operator Precedence Rules:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 92 ===
+
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 93 ===
+Vectors and Matrices
+•
+Used to store sets of values, all of which are the same type.
+•
+The dimensions of a matrix are r x c, where r is the number of rows and c is the number of columns.
+•
+A vector can be either a row vector or a column vector. 
+•
+If a vector has n elements, 
+A row vector would have the dimensions 1 x n
+A column vector would have the dimensions n x 1
+•
+A scalar (one value) has the dimensions 1 x 1
+Examples:
+Scalar
+Column
+Vector
+Row
+Vector
+Matrix
+1 x 1
+3 x 1
+1 x 4
+2 x 3
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 94 ===
+Creating Row Vectors
+Method 1:
+Method 2: Using the Colon Operator 
+Both create a 1 x 4 row vector
+Containing 1, 2, 3 and 4 
+Creates a 1 x 5 row vector
+Containing 1, 2, 3, 4 and 5
+Creates a row vector with all integers from 1 to 9 in steps of 2
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 95 ===
+Creating Column Vectors
+•
+One way to create a column vector is to explicitly put the values in square brackets, separated by 
+semicolons.
+NOTE:
+•
+There is no direct way to use the colon operator to get a column vector.
+•
+Any row vector created using any method can be transposed to result in a column vector. (The rows and
+columns are interchanged.
+•
+For vectors, transposing a row vector results in a column vector, and transposing a column vector
+results in a row vector.
+•
+In MATLAB, the apostrophe is built in as the transpose operator.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 96 ===
+Creating Matrices
+•
+There must always be the same number of values in each row.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 97 ===
+Referring to and Modifying Vector Elements
+•
+The elements in a vector are numbered sequentially; each element number is called the index, or
+subscript.
+•
+In MATLAB, the indices start at 1.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 98 ===
+Referring to and Modifying Matrix Elements
+•
+To refer to matrix elements, the row and then the column subscripts are given in parentheses (always the
+row first and then the column).
+•
+This is called subscripted indexing.
+Refers to the first and second
+rows, second and third columns.
+This creates a matrix variable mat
+and then refers to the value in the 
+second row, third column of mat:
+An individual element in a matrix
+can be modified by assigning a
+new value to it.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 99 ===
+Dimensions
+•
+The length function returns the number of elements in a vector.
+•
+The size function returns the number of rows and columns in a vector or matrix.
+•
+Vector vec has four elements so its
+length is 4.
+•
+It is a row vector, so the size is 1 x
+4.
+•
+The variable r stores the first value returned, which is the
+number of rows.
+•
+The variable c stores the number of columns.
+•
+For a matrix, the length function will return either the number of
+rows or the number of columns, whichever is largest.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 100 ===
+Dimensions
+MATLAB also has a function numel,
+which
+returns
+the
+total
+number
+of
+elements
+in
+any
+array
+(vector
+or
+matrix)
+NOTE:
+•
+For vectors, this is equivalent to the length of the vector. For matrices, it is the product of the number of 
+rows and columns.
+•
+Use either the length or numel function to determine the number of elements in a vector
+•
+Use size (and store the result in two variables) for a matrix.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 101 ===
+Changing Dimensions – Built-in Functions
+1) The reshape function changes the dimensions of a matrix.
+3 x 4
+2 x 6
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 102 ===
+Changing Dimensions – Built-in Functions
+2) The fliplr function “flips” the matrix from left to right (in other words, the leftmost column,
+the first column, becomes the last column and so forth)
+3) The flipud function “flips” up to down.
+3 x 4
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 103 ===
+Changing Dimensions – Built-in Functions
+4) The rot90 function rotates the matrix counterclockwise 90 degrees.
+Example: The value in the top right corner becomes instead the top left corner and the last column
+becomes the first row.
+3 x 4
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 104 ===
+Changing Dimensions – Built-in Functions
+5) The repmat function can be used to create a matrix;
+repmat(mat,m,n) creates a larger matrix that consists of an m x n
+matrix of copies of mat.
+2 x 2
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 105 ===
+Empty Vectors
+•
+An empty vector (a vector that stores no values) can be created using empty square brackets
+•
+Values can then be added to an empty vector by concatenating, or adding, values to the existing vector.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 106 ===
+Deleting Elements from a Vector
+•
+Empty vectors can also be used to delete elements from vectors.
+The elements in this vector are now 
+numbered 1 through 4.
+NOTE: Individual elements cannot be removed from matrices, as matrices always have to have the same
+number of elements in every row.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 107 ===
+Vectors and Matrices as Function Arguments
+•
+In MATLAB an entire vector or matrix can be passed as an argument to a function.
+•
+The function will be evaluated on every element. This means that the result will be the same
+size as the input argument.
+sine in radians of every element of a vector vec
+sign of each element in a matrix
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 108 ===
+Vectors and Matrices as Function Arguments
+More examples:
+Cumulative Sum
+Cumulative Product
+Note: Resulting vector will have the same length as the 
+input vector
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 109 ===
+Vectors and Matrices as Function Arguments
+•
+For matrices, all of these functions operate on every individual column.
+•
+If a matrix has dimensions r x c, the result for the min, max, sum, and prod functions will be
+a 1 x c row vector, as they return the minimum, maximum, sum, or product, respectively, for
+every column.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 110 ===
+Vectors and Matrices as Function Arguments
+•
+To find a function for every row, instead of every column, one method would be to transpose
+the matrix.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 111 ===
+Vectors and Matrices as Function Arguments
+•
+As columns are the default, they are considered to be the first dimension.
+•
+Specifying the second dimension as an argument to one of these functions will result in the function
+operating rowwise.
+•
+The syntax is slightly different; for the sum and prod functions, this is the second argument, whereas for
+the min and max functions it must be the third argument and the second argument must be an empty
+vector.
+•
+Note the difference in the format of the output with these two methods (transposing results in row vectors
+whereas specifying the second dimension results in column vectors).
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 112 ===
+Scalar Operations on Vectors and Matrices
+Scalar Multiplication
+•
+Multiplying every element in a vector or matrix by a scalar (or dividing every element in a vector or a
+matrix by a scalar).
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 113 ===
+Array Operations on Vectors and Matrices
+•
+Array operations are operations that are performed on vectors or matrices term by term or
+element by element.
+•
+The two arrays (vectors or matrices) must be the same size to begin with.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 114 ===
+Array Operations on Vectors and Matrices
+• For any operation that is based on multiplication (which means multiplication, division, and exponentiation),
+a dot must be placed in front of the operator for array operations.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 115 ===
+Array Operations on Vectors and Matrices
+Transpose of a Matrix
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 116 ===
+Matrix Multiplication
+•
+To multiply a matrix A by a matrix B to result in a matrix C, the number of columns of A must be the 
+same as the number of rows of B.
+•
+The resulting matrix C has the same number of rows as A and the same number of columns as B.
+•
+The elements of the matrix C are defined as the sum of products of corresponding elements in
+the rows of A and columns of B.
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 117 ===
+Matrix Multiplication
+Example:
+In MATLAB, the * operator will perform this matrix multiplication:
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 118 ===
+Determinant of a Matrix
+Example:
+•
+Determinant of a matrix is calculated using the det function of MATLAB. Determinant of a matrix
+A is given by det(A).
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 119 ===
+Check Canvas for instructions
+Formative Assessment 1
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 120 ===
+Check Canvas for instructions
+Summative Assessment 1
+=== M1-MAIN-Introduction to Modeling and Simulation.pdf | page 121 ===
+Online:
+www. tutorialspoint.com
+E-Books and Textbooks:
+• Attaway, Stormy (2013). MATLAB ®. A Practical Introduction to Programming
+and Problem Solving Third Edition. Elsevier, Inc.
