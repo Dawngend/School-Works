@@ -4,7 +4,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from notes_lib import Notes
 
-OUT = r"D:\School-Works\Statistical Analysis and Modeling"
+OUT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def m3(n=None):
@@ -33,19 +33,24 @@ def m3(n=None):
              "Each one answers a harder question than the last: What, Why, Will, Should.")
 
     n.h1("The Predictive Analytics Process")
-    n.p("The process has four stages that feed into each other:")
+    n.p("The process starts with three stages, then loops through a three-step cycle until the best model is "
+        "selected:")
     n.numbered([
         "**Project Design:** kickoff meeting, understand the modeling objective, define acceptance criteria, "
         "document data and deployment requirements.",
         "**Data Sampling:** data extraction, apply filters and exclusions, identify external data sources.",
         "**Data Exploration:** exploratory data analysis (EDA), identify data dependencies and correlations, "
         "identify trends or anomalies in the data.",
+        "**Data Modification:** data cleaning, data augmentation and transformation, feature selection.",
+        "**Model Development:** apply different modeling techniques and select the final methodology.",
         "**Model Validation:** model performance review, feedback based on business knowledge and inputs from "
-        "subject matter experts (SMEs), apply different modeling techniques and select the final methodology, "
-        "best model selection.",
+        "subject matter experts (SMEs).",
     ])
-    n.memory("**P-S-E-V: Project design, Sampling, Exploration, Validation.** \"**P**lease **S**end **E**xtra "
-             "**V**alidation.\"")
+    n.p("Data Modification, Model Development, and Model Validation form a cycle that loops back into Project "
+        "Design and best model selection, repeating until the final model is chosen.")
+    n.memory("**P-S-E, then a cycle of M-D-V: Project design, Sampling, Exploration, then Modification, "
+             "Development, Validation.** The last three steps are not one-and-done: they loop back into Project "
+             "Design until the best model is selected.")
 
     n.h1("Defining A Linear Regression Problem")
     n.p("A linear regression problem is defined by two questions: **what is it?** (a relationship between two "
@@ -231,8 +236,10 @@ def m3(n=None):
         ],
         [1.4, 1.9, 3.3],
     )
-    n.memory("**MAE is plain average error. MSE squares it. RMSE un-squares MSE back to normal units. MAPE turns "
-             "MAE into a percentage.** Order of \"harshness\" on big errors: MAE < RMSE < MSE.")
+    n.memory("**MAE averages the absolute errors, in the original units. MSE averages the squared errors, in "
+             "squared units, so it cannot be compared directly to MAE or RMSE. RMSE is the square root of MSE, "
+             "back in the original units. MAPE expresses the average absolute error as a percentage of the "
+             "actual value.**")
     n.watch("**MAPE divides by the actual Y, not the predicted value.** Mixing this up is a common exam trap.")
 
     n.h2("Practice: Read This Output")
@@ -248,7 +255,6 @@ def m3(n=None):
         "3 predictors and n = 140.",
     ])
 
-    n.pagebreak()
     if solo:
         n.save(os.path.join(OUT, "PAMESA - StatAna Summative 2 Reviewer.docx"))
 
@@ -420,6 +426,7 @@ def combined():
         "the midterm reviewer (midterm covers M1 to M4; M1 and M2 are not included here because those slides are "
         "not available yet). The blue boxes are memory aids I made; they are not from the slides.",
     )
+    n.pagebreak()
     n.h1("What Is Inside")
     n.bullets([
         "**Part 1, Module 3:** the four types of analytics, the predictive analytics process, the linear "
@@ -429,15 +436,16 @@ def combined():
         "**Part 2, Module 4:** prescriptive analytics and \"what should we do?\", the evolution of analytics, "
         "the five-step prescriptive process, key technologies, business applications by industry, decision-"
         "making benefits, implementation challenges and solutions, and future trends.",
-        "Each part ends with a one-page cram sheet. Read the cram sheets last, right before the exam.",
+        "A single one-page cram sheet covering both parts comes at the very end. Read it last, right before "
+        "the exam.",
     ])
     n.h2("Fast Memory Map")
     n.table(
         ["Topic", "Hook"],
         [
             ["Four analytics types", "Descriptive, Diagnostic, Predictive, Prescriptive = What, Why, Will, Should"],
-            ["Predictive process", "Please Send Extra Validation (Project design, Sampling, Exploration, "
-             "Validation)"],
+            ["Predictive process", "Project design, Sampling, Exploration, then a cycle of Modification, "
+             "Development, Validation"],
             ["Regression equation", "y = beta x + alpha + epsilon; Y depends, X drives, Beta is the Rate, Alpha "
              "is the Base, Epsilon Evens it out"],
             ["R Square", "0.8937 means 89.37 percent of sales variation explained"],
@@ -464,7 +472,8 @@ def combined():
         [
             ["Four analytics types", "Descriptive (what happened), Diagnostic (why), Predictive (will happen), "
              "Prescriptive (should do)"],
-            ["Predictive process", "Project Design, Data Sampling, Data Exploration, Model Validation"],
+            ["Predictive process", "Project Design, Data Sampling, Data Exploration, then a cycle of Data "
+             "Modification, Model Development, Model Validation"],
             ["Regression equation", "y = beta x + alpha + epsilon"],
             ["Sales example", "y = Sales, x = Ad Spending, beta = Sales Sensitivity, alpha = Baseline Sales"],
             ["Multiple regression", "y = b1x1 + b2x2 + ... + bnxn + alpha + epsilon"],
@@ -480,7 +489,8 @@ def combined():
             ["Coefficient reading", "Holding the other predictors constant"],
             ["p26 vs p28 model", "p26 t-test table keeps all 3 predictors; p28 fitted model drops newspaper and "
              "rounds (2.98, 0.047, 0.178)"],
-            ["MAE / MSE / RMSE / MAPE", "Plain average error / squared error / root of MSE / percent of actual Y"],
+            ["MAE / MSE / RMSE / MAPE", "Average absolute error / average squared error (squared units) / root "
+             "of MSE (original units) / absolute error as a percent of actual Y"],
             ["Prescriptive analytics", "\"What should we do?\"; most advanced, most complex analytics stage"],
             ["Five-step process", "Data Collection, Predictive Modeling, Scenario Analysis, Optimization, Action "
              "Recommendation"],
