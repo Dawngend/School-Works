@@ -166,12 +166,12 @@ def build():
     n.pagebreak()
     n.h1("Module 2: Discrete Event Simulation")
     add(n,"Sets, Functions, And Probability",[
-        "A **set** is a collection without duplicate elements; ∅ is empty. A subset contains only elements of a larger set. Union includes elements in either set; intersection includes elements in both; difference removes the second set; complement includes elements in the sample space outside the set. Finite sets have a terminating count; countable sets can be paired with positive integers.",
-        "**Worked set example:** A={2,4,10}, B={4,6,8,10}, S={2,4,6,8,10,12}. A∪B={2,4,6,8,10}; A∩B={4,10}; A−B={2}; B−A={6,8}; Aᶜ={6,8,12}.",
+        "A **set** is a collection without duplicate elements; the empty set { } has no elements. A subset contains only elements of a larger set. Union includes elements in either set; intersection includes elements in both; difference removes the second set; complement includes elements in the sample space outside the set. Finite sets have a terminating count; countable sets can be paired with positive integers.",
+        "**Worked set example:** A={2,4,10}, B={4,6,8,10}, S={2,4,6,8,10,12}. A union B ={2,4,6,8,10}; A∩B={4,10}; A−B={2}; B−A={6,8}; Aᶜ={6,8,12}.",
         "A function maps each domain element to one codomain element. Its **range** is the outputs actually reached. It is **onto** if range = codomain and **one-to-one** if different inputs have different outputs. An inverse exists when both hold. For f(x)=mx+b over real numbers, m≠0 gives inverse f⁻¹(y)=(y−b)/m; m=0 is constant and has no inverse."
     ])
     n.p("A **probability space (S,A,P)** has a sample space S, a sigma algebra A of events, and a probability measure P. An event is a subset of S. A contains S and is closed under complements and countable unions (therefore intersections). For k outcomes, the full power set has **2^k** events; the slide's finite example uses this full sigma algebra. P maps events to [0,1], P(S)=1, and probabilities add for disjoint events.")
-    n.table(["Three-Sided Die Event","Probability"],[["∅","0"],["{B}","1/6"],["{C}","1/3"],["{D}","1/2"],["{B,C}","1/2"],["{B,D}","2/3"],["{C,D}","5/6"],["S={B,C,D}","1"]],[3.6,2.9])
+    n.table(["Three-Sided Die Event","Probability"],[["{ } (empty set)","0"],["{B}","1/6"],["{C}","1/3"],["{D}","1/2"],["{B,C}","1/2"],["{B,D}","2/3"],["{C,D}","5/6"],["S={B,C,D}","1"]],[3.6,2.9])
     n.p("A **random variable** X maps sample outcomes to real numbers, with {X≤x} an event for each x. Its **CDF** F(x)=P(X≤x), a nondecreasing step function for the die example. For a continuous X, the **PDF** f(x)=dF/dx is nonnegative, integrates to 1, and P(x1<X≤x2)=∫[x1,x2]f(x)dx. A discrete variable has probability masses, not an ordinary continuous density.")
     n.table(["Distribution","Parameters And Use"],[
         ["Uniform(a,b)","Minimum a, maximum b, a<b; values equally likely across a finite interval. Density 1/(b−a)."],
