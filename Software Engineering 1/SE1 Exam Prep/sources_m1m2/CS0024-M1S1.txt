@@ -1,0 +1,183 @@
+
+=== CS0024-M1S1.pdf | page 1 ===
+Module 01
+SOFTWARE ENGINEERING
+=== CS0024-M1S1.pdf | page 2 ===
+Chapter 01
+=== CS0024-M1S1.pdf | page 3 ===
+• It is a set of instructions/codes or computer
+program
+that
+when
+executed
+provides
+desired features, function and performance.
+• They are data structures that enable the
+programs
+to
+adequately
+manipulate
+information (such as databases).
+• It is a collection of computer programs,
+procedures
+and
+documentation
+that
+perform tasks on a computer system.
+=== CS0024-M1S1.pdf | page 4 ===
+•Why does it take long to finish a software?
+•Why are development costs so high?
+•Why can’t we find all errors prior to release?
+•Why spend much time and effort to maintain an existing software?
+•Why do difficulties continue in measuring progress as software is 
+developed and maintain?
+=== CS0024-M1S1.pdf | page 5 ===
+• System Software – it is a collection of programs written to service other
+programs.
+• Application Software – these are usually stand-alone programs that solves
+specific business needs.
+• Engineering/Scientific Software – a broad array of “number crunching”
+programs.
+• Embedded Software – resides within a product or system that is used to
+implement control features for the user and system itself.
+=== CS0024-M1S1.pdf | page 6 ===
+•Product-line Software – designed to provide specific
+capabilities for use by many customers.
+•Web/Mobile Application – network centric applications that
+encompasses browser-based apps and/or mobile apps.
+•Artificial Intelligence Software – makes use of non-
+numerical algorithms to solve complex problems not
+amenable to computation or forward analysis.
+=== CS0024-M1S1.pdf | page 7 ===
+•These are older programs that were developed 
+decades ago.
+•They are continually modified today to meet changes 
+in business requirements and computing platforms.
+•They can be costly to maintain and risky to evolve
+=== CS0024-M1S1.pdf | page 8 ===
+•WebApps – these are sophisticated computing tools
+that not only provide stand-alone function to users,
+but can also integrate databases and corporate
+applications.
+•Mobile Applications – it encompasses a user interface
+that
+takes
+advantage
+of
+the
+unique
+interaction
+mechanisms provided by the mobile platform.
+=== CS0024-M1S1.pdf | page 9 ===
+• Cloud
+Computing
+–
+encompasses
+an
+infrastructure
+or
+“ecosystem”
+that
+enables any user from anywhere or
+anytime to use a computing device to
+share or use computing resources on a
+broad scale.
+• Product Line Software – a set of software-
+intensive systems that share a common,
+managed set of features satisfying the
+specific needs of a particular market
+segment.
+=== CS0024-M1S1.pdf | page 10 ===
+• Software has become deeply embedded in virtually
+every aspect of our lives.
+• The IT requirements demanded by individuals or
+businesses grow in an increasing complex terms.
+• Individuals,
+businesses
+and
+even
+governments
+increasingly rely on software for processes and
+decision making.
+• The perceived values of specific software application
+grows as its user base grows.
+=== CS0024-M1S1.pdf | page 11 ===
+•Engineering – it is a discipline or
+profession of acquiring and applying
+technical, scientific or mathematical
+knowledge to design and implement
+structures, systems and processes to
+realize a desired objective.
+•Software Engineering – is a process or
+collection of methods and an array of
+tools that allow professionals to build
+high quality computer software.
+=== CS0024-M1S1.pdf | page 12 ===
+•It is a systematic, disciplined and quantifiable approach to
+development, operation and maintenance of software.
+•Adaptability and agility are both required.
+•Software Engineering is a layered technology and its
+foundation is the process layer. It is a glue that holds the
+technology layers together and enables rational and
+timely development of computer software.
+=== CS0024-M1S1.pdf | page 13 ===
+TOOLS
+METHODS
+PROCESS
+QUALITY FOCUS
+=== CS0024-M1S1.pdf | page 14 ===
+•Process – is a collection of activities , actions and tasks that are
+performed when some work product is to be created.
+•Activity – strives to achieve a broad objective.
+•Action – a set of tasks that produce major work product.
+•Task – focuses on small, but well defined objectives to produce
+a tangible outcome.
+=== CS0024-M1S1.pdf | page 15 ===
+• Communication – communicate and collaborate with user to understand objectives.
+• Planning – mapping the software project to create guidelines.
+• Modeling – a “sketch” of the project in order to understand the big picture. In other
+words, blueprints or software requirements design.
+• Construction – building of the software project.
+• Deployment – software is delivered to the customer who evaluates and provides
+feedback.
+=== CS0024-M1S1.pdf | page 16 ===
+•Understand the Problem
+• Communication and Analysis (Research)
+•Plan a Solution
+• Modeling and Software Design 
+(Designing)
+•Carry out the Plan
+• Code generation (Programming)
+•Examine the result for accuracy
+• Testing and Quality Assurance (Deliberate)
+=== CS0024-M1S1.pdf | page 17 ===
+•The Reason it all Exists
+• Provide value to its users
+•KISS (Keep It Simple, STUPID!)
+• All design should be as simple as possible, but no simpler.
+•Maintain the Vision
+• It is essential for the success of the software project.
+•What you produce, others Consume
+• Always specify design and implement knowing someone else will have to 
+understand what you do.
+=== CS0024-M1S1.pdf | page 18 ===
+•Be open to the Future
+•Never design yourself in the corner.
+•Plan Ahead for Reuse
+•Reduces the cost and increases value of both reusable 
+components and the system where its incorporated.
+•Think!
+•Practice a complete and clear thought before taking 
+action for better results.
+=== CS0024-M1S1.pdf | page 19 ===
+
+=== CS0024-M1S1.pdf | page 20 ===
+Merriam-Webster. (2019). Merriam-Website Dictionary – “Definition of System”:
+Springfield, MA, USA
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A Practitioner’s
+Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill
+Sommerville, I. F. (2015). Software Engineering. 10th Edition, ISBN-13 978-
+0133943030: Pearson Press
+Wayner, P. (2015). 5 Essential Software Engineering Practices. Retrieved from,
+https:// techbeacon.com/security/5-essential-software-engineering-practices
+=== CS0024-M1S1.pdf | page 21 ===

@@ -1,0 +1,206 @@
+
+=== CS0024-M1S3.pdf | page 1 ===
+Module 01
+SOFTWARE ENGINEERING
+=== CS0024-M1S3.pdf | page 2 ===
+Chapter 03
+=== CS0024-M1S3.pdf | page 3 ===
+•Also referred to as the application development life-cycle, is a process
+for planning, creating, testing, and deploying an information system.
+•The systems development life cycle concept applies to a range of
+hardware and software configurations, as a system can be composed
+of hardware only, software only, or a combination of both.
+•SDLC is used during the development of an IT project and describes
+the different stages involved in the project from the drawing board,
+through the completion of the project.
+=== CS0024-M1S3.pdf | page 4 ===
+•SDLC describes the stages involved in an information
+system development project, from an initial feasibility
+study
+through
+maintenance
+of
+the
+completed
+application. It can apply to technical and non-technical
+systems involving hardware and software.
+•In SDLC, documentation is crucial, regardless of the type
+of model chosen for any application, and is usually done
+in parallel with the development process.
+=== CS0024-M1S3.pdf | page 5 ===
+There are typically seven (7)
+phases of SDLC:
+•Planning;
+•System Analysis;
+•System Design;
+•System Development;
+•System Testing;
+•System Implementation; and
+•System Maintenance.
+=== CS0024-M1S3.pdf | page 6 ===
+•The first phase that identifies whether or not there is the need
+for a new system. This is a preliminary plan (or a feasibility
+study) for a company’s business initiative to acquire the
+resources to build on an infrastructure to modify or improve a
+service.
+•The company might be trying to meet or exceed expectations
+for their employees, customers and stakeholders too. The
+purpose of this step is to find out the scope of the problem and
+determine solutions considering resources, costs, time, benefits
+and other items.
+=== CS0024-M1S3.pdf | page 7 ===
+•The phase where a businesses will work on the source
+of their problem or the need for a change. In the event
+of a problem, possible solutions are submitted and
+analyzed to identify the best fit for the ultimate goal(s)
+of the project.
+•This
+is
+where
+teams
+consider
+the
+functional
+requirements of the project or solution where system
+analysis takes place—or analyzing the needs of end
+users to ensure the new system can meet expectations.
+=== CS0024-M1S3.pdf | page 8 ===
+•Systems analysis is vital in determining what a business’
+needs are, as well as how they can be met, who will be
+responsible for individual pieces of the project, and what
+sort of timeline should be expected.
+•There are several tools businesses can use that are 
+specific to the second phase. They include:
+•CASE (Computer Aided Systems/Software Engineering)
+•Requirements gathering
+•Structured analysis
+=== CS0024-M1S3.pdf | page 9 ===
+•The
+third
+phase
+describes,
+in
+detail,
+the
+necessary
+specifications, features and operations that will satisfy the
+functional requirements of the proposed system which will
+be in place. This is the step for end users to discuss and
+determine their specific business information needs for the
+proposed system.
+•It’s during this phase that they will consider the essential
+components
+(hardware
+and/or
+software)
+structure
+(networking capabilities), processing and procedures for the
+system to accomplish its objectives.
+=== CS0024-M1S3.pdf | page 10 ===
+•The fourth phase is when the real work begins when a
+programmer, network engineer and/or database developer
+are brought on to do the major work on the project.
+•This work includes using a flow chart to ensure that the
+process of the system is properly organized.
+•Additionally, this phase signifies the start of production.
+Focusing on training can be a huge benefit during this phase.
+=== CS0024-M1S3.pdf | page 11 ===
+•The fifth phase involves systems integration and system testing
+(of programs and procedures)—normally carried out by a
+Quality Assurance (QA) professional to determine if the
+proposed design meets the initial goals.
+•Testing may be repeated, specifically to check for errors, bugs
+and interoperability. This testing will be performed until the
+end user finds it acceptable.
+•Another part of this phase is verification and validation, both of
+which will help ensure the program’s successful completion.
+=== CS0024-M1S3.pdf | page 12 ===
+•The sixth phase is when the majority of the code for the
+program is written. Additionally, this phase involves the
+actual installation of the newly-developed system, putting
+the project into production by moving the data and
+components from the old system and placing them in the
+new system via a direct cutover.
+•While this can be a risky and complicated, the cutover
+typically happens during off-peak hours, thus minimizing the
+risk. Both system analysts and end-users should now see the
+realization of the project that has implemented changes.
+=== CS0024-M1S3.pdf | page 13 ===
+•The seventh and final phase involves maintenance,
+regular operations and required updates.
+•This step is when end users can fine-tune the system, if
+they wish, to boost performance, add new capabilities
+or meet additional user requirements.
+•New updates usually requires to look back at the first
+phase, thus beginning the cycle again.
+=== CS0024-M1S3.pdf | page 14 ===
+
+=== CS0024-M1S3.pdf | page 15 ===
+It only looks at software components development 
+planning, technical architecture, software quality 
+testing and deployment of working software.
+It involves end-to-end People, process, Software / 
+Technology deployment. This includes Change 
+Management, training, Organizational updates, also.
+=== CS0024-M1S3.pdf | page 16 ===
+The meaning of the process gets limited to a 
+certain boundary beyond which it ceases to 
+provide relevance.
+It is a much broader term which is a superset to the 
+above and is a larger part of the development phase 
+which includes many other approach and end phases.
+=== CS0024-M1S3.pdf | page 17 ===
+It is about building a software (“only”) in a phased 
+approach systematically. Hence, its just part of the 
+other SDLC, in particular during Development Phase.
+It is about implementing hardware and software in a 
+phased manner systematically. Here both the hardware 
+and the software is considered as a system.
+=== CS0024-M1S3.pdf | page 18 ===
+System Development Life Cycle
+Software Development Life Cycle
+It involves end-to-end People, process, 
+Software/Technology deployment. This includes 
+Change Management, training, Organizational 
+updates, also.
+It only looks at software components 
+development planning, technical architecture, 
+software quality testing and deployment of 
+working software.
+It is a much broader term which is a superset to 
+the above and is a larger part of the development 
+phase which includes many other approach and 
+end phases.
+The meaning of the process gets limited to a 
+certain boundary beyond which it ceases to 
+provide relevance.
+It is about implementing hardware and software 
+in a phased manner systematically. Here both the 
+hardware and the software is considered as a 
+system.
+It is about building a software (“only”) in a 
+phased approach systematically. Hence, its just 
+part of the other SDLC, in particular during 
+Development Phase.
+=== CS0024-M1S3.pdf | page 19 ===
+
+=== CS0024-M1S3.pdf | page 20 ===
+Fernandez, Y., Soria-Ruiz, J., and Macedo, A. (2017). A Software Process
+Framework for Guiding the Construction Specification of Geospatial Databases.
+Journal of Information Technology & Software Engineering, pp. 1-6
+Gillis, A. and Rouse, M. (2019). System Development Life Cycle (SDLC). Retrieved
+from,
+https://searchsoftwarequality.techtarget.
+com/definition/systems-
+development-life-cycle
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A Practitioner’s
+Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill
+=== CS0024-M1S3.pdf | page 21 ===
+Sommerville, I. F. (2015). Software Engineering. 10th Edition, ISBN-13 978-
+0133943030: Pearson Press
+Sundar, K., Pelliter, C., and Narayanan, V., (2015). What is the difference between
+software development life cycle and system development life cycle? Retrieved
+from,
+https://www.quora.com/What-is-the-difference-between-software-
+development-life-cycle-and-system-development-life-cycle
+=== CS0024-M1S3.pdf | page 22 ===

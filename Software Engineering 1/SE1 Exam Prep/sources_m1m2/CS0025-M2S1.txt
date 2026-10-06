@@ -1,0 +1,318 @@
+
+=== CS0025-M2S1.pdf | page 1 ===
+Module 02
+SOFTWARE ENGINEERING
+=== CS0025-M2S1.pdf | page 2 ===
+Chapter 01
+=== CS0025-M2S1.pdf | page 3 ===
+A project is a temporary endeavor designed to produce a
+unique product or service with a defined beginning and end
+(usually time-constrained, and often constrained by funding
+or staffing) undertaken to meet unique goals and objectives,
+to bring about beneficial change or added value.
+It is an activity to meet the creation of a unique product or
+service and thus activities that are undertaken to accomplish
+routine activities cannot be considered projects.
+=== CS0025-M2S1.pdf | page 4 ===
+•
+Schools and Universities
+•
+Civil and Industry (Private)
+•
+Military and State (Government)
+•
+Computer Software (IT-based)
+=== CS0025-M2S1.pdf | page 5 ===
+Project management is the practice of initiating, planning,
+executing, controlling, and closing the work of a team to
+achieve specific goals and meet specific success criteria
+at the specified time.
+The primary challenge of project management is to
+achieve
+all
+of
+the
+project
+goals
+within
+the
+given
+constraints.
+This
+is
+usually
+described
+in
+project
+documentation,
+created
+at
+the
+beginning
+of
+the
+development process.
+=== CS0025-M2S1.pdf | page 6 ===
+A professional in the field of project management, in-charge
+of people and responsibilities such as
+planning, execution,
+controlling, and closing of any project.
+A project
+manager
+needs
+to
+understand
+the
+order
+of
+execution of a project to schedule the project correctly as well
+as the time necessary to accomplish each individual task
+within the project. They are the people accountable for
+accomplishing the stated project objectives.
+=== CS0025-M2S1.pdf | page 7 ===
+Project Management is not a tool or a person, 
+it’s a practice.”
+=== CS0025-M2S1.pdf | page 8 ===
+As a discipline, project management developed from
+several fields of application including civil construction,
+engineering, and heavy defense activity.
+Two forefathers of project management are Henry Gantt,
+called
+the
+father
+of
+planning
+and
+control
+techniques, famous for his use of the ”Gantt Chart”
+and Henri Fayol for his creation of the five management
+functions that form the foundation of the body of knowledge
+associated with project and program management
+=== CS0025-M2S1.pdf | page 9 ===
+Gantt Chart created using Microsoft Project with the red marks indicating the 
+critical path or the longest stretch of the project
+=== CS0025-M2S1.pdf | page 10 ===
+The 1950s marked the beginning of the modern project
+management era where core engineering fields come
+together to work as one. Project management became
+recognized
+as
+a
+distinct
+discipline
+arising
+from
+the
+management discipline with engineering mode.
+At that time, two mathematical project-scheduling models
+were developed, the “Critical Path Method" (CPM) and the
+“Program/Project
+Evaluation
+and
+Review
+Technique"
+(PERT).
+=== CS0025-M2S1.pdf | page 11 ===
+A PERT chart is a project management tool used to
+schedule, organize, and coordinate tasks within a
+project.
+It is basically a method to analyze the tasks involved
+in completing a given project, especially the time
+needed to complete each task, and to identify the
+minimum time needed to complete the total project.
+=== CS0025-M2S1.pdf | page 12 ===
+
+=== CS0025-M2S1.pdf | page 13 ===
+Project management methods can be applied to any
+project. It is often customized to a specific type of project
+based on size, nature and industry.
+For example, the construction industry, which focuses on
+the delivery of things like buildings, roads, and bridges,
+has
+developed
+its
+own
+specialized
+form
+of
+project
+management that it refers to as construction project
+management and in which project managers can become
+trained and/or certified.
+=== CS0025-M2S1.pdf | page 14 ===
+Plan: The planning and forecasting activities.
+Process: The overall approach to all activities and project
+governance.
+People: Including dynamics of how they collaborate and
+communicate.
+Power: Lines of authority, decision-makers, organograms,
+policies for implementation and the like.
+=== CS0025-M2S1.pdf | page 15 ===
+• Integration
+• Scope
+• Time
+• Cost
+• Quality
+• Procurement
+• Human resources
+• Communications
+• Risk management
+• Stakeholder management
+=== CS0025-M2S1.pdf | page 16 ===
+• Initiation;
+• Planning and design;
+• Execution;
+• Monitoring and 
+Controlling;
+• Closing or Completion.
+=== CS0025-M2S1.pdf | page 17 ===
+The initiating processes determine the nature and scope of
+the project. If this stage is not performed well, it is unlikely
+that the project will be successful in meeting the business’
+needs.
+The key project controls needed here are an understanding
+of the business environment and making sure that all
+necessary controls are incorporated into the project. Any
+deficiencies should be reported and a recommendation
+should be made to fix them.
+=== CS0025-M2S1.pdf | page 18 ===
+
+=== CS0025-M2S1.pdf | page 19 ===
+After the initialization, the project is planned to an
+appropriate level of detail. The main purpose is to plan
+time, cost and resources adequately to estimate the work
+needed and to effectively manage risk during project
+execution.
+As
+with
+the
+initiation
+process
+group,
+a
+failure
+to
+adequately plan greatly reduces the project's chances of
+successfully accomplishing its goals.
+=== CS0025-M2S1.pdf | page 20 ===
+While executing, one must know what are the planned
+terms to be executed. The implementation phase
+ensures
+that
+the
+project
+management
+plan's
+deliverables are executed accordingly.
+This phase involves proper allocation, co-ordination
+and management of human resources and any other
+resources such as material and budget. The output of
+this phase are the project deliverables.
+=== CS0025-M2S1.pdf | page 21 ===
+
+=== CS0025-M2S1.pdf | page 22 ===
+Monitoring and controlling consists of those processes
+performed to observe project execution so that potential
+problems can be identified in a timely manner and
+corrective action can be taken, when necessary, to
+control the execution of the project.
+The key benefit is that project performance is observed
+and measured regularly to identify variances from the
+project management plan.
+=== CS0025-M2S1.pdf | page 23 ===
+
+=== CS0025-M2S1.pdf | page 24 ===
+Closing includes the formal acceptance and ending of
+the project. Administrative activities include the archiving
+of the files and documentation. This phase consists of:
+• Contract closure: Complete and settle each contract
+(including the resolution of any open items) and close
+each contract applicable to the project or phase.
+• Project close: Finalize all activities across all of the
+process groups to formally close the project or phase.
+=== CS0025-M2S1.pdf | page 25 ===
+
+=== CS0025-M2S1.pdf | page 26 ===
+Documenting everything within a project is key to being
+successful. To maintain budget, scope, effectiveness and
+pace a project must have physical documents pertaining
+to each specific task.
+With correct documentation, it is easy to see whether or
+not a project's requirement has been met. To go along
+with that, documentation provides information regarding
+what has already been completed for that project.
+=== CS0025-M2S1.pdf | page 27 ===
+Documentation
+throughout
+a
+project
+provides
+a
+documented trail for anyone who needs to go back and
+reference
+the
+work
+in
+the
+past.
+In
+most
+cases,
+documentation is the most successful way to monitor
+and control the specific phases of a project.
+With the correct documentation, a project's success can
+be tracked and observed as it goes on. If performed
+correctly, it can be the backbone to a project's success.
+=== CS0025-M2S1.pdf | page 28 ===
+• Projects should always have a specific start 
+and end dates;
+• They are performed and completed by a group 
+of people working as one;
+• The output should deliver a working/unique 
+product or service;
+• They are temporary in nature; and
+• They are progressively elaborated.
+=== CS0025-M2S1.pdf | page 29 ===
+Project Tracking and Control – assess the progress of the
+project plan.
+Risk Management – assess risks that may affect the product
+outcome.
+Quality Assurance – conduct activities to ensure product quality.
+Technical Review – assess the work product to identify errors
+beforehand.
+=== CS0025-M2S1.pdf | page 30 ===
+Measurement – defines and collects process to deliver and meet the
+needs of the stakeholders.
+Configuration Management – manages the effects of changes in the
+software process.
+Reusability Management – defines criteria to establish mechanisms
+for reusable components.
+Work Product Preparation and Production – it encompasses activities
+required to create work products such as models or documentation.
+=== CS0025-M2S1.pdf | page 31 ===
+
+=== CS0025-M2S1.pdf | page 32 ===
+Cleland, D. I. (2006). Global Project Management Handbook. ISBN 0-07-146045-4: Mc
+Graw-Hill Professional
+Juneja,
+P.
+(2019).
+What
+is
+a
+Project?
+Retrieved
+from,
+https://
+www.managementstudyguide.com/what-is-project.htm
+Mesly, O. (2017). Project Feasibility: Tools for Uncovering Points of Vulnerability. ISBN
+978-1498757911: CRC Press, NY
+Philips, J. (2018). PMP Project Management Professional Study Guide. 5th Edition,
+ISBN-13 978-1259861987: Mc Graw-Hill
+=== CS0025-M2S1.pdf | page 33 ===
+PMI (2017). A Guide to the Project Management Body of Knowledge. 6th Edition, ISBN-
+978-1628251845: Project Management Institute
+Sebastian, N. (2008). The Definitive Guide to Project Management: The Fast Track to
+Getting the Job Done on Time and on Budget. 2nd Edition, ISBN-13 978-0273710974: FT
+Press
+=== CS0025-M2S1.pdf | page 34 ===

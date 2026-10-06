@@ -1,0 +1,64 @@
+
+=== CS0025-M2S0.pdf | page 1 ===
+Module 02
+SOFTWARE ENGINEERING
+=== CS0025-M2S0.pdf | page 2 ===
+Chapter 01
+=== CS0025-M2S0.pdf | page 3 ===
+• Understand what is a project
+• Differentiate Gantt and PERT charts
+• Identify and define Project Management 
+approach and its phases
+=== CS0025-M2S0.pdf | page 4 ===
+• What is a project?
+• Project Management
+• Gantt and PERT Charts
+• Four Ps Approach
+• Project Management Approach 
+and Phases
+• Project Documentation and 
+Characteristics
+• Umbrella Activities
+=== CS0025-M2S0.pdf | page 5 ===
+Chapter 02
+=== CS0025-M2S0.pdf | page 6 ===
+• Differentiate Analysis from Synthesis
+• Understand the application of Systems 
+Analysis 
+• Apply the research areas of CS in project 
+management
+=== CS0025-M2S0.pdf | page 7 ===
+• Analysis and Synthesis
+• System Analysis Phase 
+and Procedure
+• Computer Science 
+Research Trends
+=== CS0025-M2S0.pdf | page 8 ===
+Cleland, D. I. (2006). Global Project Management Handbook. ISBN 0-07-146045-4: Mc
+Graw-Hill Professional
+Frot, M. (2019). 5 Trends in Computer Science Research. Retrieved from, https://
+www.topuniversities.com/courses/computer-science-information-systems/5-trends-
+computer-science-research
+Juneja,
+P.
+(2019).
+What
+is
+a
+Project?
+Retrieved
+from,
+https://
+www.managementstudyguide.com/what-is-project.htm
+Mesly, O. (2017). Project Feasibility: Tools for Uncovering Points of Vulnerability. ISBN
+978-1498757911: CRC Press, NY
+=== CS0025-M2S0.pdf | page 9 ===
+Philips, J. (2018). PMP Project Management Professional Study Guide. 5th
+Edition, ISBN-13 978-1259861987: Mc Graw-Hill
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A Practitioner’s
+Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill Press
+PMI (2017). A Guide to the Project Management Body of Knowledge. 6th Edition, ISBN-
+978-1628251845: Project Management Institute
+Sebastian, N. (2008). The Definitive Guide to Project Management: The Fast Track to
+Getting the Job Done on Time and on Budget. 2nd Edition, ISBN-13 978-0273710974: FT
+Press

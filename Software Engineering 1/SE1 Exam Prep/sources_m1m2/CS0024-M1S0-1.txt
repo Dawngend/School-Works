@@ -1,0 +1,100 @@
+
+=== CS0024-M1S0-1.pdf | page 1 ===
+Module 01
+SOFTWARE ENGINEERING
+=== CS0024-M1S0-1.pdf | page 2 ===
+Chapter 01
+=== CS0024-M1S0-1.pdf | page 3 ===
+•
+Understand Software Engineering fundamentals
+•
+Identify and define legacy and infant software
+•
+Understand software realities, process framework 
+and principles
+=== CS0024-M1S0-1.pdf | page 4 ===
+•
+What is Software?
+•
+Software Guidelines
+•
+Software Categories
+•
+Legacy Software
+•
+Infant Software
+•
+Software Realities
+•
+Software Engineering
+•
+Software Process Framework
+•
+Software Engineering Principles
+=== CS0024-M1S0-1.pdf | page 5 ===
+Chapter 02
+=== CS0024-M1S0-1.pdf | page 6 ===
+• Identify the types of information systems
+• Differentiate types of information systems
+• Define what is system software
+=== CS0024-M1S0-1.pdf | page 7 ===
+• Systems and Types
+• Information Systems
+• IS Activities and Resource 
+Approach
+• Information Management
+• IS Business Perspective and 
+Key Components
+• Types of Information Systems
+=== CS0024-M1S0-1.pdf | page 8 ===
+Chapter 03
+=== CS0024-M1S0-1.pdf | page 9 ===
+• Define what is System Development Life Cycle
+• Apply the use of SDLC methodology 
+• Compare and contrast System Development Life 
+Cycle and Software Development Life Cycle
+=== CS0024-M1S0-1.pdf | page 10 ===
+• What is SDLC?
+• SDLC Phases
+• System Development Life 
+Cycle vs. Software 
+Development Life Cycle
+=== CS0024-M1S0-1.pdf | page 11 ===
+Arduin, P.E. (2015). Information and Knowledge Systems. Hoboken, New Jersey: John
+Wiley and Sons, Inc.
+Fernandez, Y., Soria-Ruiz, J., and Macedo, A. (2017). A Software Process Framework for
+Guiding the Construction Specification of Geospatial Databases. Journal of Information
+Technology & Software Engineering, pp. 1-6
+Gillis, A. and Rouse, M. (2019). System Development Life Cycle (SDLC). Retrieved from,
+https://searchsoftwarequality.techtarget.
+com/definition/systems-development-life-
+cycle
+Mendoza, E.D. (2015). Worktext in Information System. Manila: Mindshapers Co., Inc.
+=== CS0024-M1S0-1.pdf | page 12 ===
+Merriam-Webster. (2019). Merriam-Website Dictionary – “Definition of
+System”: Springfield, MA, USA
+Piccoli, G., Pigni, F. (2018). Information Systems for Managers: with Cases. 4th
+Edition, ISBN 978-1-943153-50-3: Prospect Press
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A
+Practitioner’s Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill
+Reddy,
+V.
+(2018).
+Types
+of
+Information
+Systems.
+Retrieved
+from,
+https://edugeneral.org/ blog/business/types-of-information-systems/
+=== CS0024-M1S0-1.pdf | page 13 ===
+Sommerville, I. F. (2015). Software Engineering. 10th Edition, ISBN-13 978-
+0133943030: Pearson Press
+Sundar, K., Pelliter, C., and Narayanan, V., (2015). What is the difference
+between software development life cycle and system development life
+cycle? Retrieved from, https://www.quora.com/What-is-the-difference-
+between-software-development-life-cycle-and-system-development-life-
+cycle
+Wayner, P. (2015). 5 Essential Software Engineering Practices. Retrieved
+from, https:// techbeacon.com/security/5-essential-software-engineering-
+practices

@@ -1,0 +1,245 @@
+
+=== CS0025-M2S2.pdf | page 1 ===
+Module 02
+SOFTWARE ENGINEERING
+=== CS0025-M2S2.pdf | page 2 ===
+Chapter 02
+=== CS0025-M2S2.pdf | page 3 ===
+Analysis is defined as "the procedure by which we break
+down an intellectual or substantial whole into parts," while
+synthesis means "the procedure by which we combine
+separate elements or components in order to form a
+coherent
+whole.“
+System
+analysis
+researchers
+apply methodology to the systems involved, forming an
+overall picture.
+=== CS0025-M2S2.pdf | page 4 ===
+It is the process of studying a procedure or business in
+order
+to
+identify
+its
+goals
+and
+purposes
+and
+create systems and procedures that will achieve them in
+an efficient way.
+It is also a problem-solving technique that breaks down a
+system into its component pieces for the purpose of the
+studying how well those component parts work and
+interact to accomplish their purpose.
+=== CS0025-M2S2.pdf | page 5 ===
+The analysis phase involves gathering requirements for the
+system. At this stage, business needs are studied with the
+intention of making business processes more efficient.
+The system analysis phase focuses on what the system
+will do in an effort that views all stakeholders, as viable
+sources of information. In the analysis phase, a significant
+amount of time is spent talking with stakeholders and
+reviewing the stakeholder’s input
+=== CS0025-M2S2.pdf | page 6 ===
+1. Scope Definition: Clearly defined objectives and
+requirements
+necessary
+to
+meet
+a
+project's
+requirements as defined by its stakeholders
+2. Problem analysis: the process of understanding
+problems and needs and arriving at solutions that
+meet them
+3. Requirements analysis: determining the conditions
+that need to be met
+=== CS0025-M2S2.pdf | page 7 ===
+4. Logical
+design:
+looking
+at
+the
+logical
+relationship among the objects
+5. Decision analysis: making a final decision
+=== CS0025-M2S2.pdf | page 8 ===
+
+=== CS0025-M2S2.pdf | page 9 ===
+Computer science graduates have some of the highest
+starting salaries out there and are in such high demand
+that they can afford to be picky about the type of job and
+industry they opt for.
+If you are interested in pursuing a career in computer
+science, it’s important to stay up to date with the latest
+trends
+in
+computer
+science
+research,
+to
+make
+an
+informed choice about where to head next.
+=== CS0025-M2S2.pdf | page 10 ===
+• Artificial intelligence and robotics
+• Big data analytics
+• Computer-assisted education
+• Bioinformatics
+• Cyber security
+=== CS0025-M2S2.pdf | page 11 ===
+Artificial intelligence (AI) is one of the most controversial
+and intriguing areas of computer science research. The
+technology is still in its early stages, but tech giants like
+Facebook, Google and IBM are investing huge amounts
+of money and resources into AI research.
+There’s certainly no shortage of opportunities to develop
+real-world applications of the technology, and there’s
+immense scope for break-through moments in this field.
+=== CS0025-M2S2.pdf | page 12 ===
+• The Lottery Ticket Hypothesis: Finding Sparse, Trainable
+Neural Networks
+• Challenging Common Assumptions in the Unsupervised
+Learning of Disentangled Representations
+• Meta-Learning
+Update
+Rules
+for
+Unsupervised
+Representation Learning
+=== CS0025-M2S2.pdf | page 13 ===
+There has been a surge in demand for experts in this
+field and doubled efforts on the part of brands and
+agencies to boost salaries and attract data science
+talents.
+From banking to healthcare, big data analytics is
+everywhere, as companies increasingly attempt to
+make better use of the enormous datasets they have, in
+order to personalize and improve their services.
+=== CS0025-M2S2.pdf | page 14 ===
+•
+An integrated parallel big data decision support tool using the 
+W-CLUS-MCDA: A multi-scenario personnel assessment
+•
+Effect of E-customization Capability on Financial Performance 
+of Commercial Banks in Kenya
+•
+Interaction of East Bay Area Voters with California Death 
+Penalty Ballot Initiatives: a Study
+•
+Command Decision: Ethical Leadership In The Information 
+Environment
+=== CS0025-M2S2.pdf | page 15 ===
+The use of computers and software to assist education
+and/or training, computer-assisted education brings many
+benefits and has many uses. For students with learning
+disabilities,
+for
+instance,
+it
+can
+provide
+personalized
+instruction and enable students to learn at their own pace,
+freeing the teacher to devote more time to each individual.
+The field is still growing but promising, with many educators
+praising its ability to allow students to engage in active,
+independent and play-based learning.
+=== CS0025-M2S2.pdf | page 16 ===
+•
+Qualitative case studies of innovative pedagogical practices using 
+ICT
+•
+What strategies are effective for formative assessment in an e-
+learning environment?
+•
+Web-based Assessment and Test Analyses (WATA) system: 
+development and evaluation
+•
+Computer-Assisted Learning in Orthodontic Education: A 
+Systematic Review and Meta-Analysis
+=== CS0025-M2S2.pdf | page 17 ===
+An application of big data, bioinformatics, or the use of
+programming
+and
+software
+development
+to
+build
+enormous
+datasets
+of
+biological
+information
+carries
+enormous potential.
+For example, linking big pharmaceutical companies with
+software
+companies,
+bioinformatics
+offers
+good
+job
+prospects
+for
+computer
+science
+researchers
+and
+graduates
+interested
+in
+biology,
+medical
+technology,
+pharmaceuticals and computer information science.
+=== CS0025-M2S2.pdf | page 18 ===
+•
+A Survey for Escherichia coli Virulence Factors in 
+Asymptomatic Free-Ranging Parrots
+•
+Immunoreactivity of the 14F7 Mab Raised against N-Glycolyl
+GM3 Ganglioside in Epithelial Malignant Tumors from Digestive 
+System
+•
+Investigating the effects of external fields polarization on the 
+coupling of pure magnetic waves in the human body in very low 
+frequencies
+=== CS0025-M2S2.pdf | page 19 ===
+We live in a hyper-connected world, in which
+absolutely everything – from banking to dating to
+governmental infrastructure – is done online.
+In today’s world, data protection is no longer
+optional, for either individuals or nations, making
+this another growing strand of computer science
+research.
+=== CS0025-M2S2.pdf | page 20 ===
+• Intelligence Gathering And
+Social Media-Based
+Sentiment Correlation
+• High
+Accuracy
+Phishing
+Detection
+Based
+on
+Convolutional Neural Networks
+• Understanding
+Security
+Policies
+in
+the
+Cyber
+Warfare Domain Through System Dynamics
+=== CS0025-M2S2.pdf | page 21 ===
+
+=== CS0025-M2S2.pdf | page 22 ===
+Frot, M. (2019). 5 Trends in Computer Science Research. Retrieved from, https://
+www.topuniversities.com/courses/computer-science-information-systems/5-trends-
+computer-science-research
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A Practitioner’s
+Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill Press
+Sommerville, I. F. (2015). Software Engineering. 10th Edition, ISBN-13 978-0133943030:
+Pearson Press
+=== CS0025-M2S2.pdf | page 23 ===

@@ -1,0 +1,179 @@
+
+=== CS0024-M1S2.pdf | page 1 ===
+Module 01
+SOFTWARE ENGINEERING
+=== CS0024-M1S2.pdf | page 2 ===
+Chapter 02
+=== CS0024-M1S2.pdf | page 3 ===
+•It is a set of processes or integrated parts with entities each
+performing specific functions.
+•It is a set of interacting or interdependent entities, real or abstract,
+forming an integrated whole.
+•The concept of an “integrated whole” can also be stated in terms of a
+system embodying a set of relationships which are differentiated from
+relationships of the set to other elements, and from relationships
+between an element of the set and elements not a part of the
+relational regime.
+=== CS0024-M1S2.pdf | page 4 ===
+•Open Systems or probabilistic systems are those in
+which outputs or results can’t be determined precisely
+but can only be guessed. One can’t predict such
+occurrences until the actual event arrives.
+•Closed Systems on the other hand can be predicted
+with certainty. The measurement of the given input will
+actual let the output be predictable as it appears to be.
+=== CS0024-M1S2.pdf | page 5 ===
+•It is a set of interrelated components that collect, store, process
+and help analyze, support decision-making and perform control
+functions in an organization.
+•It handles the flow and maintenance of information that supports
+a business or some other operation.
+•It is the system of people, data records and activities that process
+the data and information in a given organization, including
+manual processes or automated processes.
+=== CS0024-M1S2.pdf | page 6 ===
+Input – starts off with acquisition of raw 
+data and is then introduced to the 
+system.
+Process – involves data processing, 
+classifying, and arranging, calculating 
+data.
+Output – the processed data becomes 
+and information.
+Feedback – the evaluation.
+=== CS0024-M1S2.pdf | page 7 ===
+
+=== CS0024-M1S2.pdf | page 8 ===
+•The system is managing information in its own way.
+•Focusing on information, any kind of data presented in a
+form which is understandable or meaningful and helps
+make decisions.
+•Today, Information Technology Enabled Services (ITES)
+consider information as a “utility”, just like electricity or
+telephone, and the key factor is business strategy.
+=== CS0024-M1S2.pdf | page 9 ===
+•Accuracy
+•Timeliness
+•Less Uncertainty
+•An element of surprise value
+•Should aid in decision-
+making
+•Should update knowledge
+=== CS0024-M1S2.pdf | page 10 ===
+
+=== CS0024-M1S2.pdf | page 11 ===
+
+=== CS0024-M1S2.pdf | page 12 ===
+•Data – consists of raw facts and is an important component of an IS. It 
+has two sources: external and internal.
+•Database – is a collection of all relevant and related organized data in an 
+integrated file.
+•Process – is an important component of IS that generates the most useful 
+information for decision-making.
+•Information – consists of analyzed facts that was processed from a data 
+source and is an output of an IS.
+=== CS0024-M1S2.pdf | page 13 ===
+1. Transaction Processing System; (TPS)
+2. Decision Support System; (DSS)
+3. executive Information System; (EIS)
+4. Management Information System; (MIS)
+5. Workflow System;
+6. Enterprise Resource Planning; (ERP) and
+7. Expert Systems.
+=== CS0024-M1S2.pdf | page 14 ===
+•It is used primarily for record keeping which is required
+in any organization to conduct the business.
+•TPS is used for periodic report generation in a
+scheduled manner. It is also used for producing reports
+on demand as well as exception reports.
+•Examples of TPS are sales order entry, payroll, and
+shipping records etc.
+=== CS0024-M1S2.pdf | page 15 ===
+•It serves the management of an organization. It has sophisticated data
+analysis tools, which support and assist all aspects of problem-specific
+decision-making.
+•DSS may use data from external sources such as current stock prices to
+enhance decision-making. It is used when the problem is complex and
+the information needed to make the best decision is difficult to obtain
+and use.
+•DSS is developed with the help of decision-makers in an organization
+and helps in the appropriate decision-making process and does not
+make any decision.
+=== CS0024-M1S2.pdf | page 16 ===
+•It is also called the Executive Support System. Senior managers
+of an organization use the EIS. Therefore, it must be easy to use
+so that executives can use it without any assistance.
+•EIS can do trend analysis, exception reporting and have drill-
+down capabilities. The results are usually presented in a
+graphical form tailored to the executive’s information needs.
+•EIS has online analysis tools and they access a broad range of
+internal and external data.
+=== CS0024-M1S2.pdf | page 17 ===
+•It provides the management routine summary of basic
+operations of the organization. The essential services are
+recorded by the TPS of the organization and MIS consolidates
+the data on sales, production etc.
+•MIS provides routine information to managers and decision
+makers. The primary objective behind installing an MIS in the
+organization is to increase operational efficiency.
+•MIS may support marketing, production, finance, etc.
+=== CS0024-M1S2.pdf | page 18 ===
+•It is a rule-based management system that directs,
+coordinates
+and
+monitors
+the
+execution
+of
+an
+interrelated set of tasks arranged to form a business
+process.
+•A workflow system may be Internet-based and may be
+combined with e-mail. A workflow system may be
+based on server architecture that may use a database
+or file server.
+=== CS0024-M1S2.pdf | page 19 ===
+•There are three types of workflow software. They are:
+•Administrative Workflow Systems – focus on the tracking of
+expense reports, travel requests, messages;
+•Ad-hoc Workflow System – deals with the shaping of
+product, sales proposals and strategic plans; and
+•Production Workflow Systems – are concerned with
+mortgage loans and insurance claims.
+=== CS0024-M1S2.pdf | page 20 ===
+•Enterprise Resource Planning (ERP) system is a business
+process management software that allows an organization
+to use a system of integrated programs capable of
+managing a company’s vital business operations for an
+entire multi-site, global organization.
+•Expert Systems have the ability to make suggestions and
+act like an expert in a particular field of an organization.
+An expert system has an extensive knowledge base.
+=== CS0024-M1S2.pdf | page 21 ===
+
+=== CS0024-M1S2.pdf | page 22 ===
+Arduin, P.E. (2015). Information and Knowledge Systems. Hoboken, New Jersey:
+John Wiley and Sons, Inc.
+Fernandez, Y., Soria-Ruiz, J., and Macedo, A. (2017). A Software Process Framework
+for Guiding the Construction Specification of Geospatial Databases. Journal of
+Information Technology & Software Engineering, pp. 1-6
+Mendoza, E.D. (2015). Worktext in Information System. Manila: Mindshapers Co.,
+Inc.
+Piccoli, G., Pigni, F. (2018). Information Systems for Managers: with Cases. 4th
+Edition, ISBN 978-1-943153-50-3: Prospect Press
+=== CS0024-M1S2.pdf | page 23 ===
+Pressman, R. S. and Maxim, B. R. (2020). Software Engineering – A
+Practitioner’s Approach. 9th Edition, ISBN-13 9781259872976: Mc Graw-Hill
+Reddy,
+V.
+(2018).
+Types
+of
+Information
+Systems.
+Retrieved
+from,
+https://edugeneral.org/ blog/business/types-of-information-systems/
+Sommerville, I. F. (2015). Software Engineering. 10th Edition, ISBN-13 978-
+0133943030: Pearson Press
+=== CS0024-M1S2.pdf | page 24 ===
