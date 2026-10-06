@@ -1,0 +1,100 @@
+
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 1 ===
+Diagnostic Analytics & 
+Statistical Inference
+CS0073
+Module 2 Submodule 1
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 2 ===
+Subtopic 1
+After this submodule, the learner should be able to:
+1. Students will be able to define and explain the concept of diagnostic analytics 
+and its functions in data analysis.
+2. Students will be able to perform and interpret results from various hypothesis 
+tests, such as the Chi-Square Test of Independence, T-Test, and One-Way 
+Analysis of Variation (ANOVA)
+Diagnostic Analytics
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 3 ===
+Diagnostic Analytics
+Why did it happen based on the data?
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 4 ===
+Diagnostic Analytics
+DESCRIPTIVE ANALYTICS
+DIAGNOSTIC ANALYTICS
+Uses historical data
+Uses historical data
+Reconfigures data into easily read format
+Identifies data anomalies
+Describe current performance / outcome
+Highlights data trends and relationships
+Learns from the past
+Investigates underlying drivers
+Answer “what” questions
+Answer “why” questions
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 5 ===
+Functions of Diagnostic Analytics
+Identify Anomalies
+Drill into analytics (discovery)
+Determine casual relationships
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 6 ===
+•
+Which factors move together?
+❑Correlation Coefficient
+•Are there differences in distribution?
+❑Categorical Distributions (Chi-Square)
+•Are two populations similar?
+❑Analysis of Variance (ANOVA, F-Test)
+❑Analysis of Means (Z-test, T-test)
+Diagnostic Analytics
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 7 ===
+Association
+▪
+Refers to the general relationship 
+between two random variables
+Association vs. Correlation
+Associated
+Not associated
+Correlation
+▪
+Measure of association
+▪
+Refers to a linear relationship two 
+variables
+Positive 
+Correlation
+Negative 
+Correlation
+No 
+Correlation
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 8 ===
+Association
+▪
+Refers to the general relationship 
+between two random variables
+Association vs. Correlation
+Associated
+Not associated
+Correlation
+▪
+Measure of association
+▪
+Refers to a linear relationship two 
+variables
+Positive 
+Correlation
+Negative 
+Correlation
+No 
+Correlation
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 9 ===
+
+=== M2-Diagnostic Analytics & Statistical Inference.pdf | page 10 ===
+1.
+SPARTA (2024). SP801: Statistical Analysis and Modeling using Excel. Linang: Development Academy of 
+the Philippines. https://linang.dap.edu.ph.
+2. SPARTA (2024). SP802: Statistical Analysis and Modeling Using SQL and Python 2024 Linang: 
+Development Academy of the Philippines. https://linang.dap.edu.ph.
+3. Gupta, A. (2020, December 24). How to add data analysis in Excel: The best guide [2023 edition]. 
+Simplilearn.com. https://www.simplilearn.com/tutorials/excel-tutorial/data-analysis-excel
+4. Advanced SQL for data analytics (step-by-step tutorial). (2022, December 1). CareerFoundry. 
+https://careerfoundry.com/en/blog/data-analytics/advanced-sql/
+References

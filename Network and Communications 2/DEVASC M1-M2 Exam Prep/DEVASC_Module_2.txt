@@ -1,0 +1,167 @@
+
+=== DEVASC_Module_2.pdf | page 1 ===
+Module 2: The DevNet Developer 
+Environment
+DevNet Associate v1.0
+=== DEVASC_Module_2.pdf | page 2 ===
+9
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Module Objectives
+Module Title: The DevNet Developer Environment
+Module Objective: Implement a development environment using DevNet resources.
+Topic Title
+Topic Objective
+DevNet Overview
+Explain how DevNet encourages communities of network 
+programmers.
+Exploring DevNet Online Resources
+Investigate DevNet online resources.
+=== DEVASC_Module_2.pdf | page 3 ===
+10
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+2.1  DevNet Overview
+=== DEVASC_Module_2.pdf | page 4 ===
+11
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+The DevNet Developer Environment
+What is DevNet?
+DevNet is a fully-integrated developer program comprising a website, an interactive developer 
+community, coordinated developer tools, integrated discussion forums, and sandboxes. It 
+consists of the following features:
+• Learning Labs - Self-paced tutorials that covers topics from basic coding to using REST 
+APIs with various technologies
+• Sandboxes - Production-like development and testing environments for a host of 
+technologies
+• Code Exchange - A repository of sample code written by other developers
+• Developer support - Support for developer related issues through tickets, live chats, and 
+forums
+• Developer documentation - A central location for all of the product developer API 
+documentation
+=== DEVASC_Module_2.pdf | page 5 ===
+12
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+2.2  Exploring DevNet 
+Online Resources
+=== DEVASC_Module_2.pdf | page 6 ===
+13
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+Getting Started with DevNet Resources
+DevNet provides developers a starting point for all Cisco APIs, including API documentation, 
+education, and developer support. 
+To get an overview of DevNet, visit the DevNet Home page at developer.cisco.com
+The site offers the 
+following:
+• Start Now
+• Learning Tracks
+• Video Course
+• Sandbox
+• Code Exchange
+• Ecosystem Exchange
+=== DEVASC_Module_2.pdf | page 7 ===
+14
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+DevNet Learning Labs
+DevNet Learning Labs provide:
+• Tutorials – Cover engineering technologies, programming languages, and concepts such as 
+model-driven programmability, REST APIs, Python, and JavaScript. 
+• A walk-through for using a DevNet Sandbox - A pre-configured environment that is already 
+installed with Cisco platforms.
+DevNet Learning Labs also enables you to:
+• Set up a development environment - For practicing tasks on a local computer
+• Mimic the overall DevNet site - Using tutorials on coding, collaboration, IoT, data centre, 
+mobility (mobile and wireless), and networking.
+=== DEVASC_Module_2.pdf | page 8 ===
+15
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+DevNet Sandbox
+DevNet offers a host of sandboxes that enables hands-on exploration of software and APIs.
+=== DEVASC_Module_2.pdf | page 9 ===
+16
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+DevNet Exchanges
+DevNet provides multiple ways for community members to share with each other. These are 
+called Exchanges. 
+Currently, the following exchanges are available:
+• Automation Exchange – This exchange provides a collection of network automation use 
+cases with different solutions and toolkits.
+• Code Exchange – This exchange is a repository of source code or tools. It uses the GitHub 
+API, as well as human moderators, to categorize and display hundreds of related 
+repositories.
+• Ecosystem Exchange – In this exchange, one can find over 1,500 solutions across different 
+technologies, industries, and geographies to begin solution design and development.
+=== DEVASC_Module_2.pdf | page 10 ===
+17
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+Find a Use Case in Automation Exchange
+• The Automation Exchange provides various use cases for network automation that include:
+• Listing of data 
+• Adding configurations
+• Activating policies across domains, users, or devices
+• The listings are for different tool sets such as Ansible or Puppet, and different infrastructure 
+scenarios, such as: 
+•
+Campus or Branch 
+•
+Data Centre
+•
+Service Provider
+=== DEVASC_Module_2.pdf | page 11 ===
+18
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+DevNet Developer Support
+DevNet offers developer support and can help troubleshoot integrations, API connections, 
+and other specialty questions about developer use cases on Cisco products. 
+Visit the website developer.cisco.com/support for more information.
+One can get support 
+by:
+• Logging a ticket
+• Posting to a 
+community forum
+• Accessing a 
+WebEx Teams 
+space
+=== DEVASC_Module_2.pdf | page 12 ===
+19
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+DevNet Developer Support (Contd.)
+• Knowledge Base - Consists of 
+troubleshooting articles for 
+reference.
+• Support Case - A case-based 
+ticket used for one-on-one 
+support with a response time of 
+one business day.
+• Forums in the Cisco 
+Developer Community - To 
+view community forums, visit 
+https://devnetsupport.cisco.com
+and click Community.
+=== DEVASC_Module_2.pdf | page 13 ===
+20
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Exploring DevNet Online Resources
+Lab – Explore DevNet Resources
+In this lab, you will complete the following objectives:
+• Part 1: Find and Navigate a Learning Lab
+• Part 2: Explore More Resources
+=== DEVASC_Module_2.pdf | page 14 ===
+21
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+2.3  DevNet Developer 
+Environment Summary
+=== DEVASC_Module_2.pdf | page 15 ===
+22
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+DevNet Developer Environment Summary 
+What did I learn in this module?
+• DevNet provides developers with a starting point for all Cisco APIs.
+• Online Resources include DevNet Learning Labs, DevNet video courses, DevNet Sandbox, 
+DevNet Exchanges, and extensive DevNet Support.
+=== DEVASC_Module_2.pdf | page 16 ===

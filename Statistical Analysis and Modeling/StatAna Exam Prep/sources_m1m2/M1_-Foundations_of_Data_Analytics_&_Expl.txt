@@ -1,0 +1,401 @@
+
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 1 ===
+Statistical Analysis And 
+Modeling
+CS0073
+Module 1
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 2 ===
+Foundations of Data Analytics & 
+Exploratory Data Analysis
+CS0073
+Module 1 Submodule 1
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 3 ===
+Subtopic 1
+After this submodule, the learner should be able to:
+1. Students will be able to explain the principles of descriptive analytics and its 
+importance in data analysis.
+2. Students will demonstrate the ability to apply descriptive measures in Excel 
+to summarize and interpret data sets effectively.
+Descriptive Analytics
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 4 ===
+How does data become value?
+Data Value Chain DE-MYSTIFIED
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 5 ===
+A value chain is an interlinked set of activities that an organization performs to
+convert inputs to outputs that are valuable to a market, such as products or
+services.
+Data Value Chain
+Coffee Beans
+Instant Coffee Mix
+Coffee Beverage
+https://www.ebay.ph/itm/273176942632
+https://thesourcebulkfoods.co.uk/products/coffe
+e-beans-morning-brew
+https://cincyshopper.com/wp-
+content/uploads/2015/04/1.jpg
+Raw material
+Storage
+Processed
+Material
+Inventory
+Sales
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 6 ===
+Data Value Chain
+Transactional
+Data
+Database
+Analytics
+Application
+Decision
+In order for the data to be useful, they have to be sourced from the data
+storage, processed, and analyzed to gain insights. Insights that prescribe
+direct and meaningful actions then drive decision making. Hence, the value of
+data to organizations and their market is realized when actions or decisions
+are implemented from them.
+https://www.guvi.in/blog/wp-
+content/uploads/2024/07/Types-of-Data-in-Data-
+Science.webp
+https://cdn.rentechdigital.com/common_files/blogs/what-is-
+marketing-insight-and-why-is-it-important-swipecart-blog-1-10-3-
+23.png
+https://blogger.googleusercontent.com/img/b/R29v
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 7 ===
+Data Sources
+Transactional Data
+Contractual, Subscription 
+or account data
+Surveys
+Data Poolers
+Unstructured Data
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEA
+A&biw=2049&bih=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 8 ===
+Data Sources
+Transactional Data
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEA
+A&biw=2049&bih=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+Transactional data consist of structured,
+detailed
+information
+capturing
+the
+key
+characteristics
+of
+a
+transaction
+(e.g.,
+purchase, claim, cash transfer, credit card
+payment).
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 9 ===
+Data Sources
+Contractual, Subscription 
+or account data
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEA
+A&biw=2049&bih=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+Contractual,
+subscription
+or
+account
+data
+include
+information about the type of product (e.g. loan) combined
+with customer characteristics.
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 10 ===
+Data Sources
+Surveys
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEA
+A&biw=2049&bih=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+Surveys
+are
+questionnaires
+aimed
+at
+extracting
+sociodemographic and behavioral data from a particular
+group of people.
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 11 ===
+Data Sources
+Data Poolers
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEAA&biw=2049&bi
+h=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+Data poolers are companies that gather data (e.g.
+sociodemographic information) in particular settings
+or for particular purposes (e.g. marketing, credit risk
+assessment) and sell them to interested customers
+looking to enrich or extend their data sources.
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 12 ===
+Data Sources
+Unstructured Data
+https://www.google.com/search?q=types+of+data+in+data+science&udm=2&sa=X&ved=2ahUKEwiI9OWzvr2HAxX5sFYBHZ6bKfY4ChCs3AJ6BAgDEA
+A&biw=2049&bih=949&dpr=0.67#vhid=obLRgD5De0g0OM&vssid=mosaic
+Unstructured data refers to information that does not
+reside in a traditional row-column database In the
+world of big data, it could be anything: media, images,
+audio, sensor data, and text data from documents
+(e.g. e-mails, web pages, social media, PDFs).
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 13 ===
+Types of Analytics
+Value
+Difficulty
+Information
+Optimization
+Descriptive
+Analytics
+Diagnostics
+Analytics
+Predictive
+Analytics
+Prescriptive
+Analytics
+What 
+happened?
+Why did it 
+happen?
+What will
+happen?
+How can we 
+make it happen?
+Gartner Analytic Ascendancy model
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 14 ===
+Types of Analytics
+Transactional
+Data
+Database
+Analytics
+Application
+Decision
+SOURCING DATA
+(Analytic Queries)
+ANALYZING DATA
+(Descriptive Analytics)
+ANALYZING DATA
+(Diagnostic Analytics)
+ANALYZING DATA
+(Predictive Analytics)
+ANALYZING DATA
+(Prescriptive Analytics)
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 15 ===
+Types of Analytics
+Transactional
+Data
+Database
+Analytics
+Application
+Decision
+Accessing and
+Query databases
+Join tables
+Aggregating data
+Distribution
+Trending
+Correlation
+Model 
+Relationship
+Measure
+Model
+strength
+Test outcomes 
+from various
+input
+Scenarios
+Sensitivity
+Analysis
+Shorten Repetitive
+Task
+Allow users to 
+interact with data
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 16 ===
+Descriptive Analytics
+What does the data say happened?
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 17 ===
+2 Primary Techniques of Descriptive 
+Analytics
+❑DATA AGGREGATION
+❑DATA PRESENTATION
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 18 ===
+Descriptive Analytics
+What is happening?
+Descriptive Analysis
+Numerical 
+Summaries
+Tabulation and
+Visualization
+Total
+Ratios
+Central Tendency
+Variation
+Shape
+Position
+Mean, Median, Mode
+Range, Variance 
+Standard deviation
+Skewness, Kurtosis
+Percentiles, 
+Quantiles, Quartiles
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 19 ===
+
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 20 ===
+1.
+SPARTA (2024). SP801: Statistical Analysis and Modeling using Excel. Linang: Development Academy of 
+the Philippines. https://linang.dap.edu.ph.
+2. SPARTA (2024). SP802: Statistical Analysis and Modeling Using SQL and Python 2024 Linang: 
+Development Academy of the Philippines. https://linang.dap.edu.ph.
+3. Gupta, A. (2020, December 24). How to add data analysis in Excel: The best guide [2023 edition]. 
+Simplilearn.com. https://www.simplilearn.com/tutorials/excel-tutorial/data-analysis-excel
+4. Advanced SQL for data analytics (step-by-step tutorial). (2022, December 1). CareerFoundry. 
+https://careerfoundry.com/en/blog/data-analytics/advanced-sql/
+References
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 21 ===
+Statistical Analysis And 
+Modeling
+CS0073
+Module 2 Submodule 2
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 22 ===
+Subtopic 2
+After this submodule, the learner should be able to:
+1. Students will gain proficiency in using Excel functions such as COUNT, 
+COUNTA, COUNTBLANK, AVE, VAR, STDEV, SUM, COUNTIFS, SUMIFS, 
+AVERAGEIFS, MIN, MAX, MEDIAN, QUARTILE, PERCENTILE, LARGE, and SMALL 
+to perform descriptive statistical analysis.
+2. Students will be able to create and manipulate pivot tables in Excel to 
+organize and summarize data efficiently.
+Descriptive Measures in Excel
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 23 ===
+Descriptive Measures using Excel
+Functions
+What is Does
+SUM(range)
+sumif(ranger, criteria, sum_range)
+Adds a range  of cells.
+Add cells from sum_range if the condition specified in criteria on range is met.
+AVERAGE(range)
+AVERAGE(range,criteria,average_range)
+Calculates the mean(arithmetic average) of a range of cells.
+Calculates the average_range if the condition in criteria on range is met.
+MEDIAN(range)
+Calculates the median value for a data set; half the values in the dataset are 
+greater than the median and half are less than the median.
+MAX(range)
+Returns the maximum value of a dataset.
+MIN(range)
+Returns the minimum value of a dataset.
+SMALL(range, k)
+LARGE(range, k)
+Returns the kth smallest or kth largest value in a specified data range.
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 24 ===
+Descriptive Measures using Excel
+Functions
+What is Does
+COUNT(range)
+COUNTA(range)
+COUNTBLANK(range)
+COUNTIF(range,value)
+Counts the number of cells containing numbers in a range.
+Counts the number of non-blank cells within a range.
+Counts the number of blank cells within a  range.
+Counts the number of cells in range that are the same as value.
+VAR(range) and 
+VARP(range)
+Calculates the variance of a sample or an entire population (VARP): equivalent to 
+the square of the standard deviation
+STDEV(range) and STEVP(range)
+Calculates the standard deviation of a sample or an entire population 
+(STDEVP):the standard deviation is a measure how much values vary from the 
+mean
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 25 ===
+COUNT,COUNTA, and COUNTBLANK
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 26 ===
+AVE, VAR, and STDEV
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 27 ===
+SUM, COUNTIFS, and SUMIFS
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 28 ===
+AVERAGEIFS
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 29 ===
+MIN_MAX
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 30 ===
+MEDIAN
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 31 ===
+QUARTILE
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 32 ===
+PERCENTILE
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 33 ===
+LARGE
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 34 ===
+SMALL
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 35 ===
+PIVOT TABLE
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 36 ===
+Moving Average
+Descriptive Analytics Use-Cases
+• Moving Average – takes the average of
+a given set of data points over the past
+number of periods
+• Moving average smooth noise in the
+data
+• Use moving averages to easily see
+trends in the data.
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 37 ===
+Pareto Chart
+Descriptive Analytics Use-Cases
+• A bar graph
+• The
+length
+of
+the
+bars
+represent
+frequency of cost (time or money), and
+are arranged with longest bars on the
+left and the shortest to the right
+• Prioritization
+tool;
+Indicates
+which
+problem to tackle first showing the
+proportion of the total problem that
+each of the smaller problems comprise
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 38 ===
+Statistical Process Control
+Descriptive Analytics Use-Cases
+• Methodology for monitoring a process to identify special causes of variation
+and signing the need for corrective action.
+• Reality: Every process varies
+• Goal: To reduce variation in products, services, or processes
+• Types of variations:
+❖Common Cause Variation – These process produce variations which can be
+considered natural or common to the process and will nearly always be present.
+In the statistical world, these processes are in control.
+❖Special Cause Variation – These types of processes display larger amounts of
+variations ( not present in common cause variation) and often stem from
+external sources and are considered not in control
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 39 ===
+Statistical Process Control
+Descriptive Analytics Use-Cases
+• Methodology for monitoring a process to identify special causes of variation
+and signing the need for corrective action.
+• Reality: Every process varies
+• Goal: To reduce variation in products, services, or processes
+• Types of variations:
+❖Common Cause Variation – These process produce variations which can be
+considered natural or common to the process and will nearly always be present.
+In the statistical world, these processes are in control.
+❖Special Cause Variation – These types of processes display larger amounts of
+variations ( not present in common cause variation) and often stem from
+external sources and are considered not in control
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 40 ===
+Statistical Process Control
+Descriptive Analytics Use-Cases
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 41 ===
+
+=== M1 -Foundations of Data Analytics & Exploratory Data Analysis.pdf | page 42 ===
+1.
+SPARTA (2024). SP801: Statistical Analysis and Modeling using Excel. Linang: Development Academy of 
+the Philippines. https://linang.dap.edu.ph.
+2. SPARTA (2024). SP802: Statistical Analysis and Modeling Using SQL and Python 2024 Linang: 
+Development Academy of the Philippines. https://linang.dap.edu.ph.
+3. Gupta, A. (2020, December 24). How to add data analysis in Excel: The best guide [2023 edition]. 
+Simplilearn.com. https://www.simplilearn.com/tutorials/excel-tutorial/data-analysis-excel
+4. Advanced SQL for data analytics (step-by-step tutorial). (2022, December 1). CareerFoundry. 
+https://careerfoundry.com/en/blog/data-analytics/advanced-sql/
+References

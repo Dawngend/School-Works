@@ -1,0 +1,158 @@
+
+=== DEVASC_Module_1.pdf | page 1 ===
+Module 1: Course Introduction
+DevNet Associates v1.0
+=== DEVASC_Module_1.pdf | page 2 ===
+9
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Course Introduction 
+Course Overview
+The DevNet Associate course will cover the basics of software development, networking 
+fundamentals and automation. It will comprise of the following modules:
+•
+Understanding and Using APIs Module: In this module, you will learn about APIs, their 
+benefits, and how to troubleshoot them.
+•
+Software Development and Design Module: In this module, you will learn the main 
+concepts of software development and be equipped with the necessary tools to write 
+quality code.
+•
+Network Fundamentals Module: In this module, you will learn about the basics of 
+network, network devices, network protocols, and troubleshooting connectivity issues.
+•
+Infrastructure and Automation module: In this module, you learn to manage the 
+infrastructure with automation, instead of manually setting up the infrastructure.
+•
+Cisco Platforms and Development: In this module, you will learn about data centers 
+and networking including data models and security.
+=== DEVASC_Module_1.pdf | page 3 ===
+10
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Module Objectives
+Module Title: Course Introduction
+Module Objective: Use basic Python programming and Linux skills.
+Topic Title
+Topic Objective
+Your Lab Environment
+Install a virtual lab environment.
+Linux
+Manage the Linux file system and permissions.
+Python
+Use basic Python programming
+=== DEVASC_Module_1.pdf | page 4 ===
+11
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+1.1 Your Lab Environment
+=== DEVASC_Module_1.pdf | page 5 ===
+12
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Course Introduction
+Set Up Your Lab Environment
+• With virtualization, virtual computers can operate and run within physical computers. These 
+computers are called Virtual Machines (VMs). 
+• VMs are often called guests, and physical computers are often called hosts. 
+• Anyone with a modern computer and operating system can run virtual machines.
+=== DEVASC_Module_1.pdf | page 6 ===
+13
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Course Introduction
+Lab – Install the Virtual Lab Environment
+In this lab, you will complete the following objectives:
+• Part 1: Prepare a Computer for Virtualization
+• Part 2: Explore the DEVASC VM GUI
+• Part 3: Create Lab Environment Accounts
+• Part 4: Install Webex Teams on your Device
+=== DEVASC_Module_1.pdf | page 7 ===
+14
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+1.2 Linux
+=== DEVASC_Module_1.pdf | page 8 ===
+15
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Linux 
+Linux for DevNet
+• Linux has gained widespread use in servers, Internet of Things (IoT) devices, networking 
+equipment, smartphones, and many other devices that may not seem as even being 
+computers. 
+• All coding labs in this course are performed on a Linux-based VM.
+=== DEVASC_Module_1.pdf | page 9 ===
+16
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Linux 
+Lab – Linux Review
+In this lab, you will complete the following objectives:
+• Part 1: Launch the DEVASC VM
+• Part 2: Review Command Syntax Navigation
+• Part 3: Review File Management
+• Part 4: Review Regular Expressions
+• Part 5: Review System Administration
+=== DEVASC_Module_1.pdf | page 10 ===
+17
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Linux 
+How did you do on the Linux Review Lab?
+• If there was any issue with the Linux Review lab, then take the Linux Unhatched course.
+• The Linux Unhatched course is a free, online, and self-paced course.
+=== DEVASC_Module_1.pdf | page 11 ===
+18
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+1.3 Python
+=== DEVASC_Module_1.pdf | page 12 ===
+19
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Python
+The Power of Code
+In this video, you will view experts talking about their experiences and passion towards coding.
+=== DEVASC_Module_1.pdf | page 13 ===
+20
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Python
+Python Programming
+• Python is an easy to learn programming language.
+• Few factors that make Python a great tool for learning basic coding are:
+• It is easy to learn - the time needed to learn Python is shorter than for many other 
+languages.
+• It is easy to use for writing new software – it is possible to write code faster when 
+using Python.
+• It is easy to obtain, install and deploy - Python is free, open and multiplatform.
+• Python provides a solid foundation and allows to learn other programming languages 
+(for example, C++, Java, or C) much easier and faster.
+=== DEVASC_Module_1.pdf | page 14 ===
+21
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Python
+Lab - Python Programming Review
+In this lab, you will complete the following objectives:
+• Part 1: Launch the DEVASC VM
+• Part 2: Start Python and VS Code
+• Part 3: Review Data Types and Variables
+• Part 4: Review Lists and Dictionaries
+• Part 5: Review the Input Function
+• Part 6: Review If, For, and While Functions
+• Part 7: Review Methods for File Access
+=== DEVASC_Module_1.pdf | page 15 ===
+22
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Python
+How did you do on the Python Programming Review Lab?
+• If there was any issue with the Python Programming lab, take the Python Essentials 
+course listed in the Student Resources page. 
+• The Python Essentials course is a free, online, and self-paced course.
+=== DEVASC_Module_1.pdf | page 16 ===
+23
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+1.4 Course Introduction 
+Summary
+=== DEVASC_Module_1.pdf | page 17 ===
+24
+© 2020  Cisco and/or its affiliates. All rights reserved.   Cisco Confidential
+Course Introduction Summary
+What did I learn in this module?
+• This Course Introduction module was designed to help you prepare to take the DevNet 
+Associate (DEVASC) course.
+• The Install the Virtual Lab Environment gets you and your PC ready for the coding labs you 
+will find in this course.
+• The Linux Review and Python Programming Review labs help you to determine whether you 
+are ready with the prerequisite knowledge and skills required to successfully take the 
+DEVASC course.
+=== DEVASC_Module_1.pdf | page 18 ===
