@@ -230,8 +230,8 @@ def m1(n):
     n.h3("IS Resource Approach")
     n.p("Diagram: **DATA** in the middle, surrounded by **Create** (data going in), **Destroy** (data going "
         "out), **Process**, **Retrieve**, and **Update**.")
-    n.memory("This is the classic **CRUD** idea (Create, Retrieve, Update, Destroy) plus **Process** in the "
-            "center of the data lifecycle.")
+    n.memory("**DATA** sits in the center. Around it are the classic **CRUD** actions (Create, Retrieve, Update, "
+             "Destroy) plus **Process**, which appears twice on the diagram.")
 
     n.h3("Information Management")
     n.bullets([
@@ -314,7 +314,8 @@ def m1(n):
         [1.9, 3.4, 1.8],
     )
     n.memory("Group the seven by job: **record-keepers** (TPS), **decision helpers** (DSS, EIS, MIS), "
-             "**coordinators** (Workflow), and **integrators** (ERP, Expert Systems).")
+             "**coordinator** (Workflow), **integrator** (ERP), and **advisor** (Expert Systems, which make "
+             "suggestions from a knowledge base).")
     n.watch("**DSS helps decide, but does not make the decision itself.** It is developed with the decision-"
             "makers and assists the decision-making process only.")
     n.watch("**EIS is also called the Executive Support System.** If a question gives that name instead of the "
@@ -383,12 +384,12 @@ def m1(n):
     )
     n.memory("**Please Always Design Decent, Test, Implement, Maintain** = Planning, Analysis, Design, "
              "Development, Testing, Implementation, Maintenance.")
-    n.watch("The slide for **phase 6, System Implementation** (p12) says \"the majority of the code for the "
-            "program is written\" here, and also describes installing the system via a **direct cutover during "
-            "off-peak hours**. This looks like it contradicts **phase 4, System Development** (p10), which is "
-            "described as where \"the real work begins\" writing code. Quote the slide as written: writing most "
-            "of the code is mentioned under **Implementation**, even though development work also happens "
-            "earlier in **System Development**.")
+    n.watch("**Which phase writes the code?** On these slides (and their source, Gillis and Rouse, TechTarget), "
+            "**System Implementation** is \"when the majority of the code for the program is written\" and is also "
+            "when the system is installed by **direct cutover** during off-peak hours. **System Development** is "
+            "where programmers, network engineers and database developers are **brought on**, a flow chart "
+            "organizes the process, and production starts. Many other textbooks call coding \"development\", so "
+            "if a choice says \"majority of the code is written\", answer **Implementation** for this course.")
 
     n.h3("System Development Life Cycle Vs Software Development Life Cycle")
     n.table(
@@ -474,7 +475,8 @@ def m2(n):
     n.table(
         ["", "Gantt Chart", "PERT Chart"],
         [
-            ["What it is", "A chart created using Microsoft Project.", "A project management tool used to "
+            ["What it is", "A bar chart of the schedule: each task is a bar along a timeline (the slide's "
+             "example was made in Microsoft Project).", "A project management tool used to "
              "schedule, organize, and coordinate tasks within a project."],
             ["What it shows", "Red marks indicate the **critical path**, or the longest stretch of the "
              "project. Columns: ID, Task Name, Predecessors, Duration.", "A network diagram of tasks and their "
@@ -556,8 +558,9 @@ def m2(n):
              "problems can be identified in a timely manner and corrective action taken when necessary. Key "
              "benefit: performance is observed and measured regularly to identify variances from the plan.", "Communications: "
              "Performance Reporting; Integration: Integrated Change Control; Scope: Scope Verification; Scope: "
-             "Scope Change Control; Time: Schedule Control; Cost: Cost Control; Procurement: Quality Control; "
-             "Procurement: Risk Monitoring and Control. Feeds the Closeout Process Group."],
+             "Scope Change Control; Time: Schedule Control; Cost: Cost Control; Quality: Quality Control; "
+             "Risk: Risk Monitoring and Control (the slide's diagram labels these last two boxes \"Procurement\"; "
+             "they belong to Quality and Risk). Feeds the Closeout Process Group."],
             ["5. **Closing**", "Includes the formal acceptance and ending of the project. Administrative "
              "activities include archiving files and documentation.", "Controlling Process Group -> Procurement: "
              "Contract Closure; Communication: Close Project. Consists of **Contract closure** (settle and close "
@@ -684,8 +687,7 @@ def m2(n):
              "Computer-assisted education, Bioinformatics, Cyber security.")
 
     n.h3("Top Research Titles By Trend (2019, Low Detail)")
-    n.p("These titles are listed on the slides for reference only; the exam is unlikely to ask for their "
-        "content, just that they exist under each trend.")
+    n.p("The slides list these 2019 research titles under each trend.")
     n.table(
         ["Research Area", "Titles Listed"],
         [
@@ -693,13 +695,14 @@ def m2(n):
              "Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations; "
              "Meta-Learning Update Rules for Unsupervised Representation Learning."],
             ["Big Data Analytics", "An integrated parallel big data decision support tool using the "
-             "W-CLUS-MCDA; Effect of E-customization Capability on Financial Performance of Commercial Banks in "
-             "Kenya; Interaction of East Bay Area Voters with California Death Penalty Ballot Initiatives; "
+             "W-CLUS-MCDA: A multi-scenario personnel assessment; Effect of E-customization Capability on "
+             "Financial Performance of Commercial Banks in Kenya; Interaction of East Bay Area Voters with "
+             "California Death Penalty Ballot Initiatives: a Study; "
              "Command Decision: Ethical Leadership In The Information Environment."],
             ["Computer-Assisted Education", "Qualitative case studies of innovative pedagogical practices using "
              "ICT; What strategies are effective for formative assessment in an e-learning environment?; "
-             "Web-based Assessment and Test Analyses (WATA) system; Computer-Assisted Learning in Orthodontic "
-             "Education."],
+             "Web-based Assessment and Test Analyses (WATA) system: development and evaluation; Computer-Assisted "
+             "Learning in Orthodontic Education: A Systematic Review and Meta-Analysis."],
             ["Bioinformatics", "A Survey for Escherichia coli Virulence Factors in Asymptomatic Free-Ranging "
              "Parrots; Immunoreactivity of the 14F7 Mab Raised against N-Glycolyl GM3 Ganglioside in Epithelial "
              "Malignant Tumors from Digestive System; Investigating the effects of external fields polarization "
@@ -735,7 +738,7 @@ def build():
             ["SE layers (4)", "Toddlers Make Pretty Quilts (Tools, Methods, Process, Quality Focus)"],
             ["SE principles (7)", "Real Kids Make Pretty Open Plans, Think!"],
             ["IS types (7)", "Record-keepers (TPS), Decision helpers (DSS, EIS, MIS), Coordinators (Workflow), "
-             "Integrators (ERP, Expert)"],
+             "Integrator (ERP), Advisor (Expert)"],
             ["SDLC phases (7)", "Please Always Design Decent, Test, Implement, Maintain"],
             ["Gantt vs Fayol", "Gantt = planning (chart); Fayol = five functions"],
             ["Four P's", "Plan, Process, People, Power"],
@@ -774,8 +777,8 @@ def build():
             ["7 IS types", "TPS, DSS, EIS (= Executive Support System), MIS, Workflow, ERP, Expert Systems"],
             ["DSS trap", "DSS helps decide, does NOT make the decision"],
             ["7 SDLC phases", "Planning, Analysis, Design, Development, Testing, Implementation, Maintenance"],
-            ["Implementation trap", "Slide says most code is written AND system cutover both happen in "
-             "Implementation (p12), even though Development (p10) is where \"the real work begins\""],
+            ["Implementation trap", "This course: majority of code written + direct cutover = Implementation; "
+             "Development = team brought on, flow chart, start of production"],
             ["System vs Software SDLC", "System SDLC = superset, people+process+tech; Software SDLC = only "
              "software, part of the Development Phase"],
             ["Gantt vs Fayol", "Gantt = father of planning and control (Gantt Chart); Fayol = five management "
