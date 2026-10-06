@@ -1,0 +1,134 @@
+
+=== Module 5 - Activities.pptx.pdf | page 1 ===
+Module 5
+Activities
+=== Module 5 - Activities.pptx.pdf | page 2 ===
+At the end of the chapter, the learner should be able to:
+• To describe what activities are
+• To understand the activity life cycle
+• To identify the different methods associated in activity life 
+cycle
+• To create an activity in Java and Kotlin
+OBJECTIVES
+=== Module 5 - Activities.pptx.pdf | page 3 ===
+Activities
+An Android activity is one screen of the Android app's user 
+interface. In that way an Android activity is very similar to 
+windows in a desktop application. An Android app may 
+contain one or more activities, meaning one or more screens. 
+The Android app starts by showing the main activity, and 
+from there the app may make it possible to open additional 
+activities.
+=== Module 5 - Activities.pptx.pdf | page 4 ===
+Activity Life Cycle
+http://tutorials.jenkov.com/android/activity.html
+Any Android activity goes through 
+a certain life cycle during its life 
+inside the Android app.
+=== Module 5 - Activities.pptx.pdf | page 5 ===
+Activity Life Cycle Methods
+http://tutorials.jenkov.com/android/activity.html
+All activities in your Android apps are represented by an activity class. These 
+activity classes are subclasses of android.app.Activity. The Activity class contains 
+a set of methods that corresponds to the life cycle states an activity can be in.
+onCreate()
+This is the first callback and called when the activity is first created.
+onStart()
+This callback is called when the activity becomes visible to the user.
+onResume()
+This is called when the user starts interacting with the application.
+=== Module 5 - Activities.pptx.pdf | page 6 ===
+Activity Life Cycle Methods
+http://tutorials.jenkov.com/android/activity.html
+onPause()
+The paused activity does not receive user input and cannot execute 
+any code and called when the current activity is being paused and 
+the previous activity is being resumed.
+onStop()
+This callback is called when the activity is no longer visible.
+onDestroy()
+This callback is called before the activity is destroyed by the system.
+onRestart()
+This callback is called when the activity restarts after stopping it.
+=== Module 5 - Activities.pptx.pdf | page 7 ===
+
+=== Module 5 - Activities.pptx.pdf | page 8 ===
+Creating activity on Android Studio using 
+Java
+Java
+=== Module 5 - Activities.pptx.pdf | page 9 ===
+Creating an Activity
+http://tutorials.jenkov.com/android/activity.html
+An activity is a subclass of the Android class android.app.Activity .
+=== Module 5 - Activities.pptx.pdf | page 10 ===
+Creating an Activity
+https://developer.android.com/guide/components/activities/intro-activities
+All activities, should be documented on your manifest file. To do 
+this, add an <activity> element as a child of the <application> 
+element.
+=== Module 5 - Activities.pptx.pdf | page 11 ===
+Creating an Activity
+http://tutorials.jenkov.com/android/activity.html
+An activity class loads all the UI component using the XML file available 
+in res/layout folder of the project during the onCreate() callback. 
+Following statement loads UI components from 
+res/layout/activity_main.xml file:
+=== Module 5 - Activities.pptx.pdf | page 12 ===
+Creating activity on Android Studio using 
+Kotlin
+Kotlin
+=== Module 5 - Activities.pptx.pdf | page 13 ===
+Creating an Activity in Kotlin
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+Creating a Project in Android Studio
+Using Step-by-Step Implementation 
+for Creating Projects in Android Studio 
+with Kotlin:
+Step1: Select the Layout for your 
+Kotlin Application
+=== Module 5 - Activities.pptx.pdf | page 14 ===
+Creating an Activity in Kotlin
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+Step 2: Here we write name of our application 
+and select the language Kotlin for the project. 
+Then, click on the Finish button to launch the 
+project.
+=== Module 5 - Activities.pptx.pdf | page 15 ===
+Creating an Activity in Kotlin
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+Step 3: Check on the Created Project.
+We obtained two files when we launched the 
+project, which are: 
+MainActivity.kt - This is a Kotlin file and is used to 
+code in Kotlin language.
+activity_main.xml - This is an xml file and is used 
+for the layout of our main activity.
+MainActivity.kt File
+=== Module 5 - Activities.pptx.pdf | page 16 ===
+Creating an Activity in Kotlin (continue…)
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+Kotlin Code
+=== Module 5 - Activities.pptx.pdf | page 17 ===
+Creating an Activity in Kotlin (continue…)
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+activity_main.xml file
+For each activity there is separate xml file to specify the design or layout of our activities. Hence, there are number of 
+functioning like we can adjust button to the top or bottom and make text bold or italic etc.
+=== Module 5 - Activities.pptx.pdf | page 18 ===
+Creating an Activity in Kotlin (continue…)
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+XML code
+=== Module 5 - Activities.pptx.pdf | page 19 ===
+Creating an Activity in Kotlin (continue…)
+https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+Run as Emulator
+We made some changes in our Kotlin and xml files and then 
+we can run our application using an emulator.
+=== Module 5 - Activities.pptx.pdf | page 20 ===
+DEMONSTRATION
+Creating activity on Android 
+Studio
+=== Module 5 - Activities.pptx.pdf | page 21 ===
+• https://www.tutorialspoint.com/android/android_acitivities.htm
+• https://www.geeksforgeeks.org/kotlin/first-app-in-kotlin-android-studio/
+References

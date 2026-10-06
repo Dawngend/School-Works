@@ -1,0 +1,221 @@
+
+=== Module 3 - Kotlin.pptx.pdf | page 1 ===
+Module 3
+Introduction to Kotlin
+=== Module 3 - Kotlin.pptx.pdf | page 2 ===
+At the end of the chapter, the learner should be able to:
+• Understand what is Kotlin
+• Determine use of Kotlin
+• Write code using Kotlin
+• Migrate Java to Kotlin
+OBJECTIVES
+=== Module 3 - Kotlin.pptx.pdf | page 3 ===
+What is Kotlin?
+• modern, trending programming language that was released in 
+2016 by JetBrains
+• Compatible with Java
+• works on different platforms (Windows, Mac, Linux, Raspberry Pi, 
+etc.)
+• Concise and safe
+=== Module 3 - Kotlin.pptx.pdf | page 4 ===
+What is Kotlin?
+• easy to learn, especially if you already know Java
+• Free to use
+• Big community/support
+=== Module 3 - Kotlin.pptx.pdf | page 5 ===
+Uses of Kotlin
+• Mobile applications (specially Android apps)
+• Web development
+• Server side applications
+• Data science
+• And much, much more!
+=== Module 3 - Kotlin.pptx.pdf | page 6 ===
+Kotlin Fundamentals
+• The fun keyword is used to declare a function
+• The main() function is needed to execute a program
+• In Kotlin, code statements do not have to end with a semicolon (;)
+ fun main() {
+println("Hello World")
+ }
+=== Module 3 - Kotlin.pptx.pdf | page 7 ===
+Kotlin Fundamentals
+• Single line comments //
+• Multi-line comments /* … */
+fun main() {
+    // this is single line comment
+    
+    /*
+               this is multi-line comment
+    */
+}
+=== Module 3 - Kotlin.pptx.pdf | page 8 ===
+Kotlin Fundamentals
+• The val  keyword can create a variable whose reference 
+will be immutable (which cannot be modified after its 
+initialization).
+• The  var   keyword lets you create a variable whose 
+reference will be mutable (which can be modified after 
+its initialization).
+• Kotlin does not require you to mention the type of a 
+variable when declaring it (thanks to type inference)
+=== Module 3 - Kotlin.pptx.pdf | page 9 ===
+Kotlin Fundamentals
+=== Module 3 - Kotlin.pptx.pdf | page 10 ===
+Kotlin Fundamentals
+=== Module 3 - Kotlin.pptx.pdf | page 11 ===
+Kotlin Fundamentals
+• if
+• if – else
+• if – else if
+• if – else  expression
+=== Module 3 - Kotlin.pptx.pdf | page 12 ===
+Kotlin Fundamentals
+• when expression
+=== Module 3 - Kotlin.pptx.pdf | page 13 ===
+Kotlin Fundamentals
+• while
+• do – while
+• for – loop
+for loop using arrays
+     for loop using range
+=== Module 3 - Kotlin.pptx.pdf | page 14 ===
+OOP using Kotlin
+• OOP
+class declaration
+class instantiation
+=== Module 3 - Kotlin.pptx.pdf | page 15 ===
+OOP using Kotlin
+• using constructor
+=== Module 3 - Kotlin.pptx.pdf | page 16 ===
+OOP using Kotlin
+• class & functions
+=== Module 3 - Kotlin.pptx.pdf | page 17 ===
+OOP using Kotlin
+• Using init blocks
+=== Module 3 - Kotlin.pptx.pdf | page 18 ===
+OOP using Kotlin
+• Default value in
+primary constructor
+=== Module 3 - Kotlin.pptx.pdf | page 19 ===
+OOP using Kotlin
+• Using the
+secondary constructor
+=== Module 3 - Kotlin.pptx.pdf | page 20 ===
+OOP using Kotlin
+• inheritance
+=== Module 3 - Kotlin.pptx.pdf | page 21 ===
+Kotlin vs Java
+Features
+Kotlin
+Java
+1. Extension Functions
+It is already available in Kotlin
+In java, we need to create class
+2. Null Safety
+It is available in Kotlin
+It is not available in Java
+3. Static Members
+Kotlin doesn’t have a static member for a 
+class
+It is available in Java
+4. String Templates
+Yes, there are two types of string literals in 
+Kotlin
+It is available in Java too but it doesn’t 
+support expression like Kotlin
+5. Wildcard Types
+It is not available in Kotlin
+Available in Java
+6. Smartcasts
+Available in Kotlin
+Not Available in Java
+7. No Checked Exceptions
+Kotlin removed exceptions entirely
+It is problematic in Java
+8. Operator Overloading
+Kotlin allows users to provide a way to invoke 
+functions
+Operators are tied to particular Java Types
+9. Constructors
+It has primary constructor and secondary 
+constructor
+Constructors can be used to take parameters 
+to initialize attributes
+10. Type System
+It gives nullability support, type inference, 
+and universal guards
+There are other kinds of reference types 
+related to the basic concept of class
+=== Module 3 - Kotlin.pptx.pdf | page 22 ===
+Kotlin on Android
+Kotlin
+=== Module 3 - Kotlin.pptx.pdf | page 23 ===
+Kotlin in Android
+=== Module 3 - Kotlin.pptx.pdf | page 24 ===
+Kotlin in Android (Java)
+=== Module 3 - Kotlin.pptx.pdf | page 25 ===
+Convert Java Code to Kotlin Code in 
+Android Studio
+Kotlin
+=== Module 3 - Kotlin.pptx.pdf | page 26 ===
+Kotlin in Android 
+Developers can easily convert their Java code into Kotlin in Android Studio. There can be 2 scenarios in front of 
+developers:
+• Converting a complete Java File/Class into Kotlin File/Class
+• Add a new Kotlin file/class in the project and convert a piece of Java code.
+=== Module 3 - Kotlin.pptx.pdf | page 27 ===
+Code Conversion
+Method 1: Converting a Complete Class/File into Kotlin
+Step 1: Open Source code file 
+Open the Java source code file that is to be converted. Consider the given code of the MainActivity file that is to be 
+converted Kotlin.
+=== Module 3 - Kotlin.pptx.pdf | page 28 ===
+Code Conversion (continue..)
+=== Module 3 - Kotlin.pptx.pdf | page 29 ===
+Step 2: Select the option 
+From the left-hand side Option menu, select Android 
+Project and right-click on the source code file. Select the 
+option "Convert Java File to Kotlin File". One can also use 
+the shortcut command "Ctrl+Alt+Shift+K" while the file is 
+opened in Android Studio.
+=== Module 3 - Kotlin.pptx.pdf | page 30 ===
+Step 2: Select the option  ( continue ….)
+A dialog box will appear that asks permission to configure Kotlin in Project . To carry out the code conversion it is 
+necessary to grant this permission. Further, select the "All modules" option and choose the latest Kotlin compiler installed on 
+the computer. After clicking "OK", Android Studio will make some changes in the app module build.gradle file to perform 
+code conversion successfully.
+=== Module 3 - Kotlin.pptx.pdf | page 31 ===
+Step 3: Produce Kotlin file 
+Again select the “Convert Java File to Kotlin File” option by right click on the java class/file. This time the required 
+conversion will happen and the file extension will get changed from .java to. kt. Below is the equivalent Kotlin code produced 
+on converting the above mentioned MainActivity.java file.
+=== Module 3 - Kotlin.pptx.pdf | page 32 ===
+Method 2
+Kotlin
+=== Module 3 - Kotlin.pptx.pdf | page 33 ===
+Method 2: Adding a Separate Kotlin File into the Project
+Android Studio allows the mixing of Java and Kotlin code in a project. If there is a requirement to reuse a piece of 
+Java code by writing it in Kotlin, one can follow the below-mentioned steps.
+Step 1: Create a Kotlin Class/File
+Create a new Class/File of Kotlin extension inside the java folder of the application's project ﬁle. Give it a 
+desired name. Once the ﬁle is created, Android Studio will show an alert message that "Kotlin is not 
+conﬁgured".
+=== Module 3 - Kotlin.pptx.pdf | page 34 ===
+Step 2: Conﬁgure Kotlin into the Project
+Click on the "conﬁgure" option present on the alert message. A dialog box will appear, select "All modules" and 
+choose the latest Kotlin compiler installed on the computer. Click "OK" and let the changes take place 
+in build.gradle ﬁles.
+=== Module 3 - Kotlin.pptx.pdf | page 35 ===
+Step 3: Copy and Paste
+Once Android Studio finished the build of project files, open the created Kotlin Class/File. Copy the Java code which is 
+to be converted. Paste that code in the created file/class having Kotlin extension. That Java code will get converted 
+automatically into Kotlin by the Android Studio.
+=== Module 3 - Kotlin.pptx.pdf | page 36 ===
+Demonstration
+Kotlin
+=== Module 3 - Kotlin.pptx.pdf | page 37 ===
+• https://www.w3schools.com/kotlin/index.php
+• https://openclassrooms.com/en/courses/5774406-learn-kotlin/5931776-declare-and-initialize-variabl
+es
+• https://www.geeksforgeeks.org/android/how-to-convert-java-code-to-kotlin-code-in-android-studio/
+References

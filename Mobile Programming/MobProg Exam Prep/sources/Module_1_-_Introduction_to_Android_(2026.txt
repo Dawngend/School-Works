@@ -1,0 +1,387 @@
+
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 1 ===
+Module 1
+Introduction to Android
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 2 ===
+At the end of the chapter, the learner should be able to:
+• To discuss how Android started
+• To recognize the number of Android users in the market
+• To differentiate Android versions
+• To describe Android features
+• To understand Android architecture
+OBJECTIVES
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 3 ===
+What is Android?
+• Mobile operating system based on Linux
+• Originally developed by Android Inc.
+• Google purchased Android Inc. in 2005
+• Android OS is open and free
+https://www.tutorialspoint.com/android/android_overview.htm
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 4 ===
+https://gs.statcounter.com/os-version-market-share/android/mobile-tablet/worldwide
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 5 ===
+https://gs.statcounter.com/os-version-market-share/ios/mobile-tablet/worldwide
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 6 ===
+Android Versions
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 7 ===
+https://www.youtube.com/watch?v=WO
+FCexjJndE
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 8 ===
+Android 1.0 
+and 1.1 
+(Unnamed)
+•Both versions are first commercial 
+versions. Officially released publicly in 
+2008 and 2009. The first android 
+commercial version was placed on HTC 
+dream device. These versions were 
+released without codename.
+•Android 1.0 (alpha):
+• Google Maps
+• Camera
+• Gmail, Contacts and Google 
+Synchronization
+• Web Browser
+• Wireless supports – WiFi and 
+Bluetooth
+•Android 1.1 (beta):
+• Add Save attachment in message
+• Provides reviews and details when 
+user search business on maps
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 9 ===
+Android 1.5 
+(CupCake)
+Released in April 2009. The 
+first released codename 
+with official name. It 
+brought features in UI design 
+and update several new 
+features are:
+• New upload service on 
+YouTube and Picasa like 
+Uploading Videos and 
+Photos.
+• Supporting in MPEG-4, 
+Video recording
+• Improving Web 
+Browser-Copy and Paste 
+facility
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 10 ===
+Android 1.6 
+(Donut)
+Released in Sept 
+2009. It Including 
+various features
+•It supports large 
+screen size
+•Providing Gallery 
+and Camera 
+features.
+•Improve speed in 
+system apps
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 11 ===
+Android 2.0 
+and 2.1 (Eclair)
+Released in Oct 2009 
+and 2.1 version released 
+in Dec 2009. There 
+features : 
+•Update UI
+•Support Live 
+Wallpaper
+•Support Bluetooth 
+2.1
+•Improve Google map
+•Minor API Changes
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 12 ===
+Android 2.2 
+(Froyo)
+Released in May 2010. 
+There features :
+•Support Animated GIF
+•WiFi Support Hotspot 
+functionality
+•Speed improvements
+•Upload file support in 
+browser
+•Support numeric and 
+alphanumeric 
+password
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 13 ===
+Android 2.3 
+and 2.4 
+(Gingerbread)
+Released in December 2010. 
+It was officially announced 
+in Nexus S android phone 
+which is Google 
+co-developed with Samsung.
+▪Improve Copy-Paste 
+Facility
+▪Updated UI design
+▪Social Networking 
+Supports
+▪Easy use of keyboard
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 14 ===
+Android 3.0, 
+3.1 and 3.2 
+(Honeycomb)
+Android 3.0 was released in 
+February 2011 quickly 
+followed by 3.1 and 3.2 in 
+July and August, 2011.
+▪Gmail App improvements
+▪Updated 3D UI
+▪Media Sync from SD Card
+▪Google eBooks
+▪Google Talk Video Chat
+▪Support Adobe Flash in 
+Browser
+▪High-performance WiFi 
+Connections and Lock
+▪Chinese handwriting
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 15 ===
+Android 4.0 
+(Ice-Cream 
+Sandwich)
+Released in October 2011. It 
+was Google’s attempt 
+synthesize Honeycomb. 
+▪Improved text input and 
+spelling check
+▪WiFi direct
+▪Photo Decor facility
+▪Improve in keyboard 
+correction
+▪Face Lock
+▪Improve in video recording 
+resolution
+▪Camera performance
+▪Up to 16 tabs in web browser
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 16 ===
+Android 4.1, 
+4.2 and 4.3 
+(Jelly Bean)
+Released in July 2012. ‘Google now’ 
+is the main feature.
+▪Voice search
+▪Smooth UI
+▪Improve camera application
+▪Security enhancement
+▪Voice typing
+▪Multiple user accounts on tablet 
+only
+▪4k resolution support
+▪Supporting Bluetooth Low Energy
+▪Bi-directional text and other 
+language support
+▪Support USB audio
+▪Lock screen improvement
+▪Set the volume of incoming calls 
+and showing message alert
+▪Native emoji support
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 17 ===
+Android 4.4 
+(Kikat)
+Released in September 2013. 
+▪Screen Recording
+▪KitKat adds a feature in 
+‘Google now’. Its name is 
+‘OK Google’. “OK Google” 
+allows access google now to 
+the user without touching 
+your mobile phone.
+▪GPS Support
+▪Offline music support
+▪UI updates for google map 
+navigation and alarm.
+▪Also, introduce Emoji’ to 
+google keyboard.
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 18 ===
+Android 5.0 
+and 5.1 
+(Lollipop)
+Released in November 
+2014. Support ART( 
+Android RunTime)
+▪Save battery on some 
+device
+▪Improvement in UI
+▪New material design
+▪Bug fixes
+▪Multiple sim card 
+support
+▪High definition voice 
+call
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 19 ===
+Android 6.0 
+(Marshmallow)
+Released in May 2015.
+▪Fingerprint 
+authentication
+▪USB Type C support
+▪Save battery-’Sleep 
+Mode’
+▪App permission 
+model-OPT(send 
+request for 
+permission)
+▪New Emoji’s
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 20 ===
+Android 7.0 
+(Nougat)
+Released in August 
+2016. It was announced 
+with native split-screen 
+mode and data saver 
+feature.
+▪Provide multitasking
+▪Providing 
+multi-window mode
+▪Improve in storage 
+manager
+▪Display touch 
+improvement
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 21 ===
+Android 8.0 
+(Oreo)
+Released in August 2017. 
+There some updated new 
+features
+▪Support 
+PIP(Picture-in-Picture)
+▪Multi-display support
+▪Google Play support
+▪Adaptive icons
+▪Improve notification 
+system
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 22 ===
+Android 9.0 
+(Pie)
+Released in August 2018. 
+▪A "screenshot" button 
+has been added
+▪A new "Lockdown" 
+mode for biometrics
+▪Support for display 
+cutouts
+▪Adaptive Batter  
+prediction
+▪Adaptive brightness 
+modifies screen 
+brightness based on 
+user habits.
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 23 ===
+Android 10
+Released in September 3 2019. Known as “Queen 
+Cake”, internally as Quince Tart.
+▪New permissions to access location in 
+background and to access photo, video and 
+audio files
+▪Sharing shortcuts, which allow sharing content 
+with a contact directly
+▪Dynamic depth format for photos, which allow 
+changing background blur after taking a photo
+▪New system-wide dark theme/mode
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 24 ===
+Android 11
+Released in September 8, 2020. Internally 
+known as “Red Velvet Cake”
+• Native screen recording
+• Muting notifications during video
+• Increase touch sensitivity
+• Notification History
+• Auto-revoke app permissions
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 25 ===
+Android 12
+Released in October 4, 2021. Internally known as “Snow Cone”
+• Scrolling Screenshots
+• AppSearch
+• Improved Auto-Rotate
+• Easier WiFi Sharing
+• One-Handed Mode
+• Rich Content Insertion
+• Overview Suggestions
+• Game Mode APIs
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 26 ===
+Android 13
+Released in August 15, 2022. Internally known as “Tiramisu”
+• Improved Security Features
+• New Reading Mode
+• Digital Car Keys
+• Native LE Bluetooth Support
+• Additional Material You Theme Options
+• QR Code Scanner Support
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 27 ===
+Android 14
+Released in October 4, 2023. Internally known as “Upside Down 
+Cake”
+• Smarter Scaling and Large Fonts
+• Notification Flashes
+• Restrictions for Photo and Video Access
+• Protected PIN
+• Data Protection
+• Regional Preferences
+• Predictive Back Gestures
+• Health Connect
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 28 ===
+Android 15
+Released in September 3, 2024. Internally known as “Vanilla Ice 
+Cream”
+• Privacy Sandbox
+• Health Connect
+• File integrity
+• Partial screen sharing
+• In-app camera controls
+• Dynamic Performance
+• Sensitive notifications
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 29 ===
+Android 16
+Released in June 10, 2025. Internally known as “Baklava”
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 30 ===
+Android 16
+Released in June 16, 2026. Internally known as “Cinnamon 
+Bun”
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 31 ===
+
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 32 ===
+Android Features
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 33 ===
+Android Architecture
+Source: https://www.tutlane.com/tutorial/android/android-architecture
+A software stack of components to support a mobile device 
+needs. Android software stack contains a Linux Kernel, 
+collection of c/c++ libraries which is exposed through an 
+application framework services, runtime and application.
+1.
+Applications
+2.
+Android Framework
+3.
+Android Runtime
+4.
+Platform Libraries
+5.
+Linux Kernel
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 34 ===
+Android
+Architecture
+Source: https://www.tutlane.com/tutorial/android/android-architecture
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 35 ===
+Android Architecture
+Source: https://www.tutlane.com/tutorial/android/android-architecture
+Linux Kernel is the main component in android to provide 
+its operating system functions to mobile and Dalvik Virutal 
+Machine (DVM) which is responsible for running a mobile 
+application.
+=== Module 1 - Introduction to Android (2026).pptx.pdf | page 36 ===
+• https://www.temok.com/blog/android-version-list/
+• https://www.intelivita.com/blog/android-history/ 
+• https://google-developer-training.gitbooks.io/android-developer-fundamentals-course-concepts/cont
+ent/en/Unit%201/10_c_intro_to_android.html 
+• https://www.tutorialspoint.com/android/android_overview.htm
+• https://www.udemy.com/learn-android-application-development-y/learn/lecture/7782698#overview
+• https://www.androidauthority.com/history-android-os-name-789433/
+• https://developer.android.com/about/versions
+• https://mfidie.com/list-of-all-android-versions-and-their-names/#android-14 
+References

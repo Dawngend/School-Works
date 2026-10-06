@@ -1,0 +1,282 @@
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 1 ===
+Predictive Analytics & 
+Regression Modeling 
+CS0073
+Module 3 Submodule 1
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 2 ===
+Subtopic 1
+After this submodule, the learner should be able to:
+1. predict outcomes of interest by using fundamental regression/forecasting and 
+classification techniques determine how to use predictions in business 
+decisions by working on practical predictive analytics use cases
+Predictive Analytics
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 3 ===
+Predictive Analytics
+What does the data say will happen?
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 4 ===
+Descriptive 
+Analytics
+What has 
+happened or 
+what is 
+happening 
+now?
+Diagnostic 
+Analytics
+Why it 
+happened?
+Predictive 
+Analytics
+What will likely 
+happen?
+Predictive Analytics
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 5 ===
+Predictive Analytics Process
+Project 
+Design
+Data 
+sampling
+Data
+Exploration
+Model 
+Validation
+Project 
+Design
+• Kickoff meeting
+• Understand 
+modeling 
+objective
+• Define 
+acceptance 
+criteria
+• Document data 
+and deployment 
+requirement
+• Data extraction
+• Apply filters and 
+exclusions
+• Identify external 
+data sources
+• Exploratory data 
+analysis
+• Identify data 
+dependencies 
+and correlations
+• Identify trends or 
+anomalies in the 
+data
+• Data cleaning
+• Data 
+augmentation 
+and 
+transformation
+• Feature selection
+• Model 
+performance 
+review
+• Feedback based 
+on business 
+knowledge and 
+inputs from 
+subject matter 
+experts (SME’s)
+• Apply different 
+modeling 
+techniques and 
+select final 
+methodology
+• Best model 
+selection
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 6 ===
+Defining a Linear Regression Problem
+What 
+is it ?
+How is 
+it 
+used?
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 7 ===
+Linear Regression Analysis
+Y – dependent variable
+Regression line
+Observations
+X – independent variable
+y =  βx + α + ε
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 8 ===
+Simple Linear Regression Analysis
+y  =  βx  +  α + ε
+Dependent Variable
+(Value to be predicted)
+Independent Variable
+(Value driving prediction)
+Beta coefficient
+(Rate multiplied  to X)
+Alpha intercept
+(Baseline figure for y)
+Error term
+(Balancing figure)
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 9 ===
+Simple Linear Regression
+Reasons for Inclusion of the Error Term
+• To account for unexplained variability in the dependent variable
+for other relevant independent variables, which may not have
+been included in the model
+• To capture measurement error in both the dependent and
+independent variables.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 10 ===
+Simple Linear Regression Model
+y  =  βx  +  α + ε
+Dependent Variable
+Sales
+Independent Variable
+Ad Spending
+Beta coefficient
+Sales Sensitivity
+Alpha intercept
+Baseline Sales
+Error term
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 11 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 12 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 13 ===
+Multiple Linear Regression  
+y  =  βx  +  α + ε
+y  =  β1x1 + β2x2 + . . . . . βnxn α + ε
+You can have more than one predictor variable (x1 – xn)
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 14 ===
+Multiple Linear Regression  
+Example of Scatterplot Matrix
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 15 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 16 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 17 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 18 ===
+Can I use the model already for prediction 
+purposes?
+NOT YET!
+▪
+You still need to investigate the model’s goodness-of-fit.
+▪
+You need to prove if your predictors are significant.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 19 ===
+Coefficient of Multiple Determination(R2)
+The
+coefficient
+of
+multiple
+determination,
+R2,
+is
+a
+goodness-of-fit measure
+R2 is a figure of merit; the higher the R2, the better is the
+success of the model in explaining the variation in the
+response using the set of predictors.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 20 ===
+Coefficient of Multiple Determination(R2)
+R2
+is
+normally
+expressed
+as
+a
+percentage
+and
+is
+interpreted as the amount of variability in the response
+explained by the independent variables.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 21 ===
+Analysis of Variance (ANOVA)
+The ANOVA is a decomposition of the total variation in the
+response into explained (pattern) and unexplained (error)
+parts.
+The explained variability is the amount of variation in the
+response variable that may be attributed to the predictors
+explicitly state in the model.
+The unexplained variability is the amount of variation
+attributed to random error.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 22 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 23 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 24 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 25 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 26 ===
+t-tests
+The t-test helps in assessing if an individual predictor is significant
+Variable 1:TV Ad
+• Since p<0.05, TV ad spend is a significant predictor of sales.
+Variable 2: Radio Ad
+• Since p<0.05, radio ad spend is a significant predictor of sales.
+Variable 3 : Newspaper Ad
+Since p > 0.05 newspaper ad spend is an insignificant predictor of sales.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 27 ===
+MODEL 
+INTERPRETATION
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 28 ===
+Sales   =  2.98 +  0.047 x TV  + 0.178 X Radio
+How do we interpret the fitted model?
+The average sales if TV,
+Radio,
+and
+Newspaper
+ads spends are all 0
+There is an 
+estimated 
+increase of 0.047 
+million (i.e P47K) 
+in average sales 
+for every P 1,000 
+spend in TV ad, 
+holding the effect 
+of radio and 
+newspaper ad 
+constant
+There is an 
+estimated 
+increase of 0.178 
+million (i.e. 
+P178k) in 
+average sales for 
+every P1000 
+spend in radio 
+ad, holding the 
+effect of TV and 
+newspaper ad 
+contant.
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 29 ===
+Mean absolute error (MAE)
+Forecast Accuracy Measures
+Mean squared error (MSE)
+Mean absolute error 
+percentage (MAPE)
+Root Mean squared error  
+(RMSE)
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 30 ===
+1. Form a group with a maximum of 5 members. 
+2. Select a dataset from Data.gov.ph for analysis.
+3. Derive an objective based on the data provided.
+4. Apply statistical and modeling techniques learned in 
+the lesson.
+5. Use Python or Excel for analysis. 
+6. Package your output in the format that I will 
+announce soon.
+PROJECT
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 31 ===
+
+=== M3-PREDICTIVE ANALYTICS & REGRESSION MODELING-2.pdf | page 32 ===
+1.
+SPARTA (2024). SP801: Statistical Analysis and Modeling using Excel. Linang: Development Academy of 
+the Philippines. https://linang.dap.edu.ph.
+2. SPARTA (2024). SP802: Statistical Analysis and Modeling Using SQL and Python 2024 Linang: 
+Development Academy of the Philippines. https://linang.dap.edu.ph.
+3. Gupta, A. (2020, December 24). How to add data analysis in Excel: The best guide [2023 edition]. 
+Simplilearn.com. https://www.simplilearn.com/tutorials/excel-tutorial/data-analysis-excel
+4. Advanced SQL for data analytics (step-by-step tutorial). (2022, December 1). CareerFoundry. 
+https://careerfoundry.com/en/blog/data-analytics/advanced-sql/
+References

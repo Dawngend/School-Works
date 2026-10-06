@@ -1,0 +1,271 @@
+
+=== Module 4 - Application Components and Resources.pptx.pdf | page 1 ===
+Module 4
+Application Components and 
+Resources
+=== Module 4 - Application Components and Resources.pptx.pdf | page 2 ===
+At the end of the chapter, the learner should be able to:
+• To understand Android application components
+• To identify the use of each component
+• To describe additional components
+• To identify the different Android resources
+• To access resources in Code and XML
+OBJECTIVES
+=== Module 4 - Application Components and Resources.pptx.pdf | page 3 ===
+Module 4
+Application Components and 
+Resources
+=== Module 4 - Application Components and Resources.pptx.pdf | page 4 ===
+What is Application Components?
+Application components are the essential building 
+blocks of an Android application. These components 
+are loosely coupled by the application manifest 
+file AndroidManifest.xml that describes each 
+component of the application and how they interact.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 5 ===
+Components & Description
+https://developer.android.com/studio
+1
+Activities
+They dictate the UI and handle the user interaction to the   
+smart phone screen.
+2
+Services
+They handle background processing associated with an 
+application.
+3
+Broadcast Receivers
+They handle communication between Android OS and 
+applications.
+4
+Content Providers
+They handle data and database management issues.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 6 ===
+Activities
+An activity represents a single screen with a user interface, 
+in-short Activity performs actions on the screen. For example, 
+an email application might have one activity that shows a list 
+of new emails, another activity to compose an email, and 
+another activity for reading emails. If an application has more 
+than one activity, then one of them should be marked as the 
+activity that is presented when the application is launched.
+An activity is implemented as a subclass of Activity class as follows −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 7 ===
+Services
+A service is a component that runs in the background to 
+perform long-running operations. For example, a service 
+might play music in the background while the user is in a 
+different application, or it might fetch data over the network 
+without blocking user interaction with an activity.
+A service is implemented as a subclass of Service class as 
+follows −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 8 ===
+Broadcast Receivers
+Broadcast Receivers simply respond to broadcast messages from 
+other applications or from the system. For example, applications 
+can also initiate broadcasts to let other applications know that some 
+data has been downloaded to the device and is available for them 
+to use, so this is broadcast receiver who will intercept this 
+communication and will initiate appropriate action.
+A 
+broadcast 
+receiver 
+is 
+implemented 
+as 
+a 
+subclass 
+of 
+BroadcastReceiver class and each message is broadcaster as an 
+Intent object.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 9 ===
+Content Providers
+A content provider component supplies data from one 
+application to others on request. Such requests are handled 
+by the methods of the ContentResolver class. The data may 
+be stored in the file system, the database or somewhere else 
+entirely.
+A content provider is implemented as a subclass of 
+ContentProvider class and must implement a standard set of 
+APIs that enable other applications to perform transactions.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 10 ===
+Additional Components
+#
+Components & Description
+1 Fragments
+Represents a portion of user interface in an Activity.
+2 Views
+UI elements that are drawn on-screen including buttons, lists forms etc.
+3 Layouts
+View hierarchies that control screen format and appearance of the views.
+4 Intents
+Messages wiring components together.
+5 Resources
+External elements, such as strings, constants and drawable pictures.
+6 Manifest
+Configuration file for the application.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 11 ===
+Module 4
+Application Components and 
+Resources
+=== Module 4 - Application Components and Resources.pptx.pdf | page 12 ===
+Android Resources
+Resources are the additional ﬁles and 
+static content that your code uses, 
+such as bitmaps, layout deﬁnitions, 
+user interface strings, animation 
+instructions, and more.
+These resources are always maintained 
+separately in various sub-directories 
+under res/ directory of the project.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 13 ===
+Resource Organization
+#
+Directory & Resource Type
+1
+animator/
+XML files that define Property animations.
+2
+anim/
+XML files that define property animations. They are saved in res/anim/ folder and accessed 
+from the R.anim class.
+XML files that define Tween animations. Property animations can also be saved in this directory, but 
+the animator/ directory is preferred for property animations to distinguish between the two types.
+3
+color/
+XML files that define a state list of colors. They are saved in res/color/ and accessed from 
+the R.color class.
+XML files that define a state list of colors. For more information, see Color state list resource.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 14 ===
+Resource Organization
+#
+Directory & Resource Type
+4
+drawable/
+Image files like .png, .jpg, .gif or XML files that are compiled into bitmaps, state lists, 
+shapes, animation drawable. They are saved in res/drawable/ and accessed from 
+the R.drawable class.
+Bitmap files (PNG, .9.png, JPG, or GIF) or XML files that are compiled into the following drawable 
+resource subtypes:
+• Bitmap files
+• Nine-patches (re-sizable bitmaps)
+• State lists
+• Shapes
+• Animation drawables
+• Other drawables
+For more information, see Drawable resources.
+5
+layout/
+XML files that define a user interface layout. They are saved in res/layout/ and accessed 
+from the R.layout class.
+XML files that define a user interface layout. For more information, see Layout resource.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 15 ===
+Resource Organization
+#
+Directory & Resource Type
+6
+menu/
+XML files that define application menus, such as an Options Menu, Context Menu, or Sub 
+Menu. They are saved in res/menu/ and accessed from the R.menu class.
+XML files that define app menus, such as an options menu, context menu, or submenu. For more 
+information, see Menu resource.
+7
+raw/
+Arbitrary 
+files 
+to 
+save 
+in 
+their 
+raw 
+form. 
+You 
+need 
+to 
+call Resources.openRawResource() with the resource ID, which is R.raw.filename to open 
+such raw files.
+Arbitrary files to save in their raw form. To open these resources with a raw InputStream, 
+call Resources.openRawResource() with the resource ID, which is R.raw.filename.
+However, if you need access to the original filenames and file hierarchy, consider saving resources in 
+the assets/ directory instead of res/raw/. Files in assets/ aren't given a resource ID, so you can only 
+read them using AssetManager.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 16 ===
+Resource Organization
+#
+Directory & Resource Type
+8
+values/
+XML files that contain simple values, such as strings, integers, and colors.
+Whereas XML resource files in other res/ subdirectories define a single resource based on the XML 
+filename, files in the values/ directory describe multiple resources. For a file in this directory, each 
+child of the <resources> element defines a single resource. For example, a <string> element creates 
+an R.string resource, and a <color> element creates an R.color resource.
+Because each resource is defined with its own XML element, you can name the file whatever you 
+want and place different resource types in one file. However, for clarity, you might want to place 
+unique resource types in different files. For example, here are some filename conventions for 
+resources you can create in this directory:
+• arrays.xml for resource arrays (Typed arrays)
+• colors.xml for Color values
+• dimens.xml for Dimension values
+• strings.xml for String values
+• styles.xml for Styles
+For more information, see String resources, Style resource, and More resource types.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 17 ===
+Resource Organization
+#
+Directory & Resource Type
+9
+xml/
+Arbitrary XML files that can be read at runtime by calling Resources.getXML(). Various XML 
+configuration files must be saved here, such as a Search configuration.
+10
+font/
+Font files with extensions such as TTF, OTF, or TTC, or XML files that include 
+a <font-family> element. For more information about fonts as resources, see Add a font as an XML 
+resource.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 18 ===
+Accessing Resources
+• Accessing Resources in Code
+When your Android application is compiled, a R class gets 
+generated, which contains resource IDs for all the resources 
+available in your res/ directory. You can use R class to access 
+that resource using sub-directory and resource name or 
+directly resource ID.
+=== Module 4 - Application Components and Resources.pptx.pdf | page 19 ===
+Accessing Resources
+• Accessing Resources in Code
+Example 1
+To access res/drawable/myimage.png and set an ImageView you will use following code −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 20 ===
+Accessing Resources
+• Accessing Resources in Code
+Example 2
+Consider next example where res/values/strings.xml has following definition −
+you can set the text on a TextView object with ID msg using a resource ID as follows −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 21 ===
+Accessing Resources
+• Accessing Resources in Code
+Example 3
+Consider a layout 
+res/layout/activity_main.xml
+ with the following
+definition −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 22 ===
+Accessing Resources
+• Accessing Resources in Code
+Example 3
+This application code will load this layout for an Activity, in the onCreate() method as follows −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 23 ===
+Accessing Resources
+• Accessing Resources in XML
+Consider the following resource XML res/values/strings.xml file that includes a color resource 
+and a string resource −
+Now you can use these resources in the following layout file to set the text color and text string 
+as follows −
+=== Module 4 - Application Components and Resources.pptx.pdf | page 24 ===
+DEMONSTRATION
+Components and Resources
+=== Module 4 - Application Components and Resources.pptx.pdf | page 25 ===
+• https://www.tutorialspoint.com/android/android_application_components.htm
+• https://developer.android.com/guide/topics/resources/providing-resources
+References

@@ -1,0 +1,98 @@
+
+=== Module 2 - Android Studio.pptx.pdf | page 1 ===
+Module 2
+Android Studio
+=== Module 2 - Android Studio.pptx.pdf | page 2 ===
+At the end of the chapter, the learner should be able to:
+• To identify prerequisites on Android Studio installation
+• To identify system requirements
+• To create an Android project
+• To familiarize with Android Studio Interface
+• To run the first Android application
+OBJECTIVES
+=== Module 2 - Android Studio.pptx.pdf | page 3 ===
+Prerequisites
+• JDK 
+https://www.oracle.com/technetwork/java/javase/downloads/index.html
+• Android Studio                
+https://developer.android.com/studio/
+=== Module 2 - Android Studio.pptx.pdf | page 4 ===
+System Requirements
+https://developer.android.com/studio
+=== Module 2 - Android Studio.pptx.pdf | page 5 ===
+Create an Android project
+1. click Start a new Android Studio project Or if you have a project opened, select File > New > New 
+Project.
+=== Module 2 - Android Studio.pptx.pdf | page 6 ===
+Create an Android project
+2. In the Choose your project window, select Empty Activity
+3. Click Next.
+4. In the Configure your project window, enter the following values:
+Name: "My First App"
+Package name: "com.example.myfirstapp"
+Check the box next to Use AndroidX artifacts
+You might want to change the project location.
+Leave the other options as they are.
+5. If you prefer to write your app in Java, select Java from the Language drop down.
+6. Click Finish.
+=== Module 2 - Android Studio.pptx.pdf | page 7 ===
+
+=== Module 2 - Android Studio.pptx.pdf | page 8 ===
+Java or
+Kotlin
+=== Module 2 - Android Studio.pptx.pdf | page 9 ===
+
+=== Module 2 - Android Studio.pptx.pdf | page 10 ===
+Android Studio Interface
+=== Module 2 - Android Studio.pptx.pdf | page 11 ===
+Android Studio Interface
+1.
+The toolbar lets you carry out a wide range of actions, including running your app and 
+launching Android tools.
+2.
+The navigation bar helps you navigate through your project and open ﬁles for editing. It 
+provides a more compact view of the structure visible in the Project window.
+3.
+The editor window is where you create and modify code. Depending on the current ﬁle 
+type, the editor can change. For example, when viewing a layout ﬁle, the editor displays 
+the Layout Editor.
+4.
+The tool window bar runs around the outside of the IDE window and contains the buttons 
+that allow you to expand or collapse individual tool windows.
+5.
+The tool windows give you access to speciﬁc tasks like project management, search, 
+version control, and more. You can expand them and collapse them.
+6.
+The status bar displays the status of your project and the IDE itself, as well as any 
+warnings or messages.
+=== Module 2 - Android Studio.pptx.pdf | page 12 ===
+Running your Application
+• Run on real Device
+• Run on Emulator
+=== Module 2 - Android Studio.pptx.pdf | page 13 ===
+Running your Application
+• Run on real Device
+o
+Connect your Android Phone to the computer
+o
+Make sure USB Debugging is enabled (you can 
+do this by enabling Developer options first)
+=== Module 2 - Android Studio.pptx.pdf | page 14 ===
+Running your Application
+• Run on Emulator
+o
+Navigate to Device Manager 
+and select Create Device
+o
+Select your screen size and kind 
+of phone
+o
+Select Android SDK version
+=== Module 2 - Android Studio.pptx.pdf | page 15 ===
+DEMONSTRATION
+IDE Familiarization
+=== Module 2 - Android Studio.pptx.pdf | page 16 ===
+• https://developer.android.com/training/basics/firstapp/creating-project
+• https://developer.android.com/studio/intro/?gclid=EAIaIQobChMIxuSkvaqk4wIVUnZgCh131Qe3EA
+AYASABEgJSz_D_BwE
+References
