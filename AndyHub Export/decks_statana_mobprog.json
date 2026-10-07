@@ -1,0 +1,2567 @@
+[
+ {
+  "name": "StatAna_M3-M4_Summative2_Verified",
+  "modules_included": "M3, M4",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage defines the modeling objective and acceptance criteria?",
+    "correct_answer": "Project Design",
+    "options": "[\"Project Design\", \"Data Sampling\", \"Data Modification\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step gathers historical and real-time data from multiple sources?",
+    "correct_answer": "Data Collection and Integration",
+    "options": "[\"Data Collection and Integration\", \"Predictive Modeling\", \"Scenario Analysis\", \"Optimization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage extracts data and applies filters?",
+    "correct_answer": "Data Sampling",
+    "options": "[\"Data Sampling\", \"Project Design\", \"Data Exploration\", \"Model Development\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step forecasts potential future outcomes?",
+    "correct_answer": "Predictive Modeling",
+    "options": "[\"Predictive Modeling\", \"Data Collection and Integration\", \"Scenario Analysis\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage identifies trends, anomalies, and correlations?",
+    "correct_answer": "Data Exploration",
+    "options": "[\"Data Exploration\", \"Project Design\", \"Data Modification\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step evaluates possible situations and their implications?",
+    "correct_answer": "Scenario Analysis",
+    "options": "[\"Scenario Analysis\", \"Predictive Modeling\", \"Optimization\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage includes cleaning, transformation, and feature selection?",
+    "correct_answer": "Data Modification",
+    "options": "[\"Data Modification\", \"Data Sampling\", \"Project Design\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step uses algorithms to find the best course of action?",
+    "correct_answer": "Optimization",
+    "options": "[\"Optimization\", \"Scenario Analysis\", \"Data Collection and Integration\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage compares modeling techniques and selects a methodology?",
+    "correct_answer": "Model Development",
+    "options": "[\"Model Development\", \"Data Exploration\", \"Data Sampling\", \"Project Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step delivers actionable insights to decision-makers?",
+    "correct_answer": "Action Recommendation",
+    "options": "[\"Action Recommendation\", \"Optimization\", \"Predictive Modeling\", \"Scenario Analysis\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage reviews performance with business and subject-matter feedback?",
+    "correct_answer": "Model Validation",
+    "options": "[\"Model Validation\", \"Data Sampling\", \"Data Exploration\", \"Project Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Descriptive Analytics?",
+    "correct_answer": "\"What happened?\" Examines historical data to understand past performance.",
+    "options": "[\"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split trains the algorithm?",
+    "correct_answer": "Training data",
+    "options": "[\"Training data\", \"Validation data\", \"Testing data\", \"Original data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Machine Learning and AI?",
+    "correct_answer": "Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.",
+    "options": "[\"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split tunes the model while it is being built?",
+    "correct_answer": "Validation data",
+    "options": "[\"Validation data\", \"Testing data\", \"Original data\", \"Deployment data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Reduced Decision Complexity?",
+    "correct_answer": "Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.",
+    "options": "[\"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split provides the final performance evaluation?",
+    "correct_answer": "Testing data",
+    "options": "[\"Testing data\", \"Training data\", \"Validation data\", \"Exploration data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Data Integration: combining data from disparate sources with varying formats and quality.?",
+    "correct_answer": "Implement robust data governance and ETL processes.",
+    "options": "[\"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the regression ANOVA table, which sum of squares is explained by the predictors?",
+    "correct_answer": "Regression SS",
+    "options": "[\"Regression SS\", \"Residual SS\", \"Total SS\", \"Error MS\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Autonomous Decision Systems?",
+    "correct_answer": "Systems that not only recommend actions but can implement them with minimal human intervention.",
+    "options": "[\"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the regression ANOVA table, which sum of squares is unexplained error?",
+    "correct_answer": "Residual SS",
+    "options": "[\"Residual SS\", \"Regression SS\", \"Total SS\", \"Regression MS\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Diagnostic Analytics?",
+    "correct_answer": "\"Why did it happen?\" Identifies causes and relationships in data.",
+    "options": "[\"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For 140 observations and three predictors, what is the residual ANOVA degrees of freedom?",
+    "correct_answer": "136",
+    "options": "[\"136\", \"3\", \"139\", \"140\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Optimization Algorithms?",
+    "correct_answer": "Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.",
+    "options": "[\"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a very small ANOVA Significance F establish for this regression?",
+    "correct_answer": "At least one predictor is significant",
+    "options": "[\"At least one predictor is significant\", \"Every predictor is significant\", \"No predictor is significant\", \"The model has no residual error\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Increased Decision Speed?",
+    "correct_answer": "Enables faster decision-making through automated analysis and recommendation generation.",
+    "options": "[\"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "At the 0.05 level, which ad-spend predictor is insignificant in the regression table?",
+    "correct_answer": "Newspaper",
+    "options": "[\"Newspaper\", \"TV\", \"Radio\", \"Intercept\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Skill Gaps: finding talent with expertise in both analytics and domain knowledge.?",
+    "correct_answer": "Invest in training programs and cross-functional teams.",
+    "options": "[\"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the regression table's R Square?",
+    "correct_answer": "0.893710",
+    "options": "[\"0.893710\", \"0.891366\", \"0.94536\", \"1.736514\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Augmented Analytics?",
+    "correct_answer": "AI-powered tools that make advanced analytics accessible to non-technical business users.",
+    "options": "[\"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What fitted model is printed on the p28 slide?",
+    "correct_answer": "Sales = 2.98 + 0.047 x TV + 0.178 x Radio",
+    "options": "[\"Sales = 2.98 + 0.047 x TV + 0.178 x Radio\", \"Sales = 3.045 + 0.047 x TV + 0.180 x Radio\", \"Sales = 2.98 + 0.178 x TV + 0.047 x Radio\", \"Sales = 2.98 + 0.047 x TV - 0.178 x Radio\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Predictive Analytics?",
+    "correct_answer": "\"What will happen?\" Forecasts future outcomes based on patterns.",
+    "options": "[\"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which forecast measure divides absolute error by actual Y?",
+    "correct_answer": "MAPE",
+    "options": "[\"MAPE\", \"MAE\", \"MSE\", \"RMSE\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Simulation Modeling?",
+    "correct_answer": "Creating virtual scenarios to test different strategies and understand potential outcomes.",
+    "options": "[\"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Descriptive?",
+    "correct_answer": "What has happened, or what is happening now?",
+    "options": "[\"What has happened, or what is happening now?\", \"Why did it happen?\", \"What will likely happen?\", \"What should we do?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Improved Decision Quality?",
+    "correct_answer": "Enhances outcomes by considering more factors and scenarios than humanly possible.",
+    "options": "[\"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches y?",
+    "correct_answer": "Dependent variable",
+    "options": "[\"Dependent variable\", \"Independent variable\", \"Beta coefficient\", \"Alpha intercept\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Organizational Change: shifting from intuition-based to data-driven decision making culture.?",
+    "correct_answer": "Start with high-impact use cases and demonstrate ROI.",
+    "options": "[\"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches y, dependent variable?",
+    "correct_answer": "Sales",
+    "options": "[\"Sales\", \"Ad Spending\", \"Sales Sensitivity\", \"Baseline Sales\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Edge Computing?",
+    "correct_answer": "Prescriptive capabilities deployed at the edge for real-time decision making without latency.",
+    "options": "[\"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Multiple R?",
+    "correct_answer": "0.94536",
+    "options": "[\"0.94536\", \"0.893710\", \"0.891366\", \"1.736514\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Prescriptive Analytics?",
+    "correct_answer": "\"What should we do?\" Recommends actions to optimize outcomes.",
+    "options": "[\"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Intercept?",
+    "correct_answer": "3.045142209",
+    "options": "[\"3.045142209\", \"0.047048681\", \"0.179682989\", \"-0.003005565\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Natural Language Processing?",
+    "correct_answer": "Enabling systems to understand and communicate recommendations in human language.",
+    "options": "[\"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches MAE (Mean Absolute Error)?",
+    "correct_answer": "(1/n) sum of |e_i|",
+    "options": "[\"(1/n) sum of |e_i|\", \"(1/n) sum of e_i squared\", \"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Competitive Advantage?",
+    "correct_answer": "Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.",
+    "options": "[\"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Diagnostic?",
+    "correct_answer": "Why did it happen?",
+    "options": "[\"Why did it happen?\", \"What will likely happen?\", \"What should we do?\", \"What has happened, or what is happening now?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Technology Selection: choosing the right tools and platforms for specific business needs.?",
+    "correct_answer": "Begin with pilot projects to evaluate technology fit.",
+    "options": "[\"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches x?",
+    "correct_answer": "Independent variable",
+    "options": "[\"Independent variable\", \"Beta coefficient\", \"Alpha intercept\", \"Error term\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Explainable AI?",
+    "correct_answer": "Transparent algorithms that can explain the reasoning behind their recommendations.",
+    "options": "[\"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches x, independent variable?",
+    "correct_answer": "Ad Spending",
+    "options": "[\"Ad Spending\", \"Sales Sensitivity\", \"Baseline Sales\", \"Sales\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"What happened?\" Examines historical data to understand past performance.?",
+    "correct_answer": "Descriptive Analytics",
+    "options": "[\"Descriptive Analytics\", \"Diagnostic Analytics\", \"Predictive Analytics\", \"Prescriptive Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches R Square?",
+    "correct_answer": "0.893710",
+    "options": "[\"0.893710\", \"0.891366\", \"1.736514\", \"140\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Real-time Analytics?",
+    "correct_answer": "Processing data as it is created to provide immediate insights and recommendations.",
+    "options": "[\"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches TV Ads (in 000s)?",
+    "correct_answer": "0.047048681",
+    "options": "[\"0.047048681\", \"0.179682989\", \"-0.003005565\", \"3.045142209\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.?",
+    "correct_answer": "Reduced Decision Complexity",
+    "options": "[\"Reduced Decision Complexity\", \"Increased Decision Speed\", \"Improved Decision Quality\", \"Competitive Advantage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches MSE (Mean Squared Error)?",
+    "correct_answer": "(1/n) sum of e_i squared",
+    "options": "[\"(1/n) sum of e_i squared\", \"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\", \"(1/n) sum of |e_i|\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Implement robust data governance and ETL processes.?",
+    "correct_answer": "Data Integration: combining data from disparate sources with varying formats and quality.",
+    "options": "[\"Data Integration: combining data from disparate sources with varying formats and quality.\", \"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\", \"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Predictive?",
+    "correct_answer": "What will likely happen?",
+    "options": "[\"What will likely happen?\", \"What should we do?\", \"What has happened, or what is happening now?\", \"Why did it happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: Systems that not only recommend actions but can implement them with minimal human intervention.?",
+    "correct_answer": "Autonomous Decision Systems",
+    "options": "[\"Autonomous Decision Systems\", \"Augmented Analytics\", \"Edge Computing\", \"Explainable AI\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches β (beta)?",
+    "correct_answer": "Beta coefficient",
+    "options": "[\"Beta coefficient\", \"Alpha intercept\", \"Error term\", \"Dependent variable\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"Why did it happen?\" Identifies causes and relationships in data.?",
+    "correct_answer": "Diagnostic Analytics",
+    "options": "[\"Diagnostic Analytics\", \"Predictive Analytics\", \"Prescriptive Analytics\", \"Descriptive Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches β, beta coefficient?",
+    "correct_answer": "Sales Sensitivity",
+    "options": "[\"Sales Sensitivity\", \"Baseline Sales\", \"Sales\", \"Ad Spending\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which technology matches: Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.?",
+    "correct_answer": "Machine Learning and AI",
+    "options": "[\"Machine Learning and AI\", \"Optimization Algorithms\", \"Simulation Modeling\", \"Natural Language Processing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Adjusted R Square?",
+    "correct_answer": "0.891366",
+    "options": "[\"0.891366\", \"1.736514\", \"140\", \"0.94536\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Enables faster decision-making through automated analysis and recommendation generation.?",
+    "correct_answer": "Increased Decision Speed",
+    "options": "[\"Increased Decision Speed\", \"Improved Decision Quality\", \"Competitive Advantage\", \"Reduced Decision Complexity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Radio Ads (in 000s)?",
+    "correct_answer": "0.179682989",
+    "options": "[\"0.179682989\", \"-0.003005565\", \"3.045142209\", \"0.047048681\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Invest in training programs and cross-functional teams.?",
+    "correct_answer": "Skill Gaps: finding talent with expertise in both analytics and domain knowledge.",
+    "options": "[\"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\", \"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\", \"Data Integration: combining data from disparate sources with varying formats and quality.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches RMSE (Root Mean Squared Error)?",
+    "correct_answer": "square root of MSE",
+    "options": "[\"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\", \"(1/n) sum of |e_i|\", \"(1/n) sum of e_i squared\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: AI-powered tools that make advanced analytics accessible to non-technical business users.?",
+    "correct_answer": "Augmented Analytics",
+    "options": "[\"Augmented Analytics\", \"Edge Computing\", \"Explainable AI\", \"Autonomous Decision Systems\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Prescriptive?",
+    "correct_answer": "What should we do?",
+    "options": "[\"What should we do?\", \"What has happened, or what is happening now?\", \"Why did it happen?\", \"What will likely happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"What will happen?\" Forecasts future outcomes based on patterns.?",
+    "correct_answer": "Predictive Analytics",
+    "options": "[\"Predictive Analytics\", \"Prescriptive Analytics\", \"Descriptive Analytics\", \"Diagnostic Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches α (alpha)?",
+    "correct_answer": "Alpha intercept",
+    "options": "[\"Alpha intercept\", \"Error term\", \"Dependent variable\", \"Independent variable\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which technology matches: Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.?",
+    "correct_answer": "Optimization Algorithms",
+    "options": "[\"Optimization Algorithms\", \"Simulation Modeling\", \"Natural Language Processing\", \"Real-time Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches α, alpha intercept?",
+    "correct_answer": "Baseline Sales",
+    "options": "[\"Baseline Sales\", \"Sales\", \"Ad Spending\", \"Sales Sensitivity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Enhances outcomes by considering more factors and scenarios than humanly possible.?",
+    "correct_answer": "Improved Decision Quality",
+    "options": "[\"Improved Decision Quality\", \"Competitive Advantage\", \"Reduced Decision Complexity\", \"Increased Decision Speed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Standard Error?",
+    "correct_answer": "1.736514",
+    "options": "[\"1.736514\", \"140\", \"0.94536\", \"0.893710\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Start with high-impact use cases and demonstrate ROI.?",
+    "correct_answer": "Organizational Change: shifting from intuition-based to data-driven decision making culture.",
+    "options": "[\"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\", \"Data Integration: combining data from disparate sources with varying formats and quality.\", \"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Newspaper Ads (in 000s)?",
+    "correct_answer": "-0.003005565",
+    "options": "[\"-0.003005565\", \"3.045142209\", \"0.047048681\", \"0.179682989\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: Prescriptive capabilities deployed at the edge for real-time decision making without latency.?",
+    "correct_answer": "Edge Computing",
+    "options": "[\"Edge Computing\", \"Explainable AI\", \"Autonomous Decision Systems\", \"Augmented Analytics\"]",
+    "times_missed": 0
+   }
+  ]
+ },
+ {
+  "name": "StatAna_M1-M4_Midterm_Verified",
+  "modules_included": "M1, M2, M3, M4",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Which data-value-chain stage stores, queries, and joins transaction records?",
+    "correct_answer": "Database",
+    "options": "[\"Database\", \"Analytics\", \"Application\", \"Decision\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What question does diagnostic analytics answer?",
+    "correct_answer": "Why did it happen?",
+    "options": "[\"Why did it happen?\", \"What happened?\", \"What will happen?\", \"What should we do?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage defines the modeling objective and acceptance criteria?",
+    "correct_answer": "Project Design",
+    "options": "[\"Project Design\", \"Data Sampling\", \"Data Modification\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step gathers historical and real-time data from multiple sources?",
+    "correct_answer": "Data Collection and Integration",
+    "options": "[\"Data Collection and Integration\", \"Predictive Modeling\", \"Scenario Analysis\", \"Optimization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data-value-chain stage turns analysis into an implemented action?",
+    "correct_answer": "Decision",
+    "options": "[\"Decision\", \"Database\", \"Analytics\", \"Transactional Data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does diagnostic analytics investigate in historical data?",
+    "correct_answer": "Underlying drivers",
+    "options": "[\"Underlying drivers\", \"Future forecasts\", \"Optimal actions\", \"App layouts\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage extracts data and applies filters?",
+    "correct_answer": "Data Sampling",
+    "options": "[\"Data Sampling\", \"Project Design\", \"Data Exploration\", \"Model Development\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step forecasts potential future outcomes?",
+    "correct_answer": "Predictive Modeling",
+    "options": "[\"Predictive Modeling\", \"Data Collection and Integration\", \"Scenario Analysis\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data source collects answers through questionnaires?",
+    "correct_answer": "Surveys",
+    "options": "[\"Surveys\", \"Data poolers\", \"Transactional data\", \"Unstructured data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which diagnostic function notices unusual results?",
+    "correct_answer": "Identify anomalies",
+    "options": "[\"Identify anomalies\", \"Predict outcomes\", \"Optimize resources\", \"Present totals\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage identifies trends, anomalies, and correlations?",
+    "correct_answer": "Data Exploration",
+    "options": "[\"Data Exploration\", \"Project Design\", \"Data Modification\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step evaluates possible situations and their implications?",
+    "correct_answer": "Scenario Analysis",
+    "options": "[\"Scenario Analysis\", \"Predictive Modeling\", \"Optimization\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a moving average help reveal by smoothing observations over past periods?",
+    "correct_answer": "Trends",
+    "options": "[\"Trends\", \"Database joins\", \"Transaction IDs\", \"Data types\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which diagnostic function investigates details to find an explanation?",
+    "correct_answer": "Drill into analytics",
+    "options": "[\"Drill into analytics\", \"Forecast outcomes\", \"Aggregate totals\", \"Recommend actions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage includes cleaning, transformation, and feature selection?",
+    "correct_answer": "Data Modification",
+    "options": "[\"Data Modification\", \"Data Sampling\", \"Project Design\", \"Model Validation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step uses algorithms to find the best course of action?",
+    "correct_answer": "Optimization",
+    "options": "[\"Optimization\", \"Scenario Analysis\", \"Data Collection and Integration\", \"Action Recommendation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which chart sorts bars by frequency or cost and adds a cumulative percentage line?",
+    "correct_answer": "Pareto chart",
+    "options": "[\"Pareto chart\", \"Control chart\", \"Scatter plot\", \"Pivot table\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which diagnostic function examines possible causes?",
+    "correct_answer": "Determine causal relationships",
+    "options": "[\"Determine causal relationships\", \"Determine casual relationships\", \"Calculate quartiles\", \"Select a forecast\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage compares modeling techniques and selects a methodology?",
+    "correct_answer": "Model Development",
+    "options": "[\"Model Development\", \"Data Exploration\", \"Data Sampling\", \"Project Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prescriptive-process step delivers actionable insights to decision-makers?",
+    "correct_answer": "Action Recommendation",
+    "options": "[\"Action Recommendation\", \"Optimization\", \"Predictive Modeling\", \"Scenario Analysis\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Excel tool summarizes data using row, column, filter, and value fields?",
+    "correct_answer": "Pivot table",
+    "options": "[\"Pivot table\", \"Moving average\", \"Pareto chart\", \"Control chart\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which method does the slide map to factors that move together?",
+    "correct_answer": "Correlation coefficient",
+    "options": "[\"Correlation coefficient\", \"Chi-Square\", \"ANOVA F-test\", \"Z-test\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which predictive-process stage reviews performance with business and subject-matter feedback?",
+    "correct_answer": "Model Validation",
+    "options": "[\"Model Validation\", \"Data Sampling\", \"Data Exploration\", \"Project Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Descriptive Analytics?",
+    "correct_answer": "\"What happened?\" Examines historical data to understand past performance.",
+    "options": "[\"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Excel function averages values meeting one criterion?",
+    "correct_answer": "AVERAGEIF",
+    "options": "[\"AVERAGEIF\", \"AVERAGE\", \"AVERAGEIFS\", \"SUMIF\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which method does the slide map to different categorical distributions?",
+    "correct_answer": "Chi-Square",
+    "options": "[\"Chi-Square\", \"Correlation coefficient\", \"Moving average\", \"Linear regression\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split trains the algorithm?",
+    "correct_answer": "Training data",
+    "options": "[\"Training data\", \"Validation data\", \"Testing data\", \"Original data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Machine Learning and AI?",
+    "correct_answer": "Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.",
+    "options": "[\"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Excel function counts cells containing numbers?",
+    "correct_answer": "COUNT",
+    "options": "[\"COUNT\", \"COUNTA\", \"COUNTBLANK\", \"COUNTIF\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which method does the slide map to similar populations?",
+    "correct_answer": "ANOVA (F-test)",
+    "options": "[\"ANOVA (F-test)\", \"Correlation coefficient\", \"Chi-Square\", \"Pareto chart\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split tunes the model while it is being built?",
+    "correct_answer": "Validation data",
+    "options": "[\"Validation data\", \"Testing data\", \"Original data\", \"Deployment data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Reduced Decision Complexity?",
+    "correct_answer": "Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.",
+    "options": "[\"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Excel function counts nonblank cells?",
+    "correct_answer": "COUNTA",
+    "options": "[\"COUNTA\", \"COUNT\", \"COUNTBLANK\", \"COUNTIF\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which tests does the slide place under analysis of means?",
+    "correct_answer": "Z-test and T-test",
+    "options": "[\"Z-test and T-test\", \"Chi-Square and correlation\", \"Pareto and SPC\", \"Median and mode\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data split provides the final performance evaluation?",
+    "correct_answer": "Testing data",
+    "options": "[\"Testing data\", \"Training data\", \"Validation data\", \"Exploration data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Data Integration: combining data from disparate sources with varying formats and quality.?",
+    "correct_answer": "Implement robust data governance and ETL processes.",
+    "options": "[\"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Excel function calculates sample standard deviation?",
+    "correct_answer": "STDEV",
+    "options": "[\"STDEV\", \"STDEVP\", \"VAR\", \"VARP\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What kind of relationship can association include?",
+    "correct_answer": "A curved relationship",
+    "options": "[\"A curved relationship\", \"Only a linear relationship\", \"Only a positive relationship\", \"Only a negative relationship\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the regression ANOVA table, which sum of squares is explained by the predictors?",
+    "correct_answer": "Regression SS",
+    "options": "[\"Regression SS\", \"Residual SS\", \"Total SS\", \"Error MS\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Autonomous Decision Systems?",
+    "correct_answer": "Systems that not only recommend actions but can implement them with minimal human intervention.",
+    "options": "[\"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which kind of variation is shown by a point outside the control limits?",
+    "correct_answer": "Special cause",
+    "options": "[\"Special cause\", \"Common cause\", \"Central tendency\", \"Sampling variation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What kind of relationship does correlation measure?",
+    "correct_answer": "A linear relationship",
+    "options": "[\"A linear relationship\", \"Any curved relationship\", \"Only a causal relationship\", \"Only a categorical relationship\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the regression ANOVA table, which sum of squares is unexplained error?",
+    "correct_answer": "Residual SS",
+    "options": "[\"Residual SS\", \"Regression SS\", \"Total SS\", \"Regression MS\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Diagnostic Analytics?",
+    "correct_answer": "\"Why did it happen?\" Identifies causes and relationships in data.",
+    "options": "[\"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which question matches Descriptive?",
+    "correct_answer": "What happened?",
+    "options": "[\"What happened?\", \"Why did it happen?\", \"What will happen?\", \"How can we make it happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Can a U-shaped pattern be associated without linear correlation?",
+    "correct_answer": "Yes",
+    "options": "[\"Yes\", \"No\", \"Only with a positive slope\", \"Only with a negative slope\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For 140 observations and three predictors, what is the residual ANOVA degrees of freedom?",
+    "correct_answer": "136",
+    "options": "[\"136\", \"3\", \"139\", \"140\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Optimization Algorithms?",
+    "correct_answer": "Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.",
+    "options": "[\"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Adds numbers.?",
+    "correct_answer": "SUM(range)",
+    "options": "[\"SUM(range)\", \"SUMIF(range, criteria, sum_range)\", \"AVERAGE(range)\", \"AVERAGEIF(range, criteria, average_range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a possible direction of linear correlation?",
+    "correct_answer": "Negative",
+    "options": "[\"Negative\", \"Causal\", \"Categorical\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a very small ANOVA Significance F establish for this regression?",
+    "correct_answer": "At least one predictor is significant",
+    "options": "[\"At least one predictor is significant\", \"Every predictor is significant\", \"No predictor is significant\", \"The model has no residual error\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Increased Decision Speed?",
+    "correct_answer": "Enables faster decision-making through automated analysis and recommendation generation.",
+    "options": "[\"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which question matches Diagnostic?",
+    "correct_answer": "Why did it happen?",
+    "options": "[\"Why did it happen?\", \"What will happen?\", \"How can we make it happen?\", \"What happened?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type identifies data anomalies?",
+    "correct_answer": "Diagnostic",
+    "options": "[\"Diagnostic\", \"Descriptive\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "At the 0.05 level, which ad-spend predictor is insignificant in the regression table?",
+    "correct_answer": "Newspaper",
+    "options": "[\"Newspaper\", \"TV\", \"Radio\", \"Intercept\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Skill Gaps: finding talent with expertise in both analytics and domain knowledge.?",
+    "correct_answer": "Invest in training programs and cross-functional teams.",
+    "options": "[\"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Adds values meeting one criterion.?",
+    "correct_answer": "SUMIF(range, criteria, sum_range)",
+    "options": "[\"SUMIF(range, criteria, sum_range)\", \"AVERAGE(range)\", \"AVERAGEIF(range, criteria, average_range)\", \"MEDIAN(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type reconfigures data into an easily read format?",
+    "correct_answer": "Descriptive",
+    "options": "[\"Descriptive\", \"Diagnostic\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the regression table's R Square?",
+    "correct_answer": "0.893710",
+    "options": "[\"0.893710\", \"0.891366\", \"0.94536\", \"1.736514\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Augmented Analytics?",
+    "correct_answer": "AI-powered tools that make advanced analytics accessible to non-technical business users.",
+    "options": "[\"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which question matches Predictive?",
+    "correct_answer": "What will happen?",
+    "options": "[\"What will happen?\", \"How can we make it happen?\", \"What happened?\", \"Why did it happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type highlights trends and relationships to investigate causes?",
+    "correct_answer": "Diagnostic",
+    "options": "[\"Diagnostic\", \"Descriptive\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What fitted model is printed on the p28 slide?",
+    "correct_answer": "Sales = 2.98 + 0.047 x TV + 0.178 x Radio",
+    "options": "[\"Sales = 2.98 + 0.047 x TV + 0.178 x Radio\", \"Sales = 3.045 + 0.047 x TV + 0.180 x Radio\", \"Sales = 2.98 + 0.178 x TV + 0.047 x Radio\", \"Sales = 2.98 + 0.047 x TV - 0.178 x Radio\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Predictive Analytics?",
+    "correct_answer": "\"What will happen?\" Forecasts future outcomes based on patterns.",
+    "options": "[\"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\", \"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Finds the arithmetic mean.?",
+    "correct_answer": "AVERAGE(range)",
+    "options": "[\"AVERAGE(range)\", \"AVERAGEIF(range, criteria, average_range)\", \"MEDIAN(range)\", \"MIN(range) / MAX(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type describes current performance or outcome?",
+    "correct_answer": "Descriptive",
+    "options": "[\"Descriptive\", \"Diagnostic\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which forecast measure divides absolute error by actual Y?",
+    "correct_answer": "MAPE",
+    "options": "[\"MAPE\", \"MAE\", \"MSE\", \"RMSE\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Simulation Modeling?",
+    "correct_answer": "Creating virtual scenarios to test different strategies and understand potential outcomes.",
+    "options": "[\"Creating virtual scenarios to test different strategies and understand potential outcomes.\", \"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which question matches Prescriptive?",
+    "correct_answer": "How can we make it happen?",
+    "options": "[\"How can we make it happen?\", \"What happened?\", \"Why did it happen?\", \"What will happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type answers what happened?",
+    "correct_answer": "Descriptive",
+    "options": "[\"Descriptive\", \"Diagnostic\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Descriptive?",
+    "correct_answer": "What has happened, or what is happening now?",
+    "options": "[\"What has happened, or what is happening now?\", \"Why did it happen?\", \"What will likely happen?\", \"What should we do?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Improved Decision Quality?",
+    "correct_answer": "Enhances outcomes by considering more factors and scenarios than humanly possible.",
+    "options": "[\"Enhances outcomes by considering more factors and scenarios than humanly possible.\", \"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: What happened??",
+    "correct_answer": "Descriptive",
+    "options": "[\"Descriptive\", \"Diagnostic\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analytics type answers why it happened?",
+    "correct_answer": "Diagnostic",
+    "options": "[\"Diagnostic\", \"Descriptive\", \"Predictive\", \"Prescriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches y?",
+    "correct_answer": "Dependent variable",
+    "options": "[\"Dependent variable\", \"Independent variable\", \"Beta coefficient\", \"Alpha intercept\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Organizational Change: shifting from intuition-based to data-driven decision making culture.?",
+    "correct_answer": "Start with high-impact use cases and demonstrate ROI.",
+    "options": "[\"Start with high-impact use cases and demonstrate ROI.\", \"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Returns the middle value.?",
+    "correct_answer": "MEDIAN(range)",
+    "options": "[\"MEDIAN(range)\", \"MIN(range) / MAX(range)\", \"SMALL(range, k) / LARGE(range, k)\", \"COUNT(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What data period do both descriptive and diagnostic analytics use in the slide comparison?",
+    "correct_answer": "Historical data",
+    "options": "[\"Historical data\", \"Only future data\", \"Only simulated data\", \"Only real-time data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches y, dependent variable?",
+    "correct_answer": "Sales",
+    "options": "[\"Sales\", \"Ad Spending\", \"Sales Sensitivity\", \"Baseline Sales\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Edge Computing?",
+    "correct_answer": "Prescriptive capabilities deployed at the edge for real-time decision making without latency.",
+    "options": "[\"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\", \"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: Why did it happen??",
+    "correct_answer": "Diagnostic",
+    "options": "[\"Diagnostic\", \"Predictive\", \"Prescriptive\", \"Descriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which named method assesses factors moving together?",
+    "correct_answer": "Correlation coefficient",
+    "options": "[\"Correlation coefficient\", \"T-test\", \"ANOVA\", \"Chi-Square\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Multiple R?",
+    "correct_answer": "0.94536",
+    "options": "[\"0.94536\", \"0.893710\", \"0.891366\", \"1.736514\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which question matches Prescriptive Analytics?",
+    "correct_answer": "\"What should we do?\" Recommends actions to optimize outcomes.",
+    "options": "[\"\\\"What should we do?\\\" Recommends actions to optimize outcomes.\", \"\\\"What happened?\\\" Examines historical data to understand past performance.\", \"\\\"Why did it happen?\\\" Identifies causes and relationships in data.\", \"\\\"What will happen?\\\" Forecasts future outcomes based on patterns.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Returns the smallest / largest value.?",
+    "correct_answer": "MIN(range) / MAX(range)",
+    "options": "[\"MIN(range) / MAX(range)\", \"SMALL(range, k) / LARGE(range, k)\", \"COUNT(range)\", \"COUNTA(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which named method is associated with an F-test?",
+    "correct_answer": "ANOVA",
+    "options": "[\"ANOVA\", \"Correlation\", \"Chi-Square\", \"Moving average\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Intercept?",
+    "correct_answer": "3.045142209",
+    "options": "[\"3.045142209\", \"0.047048681\", \"0.179682989\", \"-0.003005565\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Natural Language Processing?",
+    "correct_answer": "Enabling systems to understand and communicate recommendations in human language.",
+    "options": "[\"Enabling systems to understand and communicate recommendations in human language.\", \"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: What will happen??",
+    "correct_answer": "Predictive",
+    "options": "[\"Predictive\", \"Prescriptive\", \"Descriptive\", \"Diagnostic\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which test do the Module 2 objectives name without giving a worked example?",
+    "correct_answer": "One-way ANOVA",
+    "options": "[\"One-way ANOVA\", \"Multiple regression\", \"MAPE\", \"SPC\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches MAE (Mean Absolute Error)?",
+    "correct_answer": "(1/n) sum of |e_i|",
+    "options": "[\"(1/n) sum of |e_i|\", \"(1/n) sum of e_i squared\", \"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which explanation matches Competitive Advantage?",
+    "correct_answer": "Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.",
+    "options": "[\"Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning.\", \"Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.\", \"Enables faster decision-making through automated analysis and recommendation generation.\", \"Enhances outcomes by considering more factors and scenarios than humanly possible.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Returns the kth smallest / largest value.?",
+    "correct_answer": "SMALL(range, k) / LARGE(range, k)",
+    "options": "[\"SMALL(range, k) / LARGE(range, k)\", \"COUNT(range)\", \"COUNTA(range)\", \"COUNTBLANK(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement about association is correct?",
+    "correct_answer": "It need not be linear",
+    "options": "[\"It need not be linear\", \"It is always linear\", \"It proves causation\", \"It is always positive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Diagnostic?",
+    "correct_answer": "Why did it happen?",
+    "options": "[\"Why did it happen?\", \"What will likely happen?\", \"What should we do?\", \"What has happened, or what is happening now?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which solution matches Technology Selection: choosing the right tools and platforms for specific business needs.?",
+    "correct_answer": "Begin with pilot projects to evaluate technology fit.",
+    "options": "[\"Begin with pilot projects to evaluate technology fit.\", \"Implement robust data governance and ETL processes.\", \"Invest in training programs and cross-functional teams.\", \"Start with high-impact use cases and demonstrate ROI.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: How can we make it happen??",
+    "correct_answer": "Prescriptive",
+    "options": "[\"Prescriptive\", \"Descriptive\", \"Diagnostic\", \"Predictive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement corrects the slide's 'casual relationships' typo?",
+    "correct_answer": "Causal relationships",
+    "options": "[\"Causal relationships\", \"Casual relationships\", \"Correlational predictions\", \"Categorical forecasts\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches x?",
+    "correct_answer": "Independent variable",
+    "options": "[\"Independent variable\", \"Beta coefficient\", \"Alpha intercept\", \"Error term\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which what it means matches Explainable AI?",
+    "correct_answer": "Transparent algorithms that can explain the reasoning behind their recommendations.",
+    "options": "[\"Transparent algorithms that can explain the reasoning behind their recommendations.\", \"Systems that not only recommend actions but can implement them with minimal human intervention.\", \"AI-powered tools that make advanced analytics accessible to non-technical business users.\", \"Prescriptive capabilities deployed at the edge for real-time decision making without latency.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Counts cells containing numbers.?",
+    "correct_answer": "COUNT(range)",
+    "options": "[\"COUNT(range)\", \"COUNTA(range)\", \"COUNTBLANK(range)\", \"COUNTIF(range, criterion)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches x, independent variable?",
+    "correct_answer": "Ad Spending",
+    "options": "[\"Ad Spending\", \"Sales Sensitivity\", \"Baseline Sales\", \"Sales\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"What happened?\" Examines historical data to understand past performance.?",
+    "correct_answer": "Descriptive Analytics",
+    "options": "[\"Descriptive Analytics\", \"Diagnostic Analytics\", \"Predictive Analytics\", \"Prescriptive Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Counts nonblank cells.?",
+    "correct_answer": "COUNTA(range)",
+    "options": "[\"COUNTA(range)\", \"COUNTBLANK(range)\", \"COUNTIF(range, criterion)\", \"COUNTIFS(...)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches R Square?",
+    "correct_answer": "0.893710",
+    "options": "[\"0.893710\", \"0.891366\", \"1.736514\", \"140\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which what it does matches Real-time Analytics?",
+    "correct_answer": "Processing data as it is created to provide immediate insights and recommendations.",
+    "options": "[\"Processing data as it is created to provide immediate insights and recommendations.\", \"Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.\", \"Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.\", \"Creating virtual scenarios to test different strategies and understand potential outcomes.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: Insight?",
+    "correct_answer": "Diagnostic",
+    "options": "[\"Diagnostic\", \"Predictive\", \"Prescriptive\", \"Descriptive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches TV Ads (in 000s)?",
+    "correct_answer": "0.047048681",
+    "options": "[\"0.047048681\", \"0.179682989\", \"-0.003005565\", \"3.045142209\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Simplifies complex decisions by evaluating numerous variables and constraints simultaneously.?",
+    "correct_answer": "Reduced Decision Complexity",
+    "options": "[\"Reduced Decision Complexity\", \"Increased Decision Speed\", \"Improved Decision Quality\", \"Competitive Advantage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Counts blank cells.?",
+    "correct_answer": "COUNTBLANK(range)",
+    "options": "[\"COUNTBLANK(range)\", \"COUNTIF(range, criterion)\", \"COUNTIFS(...)\", \"SUMIFS(...)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches MSE (Mean Squared Error)?",
+    "correct_answer": "(1/n) sum of e_i squared",
+    "options": "[\"(1/n) sum of e_i squared\", \"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\", \"(1/n) sum of |e_i|\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Implement robust data governance and ETL processes.?",
+    "correct_answer": "Data Integration: combining data from disparate sources with varying formats and quality.",
+    "options": "[\"Data Integration: combining data from disparate sources with varying formats and quality.\", \"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\", \"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: Foresight?",
+    "correct_answer": "Predictive",
+    "options": "[\"Predictive\", \"Prescriptive\", \"Descriptive\", \"Diagnostic\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Predictive?",
+    "correct_answer": "What will likely happen?",
+    "options": "[\"What will likely happen?\", \"What should we do?\", \"What has happened, or what is happening now?\", \"Why did it happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: Systems that not only recommend actions but can implement them with minimal human intervention.?",
+    "correct_answer": "Autonomous Decision Systems",
+    "options": "[\"Autonomous Decision Systems\", \"Augmented Analytics\", \"Edge Computing\", \"Explainable AI\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Counts cells meeting one criterion.?",
+    "correct_answer": "COUNTIF(range, criterion)",
+    "options": "[\"COUNTIF(range, criterion)\", \"COUNTIFS(...)\", \"SUMIFS(...)\", \"AVERAGEIFS(...)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches β (beta)?",
+    "correct_answer": "Beta coefficient",
+    "options": "[\"Beta coefficient\", \"Alpha intercept\", \"Error term\", \"Dependent variable\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"Why did it happen?\" Identifies causes and relationships in data.?",
+    "correct_answer": "Diagnostic Analytics",
+    "options": "[\"Diagnostic Analytics\", \"Predictive Analytics\", \"Prescriptive Analytics\", \"Descriptive Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Gartner Analytic Ascendancy Model, which type matches: Optimization?",
+    "correct_answer": "Prescriptive",
+    "options": "[\"Prescriptive\", \"Descriptive\", \"Diagnostic\", \"Predictive\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches β, beta coefficient?",
+    "correct_answer": "Sales Sensitivity",
+    "options": "[\"Sales Sensitivity\", \"Baseline Sales\", \"Sales\", \"Ad Spending\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which technology matches: Algorithms that learn from data patterns to make predictions and improve over time without explicit programming.?",
+    "correct_answer": "Machine Learning and AI",
+    "options": "[\"Machine Learning and AI\", \"Optimization Algorithms\", \"Simulation Modeling\", \"Natural Language Processing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Counts cells meeting multiple criteria.?",
+    "correct_answer": "COUNTIFS(...)",
+    "options": "[\"COUNTIFS(...)\", \"SUMIFS(...)\", \"AVERAGEIFS(...)\", \"VAR(range) / VARP(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Adjusted R Square?",
+    "correct_answer": "0.891366",
+    "options": "[\"0.891366\", \"1.736514\", \"140\", \"0.94536\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Enables faster decision-making through automated analysis and recommendation generation.?",
+    "correct_answer": "Increased Decision Speed",
+    "options": "[\"Increased Decision Speed\", \"Improved Decision Quality\", \"Competitive Advantage\", \"Reduced Decision Complexity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Sums values meeting multiple criteria.?",
+    "correct_answer": "SUMIFS(...)",
+    "options": "[\"SUMIFS(...)\", \"AVERAGEIFS(...)\", \"VAR(range) / VARP(range)\", \"STDEV(range) / STDEVP(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Radio Ads (in 000s)?",
+    "correct_answer": "0.179682989",
+    "options": "[\"0.179682989\", \"-0.003005565\", \"3.045142209\", \"0.047048681\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Invest in training programs and cross-functional teams.?",
+    "correct_answer": "Skill Gaps: finding talent with expertise in both analytics and domain knowledge.",
+    "options": "[\"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\", \"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\", \"Data Integration: combining data from disparate sources with varying formats and quality.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Averages values meeting multiple criteria.?",
+    "correct_answer": "AVERAGEIFS(...)",
+    "options": "[\"AVERAGEIFS(...)\", \"VAR(range) / VARP(range)\", \"STDEV(range) / STDEVP(range)\", \"QUARTILE(range, quart)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 5: Forecast Accuracy Measures, which formula matches RMSE (Root Mean Squared Error)?",
+    "correct_answer": "square root of MSE",
+    "options": "[\"square root of MSE\", \"(1/n) sum of (|e_i| / Y), as a percentage\", \"(1/n) sum of |e_i|\", \"(1/n) sum of e_i squared\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: AI-powered tools that make advanced analytics accessible to non-technical business users.?",
+    "correct_answer": "Augmented Analytics",
+    "options": "[\"Augmented Analytics\", \"Edge Computing\", \"Explainable AI\", \"Autonomous Decision Systems\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Sample / population standard deviation. (slide says STEVP)?",
+    "correct_answer": "STDEV(range) / STDEVP(range)",
+    "options": "[\"STDEV(range) / STDEVP(range)\", \"QUARTILE(range, quart)\", \"PERCENTILE(range, k)\", \"SUM(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Four Types Of Analytics, which question it answers matches Prescriptive?",
+    "correct_answer": "What should we do?",
+    "options": "[\"What should we do?\", \"What has happened, or what is happening now?\", \"Why did it happen?\", \"What will likely happen?\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Evolution Of Analytics, which stage matches: \"What will happen?\" Forecasts future outcomes based on patterns.?",
+    "correct_answer": "Predictive Analytics",
+    "options": "[\"Predictive Analytics\", \"Prescriptive Analytics\", \"Descriptive Analytics\", \"Diagnostic Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Returns a quartile, including Q1 and Q3.?",
+    "correct_answer": "QUARTILE(range, quart)",
+    "options": "[\"QUARTILE(range, quart)\", \"PERCENTILE(range, k)\", \"SUM(range)\", \"SUMIF(range, criteria, sum_range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which name matches α (alpha)?",
+    "correct_answer": "Alpha intercept",
+    "options": "[\"Alpha intercept\", \"Error term\", \"Dependent variable\", \"Independent variable\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Key Technologies And Techniques, which technology matches: Mathematical techniques that find the best solution among alternatives, considering constraints and objectives.?",
+    "correct_answer": "Optimization Algorithms",
+    "options": "[\"Optimization Algorithms\", \"Simulation Modeling\", \"Natural Language Processing\", \"Real-time Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Excel Descriptive Functions, which function matches: Returns a value at a specified percentile.?",
+    "correct_answer": "PERCENTILE(range, k)",
+    "options": "[\"PERCENTILE(range, k)\", \"SUM(range)\", \"SUMIF(range, criteria, sum_range)\", \"AVERAGE(range)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In The Simple Linear Regression Equation, which in this example matches α, alpha intercept?",
+    "correct_answer": "Baseline Sales",
+    "options": "[\"Baseline Sales\", \"Sales\", \"Ad Spending\", \"Sales Sensitivity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Enhancing Decision Making, which benefit matches: Enhances outcomes by considering more factors and scenarios than humanly possible.?",
+    "correct_answer": "Improved Decision Quality",
+    "options": "[\"Improved Decision Quality\", \"Competitive Advantage\", \"Reduced Decision Complexity\", \"Increased Decision Speed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 1: Regression Statistics (R Square), which value matches Standard Error?",
+    "correct_answer": "1.736514",
+    "options": "[\"1.736514\", \"140\", \"0.94536\", \"0.893710\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Implementation Challenges And Best Practices, which challenge matches: Start with high-impact use cases and demonstrate ROI.?",
+    "correct_answer": "Organizational Change: shifting from intuition-based to data-driven decision making culture.",
+    "options": "[\"Organizational Change: shifting from intuition-based to data-driven decision making culture.\", \"Technology Selection: choosing the right tools and platforms for specific business needs.\", \"Data Integration: combining data from disparate sources with varying formats and quality.\", \"Skill Gaps: finding talent with expertise in both analytics and domain knowledge.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Step 3: t-Tests Per Predictor, which coefficient matches Newspaper Ads (in 000s)?",
+    "correct_answer": "-0.003005565",
+    "options": "[\"-0.003005565\", \"3.045142209\", \"0.047048681\", \"0.179682989\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Future Trends, which trend matches: Prescriptive capabilities deployed at the edge for real-time decision making without latency.?",
+    "correct_answer": "Edge Computing",
+    "options": "[\"Edge Computing\", \"Explainable AI\", \"Autonomous Decision Systems\", \"Augmented Analytics\"]",
+    "times_missed": 0
+   }
+  ]
+ },
+ {
+  "name": "MobProg_M1-M5_Midterm_Verified",
+  "modules_included": "M1, M2, M3, M4, M5",
+  "subject": "Mobile Programming",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Which Android advantage lets developers inspect and modify the platform code?",
+    "correct_answer": "Open Source",
+    "options": "[\"Open Source\", \"Closed Source\", \"No app integration\", \"No development tools\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What must be enabled on a real Android device before USB debugging?",
+    "correct_answer": "Developer options",
+    "options": "[\"Developer options\", \"Layout Editor\", \"Device Manager\", \"AndroidX artifacts\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin declaration permits reassignment of its reference?",
+    "correct_answer": "var",
+    "options": "[\"var\", \"val\", \"fun\", \"open\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android component responds to broadcasts from apps or the system?",
+    "correct_answer": "Broadcast Receiver",
+    "options": "[\"Broadcast Receiver\", \"Activity\", \"Service\", \"Content Provider\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback marks an activity becoming visible after creation?",
+    "correct_answer": "onStart()",
+    "options": "[\"onStart()\", \"onCreate()\", \"onPause()\", \"onDestroy()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android advantage describes apps working with one another?",
+    "correct_answer": "Inter App Integration",
+    "options": "[\"Inter App Integration\", \"Limited community reach\", \"No multimedia\", \"No messaging\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio action finishes creating a configured project?",
+    "correct_answer": "Finish",
+    "options": "[\"Finish\", \"Next\", \"Run\", \"Debug\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin declaration keeps its reference fixed after initialization?",
+    "correct_answer": "val",
+    "options": "[\"val\", \"var\", \"fun\", \"lateinit\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android component supplies data to other apps on request?",
+    "correct_answer": "Content Provider",
+    "options": "[\"Content Provider\", \"Activity\", \"Service\", \"Broadcast Receiver\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback runs after a stopped activity restarts?",
+    "correct_answer": "onRestart()",
+    "options": "[\"onRestart()\", \"onPause()\", \"onDestroy()\", \"onCreate()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android feature lets the screen register multiple touch points?",
+    "correct_answer": "Multi-touch",
+    "options": "[\"Multi-touch\", \"Messaging\", \"Storage\", \"Connectivity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project form field names the app?",
+    "correct_answer": "Name",
+    "options": "[\"Name\", \"Language\", \"Minimum SDK\", \"Save location\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin symbol permits a nullable type?",
+    "correct_answer": "?",
+    "options": "[\"?\", \"!!\", \"::\", \"//\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which directory is preferred for property animation XML?",
+    "correct_answer": "animator/",
+    "options": "[\"animator/\", \"anim/\", \"layout/\", \"drawable/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does an Android Activity represent?",
+    "correct_answer": "One app screen",
+    "options": "[\"One app screen\", \"The entire operating system\", \"A database table\", \"A resource folder\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android feature covers wireless communication?",
+    "correct_answer": "Connectivity",
+    "options": "[\"Connectivity\", \"No networking\", \"No database\", \"No multimedia\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project form field identifies the app's Java package?",
+    "correct_answer": "Package name",
+    "options": "[\"Package name\", \"Name\", \"Language\", \"Minimum SDK\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin construct chooses among alternatives such as numbered days?",
+    "correct_answer": "when",
+    "options": "[\"when\", \"while\", \"fun\", \"class\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which directory is described for tween animation XML?",
+    "correct_answer": "anim/",
+    "options": "[\"anim/\", \"animator/\", \"layout/\", \"values/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback first runs when an activity is created?",
+    "correct_answer": "onCreate()",
+    "options": "[\"onCreate()\", \"onStart()\", \"onResume()\", \"onRestart()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android release is paired with split-screen and data saver?",
+    "correct_answer": "Nougat",
+    "options": "[\"Nougat\", \"Lollipop\", \"Oreo\", \"Pie\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio area contains controls to run the app?",
+    "correct_answer": "Toolbar",
+    "options": "[\"Toolbar\", \"Status Bar\", \"Navigation Bar\", \"Editor Window\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does the slide's if expression return when time is 20?",
+    "correct_answer": "Good evening.",
+    "options": "[\"Good evening.\", \"Good day.\", \"Invalid day.\", \"Thursday\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How are files in assets/ accessed?",
+    "correct_answer": "AssetManager",
+    "options": "[\"AssetManager\", \"R.raw\", \"R.layout\", \"R.string\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback runs when an activity becomes visible?",
+    "correct_answer": "onStart()",
+    "options": "[\"onStart()\", \"onCreate()\", \"onPause()\", \"onDestroy()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android release is paired with Picture-in-Picture and adaptive icons?",
+    "correct_answer": "Oreo",
+    "options": "[\"Oreo\", \"Nougat\", \"Marshmallow\", \"Pie\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio area lets you navigate the project and open files?",
+    "correct_answer": "Navigation Bar",
+    "options": "[\"Navigation Bar\", \"Toolbar\", \"Status Bar\", \"Editor Window\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which class modifier lets MyChildClass inherit MyParentClass?",
+    "correct_answer": "open",
+    "options": "[\"open\", \"lateinit\", \"var\", \"val\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Additional Components, which component matches: A portion of the UI inside an Activity.?",
+    "correct_answer": "Fragments",
+    "options": "[\"Fragments\", \"Views\", \"Layouts\", \"Intents\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback runs when the user starts interacting with an activity?",
+    "correct_answer": "onResume()",
+    "options": "[\"onResume()\", \"onStart()\", \"onStop()\", \"onDestroy()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android release is paired with scrolling screenshots and one-handed mode?",
+    "correct_answer": "Snow Cone",
+    "options": "[\"Snow Cone\", \"Tiramisu\", \"Red Velvet Cake\", \"Upside Down Cake\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio target is created in Device Manager?",
+    "correct_answer": "Emulator",
+    "options": "[\"Emulator\", \"Real device\", \"Layout Editor\", \"Status Bar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin block runs as an object is initialized?",
+    "correct_answer": "init",
+    "options": "[\"init\", \"when\", \"fun\", \"else\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 4: M4 Application Components And Resources, which main component matches: Long-running background work, such as music during another app or a network fetch without blocking activity interaction.?",
+    "correct_answer": "Services",
+    "options": "[\"Services\", \"Broadcast Receivers\", \"Content Providers\", \"Activities\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback runs before the activity is destroyed by the system in the callback table?",
+    "correct_answer": "onDestroy()",
+    "options": "[\"onDestroy()\", \"onRestart()\", \"onResume()\", \"onStart()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android release is paired with protected PIN and Health Connect?",
+    "correct_answer": "Upside Down Cake",
+    "options": "[\"Upside Down Cake\", \"Tiramisu\", \"Vanilla Ice Cream\", \"Baklava\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio menu path starts a new project?",
+    "correct_answer": "File > New > New Project",
+    "options": "[\"File > New > New Project\", \"File > Open > Layout\", \"Run > Create Device\", \"Tools > SDK > Finish\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What happens when an argument with a constructor default is omitted?",
+    "correct_answer": "The default value is used",
+    "options": "[\"The default value is used\", \"The class cannot be created\", \"The argument becomes null\", \"The constructor is skipped\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 4: M4 Application Components And Resources, which main component matches: Respond to broadcasts from apps or the system, such as downloaded data becoming available. Messages are Intent objects.?",
+    "correct_answer": "Broadcast Receivers",
+    "options": "[\"Broadcast Receivers\", \"Content Providers\", \"Activities\", \"Services\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback runs when an activity restarts after being stopped?",
+    "correct_answer": "onRestart()",
+    "options": "[\"onRestart()\", \"onCreate()\", \"onPause()\", \"onDestroy()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android version is Cinnamon Bun in the corrected image notes?",
+    "correct_answer": "17",
+    "options": "[\"17\", \"14\", \"15\", \"16\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which example project name appears in the written steps?",
+    "correct_answer": "My First App",
+    "options": "[\"My First App\", \"Hello Android\", \"New Activity\", \"Android Studio\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What can a primary constructor receive directly in the Car example?",
+    "correct_answer": "Properties",
+    "options": "[\"Properties\", \"Android resources\", \"Java packages\", \"Manifest entries\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Additional Components, which component matches: View hierarchies controlling screen format and appearance.?",
+    "correct_answer": "Layouts",
+    "options": "[\"Layouts\", \"Intents\", \"Resources\", \"Manifest\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which file contains the Kotlin screen behavior in the M5 walkthrough?",
+    "correct_answer": "MainActivity.kt",
+    "options": "[\"MainActivity.kt\", \"activity_main.xml\", \"AndroidManifest.xml\", \"strings.xml\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android version is Tiramisu in the detailed slide?",
+    "correct_answer": "13 (2022)",
+    "options": "[\"13 (2022)\", \"13 (2023)\", \"12 (2022)\", \"14 (2023)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which package name appears in the written steps?",
+    "correct_answer": "com.example.myfirstapp",
+    "options": "[\"com.example.myfirstapp\", \"com.example.helloandroid\", \"org.android.myfirstapp\", \"com.myfirstapp.example\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio action changes a Java source file to a .kt file?",
+    "correct_answer": "Convert Java File to Kotlin File",
+    "options": "[\"Convert Java File to Kotlin File\", \"Create Device\", \"Open Layout Editor\", \"Run Application\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: Color state-list XML.?",
+    "correct_answer": "color/",
+    "options": "[\"color/\", \"drawable/\", \"layout/\", \"menu/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which file contains the main screen layout in the M5 walkthrough?",
+    "correct_answer": "activity_main.xml",
+    "options": "[\"activity_main.xml\", \"MainActivity.kt\", \"AndroidManifest.xml\", \"build.gradle\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which runtime appears in the supplied Android architecture diagram?",
+    "correct_answer": "Dalvik",
+    "options": "[\"Dalvik\", \"ART only\", \"JVM only\", \"Node.js\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which API level is selected in the M2 Minimum SDK example?",
+    "correct_answer": "API 24",
+    "options": "[\"API 24\", \"API 16\", \"API 34\", \"API 37\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Where is a new Kotlin Class/File created in the paste conversion workflow?",
+    "correct_answer": "The project's java folder",
+    "options": "[\"The project's java folder\", \"The res folder\", \"The assets folder\", \"The manifest folder\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Values Files And Assets, which item matches: Other res/ subdirectories define a single resource based on the XML filename, as described in the slides.?",
+    "correct_answer": "Other Resource XML",
+    "options": "[\"Other Resource XML\", \"assets/ Versus raw/\", \"values/ Naming\", \"Conventions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback marks loss of interaction as another activity comes forward?",
+    "correct_answer": "onPause()",
+    "options": "[\"onPause()\", \"onStop()\", \"onDestroy()\", \"onRestart()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which runtime does the Lollipop version slide name?",
+    "correct_answer": "ART",
+    "options": "[\"ART\", \"Dalvik\", \"JVM\", \"V8\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android version is paired with the selected API 24?",
+    "correct_answer": "Android 7.0 Nougat",
+    "options": "[\"Android 7.0 Nougat\", \"Android 4.1 Jelly Bean\", \"Android 13 Tiramisu\", \"Android 8.0 Oreo\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does Android Studio convert after Java code is pasted into a Kotlin file?",
+    "correct_answer": "The pasted code",
+    "options": "[\"The pasted code\", \"The project name\", \"The emulator\", \"The manifest\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Additional Components, which component matches: Messages wiring components together.?",
+    "correct_answer": "Intents",
+    "options": "[\"Intents\", \"Resources\", \"Manifest\", \"Fragments\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which callback marks that the activity is no longer visible?",
+    "correct_answer": "onStop()",
+    "options": "[\"onStop()\", \"onPause()\", \"onResume()\", \"onStart()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 1.0?",
+    "correct_answer": "Unnamed (alpha)",
+    "options": "[\"Unnamed (alpha)\", \"Unnamed (beta)\", \"Cupcake\", \"Donut\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project template do the written M2 steps name?",
+    "correct_answer": "Empty Activity",
+    "options": "[\"Empty Activity\", \"Empty Views Activity\", \"Basic Views Activity\", \"No Activity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What bytecode target does the slide show for both Java and Kotlin?",
+    "correct_answer": "JVM bytecode",
+    "options": "[\"JVM bytecode\", \"Dalvik source code\", \"XML layout\", \"Android manifest\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: UI-layout XML.?",
+    "correct_answer": "layout/",
+    "options": "[\"layout/\", \"menu/\", \"raw/\", \"values/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which file declares an Activity?",
+    "correct_answer": "AndroidManifest.xml",
+    "options": "[\"AndroidManifest.xml\", \"MainActivity.kt\", \"activity_main.xml\", \"build.gradle\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 5.0-5.1?",
+    "correct_answer": "2014",
+    "options": "[\"2014\", \"2015\", \"2016\", \"2017\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which template is selected in the M2 screenshot?",
+    "correct_answer": "Empty Views Activity",
+    "options": "[\"Empty Views Activity\", \"Empty Activity\", \"Basic Views Activity\", \"No Activity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which keyword declares a Kotlin function?",
+    "correct_answer": "fun",
+    "options": "[\"fun\", \"val\", \"var\", \"open\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Additional Components, which component matches: Application configuration file.?",
+    "correct_answer": "Manifest",
+    "options": "[\"Manifest\", \"Fragments\", \"Views\", \"Layouts\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which call loads the main layout in onCreate?",
+    "correct_answer": "setContentView(R.layout.activity_main)",
+    "options": "[\"setContentView(R.layout.activity_main)\", \"setContentView(R.string.activity_main)\", \"findViewById(R.layout.activity_main)\", \"onStart(R.layout.activity_main)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 1.1?",
+    "correct_answer": "Unnamed (beta)",
+    "options": "[\"Unnamed (beta)\", \"Cupcake\", \"Donut\", \"Eclair\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Android Studio target requires USB debugging?",
+    "correct_answer": "Real device",
+    "options": "[\"Real device\", \"Emulator\", \"Layout Editor\", \"Device Manager\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin modifier lets a class be inherited?",
+    "correct_answer": "open",
+    "options": "[\"open\", \"lateinit\", \"val\", \"var\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: Arbitrary files in raw form.?",
+    "correct_answer": "raw/",
+    "options": "[\"raw/\", \"values/\", \"xml/\", \"font/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: First callback when the activity is first created.?",
+    "correct_answer": "onCreate()",
+    "options": "[\"onCreate()\", \"onStart()\", \"onResume()\", \"onPause()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 6.0?",
+    "correct_answer": "2015",
+    "options": "[\"2015\", \"2016\", \"2017\", \"2018\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which prerequisites are named for Android Studio?",
+    "correct_answer": "JDK and Android Studio",
+    "options": "[\"JDK and Android Studio\", \"Kotlin and Gradle only\", \"USB cable and emulator only\", \"Java and SQLite only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Kotlin symbol asserts a value is not null?",
+    "correct_answer": "!!",
+    "options": "[\"!!\", \"?\", \"//\", \"::\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: icon.png in the example project tree.?",
+    "correct_answer": "mipmap/",
+    "options": "[\"mipmap/\", \"animator/\", \"anim/\", \"color/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Read The Lifecycle Diagram, which situation matches: onCreate -> onStart -> onResume -> running.?",
+    "correct_answer": "Launch",
+    "options": "[\"Launch\", \"Another Activity In Front\", \"No Longer Visible\", \"Return After Stop\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 1.5?",
+    "correct_answer": "Cupcake",
+    "options": "[\"Cupcake\", \"Donut\", \"Eclair\", \"Froyo\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project form field selects Java or Kotlin?",
+    "correct_answer": "Language",
+    "options": "[\"Language\", \"Name\", \"Minimum SDK\", \"Save location\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which shortcut converts a Java file to Kotlin in the slides?",
+    "correct_answer": "Ctrl+Alt+Shift+K",
+    "options": "[\"Ctrl+Alt+Shift+K\", \"Ctrl+Alt+K\", \"Ctrl+Shift+K\", \"Alt+Shift+K\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.animator (M4 p18 naming pattern)?",
+    "correct_answer": "animator/",
+    "options": "[\"animator/\", \"anim/\", \"color/\", \"drawable/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: When the activity becomes visible to the user.?",
+    "correct_answer": "onStart()",
+    "options": "[\"onStart()\", \"onResume()\", \"onPause()\", \"onStop()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 7.0?",
+    "correct_answer": "2016",
+    "options": "[\"2016\", \"2017\", \"2018\", \"2019\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which tool creates an emulator in the M2 steps?",
+    "correct_answer": "Device Manager",
+    "options": "[\"Device Manager\", \"Layout Editor\", \"Status Bar\", \"Navigation Bar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the corrected reading of the Kotlin comparison slide's exception row?",
+    "correct_answer": "No checked exceptions",
+    "options": "[\"No checked exceptions\", \"Kotlin removed all exceptions\", \"Only checked exceptions\", \"No exception handling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.anim?",
+    "correct_answer": "anim/",
+    "options": "[\"anim/\", \"color/\", \"drawable/\", \"layout/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: When the user starts interacting with the application.?",
+    "correct_answer": "onResume()",
+    "options": "[\"onResume()\", \"onPause()\", \"onStop()\", \"onDestroy()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 1.6?",
+    "correct_answer": "Donut",
+    "options": "[\"Donut\", \"Eclair\", \"Froyo\", \"Gingerbread\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project form field sets the oldest supported API?",
+    "correct_answer": "Minimum SDK",
+    "options": "[\"Minimum SDK\", \"Package name\", \"Language\", \"Save location\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Control Flow, which form matches: Choose among conditions. if-else can also supply an expression value.?",
+    "correct_answer": "if / if-else / else-if",
+    "options": "[\"if / if-else / else-if\", \"if Expression\", \"when\", \"Loops\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.color?",
+    "correct_answer": "color/",
+    "options": "[\"color/\", \"drawable/\", \"layout/\", \"menu/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Read The Lifecycle Diagram, which situation matches: onPause -> onStop.?",
+    "correct_answer": "No Longer Visible",
+    "options": "[\"No Longer Visible\", \"Return After Stop\", \"Finish/Destroy\", \"Higher-Priority Apps Need Memory\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 8.0?",
+    "correct_answer": "2017",
+    "options": "[\"2017\", \"2018\", \"2019\", \"2020\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project form option is checked in the written steps?",
+    "correct_answer": "Use AndroidX artifacts",
+    "options": "[\"Use AndroidX artifacts\", \"Use raw assets\", \"Use Compose only\", \"Use Kotlin only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 3: M3 Kotlin, which topic matches: fun declares a function. The standalone example begins with main(): fun main() { println(\"Hello World\") }?",
+    "correct_answer": "Functions",
+    "options": "[\"Functions\", \"Punctuation\", \"val\", \"var\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.drawable?",
+    "correct_answer": "drawable/",
+    "options": "[\"drawable/\", \"layout/\", \"menu/\", \"raw/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Read The Lifecycle Diagram, which situation matches: onRestart -> onStart -> onResume.?",
+    "correct_answer": "Return After Stop",
+    "options": "[\"Return After Stop\", \"Finish/Destroy\", \"Higher-Priority Apps Need Memory\", \"Launch\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 2.0-2.1?",
+    "correct_answer": "Eclair",
+    "options": "[\"Eclair\", \"Froyo\", \"Gingerbread\", \"Honeycomb\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which IDE part opens a layout file in the Layout Editor?",
+    "correct_answer": "Editor Window",
+    "options": "[\"Editor Window\", \"Status Bar\", \"Toolbar\", \"Navigation Bar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 3: M3 Kotlin, which topic matches: The reference cannot be changed after initialization: val immutable = 12.?",
+    "correct_answer": "val",
+    "options": "[\"val\", \"var\", \"Type Inference\", \"lateinit\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.layout?",
+    "correct_answer": "layout/",
+    "options": "[\"layout/\", \"menu/\", \"raw/\", \"values/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: When the activity is no longer visible.?",
+    "correct_answer": "onStop()",
+    "options": "[\"onStop()\", \"onDestroy()\", \"onRestart()\", \"onCreate()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 9.0?",
+    "correct_answer": "2018",
+    "options": "[\"2018\", \"2019\", \"2020\", \"2021\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which IDE part reports warnings and messages?",
+    "correct_answer": "Status Bar",
+    "options": "[\"Status Bar\", \"Toolbar\", \"Navigation Bar\", \"Tool Window Bar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 3: M3 Kotlin, which topic matches: The variable type need not be written when Kotlin can infer it.?",
+    "correct_answer": "Type Inference",
+    "options": "[\"Type Inference\", \"lateinit\", \"Nullable Type\", \"Conversion Example\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.menu?",
+    "correct_answer": "menu/",
+    "options": "[\"menu/\", \"raw/\", \"values/\", \"xml/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Read The Lifecycle Diagram, which situation matches: onDestroy -> activity shut down.?",
+    "correct_answer": "Finish/Destroy",
+    "options": "[\"Finish/Destroy\", \"Higher-Priority Apps Need Memory\", \"Launch\", \"Another Activity In Front\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 2.2?",
+    "correct_answer": "Froyo",
+    "options": "[\"Froyo\", \"Gingerbread\", \"Honeycomb\", \"Ice Cream Sandwich\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Interface Parts, which part matches: Run the app and launch Android tools.?",
+    "correct_answer": "Toolbar",
+    "options": "[\"Toolbar\", \"Navigation Bar\", \"Editor Window\", \"Tool Window Bar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 3: M3 Kotlin, which topic matches: lateinit var str1: String is assigned later: str1 = \"late init\".?",
+    "correct_answer": "lateinit",
+    "options": "[\"lateinit\", \"Nullable Type\", \"Conversion Example\", \"Uses\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: Resources.openRawResource(R.raw.filename)?",
+    "correct_answer": "raw/",
+    "options": "[\"raw/\", \"values/\", \"xml/\", \"font/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: Before the activity is destroyed by the system, as described in the callback table.?",
+    "correct_answer": "onDestroy()",
+    "options": "[\"onDestroy()\", \"onRestart()\", \"onCreate()\", \"onStart()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 10?",
+    "correct_answer": "2019",
+    "options": "[\"2019\", \"2020\", \"2021\", \"2022\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Create A Project, which project form matches: Java or Kotlin.?",
+    "correct_answer": "Language",
+    "options": "[\"Language\", \"Minimum SDK\", \"Templates\", \"Fields\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Kotlin Classes And Construction, which concept matches: open class MyParentClass has val x = 5. MyChildClass: MyParentClass() inherits it and prints x in myFunction().?",
+    "correct_answer": "Inheritance",
+    "options": "[\"Inheritance\", \"Class And Object\", \"Primary Constructor\", \"Functions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.font (M4 p18 naming pattern)?",
+    "correct_answer": "font/",
+    "options": "[\"font/\", \"mipmap/\", \"animator/\", \"anim/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Read The Lifecycle Diagram, which situation matches: Diagram permits process killing from the paused/stopped paths. Navigating back leads to onCreate.?",
+    "correct_answer": "Higher-Priority Apps Need Memory",
+    "options": "[\"Higher-Priority Apps Need Memory\", \"Launch\", \"Another Activity In Front\", \"No Longer Visible\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 2.3?",
+    "correct_answer": "Gingerbread",
+    "options": "[\"Gingerbread\", \"Honeycomb\", \"Ice Cream Sandwich\", \"Jelly Bean\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Six Interface Parts, which part matches: Outer buttons expand/collapse individual tool windows.?",
+    "correct_answer": "Tool Window Bar",
+    "options": "[\"Tool Window Bar\", \"Tool Windows\", \"Status Bar\", \"Toolbar\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Part 3: M3 Kotlin, which topic matches: var str2: String? = null explicitly permits null.?",
+    "correct_answer": "Nullable Type",
+    "options": "[\"Nullable Type\", \"Conversion Example\", \"Uses\", \"Functions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Resource Organization And Access, which directory matches: R.mipmap.icon (M4 p18 naming pattern)?",
+    "correct_answer": "mipmap/",
+    "options": "[\"mipmap/\", \"animator/\", \"anim/\", \"color/\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Lifecycle Callbacks, which callback matches: When the activity restarts after being stopped.?",
+    "correct_answer": "onRestart()",
+    "options": "[\"onRestart()\", \"onCreate()\", \"onStart()\", \"onResume()\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 11?",
+    "correct_answer": "2020",
+    "options": "[\"2020\", \"2021\", \"2022\", \"2023\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 3.0-3.2?",
+    "correct_answer": "Honeycomb",
+    "options": "[\"Honeycomb\", \"Ice Cream Sandwich\", \"Jelly Bean\", \"KitKat\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 12?",
+    "correct_answer": "2021",
+    "options": "[\"2021\", \"2022\", \"2023\", \"2024\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 4.0?",
+    "correct_answer": "Ice Cream Sandwich",
+    "options": "[\"Ice Cream Sandwich\", \"Jelly Bean\", \"KitKat\", \"Unnamed (alpha)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 13?",
+    "correct_answer": "2022",
+    "options": "[\"2022\", \"2023\", \"2024\", \"2025\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 4.1-4.3?",
+    "correct_answer": "Jelly Bean",
+    "options": "[\"Jelly Bean\", \"KitKat\", \"Unnamed (alpha)\", \"Unnamed (beta)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 14?",
+    "correct_answer": "2023",
+    "options": "[\"2023\", \"2024\", \"2025\", \"2026\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which codename matches 4.4?",
+    "correct_answer": "KitKat",
+    "options": "[\"KitKat\", \"Unnamed (alpha)\", \"Unnamed (beta)\", \"Cupcake\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 15?",
+    "correct_answer": "2024",
+    "options": "[\"2024\", \"2025\", \"2026\", \"2014\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which version matches: Unnamed (alpha)?",
+    "correct_answer": "1.0",
+    "options": "[\"1.0\", \"1.1\", \"1.5\", \"1.6\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 16?",
+    "correct_answer": "2025",
+    "options": "[\"2025\", \"2026\", \"2014\", \"2015\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which version matches: Unnamed (beta)?",
+    "correct_answer": "1.1",
+    "options": "[\"1.1\", \"1.5\", \"1.6\", \"2.0-2.1\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which year matches 17?",
+    "correct_answer": "2026",
+    "options": "[\"2026\", \"2014\", \"2015\", \"2016\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Version Table: Early Android, which version matches: Cupcake?",
+    "correct_answer": "1.5",
+    "options": "[\"1.5\", \"1.6\", \"2.0-2.1\", \"2.2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Android Versions: Lollipop To Cinnamon Bun, which version matches: Lollipop?",
+    "correct_answer": "5.0-5.1",
+    "options": "[\"5.0-5.1\", \"6.0\", \"7.0\", \"8.0\"]",
+    "times_missed": 0
+   }
+  ]
+ }
+]

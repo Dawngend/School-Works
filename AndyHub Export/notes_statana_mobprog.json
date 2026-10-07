@@ -1,0 +1,2503 @@
+[
+ {
+  "title": "StatAna Module 1 Reviewer Notes",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Data Value Chain",
+     "summary": "A value chain turns inputs into valuable outputs. The slide's analogy moves from coffee beans (raw material, storage), to instant coffee mix (processed material, inventory), to a coffee beverage (sales). Data creates value when insights lead to implemented decisions.\n\n• Transactional Data: raw records of events, such as purchases, claims, transfers, or payments.\n• Database: store, access, query, join tables, and aggregate data. This is sourcing data through analytic queries.\n• Analytics: describe distributions and trends, examine correlations and relationships, and measure model strength.\n• Application: test outcomes from varied inputs, scenarios, and sensitivity analysis; put analysis within reach of users.\n• Decision: use the application to act on insights and shorten repetitive tasks. Implemented action realizes data value.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Data Value Chain",
+       "text": "T-D-A-A-D: Transactional data, Database, Analytics, Application, Decision. Raw coffee becomes a drink; raw data becomes an action."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "Five Data Sources",
+     "summary": "• Transactional data: structured details of a transaction, such as a purchase or payment.\n• Contractual, subscription, or account data: product type together with customer characteristics.\n• Surveys: questionnaires that collect sociodemographic and behavioral information from a group.\n• Data poolers: companies that collect data for a purpose and sell it to enrich another source.\n• Unstructured data: material outside a traditional row-column database, including media, audio, sensor data, text, email, web pages, and PDFs.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Five Data Sources",
+       "text": "T-C-S-P-U: Transactions, Contracts/accounts, Surveys, Poolers, Unstructured material."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "Gartner Analytic Ascendancy Model",
+     "summary": "The model moves toward greater value and difficulty. Descriptive gives hindsight and information; diagnostic gives insight; predictive gives foresight; prescriptive adds optimization.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Gartner Analytic Ascendancy Model",
+       "text": "What, Why, Will, How: Descriptive, Diagnostic, Predictive, Prescriptive. Value and difficulty rise together."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Gartner Analytic Ascendancy Model",
+       "columns": [
+        "Type",
+        "Question",
+        "Role"
+       ],
+       "rows": [
+        [
+         "Descriptive",
+         "What happened?",
+         "Hindsight; information"
+        ],
+        [
+         "Diagnostic",
+         "Why did it happen?",
+         "Insight"
+        ],
+        [
+         "Predictive",
+         "What will happen?",
+         "Foresight"
+        ],
+        [
+         "Prescriptive",
+         "How can we make it happen?",
+         "Optimization"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Descriptive Analytics",
+     "summary": "Descriptive analytics asks what happened or is happening. Its two primary techniques are data aggregation and data presentation.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "The Excel section on slide p21 belongs to Module 1 Subtopic 2, Descriptive Measures in Excel (slide says \"Module 2 Submodule 2\")."
+     ],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Descriptive Analytics",
+       "text": "C-V-S-P: Center, Variation, Shape, Position. Center = mean/median/mode; variation = range/variance/standard deviation; shape = skewness/kurtosis; position = percentiles/quantiles/quartiles."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Descriptive Analytics",
+       "columns": [
+        "Branch",
+        "Measures Or Output"
+       ],
+       "rows": [
+        [
+         "Numerical summaries",
+         "Totals and ratios"
+        ],
+        [
+         "Central tendency",
+         "Mean, median, mode"
+        ],
+        [
+         "Variation",
+         "Range, variance, standard deviation"
+        ],
+        [
+         "Shape",
+         "Skewness, kurtosis"
+        ],
+        [
+         "Position",
+         "Percentiles, quantiles, quartiles"
+        ],
+        [
+         "Tabulation and visualization",
+         "Tables and charts"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Excel Descriptive Functions",
+     "summary": "Excel Descriptive Functions: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "COUNT counts numbers; COUNTA counts nonblank cells; COUNTBLANK counts blank cells.",
+      "VAR and STDEV use a sample; VARP and STDEVP use a population."
+     ],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Excel Descriptive Functions",
+       "text": "Count, conditional, location, spread, position: COUNT-family; IF/IFS; AVERAGE/MEDIAN/MIN/MAX; VAR/STDEV; QUARTILE/PERCENTILE/SMALL/LARGE."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Excel Descriptive Functions",
+       "columns": [
+        "Function",
+        "What It Does"
+       ],
+       "rows": [
+        [
+         "SUM(range)",
+         "Adds numbers."
+        ],
+        [
+         "SUMIF(range, criteria, sum_range)",
+         "Adds values meeting one criterion."
+        ],
+        [
+         "AVERAGE(range)",
+         "Finds the arithmetic mean."
+        ],
+        [
+         "AVERAGEIF(range, criteria, average_range)",
+         "Averages values meeting one criterion. (slide says AVERAGE(range,criteria,average_range))"
+        ],
+        [
+         "MEDIAN(range)",
+         "Returns the middle value."
+        ],
+        [
+         "MIN(range) / MAX(range)",
+         "Returns the smallest / largest value."
+        ],
+        [
+         "SMALL(range, k) / LARGE(range, k)",
+         "Returns the kth smallest / largest value."
+        ],
+        [
+         "COUNT(range)",
+         "Counts cells containing numbers."
+        ],
+        [
+         "COUNTA(range)",
+         "Counts nonblank cells."
+        ],
+        [
+         "COUNTBLANK(range)",
+         "Counts blank cells."
+        ],
+        [
+         "COUNTIF(range, criterion)",
+         "Counts cells meeting one criterion."
+        ],
+        [
+         "COUNTIFS(...)",
+         "Counts cells meeting multiple criteria."
+        ],
+        [
+         "SUMIFS(...)",
+         "Sums values meeting multiple criteria."
+        ],
+        [
+         "AVERAGEIFS(...)",
+         "Averages values meeting multiple criteria."
+        ],
+        [
+         "VAR(range) / VARP(range)",
+         "Sample / population variance; square of standard deviation."
+        ],
+        [
+         "STDEV(range) / STDEVP(range)",
+         "Sample / population standard deviation. (slide says STEVP)"
+        ],
+        [
+         "QUARTILE(range, quart)",
+         "Returns a quartile, including Q1 and Q3."
+        ],
+        [
+         "PERCENTILE(range, k)",
+         "Returns a value at a specified percentile."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Excel Slide Examples And Results",
+     "summary": "Excel Slide Examples And Results: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Median resists extreme values better than mean. The EV/EBITDA slide selects median for that reason."
+     ],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Excel Slide Examples And Results",
+       "text": "Slide sequence: attendance, on-time performance, order status, telephone expense, monthly sales, median multiples, quartile outliers, age percentiles, speed rank, time rank, pivot table."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Excel Slide Examples And Results",
+       "columns": [
+        "Slide",
+        "Example And Result"
+       ],
+       "rows": [
+        [
+         "p25",
+         "Enrollment: COUNT(student numbers) = 72; COUNTA(exam scores) = 69 took the exam; COUNTBLANK = 3 absent."
+        ],
+        [
+         "p26",
+         "On-time performance: COUNT = 16; AVERAGE = 96.9%; VAR = 4.8; STDEV = 2.1."
+        ],
+        [
+         "p27",
+         "Order status: Complete COUNTIF/COUNTIFS = 4, SUMIFS total = 366.50; Pending count = 2, shown total = 366.50; Complete OR Pending count = 6, shown total = 527.00. The displayed subtotals conflict with the displayed combined total."
+        ],
+        [
+         "p28",
+         "AVERAGEIFS telephone expense: North = 275; South = 200."
+        ],
+        [
+         "p29",
+         "Sales-rep MIN/MAX: January 2,300/3,800; February 2,200/3,600."
+        ],
+        [
+         "p30",
+         "MEDIAN of EV/EBITDA multiples 2.5, 0.5, 1.4, 8.7, 2.7, 3.6 = 2.6."
+        ],
+        [
+         "p31",
+         "QUARTILE real-estate prices: Q1 = 387,000; Q3 = 639,000; IQR = 252,000; bounds 9,000 and 1,017,000; 5,500,000 and 1,095,000 flagged."
+        ],
+        [
+         "p32",
+         "Age percentiles (10th to 100th): 25, 30, 34, 39, 42, 48, 52, 56, 60, 65. At the 10th percentile, 10% are below age 25."
+        ],
+        [
+         "p33",
+         "LARGE(Table[Speed], k): k = 1 gives 120; 2 gives 100; 5 gives 90; 10 gives 78."
+        ],
+        [
+         "p34",
+         "SMALL(Table[Time], k): fastest 0:57:15; second 1:10:33; third 1:21:35."
+        ],
+        [
+         "p35",
+         "Pivot table: rows Gender; columns Region; filter Paid With; values Sum of Total Cost."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Quartiles, Percentiles, and Outliers",
+     "summary": "Q1 marks the value below which 25% of observations lie; Q3 marks 75%. For the slide's prices, IQR = Q3 - Q1 = 639,000 - 387,000 = 252,000. Multiply IQR by 1.5 to get 378,000. Lower bound = 387,000 - 378,000 = 9,000. Upper bound = 639,000 + 378,000 = 1,017,000. The prices 1,095,000 and 5,500,000 exceed the upper bound.\n\nA percentile is a position in an ordered distribution. The age slide divides people into ten equal groups: its 10th percentile is age 25, meaning 10% are below age 25.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Outlier fences use 1.5 x IQR, then subtract from Q1 or add to Q3."
+     ],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Descriptive Tools and Process Control",
+     "summary": "• Pivot table: organize and summarize data by row, column, filter, and value fields. The slide uses Gender, Region, Paid With, and Sum of Total Cost.\n• Moving average: average observations over a chosen number of past periods to smooth noise and reveal trends; the slide compares actual and forecast lines.\n• Pareto chart: bars from highest to lowest frequency or cost, with a cumulative percentage line, to prioritize which problem to address first.\n• Statistical process control: monitor variation to find special causes and signal corrective action. All processes vary; the goal is to reduce variation.\n\nA control chart has a center line at the average and upper and lower control limits based on variability, set at 3 sigma by default. Points within limits show common cause variation natural to an in-control process; points outside show special cause variation, often from external sources, and an out-of-control process.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Common cause = in control; special cause = not in control."
+     ],
+     "source_refs": [
+      "M1_-Foundations_of_Data_Analytics_&_Expl.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Descriptive Tools and Process Control",
+       "text": "P-M-P-S: Pivot summarizes, Moving average smooths, Pareto prioritizes, SPC monitors."
+      }
+     ],
+     "comparisons": []
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "StatAna Module 2 Reviewer Notes",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 2: Module 2, Diagnostic Analytics",
+     "summary": "Diagnostic analytics asks why it happened using historical data. It investigates anomalies, relationships, and underlying drivers.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M2-Diagnostic_Analytics_&_Statistical_In.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Part 2: Module 2, Diagnostic Analytics",
+       "columns": [
+        "Descriptive Analytics",
+        "Diagnostic Analytics"
+       ],
+       "rows": [
+        [
+         "Uses historical data",
+         "Uses historical data"
+        ],
+        [
+         "Reconfigures data into an easily read format",
+         "Identifies data anomalies"
+        ],
+        [
+         "Describes current performance or outcome",
+         "Highlights trends and relationships"
+        ],
+        [
+         "Learns from the past",
+         "Investigates underlying drivers"
+        ],
+        [
+         "Answers what",
+         "Answers why"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Three Functions",
+     "summary": "• Identify anomalies: notice unusual results.\n• Drill into analytics: investigate details to discover an explanation.\n• Determine causal relationships: examine possible causes. (slide says \"casual relationships\")",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M2-Diagnostic_Analytics_&_Statistical_In.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Three Functions",
+       "text": "I-D-C: Identify anomalies, Drill into analytics, determine Causal relationships."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "Question-To-Test Map",
+     "summary": "The objectives list Chi-Square, T-test, and one-way ANOVA, but these slides give no worked examples.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M2-Diagnostic_Analytics_&_Statistical_In.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Question-To-Test Map",
+       "text": "Move, Distribution, Population: Correlation; Chi-Square; ANOVA/F-test or Z-test/T-test."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Question-To-Test Map",
+       "columns": [
+        "Question",
+        "Slide's Method"
+       ],
+       "rows": [
+        [
+         "Which factors move together?",
+         "Correlation coefficient"
+        ],
+        [
+         "Are categorical distributions different?",
+         "Chi-Square"
+        ],
+        [
+         "Are two populations similar?",
+         "ANOVA (F-test); analysis of means (Z-test, T-test)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Association and Correlation",
+     "summary": "Association is any general relationship between two variables, including a curved one. Correlation measures a linear relationship and may be positive, negative, or absent. A U-shaped pattern can be associated without a linear correlation.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Association is not always linear; correlation refers to a linear relationship."
+     ],
+     "source_refs": [
+      "M2-Diagnostic_Analytics_&_Statistical_In.txt",
+      "image_slides_notes_m1m2.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "StatAna Module 3 Reviewer Notes",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "The Four Types Of Analytics",
+     "summary": "There are four types of analytics, each answering a different question. Each stage builds on the previous one, with increasing business value and complexity.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "The Four Types Of Analytics",
+       "text": "D-D-P-P in order of maturity: Descriptive, Diagnostic, Predictive, Prescriptive. Each one answers a harder question than the last: What, Why, Will, Should."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "The Four Types Of Analytics",
+       "columns": [
+        "Type",
+        "Question It Answers"
+       ],
+       "rows": [
+        [
+         "Descriptive",
+         "What has happened, or what is happening now?"
+        ],
+        [
+         "Diagnostic",
+         "Why did it happen?"
+        ],
+        [
+         "Predictive",
+         "What will likely happen?"
+        ],
+        [
+         "Prescriptive",
+         "What should we do?"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "The Predictive Analytics Process",
+     "summary": "The process starts with three stages, then loops through a three-step cycle until the best model is selected:\n\n• Project Design: kickoff meeting, understand the modeling objective, define acceptance criteria, document data and deployment requirements.\n• Data Sampling: data extraction, apply filters and exclusions, identify external data sources.\n• Data Exploration: exploratory data analysis (EDA), identify data dependencies and correlations, identify trends or anomalies in the data.\n• Data Modification: data cleaning, data augmentation and transformation, feature selection.\n• Model Development: apply different modeling techniques and select the final methodology.\n• Model Validation: model performance review, feedback based on business knowledge and inputs from subject matter experts (SMEs).\n\nData Modification, Model Development, and Model Validation form a cycle that loops back into Project Design and best model selection, repeating until the final model is chosen.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "The Predictive Analytics Process",
+       "text": "P-S-E, then a cycle of M-D-V: Project design, Sampling, Exploration, then Modification, Development, Validation. The last three steps are not one-and-done: they loop back into Project Design until the best model is selected."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "Defining A Linear Regression Problem",
+     "summary": "A linear regression problem is defined by two questions: what is it? (a relationship between two things) and how is it used? (one thing, A, causing an effect on another thing, B).",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "The Simple Linear Regression Equation",
+     "summary": "The core formula is:\n\nThe slide maps the formula onto a real case: predicting sales from advertising spend.\n\nThe slides give two reasons for including ε:\n\nWhy The Error Term Exists:\n• To account for unexplained variability in the dependent variable from other relevant independent variables that may not have been included in the model.\n• To capture measurement error in both the dependent and independent variables.",
+     "key_terms": [],
+     "properties": [
+      {
+       "name": "Formula",
+       "statement": "y = βx + α + ε"
+      }
+     ],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "The Simple Linear Regression Equation",
+       "text": "Y depends, X drives, Beta is the Rate, Alpha is the Base, Epsilon Evens it out."
+      },
+      {
+       "label": "Why The Error Term Exists",
+       "text": "Error term = everything the model missed. Missing variables, plus measurement mistakes."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "The Simple Linear Regression Equation",
+       "columns": [
+        "Term",
+        "Name",
+        "Meaning"
+       ],
+       "rows": [
+        [
+         "y",
+         "Dependent variable",
+         "The value to be predicted"
+        ],
+        [
+         "x",
+         "Independent variable",
+         "The value driving the prediction"
+        ],
+        [
+         "β (beta)",
+         "Beta coefficient",
+         "The rate multiplied to x"
+        ],
+        [
+         "α (alpha)",
+         "Alpha intercept",
+         "The baseline figure for y"
+        ],
+        [
+         "ε (epsilon)",
+         "Error term",
+         "The balancing figure"
+        ]
+       ]
+      },
+      {
+       "title": "The Sales And Ad Spending Example",
+       "columns": [
+        "Formula Term",
+        "In This Example"
+       ],
+       "rows": [
+        [
+         "y, dependent variable",
+         "Sales"
+        ],
+        [
+         "x, independent variable",
+         "Ad Spending"
+        ],
+        [
+         "β, beta coefficient",
+         "Sales Sensitivity"
+        ],
+        [
+         "α, alpha intercept",
+         "Baseline Sales"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Multiple Linear Regression",
+     "summary": "You can have more than one predictor variable. The formula extends from one x to many:\n\nThis is the same equation as simple linear regression, just with more predictors (x1 through xn), each with its own beta coefficient.",
+     "key_terms": [],
+     "properties": [
+      {
+       "name": "Formula",
+       "statement": "y = β1x1 + β2x2 + ... + βnxn + α + ε"
+      }
+     ],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Splitting The Dataset",
+     "summary": "Before training a model, the original data is split so the model can be evaluated fairly:\n\n• Original Data is split into Training Data and Testing Data.\n• Training Data is split again into Training and Validation.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Splitting The Dataset",
+       "text": "Train to learn, Validate to tune, Test to grade. The testing set is only touched at the very end."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Splitting The Dataset",
+       "columns": [
+        "Split",
+        "Purpose"
+       ],
+       "rows": [
+        [
+         "Training data",
+         "Trains the algorithm"
+        ],
+        [
+         "Validation data",
+         "Used to tune and evaluate the model while it is being built"
+        ],
+        [
+         "Testing data",
+         "The final performance evaluation of the finished model"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "How To Read An Excel Regression Output",
+     "summary": "The slides show a regression of sales on three ad spend predictors (TV, radio, newspaper), with a sample size of n = 140. Read an Excel regression output in this order: Regression Statistics, ANOVA, then the coefficients (t-test) table.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Step 1: Regression Statistics (R Square)",
+     "summary": "R Square (the coefficient of multiple determination, R2) is a goodness-of-fit measure. It is normally expressed as a percentage and is interpreted as the amount of variability in the response explained by the independent variables. R2 is a figure of merit: the higher the R2, the better the model explains the variation in the response using the set of predictors. Here, R Square 0.8937 means 89.37 percent of the variation in sales can be explained by TV, radio, and newspaper ad spend.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "R2 almost always goes up when you add more predictors, even useless ones. Adjusted R Square corrects for the number of predictors, so it is the fairer number to compare between models with different numbers of predictors. On this slide Adjusted R Square (0.891366) is close to but slightly below R Square (0.893710), which is expected."
+     ],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Step 1: Regression Statistics (R Square)",
+       "columns": [
+        "Statistic",
+        "Value"
+       ],
+       "rows": [
+        [
+         "Multiple R",
+         "0.94536"
+        ],
+        [
+         "R Square",
+         "0.893710"
+        ],
+        [
+         "Adjusted R Square",
+         "0.891366"
+        ],
+        [
+         "Standard Error",
+         "1.736514"
+        ],
+        [
+         "Observations",
+         "140"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Step 2: ANOVA Table",
+     "summary": "The ANOVA (Analysis of Variance) table is a decomposition of the total variation in the response into explained (pattern) and unexplained (error) parts. The explained variability is the amount of variation in the response variable that may be attributed to the predictors explicitly stated in the model. The unexplained variability is the amount of variation attributed to random error.\n\nSS (Sum of Squares): 3,448.26 is the variation in sales explained by the three predictors; 410.11 is the unexplained variation; the two sum to 3,858.37 (Total). A good fit shows the Regression SS much larger than the Residual SS, which is the case here.\n\ndf (degrees of freedom), for n = 140 and 3 predictors: Regression df = number of regression parameters minus one = 3. Residual df = sample size minus number of regression parameters = 136. Total df = Regression df + Residual df = 139.\n\nMS (Mean Squares) is each SS divided by its own df. MS has no physical meaning on its own; it exists to compute the F statistic.\n\nF and Significance F: the F-test determines if the regression is meaningful for the data at hand. When the p-value (Significance F) is small, at least one predictor is significant. The rule of thumb is the p-value is low if it is less than the alpha significance level (usually 0.05). Here Significance F is 5.6038E-66, an extremely small number, so the regression as a whole is significant.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "df formula is a frequent trap. Regression df = (number of parameters) minus 1 = 3. Residual df = n minus (number of parameters) = 140 - 4 = 136. Total df = 3 + 136 = 139. Do not confuse \"number of parameters\" (4: intercept plus 3 predictors) with \"number of predictors\" (3)."
+     ],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Step 2: ANOVA Table",
+       "text": "\"When p is low, H0 must go!\" A small p-value means you reject the null hypothesis (H0), which for the ANOVA F-test is \"none of the predictors matter.\""
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Step 2: ANOVA Table",
+       "columns": [
+        "Source",
+        "df",
+        "SS",
+        "MS",
+        "F",
+        "Significance F"
+       ],
+       "rows": [
+        [
+         "Regression",
+         "3",
+         "3,448.264191",
+         "1,149.421397",
+         "381.1737161",
+         "5.6038E-66"
+        ],
+        [
+         "Residual",
+         "136",
+         "410.1051657",
+         "3.015479159",
+         "",
+         ""
+        ],
+        [
+         "Total",
+         "139",
+         "3,858.369357",
+         "",
+         "",
+         ""
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Step 3: t-Tests Per Predictor",
+     "summary": "The t-test helps in assessing if an individual predictor is significant.\n\n• TV ad spend: p < 0.05, so TV ad spend is a significant predictor of sales.\n• Radio ad spend: p < 0.05, so radio ad spend is a significant predictor of sales.\n• Newspaper ad spend: p > 0.05 (0.668982012), so newspaper ad spend is an insignificant predictor of sales.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Newspaper being insignificant is a favorite trap. Its p-value (0.668982) is far above 0.05, and its coefficient is even negative. Do not assume all three predictors in a multiple regression are automatically useful just because the overall model (ANOVA) is significant."
+     ],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Step 3: t-Tests Per Predictor",
+       "text": "TV and Radio pass (low p, significant). Newspaper fails (high p, insignificant). Newspaper is the one to remember as the \"odd one out\" on this slide."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Step 3: t-Tests Per Predictor",
+       "columns": [
+        "Predictor",
+        "Coefficient",
+        "SE",
+        "t",
+        "p-value"
+       ],
+       "rows": [
+        [
+         "Intercept",
+         "3.045142209",
+         "0.391309656",
+         "7.781924521",
+         "1.60861E-12"
+        ],
+        [
+         "TV Ads (in 000s)",
+         "0.047048681",
+         "0.001701367",
+         "27.6534582",
+         "1.0917E-57"
+        ],
+        [
+         "Radio Ads (in 000s)",
+         "0.179682989",
+         "0.010782334",
+         "16.6645727",
+         "1.16107E-34"
+        ],
+        [
+         "Newspaper Ads (in 000s)",
+         "-0.003005565",
+         "0.007014537",
+         "-0.42847661",
+         "0.668982012"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Step 4: Interpreting The Coefficients",
+     "summary": "Each coefficient is read holding the other predictors constant. The slide gives the fitted model as:\n\n• Intercept, 2.98: the average sales if TV, radio, and newspaper ad spends are all 0.\n• 0.047 (TV): an estimated increase of 0.047 million (P47,000) in average sales for every P1,000 spent on TV ads, holding radio and newspaper constant.\n• 0.178 (Radio): an estimated increase of 0.178 million (P178,000) in average sales for every P1,000 spent on radio ads, holding TV and newspaper constant.",
+     "key_terms": [],
+     "properties": [
+      {
+       "name": "Fitted Model (as printed on the slide)",
+       "statement": "Sales = 2.98 + 0.047 x TV + 0.178 x Radio"
+      }
+     ],
+     "worked_examples": [],
+     "common_mistakes": [
+      "The slides disagree on the exact coefficients. The p26 t-test table (the full model with all three predictors) gives Intercept 3.045142209, TV 0.047048681, Radio 0.179682989, Newspaper -0.003005565. The p28 fitted model slide instead prints Sales = 2.98 + 0.047 x TV + 0.178 x Radio, dropping newspaper entirely and rounding the other two numbers (2.98 vs 3.045, 0.178 vs 0.1797). The most likely explanation is the p28 model was refit without the insignificant newspaper predictor. If an exam question asks for \"the fitted model,\" quote the p28 numbers (2.98, 0.047, 0.178). If it asks for coefficients, SE, t, or p from the t-test table, use the p26 numbers."
+     ],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Step 5: Forecast Accuracy Measures",
+     "summary": "Once a model makes predictions, forecast error for each observation is e_i = Y - Y-hat (actual minus predicted). Four measures summarize how accurate the model is:",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "MAPE divides by the actual Y, not the predicted value. Mixing this up is a common exam trap."
+     ],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Step 5: Forecast Accuracy Measures",
+       "text": "MAE averages the absolute errors, in the original units. MSE averages the squared errors, in squared units, so it cannot be compared directly to MAE or RMSE. RMSE is the square root of MSE, back in the original units. MAPE expresses the average absolute error as a percentage of the actual value."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Step 5: Forecast Accuracy Measures",
+       "columns": [
+        "Measure",
+        "Formula",
+        "What It Means"
+       ],
+       "rows": [
+        [
+         "MAE (Mean Absolute Error)",
+         "(1/n) sum of |e_i|",
+         "Average size of the errors, ignoring direction (over- or under-prediction)"
+        ],
+        [
+         "MSE (Mean Squared Error)",
+         "(1/n) sum of e_i squared",
+         "Average of the squared errors; squaring punishes big misses more than small ones"
+        ],
+        [
+         "RMSE (Root Mean Squared Error)",
+         "square root of MSE",
+         "MSE brought back to the original units of y, so it is easier to interpret than MSE"
+        ],
+        [
+         "MAPE (Mean Absolute Percentage Error)",
+         "(1/n) sum of (|e_i| / Y), as a percentage",
+         "Average error as a percentage of the actual value, so it is comparable across different scales"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Practice: Read This Output",
+     "summary": "Using only the numbers already on these slides: a regression of sales on TV, radio, and newspaper ad spend, n = 140, gives R Square = 0.8937, ANOVA df = 3, 136, 139 with Significance F = 5.6038E-66, and t-test p-values of 1.09E-57 (TV), 1.16E-34 (Radio), and 0.6690 (Newspaper).\n\n• How much of the variation in sales does the model explain? 89.37 percent (R Square 0.8937).\n• Is the overall regression significant? Yes. Significance F (5.6038E-66) is far below 0.05.\n• Which predictors are individually significant at the 0.05 level? TV and Radio (p < 0.05). Newspaper is not (p = 0.6690, above 0.05).\n• What are the Regression, Residual, and Total degrees of freedom? 3, 136, and 139, matching 3 predictors and n = 140.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "M3-PREDICTIVE_ANALYTICS_&_REGRESSION_MOD.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "StatAna Module 4 Reviewer Notes",
+  "subject": "Statistical Analysis and Modeling",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Introduction To Prescriptive Analytics",
+     "summary": "Prescriptive analytics is the most advanced form of business analytics. It goes beyond describing what happened (descriptive), explaining why it happened (diagnostic), or predicting what will happen (predictive). Prescriptive analytics recommends actions to achieve desired outcomes and tells you the implications of each decision option. It answers the question: \"What should we do?\" By leveraging advanced algorithms, machine learning, and optimization techniques, prescriptive analytics enables data-driven decision making at scale.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Introduction To Prescriptive Analytics",
+       "text": "Descriptive, Diagnostic, Predictive, Prescriptive = What, Why, Will, Should. Prescriptive is the only one that tells you what action to take."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "The Evolution Of Analytics",
+     "summary": "Each stage builds upon the previous, with increasing business value and complexity. Prescriptive analytics represents the pinnacle of data-driven decision making.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "The Evolution Of Analytics",
+       "columns": [
+        "Stage",
+        "Question"
+       ],
+       "rows": [
+        [
+         "Descriptive Analytics",
+         "\"What happened?\" Examines historical data to understand past performance."
+        ],
+        [
+         "Diagnostic Analytics",
+         "\"Why did it happen?\" Identifies causes and relationships in data."
+        ],
+        [
+         "Predictive Analytics",
+         "\"What will happen?\" Forecasts future outcomes based on patterns."
+        ],
+        [
+         "Prescriptive Analytics",
+         "\"What should we do?\" Recommends actions to optimize outcomes."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "How Prescriptive Analytics Works: The Five-Step Process",
+     "summary": "• Data Collection and Integration: gather relevant historical and real-time data from multiple sources.\n• Predictive Modeling: create models to forecast potential future outcomes.\n• Scenario Analysis: evaluate multiple possible scenarios and their implications.\n• Optimization: apply algorithms to determine the best course of action.\n• Action Recommendation: deliver actionable insights to decision-makers.\n\nThis is an iterative process that continuously improves as more data becomes available and outcomes are measured.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "How Prescriptive Analytics Works: The Five-Step Process",
+       "text": "D-P-S-O-A: Data, Predict, Scenario, Optimize, Act. \"Dogs Play Softly On Asphalt.\" Notice the predictive model (step 2) happens before the optimization (step 4)."
+      }
+     ],
+     "comparisons": []
+    },
+    {
+     "heading": "Key Technologies And Techniques",
+     "summary": "Prescriptive analytics leverages several advanced technologies to transform data into actionable recommendations:",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Key Technologies And Techniques",
+       "text": "M-O-S-N-R: Machine learning, Optimization, Simulation, NLP, Real-time. \"My Owl Sings Nice Rhymes.\""
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Key Technologies And Techniques",
+       "columns": [
+        "Technology",
+        "What It Does"
+       ],
+       "rows": [
+        [
+         "Machine Learning and AI",
+         "Algorithms that learn from data patterns to make predictions and improve over time without explicit programming."
+        ],
+        [
+         "Optimization Algorithms",
+         "Mathematical techniques that find the best solution among alternatives, considering constraints and objectives."
+        ],
+        [
+         "Simulation Modeling",
+         "Creating virtual scenarios to test different strategies and understand potential outcomes."
+        ],
+        [
+         "Natural Language Processing",
+         "Enabling systems to understand and communicate recommendations in human language."
+        ],
+        [
+         "Real-time Analytics",
+         "Processing data as it is created to provide immediate insights and recommendations."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Business Applications By Industry",
+     "summary": "Business Applications By Industry: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Business Applications By Industry",
+       "text": "H-S-F-M-E: Healthcare, Supply chain, Financial, Manufacturing, Energy. Each industry gets its own flavor of \"optimize something.\""
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Business Applications By Industry",
+       "columns": [
+        "Industry",
+        "Applications"
+       ],
+       "rows": [
+        [
+         "Healthcare",
+         "Patient treatment optimization, resource allocation, staff scheduling, and personalized medicine."
+        ],
+        [
+         "Supply Chain",
+         "Inventory optimization, logistics routing, demand forecasting, and supplier selection."
+        ],
+        [
+         "Financial Services",
+         "Portfolio optimization, risk management, fraud detection, and algorithmic trading."
+        ],
+        [
+         "Manufacturing",
+         "Production scheduling, quality control, predictive maintenance, and resource allocation."
+        ],
+        [
+         "Energy and Utilities",
+         "Grid optimization, energy trading, demand response, and renewable integration."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Enhancing Decision Making",
+     "summary": "Prescriptive analytics transforms organizational decision making from intuition-based to data-driven.\n\nThe result: better decisions, faster, across all levels of the organization.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Enhancing Decision Making",
+       "text": "R-I-I-C: Reduced complexity, Increased speed, Improved quality, Competitive advantage. All four benefits start with a word meaning \"better than before.\""
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Enhancing Decision Making",
+       "columns": [
+        "Benefit",
+        "Explanation"
+       ],
+       "rows": [
+        [
+         "Reduced Decision Complexity",
+         "Simplifies complex decisions by evaluating numerous variables and constraints simultaneously."
+        ],
+        [
+         "Increased Decision Speed",
+         "Enables faster decision-making through automated analysis and recommendation generation."
+        ],
+        [
+         "Improved Decision Quality",
+         "Enhances outcomes by considering more factors and scenarios than humanly possible."
+        ],
+        [
+         "Competitive Advantage",
+         "Organizations using prescriptive analytics gain an edge through optimized resource allocation and strategic planning."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Implementation Challenges And Best Practices",
+     "summary": "Successfully implementing prescriptive analytics requires addressing several key challenges, each paired with its solution on the slide:",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Four challenges, four solutions, always in the same order on the slide: Data Integration, Skill Gaps, Organizational Change, Technology Selection. Do not swap \"training programs\" (the fix for skill gaps) with \"pilot projects\" (the fix for technology selection); both sound like \"start small\" but answer different problems."
+     ],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Implementation Challenges And Best Practices",
+       "text": "Pair each challenge with its fix: Data -> Governance/ETL, Skills -> Training, Change -> High-impact pilots and ROI, Tech choice -> Pilot projects. The solution to \"people don't trust the data-driven culture\" is always to prove it works on a small scale first."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Implementation Challenges And Best Practices",
+       "columns": [
+        "Challenge",
+        "Solution"
+       ],
+       "rows": [
+        [
+         "Data Integration: combining data from disparate sources with varying formats and quality.",
+         "Implement robust data governance and ETL processes."
+        ],
+        [
+         "Skill Gaps: finding talent with expertise in both analytics and domain knowledge.",
+         "Invest in training programs and cross-functional teams."
+        ],
+        [
+         "Organizational Change: shifting from intuition-based to data-driven decision making culture.",
+         "Start with high-impact use cases and demonstrate ROI."
+        ],
+        [
+         "Technology Selection: choosing the right tools and platforms for specific business needs.",
+         "Begin with pilot projects to evaluate technology fit."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Future Trends",
+     "summary": "Prescriptive analytics represents the future of data-driven decision making. Organizations that successfully implement these capabilities will gain significant competitive advantages through optimized operations, enhanced customer experiences, and improved business outcomes.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4-PRESCRIPTIVE_ANALYTICS_&_DECISI.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Future Trends",
+       "text": "A-A-E-E: Autonomous, Augmented, Edge, Explainable. Autonomous acts for you; Augmented helps non-technical users; Edge removes latency; Explainable shows its reasoning."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Future Trends",
+       "columns": [
+        "Trend",
+        "What It Means"
+       ],
+       "rows": [
+        [
+         "Autonomous Decision Systems",
+         "Systems that not only recommend actions but can implement them with minimal human intervention."
+        ],
+        [
+         "Augmented Analytics",
+         "AI-powered tools that make advanced analytics accessible to non-technical business users."
+        ],
+        [
+         "Edge Computing",
+         "Prescriptive capabilities deployed at the edge for real-time decision making without latency."
+        ],
+        [
+         "Explainable AI",
+         "Transparent algorithms that can explain the reasoning behind their recommendations."
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "MobProg Module 1 Reviewer Notes",
+  "subject": "Mobile Programming",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 1: M1 Introduction To Android",
+     "summary": "Android is an open and free mobile operating system based on Linux. Android Inc. originally developed it; Google purchased Android Inc. in 2005. The first commercial Android device was the HTC Dream.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_1_-_Introduction_to_Android_(2026.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Advantages And Features",
+     "summary": "Advantages And Features: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_1_-_Introduction_to_Android_(2026.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Advantages And Features",
+       "columns": [
+        "Group",
+        "Slide Content"
+       ],
+       "rows": [
+        [
+         "Advantages",
+         "Open Source; Larger Developer and Community Reach; Increased Marketing; Inter App Integration; Reduced Cost of Development; Higher Success Ratio; Rich Development Environment."
+        ],
+        [
+         "Features",
+         "Storage/database; multimedia; connectivity/wireless; messaging; apps; multi-touch."
+        ],
+        [
+         "Market-Share Pictures",
+         "July 2024 to July 2025 charts: Android 15/14 lead; iOS 18 leads. No precise percentages are supplied."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Version Table: Early Android",
+     "summary": "Years and features below follow M1 pp8-17 and the image notes. Learn the code name together with its feature hook.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_1_-_Introduction_to_Android_(2026.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Version Table: Early Android",
+       "text": "Early dessert chunks: C-D-E / F-G-H / I-J-K. Sentence: Cats Dance Early; Foxes Gather Honey; Iguanas Juggle Kites. These stand for Cupcake through KitKat in version order."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Version Table: Early Android",
+       "columns": [
+        "Version",
+        "Codename",
+        "Year",
+        "Main Features In The Slides"
+       ],
+       "rows": [
+        [
+         "1.0",
+         "Unnamed (alpha)",
+         "2008",
+         "Maps, camera, Gmail/Contacts/Google sync, browser, WiFi, Bluetooth."
+        ],
+        [
+         "1.1",
+         "Unnamed (beta)",
+         "2009",
+         "Save message attachments; business reviews/details in Maps."
+        ],
+        [
+         "1.5",
+         "Cupcake",
+         "2009",
+         "YouTube/Picasa uploads; MPEG-4/video recording; browser copy/paste."
+        ],
+        [
+         "1.6",
+         "Donut",
+         "2009",
+         "Large screens; gallery/camera; faster system apps."
+        ],
+        [
+         "2.0-2.1",
+         "Eclair",
+         "2009",
+         "Updated UI; live wallpaper; Bluetooth 2.1; Maps; minor API changes."
+        ],
+        [
+         "2.2",
+         "Froyo",
+         "2010",
+         "Animated GIF; WiFi hotspot; speed; browser uploads; numeric/alphanumeric passwords."
+        ],
+        [
+         "2.3",
+         "Gingerbread",
+         "2010",
+         "Copy/paste; UI; social networking; easier keyboard. Nexus S with Samsung."
+        ],
+        [
+         "3.0-3.2",
+         "Honeycomb",
+         "2011",
+         "Gmail; 3D UI; SD media sync; eBooks; Talk video; Flash; WiFi; Chinese handwriting."
+        ],
+        [
+         "4.0",
+         "Ice Cream Sandwich",
+         "2011",
+         "Text/spelling; WiFi Direct; photo decor; keyboard; Face Lock; camera/video; 16 browser tabs."
+        ],
+        [
+         "4.1-4.3",
+         "Jelly Bean",
+         "2012",
+         "Google Now; voice search/typing; smooth UI; camera/security; tablet accounts; 4K; Bluetooth LE; languages; USB audio; lock screen; alerts; emoji."
+        ],
+        [
+         "4.4",
+         "KitKat",
+         "2013",
+         "Screen recording; OK Google; GPS; offline music; Maps/alarm UI; keyboard emoji."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Android Versions: Lollipop To Cinnamon Bun",
+     "summary": "Later slides pair numbered releases with named features. Keep the internal names for Android 10 onward separate from the earlier public dessert labels.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "M1 p30 is titled Android 16 but shows the Android 17 logo. The image notes explicitly say to treat Cinnamon Bun as Android 17. The messy p6 table gives Android 13 as 2023; p26 explicitly gives August 15, 2022, used here. The Gingerbread detail slide lists 2.3 and 2.4, while the image-note version table lists 2.3. Recognize the discrepancy; this table follows the image-note version row."
+     ],
+     "source_refs": [
+      "Module_1_-_Introduction_to_Android_(2026.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Android Versions: Lollipop To Cinnamon Bun",
+       "text": "L-M-N-O-P = Lollipop, Marshmallow, Nougat, Oreo, Pie. Number hook: 16 = Baklava = API 36; 17 = Cinnamon Bun = API 37. These pairings come from the source chart."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Android Versions: Lollipop To Cinnamon Bun",
+       "columns": [
+        "Version",
+        "Codename",
+        "Year",
+        "Main Features In The Slides"
+       ],
+       "rows": [
+        [
+         "5.0-5.1",
+         "Lollipop",
+         "2014",
+         "ART (Android RunTime); battery/UI improvements; material design; fixes; multiple SIMs; HD voice."
+        ],
+        [
+         "6.0",
+         "Marshmallow",
+         "2015",
+         "Fingerprint; USB Type C; sleep-mode battery saving; permission requests; emoji."
+        ],
+        [
+         "7.0",
+         "Nougat",
+         "2016",
+         "Split-screen; data saver; multitasking/multi-window; storage manager; touch improvements."
+        ],
+        [
+         "8.0",
+         "Oreo",
+         "2017",
+         "Picture-in-Picture; multi-display; Google Play support; adaptive icons; notifications."
+        ],
+        [
+         "9.0",
+         "Pie",
+         "2018",
+         "Screenshot button; biometric Lockdown; cutouts; adaptive battery and brightness."
+        ],
+        [
+         "10",
+         "Queen Cake; internal Quince Tart",
+         "2019",
+         "Background location/media permissions; sharing shortcuts; dynamic photo depth; dark mode."
+        ],
+        [
+         "11",
+         "Red Velvet Cake",
+         "2020",
+         "Native screen recording; mute notifications during video; touch sensitivity; notification history; auto-revoke permissions."
+        ],
+        [
+         "12",
+         "Snow Cone",
+         "2021",
+         "Scrolling screenshots; AppSearch; auto-rotate; WiFi sharing; one-handed mode; rich insertion; overview suggestions; game APIs."
+        ],
+        [
+         "13",
+         "Tiramisu",
+         "2022",
+         "Security; reading mode; digital car keys; native LE Bluetooth; Material You options; QR scanner."
+        ],
+        [
+         "14",
+         "Upside Down Cake",
+         "2023",
+         "Large fonts/scaling; notification flashes; photo/video restrictions; protected PIN; data protection; regional preferences; predictive back; Health Connect."
+        ],
+        [
+         "15",
+         "Vanilla Ice Cream",
+         "2024",
+         "Privacy Sandbox; Health Connect; file integrity; partial sharing; camera controls; dynamic performance; sensitive notifications."
+        ],
+        [
+         "16",
+         "Baklava",
+         "2025",
+         "June 10; Live Updates foundation; adaptive large-screen apps; predictive back; QPR2 API 36.1."
+        ],
+        [
+         "17",
+         "Cinnamon Bun",
+         "2026",
+         "June 16; AppFunctions; adaptive-first API 37 targets; App Bubbles, Bubble Bar, desktop PiP."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Android Architecture",
+     "summary": "The Android software stack combines applications, framework services, runtime, platform libraries, and the Linux kernel. The slides describe the kernel as providing operating-system functions and the Dalvik Virtual Machine as running mobile applications.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Answer architecture component placement from the supplied M1 diagram. Its runtime list includes Dalvik, while the Lollipop version slide also names ART. Preserve the distinction between the diagram and the version feature."
+     ],
+     "source_refs": [
+      "Module_1_-_Introduction_to_Android_(2026.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Android Architecture",
+       "text": "Top-down sentence: Apps Find Runtime Libraries Below. Apps = Applications; Find = Framework; Runtime = Android Runtime; Libraries = Platform Libraries; Below = Linux Kernel. Number hook: 5 layers; the bottom layer is drivers."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Android Architecture",
+       "columns": [
+        "Layer, Top To Bottom",
+        "Components In The Diagram"
+       ],
+       "rows": [
+        [
+         "Applications",
+         "Home, Contacts, Camera, SMS, Alarm, Time, Calendar, Music, Gallery, Phone, Clock, Email."
+        ],
+        [
+         "Application Framework",
+         "Activity Manager, Package Manager, NFC Service, Location Service, Windows Manager, Notification Manager, Content Providers, View System."
+        ],
+        [
+         "Android Runtime",
+         "Dalvik Virtual Machine, Zygote, Android Debug Bridge, Core Libraries."
+        ],
+        [
+         "Platform Libraries",
+         "Media Framework, OpenGL, Graphics, SGL, SSL, SQLite, Surface Manager, FreeType."
+        ],
+        [
+         "Linux Kernel",
+         "Display, Wi-Fi, Audio, Bluetooth, Camera, USB, Binder IPC, and Memory Drivers."
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "MobProg Module 2 Reviewer Notes",
+  "subject": "Mobile Programming",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 2: M2 Android Studio",
+     "summary": "Android Studio is where the project is created, code and layouts are edited, and the app is run. The prerequisites named in the slides are JDK and Android Studio. The system-requirement screenshot has no legible numeric requirements.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_2_-_Android_Studio.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Create A Project",
+     "summary": "• Choose Start a new Android Studio project, or File > New > New Project.\n• Select Empty Activity in the written steps, then Next.\n• Enter Name: My First App; Package name: com.example.myfirstapp. Check Use AndroidX artifacts. Change the location if needed; leave other options as directed.\n• Select Java if writing Java; the project form also offers Kotlin. Click Finish.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "The written M2 steps say Empty Activity, but the screenshot selects Empty Views Activity. M5 also shows Empty Views Activity. Recognize the screenshot label instead of treating the two labels as identical. Do not invent RAM, disk, or OS requirements from an unreadable image."
+     ],
+     "source_refs": [
+      "Module_2_-_Android_Studio.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Create A Project",
+       "columns": [
+        "Project Form",
+        "What The Source Shows"
+       ],
+       "rows": [
+        [
+         "Fields",
+         "Name, Package name, Save location, Language, Minimum SDK."
+        ],
+        [
+         "Language",
+         "Java or Kotlin."
+        ],
+        [
+         "Minimum SDK",
+         "M2: list begins at API 16 / Android 4.1 Jelly Bean; API 24 / Android 7.0 Nougat selected. M5 example selects API 34."
+        ],
+        [
+         "Templates",
+         "No Activity; Empty Activity; Basic Views Activity; Bottom Navigation Views Activity; Empty Views Activity; Navigation Drawer Views Activity; Game; C++."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Six Interface Parts",
+     "summary": "Six Interface Parts: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_2_-_Android_Studio.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Six Interface Parts",
+       "text": "Six-part sentence: Tools Navigate Editors; Bars Toggle Status. Map to Toolbar, Navigation bar, Editor, Tool window bar, Tool windows, Status bar."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Six Interface Parts",
+       "columns": [
+        "Part",
+        "Purpose"
+       ],
+       "rows": [
+        [
+         "Toolbar",
+         "Run the app and launch Android tools."
+        ],
+        [
+         "Navigation Bar",
+         "Navigate the project and open files; compact Project-window structure."
+        ],
+        [
+         "Editor Window",
+         "Create/modify code; a layout file opens the Layout Editor."
+        ],
+        [
+         "Tool Window Bar",
+         "Outer buttons expand/collapse individual tool windows."
+        ],
+        [
+         "Tool Windows",
+         "Project management, search, version control, and other tasks."
+        ],
+        [
+         "Status Bar",
+         "Project/IDE status, warnings, and messages."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Run The Application",
+     "summary": "Run The Application: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_2_-_Android_Studio.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Run The Application",
+       "text": "Run in two chunks: Phone = connect + debugging. Emulator = device + screen + SDK."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Run The Application",
+       "columns": [
+        "Target",
+        "Steps In The Slides"
+       ],
+       "rows": [
+        [
+         "Real Device",
+         "Connect the Android phone to the computer. Enable Developer options, then USB Debugging."
+        ],
+        [
+         "Emulator",
+         "Open Device Manager > Create Device. Choose screen size and phone type, then Android SDK version."
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "MobProg Module 3 Reviewer Notes",
+  "subject": "Mobile Programming",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 3: M3 Kotlin",
+     "summary": "Kotlin is a concise, safe language released by JetBrains in 2016. It is compatible with Java and works on Windows, Mac, Linux, Raspberry Pi, and other platforms. The slides describe it as free, easy to learn for Java users, and supported by a large community.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "val fixes the reference; var permits reassignment. Do not read lateinit as an initialized value: the slide assigns str1 before printing it. The nullable str2 example deliberately starts at null. Do not confuse a nullable type (?) with the conversion example's non-null assertion (!!)."
+     ],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Part 3: M3 Kotlin",
+       "text": "Variable chunks: val = value reference locked; var = variable reference. Read the symbols aloud: ? permits null; !! asserts not null. These are recognition aids for the supplied examples."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Part 3: M3 Kotlin",
+       "columns": [
+        "Topic",
+        "Meaning Or Syntax"
+       ],
+       "rows": [
+        [
+         "Uses",
+         "Android/mobile apps; web development; server-side applications; data science."
+        ],
+        [
+         "Functions",
+         "fun declares a function. The standalone example begins with main(): fun main() { println(\"Hello World\") }"
+        ],
+        [
+         "Punctuation",
+         "Statements do not need a final semicolon. // is a single-line comment; /* ... */ is a multiline comment."
+        ],
+        [
+         "val",
+         "The reference cannot be changed after initialization: val immutable = 12."
+        ],
+        [
+         "var",
+         "The reference can change: var mutable = \"Hello World\"; later mutable = \"Hi there\"."
+        ],
+        [
+         "Type Inference",
+         "The variable type need not be written when Kotlin can infer it."
+        ],
+        [
+         "lateinit",
+         "lateinit var str1: String is assigned later: str1 = \"late init\"."
+        ],
+        [
+         "Nullable Type",
+         "var str2: String? = null explicitly permits null."
+        ],
+        [
+         "Conversion Example",
+         "The converted code uses textView!!.text = Integer.toString(count). The !! asserts a non-null value; ? in TextView? permits null."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Control Flow",
+     "summary": "Control Flow: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Control Flow",
+       "columns": [
+        "Form",
+        "Source Example Or Result"
+       ],
+       "rows": [
+        [
+         "if / if-else / else-if",
+         "Choose among conditions. if-else can also supply an expression value."
+        ],
+        [
+         "if Expression",
+         "val time = 20; val greeting = if (time < 18) \"Good day.\" else \"Good evening.\" gives Good evening."
+        ],
+        [
+         "when",
+         "Map day 1 through 7 to Monday through Sunday; else gives \"Invalid day.\". day = 4 gives Thursday."
+        ],
+        [
+         "Loops",
+         "while; do-while; for-loop. Array example visits 1, 5, 10, 15, 20. Range example: for (nums in 5..15)."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Kotlin Classes And Construction",
+     "summary": "A class groups properties and functions. The Car examples create an object with Car(), assign its properties, then show a primary constructor that receives those properties directly. The Person example shows initialization blocks executing in their written order.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "Kotlin classes are final by default in the image notes: the parent needs open for inheritance. init blocks run in order of appearance, not in an arbitrary order. A constructor default is used when that argument is omitted."
+     ],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Kotlin Classes And Construction",
+       "text": "Construction chunks: Declare, Create, Initialize, Call. Number hook for Person: first + second + third + name. Inheritance sentence: Open parents let children enter."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Kotlin Classes And Construction",
+       "columns": [
+        "Concept",
+        "Slide Example And Meaning"
+       ],
+       "rows": [
+        [
+         "Class And Object",
+         "class Car { var brand = \"\"; var model = \"\"; var year = 0 }; val c1 = Car(). Set Ford, Mustang, 1969."
+        ],
+        [
+         "Primary Constructor",
+         "class Car(var brand: String, var model: String, var year: Int); Car(\"Ford\", \"Mustang\", 1969)."
+        ],
+        [
+         "Functions",
+         "drive() prints \"Wrooom!\"; speed(maxSpeed: Int) prints \"Max speed is: \" plus maxSpeed. Calls: c1.drive(); c1.speed(200)."
+        ],
+        [
+         "init Blocks",
+         "Person(\"Abe\") prints first, second, third init block, then Name = Abe. The last block assigns this.name = _name."
+        ],
+        [
+         "Default Arguments",
+         "class employee(emp_id: Int = 100, emp_name: String = \"abc\"). employee(18018, \"Sagnik\") supplies both; employee(11011) uses abc; employee() uses 100 and abc."
+        ],
+        [
+         "Secondary Constructors",
+         "Add defines constructor(a, b), constructor(a, b, c), and constructor(a, b, c, d), all Int parameters. Add(5, 6) prints \"Sum of 5, 6 = 11\"."
+        ],
+        [
+         "Inheritance",
+         "open class MyParentClass has val x = 5. MyChildClass: MyParentClass() inherits it and prints x in myFunction()."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Kotlin Versus Java: Slide Comparison",
+     "summary": "Kotlin Versus Java: Slide Comparison: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "M3 p21 labels its row \"No Checked Exceptions\" but says \"Kotlin removed exceptions entirely\" in the cell. These are different claims. Memorize the row heading; the broader cell wording is an unresolved source inconsistency, not a rule established by these notes."
+     ],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Kotlin Versus Java: Slide Comparison",
+       "columns": [
+        "Feature",
+        "Kotlin",
+        "Java"
+       ],
+       "rows": [
+        [
+         "Extension Functions",
+         "Already available",
+         "Create a class"
+        ],
+        [
+         "Null Safety",
+         "Available",
+         "Not available in slide comparison"
+        ],
+        [
+         "Static Members",
+         "No static member for a class",
+         "Available"
+        ],
+        [
+         "String Templates",
+         "Two string-literal types; expressions",
+         "Slide says available, without Kotlin-like expressions"
+        ],
+        [
+         "Wildcard Types",
+         "Not available",
+         "Available"
+        ],
+        [
+         "Smartcasts",
+         "Available",
+         "Not available"
+        ],
+        [
+         "Checked Exceptions",
+         "Row heading: No Checked Exceptions",
+         "Slide describes these as problematic"
+        ],
+        [
+         "Operator Overloading",
+         "Users provide a way to invoke functions",
+         "Operators tied to particular Java types"
+        ],
+        [
+         "Constructors",
+         "Primary and secondary",
+         "Parameters initialize attributes"
+        ],
+        [
+         "Type System",
+         "Nullability, inference, universal guards (slide wording)",
+         "Reference types related to classes"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Java-To-Kotlin Conversion",
+     "summary": "Android Studio supports Java and Kotlin in the same project. The slide diagram shows both compiling to JVM bytecode. The conversion slides give two workflows: convert a whole file or paste Java into a Kotlin file.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Method 1: Convert A Whole Class Or File",
+     "summary": "• Open the Java source file, such as MainActivity.java.\n• In Android Project view, right-click the file and choose Convert Java File to Kotlin File, or use Ctrl+Alt+Shift+K while the file is open.\n• If prompted, permit Kotlin configuration. Select All modules and the latest installed Kotlin compiler, then OK. Android Studio changes the app module build.gradle.\n• Choose Convert Java File to Kotlin File again. The file extension changes from .java to .kt.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Method 2: Add A Kotlin File And Paste Java",
+     "summary": "• Create a Kotlin Class/File inside the project's java folder and give it a name.\n• Use Configure on the \"Kotlin is not configured\" alert. Select All modules and the latest installed compiler; click OK and let build.gradle changes finish.\n• After the project builds, open the Kotlin file and paste the Java code. Android Studio converts it automatically.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "The shortcut has all three modifiers: Ctrl + Alt + Shift + K. The screenshot shows compiler 1.4.30-RC, but the written instruction is to choose the latest compiler installed on the computer; the screenshot value is not a universal requirement."
+     ],
+     "source_refs": [
+      "Module_3_-_Kotlin.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Method 2: Add A Kotlin File And Paste Java",
+       "text": "Whole-file route: Open, Convert, Configure, Convert. Paste route: Create, Configure, Copy. Shortcut hook: three modifiers plus K for Kotlin."
+      }
+     ],
+     "comparisons": []
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "MobProg Module 4 Reviewer Notes",
+  "subject": "Mobile Programming",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 4: M4 Application Components And Resources",
+     "summary": "Application components are the building blocks of an Android app. AndroidManifest.xml describes the components and how they interact. The four main components divide screen interaction, background work, communication, and data handling.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4_-_Application_Components_and_Re.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Part 4: M4 Application Components And Resources",
+       "columns": [
+        "Main Component",
+        "Job And Example"
+       ],
+       "rows": [
+        [
+         "Activities",
+         "A screen with a UI; handles user interaction. Email can have separate list, compose, and read activities. One is marked for launch."
+        ],
+        [
+         "Services",
+         "Long-running background work, such as music during another app or a network fetch without blocking activity interaction."
+        ],
+        [
+         "Broadcast Receivers",
+         "Respond to broadcasts from apps or the system, such as downloaded data becoming available. Messages are Intent objects."
+        ],
+        [
+         "Content Providers",
+         "Supply data to other apps on request. ContentResolver methods handle requests. Data may be in a file system, database, or elsewhere; the provider implements transaction APIs."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Six Additional Components",
+     "summary": "Six Additional Components: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "A Fragment is a portion of an Activity UI. A View is a UI element, while a Layout organizes a view hierarchy. ContentProvider supplies data; ContentResolver handles the requests described in the slides."
+     ],
+     "source_refs": [
+      "Module_4_-_Application_Components_and_Re.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Six Additional Components",
+       "text": "Four jobs: Screen, Background, Broadcast, Data = Activity, Service, Receiver, Provider. Six extras: Friendly Views Lay Into Resource Maps = Fragments, Views, Layouts, Intents, Resources, Manifest. Number hook: 4 main + 6 additional."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Six Additional Components",
+       "columns": [
+        "Component",
+        "Description"
+       ],
+       "rows": [
+        [
+         "Fragments",
+         "A portion of the UI inside an Activity."
+        ],
+        [
+         "Views",
+         "On-screen UI elements, including buttons, lists, and forms."
+        ],
+        [
+         "Layouts",
+         "View hierarchies controlling screen format and appearance."
+        ],
+        [
+         "Intents",
+         "Messages wiring components together."
+        ],
+        [
+         "Resources",
+         "External elements, including strings, constants, and drawable pictures."
+        ],
+        [
+         "Manifest",
+         "Application configuration file."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Resource Organization And Access",
+     "summary": "Resources are additional files and static content kept separately from code under res/. Compiling generates an R class containing resource IDs. Code uses resource type and name; XML examples use @type/name.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "M4 p13 repeats conflicting descriptions under anim/. Its distinguishing statement prefers animator/ for property animation and describes anim/ for tween animation. Rows marked naming pattern apply p18's general R/subdirectory/name rule; those exact members are not separately printed in the transcription."
+     ],
+     "source_refs": [
+      "Module_4_-_Application_Components_and_Re.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Resource Organization And Access",
+       "columns": [
+        "Directory",
+        "Stored Content",
+        "Access In The Sources"
+       ],
+       "rows": [
+        [
+         "animator/",
+         "Property-animation XML; preferred for property animations.",
+         "R.animator (M4 p18 naming pattern)"
+        ],
+        [
+         "anim/",
+         "Tween-animation XML; can also hold property animations.",
+         "R.anim"
+        ],
+        [
+         "color/",
+         "Color state-list XML.",
+         "R.color"
+        ],
+        [
+         "drawable/",
+         "PNG, .9.png, JPG, GIF; bitmaps, nine-patches, state lists, shapes, animation/other drawables.",
+         "R.drawable"
+        ],
+        [
+         "layout/",
+         "UI-layout XML.",
+         "R.layout"
+        ],
+        [
+         "menu/",
+         "Options, context, and submenu XML.",
+         "R.menu"
+        ],
+        [
+         "raw/",
+         "Arbitrary files in raw form.",
+         "Resources.openRawResource(R.raw.filename)"
+        ],
+        [
+         "values/",
+         "Strings, integers, colors, arrays, dimensions, styles.",
+         "Each child element defines a resource: <string> -> R.string; <color> -> R.color."
+        ],
+        [
+         "xml/",
+         "Arbitrary XML read at runtime; search configuration.",
+         "R.xml (M4 p18 pattern); Resources.getXML() as written in p17."
+        ],
+        [
+         "font/",
+         "TTF, OTF, TTC, or XML with <font-family>.",
+         "R.font (M4 p18 naming pattern)"
+        ],
+        [
+         "mipmap/",
+         "icon.png in the example project tree.",
+         "R.mipmap.icon (M4 p18 naming pattern)"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Values Files And Assets",
+     "summary": "Values Files And Assets: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_4_-_Application_Components_and_Re.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Values Files And Assets",
+       "text": "Resource access chunks: Code = R.type.name; XML = @type/name. Values = many child resources; raw = resource ID; assets = AssetManager."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Values Files And Assets",
+       "columns": [
+        "Item",
+        "Rule"
+       ],
+       "rows": [
+        [
+         "values/ Naming",
+         "A values XML file can define multiple resources under <resources>. Each child defines one resource; the filename can vary."
+        ],
+        [
+         "Conventions",
+         "arrays.xml: typed arrays; colors.xml: colors; dimens.xml: dimensions; strings.xml: strings; styles.xml: styles."
+        ],
+        [
+         "Other Resource XML",
+         "Other res/ subdirectories define a single resource based on the XML filename, as described in the slides."
+        ],
+        [
+         "assets/ Versus raw/",
+         "Use assets/ when original filenames and hierarchy are needed. Assets receive no resource ID; read them using AssetManager."
+        ]
+       ]
+      }
+     ]
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ },
+ {
+  "title": "MobProg Module 5 Reviewer Notes",
+  "subject": "Mobile Programming",
+  "module_ids": [],
+  "content": {
+   "sections": [
+    {
+     "heading": "Part 5: M5 Activities",
+     "summary": "An Activity represents one screen of an app, similar to a desktop application window. An app can contain one or more activities, starts with its main activity, and may open additional activities. Activity classes are subclasses of android.app.Activity in the module explanation.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_5_-_Activities.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    },
+    {
+     "heading": "Lifecycle Callbacks",
+     "summary": "Lifecycle Callbacks: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [],
+     "source_refs": [
+      "Module_5_-_Activities.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": [
+      {
+       "title": "Lifecycle Callbacks",
+       "columns": [
+        "Callback",
+        "When It Is Called"
+       ],
+       "rows": [
+        [
+         "onCreate()",
+         "First callback when the activity is first created."
+        ],
+        [
+         "onStart()",
+         "When the activity becomes visible to the user."
+        ],
+        [
+         "onResume()",
+         "When the user starts interacting with the application."
+        ],
+        [
+         "onPause()",
+         "When the current activity is paused as another comes to the foreground; the paused activity does not receive user input."
+        ],
+        [
+         "onStop()",
+         "When the activity is no longer visible."
+        ],
+        [
+         "onDestroy()",
+         "Before the activity is destroyed by the system, as described in the callback table."
+        ],
+        [
+         "onRestart()",
+         "When the activity restarts after being stopped."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Read The Lifecycle Diagram",
+     "summary": "Read The Lifecycle Diagram: key points are below.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "onPause concerns lost interaction; onStop means no longer visible. M5 p6 also says a paused activity \"cannot execute any code\"; this is overbroad relative to the callback-flow diagram. Use the diagram to distinguish pause, resume, stop, and restart. Do not assume the process-killed branch passes through onDestroy: the supplied diagram shows it separately."
+     ],
+     "source_refs": [
+      "Module_5_-_Activities.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [
+      {
+       "label": "Read The Lifecycle Diagram",
+       "text": "Launch sentence: Create, Show, Respond = onCreate, onStart, onResume. Return after stop adds Restart before Start. Number hook: 7 named callbacks; pause and stop are separate."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Read The Lifecycle Diagram",
+       "columns": [
+        "Situation",
+        "Path In M5 p7"
+       ],
+       "rows": [
+        [
+         "Launch",
+         "onCreate -> onStart -> onResume -> running."
+        ],
+        [
+         "Another Activity In Front",
+         "onPause; if the user returns, onResume."
+        ],
+        [
+         "No Longer Visible",
+         "onPause -> onStop."
+        ],
+        [
+         "Return After Stop",
+         "onRestart -> onStart -> onResume."
+        ],
+        [
+         "Finish/Destroy",
+         "onDestroy -> activity shut down."
+        ],
+        [
+         "Higher-Priority Apps Need Memory",
+         "Diagram permits process killing from the paused/stopped paths. Navigating back leads to onCreate."
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Create And Declare The Screen",
+     "summary": "• Create the Activity subclass. The Kotlin walkthrough uses Empty Views Activity, a name, Kotlin, a minimum SDK, and Finish.\n• Declare the Activity in AndroidManifest.xml with an <activity> child of <application>.\n• Use MainActivity.kt for Kotlin code and activity_main.xml for the main layout.\n• Load res/layout/activity_main.xml during onCreate with setContentView(R.layout.activity_main). Run with the emulator.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [],
+     "common_mistakes": [
+      "An Activity must be declared in the manifest. The Activity class and the layout XML serve different purposes: screen behavior versus screen design. Writing a class alone does not supply the required manifest declaration."
+     ],
+     "source_refs": [
+      "Module_5_-_Activities.pptx.txt",
+      "image_slides_notes.md"
+     ],
+     "memory_aids": [],
+     "comparisons": []
+    }
+   ],
+   "formula_sheet": [],
+   "self_check": [],
+   "cram_sheet": []
+  }
+ }
+]
