@@ -1,0 +1,2707 @@
+[
+ {
+  "name": "SE1_M1-M4_Midterm_Verified",
+  "modules_included": "M1, M2, M3, M4",
+  "subject": "Software Engineering 1",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Which software category operates and controls computer hardware?",
+    "correct_answer": "System software",
+    "options": "[\"System software\", \"Application software\", \"Embedded software\", \"Web applications\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Who is associated with the chart used for project scheduling?",
+    "correct_answer": "Henry Gantt",
+    "options": "[\"Henry Gantt\", \"Henri Fayol\", \"Frederick Taylor\", \"Winston Royce\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a sprint, the team discovers a critical bug that blocks progress on the current sprint goal. According to Scrum guidelines, who should decide how to handle this issue?",
+    "correct_answer": "The Development Team",
+    "options": "[\"The Scrum Master\", \"The Product Owner\", \"The Development Team\", \"The Stakeholders\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A satellite attitude control team is creating a functional block diagram. Which symbol is used to represent an external entity that interacts with the system?",
+    "correct_answer": "Rectangle with an open side",
+    "options": "[\"Rectangle with an open side\", \"Circle\", \"Rounded rectangle\", \"Diamond\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which software engineering layer is the bedrock?",
+    "correct_answer": "Quality focus",
+    "options": "[\"Quality focus\", \"Tools\", \"Methods\", \"Process\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which chart places project tasks against time?",
+    "correct_answer": "Gantt chart",
+    "options": "[\"Gantt chart\", \"Pareto chart\", \"Control chart\", \"Histogram\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A new stakeholder requests a feature change two days into a two‑week sprint. What is the most appropriate Scrum‑compliant response?",
+    "correct_answer": "Ask the Product Owner to prioritize it for the next sprint",
+    "options": "[\"Add the change to the sprint backlog immediately\", \"Ask the Product Owner to prioritize it for the next sprint\", \"Cancel the current sprint and start a new one\", \"Implement the change without informing the team\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a Functional Flow Block Diagram (FFBD), which gate symbol indicates that functions are executed in parallel?",
+    "correct_answer": "And gate",
+    "options": "[\"And gate\", \"Or gate\", \"XOR gate\", \"Not gate\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which process framework activity gathers stakeholder needs?",
+    "correct_answer": "Communication",
+    "options": "[\"Communication\", \"Construction\", \"Deployment\", \"Modeling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a PERT critical path determine?",
+    "correct_answer": "The longest path through project activities",
+    "options": "[\"The longest path through project activities\", \"The cheapest activity\", \"The shortest task\", \"The most staffed team\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a daily scrum, a developer consistently arrives five minutes late, causing the meeting to start late. Which Scrum role is primarily responsible for addressing this impediment?",
+    "correct_answer": "The Scrum Master",
+    "options": "[\"The Product Owner\", \"The Scrum Master\", \"The Development Team member themselves\", \"The Project Sponsor\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A manufacturing firm wants to reduce its process cycle time. Which modeling technique is most appropriate for analyzing and improving the current process?",
+    "correct_answer": "BPMN (Business Process Model and Notation)",
+    "options": "[\"Functional modeling\", \"BPMN (Business Process Model and Notation)\", \"Data Flow Diagram\", \"Entity\\u2011Relationship Diagram\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which process framework activity delivers the product to users?",
+    "correct_answer": "Deployment",
+    "options": "[\"Deployment\", \"Communication\", \"Planning\", \"Modeling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the critical-path length in the reviewer's PERT example?",
+    "correct_answer": "7 months",
+    "options": "[\"7 months\", \"5 months\", \"6 months\", \"8 months\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During sprint retrospective, the team identifies that they spend too much time clarifying user stories. Which improvement is most aligned with Agile principles?",
+    "correct_answer": "Introduce a dedicated backlog refinement session each week",
+    "options": "[\"Increase the length of the sprint planning meeting\", \"Introduce a dedicated backlog refinement session each week\", \"Reduce the number of user stories per sprint\", \"Eliminate the daily scrum to save time\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During system architecture design, which diagram best shows high‑level components and their interactions?",
+    "correct_answer": "System architecture diagram",
+    "options": "[\"Functional block diagram\", \"System architecture diagram\", \"Data flow diagram\", \"BPMN diagram\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which information system records daily transactions?",
+    "correct_answer": "Transaction Processing System",
+    "options": "[\"Transaction Processing System\", \"Decision Support System\", \"Executive Information System\", \"Expert System\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project-management phase starts the project?",
+    "correct_answer": "Initiation",
+    "options": "[\"Initiation\", \"Execution\", \"Closing\", \"Monitoring and Controlling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Scrum team of eight members is preparing for sprint planning. The Product Owner presents 30 backlog items, but the team estimates they can only complete 12. What should the team do?",
+    "correct_answer": "Select the 12 highest‑priority items and leave the rest for later sprints",
+    "options": "[\"Select the 12 highest\\u2011priority items and leave the rest for later sprints\", \"Ask the Product Owner to add more developers to increase capacity\", \"Force the team to work overtime to finish all 30 items\", \"Skip the sprint planning and start coding immediately\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In data modeling, which artifact explicitly defines how entity types are related to each other?",
+    "correct_answer": "Relationships",
+    "options": "[\"Attributes\", \"Integrity rules\", \"Relationships\", \"Keys\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which information system helps managers decide without making the decision for them?",
+    "correct_answer": "Decision Support System",
+    "options": "[\"Decision Support System\", \"Transaction Processing System\", \"Workflow System\", \"ERP\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project-management phase formally ends the project?",
+    "correct_answer": "Closing",
+    "options": "[\"Closing\", \"Initiation\", \"Execution\", \"Planning and Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The Scrum Master notices that the Development Team is frequently breaking the Definition of Done by delivering partially tested code. Which action best addresses this problem?",
+    "correct_answer": "Facilitate a workshop to revisit and reinforce the Definition of Done",
+    "options": "[\"Ask the Product Owner to lower the acceptance criteria\", \"Facilitate a workshop to revisit and reinforce the Definition of Done\", \"Replace the Development Team with a new group\", \"Extend the sprint length to allow more testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When drawing a Data Flow Diagram (DFD), which symbol is used for a process that transforms data?",
+    "correct_answer": "Rounded rectangle",
+    "options": "[\"Rectangle\", \"Rounded rectangle\", \"Open\\u2011ended rectangle\", \"Diamond\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which SDLC phase follows planning?",
+    "correct_answer": "Analysis",
+    "options": "[\"Analysis\", \"Design\", \"Testing\", \"Maintenance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project-management area handles project uncertainties?",
+    "correct_answer": "Risk management",
+    "options": "[\"Risk management\", \"Scope management\", \"Cost management\", \"Procurement management\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a sprint review, a stakeholder asks to see a feature that was not completed. According to Scrum rules, what should the team do?",
+    "correct_answer": "Explain that only completed work can be demonstrated and discuss it for future sprints",
+    "options": "[\"Demonstrate the incomplete feature anyway\", \"Explain that only completed work can be demonstrated and discuss it for future sprints\", \"Cancel the sprint and start a new one to finish the feature\", \"Add the feature to the current sprint backlog and continue the review\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A project team is preparing an FFBD for a stakeholder meeting. Which level of detail is most appropriate for that audience?",
+    "correct_answer": "Conceptual overview",
+    "options": "[\"Detailed step\\u2011by\\u2011step flow\", \"Multi\\u2011tier time\\u2011sequenced flow\", \"Conceptual overview\", \"Physical data model\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which SDLC phase tests the built system?",
+    "correct_answer": "Testing",
+    "options": "[\"Testing\", \"Planning\", \"Analysis\", \"Maintenance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which activity breaks a whole into its component parts?",
+    "correct_answer": "Analysis",
+    "options": "[\"Analysis\", \"Synthesis\", \"Deployment\", \"Implementation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A new developer joins the Scrum team mid‑sprint and is unfamiliar with the product backlog. What is the most effective way to integrate them quickly?",
+    "correct_answer": "Pair them with an experienced team member during the next daily scrum",
+    "options": "[\"Assign them a separate project outside the sprint\", \"Ask the Scrum Master to update the sprint backlog with extra tasks for them\", \"Pair them with an experienced team member during the next daily scrum\", \"Have them wait until the next sprint to start work\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In BPMN, which element is used to represent a decision point in a workflow?",
+    "correct_answer": "Gateway",
+    "options": "[\"Task\", \"Event\", \"Gateway\", \"Flow line\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which SDLC phase keeps the deployed system useful over time?",
+    "correct_answer": "Maintenance",
+    "options": "[\"Maintenance\", \"Planning\", \"Design\", \"Testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which activity combines parts into a whole?",
+    "correct_answer": "Synthesis",
+    "options": "[\"Synthesis\", \"Analysis\", \"Decomposition\", \"Scope definition\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The Product Owner receives a high‑priority request from the business that conflicts with the current sprint goal. Which Scrum event is the appropriate place to discuss this conflict?",
+    "correct_answer": "Sprint Review",
+    "options": "[\"Sprint Retrospective\", \"Sprint Review\", \"Sprint Planning\", \"Backlog Refinement\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A company is documenting its supporting processes. Which of the following processes is classified as a supporting process?",
+    "correct_answer": "Technical support",
+    "options": "[\"Corporate governance\", \"Manufacturing\", \"Technical support\", \"Sales\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which system has predictable behavior without outside input?",
+    "correct_answer": "Closed system",
+    "options": "[\"Closed system\", \"Open system\", \"Probabilistic system\", \"Notional system\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which analysis procedure determines what lies within the project?",
+    "correct_answer": "Scope definition",
+    "options": "[\"Scope definition\", \"Logical design\", \"Decision analysis\", \"Problem analysis\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Scrum team consistently delivers work early in the sprint but struggles to finish the last few story points. Which adjustment aligns best with Agile’s principle of sustainable pace?",
+    "correct_answer": "Reduce the amount of work taken into the sprint to match realistic capacity",
+    "options": "[\"Increase the sprint length by two weeks\", \"Reduce the amount of work taken into the sprint to match realistic capacity\", \"Add more developers to the team\", \"Eliminate the sprint goal to allow flexibility\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which modeling perspective focuses on describing the dynamic processes of a system?",
+    "correct_answer": "Functional modeling perspective",
+    "options": "[\"Functional modeling perspective\", \"Behavioral perspective\", \"Organizational perspective\", \"Informational perspective\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which information-system activity returns results to adjust input or processing?",
+    "correct_answer": "Feedback",
+    "options": "[\"Feedback\", \"Input\", \"Output\", \"Storage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which project characteristic means its details become clearer over time?",
+    "correct_answer": "Progressively elaborated",
+    "options": "[\"Progressively elaborated\", \"Permanent\", \"Routine\", \"Unbounded\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During backlog refinement, the team discovers that several items lack clear acceptance criteria. What should they do before moving these items into sprint planning?",
+    "correct_answer": "Collaborate with the Product Owner to define clear acceptance criteria",
+    "options": "[\"Estimate them anyway and hope for the best\", \"Ask the Scrum Master to write the acceptance criteria\", \"Collaborate with the Product Owner to define clear acceptance criteria\", \"Delete the items from the backlog\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a functional block diagram, how are the inputs and outputs of a block typically shown?",
+    "correct_answer": "Arrows",
+    "options": "[\"Dashed lines\", \"Solid lines\", \"Arrows\", \"No lines\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches System Software?",
+    "correct_answer": "A collection of programs written to service other programs.",
+    "options": "[\"A collection of programs written to service other programs.\", \"Usually stand-alone programs that solve specific business needs.\", \"A broad array of \\\"number crunching\\\" programs.\", \"Resides within a product or system, used to implement control features for the user and the system itself.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which contribution matches Henry Gantt?",
+    "correct_answer": "Called the father of planning and control techniques, famous for his use of the Gantt Chart.",
+    "options": "[\"Called the father of planning and control techniques, famous for his use of the Gantt Chart.\", \"Creator of the five management functions that form the foundation of the body of knowledge associated with project and program management.\", \"Marked the beginning of the modern project management era, where core engineering fields came together to work as one. Project management became recognized as a distinct discipline arising from the management discipline with engineering mode.\", \"Two mathematical project-scheduling models developed in that era: the Critical Path Method (CPM) and the Program/Project Evaluation and Review Technique (PERT).\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In an Agile project, the team decides to adopt a hybrid approach, using Scrum for development and Waterfall for documentation. Which Agile value does this hybrid model risk violating?",
+    "correct_answer": "Working software over comprehensive documentation",
+    "options": "[\"Individuals and interactions over processes and tools\", \"Working software over comprehensive documentation\", \"Customer collaboration over contract negotiation\", \"Responding to change over following a plan\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Scrum team wants to incorporate modeling without violating the iterative nature of sprints. Which activity aligns best with Agile principles?",
+    "correct_answer": "Using functional flow block diagrams to refine processes each sprint",
+    "options": "[\"Creating a complete system architecture upfront\", \"Developing a detailed data model before any coding\", \"Using functional flow block diagrams to refine processes each sprint\", \"Defining all business processes before the first sprint\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches WebApps?",
+    "correct_answer": "Sophisticated computing tools that not only provide stand-alone function to users, but can also integrate databases and corporate applications.",
+    "options": "[\"Sophisticated computing tools that not only provide stand-alone function to users, but can also integrate databases and corporate applications.\", \"Encompasses a user interface that takes advantage of the unique interaction mechanisms provided by the mobile platform.\", \"Encompasses an infrastructure or \\\"ecosystem\\\" that enables any user from anywhere or anytime to use a computing device to share or use computing resources on a broad scale.\", \"A set of software-intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which p matches: The planning and forecasting activities.?",
+    "correct_answer": "Plan",
+    "options": "[\"Plan\", \"Process\", \"People\", \"Power\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Scrum Master notices that the same three people are always speaking during the daily scrum while others stay silent. What is the best way to encourage full participation?",
+    "correct_answer": "Assign speaking order to each team member",
+    "options": "[\"Extend the daily scrum to 30 minutes\", \"Assign speaking order to each team member\", \"Ask the silent members to write their updates in a chat instead\", \"Ignore it; the meeting is still within the timebox\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a Data Flow Diagram, which symbol denotes an external entity that provides input to or receives output from the system?",
+    "correct_answer": "Open‑ended rectangle",
+    "options": "[\"Rounded rectangle\", \"Open\\u2011ended rectangle\", \"Circle\", \"Square\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Process?",
+    "correct_answer": "A collection of activities, actions and tasks that are performed when some work product is to be created.",
+    "options": "[\"A collection of activities, actions and tasks that are performed when some work product is to be created.\", \"Strives to achieve a broad objective.\", \"A set of tasks that produce a major work product.\", \"Focuses on small, but well defined objectives to produce a tangible outcome.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which phase matches: Determines the nature and scope of the project. If this stage is not performed well, it is unlikely the project will succeed in meeting the business' needs. Needs an understanding of the business environment and all necessary controls incorporated.?",
+    "correct_answer": "1. Initiation",
+    "options": "[\"1. Initiation\", \"2. Planning and Design\", \"3. Execution\", \"4. Monitoring and Controlling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The team is about to start a two‑week sprint, but the Product Owner is unavailable for the sprint planning meeting. What should the Scrum Master do?",
+    "correct_answer": "Reschedule the sprint planning to a time when the Product Owner can attend",
+    "options": "[\"Proceed with planning using the last known backlog priorities\", \"Cancel the sprint and wait for the Product Owner\\u2019s return\", \"Ask the Development Team to create their own backlog items\", \"Reschedule the sprint planning to a time when the Product Owner can attend\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In functional modeling, what does a \"store\" symbol represent?",
+    "correct_answer": "Data collection or material",
+    "options": "[\"Process\", \"Data collection or material\", \"External entity\", \"Flow\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches Communication?",
+    "correct_answer": "Communicate and collaborate with the user to understand objectives.",
+    "options": "[\"Communicate and collaborate with the user to understand objectives.\", \"Mapping the software project to create guidelines.\", \"A \\\"sketch\\\" of the project in order to understand the big picture. In other words, blueprints or software requirements design.\", \"Building of the software project.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which what it means matches Project Tracking and Control?",
+    "correct_answer": "Assess the progress of the project plan.",
+    "options": "[\"Assess the progress of the project plan.\", \"Assess risks that may affect the product outcome.\", \"Conduct activities to ensure product quality.\", \"Assess the work product to identify errors beforehand.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a sprint, the Development Team discovers that a story’s estimate was significantly off. Which Scrum practice helps mitigate this risk in future sprints?",
+    "correct_answer": "Conducting a sprint retrospective to improve estimation techniques",
+    "options": "[\"Increasing the sprint duration\", \"Conducting a sprint retrospective to improve estimation techniques\", \"Having the Product Owner re\\u2011estimate the story\", \"Skipping backlog refinement\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An analyst needs to illustrate how data moves between processes in a new application. Which diagram is most suitable?",
+    "correct_answer": "Data flow diagram",
+    "options": "[\"Functional block diagram\", \"Data flow diagram\", \"BPMN diagram\", \"Entity\\u2011relationship diagram\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it involves matches Understand the Problem?",
+    "correct_answer": "Communication and Analysis (Research).",
+    "options": "[\"Communication and Analysis (Research).\", \"Modeling and Software Design (Designing).\", \"Code generation (Programming).\", \"Testing and Quality Assurance (Deliberate).\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which what it means matches 1. Scope Definition?",
+    "correct_answer": "Clearly defined objectives and requirements necessary to meet a project's requirements as defined by its stakeholders.",
+    "options": "[\"Clearly defined objectives and requirements necessary to meet a project's requirements as defined by its stakeholders.\", \"The process of understanding problems and needs and arriving at solutions that meet them.\", \"Determining the conditions that need to be met.\", \"Looking at the logical relationship among the objects.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A stakeholder asks for a detailed technical design document before any code is written. Which Agile principle best guides the team’s response?",
+    "correct_answer": "Working software over comprehensive documentation",
+    "options": "[\"Customer collaboration over contract negotiation\", \"Working software over comprehensive documentation\", \"Individuals and interactions over processes and tools\", \"Responding to change over following a plan\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which of the following is NOT a typical purpose of functional modeling?",
+    "correct_answer": "Defining user interface colors",
+    "options": "[\"Discovering information needs\", \"Establishing product and service costs\", \"Describing functions and processes\", \"Defining user interface colors\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches The Reason it all Exists?",
+    "correct_answer": "Provide value to its users.",
+    "options": "[\"Provide value to its users.\", \"All design should be as simple as possible, but no simpler.\", \"It is essential for the success of the software project.\", \"Always specify, design and implement knowing someone else will have to understand what you do.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which trend matches: One of the most controversial and intriguing areas of CS research. Still in its early stages, but tech giants like Facebook, Google and IBM are investing huge amounts of money and resources into AI research. No shortage of opportunities for real-world applications and breakthroughs.?",
+    "correct_answer": "Artificial Intelligence and Robotics",
+    "options": "[\"Artificial Intelligence and Robotics\", \"Big Data Analytics\", \"Computer-assisted Education\", \"Bioinformatics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The Scrum team is considering increasing the sprint length from two weeks to four weeks. Which outcome is most likely according to Scrum guidelines?",
+    "correct_answer": "Reduced ability to adapt to change",
+    "options": "[\"Higher flexibility and faster feedback\", \"Reduced ability to adapt to change\", \"More frequent releases\", \"Better alignment with Agile\\u2019s incremental delivery\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the system architecture diagram shown, which component most likely represents the \"Semantic Workflow Engine\"?",
+    "correct_answer": "Backend service",
+    "options": "[\"Frontend\", \"Backend service\", \"Database\", \"External Entity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which activity matches: Starts off with acquisition of raw data and is then introduced to the system.?",
+    "correct_answer": "Input",
+    "options": "[\"Input\", \"Process\", \"Output\", \"Feedback\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which research area matches: The Lottery Ticket Hypothesis: Finding Sparse, Trainable Neural Networks; Challenging Common Assumptions in the Unsupervised Learning of Disentangled Representations; Meta-Learning Update Rules for Unsupervised Representation Learning.?",
+    "correct_answer": "AI and Robotics",
+    "options": "[\"AI and Robotics\", \"Big Data Analytics\", \"Computer-Assisted Education\", \"Bioinformatics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During backlog refinement, a dependency between two user stories is identified. What is the most appropriate action?",
+    "correct_answer": "Re‑order the backlog so the dependent story is placed after its prerequisite",
+    "options": "[\"Ignore the dependency and hope it resolves itself\", \"Split the dependent story into smaller tasks that can be done independently\", \"Re\\u2011order the backlog so the dependent story is placed after its prerequisite\", \"Remove both stories from the backlog\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When converting a conceptual data model to a physical data model, which element is added?",
+    "correct_answer": "Tables",
+    "options": "[\"Entities\", \"Attributes\", \"Tables\", \"Integrity rules\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which definition matches Data?",
+    "correct_answer": "Consists of raw facts and is an important component of an IS. It has two sources: external and internal.",
+    "options": "[\"Consists of raw facts and is an important component of an IS. It has two sources: external and internal.\", \"Is a collection of all relevant and related organized data in an integrated file.\", \"An important component of IS that generates the most useful information for decision-making.\", \"Consists of analyzed facts that was processed from a data source and is an output of an IS.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which contribution matches Henri Fayol?",
+    "correct_answer": "Creator of the five management functions that form the foundation of the body of knowledge associated with project and program management.",
+    "options": "[\"Creator of the five management functions that form the foundation of the body of knowledge associated with project and program management.\", \"Marked the beginning of the modern project management era, where core engineering fields came together to work as one. Project management became recognized as a distinct discipline arising from the management discipline with engineering mode.\", \"Two mathematical project-scheduling models developed in that era: the Critical Path Method (CPM) and the Program/Project Evaluation and Review Technique (PERT).\", \"Called the father of planning and control techniques, famous for his use of the Gantt Chart.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A new product owner is unfamiliar with writing effective user stories. Which technique should the Scrum Master introduce to help improve story quality?",
+    "correct_answer": "Use the INVEST criteria for user stories",
+    "options": "[\"Use the INVEST criteria for user stories\", \"Adopt a waterfall style requirement specification\", \"Require the product owner to write detailed technical specifications\", \"Eliminate user stories and use use cases instead\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Design diagrams help troubleshoot system failures. Which feature most directly supports this purpose?",
+    "correct_answer": "Visual representation of data flow",
+    "options": "[\"Visual representation of data flow\", \"Color coding of components\", \"Inclusion of source code\", \"Detailed user manuals\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which type matches: Used primarily for record keeping required in any organization to conduct business. Used for periodic report generation in a scheduled manner, and for reports on demand as well as exception reports.?",
+    "correct_answer": "Transaction Processing System (TPS)",
+    "options": "[\"Transaction Processing System (TPS)\", \"Decision Support System (DSS)\", \"Executive Information System (EIS)\", \"Management Information System (MIS)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which p matches: The overall approach to all activities and project governance.?",
+    "correct_answer": "Process",
+    "options": "[\"Process\", \"People\", \"Power\", \"Plan\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The team consistently finishes the sprint backlog early and has idle capacity. Which Scrum‑aligned practice can they adopt to make better use of this time?",
+    "correct_answer": "Pull additional high‑priority backlog items into the sprint (if Definition of Done allows)",
+    "options": "[\"Start a new sprint early\", \"Add unrelated features to the product backlog without stakeholder input\", \"Pull additional high\\u2011priority backlog items into the sprint (if Definition of Done allows)\", \"Extend the sprint duration to fill the time\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In business process management, which type of process creates the primary value stream for customers?",
+    "correct_answer": "Operational process",
+    "options": "[\"Management process\", \"Operational process\", \"Supporting process\", \"Administrative process\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 3: System Development Life Cycle (SDLC), which what happens matches 1. Planning?",
+    "correct_answer": "Identifies whether or not there is a need for a new system. A preliminary plan (feasibility study) for a company's business initiative to acquire resources to build, modify or improve a service.",
+    "options": "[\"Identifies whether or not there is a need for a new system. A preliminary plan (feasibility study) for a company's business initiative to acquire resources to build, modify or improve a service.\", \"The business works on the source of the problem or the need for change. Possible solutions are submitted and analyzed to identify the best fit for the project's goals. Teams consider the functional requirements of the project.\", \"Describes in detail the necessary specifications, features and operations that will satisfy the functional requirements of the proposed system. End users discuss and determine their specific business information needs.\", \"The real work begins: a programmer, network engineer and/or database developer are brought on to do the major work on the project.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which phase matches: After initialization, the project is planned to an appropriate level of detail. The main purpose is to plan time, cost and resources adequately, to estimate the work needed, and to effectively manage risk during execution.?",
+    "correct_answer": "2. Planning and Design",
+    "options": "[\"2. Planning and Design\", \"3. Execution\", \"4. Monitoring and Controlling\", \"5. Closing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a sprint review, the stakeholders request a major architectural change that would affect all current work. What should the Scrum team do?",
+    "correct_answer": "Discuss the impact with the Product Owner and consider adding it to the product backlog for future sprints",
+    "options": "[\"Implement the change immediately to please the stakeholders\", \"Reject the change outright because it disrupts the sprint\", \"Discuss the impact with the Product Owner and consider adding it to the product backlog for future sprints\", \"Ignore the request until the next sprint\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A business analyst is creating a Level 1 DFD for an online bookstore. Which symbol should they use to represent the \"Customer Database\" that stores order histories permanently?",
+    "correct_answer": "A rectangle with an open end and a vertical line near the closed side",
+    "options": "[\"A rectangle with an open end\", \"A rectangle with an open end and a vertical line near the closed side\", \"A circle labeled \\\"Customer Database\\\"\", \"A double-headed arrow labeled \\\"Customer Database\\\"\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Application Software?",
+    "correct_answer": "Usually stand-alone programs that solve specific business needs.",
+    "options": "[\"Usually stand-alone programs that solve specific business needs.\", \"A broad array of \\\"number crunching\\\" programs.\", \"Resides within a product or system, used to implement control features for the user and the system itself.\", \"Designed to provide specific capabilities for use by many customers.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which what it means matches Risk Management?",
+    "correct_answer": "Assess risks that may affect the product outcome.",
+    "options": "[\"Assess risks that may affect the product outcome.\", \"Conduct activities to ensure product quality.\", \"Assess the work product to identify errors beforehand.\", \"Defines and collects process to deliver and meet the needs of the stakeholders.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A project team using Crystal methodology is in the Chartering phase. Which activity is most appropriate?",
+    "correct_answer": "Performing preliminary feasibility analysis",
+    "options": "[\"Conducting post\\u2011deployment review\", \"Performing preliminary feasibility analysis\", \"Integrating product with real users\", \"Defining timeboxes for iterations\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a walkthrough, a reviewer points out that a data flow line in a DFD has arrows at both ends. What does this indicate?",
+    "correct_answer": "The data flow is bidirectional",
+    "options": "[\"The data flow is optional\", \"The data flow is bidirectional\", \"The data flow is a mistake and should be removed\", \"The data flow represents a data store\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Mobile Applications?",
+    "correct_answer": "Encompasses a user interface that takes advantage of the unique interaction mechanisms provided by the mobile platform.",
+    "options": "[\"Encompasses a user interface that takes advantage of the unique interaction mechanisms provided by the mobile platform.\", \"Encompasses an infrastructure or \\\"ecosystem\\\" that enables any user from anywhere or anytime to use a computing device to share or use computing resources on a broad scale.\", \"A set of software-intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment.\", \"Sophisticated computing tools that not only provide stand-alone function to users, but can also integrate databases and corporate applications.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which what it means matches 2. Problem Analysis?",
+    "correct_answer": "The process of understanding problems and needs and arriving at solutions that meet them.",
+    "options": "[\"The process of understanding problems and needs and arriving at solutions that meet them.\", \"Determining the conditions that need to be met.\", \"Looking at the logical relationship among the objects.\", \"Making a final decision.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In DSDM, a stakeholder asks to add a low‑priority feature when the project is out of budget. What should the team do?",
+    "correct_answer": "Defer it because MoSCoW says low‑priority can be omitted",
+    "options": "[\"Add it and request extra budget\", \"Defer it because MoSCoW says low\\u2011priority can be omitted\", \"Replace a Must\\u2011have with it\", \"Ignore the request\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a DFD for a hospital's patient admission system, which of the following would be best represented as an external entity?",
+    "correct_answer": "Patient",
+    "options": "[\"Patient Registration Form\", \"Medical Records Database\", \"Insurance Verification Process\", \"Patient\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Activity?",
+    "correct_answer": "Strives to achieve a broad objective.",
+    "options": "[\"Strives to achieve a broad objective.\", \"A set of tasks that produce a major work product.\", \"Focuses on small, but well defined objectives to produce a tangible outcome.\", \"A collection of activities, actions and tasks that are performed when some work product is to be created.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which trend matches: A surge in demand for experts in this field, with doubled efforts by brands and agencies to boost salaries and attract data science talents. From banking to healthcare, big data analytics is everywhere as companies try to make better use of enormous datasets.?",
+    "correct_answer": "Big Data Analytics",
+    "options": "[\"Big Data Analytics\", \"Computer-assisted Education\", \"Bioinformatics\", \"Cyber Security\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A development team practicing XP plans its next iteration. Which artifact helps them capture user requirements?",
+    "correct_answer": "Storyboard",
+    "options": "[\"Gantt chart\", \"Storyboard\", \"Use case diagram\", \"Risk register\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A developer is drafting a DFD using Gane & Sarson notation but accidentally mixes in Yourdon symbols. Which guideline does this violate?",
+    "correct_answer": "Select one notation style and use it consistently",
+    "options": "[\"Do not mix levels of detail on one chart\", \"Use a template to draw uniformly sized symbols\", \"Select one notation style and use it consistently\", \"Label the top of each diagram with system name\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches Planning?",
+    "correct_answer": "Mapping the software project to create guidelines.",
+    "options": "[\"Mapping the software project to create guidelines.\", \"A \\\"sketch\\\" of the project in order to understand the big picture. In other words, blueprints or software requirements design.\", \"Building of the software project.\", \"Software is delivered to the customer who evaluates and provides feedback.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which research area matches: An integrated parallel big data decision support tool using the W-CLUS-MCDA: A multi-scenario personnel assessment; Effect of E-customization Capability on Financial Performance of Commercial Banks in Kenya; Interaction of East Bay Area Voters with California Death Penalty Ballot Initiatives: a Study; Command Decision: Ethical Leadership In The Information Environment.?",
+    "correct_answer": "Big Data Analytics",
+    "options": "[\"Big Data Analytics\", \"Computer-Assisted Education\", \"Bioinformatics\", \"Cyber Security\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a Lean Software Development project, the team notices many partially written code files that are later abandoned. According to Lean principles, this activity is considered:",
+    "correct_answer": "Eliminating waste",
+    "options": "[\"Amplifying learning\", \"Defer commitment\", \"Eliminating waste\", \"Building integrity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When documenting a DFD, the analyst includes the date, system name, and preparer's name at the top. This follows which recommended practice?",
+    "correct_answer": "Label the top of each DFD with pertinent information",
+    "options": "[\"Correlate symbols to other DFDs using reference numbers\", \"Label the top of each DFD with pertinent information\", \"Connect symbols with flow lines using pipes\", \"Desk check all DFDs for logical connections\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it involves matches Plan a Solution?",
+    "correct_answer": "Modeling and Software Design (Designing).",
+    "options": "[\"Modeling and Software Design (Designing).\", \"Code generation (Programming).\", \"Testing and Quality Assurance (Deliberate).\", \"Communication and Analysis (Research).\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which contribution matches The 1950s?",
+    "correct_answer": "Marked the beginning of the modern project management era, where core engineering fields came together to work as one. Project management became recognized as a distinct discipline arising from the management discipline with engineering mode.",
+    "options": "[\"Marked the beginning of the modern project management era, where core engineering fields came together to work as one. Project management became recognized as a distinct discipline arising from the management discipline with engineering mode.\", \"Two mathematical project-scheduling models developed in that era: the Critical Path Method (CPM) and the Program/Project Evaluation and Review Technique (PERT).\", \"Called the father of planning and control techniques, famous for his use of the Gantt Chart.\", \"Creator of the five management functions that form the foundation of the body of knowledge associated with project and program management.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Scrum master wants to incorporate DSDM timeboxing into a Scrum sprint. Which statement best describes the alignment?",
+    "correct_answer": "Both use fixed‑length intervals to deliver increments",
+    "options": "[\"Timeboxing in DSDM is longer than a Scrum sprint\", \"Both use fixed\\u2011length intervals to deliver increments\", \"DSDM timeboxing requires variable scope\", \"Scrum does not allow timeboxing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the Purchase Order system DFD, the \"Price Quotation\" data flow originates from which process?",
+    "correct_answer": "\"Estimating\"",
+    "options": "[\"\\\"Preparing Contact\\\"\", \"\\\"Estimating\\\"\", \"\\\"Scheduling\\\"\", \"\\\"Production\\\"\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches KISS (Keep It Simple, STUPID!)?",
+    "correct_answer": "All design should be as simple as possible, but no simpler.",
+    "options": "[\"All design should be as simple as possible, but no simpler.\", \"It is essential for the success of the software project.\", \"Always specify, design and implement knowing someone else will have to understand what you do.\", \"Never design yourself in the corner.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which p matches: Including dynamics of how they collaborate and communicate.?",
+    "correct_answer": "People",
+    "options": "[\"People\", \"Power\", \"Plan\", \"Process\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Feature‑Driven Development, which phase directly follows “Domain object Modeling”?",
+    "correct_answer": "Development by feature",
+    "options": "[\"Development by feature\", \"Component/Class Ownership\", \"Inspections\", \"Regular Builds\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A team is creating a DFD for a mobile app that must run on iOS 14 or later. Which system requirement category does this specification belong to?",
+    "correct_answer": "Operating System (OS)",
+    "options": "[\"Minimum CPU speed\", \"Operating System (OS)\", \"Audio hardware\", \"Wireless connectivity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which activity matches: Involves data processing, classifying, and arranging, calculating data.?",
+    "correct_answer": "Process",
+    "options": "[\"Process\", \"Output\", \"Feedback\", \"Input\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which phase matches: One must know what are the planned terms to be executed. Ensures the project management plan's deliverables are executed accordingly, with proper allocation, co-ordination and management of human and other resources. Output: the project deliverables.?",
+    "correct_answer": "3. Execution",
+    "options": "[\"3. Execution\", \"4. Monitoring and Controlling\", \"5. Closing\", \"1. Initiation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A team using XP notices that test automation is lagging behind coding. Which XP practice should they strengthen?",
+    "correct_answer": "Continuous integration",
+    "options": "[\"Pair programming\", \"Continuous integration\", \"Refactoring\", \"On\\u2011site customer\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which of the following is NOT typically considered a flexible system requirement?",
+    "correct_answer": "Required operating system version",
+    "options": "[\"Minimum RAM\", \"Required operating system version\", \"Recommended GPU\", \"Minimum CPU speed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which definition matches Database?",
+    "correct_answer": "Is a collection of all relevant and related organized data in an integrated file.",
+    "options": "[\"Is a collection of all relevant and related organized data in an integrated file.\", \"An important component of IS that generates the most useful information for decision-making.\", \"Consists of analyzed facts that was processed from a data source and is an output of an IS.\", \"Consists of raw facts and is an important component of an IS. It has two sources: external and internal.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which what it means matches Quality Assurance?",
+    "correct_answer": "Conduct activities to ensure product quality.",
+    "options": "[\"Conduct activities to ensure product quality.\", \"Assess the work product to identify errors beforehand.\", \"Defines and collects process to deliver and meet the needs of the stakeholders.\", \"Manages the effects of changes in the software process.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During the Wrap Up phase of Crystal, the team should:",
+    "correct_answer": "Conduct post‑deployment reviews",
+    "options": "[\"Create the initial development plan\", \"Deploy into the user environment\", \"Conduct post\\u2011deployment reviews\", \"Update the release plan\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During requirements gathering, the analyst decides to use a closed-ended questionnaire. What is the primary advantage of this approach?",
+    "correct_answer": "It provides quantitative results that are easy to analyze",
+    "options": "[\"It captures detailed personal experiences\", \"It provides quantitative results that are easy to analyze\", \"It encourages respondents to elaborate in their own words\", \"It reduces the cost of printing questionnaires\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which type matches: Serves the management of an organization with sophisticated data analysis tools that support and assist all aspects of problem-specific decision-making. Used when the problem is complex and information is difficult to obtain and use.?",
+    "correct_answer": "Decision Support System (DSS)",
+    "options": "[\"Decision Support System (DSS)\", \"Executive Information System (EIS)\", \"Management Information System (MIS)\", \"Workflow System\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which what it means matches 3. Requirements Analysis?",
+    "correct_answer": "Determining the conditions that need to be met.",
+    "options": "[\"Determining the conditions that need to be met.\", \"Looking at the logical relationship among the objects.\", \"Making a final decision.\", \"Clearly defined objectives and requirements necessary to meet a project's requirements as defined by its stakeholders.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a DSDM project, the product owner classifies requirements as Must have, Should have, Could have, Won’t have. Which category is most likely to be cut if time runs out?",
+    "correct_answer": "Could have",
+    "options": "[\"Must have\", \"Should have\", \"Could have\", \"Won\\u2019t have\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An analyst observes the workflow in a manufacturing plant to understand data movement. Which fact‑finding technique is being employed?",
+    "correct_answer": "Observation",
+    "options": "[\"Interview\", \"Observation\", \"Research\", \"Record inspection\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 3: System Development Life Cycle (SDLC), which what happens matches 2. System Analysis?",
+    "correct_answer": "The business works on the source of the problem or the need for change. Possible solutions are submitted and analyzed to identify the best fit for the project's goals. Teams consider the functional requirements of the project.",
+    "options": "[\"The business works on the source of the problem or the need for change. Possible solutions are submitted and analyzed to identify the best fit for the project's goals. Teams consider the functional requirements of the project.\", \"Describes in detail the necessary specifications, features and operations that will satisfy the functional requirements of the proposed system. End users discuss and determine their specific business information needs.\", \"The real work begins: a programmer, network engineer and/or database developer are brought on to do the major work on the project.\", \"Systems integration and system testing of programs and procedures, normally carried out by a QA professional to determine if the design meets the initial goals.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which trend matches: The use of computers and software to assist education and/or training. Brings many benefits, such as personalized instruction for students with learning disabilities, letting them learn at their own pace. Still growing but promising, allowing active, independent, play-based learning.?",
+    "correct_answer": "Computer-assisted Education",
+    "options": "[\"Computer-assisted Education\", \"Bioinformatics\", \"Cyber Security\", \"Artificial Intelligence and Robotics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A software company wants to adopt Lean principles. Which of the following actions aligns with “Defer Commitment”?",
+    "correct_answer": "Delay UI design until user feedback is available",
+    "options": "[\"Decide on database technology at project start\", \"Delay UI design until user feedback is available\", \"Freeze all requirements early\", \"Assign all tasks before any iteration\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When performing a desk check of a DFD, the analyst discovers a process that has no incoming data flow. What does this indicate?",
+    "correct_answer": "The DFD is missing a data flow that should feed the process",
+    "options": "[\"The process is a data store, not a process\", \"The DFD is missing a data flow that should feed the process\", \"The process is optional and can be removed\", \"The process should be converted to an external entity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Engineering/Scientific Software?",
+    "correct_answer": "A broad array of \"number crunching\" programs.",
+    "options": "[\"A broad array of \\\"number crunching\\\" programs.\", \"Resides within a product or system, used to implement control features for the user and the system itself.\", \"Designed to provide specific capabilities for use by many customers.\", \"Network-centric applications that encompass browser-based apps and/or mobile apps.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which research area matches: Qualitative case studies of innovative pedagogical practices using ICT; What strategies are effective for formative assessment in an e-learning environment?; Web-based Assessment and Test Analyses (WATA) system: development and evaluation; Computer-Assisted Learning in Orthodontic Education: A Systematic Review and Meta-Analysis.?",
+    "correct_answer": "Computer-Assisted Education",
+    "options": "[\"Computer-Assisted Education\", \"Bioinformatics\", \"Cyber Security\", \"AI and Robotics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "While using XP, a team schedules a “mid‑iteration review”. What is the primary purpose of this meeting?",
+    "correct_answer": "To adjust the iteration scope based on feedback",
+    "options": "[\"To finalize the product release\", \"To adjust the iteration scope based on feedback\", \"To rewrite all user stories\", \"To conduct performance testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A software project follows Scrum sprints of two weeks. The team wants to include DFD updates in each sprint. Which Scrum ceremony is most appropriate for reviewing the DFD changes?",
+    "correct_answer": "Sprint Review",
+    "options": "[\"Sprint Planning\", \"Daily Stand\\u2011up\", \"Sprint Review\", \"Sprint Retrospective\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Cloud Computing?",
+    "correct_answer": "Encompasses an infrastructure or \"ecosystem\" that enables any user from anywhere or anytime to use a computing device to share or use computing resources on a broad scale.",
+    "options": "[\"Encompasses an infrastructure or \\\"ecosystem\\\" that enables any user from anywhere or anytime to use a computing device to share or use computing resources on a broad scale.\", \"A set of software-intensive systems that share a common, managed set of features satisfying the specific needs of a particular market segment.\", \"Sophisticated computing tools that not only provide stand-alone function to users, but can also integrate databases and corporate applications.\", \"Encompasses a user interface that takes advantage of the unique interaction mechanisms provided by the mobile platform.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which contribution matches CPM and PERT?",
+    "correct_answer": "Two mathematical project-scheduling models developed in that era: the Critical Path Method (CPM) and the Program/Project Evaluation and Review Technique (PERT).",
+    "options": "[\"Two mathematical project-scheduling models developed in that era: the Critical Path Method (CPM) and the Program/Project Evaluation and Review Technique (PERT).\", \"Called the father of planning and control techniques, famous for his use of the Gantt Chart.\", \"Creator of the five management functions that form the foundation of the body of knowledge associated with project and program management.\", \"Marked the beginning of the modern project management era, where core engineering fields came together to work as one. Project management became recognized as a distinct discipline arising from the management discipline with engineering mode.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Crystal methodology, which factor is considered most critical to project success?",
+    "correct_answer": "Team members’ communication skills",
+    "options": "[\"Strict adherence to tools\", \"Team members\\u2019 communication skills\", \"Number of documentation pages\", \"Length of the project charter\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In an Agile environment, which practice helps ensure that DFD symbols remain consistent across multiple team members?",
+    "correct_answer": "Create a shared style guide and template for DFD symbols",
+    "options": "[\"Allow each member to use their preferred notation\", \"Create a shared style guide and template for DFD symbols\", \"Update the DFD only at the end of the project\", \"Rotate the responsibility of drawing DFDs weekly\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which definition matches Action?",
+    "correct_answer": "A set of tasks that produce a major work product.",
+    "options": "[\"A set of tasks that produce a major work product.\", \"Focuses on small, but well defined objectives to produce a tangible outcome.\", \"A collection of activities, actions and tasks that are performed when some work product is to be created.\", \"Strives to achieve a broad objective.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which p matches: Lines of authority, decision-makers, organograms, policies for implementation and the like.?",
+    "correct_answer": "Power",
+    "options": "[\"Power\", \"Plan\", \"Process\", \"People\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A project manager using DSDM wants to ensure frequent delivery. Which practice directly supports this goal?",
+    "correct_answer": "Timeboxing each development slice",
+    "options": "[\"Conducting a single big release at the end\", \"Timeboxing each development slice\", \"Writing all requirements upfront\", \"Avoiding stakeholder meetings\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A system requires a minimum of 8 GB RAM but recommends 16 GB for optimal performance. Which statement best reflects this requirement?",
+    "correct_answer": "The software will run, but may be slower with only 8 GB RAM",
+    "options": "[\"The software will not install on a machine with 8\\u202fGB RAM\", \"The software will run, but may be slower with only 8\\u202fGB RAM\", \"The software will automatically upgrade the RAM to 16\\u202fGB\", \"The software will only function if 16\\u202fGB RAM is present\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches Modeling?",
+    "correct_answer": "A \"sketch\" of the project in order to understand the big picture. In other words, blueprints or software requirements design.",
+    "options": "[\"A \\\"sketch\\\" of the project in order to understand the big picture. In other words, blueprints or software requirements design.\", \"Building of the software project.\", \"Software is delivered to the customer who evaluates and provides feedback.\", \"Communicate and collaborate with the user to understand objectives.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which phase matches: Processes performed to observe project execution so potential problems can be identified in a timely manner and corrective action taken when necessary. Key benefit: performance is observed and measured regularly to identify variances from the plan.?",
+    "correct_answer": "4. Monitoring and Controlling",
+    "options": "[\"4. Monitoring and Controlling\", \"5. Closing\", \"1. Initiation\", \"2. Planning and Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An XP team is planning its iteration tasks. Which technique helps them estimate effort quickly?",
+    "correct_answer": "Planning poker",
+    "options": "[\"Function point analysis\", \"Planning poker\", \"Critical path method\", \"Monte Carlo simulation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DFD element is best used to represent a temporary cache that holds data for a short period during processing?",
+    "correct_answer": "Automated data store",
+    "options": "[\"Automated data store\", \"Manual data store\", \"External entity\", \"Data flow\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it involves matches Carry out the Plan?",
+    "correct_answer": "Code generation (Programming).",
+    "options": "[\"Code generation (Programming).\", \"Testing and Quality Assurance (Deliberate).\", \"Communication and Analysis (Research).\", \"Modeling and Software Design (Designing).\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which what it means matches Technical Review?",
+    "correct_answer": "Assess the work product to identify errors beforehand.",
+    "options": "[\"Assess the work product to identify errors beforehand.\", \"Defines and collects process to deliver and meet the needs of the stakeholders.\", \"Manages the effects of changes in the software process.\", \"Defines criteria to establish mechanisms for reusable components.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a Lean project, the team identifies that a report generation feature is rarely used by customers. According to Lean, what should they do?",
+    "correct_answer": "Consider removing it to eliminate waste",
+    "options": "[\"Prioritize its enhancement\", \"Keep it unchanged\", \"Consider removing it to eliminate waste\", \"Add more features to it\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A project manager asks the analyst to produce a Level 0 DFD that shows only the major processes of a payroll system. Which guideline does this request follow?",
+    "correct_answer": "Do not mix levels of detail on one chart",
+    "options": "[\"Do not mix levels of detail on one chart\", \"Connect symbols with flow lines using pipes\", \"Correlate symbols to other DFDs using reference numbers\", \"Label all symbols with descriptive names\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Software And Software Engineering, which what it means matches Maintain the Vision?",
+    "correct_answer": "It is essential for the success of the software project.",
+    "options": "[\"It is essential for the success of the software project.\", \"Always specify, design and implement knowing someone else will have to understand what you do.\", \"Never design yourself in the corner.\", \"Reduces the cost and increases value of both reusable components and the system where it is incorporated.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which what it means matches 4. Logical Design?",
+    "correct_answer": "Looking at the logical relationship among the objects.",
+    "options": "[\"Looking at the logical relationship among the objects.\", \"Making a final decision.\", \"Clearly defined objectives and requirements necessary to meet a project's requirements as defined by its stakeholders.\", \"The process of understanding problems and needs and arriving at solutions that meet them.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A software development group is transitioning from Waterfall to an Agile method and wants to keep the “daily stand‑up” practice. Which Agile methodology explicitly includes this ceremony?",
+    "correct_answer": "Scrum",
+    "options": "[\"DSDM\", \"Crystal\", \"Scrum\", \"FDD\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a requirements interview, a user mentions that the current system sometimes loses data after a power outage. Which DFD component should the analyst focus on to address this issue?",
+    "correct_answer": "Data store representing persistent storage",
+    "options": "[\"External entity representing the user\", \"Data store representing persistent storage\", \"Data flow showing user input\", \"Process that validates input\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which activity matches: The processed data becomes information.?",
+    "correct_answer": "Output",
+    "options": "[\"Output\", \"Feedback\", \"Input\", \"Process\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which trend matches: An application of big data, or the use of programming and software development to build enormous datasets of biological information, carrying enormous potential. Linking big pharmaceutical companies with software companies, it offers good job prospects for CS researchers interested in biology, medical technology, and pharmaceuticals.?",
+    "correct_answer": "Bioinformatics",
+    "options": "[\"Bioinformatics\", \"Cyber Security\", \"Artificial Intelligence and Robotics\", \"Big Data Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a DSDM feasibility study, which activity is performed first?",
+    "correct_answer": "Pre‑project assessment",
+    "options": "[\"Business study\", \"Functional model iteration\", \"Pre\\u2011project assessment\", \"Implementation planning\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the context of DFDs, what does placing a label next to a data flow line accomplish?",
+    "correct_answer": "It describes the transformation or content of the data",
+    "options": "[\"It indicates the direction of the flow\", \"It describes the transformation or content of the data\", \"It defines the size of the data being transferred\", \"It marks the flow as optional\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which definition matches Process?",
+    "correct_answer": "An important component of IS that generates the most useful information for decision-making.",
+    "options": "[\"An important component of IS that generates the most useful information for decision-making.\", \"Consists of analyzed facts that was processed from a data source and is an output of an IS.\", \"Consists of raw facts and is an important component of an IS. It has two sources: external and internal.\", \"Is a collection of all relevant and related organized data in an integrated file.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Analysis And Computer Science Research Trends, which research area matches: A Survey for Escherichia coli Virulence Factors in Asymptomatic Free-Ranging Parrots; Immunoreactivity of the 14F7 Mab Raised against N-Glycolyl GM3 Ganglioside in Epithelial Malignant Tumors from Digestive System; Investigating the effects of external fields polarization on the coupling of pure magnetic waves in the human body in very low frequencies.?",
+    "correct_answer": "Bioinformatics",
+    "options": "[\"Bioinformatics\", \"Cyber Security\", \"AI and Robotics\", \"Big Data Analytics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A team using Feature‑Driven Development wants to increase visibility of progress. Which practice best achieves this?",
+    "correct_answer": "Regular builds",
+    "options": "[\"Daily burndown charts\", \"Regular builds\", \"Pair programming\", \"Retrospective meetings\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A team is using a template to draw DFD symbols uniformly. Which of the following benefits does this provide?",
+    "correct_answer": "It improves readability and consistency for documentation",
+    "options": "[\"It eliminates the need for a desk check\", \"It ensures symbols are drawn freehand for flexibility\", \"It improves readability and consistency for documentation\", \"It allows mixing of Gane & Sarson and Yourdon notations\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 2: Systems And Information Systems, which type matches: Used by senior managers, so it must be easy to use without assistance. Can do trend analysis, exception reporting, and drill-down. Has online analysis tools accessing a broad range of internal and external data.?",
+    "correct_answer": "Executive Information System (EIS)",
+    "options": "[\"Executive Information System (EIS)\", \"Management Information System (MIS)\", \"Workflow System\", \"Enterprise Resource Planning (ERP)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Chapter 1: Project Management, which forefather / era matches: Called the father of planning and control techniques, famous for his use of the Gantt Chart.?",
+    "correct_answer": "Henry Gantt",
+    "options": "[\"Henry Gantt\", \"Henri Fayol\", \"The 1950s\", \"CPM and PERT\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "While applying XP, a developer suggests refactoring a module that works correctly but is hard to understand. Which XP principle justifies this suggestion?",
+    "correct_answer": "Simple design",
+    "options": "[\"Simple design\", \"Continuous integration\", \"Customer involvement\", \"Small releases\"]",
+    "times_missed": 0
+   }
+  ]
+ },
+ {
+  "name": "DevNet_M1-M4_Midterm_Verified",
+  "modules_included": "M1, M2, M3, M4",
+  "subject": "Network and Communications 2",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "In the virtual lab, what is the guest?",
+    "correct_answer": "The virtual machine",
+    "options": "[\"The virtual machine\", \"The physical computer\", \"The router\", \"The browser\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DevNet resource offers guided tutorials and walk-throughs?",
+    "correct_answer": "Learning Labs",
+    "options": "[\"Learning Labs\", \"Sandboxes\", \"Code Exchange\", \"Developer Support\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your team is developing a small internal tool with a fixed deadline of 4 weeks and only two developers. Which SDLC methodology is most appropriate for this project?",
+    "correct_answer": "Lean",
+    "options": "[\"Waterfall\", \"Agile Scrum\", \"Lean\", \"Spiral\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your script needs to fetch the current temperature from a public weather REST API over HTTPS. Which HTTP method should you use for this request?",
+    "correct_answer": "GET",
+    "options": "[\"POST\", \"GET\", \"PUT\", \"DELETE\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the virtual lab, what is the host?",
+    "correct_answer": "The physical computer",
+    "options": "[\"The physical computer\", \"The virtual machine\", \"The Linux shell\", \"The Python interpreter\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DevNet resource gives a hands-on testing environment?",
+    "correct_answer": "Sandboxes",
+    "options": "[\"Sandboxes\", \"Learning Labs\", \"Developer Documentation\", \"Ecosystem Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During sprint planning, the product owner presents the user story: \"As a network engineer, I would like to generate a daily report of device uptime, so that I can quickly identify outages.\" Which characteristic of a good user story does this example illustrate?",
+    "correct_answer": "It follows the INVEST model by being valuable to the user.",
+    "options": "[\"It includes acceptance criteria.\", \"It follows the INVEST model by being valuable to the user.\", \"It specifies the exact technical implementation.\", \"It is a large epic that will span multiple sprints.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your application uploads a video for processing, which can take several minutes. You decide to use an API that immediately returns a receipt and processes the video in the background. Which API design style is most appropriate?",
+    "correct_answer": "Asynchronous API",
+    "options": "[\"Synchronous API\", \"Asynchronous API\", \"RPC API\", \"SOAP API\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which operating system is used for the coding labs?",
+    "correct_answer": "Linux",
+    "options": "[\"Linux\", \"Windows only\", \"macOS only\", \"Android\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which exchange links to GitHub repositories?",
+    "correct_answer": "Code Exchange",
+    "options": "[\"Code Exchange\", \"Automation Exchange\", \"Ecosystem Exchange\", \"Learning Labs\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your Scrum team notices that a developer frequently switches between tasks, causing delays. Which of the seven wastes of Lean does this behavior represent?",
+    "correct_answer": "Task switching",
+    "options": "[\"Extra features\", \"Task switching\", \"Motion\", \"Waiting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When designing a REST API, you want to ensure it follows the stateless constraint. Which of the following best describes a stateless interaction?",
+    "correct_answer": "Each request contains all information needed to understand and process it",
+    "options": "[\"The server stores session data for each client between requests\", \"Each request contains all information needed to understand and process it\", \"The client must maintain a persistent TCP connection with the server\", \"Responses are cached indefinitely on the client side\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which language does the introductory programming review use?",
+    "correct_answer": "Python",
+    "options": "[\"Python\", \"Java\", \"Go\", \"C++\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which exchange presents automation use cases?",
+    "correct_answer": "Automation Exchange",
+    "options": "[\"Automation Exchange\", \"Code Exchange\", \"Ecosystem Exchange\", \"Developer Support\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During the Requirements and Analysis phase, the team discovers that the budget will not cover all requested features. According to the phase’s objectives, what should the team do next?",
+    "correct_answer": "Create a revised Software Requirement Specification (SRS) that prioritizes feasible features.",
+    "options": "[\"Proceed with development and cut corners later.\", \"Create a revised Software Requirement Specification (SRS) that prioritizes feasible features.\", \"Skip testing to save costs.\", \"Switch to a Waterfall model to enforce strict scope control.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "While calling a third‑party API you receive an HTTP 429 response. What is the recommended action for your client?",
+    "correct_answer": "Wait for the time indicated in the Retry‑After header before retrying",
+    "options": "[\"Immediately resend the request\", \"Ignore the response and continue\", \"Wait for the time indicated in the Retry\\u2011After header before retrying\", \"Switch to a different API endpoint\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab covers file-system navigation and permissions?",
+    "correct_answer": "Linux Review",
+    "options": "[\"Linux Review\", \"Python Programming Review\", \"Install Virtual Lab Environment\", \"DevNet Sandbox\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which exchange lists over 1,500 solutions?",
+    "correct_answer": "Ecosystem Exchange",
+    "options": "[\"Ecosystem Exchange\", \"Code Exchange\", \"Automation Exchange\", \"Learning Labs\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A developer commits code directly to the main branch without a pull request, causing a merge conflict that halts the build pipeline. Which best practice from the version control topic does this violate?",
+    "correct_answer": "Branching and merging via feature branches with pull‑request reviews.",
+    "options": "[\"Using descriptive commit messages.\", \"Branching and merging via feature branches with pull\\u2011request reviews.\", \"Tagging releases with semantic versioning.\", \"Committing after every 5 lines of code.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your service needs to notify an external system whenever a new user registers. Which mechanism is most suitable?",
+    "correct_answer": "You send a webhook POST to the external system’s URL when registration occurs",
+    "options": "[\"The external system polls your API every minute\", \"You send a webhook POST to the external system\\u2019s URL when registration occurs\", \"The external system reads a shared database table\", \"You embed the external system\\u2019s API key in the registration page\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab sets up the virtual environment?",
+    "correct_answer": "Install Virtual Lab Environment",
+    "options": "[\"Install Virtual Lab Environment\", \"Linux Review\", \"Python Programming Review\", \"Code Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DevNet resource describes APIs and platforms?",
+    "correct_answer": "Developer Documentation",
+    "options": "[\"Developer Documentation\", \"Sandboxes\", \"Code Exchange\", \"Automation Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the testing phase, your team decides to run functional, integration, and performance tests. Which type of testing specifically verifies that new code does not break existing functionality?",
+    "correct_answer": "Regression testing",
+    "options": "[\"Unit testing\", \"Regression testing\", \"Load testing\", \"Smoke testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement about SOAP is correct?",
+    "correct_answer": "SOAP messages are XML documents that contain an Envelope element",
+    "options": "[\"SOAP messages are always sent using the HTTP GET method\", \"SOAP is a JSON\\u2011based protocol\", \"SOAP messages are XML documents that contain an Envelope element\", \"SOAP does not support any form of security\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many parts are in the M1 Python Programming Review lab?",
+    "correct_answer": "7",
+    "options": "[\"7\", \"4\", \"5\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DevNet support route is a paid case?",
+    "correct_answer": "Case ticket",
+    "options": "[\"Case ticket\", \"Knowledge Base\", \"Community forum\", \"Chat\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your project manager asks the team to decide on the database schema before any user requirements are finalized. Which Lean principle does this decision contradict?",
+    "correct_answer": "Decide as late as possible",
+    "options": "[\"Eliminate waste\", \"Decide as late as possible\", \"Deliver as fast as possible\", \"Empower the team\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your API client must include credentials in each request to a protected REST endpoint. Which HTTP header is typically used for this purpose?",
+    "correct_answer": "Authorization",
+    "options": "[\"Content-Type\", \"User-Agent\", \"Authorization\", \"Cache-Control\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many parts are in the M1 Linux Review lab?",
+    "correct_answer": "5",
+    "options": "[\"5\", \"4\", \"7\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which tools are named as automation examples?",
+    "correct_answer": "Ansible and Puppet",
+    "options": "[\"Ansible and Puppet\", \"Excel and Word\", \"MATLAB and Simulink\", \"Docker and Kubernetes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a daily stand‑up, a team member reports that a critical bug was found in the code just released to production. According to the Agile Manifesto values, what should the team prioritize to address this situation?",
+    "correct_answer": "Responding to change over following a plan.",
+    "options": "[\"Comprehensive documentation of the bug.\", \"Individuals and interactions over processes and tools.\", \"Customer collaboration over contract negotiation.\", \"Responding to change over following a plan.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You need to update only the email address field of an existing user resource. Which HTTP method should you use?",
+    "correct_answer": "PATCH",
+    "options": "[\"PUT\", \"PATCH\", \"POST\", \"DELETE\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which course module covers APIs and their benefits?",
+    "correct_answer": "Understanding and Using APIs",
+    "options": "[\"Understanding and Using APIs\", \"Network Fundamentals\", \"Infrastructure and Automation\", \"Cisco Platforms and Development\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Sandbox card is marked always-on in the reviewer?",
+    "correct_answer": "Network Assurance Engine",
+    "options": "[\"Network Assurance Engine\", \"Firepower Management Center\", \"Meraki Enterprise\", \"Meraki Small Business\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your team is building a stock‑ticker dashboard that must update the displayed prices instantly whenever the price service receives new data. Which design pattern best fits this requirement?",
+    "correct_answer": "Observer",
+    "options": "[\"Factory Method\", \"Observer\", \"Singleton\", \"Decorator\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Module 3 you learned the design pattern “program to an interface, not an implementation.” How does this principle relate to designing RESTful resources?",
+    "correct_answer": "Resources are identified by URIs that represent abstract concepts, not internal implementations",
+    "options": "[\"Resources should be exposed as concrete classes with fixed fields\", \"Clients should depend on the specific database schema of the server\", \"Resources are identified by URIs that represent abstract concepts, not internal implementations\", \"Endpoints must return raw binary data only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which course module covers networking devices and protocols?",
+    "correct_answer": "Network Fundamentals",
+    "options": "[\"Network Fundamentals\", \"Understanding and Using APIs\", \"Software Development and Design\", \"Cisco Platforms and Development\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Sandbox card is reservation-only in the reviewer?",
+    "correct_answer": "Firepower Management Center",
+    "options": "[\"Firepower Management Center\", \"Network Assurance Engine\", \"Meraki Enterprise\", \"Meraki Small Business\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You are developing a web application with a complex UI. To allow designers to work on the layout while developers implement business logic, which architectural pattern should you apply?",
+    "correct_answer": "Model‑View‑Controller (MVC)",
+    "options": "[\"Model\\u2011View\\u2011Controller (MVC)\", \"Adapter\", \"Prototype\", \"Facade\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your REST API call returns HTTP 500 Internal Server Error. What is the most appropriate first step in troubleshooting?",
+    "correct_answer": "Check the server logs for error details",
+    "options": "[\"Assume the client request is wrong and change the HTTP method\", \"Check the server logs for error details\", \"Immediately increase the API rate limit\", \"Retry the request three times in rapid succession\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which course module emphasizes automated infrastructure management?",
+    "correct_answer": "Infrastructure and Automation",
+    "options": "[\"Infrastructure and Automation\", \"Network Fundamentals\", \"Understanding and Using APIs\", \"Software Development and Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which DevNet resource has a central product API documentation location?",
+    "correct_answer": "Developer Documentation",
+    "options": "[\"Developer Documentation\", \"Learning Labs\", \"Sandboxes\", \"Code Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your company uses a single central server for source code storage, and developers must lock files before editing to avoid conflicts. Which type of version control system are they using?",
+    "correct_answer": "Centralized Version Control System (CVCS)",
+    "options": "[\"Distributed Version Control System (DVCS)\", \"Local Version Control System (LVCS)\", \"Centralized Version Control System (CVCS)\", \"Hybrid Version Control System\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You are using Postman to create a new user via a POST request. The request body is JSON. Which header must you include to correctly describe the body format?",
+    "correct_answer": "Content-Type: application/json",
+    "options": "[\"Content-Type: application/xml\", \"Content-Type: text/plain\", \"Content-Type: application/json\", \"Content-Type: multipart/form-data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab reviews regular expressions?",
+    "correct_answer": "Linux Review",
+    "options": "[\"Linux Review\", \"Python Programming Review\", \"Install Virtual Lab Environment\", \"Explore DevNet Resources\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which technology links and categorizes repositories in Code Exchange?",
+    "correct_answer": "GitHub API",
+    "options": "[\"GitHub API\", \"MATLAB API\", \"Webex API\", \"Canvas API\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A developer is traveling with intermittent internet access and needs to commit changes locally, then push them later when back online. Which version control model supports this workflow without requiring a lock on the remote repository?",
+    "correct_answer": "Distributed Version Control System (DVCS)",
+    "options": "[\"Centralized Version Control System (CVCS)\", \"Distributed Version Control System (DVCS)\", \"Local Version Control System (LVCS)\", \"File\\u2011based versioning\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After sending a GET request for a device, the API returns a 404 status code. What is the most probable reason?",
+    "correct_answer": "The requested resource URL does not exist on the server.",
+    "options": "[\"The server is overloaded and cannot process the request.\", \"The requested resource URL does not exist on the server.\", \"The client is not authorized to view the resource.\", \"The request payload is malformed.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab reviews lists and dictionaries?",
+    "correct_answer": "Python Programming Review",
+    "options": "[\"Python Programming Review\", \"Linux Review\", \"Install Virtual Lab Environment\", \"Explore DevNet Resources\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which role matches Learning Labs?",
+    "correct_answer": "Self-paced tutorials, from basic coding to REST APIs with different technologies",
+    "options": "[\"Self-paced tutorials, from basic coding to REST APIs with different technologies\", \"Production-like environments for development and testing\", \"Sample code written by other developers\", \"Developer issue support through tickets, live chats, and forums\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You have just created a new folder for a project and want to start tracking it with Git. Which command should you run first?",
+    "correct_answer": "git init",
+    "options": "[\"git clone <repo>\", \"git init\", \"git add .\", \"git commit -m \\\"initial\\\"\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your client receives a 202 HTTP status after submitting a data processing job. What does this status indicate?",
+    "correct_answer": "The request has been accepted for processing but is not yet complete.",
+    "options": "[\"The request was successful and the resource was created.\", \"The request has been accepted for processing but is not yet complete.\", \"The request was malformed and cannot be processed.\", \"The server encountered an internal error while handling the request.\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab reviews file access methods?",
+    "correct_answer": "Python Programming Review",
+    "options": "[\"Python Programming Review\", \"Linux Review\", \"Install Virtual Lab Environment\", \"Explore DevNet Resources\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In DevNet Developer Support, which support option matches: Troubleshooting articles?",
+    "correct_answer": "Knowledge Base",
+    "options": "[\"Knowledge Base\", \"Community Forum\", \"Chat with DevNet\", \"Case-Based Ticket\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "While working on a new authentication feature, you create a branch called 'auth‑feature' from 'master'. After completing the work, you want to integrate it back into 'master' without losing the commit history. Which Git sequence is most appropriate?",
+    "correct_answer": "git merge auth‑feature while on master",
+    "options": "[\"git merge auth\\u2011feature while on master\", \"git rebase master onto auth\\u2011feature\", \"git checkout auth\\u2011feature; git pull origin master\", \"git reset --hard auth\\u2011feature\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An API supports pagination via a query parameter named \"page\". To retrieve the third page of results, which request URL is correct?",
+    "correct_answer": "GET /api/devices?page=3",
+    "options": "[\"GET /api/devices?page=3\", \"GET /api/devices?limit=3\", \"GET /api/devices/page=3\", \"GET /api/devices?offset=3\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab includes installing Webex Teams?",
+    "correct_answer": "Install Virtual Lab Environment",
+    "options": "[\"Install Virtual Lab Environment\", \"Linux Review\", \"Python Programming Review\", \"Explore DevNet Resources\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which role matches Sandboxes?",
+    "correct_answer": "Production-like environments for development and testing",
+    "options": "[\"Production-like environments for development and testing\", \"Sample code written by other developers\", \"Developer issue support through tickets, live chats, and forums\", \"Central location for product developer API documentation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your teammate has pushed a set of changes to a remote repository and opened a pull request on GitHub. What is the primary purpose of this pull request?",
+    "correct_answer": "Notify reviewers and allow discussion before merging",
+    "options": "[\"Automatically merge the changes without review\", \"Notify reviewers and allow discussion before merging\", \"Create a new branch on the remote repository\", \"Delete the source branch after merging\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You want the server to compress the response using gzip. Which request header should you add?",
+    "correct_answer": "Accept-Encoding: gzip",
+    "options": "[\"Accept-Encoding: gzip\", \"Content-Encoding: gzip\", \"Transfer-Encoding: gzip\", \"Cache-Control: gzip\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which course is suggested when the Linux Review is difficult?",
+    "correct_answer": "Linux Unhatched",
+    "options": "[\"Linux Unhatched\", \"Python Essentials\", \"Learning Labs\", \"Code Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In DevNet Developer Support, which support option matches: Community discussion?",
+    "correct_answer": "Community Forum",
+    "options": "[\"Community Forum\", \"Chat with DevNet\", \"Case-Based Ticket\", \"Knowledge Base\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You need to see exactly what lines were added, removed, or modified in 'config.yaml' between your current working directory and the last commit. Which Git command provides this information?",
+    "correct_answer": "git diff config.yaml",
+    "options": "[\"git status\", \"git log\", \"git diff config.yaml\", \"git show\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your application receives a 429 Too Many Requests response. Which response header tells you when you can retry the request?",
+    "correct_answer": "Retry-After",
+    "options": "[\"X-Rate-Limit-Remaining\", \"X-Rate-Limit-Reset\", \"Retry-After\", \"Cache-Control\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which course is suggested when the Python Review is difficult?",
+    "correct_answer": "Python Essentials",
+    "options": "[\"Python Essentials\", \"Linux Unhatched\", \"Network Fundamentals\", \"Developer Documentation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which role matches Code Exchange?",
+    "correct_answer": "Sample code written by other developers",
+    "options": "[\"Sample code written by other developers\", \"Developer issue support through tickets, live chats, and forums\", \"Central location for product developer API documentation\", \"Self-paced tutorials, from basic coding to REST APIs with different technologies\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You accidentally added a local configuration file to the staging area but want to keep the file in your working directory while removing it from the next commit. Which command should you use?",
+    "correct_answer": "git rm --cached <file>",
+    "options": "[\"git rm <file>\", \"git rm --cached <file>\", \"git reset <file>\", \"git reset --hard\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A service uses the token bucket algorithm with a bucket capacity of 10 tokens and refills 1 token per second. If the client currently has 5 tokens and makes 3 requests in quick succession, how many tokens remain?",
+    "correct_answer": "2 tokens",
+    "options": "[\"2 tokens\", \"5 tokens\", \"8 tokens\", \"10 tokens\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What runs virtual computers inside a physical computer?",
+    "correct_answer": "Virtualization",
+    "options": "[\"Virtualization\", \"Packet routing\", \"Code Exchange\", \"Compilation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In DevNet Developer Support, which support option matches: Chat support?",
+    "correct_answer": "Chat with DevNet",
+    "options": "[\"Chat with DevNet\", \"Case-Based Ticket\", \"Knowledge Base\", \"Community Forum\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After manually deleting a source file from the filesystem, you need to record its removal in the repository. Which two-step sequence of commands accomplishes this?",
+    "correct_answer": "rm <file> then git add <file>",
+    "options": "[\"git rm <file> then git commit\", \"rm <file> then git add <file>\", \"rm <file> then git add -u\", \"git reset <file> then git commit\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which authentication mechanism transmits the credentials as a Base64‑encoded \"username:password\" string?",
+    "correct_answer": "Basic authentication",
+    "options": "[\"Bearer authentication\", \"API Key authentication\", \"Basic authentication\", \"OAuth 2.0\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many parts are in the Install Virtual Lab Environment lab?",
+    "correct_answer": "4",
+    "options": "[\"4\", \"5\", \"7\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which role matches Developer Support?",
+    "correct_answer": "Developer issue support through tickets, live chats, and forums",
+    "options": "[\"Developer issue support through tickets, live chats, and forums\", \"Central location for product developer API documentation\", \"Self-paced tutorials, from basic coding to REST APIs with different technologies\", \"Production-like environments for development and testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "All desired changes have been staged and you want to create a commit with the message \"Update login flow\". Which command will achieve this?",
+    "correct_answer": "git commit -m \"Update login flow\"",
+    "options": "[\"git commit -a -m \\\"Update login flow\\\"\", \"git commit -m \\\"Update login flow\\\"\", \"git push -m \\\"Update login flow\\\"\", \"git merge -m \\\"Update login flow\\\"\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A user logs into a system using a government‑issued ID and then attempts to access a restricted API endpoint. Which step is the system performing when it checks the user's ticket for entry?",
+    "correct_answer": "Authorization",
+    "options": "[\"Authentication\", \"Authorization\", \"Encryption\", \"Rate limiting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which M1 lab launches the DEVASC VM and reviews system administration?",
+    "correct_answer": "Linux Review",
+    "options": "[\"Linux Review\", \"Python Programming Review\", \"Install Virtual Lab Environment\", \"Explore DevNet Resources\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In DevNet Developer Support, which support option matches: One-on-one support; one-business-day response?",
+    "correct_answer": "Case-Based Ticket",
+    "options": "[\"Case-Based Ticket\", \"Knowledge Base\", \"Community Forum\", \"Chat with DevNet\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You try to push your local 'feature' branch to the remote repository, but the remote already contains new commits on that branch. Which command will fail unless you first integrate the remote changes?",
+    "correct_answer": "git push origin feature",
+    "options": "[\"git push origin feature\", \"git pull origin feature\", \"git merge feature\", \"git fetch origin\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You need to send a request body formatted in YAML to a REST API. Which Content‑Type header correctly identifies the payload format?",
+    "correct_answer": "Content-Type: application/x-yaml",
+    "options": "[\"Content-Type: application/json\", \"Content-Type: text/yaml\", \"Content-Type: application/x-yaml\", \"Content-Type: application/yaml\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Course Overview, which course module matches: APIs, their benefits, and troubleshooting?",
+    "correct_answer": "Understanding and Using APIs",
+    "options": "[\"Understanding and Using APIs\", \"Software Development and Design\", \"Network Fundamentals\", \"Infrastructure and Automation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which role matches Developer Documentation?",
+    "correct_answer": "Central location for product developer API documentation",
+    "options": "[\"Central location for product developer API documentation\", \"Self-paced tutorials, from basic coding to REST APIs with different technologies\", \"Production-like environments for development and testing\", \"Sample code written by other developers\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A teammate has merged changes into the remote 'master' branch. You are on the local 'master' branch and need to incorporate those updates. Which command should you run?",
+    "correct_answer": "git pull origin master",
+    "options": "[\"git push origin master\", \"git pull origin master\", \"git fetch origin master\", \"git merge origin/master\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your application must receive Cisco DNA Center webhook notifications about device alerts. Which of the following is NOT a required step to successfully consume the webhook?",
+    "correct_answer": "Implement OAuth2 token refresh for the webhook endpoint",
+    "options": "[\"Register a URI with the webhook provider\", \"Ensure the application is continuously running to accept HTTP POST requests\", \"Implement OAuth2 token refresh for the webhook endpoint\", \"Handle incoming POST notifications appropriately\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Course Overview, which course module matches: Main software development concepts and tools for quality code?",
+    "correct_answer": "Software Development and Design",
+    "options": "[\"Software Development and Design\", \"Network Fundamentals\", \"Infrastructure and Automation\", \"Cisco Platforms and Development\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which feature matches: Self-paced tutorials, from basic coding to REST APIs with different technologies?",
+    "correct_answer": "Learning Labs",
+    "options": "[\"Learning Labs\", \"Sandboxes\", \"Code Exchange\", \"Developer Support\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You want to create a new branch called 'ui-improvement' based on the current 'develop' branch and switch to it immediately. Which command correctly does this?",
+    "correct_answer": "git checkout -b ui-improvement develop",
+    "options": "[\"git branch ui-improvement develop\", \"git checkout -b ui-improvement develop\", \"git checkout develop -b ui-improvement\", \"git switch -c ui-improvement develop\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During testing, no POST requests reach your webhook listener. Which client‑side mistake is most likely the cause?",
+    "correct_answer": "The webhook URL is missing the scheme (e.g., \"example.com/webhook\")",
+    "options": "[\"The webhook URL is missing the scheme (e.g., \\\"example.com/webhook\\\")\", \"The server\\u2019s SSL certificate has expired\", \"The API server is undergoing maintenance\", \"The webhook payload exceeds the size limit\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Course Overview, which course module matches: Networks, devices, protocols, and connectivity troubleshooting?",
+    "correct_answer": "Network Fundamentals",
+    "options": "[\"Network Fundamentals\", \"Infrastructure and Automation\", \"Cisco Platforms and Development\", \"Understanding and Using APIs\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which feature matches: Production-like environments for development and testing?",
+    "correct_answer": "Sandboxes",
+    "options": "[\"Sandboxes\", \"Code Exchange\", \"Developer Support\", \"Developer Documentation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After successfully merging 'ui-improvement' into 'develop', you decide to delete the now‑redundant local branch. Which command removes it?",
+    "correct_answer": "git branch -d ui-improvement",
+    "options": "[\"git branch -d ui-improvement\", \"git branch -D ui-improvement\", \"git delete branch ui-improvement\", \"git rm -b ui-improvement\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After adding a new webhook subscription, your API call returns HTTP 401. What does this status code indicate?",
+    "correct_answer": "The client is not authorized to access the resource",
+    "options": "[\"The request payload is malformed\", \"The client is not authorized to access the resource\", \"The server could not understand the request method\", \"The requested resource was not found\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Course Overview, which course module matches: Managing infrastructure with automation instead of manual setup?",
+    "correct_answer": "Infrastructure and Automation",
+    "options": "[\"Infrastructure and Automation\", \"Cisco Platforms and Development\", \"Understanding and Using APIs\", \"Software Development and Design\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which feature matches: Sample code written by other developers?",
+    "correct_answer": "Code Exchange",
+    "options": "[\"Code Exchange\", \"Developer Support\", \"Developer Documentation\", \"Learning Labs\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Two branches, 'featureA' and 'featureB', both modify line 42 of the same file in different ways. When you attempt to merge 'featureB' into 'featureA', what will Git report?",
+    "correct_answer": "A merge conflict will occur",
+    "options": "[\"A fast\\u2011forward merge will be performed automatically\", \"A merge conflict will occur\", \"Git will silently choose the version from featureA\", \"Git will abort the merge without any message\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your webhook endpoint receives HTTP 415 when sending a JSON payload. Which of the following is the most probable reason?",
+    "correct_answer": "The Content‑Type header is set to \"application/xml\" instead of \"application/json\"",
+    "options": "[\"The Content\\u2011Type header is set to \\\"application/xml\\\" instead of \\\"application/json\\\"\", \"The request URL contains a typo\", \"The server requires basic authentication\", \"The client exceeded the rate limit\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Course Overview, which course module matches: Data centers and networking, including data models and security?",
+    "correct_answer": "Cisco Platforms and Development",
+    "options": "[\"Cisco Platforms and Development\", \"Understanding and Using APIs\", \"Software Development and Design\", \"Network Fundamentals\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which feature matches: Developer issue support through tickets, live chats, and forums?",
+    "correct_answer": "Developer Support",
+    "options": "[\"Developer Support\", \"Developer Documentation\", \"Learning Labs\", \"Sandboxes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After completing a new feature, you submit the changes to the repository and want a review that focuses only on the modified lines. Which type of code review is most appropriate for this scenario?",
+    "correct_answer": "Change-based code review",
+    "options": "[\"Formal code review\", \"Change-based code review\", \"Over-the-shoulder code review\", \"Email pass-around\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When a script makes a request to a webhook URL and you see a long silence followed by a traceback, which side of the problem does this most likely indicate?",
+    "correct_answer": "Server‑side connectivity or availability issue",
+    "options": "[\"Client\\u2011side configuration error\", \"Server\\u2011side connectivity or availability issue\", \"Network firewall blocking the request\", \"Incorrect HTTP method used\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In What Is DevNet?, which feature matches: Central location for product developer API documentation?",
+    "correct_answer": "Developer Documentation",
+    "options": "[\"Developer Documentation\", \"Learning Labs\", \"Sandboxes\", \"Code Exchange\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You are using pytest and want the test runner to automatically discover your test files. Which of the following file names will NOT be auto‑discovered by pytest?",
+    "correct_answer": "mycode_testcase.py",
+    "options": "[\"test_mycode.py\", \"mycode_test.py\", \"mytestcode.py\", \"mycode_testcase.py\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You need to test how your system reacts when two users try to update the same resource via a webhook. Which HTTP status code should you simulate to represent this conflict?",
+    "correct_answer": "409 Conflict",
+    "options": "[\"409 Conflict\", \"403 Forbidden\", \"500 Internal Server Error\", \"200 OK\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a Test‑Driven Development (TDD) workflow, you have just written a failing unit test. What is the next step you should take?",
+    "correct_answer": "Write application code to make the test pass",
+    "options": "[\"Refactor the existing code\", \"Write application code to make the test pass\", \"Run all tests again to confirm the failure\", \"Deploy the code to production\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your webhook listener runs on a local machine behind NAT, and external services cannot reach it directly. Which free tool can expose your local endpoint to the internet for testing?",
+    "correct_answer": "ngrok",
+    "options": "[\"ngrok\", \"Wireshark\", \"Postman\", \"cURL\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your project includes both unit and integration tests written in Python. Which tool mentioned in the module can you use to execute the integration tests?",
+    "correct_answer": "PyTest",
+    "options": "[\"PyTest\", \"unittest\", \"Git\", \"Jenkins\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When designing the component that processes incoming webhook events, which software design pattern best embodies the principle \"program to an interface, not an implementation\" for handling different event types?",
+    "correct_answer": "Strategy pattern",
+    "options": "[\"Strategy pattern\", \"Singleton pattern\", \"Factory pattern\", \"Decorator pattern\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "While reviewing a REST API response, you need to add explanatory notes directly in the payload file. Which data format, as described in the module, explicitly supports comments?",
+    "correct_answer": "XML",
+    "options": "[\"XML\", \"JSON\", \"YAML\", \"None of the above\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your application sends rapid acknowledgments to a webhook provider and receives HTTP 429 responses. What does this status code mean?",
+    "correct_answer": "Too Many Requests – rate limit exceeded",
+    "options": "[\"Too Many Requests \\u2013 rate limit exceeded\", \"Bad Request \\u2013 malformed payload\", \"Gateway Timeout \\u2013 upstream server did not respond\", \"Forbidden \\u2013 insufficient permissions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You open a YAML configuration file and see three dashes (---) on the first line. What does this line signify?",
+    "correct_answer": "The beginning of a YAML document",
+    "options": "[\"The start of a comment\", \"The beginning of a YAML document\", \"The end of the file\", \"A declaration of a list\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A webhook POST is routed through a reverse proxy and the client receives HTTP 502. Which scenario most likely caused this response?",
+    "correct_answer": "The upstream service behind the proxy returned an invalid response",
+    "options": "[\"The upstream service behind the proxy returned an invalid response\", \"The client failed to provide valid authentication credentials\", \"The request payload was larger than the proxy's limit\", \"The webhook URL was incorrectly spelled\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "When parsing a JSON response that contains nested objects, which statement about JSON is true according to the module?",
+    "correct_answer": "JSON basic data types include numbers, strings, Booleans, and nulls",
+    "options": "[\"JSON allows comments within the file\", \"Whitespace is significant in JSON\", \"JSON basic data types include numbers, strings, Booleans, and nulls\", \"Keys must be enclosed in single quotes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You run a Python script that calls the MapQuest Directions API and receive an HTTP 401 Unauthorized response. What is the most likely cause?",
+    "correct_answer": "Your API key is invalid or missing",
+    "options": "[\"The API endpoint URL is misspelled\", \"Your network connection is down\", \"Your API key is invalid or missing\", \"The request payload is too large\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During a code review, a teammate points out inconsistent indentation in a Python script. Which code‑review goal does this issue primarily violate?",
+    "correct_answer": "Using correct formatting",
+    "options": "[\"Ensuring the code is free of bugs\", \"Using correct formatting\", \"Providing proper comments and documentation\", \"Making the code easy to understand\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During testing you start getting HTTP 429 Too Many Requests from the MapQuest API. What is the best immediate action?",
+    "correct_answer": "Add exponential back‑off and retry logic",
+    "options": "[\"Increase the request rate to finish faster\", \"Add exponential back\\u2011off and retry logic\", \"Switch the request method from GET to POST\", \"Ignore the error and continue sending requests\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You are editing a YAML configuration file and need to add comments. In which location are comments NOT allowed?",
+    "correct_answer": "Inside a long string literal",
+    "options": "[\"At the beginning of a line before any content\", \"After a key-value pair on the same line\", \"Inside a long string literal\", \"On a line by itself preceding a section\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After upgrading the application you notice the JSON response no longer contains the \"distance\" field. Which debugging step should you take first?",
+    "correct_answer": "Check the MapQuest API documentation for version changes",
+    "options": "[\"Restart the DEVASC VM\", \"Clear the local cache of API responses\", \"Check the MapQuest API documentation for version changes\", \"Assume the field is optional and ignore it\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "To force the value 123 to be interpreted as a string rather than a number in a YAML file, which tag should you use?",
+    "correct_answer": "!!str",
+    "options": "[\"!!str\", \"!!int\", \"!!float\", \"!!bool\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You store the MapQuest API key in a YAML configuration file. Which line correctly adds a comment without breaking the file?",
+    "correct_answer": "# api_key: abc123",
+    "options": "[\"# api_key: abc123\", \"// api_key: abc123\", \"/* api_key: abc123 */\", \"#api_key: abc123\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A Python script reads a JSON response from a web API using a file object. Which function from the json module correctly parses the file into a Python dictionary?",
+    "correct_answer": "json.load",
+    "options": "[\"json.load\", \"json.loads\", \"json.dump\", \"json.dumps\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "To add support for bicycle and walking routes in the MapQuest Directions app, which request parameter should you modify?",
+    "correct_answer": "routeType",
+    "options": "[\"routeType\", \"transportMode\", \"mode\", \"travelMode\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You need to write a Python dictionary to a YAML file for application configuration. Which library and function are most appropriate?",
+    "correct_answer": "yaml.dump",
+    "options": "[\"yaml.dump\", \"yaml.load\", \"json.dump\", \"xml.etree.ElementTree\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your integration intermittently receives HTTP 500 Internal Server Error responses. Which systematic troubleshooting step is most appropriate?",
+    "correct_answer": "Enable detailed logging of the request and response",
+    "options": "[\"Check the MapQuest server status page\", \"Add a try/except block with a simple retry\", \"Enable detailed logging of the request and response\", \"Contact MapQuest support immediately\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "During which SDLC phase would you primarily perform unit testing and apply test‑driven development practices?",
+    "correct_answer": "Testing",
+    "options": "[\"Design\", \"Testing\", \"Deployment\", \"Maintenance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "You want to unit‑test the function that assembles the MapQuest request URL. Which design pattern helps you isolate URL construction for testing?",
+    "correct_answer": "Builder",
+    "options": "[\"Singleton\", \"Factory\", \"Builder\", \"Observer\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your team pushes code to a repository hosted on GitHub. What type of repository is the GitHub repository?",
+    "correct_answer": "Remote",
+    "options": "[\"Local\", \"Remote\", \"Forked\", \"Staging\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Your team follows Agile methodology for this API integration project. Which Agile artifact best captures the specific API endpoints to be delivered each sprint?",
+    "correct_answer": "User story",
+    "options": "[\"User story\", \"Gantt chart\", \"Use case diagram\", \"Test case matrix\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In a code review aimed at improving clean code, which practice most directly enhances readability?",
+    "correct_answer": "Using descriptive variable names",
+    "options": "[\"Writing concise functions\", \"Using descriptive variable names\", \"Adding inline comments for every line\", \"Ensuring the code is hard to understand\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After moving the application to production, API calls fail with SSL verification errors. What quick fix can you apply in Python's requests library while planning a secure solution?",
+    "correct_answer": "Set verify=False in the request call",
+    "options": "[\"Set verify=False in the request call\", \"Switch the request URL from https to http\", \"Disable the firewall on the server\", \"Increase the request timeout value\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "To extract specific elements from an XML document in Python, which standard library module should you import?",
+    "correct_answer": "xml.etree.ElementTree",
+    "options": "[\"xml.etree.ElementTree\", \"csv\", \"yaml\", \"json\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Given a JSON response stored in the variable resp, which Python expression correctly extracts the total travel time returned by MapQuest?",
+    "correct_answer": "resp['route']['time']",
+    "options": "[\"resp['route']['time']\", \"resp.time['route']\", \"resp['time']['route']\", \"resp['route']['duration']\"]",
+    "times_missed": 0
+   }
+  ]
+ },
+ {
+  "name": "ModSim_M1-M3_Midterm_Verified",
+  "modules_included": "M1, M2, M3",
+  "subject": "Modeling and Simulation",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "What is a model?",
+    "correct_answer": "A representation of a system",
+    "options": "[\"A representation of a system\", \"The actual system\", \"An observation only\", \"A random number\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a cumulative distribution function F(x) give?",
+    "correct_answer": "P(X ≤ x)",
+    "options": "[\"P(X ≤ x)\", \"P(X = x) only\", \"The sample mean\", \"The variance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What do continuous-system state equations determine?",
+    "correct_answer": "State derivatives",
+    "options": "[\"State derivatives\", \"Chart colors\", \"Random seeds\", \"Queue discipline\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does simulation do?",
+    "correct_answer": "Operates or imitates a system through a model",
+    "options": "[\"Operates or imitates a system through a model\", \"Only draws a system\", \"Eliminates model validation\", \"Replaces all analysis\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the total area under a continuous probability density?",
+    "correct_answer": "1",
+    "options": "[\"1\", \"0\", \"0.5\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What do output equations calculate?",
+    "correct_answer": "Requested measurements",
+    "options": "[\"Requested measurements\", \"State derivatives only\", \"Random seeds\", \"Simulation clock jumps\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which system type changes state at distinct instants?",
+    "correct_answer": "Discrete",
+    "options": "[\"Discrete\", \"Continuous\", \"Static\", \"Closed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which distribution is specified by lower bound, upper bound, and mode?",
+    "correct_answer": "Triangular",
+    "options": "[\"Triangular\", \"Uniform\", \"Exponential\", \"Normal\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB operator multiplies arrays element by element?",
+    "correct_answer": ".*",
+    "options": "[\".*\", \"*\", \".^\", \"./\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which system type changes state smoothly over time?",
+    "correct_answer": "Continuous",
+    "options": "[\"Continuous\", \"Discrete\", \"Static\", \"Notional\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which distribution models interarrival time using its mean?",
+    "correct_answer": "Exponential",
+    "options": "[\"Exponential\", \"Normal\", \"Uniform\", \"Triangular\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB operator raises array elements to a power?",
+    "correct_answer": ".^",
+    "options": "[\".^\", \"^\", \".*\", \"./\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is an entity's property called?",
+    "correct_answer": "Attribute",
+    "options": "[\"Attribute\", \"Activity\", \"Boundary\", \"Event\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which queue discipline serves arrivals in order?",
+    "correct_answer": "FIFO",
+    "options": "[\"FIFO\", \"LIFO\", \"Random\", \"Priority only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the first MATLAB array index?",
+    "correct_answer": "1",
+    "options": "[\"1\", \"0\", \"-1\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the collection of relevant values at one time?",
+    "correct_answer": "State",
+    "options": "[\"State\", \"Scale\", \"Resolution\", \"Fidelity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which queue discipline serves the newest arrival first?",
+    "correct_answer": "LIFO",
+    "options": "[\"LIFO\", \"FIFO\", \"Round robin\", \"Shortest job first\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does MATLAB's mod(x,2)==0 identify for an integer x?",
+    "correct_answer": "Even number",
+    "options": "[\"Even number\", \"Odd number\", \"Negative number\", \"Prime number\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which activity originates outside the system boundary?",
+    "correct_answer": "Exogenous",
+    "options": "[\"Exogenous\", \"Endogenous\", \"Deterministic\", \"Continuous\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For one customer, how is service beginning time computed?",
+    "correct_answer": "max(arrival time, previous end time)",
+    "options": "[\"max(arrival time, previous end time)\", \"min(arrival time, previous end time)\", \"arrival time plus service time\", \"previous end time minus arrival time\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does MATLAB's percent sign start?",
+    "correct_answer": "A comment",
+    "options": "[\"A comment\", \"A modulo expression\", \"A string\", \"A loop\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which activity has fully input-determined output?",
+    "correct_answer": "Deterministic",
+    "options": "[\"Deterministic\", \"Stochastic\", \"Exogenous\", \"Notional\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How is a customer's waiting time computed?",
+    "correct_answer": "Service beginning time minus arrival time",
+    "options": "[\"Service beginning time minus arrival time\", \"End time minus beginning time\", \"Arrival time plus service time\", \"Idle time plus end time\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB command opens a new plot window?",
+    "correct_answer": "figure",
+    "options": "[\"figure\", \"subplot\", \"legend\", \"grid on\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which model check compares behavior with its intended real-world purpose?",
+    "correct_answer": "Validation",
+    "options": "[\"Validation\", \"Verification\", \"Compilation\", \"Visualization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a next-event simulation clock advance to?",
+    "correct_answer": "The earliest scheduled event",
+    "options": "[\"The earliest scheduled event\", \"The next fixed second\", \"The final customer\", \"The largest random value\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB command creates a grid of axes in one figure?",
+    "correct_answer": "subplot",
+    "options": "[\"subplot\", \"figure\", \"axis equal\", \"xlabel\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which simulation type jumps between state-changing events?",
+    "correct_answer": "Discrete-event simulation",
+    "options": "[\"Discrete-event simulation\", \"Continuous simulation\", \"Static modeling\", \"Analytical solution\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the total waiting time in the six-customer example?",
+    "correct_answer": "4 minutes",
+    "options": "[\"4 minutes\", \"3 minutes\", \"7 minutes\", \"19 minutes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does plot(x,y,'r*') display?",
+    "correct_answer": "Red star markers",
+    "options": "[\"Red star markers\", \"A red solid line only\", \"Blue stars\", \"A bar chart\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does model fidelity describe?",
+    "correct_answer": "Realism",
+    "options": "[\"Realism\", \"Scenario size\", \"Level of detail\", \"Execution speed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the total time in system in the six-customer example?",
+    "correct_answer": "19 minutes",
+    "options": "[\"19 minutes\", \"4 minutes\", \"3 minutes\", \"10 minutes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does input(...,'s') read?",
+    "correct_answer": "Text",
+    "options": "[\"Text\", \"A numeric matrix only\", \"A figure\", \"A file path only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Core Concepts, which system type matches: Physical exists (factory line); notional is a concept for something not yet existing.?",
+    "correct_answer": "Physical / notional",
+    "options": "[\"Physical / notional\", \"Discrete / continuous\", \"Open / closed\", \"Sampled-data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many events are in the full power set of k outcomes?",
+    "correct_answer": "2^k",
+    "options": "[\"2^k\", \"k\", \"k^2\", \"2k\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a MATLAB function use for its variables?",
+    "correct_answer": "Local scope",
+    "options": "[\"Local scope\", \"Only the base workspace\", \"Global scope by default\", \"No variables\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which attribute matches Supermarket?",
+    "correct_answer": "Shopping list",
+    "options": "[\"Shopping list\", \"Account number, balance, credit status\", \"Length, priority\", \"Origin, destination\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the probability of the whole sample space?",
+    "correct_answer": "1",
+    "options": "[\"1\", \"0\", \"0.5\", \"2\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which numerical method uses the current tangent slope for one step?",
+    "correct_answer": "Forward Euler",
+    "options": "[\"Forward Euler\", \"Midpoint RK2\", \"Next-event advance\", \"Monte Carlo sampling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which class / control matches: Default is double; single and signed/unsigned int8 through int64/uint64 exist. int8 range = -128 to 127; intmin('int8'), intmax('int8').?",
+    "correct_answer": "Numeric",
+    "options": "[\"Numeric\", \"Other classes\", \"Display\", \"Special values\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the inverse of f(x)=mx+b when m is nonzero?",
+    "correct_answer": "(y-b)/m",
+    "options": "[\"(y-b)/m\", \"my+b\", \"m/(y-b)\", \"y/(m+b)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which numerical method uses a slope evaluated halfway through the step?",
+    "correct_answer": "Midpoint RK2",
+    "options": "[\"Midpoint RK2\", \"Forward Euler\", \"Next-event advance\", \"Fixed-increment advance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: Reshapes a 3 x 4 matrix to 2 x 6, preserving columnwise element order.?",
+    "correct_answer": "reshape(mat,2,6)",
+    "options": "[\"reshape(mat,2,6)\", \"fliplr / flipud / rot90\", \"repmat(intmat,3,2)\", \"evec=[]\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which distribution is specified by a mean and standard deviation?",
+    "correct_answer": "Normal",
+    "options": "[\"Normal\", \"Uniform\", \"Triangular\", \"Exponential\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Lotka-Volterra variable denotes prey in the reviewer?",
+    "correct_answer": "x",
+    "options": "[\"x\", \"y\", \"b\", \"d\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Core Concepts, which system type matches: Discrete state changes at separate instants (factory); continuous state changes smoothly over time (aircraft).?",
+    "correct_answer": "Discrete / continuous",
+    "options": "[\"Discrete / continuous\", \"Open / closed\", \"Sampled-data\", \"Physical / notional\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which input model draws only previously observed values?",
+    "correct_answer": "Direct sample",
+    "options": "[\"Direct sample\", \"Theoretical distribution\", \"Differential equation\", \"Random seed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Lotka-Volterra variable denotes predators in the reviewer?",
+    "correct_answer": "y",
+    "options": "[\"y\", \"x\", \"b\", \"p\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which attribute matches Bank?",
+    "correct_answer": "Account number, balance, credit status",
+    "options": "[\"Account number, balance, credit status\", \"Length, priority\", \"Origin, destination\", \"Speed, distance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What orders scheduled events in a discrete-event simulation?",
+    "correct_answer": "Future event list",
+    "options": "[\"Future event list\", \"Output report\", \"Resource pool\", \"Input sample\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB command displays a value without its variable name?",
+    "correct_answer": "disp",
+    "options": "[\"disp\", \"fprintf\", \"fscanf\", \"input\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which class / control matches: char for character arrays; logical for true/false. Cast with class functions.?",
+    "correct_answer": "Other classes",
+    "options": "[\"Other classes\", \"Display\", \"Special values\", \"ASCII\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is resource utilization?",
+    "correct_answer": "Busy time divided by observed time",
+    "options": "[\"Busy time divided by observed time\", \"Idle time divided by busy time\", \"Waiting time divided by service time\", \"Arrivals divided by departures\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB command selects equal unit scales on the axes?",
+    "correct_answer": "axis equal",
+    "options": "[\"axis equal\", \"axis square\", \"hold on\", \"grid on\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: Reverse columns / reverse rows / rotate 90 degrees counterclockwise.?",
+    "correct_answer": "fliplr / flipud / rot90",
+    "options": "[\"fliplr / flipud / rot90\", \"repmat(intmat,3,2)\", \"evec=[]\", \"min / sum / max / prod\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a customer do by leaving a queue after joining it?",
+    "correct_answer": "Renege",
+    "options": "[\"Renege\", \"Balk\", \"Jockey\", \"Faff\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB command creates a square plotting box?",
+    "correct_answer": "axis square",
+    "options": "[\"axis square\", \"axis equal\", \"hold on\", \"grid on\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Core Concepts, which system type matches: Open has exogenous activities from outside the boundary; closed has none.?",
+    "correct_answer": "Open / closed",
+    "options": "[\"Open / closed\", \"Sampled-data\", \"Physical / notional\", \"Discrete / continuous\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a customer do by declining to join a queue?",
+    "correct_answer": "Balk",
+    "options": "[\"Balk\", \"Renege\", \"Jockey\", \"Faff\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a MATLAB script use for its variables?",
+    "correct_answer": "The workspace",
+    "options": "[\"The workspace\", \"Only local function scope\", \"Only global declarations\", \"No variables\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which attribute matches Communication?",
+    "correct_answer": "Length, priority",
+    "options": "[\"Length, priority\", \"Origin, destination\", \"Speed, distance\", \"Shopping list\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a customer do by switching queues?",
+    "correct_answer": "Jockey",
+    "options": "[\"Jockey\", \"Balk\", \"Renege\", \"Faff\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which MATLAB loop repeats while a condition remains true?",
+    "correct_answer": "while",
+    "options": "[\"while\", \"for\", \"switch\", \"if\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which class / control matches: format short (default) or long changes displayed digits; loose/compact changes spacing; 2e4 = 20000.?",
+    "correct_answer": "Display",
+    "options": "[\"Display\", \"Special values\", \"ASCII\", \"Numeric\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many baristas minimize total cost in the coffee-shop example?",
+    "correct_answer": "2",
+    "options": "[\"2\", \"1\", \"3\", \"4\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Reads an evaluated numeric expression; assign it to a variable.?",
+    "correct_answer": "input('Enter a number: ')",
+    "options": "[\"input('Enter a number: ')\", \"input('Enter a string: ','s')\", \"disp(x)\", \"fprintf('...%d...\\\\n',x)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: Tiles a matrix 3 times vertically and 2 times horizontally.?",
+    "correct_answer": "repmat(intmat,3,2)",
+    "options": "[\"repmat(intmat,3,2)\", \"evec=[]\", \"min / sum / max / prod\", \"cumsum / cumprod\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Sets, Functions, And Probability, which distribution matches: Minimum a, maximum b, a<b; values equally likely across a finite interval. Density 1/(b−a).?",
+    "correct_answer": "Uniform(a,b)",
+    "options": "[\"Uniform(a,b)\", \"Triangular(a,m,b)\", \"Exponential(m)\", \"Normal(m,σ)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Reads text literally. Empty Enter gives empty char input; leading spaces are retained.?",
+    "correct_answer": "input('Enter a string: ','s')",
+    "options": "[\"input('Enter a string: ','s')\", \"disp(x)\", \"fprintf('...%d...\\\\n',x)\", \"fscanf(...) / format\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Core Concepts, which system type matches: Underlying system is continuous, but observations are available only at discrete times.?",
+    "correct_answer": "Sampled-data",
+    "options": "[\"Sampled-data\", \"Physical / notional\", \"Discrete / continuous\", \"Open / closed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Sets, Functions, And Probability, which distribution matches: Minimum a, most likely m, maximum b, a<m<b; use when approximate bounds and mode are known.?",
+    "correct_answer": "Triangular(a,m,b)",
+    "options": "[\"Triangular(a,m,b)\", \"Exponential(m)\", \"Normal(m,σ)\", \"Uniform(a,b)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Displays a value without its variable name.?",
+    "correct_answer": "disp(x)",
+    "options": "[\"disp(x)\", \"fprintf('...%d...\\\\n',x)\", \"fscanf(...) / format\", \";\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which attribute matches Rapid rail?",
+    "correct_answer": "Origin, destination",
+    "options": "[\"Origin, destination\", \"Speed, distance\", \"Shopping list\", \"Account number, balance, credit status\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Sets, Functions, And Probability, which distribution matches: Mean interarrival time m>0; rate λ=1/m. Density λexp(−λx) for x≥0; P(X>x)=exp(−λx).?",
+    "correct_answer": "Exponential(m)",
+    "options": "[\"Exponential(m)\", \"Normal(m,σ)\", \"Uniform(a,b)\", \"Triangular(a,m,b)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Formatted text; %d integer, %f fixed decimal, %e scientific, %g compact, %s string; \\n newline and \\t tab.?",
+    "correct_answer": "fprintf('...%d...\\n',x)",
+    "options": "[\"fprintf('...%d...\\\\n',x)\", \"fscanf(...) / format\", \";\", \"input('Enter a number: ')\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which class / control matches: pi, i/j (imaginary unit), Inf, NaN. A user variable named i or j can overwrite the built-in meaning.?",
+    "correct_answer": "Special values",
+    "options": "[\"Special values\", \"ASCII\", \"Numeric\", \"Other classes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Sets, Functions, And Probability, which distribution matches: Mean m, standard deviation σ>0; variability around an average and sums of many influences.?",
+    "correct_answer": "Normal(m,σ)",
+    "options": "[\"Normal(m,σ)\", \"Uniform(a,b)\", \"Triangular(a,m,b)\", \"Exponential(m)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Formatted input / numeric display mode. format short, long, compact, loose control appearance.?",
+    "correct_answer": "fscanf(...) / format",
+    "options": "[\"fscanf(...) / format\", \";\", \"input('Enter a number: ')\", \"input('Enter a string: ','s')\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: Empty vector: length 0. evec=[evec 4] appends 4; v(2)=[] deletes vector element 2.?",
+    "correct_answer": "evec=[]",
+    "options": "[\"evec=[]\", \"min / sum / max / prod\", \"cumsum / cumprod\", \"reshape(mat,2,6)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Scripts, Functions, And Input/Output, which command / code matches: Suppresses automatic command-window output.?",
+    "correct_answer": ";",
+    "options": "[\";\", \"input('Enter a number: ')\", \"input('Enter a string: ','s')\", \"disp(x)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which attribute matches Traffic?",
+    "correct_answer": "Speed, distance",
+    "options": "[\"Speed, distance\", \"Shopping list\", \"Account number, balance, credit status\", \"Length, priority\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which class / control matches: double('a') = 97; char(97) = 'a'; char('abcd'+1) = 'bcde'.?",
+    "correct_answer": "ASCII",
+    "options": "[\"ASCII\", \"Numeric\", \"Other classes\", \"Display\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: Reduce a vector; for a matrix operate on each column by default. max(mat') finds row maxima in a row vector; max(mat,[],2) returns column of row maxima.?",
+    "correct_answer": "min / sum / max / prod",
+    "options": "[\"min / sum / max / prod\", \"cumsum / cumprod\", \"reshape(mat,2,6)\", \"fliplr / flipud / rot90\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which activity matches Supermarket?",
+    "correct_answer": "Checking out",
+    "options": "[\"Checking out\", \"Deposits, withdrawals\", \"Transmitting\", \"Traveling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In MATLAB Basics, which command matches: cumsum(1:5) = [1 3 6 10 15]; cumprod(1:5) = [1 2 6 24 120].?",
+    "correct_answer": "cumsum / cumprod",
+    "options": "[\"cumsum / cumprod\", \"reshape(mat,2,6)\", \"fliplr / flipud / rot90\", \"repmat(intmat,3,2)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which activity matches Bank?",
+    "correct_answer": "Deposits, withdrawals",
+    "options": "[\"Deposits, withdrawals\", \"Transmitting\", \"Traveling\", \"Driving\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which activity matches Communication?",
+    "correct_answer": "Transmitting",
+    "options": "[\"Transmitting\", \"Traveling\", \"Driving\", \"Checking out\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which activity matches Rapid rail?",
+    "correct_answer": "Traveling",
+    "options": "[\"Traveling\", \"Driving\", \"Checking out\", \"Deposits, withdrawals\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which activity matches Traffic?",
+    "correct_answer": "Driving",
+    "options": "[\"Driving\", \"Checking out\", \"Deposits, withdrawals\", \"Transmitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which system matches: Shopping list?",
+    "correct_answer": "Supermarket",
+    "options": "[\"Supermarket\", \"Bank\", \"Communication\", \"Rapid rail\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which system matches: Account number, balance, credit status?",
+    "correct_answer": "Bank",
+    "options": "[\"Bank\", \"Communication\", \"Rapid rail\", \"Traffic\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which system matches: Length, priority?",
+    "correct_answer": "Communication",
+    "options": "[\"Communication\", \"Rapid rail\", \"Traffic\", \"Supermarket\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In System Components And Boundary, which system matches: Origin, destination?",
+    "correct_answer": "Rapid rail",
+    "options": "[\"Rapid rail\", \"Traffic\", \"Supermarket\", \"Bank\"]",
+    "times_missed": 0
+   }
+  ]
+ }
+]
