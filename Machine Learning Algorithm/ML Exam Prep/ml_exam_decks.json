@@ -1,0 +1,1250 @@
+[
+ {
+  "name": "ML_Summative1_Verified",
+  "subject": "Machine Learning Algorithm",
+  "modules_included": "Module 1 and Module 2 up to Linear Regression",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Who defined machine learning as the ability to learn without being explicitly programmed?",
+    "correct_answer": "Arthur Samuel, 1959",
+    "options": "[\"Tom Mitchell, 1997\", \"Alan Turing, 1950\", \"Andrew Ng, 2011\", \"Arthur Samuel, 1959\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Machine learning sits at the intersection of which fields?",
+    "correct_answer": "Statistics, artificial intelligence, and computer science",
+    "options": "[\"Networking, security, and databases\", \"Physics, chemistry, and biology\", \"Statistics, artificial intelligence, and computer science\", \"Economics, law, and statistics\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the E, T, P definition, performance at task T improves with what?",
+    "correct_answer": "Experience E",
+    "options": "[\"Experience E\", \"A larger task T\", \"Performance measure P\", \"A faster computer\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A rule-based algorithm runs on conditions. What does a machine learning algorithm run on?",
+    "correct_answer": "Data (or experience)",
+    "options": "[\"Data (or experience)\", \"Conditions\", \"Hand-written rules\", \"Compiler flags\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which are the three types of machine learning in the slides?",
+    "correct_answer": "Supervised, unsupervised, and reinforcement",
+    "options": "[\"Deep, shallow, and linear\", \"Supervised, regression, and clustering\", \"Classification, regression, and boosting\", \"Supervised, unsupervised, and reinforcement\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the ML workflow, what is Phase 2?",
+    "correct_answer": "Prediction: new data goes into the trained model",
+    "options": "[\"Testing: performance is measured\", \"Prediction: new data goes into the trained model\", \"Preprocessing: data is cleaned and formatted\", \"Learning: training data is preprocessed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library is the most prominent tool for ML?",
+    "correct_answer": "Scikit-learn",
+    "options": "[\"Jupyter\", \"SciPy\", \"Scikit-learn\", \"Matplotlib\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library is for data wrangling and analysis?",
+    "correct_answer": "Pandas",
+    "options": "[\"Pandas\", \"Anaconda\", \"Matplotlib\", \"NumPy\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Anaconda is described in the slides as what?",
+    "correct_answer": "A Python distribution for large-scale data processing and scientific computing",
+    "options": "[\"An interactive environment in the browser\", \"A Python distribution for large-scale data processing and scientific computing\", \"A plotting library\", \"A library for data wrangling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which three data quality problems do the slides list for real data?",
+    "correct_answer": "Incompleteness, noise, and inconsistency",
+    "options": "[\"Bias, variance, and noise\", \"Incompleteness, noise, and inconsistency\", \"Duplicates, outliers, and scaling\", \"Size, speed, and cost\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a feature engineering technique, not data cleansing?",
+    "correct_answer": "Feature encoding",
+    "options": "[\"Removing duplicates\", \"Sorting out missing data\", \"Reducing noisy data\", \"Feature encoding\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which EDA activity identifies unusual data points?",
+    "correct_answer": "Outlier detection",
+    "options": "[\"Summary statistics\", \"Hypothesis testing\", \"Correlation analysis\", \"Outlier detection\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The number of students in a class is what kind of data?",
+    "correct_answer": "Discrete",
+    "options": "[\"Discrete\", \"Categorical only\", \"Unbounded\", \"Continuous\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data ethics principle says an individual owns their personal information?",
+    "correct_answer": "Ownership",
+    "options": "[\"Transparency\", \"Ownership\", \"Intention\", \"Outcomes\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does labeled training data in supervised learning contain?",
+    "correct_answer": "The input data and the corresponding correct output",
+    "options": "[\"Input data with no labels\", \"Only the correct output\", \"Only the input data\", \"The input data and the corresponding correct output\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which task has a categorical target variable?",
+    "correct_answer": "Classification",
+    "options": "[\"Regression\", \"Classification\", \"Forecasting\", \"Clustering\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model that predicts accurately on new, unseen data is said to be able to do what?",
+    "correct_answer": "Generalize",
+    "options": "[\"Memorize\", \"Overfit\", \"Underfit\", \"Generalize\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model works very well on the training set but poorly on new data. What is this?",
+    "correct_answer": "Overfitting",
+    "options": "[\"Overfitting\", \"Generalization\", \"Underfitting\", \"Regularization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model does badly even on the training set because it is too simple. What is this?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Underfitting\", \"Overfitting\", \"Boosting\", \"Generalization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which does NOT help a model avoid overfitting, according to the slides?",
+    "correct_answer": "Duplicating the same data points",
+    "options": "[\"Collecting more varied data points\", \"Choosing a simpler model\", \"Collecting a larger variety of data\", \"Duplicating the same data points\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the slides, what is variance?",
+    "correct_answer": "Error from sensitivity to noise and fluctuations in the training data",
+    "options": "[\"Error from sensitivity to noise and fluctuations in the training data\", \"Error from wrong or too-simple assumptions\", \"The spread of the test labels\", \"The average of the target values\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does building a k-NN model consist of?",
+    "correct_answer": "Only storing the training dataset",
+    "options": "[\"Only storing the training dataset\", \"Fitting a straight line\", \"Learning a tree of if/else questions\", \"Minimizing the mean squared error\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For k-NN classification with more than one neighbor, how is the label assigned?",
+    "correct_answer": "By voting: the majority class among the neighbors",
+    "options": "[\"By using the first neighbor only\", \"By taking the farthest neighbor\", \"By averaging the neighbors' labels\", \"By voting: the majority class among the neighbors\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For k-NN regression with more than one neighbor, what is the prediction?",
+    "correct_answer": "The average (mean) of the neighbors' targets",
+    "options": "[\"The nearest neighbor's target only\", \"The average (mean) of the neighbors' targets\", \"The largest neighbor target\", \"The majority class\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Using k = 1 in k-NN makes the model what?",
+    "correct_answer": "More complex, with a jagged boundary",
+    "options": "[\"Unable to predict\", \"More complex, with a jagged boundary\", \"Less complex, with a smooth boundary\", \"Equal to linear regression\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does the score method return for a regressor?",
+    "correct_answer": "The R2 score",
+    "options": "[\"The R2 score\", \"The mean squared error\", \"The number of neighbors\", \"The accuracy\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An R2 of 0 corresponds to what?",
+    "correct_answer": "A constant model that predicts the mean of the training targets",
+    "options": "[\"A model worse than the mean\", \"A model that fits only the test set\", \"A perfect prediction\", \"A constant model that predicts the mean of the training targets\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a negative R2 mean?",
+    "correct_answer": "The model predicts worse than the average",
+    "options": "[\"The model is underfitting only\", \"The model is perfect\", \"The data has no outliers\", \"The model predicts worse than the average\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In y-hat = w*x + b, what is b also called?",
+    "correct_answer": "The intercept (also the offset or bias)",
+    "options": "[\"The weight\", \"The coefficient\", \"The slope\", \"The intercept (also the offset or bias)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does ordinary least squares (linear regression) minimize on the training set?",
+    "correct_answer": "The mean squared error",
+    "options": "[\"The mean squared error\", \"The number of features\", \"The accuracy\", \"The alpha penalty\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Linear regression on the wave dataset scored about 0.66 on both train and test. What does that suggest?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Data leakage\", \"Perfect generalization\", \"Underfitting\", \"Overfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A company wants a program that improves at spotting spam as it sees more emails. Which E, T, P part is the spam spotting?",
+    "correct_answer": "The task T",
+    "options": "[\"The training time\", \"The performance measure P\", \"The experience E\", \"The task T\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement contrasts rule-based programming and machine learning correctly?",
+    "correct_answer": "Rule-based uses conditions; machine learning uses data",
+    "options": "[\"Rule-based uses data; machine learning uses conditions\", \"Both use only labels\", \"Both use only conditions\", \"Rule-based uses conditions; machine learning uses data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Why can machines suit routine, repetitive tasks better than people, per the slides?",
+    "correct_answer": "They work 24/7 and are not affected by fatigue or inattention",
+    "options": "[\"They work 24/7 and are not affected by fatigue or inattention\", \"They always cost more than humans\", \"They need no maintenance at all\", \"They never need any data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the learning phase of the ML workflow, which step comes right after the training data?",
+    "correct_answer": "Preprocessing (clean and format the data)",
+    "options": "[\"Monitoring\", \"Deployment\", \"Preprocessing (clean and format the data)\", \"Prediction\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A dataset has blank cells, wrong records, and conflicting records. Which problems is it showing?",
+    "correct_answer": "Incompleteness, noise, and inconsistency",
+    "options": "[\"Duplication only\", \"Overfitting and underfitting\", \"Incompleteness, noise, and inconsistency\", \"Variance and bias\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A boxplot is used to spot points far from the rest of the data. Which EDA activity is this?",
+    "correct_answer": "Outlier detection",
+    "options": "[\"Outlier detection\", \"Feature scaling\", \"Hypothesis testing\", \"Data reduction\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After a model is deployed, its performance slowly worsens as real-world data changes. Which stage should catch this?",
+    "correct_answer": "Monitoring",
+    "options": "[\"Validation\", \"Monitoring\", \"Preprocessing\", \"Training\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A study causes unintended harm to a group even though the intentions were good. Which ethics principle is this about?",
+    "correct_answer": "Outcomes (disparate impact)",
+    "options": "[\"Privacy\", \"Ownership\", \"Intention\", \"Outcomes (disparate impact)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Predicting a house price is which kind of supervised task?",
+    "correct_answer": "Regression (the target is continuous)",
+    "options": "[\"Clustering\", \"Classification, because prices are labels\", \"Reinforcement learning\", \"Regression (the target is continuous)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Filtering e-mails into spam or not spam is which kind of task?",
+    "correct_answer": "Binary classification",
+    "options": "[\"Binary classification\", \"Regression\", \"Clustering\", \"Multiple classification\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model scores 99 percent on training data and 62 percent on test data. What is the likely problem?",
+    "correct_answer": "Overfitting",
+    "options": "[\"A scaling error only\", \"Overfitting\", \"Underfitting\", \"Good generalization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model scores 55 percent on both training and test data. What is the likely problem?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Overfitting\", \"Good generalization\", \"Underfitting\", \"Too much data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "As model complexity keeps increasing, what happens to the training score and to generalization?",
+    "correct_answer": "Training keeps improving, but generalization eventually drops",
+    "options": "[\"Neither changes\", \"Training drops, generalization improves\", \"Both always improve\", \"Training keeps improving, but generalization eventually drops\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which describes the best model on the complexity curve?",
+    "correct_answer": "The sweet spot between underfitting and overfitting",
+    "options": "[\"The sweet spot between underfitting and overfitting\", \"The simplest model\", \"The model with 100 percent training accuracy\", \"The most complex model\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A rule is 100 percent accurate on only 12 rows. Why shouldn't you trust it yet?",
+    "correct_answer": "Many other rules would fit 12 rows equally well",
+    "options": "[\"Accuracy cannot be measured on training data\", \"Rules never work on small data\", \"Many other rules would fit 12 rows equally well\", \"Twelve rows is the ideal size\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is the slide definition of bias?",
+    "correct_answer": "Error from wrong or too-simple assumptions in the learning algorithm",
+    "options": "[\"The size of the training set\", \"The difference between train and test sets\", \"Error from wrong or too-simple assumptions in the learning algorithm\", \"Error from sensitivity to noise\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In k-NN, increasing k from 1 to a large value moves the model toward what?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Perfect memorization\", \"Underfitting\", \"Overfitting\", \"A decision tree\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the plot of k-NN accuracy against n_neighbors, where is the best performance?",
+    "correct_answer": "Somewhere in the middle",
+    "options": "[\"Somewhere in the middle\", \"At n_neighbors = 1\", \"At the largest n_neighbors\", \"It is the same everywhere\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a strength of k-NN listed in the slides?",
+    "correct_answer": "Easy to understand and works well without special adjustments",
+    "options": "[\"Fast with very many samples\", \"Great on sparse datasets\", \"Needs no distance measure\", \"Easy to understand and works well without special adjustments\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many types of machine learning does the Types of Machine Learning picture show?",
+    "correct_answer": "Four",
+    "options": "[\"Four\", \"Two\", \"Five\", \"Three\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which type appears in the picture besides supervised, unsupervised, and reinforcement learning?",
+    "correct_answer": "Semi-supervised learning",
+    "options": "[\"Federated learning\", \"Self-learning\", \"Transfer learning\", \"Semi-supervised learning\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the four-stage ML workflow picture, which stage includes splitting the data?",
+    "correct_answer": "Data preparation",
+    "options": "[\"Modeling\", \"Deployment\", \"Project setup\", \"Data preparation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the four-stage ML workflow picture, which stage includes hyperparameter tuning?",
+    "correct_answer": "Modeling",
+    "options": "[\"Project setup\", \"Deployment\", \"Data preparation\", \"Modeling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which language ranks number 1 for machine learning in the slides?",
+    "correct_answer": "Python",
+    "options": "[\"R\", \"C++\", \"Python\", \"Java\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library from the slides is used for web crawling?",
+    "correct_answer": "Scrapy",
+    "options": "[\"Scrapy\", \"Seaborn\", \"Keras\", \"SQLModel\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library from the slides is for deep learning?",
+    "correct_answer": "Keras",
+    "options": "[\"Pandas\", \"SciPy\", \"Matplotlib\", \"Keras\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the rule-based algorithm flowchart, what decides which code runs?",
+    "correct_answer": "A condition that is true or false",
+    "options": "[\"A learned model\", \"The training data\", \"The accuracy score\", \"A condition that is true or false\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the machine learning diagram, what happens to new data?",
+    "correct_answer": "It goes into the model, which gives a prediction",
+    "options": "[\"It is converted into rules by hand\", \"It becomes training data first\", \"It is discarded\", \"It goes into the model, which gives a prediction\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the scenario chart, which approach fits complex rules at a large scale?",
+    "correct_answer": "Machine learning algorithms",
+    "options": "[\"Rule-based algorithms\", \"Manual rules\", \"Simple problems\", \"Machine learning algorithms\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the scenario chart, which approach fits simple rules at a large scale?",
+    "correct_answer": "Rule-based algorithms",
+    "options": "[\"Rule-based algorithms\", \"Neural networks\", \"Machine learning algorithms\", \"Manual rules\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How do the slide diagrams relate machine learning and artificial intelligence?",
+    "correct_answer": "Machine learning is a subset of AI",
+    "options": "[\"Machine learning replaces data science\", \"Machine learning is a subset of AI\", \"They are unrelated\", \"AI is a subset of machine learning\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What do data scientists spend most of their time on, according to the pie chart?",
+    "correct_answer": "Data cleaning and organization (60 percent)",
+    "options": "[\"Creating training sets\", \"Improving algorithms\", \"Data cleaning and organization (60 percent)\", \"Data mining\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is the first of the six key steps in data preprocessing?",
+    "correct_answer": "Data profiling",
+    "options": "[\"Data reduction\", \"Data validation\", \"Data cleansing\", \"Data profiling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the messy table, the same Id appearing on two rows is marked as what?",
+    "correct_answer": "An invalid duplicate item",
+    "options": "[\"A missing value\", \"A misspelling\", \"An invalid duplicate item\", \"An attribute dependency\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does the slide say about a single outlier in a regression?",
+    "correct_answer": "It can throw off the regression estimate",
+    "options": "[\"It always improves the fit\", \"It can throw off the regression estimate\", \"It never changes the regression line\", \"It is removed automatically\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which kind of plots does the EDA slide say visualize the count of values?",
+    "correct_answer": "Bar plots and histograms",
+    "options": "[\"Heatmaps only\", \"Line charts\", \"Bar plots and histograms\", \"Scatter plots and boxplots\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the Titanic example, which imputation is used for a categorical column such as Embarked?",
+    "correct_answer": "Most-frequent imputation",
+    "options": "[\"Median imputation\", \"Deleting the column\", \"Most-frequent imputation\", \"Mean imputation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the column transformation slide, which is used for numerical data like Age and Fare?",
+    "correct_answer": "Standard scaling",
+    "options": "[\"Ordinal encoding\", \"Mean imputation\", \"Standard scaling\", \"Feature selection\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data subject right appears in the slides?",
+    "correct_answer": "Right to data portability",
+    "options": "[\"Right to free storage\", \"Right to anonymous AI\", \"Right to data portability\", \"Right to sell data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the model complexity curve, what does training accuracy do as complexity increases?",
+    "correct_answer": "It keeps rising",
+    "options": "[\"It peaks then falls\", \"It keeps rising\", \"It keeps falling\", \"It stays flat\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the model complexity curve, what does test (generalization) accuracy do as complexity increases?",
+    "correct_answer": "It rises, peaks at the sweet spot, then falls",
+    "options": "[\"It keeps rising\", \"It rises, peaks at the sweet spot, then falls\", \"It keeps falling\", \"It stays flat\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the bias and variance dartboard picture, which combination is the good model?",
+    "correct_answer": "Low bias and low variance",
+    "options": "[\"High bias and high variance\", \"Low bias and high variance\", \"High bias and low variance\", \"Low bias and low variance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "As n_neighbors increases in the k-NN plot, what happens to training accuracy?",
+    "correct_answer": "It falls",
+    "options": "[\"It rises\", \"It falls\", \"It stays at 1.0\", \"It stays flat\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the supervised learning picture, what are weather, temperature, and wind speed?",
+    "correct_answer": "The input x (features)",
+    "options": "[\"The input x (features)\", \"The goal\", \"The label\", \"The output y\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement about regression is safest for the exam?",
+    "correct_answer": "Regression predicts continuous real numbers",
+    "options": "[\"Regression predicts continuous real numbers\", \"Regression needs a categorical target\", \"Regression predicts class labels\", \"Regression predicts only whole numbers\"]",
+    "times_missed": 0
+   }
+  ]
+ },
+ {
+  "name": "ML_Midterm_Verified",
+  "subject": "Machine Learning Algorithm",
+  "modules_included": "Modules 1 and 2",
+  "module_ids": null,
+  "cards": [
+   {
+    "type": "multiple_choice",
+    "question": "Who defined machine learning as the ability to learn without being explicitly programmed?",
+    "correct_answer": "Arthur Samuel, 1959",
+    "options": "[\"Tom Mitchell, 1997\", \"Andrew Ng, 2011\", \"Arthur Samuel, 1959\", \"Alan Turing, 1950\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Machine learning sits at the intersection of which fields?",
+    "correct_answer": "Statistics, artificial intelligence, and computer science",
+    "options": "[\"Physics, chemistry, and biology\", \"Networking, security, and databases\", \"Economics, law, and statistics\", \"Statistics, artificial intelligence, and computer science\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the E, T, P definition, performance at task T improves with what?",
+    "correct_answer": "Experience E",
+    "options": "[\"Experience E\", \"Performance measure P\", \"A larger task T\", \"A faster computer\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A rule-based algorithm runs on conditions. What does a machine learning algorithm run on?",
+    "correct_answer": "Data (or experience)",
+    "options": "[\"Data (or experience)\", \"Hand-written rules\", \"Conditions\", \"Compiler flags\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which are the three types of machine learning in the slides?",
+    "correct_answer": "Supervised, unsupervised, and reinforcement",
+    "options": "[\"Classification, regression, and boosting\", \"Supervised, regression, and clustering\", \"Deep, shallow, and linear\", \"Supervised, unsupervised, and reinforcement\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the ML workflow, what is Phase 2?",
+    "correct_answer": "Prediction: new data goes into the trained model",
+    "options": "[\"Preprocessing: data is cleaned and formatted\", \"Prediction: new data goes into the trained model\", \"Testing: performance is measured\", \"Learning: training data is preprocessed\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library is the most prominent tool for ML?",
+    "correct_answer": "Scikit-learn",
+    "options": "[\"SciPy\", \"Matplotlib\", \"Jupyter\", \"Scikit-learn\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library is for data wrangling and analysis?",
+    "correct_answer": "Pandas",
+    "options": "[\"Anaconda\", \"NumPy\", \"Pandas\", \"Matplotlib\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Anaconda is described in the slides as what?",
+    "correct_answer": "A Python distribution for large-scale data processing and scientific computing",
+    "options": "[\"An interactive environment in the browser\", \"A Python distribution for large-scale data processing and scientific computing\", \"A plotting library\", \"A library for data wrangling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which three data quality problems do the slides list for real data?",
+    "correct_answer": "Incompleteness, noise, and inconsistency",
+    "options": "[\"Size, speed, and cost\", \"Bias, variance, and noise\", \"Incompleteness, noise, and inconsistency\", \"Duplicates, outliers, and scaling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a feature engineering technique, not data cleansing?",
+    "correct_answer": "Feature encoding",
+    "options": "[\"Removing duplicates\", \"Sorting out missing data\", \"Reducing noisy data\", \"Feature encoding\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which EDA activity identifies unusual data points?",
+    "correct_answer": "Outlier detection",
+    "options": "[\"Summary statistics\", \"Outlier detection\", \"Correlation analysis\", \"Hypothesis testing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "The number of students in a class is what kind of data?",
+    "correct_answer": "Discrete",
+    "options": "[\"Discrete\", \"Unbounded\", \"Continuous\", \"Categorical only\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data ethics principle says an individual owns their personal information?",
+    "correct_answer": "Ownership",
+    "options": "[\"Intention\", \"Ownership\", \"Outcomes\", \"Transparency\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does labeled training data in supervised learning contain?",
+    "correct_answer": "The input data and the corresponding correct output",
+    "options": "[\"Only the input data\", \"Input data with no labels\", \"The input data and the corresponding correct output\", \"Only the correct output\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which task has a categorical target variable?",
+    "correct_answer": "Classification",
+    "options": "[\"Regression\", \"Clustering\", \"Classification\", \"Forecasting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model that predicts accurately on new, unseen data is said to be able to do what?",
+    "correct_answer": "Generalize",
+    "options": "[\"Overfit\", \"Underfit\", \"Generalize\", \"Memorize\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model works very well on the training set but poorly on new data. What is this?",
+    "correct_answer": "Overfitting",
+    "options": "[\"Generalization\", \"Underfitting\", \"Overfitting\", \"Regularization\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model does badly even on the training set because it is too simple. What is this?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Boosting\", \"Overfitting\", \"Generalization\", \"Underfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which does NOT help a model avoid overfitting, according to the slides?",
+    "correct_answer": "Duplicating the same data points",
+    "options": "[\"Duplicating the same data points\", \"Choosing a simpler model\", \"Collecting more varied data points\", \"Collecting a larger variety of data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the slides, what is variance?",
+    "correct_answer": "Error from sensitivity to noise and fluctuations in the training data",
+    "options": "[\"The spread of the test labels\", \"Error from sensitivity to noise and fluctuations in the training data\", \"The average of the target values\", \"Error from wrong or too-simple assumptions\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does building a k-NN model consist of?",
+    "correct_answer": "Only storing the training dataset",
+    "options": "[\"Learning a tree of if/else questions\", \"Minimizing the mean squared error\", \"Only storing the training dataset\", \"Fitting a straight line\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For k-NN classification with more than one neighbor, how is the label assigned?",
+    "correct_answer": "By voting: the majority class among the neighbors",
+    "options": "[\"By averaging the neighbors' labels\", \"By taking the farthest neighbor\", \"By using the first neighbor only\", \"By voting: the majority class among the neighbors\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "For k-NN regression with more than one neighbor, what is the prediction?",
+    "correct_answer": "The average (mean) of the neighbors' targets",
+    "options": "[\"The largest neighbor target\", \"The average (mean) of the neighbors' targets\", \"The nearest neighbor's target only\", \"The majority class\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Using k = 1 in k-NN makes the model what?",
+    "correct_answer": "More complex, with a jagged boundary",
+    "options": "[\"Equal to linear regression\", \"Less complex, with a smooth boundary\", \"Unable to predict\", \"More complex, with a jagged boundary\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does the score method return for a regressor?",
+    "correct_answer": "The R2 score",
+    "options": "[\"The accuracy\", \"The number of neighbors\", \"The R2 score\", \"The mean squared error\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "An R2 of 0 corresponds to what?",
+    "correct_answer": "A constant model that predicts the mean of the training targets",
+    "options": "[\"A perfect prediction\", \"A model that fits only the test set\", \"A model worse than the mean\", \"A constant model that predicts the mean of the training targets\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does a negative R2 mean?",
+    "correct_answer": "The model predicts worse than the average",
+    "options": "[\"The data has no outliers\", \"The model is perfect\", \"The model is underfitting only\", \"The model predicts worse than the average\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In y-hat = w*x + b, what is b also called?",
+    "correct_answer": "The intercept (also the offset or bias)",
+    "options": "[\"The coefficient\", \"The weight\", \"The intercept (also the offset or bias)\", \"The slope\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does ordinary least squares (linear regression) minimize on the training set?",
+    "correct_answer": "The mean squared error",
+    "options": "[\"The mean squared error\", \"The alpha penalty\", \"The accuracy\", \"The number of features\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Linear regression on the wave dataset scored about 0.66 on both train and test. What does that suggest?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Perfect generalization\", \"Data leakage\", \"Overfitting\", \"Underfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which regularization does Ridge regression use?",
+    "correct_answer": "L2",
+    "options": "[\"L1\", \"No regularization\", \"L2\", \"L0\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In Ridge regression, what does a larger alpha do?",
+    "correct_answer": "Raises the penalty and pushes the weights toward zero",
+    "options": "[\"Removes the penalty\", \"Raises the penalty and pushes the weights toward zero\", \"Turns weights exactly to zero\", \"Lowers the penalty\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which model can make some coefficients exactly zero?",
+    "correct_answer": "Lasso (L1)",
+    "options": "[\"Lasso (L1)\", \"Ridge (L2)\", \"k-NN\", \"Ordinary least squares\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In LogisticRegression, what does a higher value of C mean?",
+    "correct_answer": "Less regularization",
+    "options": "[\"Less regularization\", \"More regularization\", \"A larger alpha\", \"A smaller number of neighbors\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Naive Bayes classifier is for integer count data?",
+    "correct_answer": "MultinomialNB",
+    "options": "[\"MultinomialNB\", \"BernoulliNB\", \"LinearNB\", \"GaussianNB\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A decision tree learns what?",
+    "correct_answer": "A hierarchy of if/else questions",
+    "options": "[\"A kernel function\", \"A hierarchy of if/else questions\", \"A best-fit line\", \"A voting rule over neighbors\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is a random forest's way of reducing overfitting?",
+    "correct_answer": "Averaging many randomized trees built on bootstrap samples",
+    "options": "[\"Fixing the error of the previous tree\", \"Using one very deep tree\", \"Averaging many randomized trees built on bootstrap samples\", \"Scaling the features to 0-1\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How does gradient boosting build its trees?",
+    "correct_answer": "Each new tree compensates for the error of the previous tree",
+    "options": "[\"All trees are built independently\", \"Each tree is built from the whole dataset with no changes\", \"Trees are averaged with no ordering\", \"Each new tree compensates for the error of the previous tree\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which preprocessing method do the slides use to scale features for a kernel SVM?",
+    "correct_answer": "MinMaxScaler (scale to between 0 and 1)",
+    "options": "[\"Discretization\", \"One-hot encoding\", \"MinMaxScaler (scale to between 0 and 1)\", \"Removing duplicates\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A company wants a program that improves at spotting spam as it sees more emails. Which E, T, P part is the spam spotting?",
+    "correct_answer": "The task T",
+    "options": "[\"The task T\", \"The training time\", \"The experience E\", \"The performance measure P\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement contrasts rule-based programming and machine learning correctly?",
+    "correct_answer": "Rule-based uses conditions; machine learning uses data",
+    "options": "[\"Rule-based uses data; machine learning uses conditions\", \"Rule-based uses conditions; machine learning uses data\", \"Both use only conditions\", \"Both use only labels\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Why can machines suit routine, repetitive tasks better than people, per the slides?",
+    "correct_answer": "They work 24/7 and are not affected by fatigue or inattention",
+    "options": "[\"They need no maintenance at all\", \"They work 24/7 and are not affected by fatigue or inattention\", \"They always cost more than humans\", \"They never need any data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the learning phase of the ML workflow, which step comes right after the training data?",
+    "correct_answer": "Preprocessing (clean and format the data)",
+    "options": "[\"Prediction\", \"Deployment\", \"Monitoring\", \"Preprocessing (clean and format the data)\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A dataset has blank cells, wrong records, and conflicting records. Which problems is it showing?",
+    "correct_answer": "Incompleteness, noise, and inconsistency",
+    "options": "[\"Variance and bias\", \"Duplication only\", \"Incompleteness, noise, and inconsistency\", \"Overfitting and underfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A boxplot is used to spot points far from the rest of the data. Which EDA activity is this?",
+    "correct_answer": "Outlier detection",
+    "options": "[\"Outlier detection\", \"Feature scaling\", \"Hypothesis testing\", \"Data reduction\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "After a model is deployed, its performance slowly worsens as real-world data changes. Which stage should catch this?",
+    "correct_answer": "Monitoring",
+    "options": "[\"Validation\", \"Training\", \"Preprocessing\", \"Monitoring\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A study causes unintended harm to a group even though the intentions were good. Which ethics principle is this about?",
+    "correct_answer": "Outcomes (disparate impact)",
+    "options": "[\"Ownership\", \"Outcomes (disparate impact)\", \"Privacy\", \"Intention\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Predicting a house price is which kind of supervised task?",
+    "correct_answer": "Regression (the target is continuous)",
+    "options": "[\"Regression (the target is continuous)\", \"Reinforcement learning\", \"Clustering\", \"Classification, because prices are labels\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Filtering e-mails into spam or not spam is which kind of task?",
+    "correct_answer": "Binary classification",
+    "options": "[\"Binary classification\", \"Multiple classification\", \"Regression\", \"Clustering\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model scores 99 percent on training data and 62 percent on test data. What is the likely problem?",
+    "correct_answer": "Overfitting",
+    "options": "[\"Good generalization\", \"Overfitting\", \"A scaling error only\", \"Underfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A model scores 55 percent on both training and test data. What is the likely problem?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Overfitting\", \"Good generalization\", \"Too much data\", \"Underfitting\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "As model complexity keeps increasing, what happens to the training score and to generalization?",
+    "correct_answer": "Training keeps improving, but generalization eventually drops",
+    "options": "[\"Neither changes\", \"Training keeps improving, but generalization eventually drops\", \"Training drops, generalization improves\", \"Both always improve\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which describes the best model on the complexity curve?",
+    "correct_answer": "The sweet spot between underfitting and overfitting",
+    "options": "[\"The simplest model\", \"The sweet spot between underfitting and overfitting\", \"The most complex model\", \"The model with 100 percent training accuracy\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A rule is 100 percent accurate on only 12 rows. Why shouldn't you trust it yet?",
+    "correct_answer": "Many other rules would fit 12 rows equally well",
+    "options": "[\"Accuracy cannot be measured on training data\", \"Many other rules would fit 12 rows equally well\", \"Twelve rows is the ideal size\", \"Rules never work on small data\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is the slide definition of bias?",
+    "correct_answer": "Error from wrong or too-simple assumptions in the learning algorithm",
+    "options": "[\"Error from sensitivity to noise\", \"The difference between train and test sets\", \"The size of the training set\", \"Error from wrong or too-simple assumptions in the learning algorithm\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In k-NN, increasing k from 1 to a large value moves the model toward what?",
+    "correct_answer": "Underfitting",
+    "options": "[\"Underfitting\", \"Perfect memorization\", \"Overfitting\", \"A decision tree\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the plot of k-NN accuracy against n_neighbors, where is the best performance?",
+    "correct_answer": "Somewhere in the middle",
+    "options": "[\"Somewhere in the middle\", \"At the largest n_neighbors\", \"It is the same everywhere\", \"At n_neighbors = 1\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a strength of k-NN listed in the slides?",
+    "correct_answer": "Easy to understand and works well without special adjustments",
+    "options": "[\"Fast with very many samples\", \"Great on sparse datasets\", \"Easy to understand and works well without special adjustments\", \"Needs no distance measure\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A linear regression on 105 features shows a huge gap between train and test R2. What should you try?",
+    "correct_answer": "Ridge regression to control complexity",
+    "options": "[\"Use fewer training rows\", \"Lower k in k-NN\", \"Remove all regularization\", \"Ridge regression to control complexity\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement about Ridge vs Lasso is correct?",
+    "correct_answer": "Lasso can zero out features, while Ridge only shrinks them toward zero",
+    "options": "[\"Ridge can zero out features, Lasso cannot\", \"Both set every weight to exactly zero\", \"Lasso can zero out features, while Ridge only shrinks them toward zero\", \"Neither uses a penalty\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Only a few of many features matter and you want an easy-to-read model. Which is the better pick per the slides?",
+    "correct_answer": "Lasso",
+    "options": "[\"Lasso\", \"Ordinary least squares\", \"Ridge\", \"k-NN\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Lasso with alpha 1.0 used only 4 of 105 features and scored badly. What fixes this?",
+    "correct_answer": "Lowering alpha",
+    "options": "[\"Adding more duplicates\", \"Removing the test set\", \"Raising alpha\", \"Lowering alpha\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is true of LogisticRegression?",
+    "correct_answer": "It is a classification algorithm despite its name",
+    "options": "[\"It is a classification algorithm despite its name\", \"It cannot output probabilities\", \"It is a clustering method\", \"It is a regression algorithm\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Why are Naive Bayes models efficient?",
+    "correct_answer": "They look at each feature individually and collect simple per-class statistics",
+    "options": "[\"They build hundreds of trees\", \"They search all feature interactions\", \"They look at each feature individually and collect simple per-class statistics\", \"They store the full dataset\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "A decision tree regressor is asked to predict outside the range of its training data. What happens?",
+    "correct_answer": "It cannot extrapolate beyond the training range",
+    "options": "[\"It extrapolates perfectly\", \"It always predicts zero\", \"It switches to a linear model\", \"It cannot extrapolate beyond the training range\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is a tree-based method that builds many independent trees on bootstrap samples?",
+    "correct_answer": "Random forest",
+    "options": "[\"Ridge regression\", \"Gradient boosting\", \"Kernel SVM\", \"Random forest\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Gradient boosting hits 100 percent training accuracy. What are two ways the slides give to reduce overfitting?",
+    "correct_answer": "Limit the maximum depth or lower the learning rate",
+    "options": "[\"Use more trees and no limit\", \"Remove the test set or add noise\", \"Raise the learning rate or add depth\", \"Limit the maximum depth or lower the learning rate\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In an RBF-kernel SVM, a small gamma means what?",
+    "correct_answer": "A large kernel radius, so many points count as close",
+    "options": "[\"No regularization\", \"A linear kernel\", \"A tiny radius\", \"A large kernel radius, so many points count as close\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Why must features be rescaled before an RBF SVM on the Breast Cancer data?",
+    "correct_answer": "The features have very different ranges and SVMs are sensitive to scale",
+    "options": "[\"Scaling is required for k-NN only\", \"SVMs only accept integer data\", \"Scaling removes the support vectors\", \"The features have very different ranges and SVMs are sensitive to scale\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How many types of machine learning does the Types of Machine Learning picture show?",
+    "correct_answer": "Four",
+    "options": "[\"Four\", \"Three\", \"Five\", \"Two\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which type appears in the picture besides supervised, unsupervised, and reinforcement learning?",
+    "correct_answer": "Semi-supervised learning",
+    "options": "[\"Federated learning\", \"Transfer learning\", \"Semi-supervised learning\", \"Self-learning\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the four-stage ML workflow picture, which stage includes splitting the data?",
+    "correct_answer": "Data preparation",
+    "options": "[\"Data preparation\", \"Modeling\", \"Project setup\", \"Deployment\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the four-stage ML workflow picture, which stage includes hyperparameter tuning?",
+    "correct_answer": "Modeling",
+    "options": "[\"Project setup\", \"Deployment\", \"Data preparation\", \"Modeling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which language ranks number 1 for machine learning in the slides?",
+    "correct_answer": "Python",
+    "options": "[\"Java\", \"C++\", \"Python\", \"R\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library from the slides is used for web crawling?",
+    "correct_answer": "Scrapy",
+    "options": "[\"Scrapy\", \"SQLModel\", \"Keras\", \"Seaborn\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which Python library from the slides is for deep learning?",
+    "correct_answer": "Keras",
+    "options": "[\"Keras\", \"Matplotlib\", \"SciPy\", \"Pandas\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the rule-based algorithm flowchart, what decides which code runs?",
+    "correct_answer": "A condition that is true or false",
+    "options": "[\"A learned model\", \"The training data\", \"The accuracy score\", \"A condition that is true or false\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the machine learning diagram, what happens to new data?",
+    "correct_answer": "It goes into the model, which gives a prediction",
+    "options": "[\"It becomes training data first\", \"It goes into the model, which gives a prediction\", \"It is converted into rules by hand\", \"It is discarded\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the scenario chart, which approach fits complex rules at a large scale?",
+    "correct_answer": "Machine learning algorithms",
+    "options": "[\"Rule-based algorithms\", \"Manual rules\", \"Simple problems\", \"Machine learning algorithms\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the scenario chart, which approach fits simple rules at a large scale?",
+    "correct_answer": "Rule-based algorithms",
+    "options": "[\"Rule-based algorithms\", \"Neural networks\", \"Machine learning algorithms\", \"Manual rules\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "How do the slide diagrams relate machine learning and artificial intelligence?",
+    "correct_answer": "Machine learning is a subset of AI",
+    "options": "[\"They are unrelated\", \"AI is a subset of machine learning\", \"Machine learning is a subset of AI\", \"Machine learning replaces data science\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What do data scientists spend most of their time on, according to the pie chart?",
+    "correct_answer": "Data cleaning and organization (60 percent)",
+    "options": "[\"Data cleaning and organization (60 percent)\", \"Improving algorithms\", \"Data mining\", \"Creating training sets\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which is the first of the six key steps in data preprocessing?",
+    "correct_answer": "Data profiling",
+    "options": "[\"Data reduction\", \"Data validation\", \"Data profiling\", \"Data cleansing\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the messy table, the same Id appearing on two rows is marked as what?",
+    "correct_answer": "An invalid duplicate item",
+    "options": "[\"A missing value\", \"An invalid duplicate item\", \"An attribute dependency\", \"A misspelling\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What does the slide say about a single outlier in a regression?",
+    "correct_answer": "It can throw off the regression estimate",
+    "options": "[\"It never changes the regression line\", \"It can throw off the regression estimate\", \"It always improves the fit\", \"It is removed automatically\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which kind of plots does the EDA slide say visualize the count of values?",
+    "correct_answer": "Bar plots and histograms",
+    "options": "[\"Heatmaps only\", \"Line charts\", \"Bar plots and histograms\", \"Scatter plots and boxplots\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the Titanic example, which imputation is used for a categorical column such as Embarked?",
+    "correct_answer": "Most-frequent imputation",
+    "options": "[\"Most-frequent imputation\", \"Median imputation\", \"Deleting the column\", \"Mean imputation\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the column transformation slide, which is used for numerical data like Age and Fare?",
+    "correct_answer": "Standard scaling",
+    "options": "[\"Feature selection\", \"Standard scaling\", \"Mean imputation\", \"Ordinal encoding\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which data subject right appears in the slides?",
+    "correct_answer": "Right to data portability",
+    "options": "[\"Right to anonymous AI\", \"Right to data portability\", \"Right to sell data\", \"Right to free storage\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the model complexity curve, what does training accuracy do as complexity increases?",
+    "correct_answer": "It keeps rising",
+    "options": "[\"It stays flat\", \"It keeps rising\", \"It keeps falling\", \"It peaks then falls\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "On the model complexity curve, what does test (generalization) accuracy do as complexity increases?",
+    "correct_answer": "It rises, peaks at the sweet spot, then falls",
+    "options": "[\"It keeps falling\", \"It rises, peaks at the sweet spot, then falls\", \"It stays flat\", \"It keeps rising\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the bias and variance dartboard picture, which combination is the good model?",
+    "correct_answer": "Low bias and low variance",
+    "options": "[\"High bias and high variance\", \"Low bias and high variance\", \"Low bias and low variance\", \"High bias and low variance\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "As n_neighbors increases in the k-NN plot, what happens to training accuracy?",
+    "correct_answer": "It falls",
+    "options": "[\"It stays at 1.0\", \"It falls\", \"It stays flat\", \"It rises\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the supervised learning picture, what are weather, temperature, and wind speed?",
+    "correct_answer": "The input x (features)",
+    "options": "[\"The goal\", \"The input x (features)\", \"The output y\", \"The label\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the Ridge regression cost function?",
+    "correct_answer": "MSE plus alpha times the sum of the squared weights",
+    "options": "[\"MSE alone\", \"MSE plus alpha times the sum of the absolute weights\", \"Alpha times the number of features\", \"MSE plus alpha times the sum of the squared weights\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "What is the Lasso cost function penalty?",
+    "correct_answer": "Alpha times the sum of the absolute weights (L1)",
+    "options": "[\"Alpha times the largest weight\", \"Alpha times the sum of the absolute weights (L1)\", \"Alpha times the sum of the squared weights\", \"No penalty\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the animal decision tree picture, what are Hawk, Penguin, Dolphin, and Bear?",
+    "correct_answer": "Terminal nodes",
+    "options": "[\"The root node\", \"Terminal nodes\", \"Tests\", \"Edges\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "In the RAM price example, what does the decision tree prediction do after the training range?",
+    "correct_answer": "It stays flat because trees cannot extrapolate",
+    "options": "[\"It keeps following the trend\", \"It drops to zero\", \"It stays flat because trees cannot extrapolate\", \"It matches the linear model\"]",
+    "times_missed": 0
+   },
+   {
+    "type": "multiple_choice",
+    "question": "Which statement about regression is safest for the exam?",
+    "correct_answer": "Regression predicts continuous real numbers",
+    "options": "[\"Regression predicts only whole numbers\", \"Regression needs a categorical target\", \"Regression predicts continuous real numbers\", \"Regression predicts class labels\"]",
+    "times_missed": 0
+   }
+  ]
+ }
+]
