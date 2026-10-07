@@ -85,24 +85,35 @@ def table_cards(ops):
         if op[0] != "table":
             continue
         headers, rows = op[1:3]
+        # Side-by-side comparisons describe each column independently. Their
+        # rows are not equivalent pairs (for example, descriptive versus
+        # diagnostic analytics).
+        if {clean(h) for h in headers} == {"Descriptive Analytics", "Diagnostic Analytics"}:
+            continue
+        if "Kotlin" in headers and "Java" in headers:
+            continue
         if len(rows) < 4:
             continue
         labels = [clean(r[0]) for r in rows]
         if len(set(labels)) != len(labels):
             continue
-        group = []
+        forward = []
+        reverse = []
         for col in range(1, len(headers)):
             values = [clean(r[col]) for r in rows]
             if any(not v for v in values) or len(set(values)) != len(values):
                 continue
+            short_answers = not any(";" in v or v.count(",") > 2 for v in values)
             for i, label in enumerate(labels):
-                others = [values[(i + step) % len(values)] for step in (1, 2, 3)]
-                group.append(card(f"In {heading}, which {clean(headers[col]).lower()} matches {label}?",
-                                  values[i], others))
+                if short_answers:
+                    others = [values[(i + step) % len(values)] for step in (1, 2, 3)]
+                    forward.append(card(f"In {heading}, which {clean(headers[col]).lower()} matches {label}?",
+                                        values[i], others))
                 # Reverse matching gives a different recognition task with short options.
                 label_options = [labels[(i + step) % len(labels)] for step in (1, 2, 3)]
-                group.append(card(f"In {heading}, which {clean(headers[0]).lower()} matches: {values[i]}?",
-                                  label, label_options))
+                reverse.append(card(f"In {heading}, which {clean(headers[0]).lower()} matches: {values[i]}?",
+                                    label, label_options))
+        group = forward + reverse
         if group:
             groups.append(group)
     result = []
@@ -149,16 +160,44 @@ EXTRA = {
         ("Which statement corrects the slide's 'casual relationships' typo?", "Causal relationships", ["Casual relationships", "Correlational predictions", "Categorical forecasts"]),
     ],
     ("StatAna", 3): [
+        ("Which predictive-process stage defines the modeling objective and acceptance criteria?", "Project Design", ["Data Sampling", "Data Modification", "Model Validation"]),
+        ("Which predictive-process stage extracts data and applies filters?", "Data Sampling", ["Project Design", "Data Exploration", "Model Development"]),
+        ("Which predictive-process stage identifies trends, anomalies, and correlations?", "Data Exploration", ["Project Design", "Data Modification", "Model Validation"]),
+        ("Which predictive-process stage includes cleaning, transformation, and feature selection?", "Data Modification", ["Data Sampling", "Project Design", "Model Validation"]),
+        ("Which predictive-process stage compares modeling techniques and selects a methodology?", "Model Development", ["Data Exploration", "Data Sampling", "Project Design"]),
+        ("Which predictive-process stage reviews performance with business and subject-matter feedback?", "Model Validation", ["Data Sampling", "Data Exploration", "Project Design"]),
+        ("Which data split trains the algorithm?", "Training data", ["Validation data", "Testing data", "Original data"]),
+        ("Which data split tunes the model while it is being built?", "Validation data", ["Testing data", "Original data", "Deployment data"]),
+        ("Which data split provides the final performance evaluation?", "Testing data", ["Training data", "Validation data", "Exploration data"]),
+        ("In the regression ANOVA table, which sum of squares is explained by the predictors?", "Regression SS", ["Residual SS", "Total SS", "Error MS"]),
+        ("In the regression ANOVA table, which sum of squares is unexplained error?", "Residual SS", ["Regression SS", "Total SS", "Regression MS"]),
+        ("For 140 observations and three predictors, what is the residual ANOVA degrees of freedom?", "136", ["3", "139", "140"]),
+        ("What does a very small ANOVA Significance F establish for this regression?", "At least one predictor is significant", ["Every predictor is significant", "No predictor is significant", "The model has no residual error"]),
         ("At the 0.05 level, which ad-spend predictor is insignificant in the regression table?", "Newspaper", ["TV", "Radio", "Intercept"]),
         ("What is the regression table's R Square?", "0.893710", ["0.891366", "0.94536", "1.736514"]),
         ("What fitted model is printed on the p28 slide?", "Sales = 2.98 + 0.047 x TV + 0.178 x Radio", ["Sales = 3.045 + 0.047 x TV + 0.180 x Radio", "Sales = 2.98 + 0.178 x TV + 0.047 x Radio", "Sales = 2.98 + 0.047 x TV - 0.178 x Radio"]),
         ("Which forecast measure divides absolute error by actual Y?", "MAPE", ["MAE", "MSE", "RMSE"]),
     ],
     ("MobProg", 1): [
+        ("Which Android advantage lets developers inspect and modify the platform code?", "Open Source", ["Closed Source", "No app integration", "No development tools"]),
+        ("Which Android advantage describes apps working with one another?", "Inter App Integration", ["Limited community reach", "No multimedia", "No messaging"]),
+        ("Which capability is listed as an Android feature?", "Multi-touch", ["No wireless connectivity", "No storage", "No messaging"]),
+        ("Which Android feature covers wireless communication?", "Connectivity", ["No networking", "No database", "No multimedia"]),
+        ("Which Android release is paired with split-screen and data saver?", "Nougat", ["Lollipop", "Oreo", "Pie"]),
+        ("Which Android release is paired with Picture-in-Picture and adaptive icons?", "Oreo", ["Nougat", "Marshmallow", "Pie"]),
+        ("Which Android release is paired with scrolling screenshots and one-handed mode?", "Snow Cone", ["Tiramisu", "Red Velvet Cake", "Upside Down Cake"]),
+        ("Which Android release is paired with protected PIN and Health Connect?", "Upside Down Cake", ["Tiramisu", "Vanilla Ice Cream", "Baklava"]),
+        ("Which Android version is Cinnamon Bun in the corrected image notes?", "17", ["14", "15", "16"]),
+        ("Which Android version is Tiramisu in the detailed slide?", "13 (2022)", ["13 (2023)", "12 (2022)", "14 (2023)"]),
         ("Which runtime appears in the supplied Android architecture diagram?", "Dalvik", ["ART only", "JVM only", "Node.js"]),
         ("Which runtime does the Lollipop version slide name?", "ART", ["Dalvik", "JVM", "V8"]),
     ],
     ("MobProg", 2): [
+        ("Which Android Studio menu path starts a new project?", "File > New > New Project", ["File > Open > Layout", "Run > Create Device", "Tools > SDK > Finish"]),
+        ("Which example project name appears in the written steps?", "My First App", ["Hello Android", "New Activity", "Android Studio"]),
+        ("Which package name appears in the written steps?", "com.example.myfirstapp", ["com.example.helloandroid", "org.android.myfirstapp", "com.myfirstapp.example"]),
+        ("Which API level is selected in the M2 Minimum SDK example?", "API 24", ["API 16", "API 34", "API 37"]),
+        ("Which Android version is paired with the selected API 24?", "Android 7.0 Nougat", ["Android 4.1 Jelly Bean", "Android 13 Tiramisu", "Android 8.0 Oreo"]),
         ("Which project template do the written M2 steps name?", "Empty Activity", ["Empty Views Activity", "Basic Views Activity", "No Activity"]),
         ("Which template is selected in the M2 screenshot?", "Empty Views Activity", ["Empty Activity", "Basic Views Activity", "No Activity"]),
         ("Which Android Studio target requires USB debugging?", "Real device", ["Emulator", "Layout Editor", "Device Manager"]),
@@ -171,6 +210,7 @@ EXTRA = {
         ("Which IDE part reports warnings and messages?", "Status Bar", ["Toolbar", "Navigation Bar", "Tool Window Bar"]),
     ],
     ("MobProg", 3): [
+        ("Which keyword declares a Kotlin function?", "fun", ["val", "var", "open"]),
         ("Which Kotlin modifier lets a class be inherited?", "open", ["lateinit", "val", "var"]),
         ("Which Kotlin symbol asserts a value is not null?", "!!", ["?", "//", "::"]),
         ("Which shortcut converts a Java file to Kotlin in the slides?", "Ctrl+Alt+Shift+K", ["Ctrl+Alt+K", "Ctrl+Shift+K", "Alt+Shift+K"]),
@@ -182,6 +222,14 @@ EXTRA = {
         ("How are files in assets/ accessed?", "AssetManager", ["R.raw", "R.layout", "R.string"]),
     ],
     ("MobProg", 5): [
+        ("What does an Android Activity represent?", "One app screen", ["The entire operating system", "A database table", "A resource folder"]),
+        ("Which callback first runs when an activity is created?", "onCreate()", ["onStart()", "onResume()", "onRestart()"]),
+        ("Which callback runs when an activity becomes visible?", "onStart()", ["onCreate()", "onPause()", "onDestroy()"]),
+        ("Which callback runs when the user starts interacting with an activity?", "onResume()", ["onStart()", "onStop()", "onDestroy()"]),
+        ("Which callback runs before the activity is destroyed by the system in the callback table?", "onDestroy()", ["onRestart()", "onResume()", "onStart()"]),
+        ("Which callback runs when an activity restarts after being stopped?", "onRestart()", ["onCreate()", "onPause()", "onDestroy()"]),
+        ("Which file contains the Kotlin screen behavior in the M5 walkthrough?", "MainActivity.kt", ["activity_main.xml", "AndroidManifest.xml", "strings.xml"]),
+        ("Which file contains the main screen layout in the M5 walkthrough?", "activity_main.xml", ["MainActivity.kt", "AndroidManifest.xml", "build.gradle"]),
         ("Which callback marks loss of interaction as another activity comes forward?", "onPause()", ["onStop()", "onDestroy()", "onRestart()"]),
         ("Which callback marks that the activity is no longer visible?", "onStop()", ["onPause()", "onResume()", "onStart()"]),
         ("Which file declares an Activity?", "AndroidManifest.xml", ["MainActivity.kt", "activity_main.xml", "build.gradle"]),
@@ -198,7 +246,7 @@ def cards_for(kind, number, ops):
     chosen = extras[:]
     seen = {c["question"] for c in chosen}
     for candidate in candidates:
-        if len(chosen) >= 30:
+        if len(chosen) >= 40:
             break
         if candidate["question"] not in seen:
             chosen.append(candidate)
