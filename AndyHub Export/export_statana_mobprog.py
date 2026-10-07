@@ -126,6 +126,12 @@ def table_cards(ops):
 # facts from the reviewer builders and their slide transcriptions, not generated text.
 EXTRA = {
     ("StatAna", 1): [
+        ("Which data-value-chain stage stores, queries, and joins transaction records?", "Database", ["Analytics", "Application", "Decision"]),
+        ("Which data-value-chain stage turns analysis into an implemented action?", "Decision", ["Database", "Analytics", "Transactional Data"]),
+        ("Which data source collects answers through questionnaires?", "Surveys", ["Data poolers", "Transactional data", "Unstructured data"]),
+        ("What does a moving average help reveal by smoothing observations over past periods?", "Trends", ["Database joins", "Transaction IDs", "Data types"]),
+        ("Which chart sorts bars by frequency or cost and adds a cumulative percentage line?", "Pareto chart", ["Control chart", "Scatter plot", "Pivot table"]),
+        ("Which Excel tool summarizes data using row, column, filter, and value fields?", "Pivot table", ["Moving average", "Pareto chart", "Control chart"]),
         ("Which Excel function averages values meeting one criterion?", "AVERAGEIF", ["AVERAGE", "AVERAGEIFS", "SUMIF"]),
         ("Which Excel function counts cells containing numbers?", "COUNT", ["COUNTA", "COUNTBLANK", "COUNTIF"]),
         ("Which Excel function counts nonblank cells?", "COUNTA", ["COUNT", "COUNTBLANK", "COUNTIF"]),
@@ -155,7 +161,7 @@ EXTRA = {
         ("What data period do both descriptive and diagnostic analytics use in the slide comparison?", "Historical data", ["Only future data", "Only simulated data", "Only real-time data"]),
         ("Which named method assesses factors moving together?", "Correlation coefficient", ["T-test", "ANOVA", "Chi-Square"]),
         ("Which named method is associated with an F-test?", "ANOVA", ["Correlation", "Chi-Square", "Moving average"]),
-        ("Which named test is listed in the module objectives without a worked example?", "One-way ANOVA", ["Multiple regression", "MAPE", "SPC"]),
+        ("Which test do the Module 2 objectives name without giving a worked example?", "One-way ANOVA", ["Multiple regression", "MAPE", "SPC"]),
         ("Which statement about association is correct?", "It need not be linear", ["It is always linear", "It proves causation", "It is always positive"]),
         ("Which statement corrects the slide's 'casual relationships' typo?", "Causal relationships", ["Casual relationships", "Correlational predictions", "Categorical forecasts"]),
     ],
@@ -178,10 +184,17 @@ EXTRA = {
         ("What fitted model is printed on the p28 slide?", "Sales = 2.98 + 0.047 x TV + 0.178 x Radio", ["Sales = 3.045 + 0.047 x TV + 0.180 x Radio", "Sales = 2.98 + 0.178 x TV + 0.047 x Radio", "Sales = 2.98 + 0.047 x TV - 0.178 x Radio"]),
         ("Which forecast measure divides absolute error by actual Y?", "MAPE", ["MAE", "MSE", "RMSE"]),
     ],
+    ("StatAna", 4): [
+        ("Which prescriptive-process step gathers historical and real-time data from multiple sources?", "Data Collection and Integration", ["Predictive Modeling", "Scenario Analysis", "Optimization"]),
+        ("Which prescriptive-process step forecasts potential future outcomes?", "Predictive Modeling", ["Data Collection and Integration", "Scenario Analysis", "Action Recommendation"]),
+        ("Which prescriptive-process step evaluates possible situations and their implications?", "Scenario Analysis", ["Predictive Modeling", "Optimization", "Action Recommendation"]),
+        ("Which prescriptive-process step uses algorithms to find the best course of action?", "Optimization", ["Scenario Analysis", "Data Collection and Integration", "Action Recommendation"]),
+        ("Which prescriptive-process step delivers actionable insights to decision-makers?", "Action Recommendation", ["Optimization", "Predictive Modeling", "Scenario Analysis"]),
+    ],
     ("MobProg", 1): [
         ("Which Android advantage lets developers inspect and modify the platform code?", "Open Source", ["Closed Source", "No app integration", "No development tools"]),
         ("Which Android advantage describes apps working with one another?", "Inter App Integration", ["Limited community reach", "No multimedia", "No messaging"]),
-        ("Which capability is listed as an Android feature?", "Multi-touch", ["No wireless connectivity", "No storage", "No messaging"]),
+        ("Which Android feature lets the screen register multiple touch points?", "Multi-touch", ["Messaging", "Storage", "Connectivity"]),
         ("Which Android feature covers wireless communication?", "Connectivity", ["No networking", "No database", "No multimedia"]),
         ("Which Android release is paired with split-screen and data saver?", "Nougat", ["Lollipop", "Oreo", "Pie"]),
         ("Which Android release is paired with Picture-in-Picture and adaptive icons?", "Oreo", ["Nougat", "Marshmallow", "Pie"]),
@@ -193,6 +206,13 @@ EXTRA = {
         ("Which runtime does the Lollipop version slide name?", "ART", ["Dalvik", "JVM", "V8"]),
     ],
     ("MobProg", 2): [
+        ("What must be enabled on a real Android device before USB debugging?", "Developer options", ["Layout Editor", "Device Manager", "AndroidX artifacts"]),
+        ("Which Android Studio action finishes creating a configured project?", "Finish", ["Next", "Run", "Debug"]),
+        ("Which project form field names the app?", "Name", ["Language", "Minimum SDK", "Save location"]),
+        ("Which project form field identifies the app's Java package?", "Package name", ["Name", "Language", "Minimum SDK"]),
+        ("Which Android Studio area contains controls to run the app?", "Toolbar", ["Status Bar", "Navigation Bar", "Editor Window"]),
+        ("Which Android Studio area lets you navigate the project and open files?", "Navigation Bar", ["Toolbar", "Status Bar", "Editor Window"]),
+        ("Which Android Studio target is created in Device Manager?", "Emulator", ["Real device", "Layout Editor", "Status Bar"]),
         ("Which Android Studio menu path starts a new project?", "File > New > New Project", ["File > Open > Layout", "Run > Create Device", "Tools > SDK > Finish"]),
         ("Which example project name appears in the written steps?", "My First App", ["Hello Android", "New Activity", "Android Studio"]),
         ("Which package name appears in the written steps?", "com.example.myfirstapp", ["com.example.helloandroid", "org.android.myfirstapp", "com.myfirstapp.example"]),
@@ -210,6 +230,19 @@ EXTRA = {
         ("Which IDE part reports warnings and messages?", "Status Bar", ["Toolbar", "Navigation Bar", "Tool Window Bar"]),
     ],
     ("MobProg", 3): [
+        ("Which Kotlin declaration permits reassignment of its reference?", "var", ["val", "fun", "open"]),
+        ("Which Kotlin declaration keeps its reference fixed after initialization?", "val", ["var", "fun", "lateinit"]),
+        ("Which Kotlin symbol permits a nullable type?", "?", ["!!", "::", "//"]),
+        ("Which Kotlin construct chooses among alternatives such as numbered days?", "when", ["while", "fun", "class"]),
+        ("What does the slide's if expression return when time is 20?", "Good evening.", ["Good day.", "Invalid day.", "Thursday"]),
+        ("Which class modifier lets MyChildClass inherit MyParentClass?", "open", ["lateinit", "var", "val"]),
+        ("Which Kotlin block runs as an object is initialized?", "init", ["when", "fun", "else"]),
+        ("What happens when an argument with a constructor default is omitted?", "The default value is used", ["The class cannot be created", "The argument becomes null", "The constructor is skipped"]),
+        ("What can a primary constructor receive directly in the Car example?", "Properties", ["Android resources", "Java packages", "Manifest entries"]),
+        ("Which Android Studio action changes a Java source file to a .kt file?", "Convert Java File to Kotlin File", ["Create Device", "Open Layout Editor", "Run Application"]),
+        ("Where is a new Kotlin Class/File created in the paste conversion workflow?", "The project's java folder", ["The res folder", "The assets folder", "The manifest folder"]),
+        ("What does Android Studio convert after Java code is pasted into a Kotlin file?", "The pasted code", ["The project name", "The emulator", "The manifest"]),
+        ("What bytecode target does the slide show for both Java and Kotlin?", "JVM bytecode", ["Dalvik source code", "XML layout", "Android manifest"]),
         ("Which keyword declares a Kotlin function?", "fun", ["val", "var", "open"]),
         ("Which Kotlin modifier lets a class be inherited?", "open", ["lateinit", "val", "var"]),
         ("Which Kotlin symbol asserts a value is not null?", "!!", ["?", "//", "::"]),
@@ -217,11 +250,15 @@ EXTRA = {
         ("What is the corrected reading of the Kotlin comparison slide's exception row?", "No checked exceptions", ["Kotlin removed all exceptions", "Only checked exceptions", "No exception handling"]),
     ],
     ("MobProg", 4): [
+        ("Which Android component responds to broadcasts from apps or the system?", "Broadcast Receiver", ["Activity", "Service", "Content Provider"]),
+        ("Which Android component supplies data to other apps on request?", "Content Provider", ["Activity", "Service", "Broadcast Receiver"]),
         ("Which directory is preferred for property animation XML?", "animator/", ["anim/", "layout/", "drawable/"]),
         ("Which directory is described for tween animation XML?", "anim/", ["animator/", "layout/", "values/"]),
         ("How are files in assets/ accessed?", "AssetManager", ["R.raw", "R.layout", "R.string"]),
     ],
     ("MobProg", 5): [
+        ("Which callback marks an activity becoming visible after creation?", "onStart()", ["onCreate()", "onPause()", "onDestroy()"]),
+        ("Which callback runs after a stopped activity restarts?", "onRestart()", ["onPause()", "onDestroy()", "onCreate()"]),
         ("What does an Android Activity represent?", "One app screen", ["The entire operating system", "A database table", "A resource folder"]),
         ("Which callback first runs when an activity is created?", "onCreate()", ["onStart()", "onResume()", "onRestart()"]),
         ("Which callback runs when an activity becomes visible?", "onStart()", ["onCreate()", "onPause()", "onDestroy()"]),
@@ -238,9 +275,39 @@ EXTRA = {
 }
 
 
+REQUIRED_TOPICS = {
+    ("StatAna", 1): {
+        "data value chain": "Which data-value-chain stage turns analysis into an implemented action?",
+        "data sources": "Which data source collects answers through questionnaires?",
+        "moving averages": "What does a moving average help reveal by smoothing observations over past periods?",
+        "Pareto charts": "Which chart sorts bars by frequency or cost and adds a cumulative percentage line?",
+        "pivot tables": "Which Excel tool summarizes data using row, column, filter, and value fields?",
+        "Excel functions": "Which Excel function averages values meeting one criterion?",
+    },
+    ("StatAna", 2): {"diagnostic analytics": "What question does diagnostic analytics answer?"},
+    ("StatAna", 3): {"predictive process": "Which predictive-process stage defines the modeling objective and acceptance criteria?"},
+    ("StatAna", 4): {
+        "data collection": "Which prescriptive-process step gathers historical and real-time data from multiple sources?",
+        "predictive modeling": "Which prescriptive-process step forecasts potential future outcomes?",
+        "scenario analysis": "Which prescriptive-process step evaluates possible situations and their implications?",
+        "optimization": "Which prescriptive-process step uses algorithms to find the best course of action?",
+        "action recommendation": "Which prescriptive-process step delivers actionable insights to decision-makers?",
+    },
+    ("MobProg", 1): {"Android features": "Which Android advantage lets developers inspect and modify the platform code?"},
+    ("MobProg", 2): {"project setup": "Which Android Studio menu path starts a new project?"},
+    ("MobProg", 3): {"Kotlin": "Which keyword declares a Kotlin function?"},
+    ("MobProg", 4): {"components": "Which Android component responds to broadcasts from apps or the system?"},
+    ("MobProg", 5): {"activity lifecycle": "Which callback first runs when an activity is created?"},
+}
+
+
 def cards_for(kind, number, ops):
     extras = [card(*row) for row in EXTRA.get((kind, number), [])]
-    candidates = table_cards(ops)
+    candidates = [c for c in table_cards(ops)
+                  if not any(";" in value or value.count(",") >= 3
+                             for value in (c["question"], c["correct_answer"]))
+                  and not (kind == "StatAna" and number == 1
+                           and c["question"].startswith("In Descriptive Analytics,"))]
     # Author-verified corrections have priority; distribute table cards across
     # all tables by their existing source order.
     chosen = extras[:]
@@ -253,6 +320,9 @@ def cards_for(kind, number, ops):
             seen.add(candidate["question"])
     if len(chosen) < 25:
         raise ValueError(f"Only {len(chosen)} cards for {kind} M{number}")
+    for topic, question in REQUIRED_TOPICS.get((kind, number), {}).items():
+        if not any(c["question"] == question for c in chosen):
+            raise ValueError(f"Missing {kind} M{number} topic: {topic}")
     return chosen
 
 
