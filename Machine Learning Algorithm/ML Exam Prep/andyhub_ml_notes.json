@@ -1587,10 +1587,598 @@
       }
      ],
      "comparisons": []
+    },
+    {
+     "heading": "Code and Imports: Notebook Code",
+     "summary": "Reported exam format: fill-in-the-blank imports (like import ____ as np) and two 7-point code items where you complete missing code from the module. The table lists every import the module uses. The examples below are the prof's M2 notebook and the Module 1 preprocessing notebook, one line of code per step.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [
+      {
+       "problem": "Code 1. k-NN on iris (notebook)",
+       "steps": [
+        "from sklearn.datasets import load_iris",
+        "iris_dataset = load_iris()",
+        "from sklearn.model_selection import train_test_split",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    iris_dataset['data'], iris_dataset['target'], random_state=0)",
+        "from sklearn.neighbors import KNeighborsClassifier",
+        "knn = KNeighborsClassifier(n_neighbors=3)",
+        "knn.fit(X_train, y_train)",
+        "y_pred = knn.predict(X_test)",
+        "print(\"Test set score: {:.2f}\".format(knn.score(X_test, y_test)))",
+        "print(\"Test set score: {:.2f}\".format(np.mean(y_pred == y_test)))",
+        "X_new = np.array([[40, 80, 70, 30]])",
+        "prediction = knn.predict(X_new)",
+        "print(\"Predicted target name:\", iris_dataset['target_names'][prediction])"
+       ],
+       "answer": "Order: load, split, instantiate with n_neighbors, fit(train), predict, score(test). X_new is 2-D (list inside a list)."
+      },
+      {
+       "problem": "Code 2. k-NN on breast cancer with the complexity curve (notebook)",
+       "steps": [
+        "from sklearn.datasets import load_breast_cancer",
+        "cancer = load_breast_cancer()",
+        "df = pd.DataFrame(data=cancer.data, columns=cancer.feature_names)",
+        "df['target'] = cancer.target",
+        "X = df.drop(columns='target')",
+        "y = df['target']",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=66)",
+        "training_accuracy = []",
+        "test_accuracy = []",
+        "neighbors_settings = range(1, 10)",
+        "for n_neighbors in neighbors_settings:",
+        "    knn = KNeighborsClassifier(n_neighbors=n_neighbors)",
+        "    knn.fit(X_train, y_train)",
+        "    training_accuracy.append(knn.score(X_train, y_train))",
+        "    test_accuracy.append(knn.score(X_test, y_test))",
+        "plt.plot(neighbors_settings, training_accuracy, label=\"training accuracy\")",
+        "plt.plot(neighbors_settings, test_accuracy, label=\"test accuracy\")",
+        "plt.ylabel(\"Accuracy\")",
+        "plt.xlabel(\"n_neighbors\")",
+        "plt.legend()",
+        "knn = KNeighborsClassifier(n_neighbors=6)",
+        "knn.fit(X_train, y_train)"
+       ],
+       "answer": "stratify=y keeps class proportions the same. 569 samples: 212 malignant, 357 benign. The notebook ends with k = 6 picked from the curve."
+      },
+      {
+       "problem": "Code 3. Module 1 preprocessing: imputation and scaling",
+       "steps": [
+        "import numpy as np",
+        "import pandas as pd",
+        "import matplotlib.pyplot as plt",
+        "from sklearn.impute import SimpleImputer",
+        "df = pd.read_csv('diabetes_NaN_age 3.csv')",
+        "imputer_mean = SimpleImputer(strategy='mean', missing_values=np.nan)",
+        "df['Age'] = imputer_mean.fit_transform(df[['Age']]).ravel()",
+        "age_mean = df['Age'].mean()",
+        "df.loc[df['Age'].isna(), 'Age'] = age_mean",
+        "from sklearn.preprocessing import StandardScaler",
+        "scaler = StandardScaler()",
+        "numeric_cols = df.select_dtypes(include='number').columns",
+        "df[numeric_cols] = scaler.fit_transform(df[numeric_cols])",
+        "from sklearn.preprocessing import MinMaxScaler",
+        "scaler = MinMaxScaler()",
+        "df[numeric_cols] = scaler.fit_transform(df[numeric_cols])"
+       ],
+       "answer": "fit_transform needs a 2-D input, so df[['Age']] with double brackets; .ravel() flattens it back. StandardScaler = mean 0, std 1. MinMaxScaler = 0 to 1."
+      }
+     ],
+     "common_mistakes": [
+      "train_test_split returns four things in the order X_train, X_test, y_train, y_test.",
+      "fit takes train data; score takes test data. n_neighbors is the k parameter.",
+      "Double brackets df[['Age']] give a table (2-D); single brackets give one column. fit_transform needs the table.",
+      "Naive Bayes has no code on the slides: only the class names GaussianNB (continuous), BernoulliNB (binary), MultinomialNB (counts)."
+     ],
+     "source_refs": [
+      "M1-MAIN-1.pdf",
+      "M2 - Supervised Learning - Main.pdf"
+     ],
+     "memory_aids": [
+      {
+       "label": "Import names",
+       "text": "Package = what it does: datasets, model_selection (splitting), neighbors, impute, preprocessing (scalers), metrics. The class name is the one with capitals."
+      },
+      {
+       "label": "Pipeline order",
+       "text": "Load, split, instantiate, fit on train, predict, score on test."
+      }
+     ],
+     "comparisons": [
+      {
+       "title": "Imports From The Module",
+       "columns": [
+        "What",
+        "Import line"
+       ],
+       "rows": [
+        [
+         "NumPy",
+         "import numpy as np"
+        ],
+        [
+         "pandas",
+         "import pandas as pd"
+        ],
+        [
+         "Matplotlib",
+         "import matplotlib.pyplot as plt"
+        ],
+        [
+         "mglearn",
+         "import mglearn"
+        ],
+        [
+         "Legend patches",
+         "import matplotlib.patches as mpatches"
+        ],
+        [
+         "Iris data",
+         "from sklearn.datasets import load_iris"
+        ],
+        [
+         "Breast cancer data",
+         "from sklearn.datasets import load_breast_cancer"
+        ],
+        [
+         "Moons data",
+         "from sklearn.datasets import make_moons"
+        ],
+        [
+         "California housing",
+         "from sklearn.datasets import fetch_california_housing"
+        ],
+        [
+         "Forge / wave data",
+         "mglearn.datasets.make_forge() and mglearn.datasets.make_wave(n_samples=40)"
+        ],
+        [
+         "Train/test split",
+         "from sklearn.model_selection import train_test_split"
+        ],
+        [
+         "k-NN classifier",
+         "from sklearn.neighbors import KNeighborsClassifier"
+        ],
+        [
+         "k-NN regressor",
+         "from sklearn.neighbors import KNeighborsRegressor"
+        ],
+        [
+         "Accuracy",
+         "from sklearn.metrics import accuracy_score"
+        ],
+        [
+         "Missing-value imputer",
+         "from sklearn.impute import SimpleImputer"
+        ],
+        [
+         "Z-score scaling",
+         "from sklearn.preprocessing import StandardScaler"
+        ],
+        [
+         "0 to 1 scaling",
+         "from sklearn.preprocessing import MinMaxScaler"
+        ],
+        [
+         "Linear regression",
+         "from sklearn.linear_model import LinearRegression"
+        ],
+        [
+         "Ridge",
+         "from sklearn.linear_model import Ridge"
+        ],
+        [
+         "Lasso",
+         "from sklearn.linear_model import Lasso"
+        ],
+        [
+         "Logistic regression",
+         "from sklearn.linear_model import LogisticRegression"
+        ],
+        [
+         "Linear SVM",
+         "from sklearn.svm import LinearSVC"
+        ],
+        [
+         "Kernel SVM",
+         "from sklearn.svm import SVC"
+        ],
+        [
+         "Decision tree",
+         "from sklearn.tree import DecisionTreeClassifier (regression: DecisionTreeRegressor)"
+        ],
+        [
+         "Export a tree",
+         "from sklearn.tree import export_graphviz, then import graphviz"
+        ],
+        [
+         "Random forest",
+         "from sklearn.ensemble import RandomForestClassifier"
+        ],
+        [
+         "Gradient boosting",
+         "from sklearn.ensemble import GradientBoostingClassifier"
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "heading": "Code: M2 Slide Code",
+     "summary": "Everything here is code printed in the M2 slide images, read slide by slide. Variable names are the slides' own: clf (k-NN), reg (regressor), ridge, lasso, logreg, tree, forest, gbrt, svc.",
+     "key_terms": [],
+     "properties": [],
+     "worked_examples": [
+      {
+       "problem": "Code 4. k-NN classifier, slide version (clf)",
+       "steps": [
+        "from sklearn.model_selection import train_test_split",
+        "X, y = mglearn.datasets.make_forge()",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)",
+        "from sklearn.neighbors import KNeighborsClassifier",
+        "clf = KNeighborsClassifier(n_neighbors=3)",
+        "clf.fit(X_train, y_train)",
+        "print(\"Test set predictions: {}\".format(clf.predict(X_test)))",
+        "print(\"Test set accuracy: {:.2f}\".format(clf.score(X_test, y_test)))"
+       ],
+       "answer": "The slides call the model clf; the notebook calls it knn. Know both names."
+      },
+      {
+       "problem": "Code 4b. k-NN complexity curve, slide version",
+       "steps": [
+        "from sklearn.datasets import load_breast_cancer",
+        "cancer = load_breast_cancer()",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    cancer.data, cancer.target, stratify=cancer.target, random_state=66)",
+        "training_accuracy = []",
+        "test_accuracy = []",
+        "neighbors_settings = range(1, 11)",
+        "for n_neighbors in neighbors_settings:",
+        "    clf = KNeighborsClassifier(n_neighbors=n_neighbors)",
+        "    clf.fit(X_train, y_train)",
+        "    training_accuracy.append(clf.score(X_train, y_train))",
+        "    test_accuracy.append(clf.score(X_test, y_test))",
+        "plt.plot(neighbors_settings, training_accuracy, label=\"training accuracy\")",
+        "plt.plot(neighbors_settings, test_accuracy, label=\"test accuracy\")",
+        "plt.ylabel(\"Accuracy\")",
+        "plt.xlabel(\"n_neighbors\")",
+        "plt.legend()"
+       ],
+       "answer": "The slide loops k from 1 to 10 (range(1, 11)); the notebook loops 1 to 9."
+      },
+      {
+       "problem": "Code 5. k-NN regressor",
+       "steps": [
+        "from sklearn.neighbors import KNeighborsRegressor",
+        "X, y = mglearn.datasets.make_wave(n_samples=40)",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)",
+        "reg = KNeighborsRegressor(n_neighbors=3)",
+        "reg.fit(X_train, y_train)",
+        "print(\"Test set predictions:\\n{}\".format(reg.predict(X_test)))",
+        "print(\"Test set R^2: {:.2f}\".format(reg.score(X_test, y_test)))"
+       ],
+       "answer": "For a regressor, score() is R squared, not accuracy."
+      },
+      {
+       "problem": "Code 6. Linear regression (OLS)",
+       "steps": [
+        "from sklearn.linear_model import LinearRegression",
+        "from sklearn.model_selection import train_test_split",
+        "import mglearn",
+        "X, y = mglearn.datasets.make_wave(n_samples=60)",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)",
+        "lr = LinearRegression().fit(X_train, y_train)",
+        "print(\"lr.coef_: {}\".format(lr.coef_))",
+        "print(\"lr.intercept_: {}\".format(lr.intercept_))",
+        "print(\"Training set score: {:.2f}\".format(lr.score(X_train, y_train)))",
+        "print(\"Test set score: {:.2f}\".format(lr.score(X_test, y_test)))"
+       ],
+       "answer": "coef_ holds the weights; intercept_ holds b."
+      },
+      {
+       "problem": "Code 6b. Ridge and Lasso",
+       "steps": [
+        "from sklearn.linear_model import Ridge",
+        "ridge = Ridge().fit(X_train, y_train)",
+        "print(\"Training set score: {:.2f}\".format(ridge.score(X_train, y_train)))",
+        "print(\"Test set score: {:.2f}\".format(ridge.score(X_test, y_test)))",
+        "from sklearn.linear_model import Lasso",
+        "import numpy as np",
+        "lasso = Lasso().fit(X_train, y_train)",
+        "lasso001 = Lasso(alpha=0.01, max_iter=100000).fit(X_train, y_train)",
+        "lasso00001 = Lasso(alpha=0.0001, max_iter=100000).fit(X_train, y_train)",
+        "plt.plot(ridge.coef_, 's', label=\"Ridge alpha=1\")",
+        "plt.plot(lasso.coef_, 's', label=\"Lasso alpha=1\")"
+       ],
+       "answer": "Ridge default alpha = 1.0. Lasso default alpha = 1.0 underfits (4 of 105 features); alpha=0.01 with max_iter=100000 works; alpha=0.0001 overfits (96 of 105 features)."
+      },
+      {
+       "problem": "Code 7. Logistic regression and LinearSVC",
+       "steps": [
+        "from sklearn.linear_model import LogisticRegression",
+        "from sklearn.svm import LinearSVC",
+        "import matplotlib.pyplot as plt",
+        "import mglearn",
+        "for model, ax in zip([LinearSVC(), LogisticRegression()], axes):",
+        "    clf = model.fit(X, y)",
+        "    mglearn.plots.plot_2d_separator(clf, X, fill=False, eps=0.5, ax=ax, alpha=.7)",
+        "cancer = load_breast_cancer()",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    cancer.data, cancer.target, stratify=cancer.target, random_state=42)",
+        "logreg = LogisticRegression().fit(X_train, y_train)",
+        "logreg100 = LogisticRegression(C=100).fit(X_train, y_train)",
+        "logreg001 = LogisticRegression(C=0.01).fit(X_train, y_train)",
+        "lr_l1 = LogisticRegression(C=C, penalty=\"l1\", solver='liblinear').fit(X_train, y_train)"
+       ],
+       "answer": "Default C = 1.0 with an L2 penalty (train 0.948, test 0.944). C=100 = weaker regularization; C=0.01 = stronger. penalty='l1' needs solver='liblinear'."
+      },
+      {
+       "problem": "Code 8. Decision tree and export",
+       "steps": [
+        "from sklearn.tree import DecisionTreeClassifier",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    cancer.data, cancer.target, stratify=cancer.target, random_state=42)",
+        "tree = DecisionTreeClassifier(random_state=0)",
+        "tree.fit(X_train, y_train)",
+        "print(\"Accuracy on training set: {:.3f}\".format(tree.score(X_train, y_train)))",
+        "print(\"Accuracy on test set: {:.3f}\".format(tree.score(X_test, y_test)))",
+        "tree = DecisionTreeClassifier(max_depth=4, random_state=0)",
+        "tree.fit(X_train, y_train)",
+        "from sklearn.tree import export_graphviz",
+        "export_graphviz(tree, out_file=\"tree.dot\", class_names=[\"malignant\", \"benign\"],",
+        "                feature_names=cancer.feature_names, impurity=False, filled=True)",
+        "import graphviz",
+        "with open(\"tree.dot\") as f:",
+        "    dot_graph = f.read()",
+        "graphviz.Source(dot_graph)"
+       ],
+       "answer": "Full tree: train 1.000, test 0.937. max_depth=4 (pre-pruning): train 0.988, test 0.951."
+      },
+      {
+       "problem": "Code 8b. Tree regressor vs linear regression",
+       "steps": [
+        "from sklearn.tree import DecisionTreeRegressor",
+        "data_train = ram_prices[ram_prices.date < 2000]",
+        "data_test = ram_prices[ram_prices.date >= 2000]",
+        "X_train = data_train.date[:, np.newaxis]",
+        "y_train = np.log(data_train.price)",
+        "tree = DecisionTreeRegressor().fit(X_train, y_train)",
+        "linear_reg = LinearRegression().fit(X_train, y_train)",
+        "X_all = ram_prices.date[:, np.newaxis]",
+        "pred_tree = tree.predict(X_all)",
+        "pred_lr = linear_reg.predict(X_all)",
+        "price_tree = np.exp(pred_tree)",
+        "price_lr = np.exp(pred_lr)"
+       ],
+       "answer": "Log-transform the target (np.log), then undo it (np.exp). The tree cannot extrapolate past the training dates."
+      },
+      {
+       "problem": "Code 9. Random forest",
+       "steps": [
+        "from sklearn.ensemble import RandomForestClassifier",
+        "from sklearn.datasets import make_moons",
+        "X, y = make_moons(n_samples=100, noise=0.25, random_state=3)",
+        "X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y,",
+        "                                                    random_state=42)",
+        "forest = RandomForestClassifier(n_estimators=5, random_state=2)",
+        "forest.fit(X_train, y_train)",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    cancer.data, cancer.target, random_state=0)",
+        "forest = RandomForestClassifier(n_estimators=100, random_state=0)",
+        "forest.fit(X_train, y_train)",
+        "print(\"Accuracy on training set: {:.3f}\".format(forest.score(X_train, y_train)))",
+        "print(\"Accuracy on test set: {:.3f}\".format(forest.score(X_test, y_test)))"
+       ],
+       "answer": "n_estimators = number of trees (5 on moons, 100 on breast cancer). The 100-tree forest scores 0.972 on test."
+      },
+      {
+       "problem": "Code 10. Gradient boosting",
+       "steps": [
+        "from sklearn.ensemble import GradientBoostingClassifier",
+        "X_train, X_test, y_train, y_test = train_test_split(",
+        "    cancer.data, cancer.target, random_state=0)",
+        "gbrt = GradientBoostingClassifier(random_state=0)",
+        "gbrt.fit(X_train, y_train)",
+        "print(\"Accuracy on training set: {:.3f}\".format(gbrt.score(X_train, y_train)))",
+        "print(\"Accuracy on test set: {:.3f}\".format(gbrt.score(X_test, y_test)))",
+        "gbrt = GradientBoostingClassifier(random_state=0, max_depth=1)",
+        "gbrt = GradientBoostingClassifier(random_state=0, learning_rate=0.01)"
+       ],
+       "answer": "Defaults: n_estimators=100, max_depth=3, learning_rate=0.1. Overfit fixes: lower max_depth or lower learning_rate."
+      },
+      {
+       "problem": "Code 11. Support vector machines and manual 0-1 scaling",
+       "steps": [
+        "from sklearn.svm import LinearSVC",
+        "linear_svm = LinearSVC().fit(X, y)",
+        "from sklearn.svm import SVC",
+        "svm = SVC(kernel='rbf', C=10, gamma=0.1).fit(X, y)",
+        "svc = SVC()",
+        "svc.fit(X_train, y_train)",
+        "min_on_training = X_train.min(axis=0)",
+        "range_on_training = (X_train - min_on_training).max(axis=0)",
+        "X_train_scaled = (X_train - min_on_training) / range_on_training",
+        "X_test_scaled = (X_test - min_on_training) / range_on_training",
+        "svc = SVC()",
+        "svc.fit(X_train_scaled, y_train)",
+        "svc = SVC(C=1000)",
+        "svc.fit(X_train_scaled, y_train)"
+       ],
+       "answer": "The slides scale by hand, not with MinMaxScaler. The test set reuses the TRAINING min and range. Unscaled SVC: train 1.00, test 0.63. Scaled: 0.948 / 0.951. Scaled with C=1000: 0.988 / 0.972."
+      }
+     ],
+     "common_mistakes": [
+      "The slides scale the SVM data by hand (min_on_training, range_on_training), not with MinMaxScaler. The M1 notebook uses MinMaxScaler.",
+      "The test set must reuse the training set's min and range, never its own.",
+      "Lasso with a small alpha needs a bigger max_iter.",
+      "Trees and forests need no scaling; SVM and k-NN do."
+     ],
+     "source_refs": [
+      "M1-MAIN-1.pdf",
+      "M2 - Supervised Learning - Main.pdf"
+     ],
+     "memory_aids": [
+      {
+       "label": "Same pattern everywhere",
+       "text": "Create the model, fit(X_train, y_train), then score on train and on test. Classifiers report accuracy; regressors report R squared."
+      }
+     ],
+     "comparisons": []
     }
    ],
    "formula_sheet": [],
-   "self_check": [],
+   "self_check": [
+    {
+     "question": "Fill in the blank: import ____ as np",
+     "answer": "import numpy as np"
+    },
+    {
+     "question": "Fill in the blank: import pandas as ____",
+     "answer": "import pandas as pd"
+    },
+    {
+     "question": "Fill in the blank: import matplotlib.____ as plt",
+     "answer": "import matplotlib.pyplot as plt"
+    },
+    {
+     "question": "Fill in the blank: import ____   (the textbook's plotting and dataset helper package)",
+     "answer": "import mglearn"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import load_iris",
+     "answer": "from sklearn.datasets import load_iris"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.datasets import ____   (the 569-sample cancer data)",
+     "answer": "from sklearn.datasets import load_breast_cancer"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.datasets import ____   (the two_moons data)",
+     "answer": "from sklearn.datasets import make_moons"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.model_selection import ____",
+     "answer": "from sklearn.model_selection import train_test_split"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import KNeighborsClassifier",
+     "answer": "from sklearn.neighbors import KNeighborsClassifier"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.neighbors import ____   (k-NN for a continuous target)",
+     "answer": "from sklearn.neighbors import KNeighborsRegressor"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.impute import ____",
+     "answer": "from sklearn.impute import SimpleImputer"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.preprocessing import ____   (z-score scaling)",
+     "answer": "from sklearn.preprocessing import StandardScaler"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.preprocessing import ____   (scales to 0 to 1)",
+     "answer": "from sklearn.preprocessing import MinMaxScaler"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import accuracy_score",
+     "answer": "from sklearn.metrics import accuracy_score"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.linear_model import ____   (ordinary least squares)",
+     "answer": "from sklearn.linear_model import LinearRegression"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.linear_model import ____   (L2 penalty)",
+     "answer": "from sklearn.linear_model import Ridge"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.linear_model import ____   (L1 penalty, can zero out weights)",
+     "answer": "from sklearn.linear_model import Lasso"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.linear_model import ____   (a classifier despite its name)",
+     "answer": "from sklearn.linear_model import LogisticRegression"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import SVC",
+     "answer": "from sklearn.svm import SVC"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.svm import ____   (the linear SVM)",
+     "answer": "from sklearn.svm import LinearSVC"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import DecisionTreeClassifier",
+     "answer": "from sklearn.tree import DecisionTreeClassifier"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.tree import ____   (writes a .dot file)",
+     "answer": "from sklearn.tree import export_graphviz"
+    },
+    {
+     "question": "Fill in the blank: import ____   (shows the .dot file inside Python)",
+     "answer": "import graphviz"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.ensemble import ____   (many independent trees)",
+     "answer": "from sklearn.ensemble import RandomForestClassifier"
+    },
+    {
+     "question": "Fill in the blank: from sklearn.____ import GradientBoostingClassifier",
+     "answer": "from sklearn.ensemble import GradientBoostingClassifier"
+    },
+    {
+     "question": "Fill in the blank: X_train, X_test, y_train, y_test = train_test_split(X, y, ____=0)",
+     "answer": "train_test_split(X, y, random_state=0)"
+    },
+    {
+     "question": "Fill in the blank: train_test_split(cancer.data, cancer.target, ____=cancer.target, random_state=66)   (keeps class proportions)",
+     "answer": "train_test_split(cancer.data, cancer.target, stratify=cancer.target, random_state=66)"
+    },
+    {
+     "question": "Fill in the blank: knn = KNeighborsClassifier(____=3)",
+     "answer": "knn = KNeighborsClassifier(n_neighbors=3)"
+    },
+    {
+     "question": "Fill in the blank: knn.____(X_train, y_train)   (trains the model)",
+     "answer": "knn.fit(X_train, y_train)"
+    },
+    {
+     "question": "Fill in the blank: prediction = knn.____(X_test)",
+     "answer": "prediction = knn.predict(X_test)"
+    },
+    {
+     "question": "Fill in the blank: print(\"Test set score: {:.2f}\".format(knn.____(X_test, y_test)))",
+     "answer": "knn.score(X_test, y_test)"
+    },
+    {
+     "question": "Fill in the blank: X_new = np.____([[40, 80, 70, 30]])",
+     "answer": "X_new = np.array([[40, 80, 70, 30]])   (2-D, so a list inside a list)"
+    },
+    {
+     "question": "Fill in the blank: reg = ____(n_neighbors=3)   (k-NN for a continuous target)",
+     "answer": "reg = KNeighborsRegressor(n_neighbors=3)"
+    },
+    {
+     "question": "Fill in the blank: lr = LinearRegression().____(X_train, y_train)",
+     "answer": "lr = LinearRegression().fit(X_train, y_train)"
+    },
+    {
+     "question": "Fill in the blank: lr.coef_ holds the weights. Which attribute holds the intercept? lr.____",
+     "answer": "lr.intercept_"
+    },
+    {
+     "question": "Fill in the blank: lasso001 = Lasso(____=0.01, max_iter=100000).fit(X_train, y_train)",
+     "answer": "Lasso(alpha=0.01, max_iter=100000)"
+    },
+    {
+     "question": "Fill in the blank: lasso001 = Lasso(alpha=0.01, ____=100000).fit(X_train, y_train)",
+     "answer": "Lasso(alpha=0.01, max_iter=100000)"
+    }
+   ],
    "cram_sheet": [
     {
      "topic": "Definition",
@@ -1659,6 +2247,10 @@
     {
      "topic": "SVM",
      "remember": "Kernel trick for nonlinear data; scale to 0-1; small gamma and small C = simpler."
+    },
+    {
+     "topic": "Code",
+     "remember": "load, train_test_split (X_train, X_test, y_train, y_test), KNeighborsClassifier(n_neighbors=k), fit(train), predict(test), score(test). SimpleImputer(strategy='mean') and StandardScaler/MinMaxScaler use fit_transform(df[['col']])."
     }
    ]
   }

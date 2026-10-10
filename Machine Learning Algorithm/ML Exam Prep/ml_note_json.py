@@ -1,8 +1,12 @@
 """Builds AndyHub notes (new layout) for the ML SA1 and midterm reviewers -> andyhub_ml_notes.json"""
 import json
 import os
+import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, HERE)
+from ml_code_blocks import IMPORT_ROWS, NOTEBOOK, SLIDES
+from ml_100_items import CODE, IMPORTS
 REFS = ["M1-MAIN-1.pdf", "M2 - Supervised Learning - Main.pdf"]
 
 
@@ -229,7 +233,57 @@ CRAM_MID = [
 ]
 
 
-def note(title, sections, cram):
+def code_section(heading, summary, blocks, aids=(), tables=(), mistakes=()):
+    """A notes section whose worked examples are code: each line of code is one step."""
+    s = sec(heading, summary, aids, tables)
+    s["worked_examples"] = [
+        {"problem": title, "steps": [ln for ln in code.strip("\n").split("\n") if ln.strip()], "answer": shows}
+        for title, code, shows in blocks
+    ]
+    s["common_mistakes"] = list(mistakes)
+    return s
+
+
+CODE_SECTIONS = [
+    code_section(
+        "Code and Imports: Notebook Code",
+        "Reported exam format: fill-in-the-blank imports (like import ____ as np) and two 7-point code items where you "
+        "complete missing code from the module. The table lists every import the module uses. The examples below are the "
+        "prof's M2 notebook and the Module 1 preprocessing notebook, one line of code per step.",
+        NOTEBOOK,
+        [("Import names", "Package = what it does: datasets, model_selection (splitting), neighbors, impute, preprocessing "
+                          "(scalers), metrics. The class name is the one with capitals."),
+         ("Pipeline order", "Load, split, instantiate, fit on train, predict, score on test.")],
+        [("Imports From The Module", ["What", "Import line"], IMPORT_ROWS)],
+        ["train_test_split returns four things in the order X_train, X_test, y_train, y_test.",
+         "fit takes train data; score takes test data. n_neighbors is the k parameter.",
+         "Double brackets df[['Age']] give a table (2-D); single brackets give one column. fit_transform needs the table.",
+         "Naive Bayes has no code on the slides: only the class names GaussianNB (continuous), BernoulliNB (binary), MultinomialNB (counts)."]),
+    code_section(
+        "Code: M2 Slide Code",
+        "Everything here is code printed in the M2 slide images, read slide by slide. Variable names are the slides' own: "
+        "clf (k-NN), reg (regressor), ridge, lasso, logreg, tree, forest, gbrt, svc.",
+        SLIDES,
+        [("Same pattern everywhere", "Create the model, fit(X_train, y_train), then score on train and on test. "
+                                      "Classifiers report accuracy; regressors report R squared.")],
+        [],
+        ["The slides scale the SVM data by hand (min_on_training, range_on_training), not with MinMaxScaler. The M1 notebook uses MinMaxScaler.",
+         "The test set must reuse the training set's min and range, never its own.",
+         "Lasso with a small alpha needs a bigger max_iter.",
+         "Trees and forests need no scaling; SVM and k-NN do."]),
+]
+
+SELF_CHECK = [
+    {"question": "Fill in the blank: " + q, "answer": line}
+    for q, _, line in IMPORTS + CODE[:12]
+]
+CRAM_CODE = [
+    ("Code", "load, train_test_split (X_train, X_test, y_train, y_test), KNeighborsClassifier(n_neighbors=k), fit(train), "
+             "predict(test), score(test). SimpleImputer(strategy='mean') and StandardScaler/MinMaxScaler use fit_transform(df[['col']])."),
+]
+
+
+def note(title, sections, cram, self_check=()):
     return {
         "title": title,
         "subject": "Machine Learning Algorithm",
@@ -237,7 +291,7 @@ def note(title, sections, cram):
         "content": {
             "sections": sections,
             "formula_sheet": [],
-            "self_check": [],
+            "self_check": list(self_check),
             "cram_sheet": [{"topic": t, "remember": r} for t, r in cram],
         },
     }
@@ -245,7 +299,7 @@ def note(title, sections, cram):
 
 notes = [
     note("ML SA1 Reviewer Notes", SA1_SECTIONS, CRAM_SA1),
-    note("ML Midterm Reviewer Notes", SA1_SECTIONS + MID_EXTRA, CRAM_SA1 + CRAM_MID),
+    note("ML Midterm Reviewer Notes", SA1_SECTIONS + MID_EXTRA + CODE_SECTIONS, CRAM_SA1 + CRAM_MID + CRAM_CODE, SELF_CHECK),
 ]
 with open(os.path.join(HERE, "andyhub_ml_notes.json"), "w", encoding="utf-8") as fh:
     json.dump(notes, fh, indent=1)
