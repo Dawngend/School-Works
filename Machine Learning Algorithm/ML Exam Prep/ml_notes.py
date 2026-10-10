@@ -545,8 +545,9 @@ n.table(
 # ================================================================ PART 5
 n.h1("Part 5. Code and Imports")
 n.p("Reported exam format: **fill-in-the-blank imports** (like import ____ as np) and **two 7-point code items** where "
-    "you complete missing code taken from the module. Everything in this part is copied from the prof's M2.ipynb "
-    "and the M1 preprocessing notebook.")
+    "you complete missing code taken from the module. Everything in this part is copied from the prof's M2.ipynb, "
+    "the M1 preprocessing notebook, and the code shown in the M2 picture slides (read slide by slide). The slides "
+    "name the k-NN model clf and the notebook names it knn, so know both.")
 
 n.h2("Imports From The Module")
 n.table(
@@ -562,6 +563,20 @@ n.table(
         ["Train/test split", "from sklearn.model_selection import train_test_split"],
         ["k-NN classifier", "from sklearn.neighbors import KNeighborsClassifier"],
         ["Accuracy", "from sklearn.metrics import accuracy_score"],
+        ["Forge / wave data", "import mglearn, then mglearn.datasets.make_forge() or make_wave(n_samples=40)"],
+        ["Moons data", "from sklearn.datasets import make_moons"],
+        ["California housing", "from sklearn.datasets import fetch_california_housing"],
+        ["k-NN regressor", "from sklearn.neighbors import KNeighborsRegressor"],
+        ["Linear regression", "from sklearn.linear_model import LinearRegression"],
+        ["Ridge", "from sklearn.linear_model import Ridge"],
+        ["Lasso", "from sklearn.linear_model import Lasso"],
+        ["Logistic regression", "from sklearn.linear_model import LogisticRegression"],
+        ["Linear SVM", "from sklearn.svm import LinearSVC"],
+        ["Kernel SVM", "from sklearn.svm import SVC"],
+        ["Decision tree", "from sklearn.tree import DecisionTreeClassifier (regression: DecisionTreeRegressor)"],
+        ["Export a tree", "from sklearn.tree import export_graphviz, then import graphviz"],
+        ["Random forest", "from sklearn.ensemble import RandomForestClassifier"],
+        ["Gradient boosting", "from sklearn.ensemble import GradientBoostingClassifier"],
         ["Missing-value imputer", "from sklearn.impute import SimpleImputer"],
         ["Z-score scaling", "from sklearn.preprocessing import StandardScaler"],
         ["0 to 1 scaling", "from sklearn.preprocessing import MinMaxScaler"],
@@ -570,12 +585,13 @@ n.table(
 )
 n.memory("Package = what it does: **datasets**, **model_selection** (splitting), **neighbors**, **impute**, "
          "**preprocessing** (scalers), **metrics**. The class name is the one with capitals.")
-n.p("Standard scikit-learn paths for the other algorithms (not in the module notebooks, so lower odds): "
-    "sklearn.linear_model (LinearRegression, Ridge, Lasso, LogisticRegression), sklearn.naive_bayes (GaussianNB), "
-    "sklearn.tree (DecisionTreeClassifier), sklearn.ensemble (RandomForestClassifier, GradientBoostingClassifier), "
-    "sklearn.svm (SVC, LinearSVC).")
+n.p("Naive Bayes shows **no code** on the slides. They only name the three classes: **GaussianNB** (continuous), "
+    "**BernoulliNB** (binary), **MultinomialNB** (counts). Their import path, sklearn.naive_bayes, is standard "
+    "scikit-learn and is not shown on the slides.")
+n.p("Note: the slide code assumes imports it does not always show (train_test_split, plt, np, LinearRegression), so "
+    "know those import lines on your own.")
 
-n.h2("Code 1. k-NN On Iris (Most Likely 7-Point Item)")
+n.h2("Code 1. k-NN On Iris (Notebook)")
 n.code("Load, split, build, train, predict, score", """
 from sklearn.datasets import load_iris
 iris_dataset = load_iris()
@@ -673,6 +689,260 @@ n.bullets([
 n.watch("Fill-in-the-blank traps: train_test_split returns **four** things in the order **X_train, X_test, y_train, "
         "y_test**. fit takes **train** data; score takes **test** data. n_neighbors is the k parameter. "
         "Double brackets [['Age']] give a table, single brackets give one column.")
+
+n.h1("Slide Code (M2 Picture Slides)")
+n.p("Everything below is code printed in the M2 slide images, read slide by slide. Variable names are the slides' own.")
+
+n.h2("Code 4. k-NN Classifier, Slide Version (clf)")
+n.code("Forge data, k = 3", """
+from sklearn.model_selection import train_test_split
+X, y = mglearn.datasets.make_forge()
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+
+from sklearn.neighbors import KNeighborsClassifier
+clf = KNeighborsClassifier(n_neighbors=3)
+clf.fit(X_train, y_train)
+
+print("Test set predictions: {}".format(clf.predict(X_test)))
+print("Test set accuracy: {:.2f}".format(clf.score(X_test, y_test)))
+""")
+n.code("Decision boundaries for k = 1, 3, 9 (loop lines)", """
+for n_neighbors, ax in zip([1, 3, 9], axes):
+    clf = KNeighborsClassifier(n_neighbors=n_neighbors).fit(X, y)
+    mglearn.plots.plot_2d_separator(clf, X, fill=True, eps=0.5, ax=ax, alpha=.4)
+    ax.set_title("{} neighbor(s)".format(n_neighbors))
+""")
+n.code("Complexity curve on breast cancer (slide uses range(1, 11))", """
+from sklearn.datasets import load_breast_cancer
+cancer = load_breast_cancer()
+X_train, X_test, y_train, y_test = train_test_split(
+    cancer.data, cancer.target, stratify=cancer.target, random_state=66)
+
+training_accuracy = []
+test_accuracy = []
+neighbors_settings = range(1, 11)
+
+for n_neighbors in neighbors_settings:
+    clf = KNeighborsClassifier(n_neighbors=n_neighbors)
+    clf.fit(X_train, y_train)
+    training_accuracy.append(clf.score(X_train, y_train))
+    test_accuracy.append(clf.score(X_test, y_test))
+
+plt.plot(neighbors_settings, training_accuracy, label="training accuracy")
+plt.plot(neighbors_settings, test_accuracy, label="test accuracy")
+plt.ylabel("Accuracy")
+plt.xlabel("n_neighbors")
+plt.legend()
+""")
+
+n.h2("Code 5. k-NN Regressor")
+n.code("Wave data, k = 3, score is R squared", """
+from sklearn.neighbors import KNeighborsRegressor
+X, y = mglearn.datasets.make_wave(n_samples=40)
+
+# Split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
+
+# Create model object
+reg = KNeighborsRegressor(n_neighbors=3)
+
+# Model training
+reg.fit(X_train, y_train)
+
+print("Test set predictions:\\n{}".format(reg.predict(X_test)))
+print("Test set R^2: {:.2f}".format(reg.score(X_test, y_test)))
+""")
+
+n.h2("Code 6. Linear Regression, Ridge, Lasso")
+n.code("OLS on wave data", """
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+import mglearn
+
+X, y = mglearn.datasets.make_wave(n_samples=60)
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
+
+lr = LinearRegression().fit(X_train, y_train)
+
+print("lr.coef_: {}".format(lr.coef_))
+print("lr.intercept_: {}".format(lr.intercept_))
+print("Training set score: {:.2f}".format(lr.score(X_train, y_train)))
+print("Test set score: {:.2f}".format(lr.score(X_test, y_test)))
+""")
+n.code("Ridge and Lasso (extended Boston Housing)", """
+from sklearn.linear_model import Ridge
+ridge = Ridge().fit(X_train, y_train)
+print("Training set score: {:.2f}".format(ridge.score(X_train, y_train)))
+print("Test set score: {:.2f}".format(ridge.score(X_test, y_test)))
+
+from sklearn.linear_model import Lasso
+import numpy as np
+lasso = Lasso().fit(X_train, y_train)
+lasso001 = Lasso(alpha=0.01, max_iter=100000).fit(X_train, y_train)
+lasso00001 = Lasso(alpha=0.0001, max_iter=100000).fit(X_train, y_train)
+
+plt.plot(ridge.coef_, 's', label="Ridge alpha=1")
+plt.plot(lasso.coef_, 's', label="Lasso alpha=1")
+""")
+n.bullets([
+    "Ridge default **alpha=1.0**. The slides also try **alpha=10** (high penalty) and **alpha=0.1** (low penalty).",
+    "Lasso default **alpha=1.0, max_iter=1000** underfits (**4 of 105 features** used). **alpha=0.01** with **max_iter=100000** works well. **alpha=0.0001** overfits (**96 of 105 features**, close to plain OLS).",
+    "**max_iter** has to go up when alpha goes down, otherwise Lasso warns it did not converge.",
+])
+
+n.h2("Code 7. Logistic Regression and LinearSVC")
+n.code("Two linear classifiers, then logistic regression on breast cancer", """
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
+import matplotlib.pyplot as plt
+import mglearn
+
+for model, ax in zip([LinearSVC(), LogisticRegression()], axes):
+    clf = model.fit(X, y)
+    mglearn.plots.plot_2d_separator(clf, X, fill=False, eps=0.5, ax=ax, alpha=.7)
+
+cancer = load_breast_cancer()
+X_train, X_test, y_train, y_test = train_test_split(
+    cancer.data, cancer.target, stratify=cancer.target, random_state=42)
+logreg = LogisticRegression().fit(X_train, y_train)
+
+logreg100 = LogisticRegression(C=100).fit(X_train, y_train)
+logreg001 = LogisticRegression(C=0.01).fit(X_train, y_train)
+
+lr_l1 = LogisticRegression(C=C, penalty="l1", solver='liblinear').fit(X_train, y_train)
+print("Test accuracy of l1 logreg with C={:.3f}: {:.2f}".format(
+    C, lr_l1.score(X_test, y_test)))
+""")
+n.bullets([
+    "Default **C=1.0** with an **L2** penalty. Default scores: training **0.948**, test **0.944**. **C=100** = weaker regularization; **C=0.01** = stronger.",
+    "**penalty=\"l1\"** needs **solver='liblinear'** and gives sparse coefficients (an easier model to read).",
+])
+
+n.h2("Code 8. Trees, Random Forest, Gradient Boosting")
+n.code("Decision tree on breast cancer", """
+from sklearn.tree import DecisionTreeClassifier
+X_train, X_test, y_train, y_test = train_test_split(
+    cancer.data, cancer.target, stratify=cancer.target, random_state=42)
+tree = DecisionTreeClassifier(random_state=0)
+tree.fit(X_train, y_train)
+print("Accuracy on training set: {:.3f}".format(tree.score(X_train, y_train)))
+print("Accuracy on test set: {:.3f}".format(tree.score(X_test, y_test)))
+
+# pre-pruning
+tree = DecisionTreeClassifier(max_depth=4, random_state=0)
+tree.fit(X_train, y_train)
+""")
+n.code("Export and view the tree", """
+from sklearn.tree import export_graphviz
+export_graphviz(tree, out_file="tree.dot", class_names=["malignant", "benign"],
+                feature_names=cancer.feature_names, impurity=False, filled=True)
+
+import graphviz
+
+with open("tree.dot") as f:
+    dot_graph = f.read()
+graphviz.Source(dot_graph)
+""")
+n.code("Tree regressor vs linear regression (RAM prices)", """
+from sklearn.tree import DecisionTreeRegressor
+data_train = ram_prices[ram_prices.date < 2000]
+data_test = ram_prices[ram_prices.date >= 2000]
+
+X_train = data_train.date[:, np.newaxis]
+y_train = np.log(data_train.price)    # log-transform
+
+tree = DecisionTreeRegressor().fit(X_train, y_train)
+linear_reg = LinearRegression().fit(X_train, y_train)
+
+X_all = ram_prices.date[:, np.newaxis]
+pred_tree = tree.predict(X_all)
+pred_lr = linear_reg.predict(X_all)
+
+price_tree = np.exp(pred_tree)        # undo log-transform
+price_lr = np.exp(pred_lr)
+""")
+n.code("Random forest", """
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_moons
+
+X, y = make_moons(n_samples=100, noise=0.25, random_state=3)
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y,
+                                                    random_state=42)
+forest = RandomForestClassifier(n_estimators=5, random_state=2)
+forest.fit(X_train, y_train)
+
+# 100 trees on breast cancer
+X_train, X_test, y_train, y_test = train_test_split(
+    cancer.data, cancer.target, random_state=0)
+forest = RandomForestClassifier(n_estimators=100, random_state=0)
+forest.fit(X_train, y_train)
+print("Accuracy on training set: {:.3f}".format(forest.score(X_train, y_train)))
+print("Accuracy on test set: {:.3f}".format(forest.score(X_test, y_test)))
+""")
+n.code("Gradient boosting", """
+from sklearn.ensemble import GradientBoostingClassifier
+
+X_train, X_test, y_train, y_test = train_test_split(
+    cancer.data, cancer.target, random_state=0)
+
+gbrt = GradientBoostingClassifier(random_state=0)
+gbrt.fit(X_train, y_train)
+print("Accuracy on training set: {:.3f}".format(gbrt.score(X_train, y_train)))
+print("Accuracy on test set: {:.3f}".format(gbrt.score(X_test, y_test)))
+
+gbrt = GradientBoostingClassifier(random_state=0, max_depth=1)       # stronger pre-pruning
+gbrt = GradientBoostingClassifier(random_state=0, learning_rate=0.01)   # lower learning rate
+""")
+n.bullets([
+    "Tree: **max_depth=4** is the pre-pruning fix for the fully grown tree (full tree: train **1.000**, test **0.937**; max_depth=4: train **0.988**, test **0.951**). **random_state=0** keeps the tree repeatable.",
+    "Forest: **n_estimators** = number of trees (5 on moons, 100 on breast cancer); **max_features** is the other key parameter.",
+    "Gradient boosting defaults: **n_estimators=100, max_depth=3, learning_rate=0.1**. Overfit fix: **lower max_depth** or **lower learning_rate**.",
+    "Trees and forests need **no scaling**.",
+])
+
+n.h2("Code 9. Support Vector Machines")
+n.code("Linear SVM and RBF kernel SVM", """
+from sklearn.svm import LinearSVC
+linear_svm = LinearSVC().fit(X, y)
+
+from sklearn.svm import SVC
+svm = SVC(kernel='rbf', C=10, gamma=0.1).fit(X, y)
+
+svc = SVC()
+svc.fit(X_train, y_train)
+print("Accuracy on training set: {:.2f}".format(svc.score(X_train, y_train)))
+print("Accuracy on test set: {:.2f}".format(svc.score(X_test, y_test)))
+""")
+n.code("Scaling by hand to 0-1 (the slides do NOT use MinMaxScaler here)", """
+# compute the minimum value per feature on the training set
+min_on_training = X_train.min(axis=0)
+# compute the range of each feature (max - min) on the training set
+range_on_training = (X_train - min_on_training).max(axis=0)
+
+# subtract the min, and divide by range
+# afterward, min=0 and max=1 for each feature
+X_train_scaled = (X_train - min_on_training) / range_on_training
+
+# use THE SAME transformation on the test set,
+# using min and range of the training set
+X_test_scaled = (X_test - min_on_training) / range_on_training
+
+svc = SVC()
+svc.fit(X_train_scaled, y_train)
+print("Accuracy on training set: {:.3f}".format(svc.score(X_train_scaled, y_train)))
+print("Accuracy on test set: {:.3f}".format(svc.score(X_test_scaled, y_test)))
+
+svc = SVC(C=1000)
+svc.fit(X_train_scaled, y_train)
+""")
+n.bullets([
+    "Default SVC on the raw breast cancer data overfits (train **1.00**, test **0.63**). **Scaled**, default SVC gives train **0.948**, test **0.951**. **C=1000** on scaled data gives train **0.988**, test **0.972**.",
+    "The test set must use the **training set's** min and range, never its own (that would leak information).",
+    "**MinMaxScaler** from sklearn.preprocessing does the same job and is what the M1 notebook uses.",
+])
+n.watch("Slide naming: k-NN is **clf**, the regressor is **reg**, ridge is **ridge**, the forest is **forest**, "
+        "boosting is **gbrt**, and the SVM is **svc**. Every model follows the same pattern: create, **fit(X_train, "
+        "y_train)**, then **score** on train and on test. Classifiers report accuracy, regressors report R^2.")
 
 # ================================================================ Cram sheet
 n.pagebreak()
