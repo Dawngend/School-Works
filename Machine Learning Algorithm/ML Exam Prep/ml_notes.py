@@ -29,8 +29,8 @@ if SA1:
         "models, (4) traps**. The cram sheet is the last page.")
 else:
     n.p("The midterm covers **all of Module 1 and Module 2**. Parts: **(1) core concepts, (2) evaluation and "
-        "complexity, (3) the algorithms, (4) traps**. Section 3.4 onward is the material SA1 did not cover. The cram "
-        "sheet is the last page.")
+        "complexity, (3) the algorithms, (4) traps, (5) code and imports**. Section 3.4 onward is the material SA1 did "
+        "not cover. The cram sheet is the last page.")
 
 # ================================================================ PART 1
 n.h1("Part 1. Core Concepts and Definitions")
@@ -542,6 +542,138 @@ n.table(
     [1.5, 2.3, 2.7],
 )
 
+# ================================================================ PART 5
+n.h1("Part 5. Code and Imports")
+n.p("Reported exam format: **fill-in-the-blank imports** (like import ____ as np) and **two 7-point code items** where "
+    "you complete missing code taken from the module. Everything in this part is copied from the prof's M2.ipynb "
+    "and the M1 preprocessing notebook.")
+
+n.h2("Imports From The Module")
+n.table(
+    ["What", "Import line"],
+    [
+        ["NumPy", "import numpy as np"],
+        ["pandas", "import pandas as pd"],
+        ["Matplotlib", "import matplotlib.pyplot as plt"],
+        ["mglearn", "import mglearn"],
+        ["Legend patches", "import matplotlib.patches as mpatches"],
+        ["Iris data", "from sklearn.datasets import load_iris"],
+        ["Breast cancer data", "from sklearn.datasets import load_breast_cancer"],
+        ["Train/test split", "from sklearn.model_selection import train_test_split"],
+        ["k-NN classifier", "from sklearn.neighbors import KNeighborsClassifier"],
+        ["Accuracy", "from sklearn.metrics import accuracy_score"],
+        ["Missing-value imputer", "from sklearn.impute import SimpleImputer"],
+        ["Z-score scaling", "from sklearn.preprocessing import StandardScaler"],
+        ["0 to 1 scaling", "from sklearn.preprocessing import MinMaxScaler"],
+    ],
+    [2.0, 4.5],
+)
+n.memory("Package = what it does: **datasets**, **model_selection** (splitting), **neighbors**, **impute**, "
+         "**preprocessing** (scalers), **metrics**. The class name is the one with capitals.")
+n.p("Standard scikit-learn paths for the other algorithms (not in the module notebooks, so lower odds): "
+    "sklearn.linear_model (LinearRegression, Ridge, Lasso, LogisticRegression), sklearn.naive_bayes (GaussianNB), "
+    "sklearn.tree (DecisionTreeClassifier), sklearn.ensemble (RandomForestClassifier, GradientBoostingClassifier), "
+    "sklearn.svm (SVC, LinearSVC).")
+
+n.h2("Code 1. k-NN On Iris (Most Likely 7-Point Item)")
+n.code("Load, split, build, train, predict, score", """
+from sklearn.datasets import load_iris
+iris_dataset = load_iris()
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(
+    iris_dataset['data'], iris_dataset['target'], random_state=0)
+
+from sklearn.neighbors import KNeighborsClassifier
+knn = KNeighborsClassifier(n_neighbors=3)
+knn.fit(X_train, y_train)
+
+y_pred = knn.predict(X_test)
+print("Test set score: {:.2f}".format(knn.score(X_test, y_test)))
+print("Test set score: {:.2f}".format(np.mean(y_pred == y_test)))   # same number by hand
+
+X_new = np.array([[40, 80, 70, 30]])
+prediction = knn.predict(X_new)
+print("Predicted target name:", iris_dataset['target_names'][prediction])
+""")
+n.bullets([
+    "Order to remember: **load, split, instantiate with n_neighbors, fit, predict, score**.",
+    "fit(X_train, y_train) trains. predict(X_test) gives labels. score(X_test, y_test) gives accuracy.",
+    "X_new must be **2-D**, so it is a list inside a list: np.array([[40, 80, 70, 30]]).",
+    "Look at the data with iris_dataset.keys(), ['target_names'], ['feature_names'], ['data'].shape, X_train.shape.",
+])
+
+n.h2("Code 2. k-NN On Breast Cancer, With The Complexity Curve")
+n.code("DataFrame, stratified split, loop over k", """
+from sklearn.datasets import load_breast_cancer
+cancer = load_breast_cancer()
+
+df = pd.DataFrame(data=cancer.data, columns=cancer.feature_names)
+df['target'] = cancer.target
+
+X = df.drop(columns='target')      # features
+y = df['target']                   # target
+X_train, X_test, y_train, y_test = train_test_split(X, y, stratify=y, random_state=66)
+
+training_accuracy = []
+test_accuracy = []
+neighbors_settings = range(1, 10)
+for n_neighbors in neighbors_settings:
+    knn = KNeighborsClassifier(n_neighbors=n_neighbors)
+    knn.fit(X_train, y_train)
+    training_accuracy.append(knn.score(X_train, y_train))
+    test_accuracy.append(knn.score(X_test, y_test))
+plt.plot(neighbors_settings, training_accuracy, label="training accuracy")
+plt.plot(neighbors_settings, test_accuracy, label="test accuracy")
+plt.ylabel("Accuracy")
+plt.xlabel("n_neighbors")
+plt.legend()
+
+knn = KNeighborsClassifier(n_neighbors=6)   # k picked from the curve
+knn.fit(X_train, y_train)
+""")
+n.bullets([
+    "stratify=y keeps the **class proportions** the same in train and test. random_state makes the split repeatable.",
+    "Cancer data: **569 samples, 212 malignant and 357 benign**, 30 features. Iris used random_state=0 and n_neighbors=3; cancer used random_state=66 and n_neighbors=6.",
+    "Pattern: empty lists, a for loop over k, .append(knn.score(...)), then plt.plot both lists against k.",
+])
+
+n.h2("Code 3. Module 1 Preprocessing (Also On SA1)")
+n.code("Imputation and scaling", """
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from sklearn.impute import SimpleImputer
+
+df = pd.read_csv('diabetes_NaN_age 3.csv')
+
+imputer_mean = SimpleImputer(strategy='mean', missing_values=np.nan)
+df['Age'] = imputer_mean.fit_transform(df[['Age']]).ravel()
+
+# the same fix with plain pandas
+age_mean = df['Age'].mean()
+df.loc[df['Age'].isna(), 'Age'] = age_mean
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+numeric_cols = df.select_dtypes(include='number').columns
+df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
+
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+df[numeric_cols] = scaler.fit_transform(df[numeric_cols])
+""")
+n.bullets([
+    "strategy can be 'mean', 'median', 'most_frequent', or 'constant'. Missing values are marked np.nan.",
+    "fit_transform wants a **2-D** input, so it is df[['Age']] with **double brackets**; .ravel() flattens the result back to one column.",
+    "pd.isnull(value) or .isna() finds missing values; int(value) inside try/except ValueError finds invalid integers.",
+    "**StandardScaler** = mean 0, standard deviation 1. **MinMaxScaler** = squeezes to 0 to 1.",
+    "select_dtypes(include='number').columns picks every numeric column.",
+])
+n.watch("Fill-in-the-blank traps: train_test_split returns **four** things in the order **X_train, X_test, y_train, "
+        "y_test**. fit takes **train** data; score takes **test** data. n_neighbors is the k parameter. "
+        "Double brackets [['Age']] give a table, single brackets give one column.")
+
 # ================================================================ Cram sheet
 n.pagebreak()
 n.h1("Cram Sheet")
@@ -560,6 +692,7 @@ n.bullets([
     "**R2** = 1 - SS_res / SS_tot: 1 perfect, 0 = predicts the mean, **negative = worse than the mean**.",
     "**y-hat = w*x + b**; **b** = intercept = offset = bias. **OLS** minimizes mean squared error on the training set.",
     "OLS: small gap and mediocre score = underfit; huge train-test gap (many features) = overfit.",
+    "**Code**: load, **train_test_split** (X_train, X_test, y_train, y_test), **KNeighborsClassifier(n_neighbors=k)**, **fit(train)**, **predict(test)**, **score(test)**. **SimpleImputer(strategy='mean')** and **StandardScaler / MinMaxScaler** use **fit_transform(df[['col']])**.",
 ])
 if not SA1:
     n.bullets([

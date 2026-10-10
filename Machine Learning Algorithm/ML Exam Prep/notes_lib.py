@@ -171,6 +171,23 @@ class Notes:
             _runs(par, line)
         self.doc.add_paragraph().paragraph_format.space_after = Pt(2)
 
+    def code(self, label, text):
+        """Shaded monospace block. Text is literal, so indentation and asterisks survive."""
+        t = self.doc.add_table(rows=1, cols=1)
+        t.style = "Table Grid"
+        c = t.rows[0].cells[0]
+        _shade(c, "F5F5F5")
+        c.text = ""
+        r = c.paragraphs[0].add_run(label)
+        r.bold = True
+        for line in text.strip("\n").split("\n"):
+            par = c.add_paragraph()
+            par.paragraph_format.space_after = Pt(0)
+            run = par.add_run(line)
+            run.font.name = "Consolas"
+            run.font.size = Pt(10)
+        self.doc.add_paragraph().paragraph_format.space_after = Pt(2)
+
     def memory(self, text):
         self.box("Memory Aid", text, "E8F0FE")
 
