@@ -1,0 +1,5 @@
+// Git internals must never be synced. Syncthing corrupted this repo's .git (found 2026-10-21).
+// Comments in this file use //, not #.
+.git
+.venv
+(?d)__pycache__
