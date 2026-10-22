@@ -6,6 +6,19 @@
 DataViz/api-keys-for-hackaton.txt
 DataViz/ai-config.txt
 *.env
+.env
+.env.*
+token.json
+tokens.json
+token.txt
+credentials.json
+credentials.txt
+client_secret*.json
+secrets.json
+*.pem
+*.key
+*.pfx
+id_rsa*
 
 # Python & Jupyter temp files
 __pycache__/
