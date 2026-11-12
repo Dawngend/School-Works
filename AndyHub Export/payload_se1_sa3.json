@@ -1,0 +1,2333 @@
+{
+ "notes": [
+  {
+   "title": "SE1 Summative 3 Reviewer",
+   "subject": "Software Engineering 1",
+   "module_ids": [],
+   "content": {
+    "sections": [
+     {
+      "heading": "What Is Inside",
+      "summary": "• Part 1, Module 5: Object-Oriented Analysis and Design, Procedural Programming, then Methodologies and the six system development models.\n• Part 2, Module 6: Software Development Strategies, then Unified Modeling Language (UML).\n• Part 3, Module 7: AI-Native Engineering, LLM-Based Applications and Agents, GenAI Platform Engineering, Talent Density, Open GenAI Ecosystems, and Green Software Engineering.\n• Slide mistakes are fixed in the Watch Out boxes: the correct fact first, then what the slide says.\n• Read the cram sheet last, right before the exam.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Fast Memory Map",
+      "summary": "Fast Memory Map: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Fast Memory Map",
+        "columns": [
+         "Topic",
+         "Hook"
+        ],
+        "rows": [
+         [
+          "Object",
+          "Pretty Big Spoons = Properties, Behaviors, States"
+         ],
+         [
+          "OOA five activities",
+          "Fast Owls Do Eat Insects"
+         ],
+         [
+          "OOAD good and bad",
+          "Easy Eggs, Ill Tummies"
+         ],
+         [
+          "Parameter passing",
+          "Very Rich Rabbits Visit Nashville"
+         ],
+         [
+          "MSF phases",
+          "Every Panda Dances, Sleeps, Dreams"
+         ],
+         [
+          "Nine criteria",
+          "4 + 1 + 3 + 1: Pretty Pandas Cook Cakes, Responsiveness, Team Management Training, Probability"
+         ],
+         [
+          "Six models",
+          "Wise Ice Dragons Vanish Silently, Perhaps"
+         ],
+         [
+          "Spiral quadrants",
+          "Our Rabbits Dance Politely"
+         ],
+         [
+          "Structural UML",
+          "Cats Obey Calm Dogs"
+         ],
+         [
+          "Behavioral UML",
+          "A Unicorn Tripped, Sliding Sideways, Crying"
+         ],
+         [
+          "AI-native key ideas",
+          "Dogs Like Apple Eating"
+         ],
+         [
+          "LLM agent applications",
+          "Some Tigers Read Wild Poems"
+         ],
+         [
+          "Talent density",
+          "Hire, Develop, Culture, Manage"
+         ],
+         [
+          "Green practices",
+          "Always Open Pretty Skies"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Objects",
+      "summary": "In computer science an object can be almost anything in a programmatic sense: a variable, a data model, a function, a class, or a method. In object-oriented programming (OOP) an object is an instance that usually represents a real-world thing. It has properties (characteristics), behaviors (methods), and states (data).",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "The slide says an object has properties, behaviors, and states. Wrong choices on the quiz were \"functions and loops only\", \"inputs and outputs only\", and \"hardware and network devices\"."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Objects",
+        "text": "An object = P-B-S: Properties, Behaviors, States. Say it as \"Pretty Big Spoons\"."
+       }
+      ],
+      "comparisons": []
+     },
+     {
+      "heading": "Object-Oriented Analysis (OOA)",
+      "summary": "OOA is an iterative stage of analysis during the software development life cycle. It models the functional requirements of the software while staying completely independent of any implementation requirements. It looks at everything through the lens of objects and combines behaviors, characteristics, and states into one analysis process instead of splitting them into separate stages.\n\nThe Five Activities Of OOA:\n• Find and define the objects.\n• Organize the objects.\n• Describe how the objects interact with one another.\n• Define the external behavior of the objects.\n• Define the internal behavior of the objects.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Five Activities Of OOA",
+        "text": "Fast Owls Do Eat Insects = Find, Organize, Describe interactions, External behavior, Internal behavior.\nChunk it as 2 + 1 + 2: objects (1 and 2), interaction (3), behavior outside then inside (4 and 5)."
+       }
+      ],
+      "comparisons": []
+     },
+     {
+      "heading": "Object-Oriented Design (OOD)",
+      "summary": "OOD is an extension of OOA. The difference is that it considers implementation constraints. An analyzed object or object model has to be designed and implemented for real, which usually needs constraints such as software or hardware platforms, time and budget limits, performance requirements, and developer aptitude.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Object-Oriented Design (OOD)",
+        "text": "A = Analyze what, D = Design how. If a quiz option says OOD \"eliminates the identified objects\" or \"avoids software and hardware requirements\", it is wrong: OOD keeps the objects and adds the constraints."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Object-Oriented Design (OOD)",
+        "columns": [
+         "Point",
+         "OOA",
+         "OOD"
+        ],
+        "rows": [
+         [
+          "Question it answers",
+          "What must the system do?",
+          "How will it be built under real limits?"
+         ],
+         [
+          "Focus",
+          "Functional requirements, modeled with objects",
+          "The analyzed objects plus implementation constraints"
+         ],
+         [
+          "Implementation",
+          "Independent of it",
+          "Considers it (platform, time, budget, performance, skills)"
+         ],
+         [
+          "Relationship",
+          "Comes first",
+          "Extends the OOA result"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Object-Oriented Analysis And Design (OOAD)",
+      "summary": "OOAD is a technical method of analyzing and designing an application based on the system's object models (the logical components of the system that interact with one another). Development is normally split into loose, abstract stages. The limits of those stages, together with the strict step-by-step staging of the waterfall model, led to the rise of iterative models like OOAD.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "OOAD is a method based on object models. It is not a programming language for databases, not only a testing technique, and not a model for managing computer networks."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Advantages And Disadvantages Of OOAD",
+        "text": "2 good + 2 bad: Encapsulation and Easy are the good ones (E, E). Ill-suited and Too complex are the bad ones (I, T). \"Easy Eggs, Ill Tummies.\""
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Advantages And Disadvantages Of OOAD",
+        "columns": [
+         "Point",
+         "Kind",
+         "What The Slide Says"
+        ],
+        "rows": [
+         [
+          "Encourages encapsulation",
+          "Advantage",
+          "Everything revolves around objects, so systems are truly independent and self-contained. Objects can be mixed and matched as needed."
+         ],
+         [
+          "Easy to understand",
+          "Advantage",
+          "Based on real-world objects, so everyone on the team (and customers or non-technical users) quickly understands what an object name or behavior means."
+         ],
+         [
+          "Ill-suited to procedural applications",
+          "Disadvantage",
+          "Hard to apply OOAD in a procedural language or to non-object business logic. Procedural apps focus on scope and modularity; OO apps focus on objects that simulate the real world."
+         ],
+         [
+          "Too complex for simple applications",
+          "Disadvantage",
+          "The simpler the needs, the more likely a less-structured procedural approach is the better fit."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "What Procedural Programming Is",
+      "summary": "Procedural programming uses a list of instructions that tell the computer what to do step by step. It relies on procedures (routines or subroutines), and each procedure holds a series of computational steps. It is also called imperative programming, and procedural languages are known as top-down languages. It is intuitive because it looks like how you would expect a program to work.\n\nBefore OOP became popular, the most common approach was procedural, or structured, programming. Structured programming uses top-down design: it breaks a problem into a series of more and more specific functions. It needs well-defined flow control. Development starts by identifying the problem domain and then defining a top-level function, which is split into more specific procedures.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Key Terms",
+      "summary": "Key Terms: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Key Terms",
+        "text": "Local = Limited to its method. Global = Goes everywhere.\nParameter passing, in order: Value, Reference, Result, Value-result, Name (\"Very Rich Rabbits Visit Nashville\")."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Key Terms",
+        "columns": [
+         "Term",
+         "Meaning"
+        ],
+        "rows": [
+         [
+          "Predefined function",
+          "An instruction identified by a name, usually built into the higher-level language and taken from a library or registry rather than from the program itself."
+         ],
+         [
+          "Local variable",
+          "Declared inside a method and limited to that local scope. Using it outside the method breaks the code."
+         ],
+         [
+          "Global variable",
+          "Declared outside every function, so all functions can use it."
+         ],
+         [
+          "Modularity",
+          "Grouping separate tasks and finishing them one after another until the larger task is complete."
+         ],
+         [
+          "Parameter passing",
+          "The mechanism for passing parameters to functions, subroutines, or procedures. Five ways: pass by value, reference, result, value-result, and name."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Advantages And Disadvantages",
+      "summary": "Advantages And Disadvantages: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Advantages And Disadvantages",
+        "columns": [
+         "Advantages",
+         "Disadvantages"
+        ],
+        "rows": [
+         [
+          "Excellent for general-purpose programming",
+          "Code is harder to write"
+         ],
+         [
+          "Simple code and easy to implement in compilers and interpreters",
+          "Code is often not reusable, so it may need recreating for another application"
+         ],
+         [
+          "Plenty of books and courses on tested algorithms",
+          "Hard to relate to real-world objects, unlike OOP"
+         ],
+         [
+          "Source code is portable (can target a different CPU)",
+          "Importance goes to the operation rather than the data, which is a problem in data-sensitive cases"
+         ],
+         [
+          "Code can be reused in different parts of the program without copying",
+          "Data is exposed to the whole program, so it is less security friendly"
+         ],
+         [
+          "Memory requirement is reduced",
+          ""
+         ],
+         [
+          "Program flow is easy to track",
+          ""
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Procedural Versus Object-Oriented Programming",
+      "summary": "Procedural Versus Object-Oriented Programming: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: procedural programming is imperative (the slide's own definition page says so). (The comparison table on the slide lists procedural as \"declarative\" and OOP as \"imperative\", which contradicts that. If a question is copied straight from the table, answer what the table says, but remember the correct idea is procedural = imperative.)"
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Procedural Versus Object-Oriented Programming",
+        "text": "Hook: Procedural = Procedures, top-Down, Data exposed. OOP = Objects, bottom-Up, data hidden. Procedural: Functions, Top-down, Function first. OOP: Objects, Bottom-up, Data first."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Procedural Versus Object-Oriented Programming",
+        "columns": [
+         "Point",
+         "Procedural",
+         "Object-Oriented"
+        ],
+        "rows": [
+         [
+          "Program is divided into",
+          "Functions",
+          "Objects"
+         ],
+         [
+          "Approach",
+          "Top-down",
+          "Bottom-up"
+         ],
+         [
+          "Access specifiers",
+          "None",
+          "Private, public, protected"
+         ],
+         [
+          "Adding data and functions",
+          "Not easy",
+          "Easy"
+         ],
+         [
+          "Data hiding",
+          "No proper way, so less secure",
+          "Yes, so more secure"
+         ],
+         [
+          "Overloading",
+          "Not possible",
+          "Possible"
+         ],
+         [
+          "What matters more",
+          "Function over data",
+          "Data over function"
+         ],
+         [
+          "Based on",
+          "The unreal world",
+          "The real world"
+         ],
+         [
+          "Flow control",
+          "Function calls",
+          "Conditional statements and loops"
+         ],
+         [
+          "Iterating collections",
+          "Recursion",
+          "Loops"
+         ],
+         [
+          "Side effects",
+          "None of its functions",
+          "Methods can have side effects"
+         ],
+         [
+          "Focus",
+          "\"What you are doing\"",
+          "\"How you are doing it\""
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 5, Chapter 3: Methodologies And The System Development Process",
+      "summary": "A system development methodology is the set of steps used to form, plan, and control the process of developing an information system. It gives guidelines for every activity in system development and includes specific models, tools, and techniques. The word process is a synonym for methodology, and the process is supported by documentation. The chapter cover diagram is the Microsoft Solutions Framework (MSF), a circular model with five phases, each ending in a milestone.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Module 5, Chapter 3: Methodologies And The System Development Process",
+        "text": "MSF phases: E-P-D-S-D = Envision, Plan, Develop, Stabilize, Deploy (\"Every Panda Dances, Sleeps, Dreams\"). Milestones in the same order: Vision, Plan, Scope, Release, Deployment."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Module 5, Chapter 3: Methodologies And The System Development Process",
+        "columns": [
+         "MSF Phase",
+         "Exit Milestone"
+        ],
+        "rows": [
+         [
+          "Envisioning",
+          "Vision/Scope Approved"
+         ],
+         [
+          "Planning",
+          "Project Plan Approved"
+         ],
+         [
+          "Development",
+          "Scope Complete"
+         ],
+         [
+          "Stabilizing",
+          "Release Readiness"
+         ],
+         [
+          "Deployment",
+          "Deployment Complete"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "The Nine Criteria For Comparing Methodologies",
+      "summary": "The Nine Criteria For Comparing Methodologies: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Nine Criteria For Comparing Methodologies",
+        "text": "Chunk 4 + 1 + 3 + 1: the project basics (Process, Product, Cost, Completion date), then Responsiveness, then the people three (Team, Management, Training), then Probability of success.\nFirst four: \"Pretty Pandas Cook Cakes.\""
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "The Nine Criteria For Comparing Methodologies",
+        "columns": [
+         "#",
+         "Criterion",
+         "The Question It Asks"
+        ],
+        "rows": [
+         [
+          "1",
+          "Processes definition",
+          "Does the methodology assume every step is well known with no room for change, or is it flexible in all stages?"
+         ],
+         [
+          "2",
+          "Final product determination",
+          "Is the final product defined early in planning, or during the project and close to closure?"
+         ],
+         [
+          "3",
+          "Project cost",
+          "At what stage is the cost estimated?"
+         ],
+         [
+          "4",
+          "Project completion date",
+          "Is the schedule of deliverables estimated up front or as the project progresses?"
+         ],
+         [
+          "5",
+          "Responsiveness to environment",
+          "How much flexibility is allowed for changes in environment, technology, competition, and others?"
+         ],
+         [
+          "6",
+          "Team dynamic and creativity",
+          "Do predefined linear steps block creativity? Does it allow teamwork and interaction?"
+         ],
+         [
+          "7",
+          "Role of upper management",
+          "Is management an obstacle, or does it empower the team by removing obstacles?"
+         ],
+         [
+          "8",
+          "Training and knowledge",
+          "Does the methodology allow training and knowledge transfer, or limit what a member can do and learn?"
+         ],
+         [
+          "9",
+          "Probability of success",
+          "How likely is success given a certain degree of complexity and unpredictability?"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Tools And Techniques",
+      "summary": "Tools And Techniques: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: CASE = Computer-Aided Software Engineering. (The slide writes \"Computer-Aided System Engineering\", so if a question quotes the slide, the slide's wording is the one in the answer key.)"
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Tools And Techniques",
+        "text": "Tools = things you use (language, IDE). Techniques = ways you work (best practices). Four supporting tools: P-I-C-C = Project management, IDE, Code generators, CASE."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Tools And Techniques",
+        "columns": [
+         "Point",
+         "What It Is",
+         "Examples"
+        ],
+        "rows": [
+         [
+          "Tools",
+          "Include the actual programming language the application is created in, plus supporting tools.",
+          "Project management software, IDE, code generators, CASE"
+         ],
+         [
+          "Techniques",
+          "Also called best practices: guidelines or policies that help developers and analysts complete a task or activity in an SDLC phase.",
+          "Use-case modeling, software testing, user-interviewing techniques, relational database design techniques"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "The Six System Development Models",
+      "summary": "The slide lists six models: Waterfall, Iterative, DevOps, V-Model, Spiral, and Prototyping.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Iterative vs Agile: both deliver in increments, but iterative has fixed increment scope and less customer involvement. V-Model vs Waterfall: V-Model pairs every build stage with a test stage. Waterfall tests only after implementation.",
+       "Correct: \"flexibility than it offers\" and \"Businesses that are not sure\". (The slides say \"flexibility that what it offers\" and \"Business that aren't sure\".) The prototyping diagram feeds refinement back into the prototype build, which is what the loop means."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Six System Development Models",
+        "text": "W-I-D-V-S-P: \"Wise Ice Dragons Vanish Silently, Perhaps.\""
+       },
+       {
+        "label": "The Six System Development Models",
+        "text": "One-line hooks: Waterfall = rigid, requirements first. Iterative = small repeated increments. DevOps = Dev + Ops, continuous delivery. V-Model = waterfall bent up, test every stage. Spiral = risk-driven. Prototyping = early model, feedback.\nSpiral quadrants: O-R-D-P = Objectives, Risks, Develop and test, Plan next (\"Our Rabbits Dance Politely\")."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "The Six System Development Models",
+        "columns": [
+         "Model",
+         "Core Idea",
+         "Best For / Trade-Off",
+         "Diagram Detail"
+        ],
+        "rows": [
+         [
+          "Waterfall",
+          "One of the oldest SDLC models. Rigid structure: all requirements defined at the very start, then design and development. Testing against the original requirements comes after development, then rework.",
+          "Out of favor in recent years, but strong for certain projects, especially government contractors.",
+          "Stages cascade down: Requirements (product requirements document), Design (software architecture), Implementation (software), Verification, Maintenance."
+         ],
+         [
+          "Iterative",
+          "Takes waterfall and cycles it several times in small increments. Each step becomes several mini-projects that add value as the product evolves.",
+          "Shares many goals with agile, but external customers are less involved and the scope of each increment is normally fixed.",
+          "Loop through planning, requirements, design, implementation, verification, evaluation. Entry: initialization and planning. Exit: implementation then deployment."
+         ],
+         [
+          "DevOps",
+          "One of the newest methodologies. Combines software Development and IT Operations to shorten the SDLC and give continuous delivery with high software quality.",
+          "Brings development and operations teams together to streamline delivery and support. Changes become more fluid and organizational risk drops. Needs flexible resources.",
+          "Venn diagram: DevOps sits where Development, QA, and Operations overlap."
+         ],
+         [
+          "V-Model",
+          "An evolution of the classic waterfall. The steps are flipped upwards after the coding phase. Very strict: the next phase starts only when the previous is complete.",
+          "Inflexible and higher risk, not recommended for small projects, but easier to manage and control. Good where requirements are static and clearly stated and early testing is wanted.",
+          "Left side down: Concept of Operations, Requirements and Architecture, Detailed Design. Bottom: Implementation. Right side up: Integration/Test/Verification, System Verification and Validation, Operation and Maintenance."
+         ],
+         [
+          "Spiral",
+          "Lets teams adopt multiple SDLC models based on the risk patterns of the project. A blend of iterative and waterfall.",
+          "The challenge is knowing when to move on to the next phase. Good for businesses unsure of requirements or expecting major edits in mid to high-risk projects.",
+          "Four quadrants: 1 Determine objectives, 2 Identify and resolve risks, 3 Development and test, 4 Plan the next iteration. Radius = cumulative cost."
+         ],
+         [
+          "Prototyping",
+          "Build an early model of the new system. It has limited functionality and is not thoroughly tested, but gives customers a sense of what is coming.",
+          "Feedback is gathered and used through the rest of the SDLC. Works well for emerging industries or new technologies.",
+          "Requirements, quick design, build prototype, user evaluation (loops with refining the prototype), implement and maintain."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 6, Chapter 1: Software Development Strategies",
+      "summary": "This chapter is about choosing a development strategy, not about one perfect method. The slides list the reasons to choose carefully, and warn against the most common mistake.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Why Strategy Matters",
+      "summary": "• Keep up with the rapidly evolving industry.\n• Develop software realistically.\n• Consider that every project and team is unique.\n• Find the right solution.\n• Identify useful techniques relevant to the situation.\n• Choose the appropriate development model.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Why Strategy Matters",
+        "text": "Six verbs: Keep up, Be realistic, Remember uniqueness, Find, Identify, Choose. The last three are the decision path: find the solution, pick techniques, choose the model."
+       }
+      ],
+      "comparisons": []
+     },
+     {
+      "heading": "The Big Ideas",
+      "summary": "The Big Ideas: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Big Ideas",
+        "text": "One sentence for the chapter: \"No one-size-fits-all: understand the problem, test the plan, keep it flexible.\" If an option says one methodology guarantees success, it is the trap."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "The Big Ideas",
+        "columns": [
+         "Idea",
+         "What The Slides Say"
+        ],
+        "rows": [
+         [
+          "Misconception",
+          "Adopting some methodology does not guarantee a project's success over another methodology or over no single strategy at all."
+         ],
+         [
+          "Why people believe it",
+          "Assuming what worked in one case will automatically work in another. Common in the software industry and with misunderstood concepts like agile."
+         ],
+         [
+          "Reality of teams",
+          "Most teams are not industry experts. Most projects do not use groundbreaking tools. They have budgets and timelines and often must interface with less-than-ideal legacy systems."
+         ],
+         [
+          "Copying a method",
+          "Adopting a way of doing things because it looks good, without understanding how and why, often ends in disaster."
+         ],
+         [
+          "Why projects fail hard",
+          "Applying a one-size-fits-all approach without enough analysis of the specific goals, problems, challenges, and exceptions."
+         ],
+         [
+          "What proves it will work",
+          "Only a properly evaluated situation, with solutions thoroughly tested and sanity-checked. Otherwise there is no real evidence things will go well."
+         ],
+         [
+          "Many processes to choose from",
+          "Pick tools and techniques from each process, as long as you learn what they mean and whether they are compatible and make sense."
+         ],
+         [
+          "No single perfect solution",
+          "There is no \"one\" perfect solution, but the best possible one for the given problem can be found."
+         ],
+         [
+          "Inventing something new",
+          "Often works: base it on a thorough understanding of the problem and the shortcomings of known methods, using a toolbox of abstractions and generalizations to re-assemble a strategy from proven components."
+         ],
+         [
+          "Small closely knit team",
+          "High trust and autonomy across the board."
+         ],
+         [
+          "Flexibility",
+          "A model or methodology must have flexibility built in, or things pile up the moment anything goes wrong."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 6, Chapter 2: Unified Modeling Language (UML)",
+      "summary": "UML is a general-purpose, developmental modeling language in software engineering, intended to give a standard way to visualize the design of a system. It prescribes a standard set of diagrams and notations for modeling object-oriented systems and describes what the diagrams and symbols mean. It is also used to document business processes and workflows, and some types can replace flowcharts with a more standardized way of modeling and more features for readability.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Forward Design And Backward Design",
+      "summary": "Forward Design And Backward Design: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Forward Design And Backward Design",
+        "text": "Forward = Before (F, B: \"Forward Before\"). Backward = After (B, A: \"Back After\")."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Forward Design And Backward Design",
+        "columns": [
+         "Point",
+         "When The UML Is Drawn",
+         "Why"
+        ],
+        "rows": [
+         [
+          "Forward design",
+          "Before coding the application",
+          "Gives a better view of the system or workflow, reveals design issues and flaws, and improves project health."
+         ],
+         [
+          "Backward design",
+          "After writing the code",
+          "The diagrams document the activities, roles, actors, and workflows."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Behavioral Versus Structural UML",
+      "summary": "The chapter cover slide shows the full classification: structural also includes Composite Structure, Package, and Profile diagrams (seven in all), and behavioral also includes the Interaction Overview diagram (seven in all). The content slides teach the six behavioral and four structural diagrams above.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: \"Composite Structure Diagram\" and \"Differentiate Behavioral UML diagrams from Structural\". (The cover slide misspells \"Composite Struture\", and the outcome reads \"differentiate ... to Structural\".)"
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Behavioral Versus Structural UML",
+        "text": "Behavioral = Verbs = time (\"Be-have\", action). Structural = Nouns = no time (\"Structure\", things).\nStructural four: C-O-C-D = Class, Object, Component, Deployment (\"Cats Obey Calm Dogs\").\nBehavioral six: Activity, Use case, Timing, State machine, Sequence, Communication (\"A Unicorn Tripped, Sliding Sideways, Crying\")."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Behavioral Versus Structural UML",
+        "columns": [
+         "Point",
+         "Behavioral Diagrams",
+         "Structural Diagrams"
+        ],
+        "rows": [
+         [
+          "Depict",
+          "Elements that depend on time and convey the dynamic concepts",
+          "Elements that are independent of time and convey the concepts of the system"
+         ],
+         [
+          "Natural-language hook",
+          "Elements resemble verbs; relationships convey the passage of time",
+          "Elements resemble nouns; relationships are structural or semantic"
+         ],
+         [
+          "Vehicle reservation example",
+          "Make a Reservation, Rent a Car, Provide Credit Card Details",
+          "Car, Reservation, Driver's License, Credit Card, with connectors"
+         ],
+         [
+          "Diagrams (the slides)",
+          "Activity, Use Case, Timing, State Machine, Sequence, Communication",
+          "Class, Object, Component, Deployment"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "The Behavioral Diagrams",
+      "summary": "The Behavioral Diagrams: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Sequence and communication diagrams both show messages. The difference is layout: sequence is vertical, top-down chronological; communication uses numbered messages with arrows."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Behavioral Diagrams",
+        "text": "Timing components, L-S-D-T-D: Lifeline, State timeline, Duration constraint, Time constraint, Destruction occurrence.\nUse case trio: actors do use cases (an actor acts, a use case is a verb, arrows connect them).\nSequence vs communication: sequence is Vertical and by time, communication uses Numbers."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "The Behavioral Diagrams",
+        "columns": [
+         "Diagram",
+         "What It Shows",
+         "Key Components And Points"
+        ],
+        "rows": [
+         [
+          "Activity",
+          "The flow of activities and actions, sequential and in parallel, and how they connect. The focus is the set of activities, not what is produced. It has a clear beginning and end.",
+          "Objects used, consumed, or produced by an activity. Slide exercise: student enrollment process with an applicant and a registrar."
+         ],
+         [
+          "Use case",
+          "A user's interaction with the system; used to analyze high-level requirements.",
+          "Functional requirements = use cases (a verb, an action). Actors = human, organization, or internal or external application. Relationships = straight arrows."
+         ],
+         [
+          "Timing",
+          "How objects and actors act along a linear time axis, when time is the center of attention.",
+          "Lifeline (participant), state timeline, duration constraint, time constraint, destruction occurrence (ends a lifeline)."
+         ],
+         [
+          "State machine (statechart)",
+          "The different states of a component and how it changes with internal and external events.",
+          "Called a state machine because it is a machine describing the states of an object."
+         ],
+         [
+          "Sequence",
+          "The sequence of messages between actors and objects in chronological order. Probably the most important UML diagram for design-level business models.",
+          "Actors or objects are active only when needed. Vertical, top-down message flow."
+         ],
+         [
+          "Communication",
+          "The communication between objects; the core components are the messages exchanged, like a sequence diagram.",
+          "Uses number schemes and pointing arrows for message flow instead of a vertical time order."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "The Structural Diagrams",
+      "summary": "The Structural Diagrams: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: \"Checking Account\", and common attributes such as balance and the debit and credit operations belong in the parent Account class. (The slide's class diagram says \"Checkings Account\" and repeats balance, debit(), and credit() in both subclasses.) The inheritance arrow has a blank (hollow) head."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "The Structural Diagrams",
+        "text": "Class box = N-A-O: Name on top, Attributes in the middle, Operations at the bottom.\nDeployment: artifacts sit on nodes (software on hardware).\nClass is the blueprint, object is the real instance (class Client, object James)."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "The Structural Diagrams",
+        "columns": [
+         "Diagram",
+         "What It Shows",
+         "Key Points"
+        ],
+        "rows": [
+         [
+          "Class",
+          "The most common diagram for software documentation, since most software is OOP based and OOP is based on classes and their relations.",
+          "Each class has three fields: the class name (top), attributes (below the name), and operations/behaviors (bottom). A connecting line shows the relation."
+         ],
+         [
+          "Object",
+          "Checks whether the abstract structure from the class diagram is viable when the classes are instantiated.",
+          "Focuses on a particular set of objects, attributes, and links. Slide example: the Client class gets a real client, James."
+         ],
+         [
+          "Component",
+          "How components are wired together to form larger components or software systems.",
+          "Breaks the system into smaller components to verify required functionality. Developers use it as a roadmap for implementation and for task assignment and skill planning."
+         ],
+         [
+          "Deployment",
+          "The relation between software and hardware: a physical model of how software components (artifacts) are deployed on hardware components (nodes).",
+          "Shows exactly where each software component is deployed."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "The Slide Examples (Read From The Pictures)",
+      "summary": "The slides teach each diagram with one example. Recognize them by their story.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: the Savings object in the object diagram is an instance of Savings Account. (The slide's box reads \"Student Savings: Checkings Account\".) Also, an extend arrow points from the extending use case to the base use case, and a Death state has no fixed duration, which is why its constraint reads \"Unpredictable\" (spelled \"Unpredicatble\" on the slide)."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "The Slide Examples (Read From The Pictures)",
+        "columns": [
+         "Diagram",
+         "Example On The Slide",
+         "What To Notice"
+        ],
+        "rows": [
+         [
+          "Activity",
+          "Student enrollment: fill out enrollment forms, a decision on whether the forms are correct, enroll in the university, then two parallel branches (attend the overview presentation; enroll in seminars then pay the initial tuition).",
+          "Initial node (filled dot), decision diamond with guards like [correct], fork bar splits into parallel branches, join bar merges them, final node (bullseye)."
+         ],
+         [
+          "Use case",
+          "Inventory system: actors Owner, Manager, Inspector, Supplier, Inventory Clerk; use cases such as Purchase Stock, Payment For Stock, Return Stock, Quality Control of Stock, Distribute/Sell Stock.",
+          "Actors sit outside the system and connect to use cases with straight lines. Dependencies are labeled include and extend."
+         ],
+         [
+          "Timing",
+          "Human growth stages on one lifeline (Neonate, Infant, Toddler, Play Age, Middle Childhood, Adolescence, Young and Middle and Late Adulthood, Death), each with a time constraint such as {0..28 days}.",
+          "Time runs left to right along a linear time axis; each stage is a state on the lifeline."
+         ],
+         [
+          "State machine",
+          "A chess game: Start, White's turn, Black's turn, with transitions \"white moves\" and \"black moves\", ending in Black wins, White wins, or Draw (checkmate, stalemate).",
+          "States are boxes, events label the transitions, and the game ends in final states."
+         ],
+         [
+          "Sequence",
+          "A Registrar deleting a student's course registration, sending messages to CourseRegPeriods, StudentCourseRegs, and Class, with return messages back.",
+          "Participants across the top, time runs downward, messages go in order."
+         ],
+         [
+          "Communication",
+          "An online store: Actor, Online Store, Categories, Item, Shopping Cart, Order, Inventory, with messages 1.* browse(), 1.1 filter(), 1.2 view_item(), 1.3 add_to_Cart(), 1.4 place_order(), 1.5 update_inventory().",
+          "Same messages as a sequence diagram but laid out as a network of objects with numbered arrows."
+         ],
+         [
+          "Class",
+          "A bank: Client (name, SSN, address, employment; owns()), super-class Account, and subclasses Checking and Savings Account joined by hollow-head inheritance arrows.",
+          "Three-part boxes. Subclasses inherit from the super-class."
+         ],
+         [
+          "Object",
+          "The same bank with real values: James (Client) and his two accounts, Student Checkings (balance 140.67) and Student Savings (balance 875.69, rate 0.15%).",
+          "Boxes show instances with actual values, not just attribute names."
+         ],
+         [
+          "Component",
+          "A library system: LMS database, Book, Search, and Member components wired by interfaces and dependencies, with a Transaction package.",
+          "Components connect through provided and required interfaces (ball and socket)."
+         ],
+         [
+          "Deployment",
+          "A hospital system: Desktop client, Hospital local server, Printer, and Data base server as nodes, linked by network paths labeled primary network or private network.",
+          "3D boxes are nodes, lines are communication paths."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 7, Subtopic 1: Strategic Trends In Software Engineering",
+      "summary": "Three objectives: (1) understand AI-native and LLM-based applications, (2) differentiate a GenAI platform from open GenAI ecosystems, (3) discuss Green Software Engineering and the trend of maximizing talent density.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "AI-Native Software Engineering",
+      "summary": "AI-Native Software Engineering means building software systems where AI is a core part of the design, development, and operation, not just an added feature. It integrates AI models directly into the SDLC, helping systems learn, adapt, and improve automatically.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "Correct: Kubeflow runs on Kubernetes. (The slide spells it \"Kubemeters\".)"
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Tools And Frameworks",
+        "text": "Key ideas = D-L-A-E: Design, Learning, Automation, Ethics (\"Dogs Like Apple Eating\").\nTools = B-M-O-A: Build/train (TensorFlow, PyTorch), Manage lifecycle (MLflow), Orchestrate (Kubeflow), Assist coding (Copilot)."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Four Key Ideas",
+        "columns": [
+         "Key Idea",
+         "Meaning",
+         "Example On The Slide"
+        ],
+        "rows": [
+         [
+          "AI-driven design and architecture",
+          "Uses machine learning to help design better system structures automatically.",
+          "AI suggests the most efficient database schema or API structure from project data."
+         ],
+         [
+          "Continuous learning and improvement",
+          "Software evolves by learning from user feedback and new data.",
+          "A recommendation system that gets smarter the more users interact with it."
+         ],
+         [
+          "Automation of repetitive tasks",
+          "AI automates coding, testing, debugging, and deployment.",
+          "GitHub Copilot and Jenkins AI plugins help write and test code faster."
+         ],
+         [
+          "Ethical and responsible AI",
+          "Makes sure the AI in the software is fair, transparent, and unbiased.",
+          "(No example on the slide.)"
+         ]
+        ]
+       },
+       {
+        "title": "Tools And Frameworks",
+        "columns": [
+         "Category",
+         "Tool",
+         "Job"
+        ],
+        "rows": [
+         [
+          "Machine learning frameworks",
+          "TensorFlow, PyTorch",
+          "Build and train machine learning models efficiently."
+         ],
+         [
+          "Lifecycle management",
+          "MLflow",
+          "Manage the machine learning model lifecycle, including experimentation and deployment."
+         ],
+         [
+          "Pipeline orchestration",
+          "Kubeflow",
+          "Create and manage machine learning pipelines on Kubernetes for scalable, large-scale AI workflows."
+         ],
+         [
+          "AI-assisted coding",
+          "GitHub Copilot",
+          "Improves developer productivity by suggesting code snippets and automating tasks."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "LLM-Based Applications And Agents",
+      "summary": "LLMs (Large Language Models) are AI systems trained on large datasets to understand and generate human-like language effectively. If a question asks for this definition in words, the answer is Large Language Models (do not abbreviate).",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "An LLM agent summarizes articles and extracts insights. It does not repair hardware, manufacture processors, or install network cables."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Applications Of LLM-Based Agents",
+        "text": "LLM uses: Chat, Summarize, Code, Create, Research (\"Cats Sit Calmly, Creating Rugs\").\nAgent applications: S-T-R-W-P: Support, Tutoring, Research, Workflow, Personalized content (\"Some Tigers Read Wild Poems\")."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Practical Uses Of LLMs In Software",
+        "columns": [
+         "Use",
+         "What It Does",
+         "Example"
+        ],
+        "rows": [
+         [
+          "1. Chatbots and virtual assistants",
+          "Handle customer support or developer queries automatically.",
+          "An AI chatbot that helps users troubleshoot app issues."
+         ],
+         [
+          "2. Text summarization and translation",
+          "Summarize technical documents or translate documentation for global teams.",
+          ""
+         ],
+         [
+          "3. Code generation and debugging",
+          "Write, explain, or fix code in many languages.",
+          "ChatGPT suggesting optimized Python code or detecting bugs."
+         ],
+         [
+          "4. Content creation and search",
+          "Create documentation, release notes, or test cases. Improve search and knowledge retrieval.",
+          ""
+         ],
+         [
+          "5. Research and workflow automation",
+          "LLM agents gather research data, summarize results, and automate routine development tasks.",
+          ""
+         ]
+        ]
+       },
+       {
+        "title": "Applications Of LLM-Based Agents",
+        "columns": [
+         "Application",
+         "What The Agent Does"
+        ],
+        "rows": [
+         [
+          "1. Customer support",
+          "Automates responses to common customer queries, improving response times and reducing workload."
+         ],
+         [
+          "2. Intelligent tutoring systems",
+          "Gives personalized learning by adapting content to each student's needs."
+         ],
+         [
+          "3. Research assistance",
+          "Summarizes articles, extracts insights, and generates hypotheses."
+         ],
+         [
+          "4. Workflow automation",
+          "Automates repetitive tasks and coordinates multiple systems."
+         ],
+         [
+          "5. Personalized content generation",
+          "Creates tailored articles, emails, and marketing materials from user preferences and data."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "GenAI Platform Engineering",
+      "summary": "Generative AI systems create diverse content like text, images, and code using advanced AI models.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [
+       "APIs do not prevent outside interaction, eliminate data pipelines, or replace AI models. They integrate the platform with external tools and services."
+      ],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Applications Across Industries",
+        "text": "Platform = L-A-D: LLMs (the brain), APIs (the hands, they reach outside tools), Data pipelines (the food)."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Core Components",
+        "columns": [
+         "Component",
+         "Role"
+        ],
+        "rows": [
+         [
+          "1. Role of Large Language Models",
+          "The foundation for content understanding and generation: summarization, translation, and conversation."
+         ],
+         [
+          "2. APIs for integration",
+          "Let the platform interact with external tools and services, extending its capabilities and integration with other systems."
+         ],
+         [
+          "3. Data pipelines management",
+          "Handle ingestion, processing, and storage of data so models get relevant, high-quality information."
+         ]
+        ]
+       },
+       {
+        "title": "Applications Across Industries",
+        "columns": [
+         "Application",
+         "What It Does"
+        ],
+        "rows": [
+         [
+          "Customer support chatbots",
+          "Instant, accurate responses; better customer experience and lower costs."
+         ],
+         [
+          "Marketing content generation",
+          "Rapid creation of articles, ads, and social media content."
+         ],
+         [
+          "Software development assistance",
+          "Code assistants help write, debug, and optimize code."
+         ],
+         [
+          "Data analysis and summarization",
+          "Help analysts extract insights and generate reports."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Maximizing Talent Density",
+      "summary": "Talent density measures the proportion of high-performing individuals within a workforce. It focuses on quality over quantity.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Maximizing Talent Density",
+        "text": "Strategies = H-D-C-M: Hire, Develop, Culture, Manage underperformers.\nMeasures = P-S-E-R: Performance reviews, Skills assessment, Engagement surveys, Retention and promotion."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Maximizing Talent Density",
+        "columns": [
+         "Strategies To Maximize It",
+         "Measuring It"
+        ],
+        "rows": [
+         [
+          "1. Strategic hiring: recruit top performers who match company values and goals.",
+          "1. Performance reviews and feedback: show strengths and areas to improve."
+         ],
+         [
+          "2. Employee development: training and mentorship for continuous growth.",
+          "2. Skills assessment and benchmarking: identify top performers and skill gaps against standards."
+         ],
+         [
+          "3. Culture of excellence: accountability and high performance.",
+          "3. Engagement and satisfaction surveys: measure engagement and alignment."
+         ],
+         [
+          "4. Managing underperformance: constructive feedback and tough decisions.",
+          "4. Retention and promotion metrics: track retention and promotion of high performers."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Open GenAI Ecosystems",
+      "summary": "Open GenAI promotes transparent collaboration by sharing models, datasets, and tools among developers worldwide. An open environment that promotes collaboration through sharing AI models, datasets, and tools is exactly this definition.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Open GenAI Ecosystems",
+        "text": "Components: M-D-H = Models, Development tools, Hosting.\nSuccess factors: I-C-G = Interoperability, Community, Governance.\nChallenges: Q-S-S = Quality, Security, Sustainability."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Open GenAI Ecosystems",
+        "columns": [
+         "Key Component",
+         "What It Is"
+        ],
+        "rows": [
+         [
+          "1. GenAI models",
+          "Large language, vision, and multimodal models that process diverse data types."
+         ],
+         [
+          "2. Development tools",
+          "Training frameworks, evaluation suites, and preprocessing utilities."
+         ],
+         [
+          "3. Hosting platforms",
+          "Deployment, collaboration, and workflow management for GenAI projects at scale."
+         ]
+        ]
+       },
+       {
+        "title": "Open GenAI Ecosystems",
+        "columns": [
+         "Topic",
+         "Slide Content"
+        ],
+        "rows": [
+         [
+          "Benefits",
+          "Foster collaboration, transparency, and inclusivity, accelerating AI innovation and access."
+         ],
+         [
+          "Key success factors",
+          "Interoperability, community engagement, and responsible governance."
+         ],
+         [
+          "Future challenges and investments",
+          "Address quality, security, and sustainability with ongoing investment in infrastructure and ethics."
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Green Software Engineering",
+      "summary": "Green Software Engineering focuses on designing software to minimize environmental impact and promote sustainability. It does not aim to increase environmental impact.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "CS0025-M5S1",
+       "CS0025-M5S2",
+       "CS0025-M5S3",
+       "CS0025-M6S0",
+       "CS0025-M6S1",
+       "CS0025-M6S2",
+       "CS0025-M7S1"
+      ],
+      "memory_aids": [
+       {
+        "label": "Green Software Engineering",
+        "text": "Practices = A-O-P-S: Algorithms, Optimize, Profile, Scalable (\"Always Open Pretty Skies\").\nApplications = C-E-E-S: Carbon-aware cloud, Energy-efficient AI, Energy-saving mobile, Sustainable development."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Green Software Engineering",
+        "columns": [
+         "Energy-Efficient Coding Practice",
+         "How It Saves Energy"
+        ],
+        "rows": [
+         [
+          "1. Efficient algorithms and data structures",
+          "Lower computational complexity and memory use, so lower energy use."
+         ],
+         [
+          "2. Code optimization techniques",
+          "Optimizing loops and avoiding unnecessary computation decreases power use."
+         ],
+         [
+          "3. Profiling to identify bottlenecks",
+          "Profiling and benchmarking find performance issues for targeted improvements."
+         ],
+         [
+          "4. Scalable and sustainable code",
+          "Efficient resource use under varying loads."
+         ]
+        ]
+       },
+       {
+        "title": "Green Software Engineering",
+        "columns": [
+         "Application Of Green Software",
+         "What It Does"
+        ],
+        "rows": [
+         [
+          "1. Carbon-aware cloud services",
+          "Adjust workloads based on carbon intensity to optimize resources and cut emissions."
+         ],
+         [
+          "2. Energy-efficient AI training",
+          "Green AI improves training efficiency using optimized hardware and algorithms."
+         ],
+         [
+          "3. Energy-saving mobile apps",
+          "Use less battery and extend device lifespan."
+         ],
+         [
+          "4. Sustainable software development",
+          "Improves operational efficiency and stakeholder engagement."
+         ]
+        ]
+       }
+      ]
+     }
+    ],
+    "formula_sheet": [],
+    "self_check": [],
+    "cram_sheet": [
+     {
+      "topic": "Object",
+      "remember": "Properties, behaviors, states"
+     },
+     {
+      "topic": "OOA",
+      "remember": "Models functional requirements with objects, independent of implementation. Five activities: Find, Organize, Describe interactions, External behavior, Internal behavior"
+     },
+     {
+      "topic": "OOD",
+      "remember": "Extends OOA and adds implementation constraints (platform, time, budget, performance, skills)"
+     },
+     {
+      "topic": "OOAD",
+      "remember": "Method based on a system's object models. Good: encapsulation, easy to understand. Bad: ill-suited to procedural apps, too complex for simple apps"
+     },
+     {
+      "topic": "Procedural",
+      "remember": "Step-by-step instructions, top-down, imperative. Data exposed to the whole program. Parameter passing: value, reference, result, value-result, name"
+     },
+     {
+      "topic": "Procedural vs OOP",
+      "remember": "Functions vs objects, top-down vs bottom-up, no access specifiers vs private/public/protected, no data hiding vs data hiding"
+     },
+     {
+      "topic": "Methodology",
+      "remember": "Steps to form, plan, and control system development. Nine criteria. Tools (language, IDE, CASE) and techniques (best practices)"
+     },
+     {
+      "topic": "Six models",
+      "remember": "Waterfall, Iterative, DevOps, V-Model, Spiral, Prototyping"
+     },
+     {
+      "topic": "Waterfall / V / Spiral",
+      "remember": "Rigid requirements first / waterfall bent up with testing pairs / risk-driven in four quadrants"
+     },
+     {
+      "topic": "Iterative / DevOps / Prototype",
+      "remember": "Small fixed-scope increments, less customer involvement / Dev + Ops continuous delivery / early model with feedback"
+     },
+     {
+      "topic": "Strategy",
+      "remember": "No one-size-fits-all. A methodology does not guarantee success. Build in flexibility"
+     },
+     {
+      "topic": "UML",
+      "remember": "Standard way to visualize system design. Forward = before coding, backward = after coding"
+     },
+     {
+      "topic": "Behavioral (verbs, time)",
+      "remember": "Activity, Use case, Timing, State machine, Sequence, Communication"
+     },
+     {
+      "topic": "Structural (nouns, no time)",
+      "remember": "Class, Object, Component, Deployment"
+     },
+     {
+      "topic": "AI-native",
+      "remember": "AI is core to design, development, and operation. Four key ideas: design, learning, automation, ethics"
+     },
+     {
+      "topic": "AI tools",
+      "remember": "TensorFlow and PyTorch (build), MLflow (lifecycle), Kubeflow (pipelines), GitHub Copilot (coding)"
+     },
+     {
+      "topic": "LLM",
+      "remember": "Large Language Models: trained on large datasets to understand and generate human-like language"
+     },
+     {
+      "topic": "GenAI platform",
+      "remember": "LLMs, APIs (integrate with external tools and services), data pipelines"
+     },
+     {
+      "topic": "Talent density",
+      "remember": "Proportion of high performers; quality over quantity"
+     },
+     {
+      "topic": "Open GenAI",
+      "remember": "Shares models, datasets, and tools. Components: models, tools, hosting. Success: interoperability, community, governance"
+     },
+     {
+      "topic": "Green SE",
+      "remember": "Minimize environmental impact: efficient algorithms, optimization, profiling, scalable code"
+     }
+    ]
+   }
+  }
+ ],
+ "decks": [
+  {
+   "name": "SE1 Summative 3 Flashcards",
+   "subject": "Software Engineering 1",
+   "modules_included": "M5, M6, M7",
+   "cards": [
+    {
+     "type": "multiple_choice",
+     "question": "What is the primary focus of Object-Oriented Analysis (OOA)?",
+     "correct_answer": "Modeling functional requirements using objects",
+     "options": "[\"Testing the system's network connection\", \"Writing the final program code\", \"Modeling functional requirements using objects\", \"Installing the completed software\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In object-oriented programming, an object commonly contains:",
+     "correct_answer": "Properties, behaviors, and states",
+     "options": "[\"Functions and loops only\", \"Inputs and outputs only\", \"Hardware and network devices\", \"Properties, behaviors, and states\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which activity is part of Object-Oriented Analysis?",
+     "correct_answer": "Defining and organizing objects",
+     "options": "[\"Purchasing computer hardware\", \"Defining and organizing objects\", \"Training end users\", \"Deploying the final system\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How does Object-Oriented Design differ from Object-Oriented Analysis?",
+     "correct_answer": "It considers implementation constraints",
+     "options": "[\"It avoids software and hardware requirements\", \"It focuses only on user interviews\", \"It considers implementation constraints\", \"It eliminates the identified objects\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is Object-Oriented Analysis and Design (OOAD)?",
+     "correct_answer": "A method based on a system's object models",
+     "options": "[\"A technique used only for software testing\", \"A method based on a system's object models\", \"A programming language used for databases\", \"A model for managing computer networks\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How many activities does OOA list?",
+     "correct_answer": "Five",
+     "options": "[\"Four\", \"Seven\", \"Five\", \"Three\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is the first OOA activity?",
+     "correct_answer": "Find and define the objects",
+     "options": "[\"Define the internal behavior of the objects\", \"Organize the classes into packages\", \"Describe how the objects interact\", \"Find and define the objects\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which OOA activity comes right after organizing the objects?",
+     "correct_answer": "Describe how the objects interact with one another",
+     "options": "[\"Deploy the objects\", \"Describe how the objects interact with one another\", \"Define the internal behavior of the objects\", \"Find and define the objects\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which constraint does OOD consider?",
+     "correct_answer": "Software or hardware platforms, time and budget, performance, and developer aptitude",
+     "options": "[\"Only the color of the user interface\", \"Only the number of users\", \"Software or hardware platforms, time and budget, performance, and developer aptitude\", \"Only the programming language's age\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "OOAD analyzes and designs an application based on which models?",
+     "correct_answer": "The system's object models",
+     "options": "[\"Network topology models\", \"Hardware inventory models\", \"Financial models\", \"The system's object models\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is an advantage of OOAD?",
+     "correct_answer": "It encourages encapsulation",
+     "options": "[\"It removes the need for objects\", \"It encourages encapsulation\", \"It is ideal for procedural languages\", \"It suits every simple application\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a disadvantage of OOAD?",
+     "correct_answer": "It is ill-suited to procedural applications",
+     "options": "[\"It cannot use objects\", \"It hides data from the whole program\", \"It needs no planning\", \"It is ill-suited to procedural applications\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Procedural programming uses what to tell the computer what to do?",
+     "correct_answer": "A list of instructions, step by step",
+     "options": "[\"A random order of statements\", \"A network of agents\", \"A list of instructions, step by step\", \"A set of interacting objects\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Procedural programming is also referred to as:",
+     "correct_answer": "Imperative programming",
+     "options": "[\"Declarative programming only\", \"Object programming\", \"Imperative programming\", \"Bottom-up programming\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Procedural programming languages are also known as:",
+     "correct_answer": "Top-down languages",
+     "options": "[\"Bottom-up languages\", \"Visual languages\", \"Object languages\", \"Top-down languages\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Where is a local variable declared?",
+     "correct_answer": "Inside a method, limited to that method's scope",
+     "options": "[\"Inside a method, limited to that method's scope\", \"Outside every function\", \"In a library only\", \"In the operating system\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which variable can be used in all functions?",
+     "correct_answer": "Global variable",
+     "options": "[\"Global variable\", \"Constant pointer\", \"Local variable\", \"Parameter\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is NOT a parameter passing method listed on the slides?",
+     "correct_answer": "Pass by object",
+     "options": "[\"Pass by value-result\", \"Pass by object\", \"Pass by value\", \"Pass by reference\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is an advantage of procedural programming?",
+     "correct_answer": "The program flow can be tracked easily",
+     "options": "[\"Adding new data and functions is very easy\", \"The program flow can be tracked easily\", \"It models the real world naturally\", \"Data is hidden from the whole program\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a disadvantage of procedural programming?",
+     "correct_answer": "Data is exposed to the whole program",
+     "options": "[\"It cannot be portable\", \"The code is always reusable\", \"Memory requirements grow\", \"Data is exposed to the whole program\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A program divided into small parts called functions follows which style?",
+     "correct_answer": "Procedural programming",
+     "options": "[\"Procedural programming\", \"Declarative modeling\", \"Object-oriented programming\", \"Agile programming\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A program divided into small parts called objects follows which style?",
+     "correct_answer": "Object-oriented programming",
+     "options": "[\"Procedural programming\", \"Object-oriented programming\", \"Machine programming\", \"Structured programming\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which approach does OOP follow?",
+     "correct_answer": "Bottom-up",
+     "options": "[\"Hardware-first\", \"Top-down\", \"Right-to-left\", \"Bottom-up\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which style is described as focusing on 'What you are doing'?",
+     "correct_answer": "Procedural programming",
+     "options": "[\"Agile programming\", \"Procedural programming\", \"Iterative modeling\", \"Object-oriented programming\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A system development methodology is best described as:",
+     "correct_answer": "The steps used to form, plan, and control the development of an information system",
+     "options": "[\"A hardware purchasing plan\", \"The steps used to form, plan, and control the development of an information system\", \"A single programming language\", \"A list of end users\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How many system development models does the slide list?",
+     "correct_answer": "Six",
+     "options": "[\"Eight\", \"Four\", \"Five\", \"Six\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which criterion asks whether the final product is defined early in planning or near closure?",
+     "correct_answer": "Final product determination",
+     "options": "[\"Final product determination\", \"Project cost\", \"Probability of success\", \"Training and knowledge\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which criterion asks whether management is an obstacle or empowers the team?",
+     "correct_answer": "Role of upper management",
+     "options": "[\"Role of upper management\", \"Team dynamic and creativity\", \"Training and knowledge\", \"Project completion date\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which criterion measures the chance of success given complexity and unpredictability?",
+     "correct_answer": "Probability of success",
+     "options": "[\"Project cost\", \"Responsiveness to environment\", \"Final product determination\", \"Probability of success\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Tools in software development include:",
+     "correct_answer": "The programming language, IDEs, code generators, and CASE",
+     "options": "[\"Use-case modeling and software testing\", \"The programming language, IDEs, code generators, and CASE\", \"Only user interviews\", \"Only hardware\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is an example of a technique?",
+     "correct_answer": "Use-case modeling",
+     "options": "[\"Project management software\", \"Integrated Development Environment\", \"Code generator\", \"Use-case modeling\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "For which kind of organization does waterfall remain a strong solution?",
+     "correct_answer": "Government contractors",
+     "options": "[\"Government contractors\", \"Hobby game developers only\", \"Emerging technology startups only\", \"Teams with no requirements\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which model cycles waterfall several times in small increments?",
+     "correct_answer": "Iterative",
+     "options": "[\"Prototyping\", \"V-Model\", \"Iterative\", \"Spiral\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In the iterative model, the scope of each increment is normally:",
+     "correct_answer": "Fixed",
+     "options": "[\"Unlimited\", \"Always changing\", \"Fixed\", \"Decided by the customer daily\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Compared with agile, the iterative model has external customers who are:",
+     "correct_answer": "Less involved",
+     "options": "[\"More involved\", \"Fully in control\", \"Less involved\", \"Absent from the project\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which model combines software development and IT operations?",
+     "correct_answer": "DevOps",
+     "options": "[\"Waterfall\", \"Prototyping\", \"DevOps\", \"V-Model\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "DevOps aims to shorten the SDLC and provide:",
+     "correct_answer": "Continuous delivery with high software quality",
+     "options": "[\"Continuous delivery with high software quality\", \"Slow releases\", \"Fixed requirements only\", \"Fewer teams\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which model flips its steps upward after the coding phase?",
+     "correct_answer": "V-Model",
+     "options": "[\"Iterative\", \"Spiral\", \"DevOps\", \"V-Model\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "The V-Model is NOT recommended for which kind of project?",
+     "correct_answer": "Small projects",
+     "options": "[\"Small projects\", \"Projects with static requirements\", \"Projects needing early testing\", \"Clearly stated projects\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which model lets teams adopt multiple SDLC models based on risk patterns?",
+     "correct_answer": "Spiral",
+     "options": "[\"Spiral\", \"V-Model\", \"Prototyping\", \"Waterfall\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the challenge of the spiral model?",
+     "correct_answer": "Knowing the right moment to move to the next phase",
+     "options": "[\"Knowing the right moment to move to the next phase\", \"Having only one phase\", \"Having no risk\", \"Avoiding all prototypes\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which model produces an early, not fully tested model to give customers a sense of what is coming?",
+     "correct_answer": "Prototyping",
+     "options": "[\"Spiral\", \"V-Model\", \"Prototyping\", \"Waterfall\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Prototyping works well for companies in:",
+     "correct_answer": "Emerging industries or new technologies",
+     "options": "[\"Mature industries only\", \"Government contract work only\", \"Emerging industries or new technologies\", \"Industries with fixed requirements only\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which statement is a common misconception about methodologies?",
+     "correct_answer": "Using a methodology guarantees project success",
+     "options": "[\"There is no single perfect solution\", \"Flexibility must be built in\", \"Using a methodology guarantees project success\", \"Every project and team is unique\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Why do some projects fail hard, according to the slides?",
+     "correct_answer": "A one-size-fits-all approach was applied without enough analysis",
+     "options": "[\"A one-size-fits-all approach was applied without enough analysis\", \"They had too few meetings\", \"They avoided all methodologies\", \"They used too many diagrams\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What should a development model or methodology have built in?",
+     "correct_answer": "Flexibility",
+     "options": "[\"Secrecy\", \"Rigidity\", \"A fixed budget only\", \"Flexibility\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is Unified Modeling Language (UML)?",
+     "correct_answer": "A standard way to visualize the design of a system",
+     "options": "[\"A standard way to visualize the design of a system\", \"A programming language for databases\", \"A network protocol\", \"A testing tool\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "UML prescribes a standard set of diagrams and notations for modeling:",
+     "correct_answer": "Object-oriented systems",
+     "options": "[\"Only networks\", \"Object-oriented systems\", \"Only databases\", \"Only hardware\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In forward design, when is the UML sketch done?",
+     "correct_answer": "Before coding the application",
+     "options": "[\"Before coding the application\", \"After coding the application\", \"After deployment\", \"Only during maintenance\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In backward design, when are the UML diagrams drawn?",
+     "correct_answer": "After writing the code, as documentation",
+     "options": "[\"After writing the code, as documentation\", \"Before the requirements\", \"Before any planning\", \"Never\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Behavioral UML diagrams depict elements that are:",
+     "correct_answer": "Dependent on time, like verbs in natural language",
+     "options": "[\"Only database tables\", \"Only hardware elements\", \"Independent of time, like nouns\", \"Dependent on time, like verbs in natural language\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Structural UML diagrams depict elements that are:",
+     "correct_answer": "Independent of time, like nouns in natural language",
+     "options": "[\"Dependent on time, like verbs\", \"Only user actions\", \"Only messages\", \"Independent of time, like nouns in natural language\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "'Make a Reservation' or 'Rent a Car' would appear in which kind of diagram?",
+     "correct_answer": "Behavioral",
+     "options": "[\"Deployment\", \"Behavioral\", \"Class\", \"Structural\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "'Car', 'Reservation', and 'Credit Card' would appear in which kind of diagram?",
+     "correct_answer": "Structural",
+     "options": "[\"Sequence\", \"Activity\", \"Behavioral\", \"Structural\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a behavioral UML diagram?",
+     "correct_answer": "Activity diagram",
+     "options": "[\"Class diagram\", \"Object diagram\", \"Deployment diagram\", \"Activity diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a structural UML diagram?",
+     "correct_answer": "Class diagram",
+     "options": "[\"Use case diagram\", \"State machine diagram\", \"Sequence diagram\", \"Class diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram describes the flow of activities, sequential and parallel, with a clear beginning and end?",
+     "correct_answer": "Activity diagram",
+     "options": "[\"Object diagram\", \"Class diagram\", \"Component diagram\", \"Activity diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In a use case diagram, functional requirements are represented as:",
+     "correct_answer": "Use cases, each a verb describing an action",
+     "options": "[\"Use cases, each a verb describing an action\", \"Nodes\", \"Straight arrows\", \"Actors\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In a use case diagram, who or what can be an actor?",
+     "correct_answer": "A human, an organization, or an internal or external application",
+     "options": "[\"A human, an organization, or an internal or external application\", \"Only a human\", \"Only a server\", \"Only a database\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram shows how objects act along a linear time axis?",
+     "correct_answer": "Timing diagram",
+     "options": "[\"Class diagram\", \"Component diagram\", \"Timing diagram\", \"Object diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram describes the different states of a component and how events change them?",
+     "correct_answer": "State machine diagram",
+     "options": "[\"State machine diagram\", \"Deployment diagram\", \"Class diagram\", \"Package diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram shows messages and interactions between actors and objects in chronological order, vertically?",
+     "correct_answer": "Sequence diagram",
+     "options": "[\"Object diagram\", \"Sequence diagram\", \"Class diagram\", \"Deployment diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How does a communication diagram show message flow?",
+     "correct_answer": "With number schemes and pointing arrows",
+     "options": "[\"With nodes and artifacts\", \"With class boxes only\", \"With number schemes and pointing arrows\", \"Strictly top-down in time order\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram is the most common for software documentation because most software is OOP based?",
+     "correct_answer": "Class diagram",
+     "options": "[\"Use case diagram\", \"Class diagram\", \"Timing diagram\", \"Deployment diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram shows how components are wired together to form larger components or systems?",
+     "correct_answer": "Component diagram",
+     "options": "[\"Deployment diagram\", \"Object diagram\", \"Sequence diagram\", \"Component diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which diagram shows how software artifacts are deployed on hardware nodes?",
+     "correct_answer": "Deployment diagram",
+     "options": "[\"Activity diagram\", \"Deployment diagram\", \"Class diagram\", \"Component diagram\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is AI-Native Software Engineering?",
+     "correct_answer": "Building systems where AI is a core part of design, development, and operation",
+     "options": "[\"Adding AI as an optional extra feature\", \"Building systems where AI is a core part of design, development, and operation\", \"Using AI only for hardware\", \"Removing AI from the SDLC\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which tool is for building and training machine learning models?",
+     "correct_answer": "TensorFlow and PyTorch",
+     "options": "[\"TensorFlow and PyTorch\", \"MLflow\", \"Jenkins only\", \"Kubeflow\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which tool manages the machine learning model lifecycle?",
+     "correct_answer": "MLflow",
+     "options": "[\"Kubeflow\", \"MLflow\", \"PyTorch\", \"TensorFlow\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which tool manages large-scale AI workflows and pipelines?",
+     "correct_answer": "Kubeflow",
+     "options": "[\"MLflow\", \"Kubeflow\", \"GitHub Copilot\", \"PyTorch\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which key idea of AI-native engineering makes software evolve from user feedback and new data?",
+     "correct_answer": "Continuous learning and improvement",
+     "options": "[\"Automation of repetitive tasks\", \"AI-driven design and architecture\", \"Continuous learning and improvement\", \"Ethical and responsible AI\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the purpose of APIs in GenAI platform engineering?",
+     "correct_answer": "To integrate the platform with external tools and services",
+     "options": "[\"To eliminate data pipelines\", \"To replace AI models\", \"To integrate the platform with external tools and services\", \"To prevent external interaction\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a practical application of an LLM-based agent?",
+     "correct_answer": "Summarizing articles and extracting insights",
+     "options": "[\"Physically repairing computer hardware\", \"Summarizing articles and extracting insights\", \"Installing network cables\", \"Manufacturing computer processors\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which GenAI platform component handles ingestion, processing, and storage of data?",
+     "correct_answer": "Data pipelines management",
+     "options": "[\"Hosting platforms\", \"Large language models\", \"APIs for integration\", \"Data pipelines management\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Talent density measures:",
+     "correct_answer": "The proportion of high-performing individuals in a workforce",
+     "options": "[\"The number of software tools\", \"The total number of employees\", \"The proportion of high-performing individuals in a workforce\", \"The size of the office\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is a strategy for maximizing talent density?",
+     "correct_answer": "Strategic hiring",
+     "options": "[\"Strategic hiring\", \"Ignoring underperformance\", \"Cutting all training\", \"Hiring the most people\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Open GenAI promotes collaboration by sharing which three things?",
+     "correct_answer": "Models, datasets, and tools",
+     "options": "[\"Passwords, files, and salaries\", \"Contracts, budgets, and leases\", \"Models, datasets, and tools\", \"Hardware, desks, and offices\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which are key success factors of Open GenAI?",
+     "correct_answer": "Interoperability, community engagement, and responsible governance",
+     "options": "[\"Hardware, offices, and printers\", \"Secrecy, speed, and cost\", \"Licenses, fees, and contracts\", \"Interoperability, community engagement, and responsible governance\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Green Software Engineering aims to:",
+     "correct_answer": "Minimize environmental impact and promote sustainability",
+     "options": "[\"Increase energy use\", \"Minimize environmental impact and promote sustainability\", \"Ignore sustainability\", \"Increase environmental impact\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which is an energy-efficient coding practice?",
+     "correct_answer": "Using efficient algorithms and data structures",
+     "options": "[\"Adding unnecessary computations\", \"Using efficient algorithms and data structures\", \"Skipping profiling\", \"Avoiding scalability\"]",
+     "times_missed": 0
+    }
+   ]
+  }
+ ]
+}
