@@ -259,4 +259,11 @@ M8 = [
     ("In the Packet Tracer REST lab, which header carries the service ticket on later calls?", "X-Auth-Token", ["X-Cloupia-Request-Key", "X-auth-access-token", "Authorization: Basic"]),
 ]
 
-CARDS = M7 + M8
+ALL = M7 + M8
+
+# Dawn (2026-11-18): the flashcard deck is 80 cards. These are the highest-value cards from ALL, by index.
+KEEP = [0, 1, 4, 6, 10, 13, 17, 18, 23, 31, 32, 33, 34, 36, 40, 43, 44, 47, 48, 52, 56, 57, 60, 67, 69, 73, 77, 80, 81, 82, 83,
+        86, 87, 90, 95,
+        100, 105, 106, 110, 112, 114, 115, 117, 120, 121, 123, 125, 127, 131, 132, 133, 139, 140, 143, 145, 146, 150, 152, 153,
+        155, 156, 160, 162, 166, 167, 173, 176, 183, 184, 185, 191, 192, 198, 204, 211, 212, 219, 237, 238, 244]
+CARDS = [ALL[i] for i in KEEP]
