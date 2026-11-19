@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DEVASC M7-M8 Reviewer</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #f3f4f6; color: #111; margin: 0; }
+  #app { max-width: 760px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 20px; margin: 8px 0 12px; }
+  .box { background: #fff; border-radius: 8px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,.12); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 8px; }
+  label { font-size: 14px; }
+  button { font-size: 15px; padding: 8px 14px; border: 0; border-radius: 6px; background: #2563eb; color: #fff; cursor: pointer; }
+  button.alt { background: #6b7280; }
+  button:disabled { background: #9ca3af; cursor: default; }
+  .q { font-size: 17px; line-height: 1.4; margin: 6px 0 12px; white-space: pre-wrap; }
+  .hint { font-size: 13px; color: #555; margin-bottom: 8px; }
+  .choice { display: block; width: 100%; text-align: left; background: #f9fafb; color: #111; border: 2px solid #d1d5db; margin-bottom: 8px; padding: 10px 12px; }
+  .choice.picked { border-color: #2563eb; background: #dbeafe; }
+  .choice.right { border-color: #16a34a; background: #dcfce7; }
+  .choice.wrong { border-color: #dc2626; background: #fee2e2; }
+  .exp { margin-top: 10px; padding: 10px; background: #fef9c3; border-radius: 6px; font-size: 14px; white-space: pre-wrap; }
+  .card { min-height: 160px; font-size: 19px; line-height: 1.4; cursor: pointer; white-space: pre-wrap; }
+  .tag { font-size: 12px; color: #555; margin-bottom: 6px; }
+  img { max-width: 100%; margin-bottom: 10px; }
+  .bar { height: 8px; background: #e5e7eb; border-radius: 4px; margin-bottom: 10px; }
+  .bar div { height: 8px; background: #2563eb; border-radius: 4px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+var BANK = /*BANK_JSON*/null/*END*/;
+var items = BANK.items;
+var app = document.getElementById("app");
+
+var state = { mode: "quiz", module: "all", bank: "all", shuffle: true, queue: [], i: 0, picked: [], checked: false, flipped: false, score: 0, missed: [] };
+
+function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+
+function shuffled(list) {
+  var a = list.slice();
+  for (var k = a.length - 1; k > 0; k--) {
+    var j = Math.floor(Math.random() * (k + 1));
+    var t = a[k]; a[k] = a[j]; a[j] = t;
+  }
+  return a;
+}
+
+function pool() {
+  return items.filter(function (it) {
+    var isQuiz = state.mode === "quiz";
+    if (isQuiz !== (it.type === "mcq")) return false;
+    if (state.module !== "all" && String(it.module) !== state.module) return false;
+    if (state.bank !== "all" && it.bank_type !== state.bank) return false;
+    return true;
+  });
+}
+
+function showMenu() {
+  var n = pool().length;
+  app.innerHTML =
+    "<h1>DEVASC Module 7 and 8 Reviewer</h1><div class='box'>" +
+    "<div class='row'><label>Mode <select id='mode'><option value='quiz'>Multiple Choice</option><option value='cards'>Flashcards</option></select></label>" +
+    "<label>Module <select id='module'><option value='all'>7 and 8</option><option value='7'>7 Only</option><option value='8'>8 Only</option></select></label>" +
+    "<label id='bankLabel'>Type <select id='bank'><option value='all'>All</option><option value='exam'>Exam</option><option value='quiz'>Quiz</option></select></label>" +
+    "<label><input type='checkbox' id='shuffle'> Shuffle</label></div>" +
+    "<p id='count'>" + n + " items</p><button id='start'>Start</button></div>";
+  var mode = document.getElementById("mode"), module = document.getElementById("module"), bank = document.getElementById("bank"), shuf = document.getElementById("shuffle");
+  mode.value = state.mode; module.value = state.module; bank.value = state.bank; shuf.checked = state.shuffle;
+  function refresh() {
+    state.mode = mode.value; state.module = module.value; state.bank = bank.value; state.shuffle = shuf.checked;
+    document.getElementById("bankLabel").style.display = state.mode === "quiz" ? "" : "none";
+    if (state.mode !== "quiz") state.bank = "all";
+    document.getElementById("count").textContent = pool().length + " items";
+  }
+  mode.onchange = module.onchange = bank.onchange = shuf.onchange = refresh;
+  refresh();
+  document.getElementById("start").onclick = function () { begin(pool()); };
+}
+
+function begin(list) {
+  if (list.length === 0) return;
+  state.queue = state.shuffle ? shuffled(list) : list.slice();
+  state.i = 0; state.score = 0; state.missed = [];
+  resetItem(); render();
+}
+
+function resetItem() { state.picked = []; state.checked = false; state.flipped = false; }
+
+function progress() {
+  var pct = Math.round(state.i / state.queue.length * 100);
+  return "<div class='bar'><div style='width:" + pct + "%'></div></div>";
+}
+
+function render() {
+  if (state.i >= state.queue.length) return showResult();
+  var it = state.queue[state.i];
+  if (it.type === "mcq") renderQuestion(it); else renderCard(it);
+}
+
+function renderQuestion(it) {
+  var need = it.correct_answers.length;
+  var html = progress() + "<div class='box'><div class='tag'>" + (state.i + 1) + " of " + state.queue.length +
+    " | Module " + it.module + " " + it.bank_type + (state.mode === "quiz" ? " | Score " + state.score : "") + "</div>";
+  html += "<div class='q'>" + esc(it.question) + "</div>";
+  if (it.exhibit_image_url) html += "<img src='" + esc(it.exhibit_image_url) + "' alt='Exhibit'>";
+  if (need > 1) html += "<div class='hint'>Choose " + need + "</div>";
+  it.choices.forEach(function (c, idx) {
+    var cls = "choice";
+    if (state.checked) {
+      var isRight = it.correct_answers.indexOf(c) !== -1;
+      if (isRight) cls += " right"; else if (state.picked.indexOf(idx) !== -1) cls += " wrong";
+    } else if (state.picked.indexOf(idx) !== -1) cls += " picked";
+    html += "<button class='" + cls + "' data-i='" + idx + "'>" + esc(c) + "</button>";
+  });
+  if (state.checked && it.explanation) html += "<div class='exp'>" + esc(it.explanation) + "</div>";
+  html += "<div class='row' style='margin-top:12px'>";
+  if (!state.checked) html += "<button id='check'" + (state.picked.length === 0 ? " disabled" : "") + ">Check</button>";
+  else html += "<button id='next'>Next</button>";
+  html += "<button class='alt' id='menu'>Menu</button></div></div>";
+  app.innerHTML = html;
+  var btns = app.querySelectorAll(".choice");
+  btns.forEach(function (b) {
+    b.onclick = function () {
+      if (state.checked) return;
+      var idx = Number(b.getAttribute("data-i"));
+      var at = state.picked.indexOf(idx);
+      if (at !== -1) state.picked.splice(at, 1);
+      else if (need === 1) state.picked = [idx];
+      else if (state.picked.length < need) state.picked.push(idx);
+      renderQuestion(it);
+    };
+  });
+  var check = document.getElementById("check");
+  if (check) check.onclick = function () {
+    var chosen = state.picked.map(function (p) { return it.choices[p]; });
+    var ok = chosen.length === need && chosen.every(function (c) { return it.correct_answers.indexOf(c) !== -1; });
+    if (ok) state.score++; else state.missed.push(it);
+    state.checked = true; renderQuestion(it);
+  };
+  var next = document.getElementById("next");
+  if (next) next.onclick = function () { state.i++; resetItem(); render(); };
+  document.getElementById("menu").onclick = showMenu;
+}
+
+function renderCard(it) {
+  var html = progress() + "<div class='box'><div class='tag'>" + (state.i + 1) + " of " + state.queue.length + " | Module " + it.module + "</div>";
+  html += "<div class='box card' id='card'>" + (state.flipped ? esc(it.definition) : esc(it.term)) + "</div>";
+  html += "<div class='hint'>" + (state.flipped ? "Answer shown" : "Click the card to flip") + "</div><div class='row'>";
+  if (state.flipped) html += "<button id='got'>Got It</button><button class='alt' id='miss'>Missed</button>";
+  else html += "<button id='flip'>Flip</button>";
+  html += "<button class='alt' id='menu'>Menu</button></div></div>";
+  app.innerHTML = html;
+  function flip() { state.flipped = !state.flipped; renderCard(it); }
+  document.getElementById("card").onclick = flip;
+  var f = document.getElementById("flip"); if (f) f.onclick = flip;
+  var got = document.getElementById("got"), miss = document.getElementById("miss");
+  if (got) got.onclick = function () { state.score++; state.i++; resetItem(); render(); };
+  if (miss) miss.onclick = function () { state.missed.push(it); state.i++; resetItem(); render(); };
+  document.getElementById("menu").onclick = showMenu;
+}
+
+function showResult() {
+  var total = state.queue.length;
+  var html = "<h1>Done</h1><div class='box'><p>Score: " + state.score + " of " + total + " (" + Math.round(state.score / total * 100) + "%)</p>" +
+    "<div class='row'>";
+  if (state.missed.length) html += "<button id='redo'>Retry " + state.missed.length + " Missed</button>";
+  html += "<button class='alt' id='menu'>Menu</button></div></div>";
+  app.innerHTML = html;
+  var redo = document.getElementById("redo");
+  if (redo) redo.onclick = function () { begin(state.missed.slice()); };
+  document.getElementById("menu").onclick = showMenu;
+}
+
+showMenu();
+</script>
+</body>
+</html>

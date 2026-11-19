@@ -8,7 +8,7 @@
     "sections": [
      {
       "heading": "What Is Inside",
-      "summary": "This reviewer covers the fourth summative assessment: Module 7 Infrastructure and Automation and Module 8 Cisco Platforms and Development. Your prof uses multiple choice only, so every section below is written to help you pick the right choice: definitions, counts, which-tool-does-what, and the code and command lines the slides show. The blue boxes are memory aids I made; they are not from the slides.",
+      "summary": "This reviewer covers the fourth summative assessment: Module 7 Infrastructure and Automation and Module 8 Cisco Platforms and Development. Your prof uses multiple choice only, so every section below is written to help you pick the right choice: definitions, counts, which-tool-does-what, and the code and command lines the slides show. The blue boxes are memory aids I made; they are not from the slides. Read the Question Bank part first: it holds the literal exam-style questions and answers Dawn found, and it ranks above everything else in this document. Where the slides and the bank disagree, trust the bank.",
       "key_terms": [],
       "properties": [],
       "worked_examples": [],
@@ -149,6 +149,497 @@
          [
           "Rule-based network access, identity",
           "ISE"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Question Bank: Literal Exam Questions And Answers",
+      "summary": "Start here. These are the real question-and-answer items for Modules 7 and 8 that Dawn pulled from the Cisco exam and quiz banks, copied word for word. Your prof's items are expected to look like these. Where the item says (Choose two.) or (Choose three.), every answer listed is correct and you must pick all of them.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Module 7 Infrastructure and Automation: Exam Items",
+      "summary": "Module 7 Infrastructure and Automation: Exam Items: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 7 Infrastructure and Automation: Exam Items",
+        "columns": [
+         "Question",
+         "Correct Answer"
+        ],
+        "rows": [
+         [
+          "What is the most common cause of IT outages?",
+          "an engineer misconfiguring a device or network with manual changes"
+         ],
+         [
+          "What is an unopinionated component in a software ecosystem?",
+          "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary"
+         ],
+         [
+          "In the use of container technologies, what is a function of platform abstraction when considering the deployment of a product in a cloud environment?",
+          "A containerized app can run on a generically-specified host environment."
+         ],
+         [
+          "A student is setting up the DEVASC-LAB VM and CSR1000v VM in VirtualBox that is installed on the local computer. Both VMs are imported to the VirtualBox successfully. The student starts both VMs and tries to verify communications to the CSR1000v VM by opening a web browser on the local computer and enters the URL https://192.168.56.101. After a few seconds, an error message displays that \"The connection has timed out\". How can the student verify the IP address assigned by DHCP to the CSR1000v virtual router?",
+          "Issue the show ip interface brief command in the CSR1000v VM."
+         ],
+         [
+          "What is the historical correlation between software developers and IT operations?",
+          "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users."
+         ],
+         [
+          "How is an error budget calculated in the DevOps/SRE culture?",
+          "An error budget is the difference between the SLO and 100% availability."
+         ],
+         [
+          "In reviewing a formalized agreement between an organization and a customer, what is the purpose of an SLI?",
+          "An SLI is a benchmark metric used to determine and describe SLOs."
+         ],
+         [
+          "What is the default shell commonly used on macOS and Linux?",
+          "Bash"
+         ],
+         [
+          "Which type of automation includes scripting that may be dangerous if the starting state is not completely known and controlled?",
+          "procedural"
+         ],
+         [
+          "What is an imperative procedure?",
+          "An ordered sequence of commands that is used to reach a specific end state."
+         ],
+         [
+          "Which statement describes the declarative static model?",
+          "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state."
+         ],
+         [
+          "Refer to the exhibit. A user is working on Ansible on the local NMS to manage remote network devices. The user issues the ansible webservers -m ping command to test the communication. However, an error message returns. What are two possible causes for the error? (Choose two.) (the exam shows an exhibit image here)",
+          "The destination host IP address is wrong. The SSH service does not start on the host."
+         ],
+         [
+          "Which component in the pyATS ecology handles bundling and running jobs?",
+          "EasyPy"
+         ],
+         [
+          "An engineer has just created a backup file of a Cisco VIRL network simulation. Which command should be used to compare the most recent .virl file with the previous backup file?",
+          "diff"
+         ],
+         [
+          "While working in the Ansible code structure, which type of file contains a sequence of tasks, executed in top-down order?",
+          ".yml"
+         ],
+         [
+          "What is a standard command to create a Python virtual environment?",
+          "python3 -m venv /path/to/new/virtual/environment"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 7 Infrastructure and Automation: Quiz Items",
+      "summary": "Module 7 Infrastructure and Automation: Quiz Items: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 7 Infrastructure and Automation: Quiz Items",
+        "columns": [
+         "Question",
+         "Correct Answer"
+        ],
+        "rows": [
+         [
+          "What is the average cost per hour of an enterprise outage for the largest enterprises?",
+          "$300,000.00 per hour"
+         ],
+         [
+          "What is idempotency in IT automation?",
+          "the quality of software"
+         ],
+         [
+          "A student is creating an Ansible playbook to practice management automation of a Cisco router. Which command should the student add to the playbook to find the interface names, assigned IP addresses, and status of interfaces on the router?",
+          "show ip interface brief"
+         ],
+         [
+          "When following the best practices and core principles of DevOps, how is failure considered?",
+          "Failure is normal."
+         ],
+         [
+          "What is a canary deployment?",
+          "the switchover of selected users to a new release deployment"
+         ],
+         [
+          "What are two challenges of cloud computing technologies? (Choose two.)",
+          "maintaining access control managing costs"
+         ],
+         [
+          "Which technology can run on bare metal or on large virtual machines to simulate Cisco networks and utilities?",
+          "VIRL"
+         ],
+         [
+          "An analyst is using Ansible to perform remote management tasks on network devices. Which file type is in the Ansible file structure that describes the devices under management?",
+          "inventory file"
+         ],
+         [
+          "What is an error budget in the DevOps/SRE culture?",
+          "It is a method for measuring allowable errors as a gate on release speed."
+         ],
+         [
+          "Which programming language is used by Chef to execute the recipes?",
+          "Ruby"
+         ],
+         [
+          "A developer issues a Linux command python3 -m venv devenv. What is the developer trying to achieve?",
+          "to create a Python 3 virtual environment named devenv"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 8 Cisco Platforms and Development: Exam Items",
+      "summary": "Module 8 Cisco Platforms and Development: Exam Items: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 8 Cisco Platforms and Development: Exam Items",
+        "columns": [
+         "Question",
+         "Correct Answer"
+        ],
+        "rows": [
+         [
+          "Which underlying technology makes it possible for Cisco Umbrella to prevent a user from accessing a blocked site?",
+          "DNS"
+         ],
+         [
+          "Which language is used by the NETCONF protocol to encode both the configuration data and protocol messages?",
+          "XML"
+         ],
+         [
+          "What are the three main capabilities provided by Cisco AMP? (Choose three.)",
+          "detection responses and automation prevention"
+         ],
+         [
+          "Which three functions are provided by Cisco Finesse REST APIS? (Choose three.)",
+          "They can be used to integrate into existing applications to add contact center functionality. They can be used to build a fully functioning agent desktop. They can be used to build a script to automate tasks."
+         ],
+         [
+          "Which two benefits are provided by the Python-based WebEx Teams SDK? (Choose two.)",
+          "It provides error reporting. It manages requests with pagination."
+         ],
+         [
+          "Refer to the exhibit. Which data format is used to describe the list of interfaces? (the exam shows an exhibit image here)",
+          "YANG"
+         ],
+         [
+          "Which two statements describe the usage of Cisco Finesse JavaScript APIs? (Choose two.)",
+          "They can be used to embed existing web pages into a custom gadget. They can be used to build a custom gadget for the agent state workflow."
+         ],
+         [
+          "Why does the Meraki dashboard API return a 404 rather than a 403 code in response to a request with an invalid API key?",
+          "The 404 return code prevents the system from indicating the existence of resources to unauthorized users."
+         ],
+         [
+          "What does Cisco ISE do when it identifies a user or device accessing the network?",
+          "It automatically and securely places the device and user into the right part of the network."
+         ],
+         [
+          "How are service profiles used by Cisco UCS Manager?",
+          "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile."
+         ],
+         [
+          "Which function does the AXL interface provide for users?",
+          "provisions and manages objects in the Unified Communication Management Administration Console"
+         ],
+         [
+          "What are three primary YANG sources in Cisco NSO? (Choose three.)",
+          "data models from devices NSO data model YANG service models"
+         ],
+         [
+          "What are two tasks a network administrator can perform with Cisco UCS Director? (Choose two.)",
+          "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner. Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications."
+         ],
+         [
+          "What are two actions taken by Firepower for traffic control? (Choose two.)",
+          "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs controlling which websites are available to the users on the network"
+         ],
+         [
+          "What are two types of YANG models? (Choose two.)",
+          "native model open model"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 8 Cisco Platforms and Development: Quiz Items",
+      "summary": "Module 8 Cisco Platforms and Development: Quiz Items: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 8 Cisco Platforms and Development: Quiz Items",
+        "columns": [
+         "Question",
+         "Correct Answer"
+        ],
+        "rows": [
+         [
+          "What is a characteristic of the Yet Another Next Generation (YANG) data model?",
+          "It uses a tree structure."
+         ],
+         [
+          "Which two application-specific media types can be used for RESTCONF to identify a YANG construct? (Choose two.)",
+          "application/yang-data+xml application/yang-data+json"
+         ],
+         [
+          "What is the name of the Cisco SD-WAN dashboard?",
+          "vManage"
+         ],
+         [
+          "What is Cisco Finesse?",
+          "a browser-based contact center agent and supervisor desktop"
+         ],
+         [
+          "Which Software as a Service (SaaS) management platform offers API keys for remote or service access?",
+          "Cisco Intersight"
+         ],
+         [
+          "Which Cisco SDK is primarily a call widget that is embedded in an iframe within another web page for Cisco UCS application?",
+          "Jabber Guest SDK for Web"
+         ],
+         [
+          "A developer is using a REST API to develop an application to communicate with a Webex Teams server. What is the default maximum number of items that can be returned by the Webex Teams API prior to using pagination?",
+          "100"
+         ],
+         [
+          "Refer to the exhibit. A network administrator is developing an application that communicates with Cisco AMP using an AMP API. A response from an AMP service shows the API rate limits information. What is the unit of value indicated under the item x-ratelimit-limit?",
+          "requests"
+         ],
+         [
+          "What is the default TCP port assigned for NETCONF over SSH?",
+          "830"
+         ],
+         [
+          "Where can a corporate developer access the API Explorer with the Firepower Threat Defense API?",
+          "the URL address of the device itself"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Flashcard Terms From The Bank",
+      "summary": "Flashcard Terms From The Bank: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 7 Terms",
+        "columns": [
+         "Term",
+         "Definition"
+        ],
+        "rows": [
+         [
+          "3 major shifts in automation",
+          "Walk - get visibility and insight into your network; Run - Activate policy and internet across different network domains; Fly - Proactively manage applications, users, devices with DevOps workflow"
+         ],
+         [
+          "Walk",
+          "Using automation tools, you can gather information about your network configuration. This scenario offers answers to the most basic and also most common question you can ask, \"What changed?\""
+         ],
+         [
+          "Run",
+          "With these \"Run stage\" automation scenarios you can safely enable users to provision their own network updates. You can also automate on-boarding workflows, manage day-to-day network configurations, and run through Day 0, Day 1, and daily (Day n) scenarios"
+         ],
+         [
+          "Fly",
+          "Here you can get ahead of needs by monitoring and proactively managing your users and devices plus gaining insights with telemetry data."
+         ],
+         [
+          "Why need automation",
+          "Speed and agility enable the business to explore, experiment with, and exploit opportunities ahead of competition. Scaling operations enables the business to capture market share efficiently and scaling capacity to match demand. Developers need to accelerate every phase of software building: coding and iterating, testing, and staging."
+         ],
+         [
+          "disadvantages of manual operation",
+          "Manual processes, such as waiting for infrastructure availability, manual app configuration and deployment, and production system maintenance, work against speed and scale. Manual processes are always subject to human error, and documentation meant for humans is often incomplete and ambiguous, hard to test, and quickly outdated."
+         ],
+         [
+          "why need automaion- finanical cost",
+          "An often-quoted Gartner statistic (albeit from 2014) places the average cost of an IT outage at upwards of $5,600 per minute, or over $300,000 USD per hour. The cost of a security breach can be even greater."
+         ],
+         [
+          "downside of dependencies",
+          "Components need to be flexibly configurable and \"unopinionated\". Component developers may abandon support for obsolete features. Dependency-ridden application setups tend to get locked into fragile and increasingly insecure deployment stacks, effectively becoming monoliths."
+         ],
+         [
+          "Infrastructure automation benefits",
+          "Speed; Repeatability; The ability to work at scale, with reduced risk"
+         ],
+         [
+          "What is self-service",
+          "Automated self-service frameworks enable users to requisition infrastructure on demand, including: Standard infrastructure components such as database instances and VPN endpoints; Development and testing platforms; Hardened web servers and other application instances; Analytics platforms such as Apache Hadoop, Elastic Stack, InfluxData, and Splunk."
+         ],
+         [
+          "What is scale on demand",
+          "Apps and platforms need to be able to scale up and down in response to traffic and workload requirements and to use heterogeneous capacity; for example, burst-scaling from private to public cloud, and traffic shaping appropriately."
+         ],
+         [
+          "Observability",
+          "An observable system enables users to infer the internal state of a complex system from its outputs. Observability (sometimes abbreviated as o11y) can be achieved through platform and application monitoring and through proactive production testing for failure modes and performance issues."
+         ],
+         [
+          "Chaos Engineering",
+          "This philosophy is based on the assertion that failure is normal: as applications scale, some parts are always failing and that apps and platforms should be engineered to: Minimize the \"blast radius\" of issues; Self-heal; Monitor events"
+         ],
+         [
+          "automation mitigation - minimize the blast radius of issues",
+          "recognize problems quickly and route traffic to alternative capacity, ensuring that end users aren't severely impacted and that on-call operations personnel aren't unnecessarily paged."
+         ],
+         [
+          "automation mitigation - self-heal",
+          "allocate resources according to policy and automatically redeploy failed components as needed to return the application to a healthy state in current conditions."
+         ]
+        ]
+       },
+       {
+        "title": "Module 8 Terms",
+        "columns": [
+         "Term",
+         "Definition"
+        ],
+        "rows": [
+         [
+          "What is a data model",
+          "In general, a data model is a structured method to describe any object, whether it's a person, a car, a building, or some other object. For example, the personal data on a passport or driver's license can describe a person in an individual way, so those are both \"data models\"."
+         ],
+         [
+          "what is a data model in networking",
+          "In networking, \"Data models\" are a programmatic and standards-based way of writing configurations for any network device. It can replace manual configuration, implementing YANG as the de-facto data modeling language."
+         ],
+         [
+          "What is Edge Computing",
+          "refers to providing computing capability as close to the actual data as possible."
+         ],
+         [
+          "Cisco IOS",
+          "used for network infrastructure, with different specialty flavors"
+         ],
+         [
+          "Cisco IOS XR",
+          "focuses on service provider use cases"
+         ],
+         [
+          "Cisco IOS XE",
+          "Separates the data plane and control plane for network creation and maintenance"
+         ],
+         [
+          "Cisco NX-OS",
+          "works across both physical and virtual data center deployments"
+         ],
+         [
+          "What SDK does APIC use?",
+          "Cobra SDK"
+         ],
+         [
+          "Webex Teams Android SDK",
+          "Use the Webex Teams Android SDK to customize your app and to access powerful Webex Teams collaboration features without making your users leave the mobile app."
+         ],
+         [
+          "Jabber Web SDK",
+          "This SDK is used for developing web applications on Cisco Unified Communications, including voice and video, IM and Presence, voice messaging, and conferencing."
+         ],
+         [
+          "Jabber Guest Web SDK",
+          "The Cisco Jabber Guest SDK for Web is primarily a call widget that is embedded in an iframe within another web page."
+         ],
+         [
+          "Jabber Guest iOS SDK",
+          "The Jabber Guest SDK for iOS coordinates and simplifies the implementation, use, and quality of two-way video calls from within an application."
+         ],
+         [
+          "Jabber Guest Android SDK",
+          "With the Jabber Guest Android SDK, you can enable your application to instantiate a two-way video call via the public Internet between the user's device and a video endpoint registered with a CUCM inside an enterprise firewall. The SDK handles all aspects of establishing and maintaining the two-way video call within your application"
+         ],
+         [
+          "Cisco DNA Center Multivendor SDK",
+          "For partners and customers who have a mix of Cisco and non-Cisco devices in their network, this SDK builds support directly in Cisco DNA Center."
+         ],
+         [
+          "Cisco UCS Python SDK",
+          "The Cisco UCS Python SDK is a Python module used to automate all aspects of Cisco UCS management, including server, network, storage, and hypervisor management."
+         ],
+         [
+          "Cisco APIC Python SDK (Cobra SDK)",
+          "The Cobra SDK is a native Python language binding for the APIC REST API to interact with the APIC controller. The installation of Cobra requires installing two .egg files: acicobra.egg and acimodel.egg."
+         ],
+         [
+          "Cisco IMC python SDK",
+          "Cisco IMC Python SDK is a Python module supporting the automation of all Cisco IMC management servers (C-Series and E-Series)."
+         ],
+         [
+          "Cisco Instant Connect SDK",
+          "Cisco Instant Connect has an Android, Windows, and Apple iOS Software Development Kit, providing tools for partners to embed Push-To-Talk in mobile or desktop applications."
+         ],
+         [
+          "Cisco Webex Teams Python SDK",
+          "You can work with the Webex Teams APIs using a familiar language, in this case Python, with the webexteamssdk available on GitHub at https://github.com/CiscoDevNet/webexteamssdk. This SDK handles pagination for you automatically, simplifies authentication, provides built-in error reporting, and manages file attachments. Here is a simple Python example to retrieve a user's account information:"
+         ],
+         [
+          "how to set auth token for webexteams call",
+          "The SDK needs a Webex Teams access token to make API calls. You can either set it with a WEBEX_TEAMS_ACCESS_TOKEN environment variable or by putting the access_token argument into the function call"
          ]
         ]
        }
@@ -1153,6 +1644,349 @@
       ],
       "memory_aids": [],
       "comparisons": []
+     },
+     {
+      "heading": "Question Bank Extras",
+      "summary": "The same question bank, boiled down to the facts it asks, grouped by what the question is about. Use this part to review after you have read the literal items.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": []
+     },
+     {
+      "heading": "Module 7 Extras",
+      "summary": "Module 7 Extras: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [
+       {
+        "label": "Module 7 Extras",
+        "text": "Error budget = 100% minus the SLO. SLO = the target, SLI = the number you measure, budget = the room left to fail."
+       }
+      ],
+      "comparisons": [
+       {
+        "title": "Module 7 Extras",
+        "columns": [
+         "Question Style",
+         "Answer"
+        ],
+        "rows": [
+         [
+          "Most common cause of IT outages",
+          "An engineer misconfiguring a device or network with manual changes (human error)"
+         ],
+         [
+          "Average outage cost for the largest enterprises",
+          "$300,000 per hour (the source quotes Gartner: over $5,600 per minute)"
+         ],
+         [
+          "Developers vs operations, historically",
+          "Developers create applications; operations verify they work for users and the business"
+         ],
+         [
+          "What is an unopinionated component",
+          "One that does not show extra preference for specific companion components or architectures unless they are necessary"
+         ],
+         [
+          "Platform abstraction (containers)",
+          "A containerized app can run on a generically specified host environment"
+         ],
+         [
+          "Two cloud challenges",
+          "Maintaining access control and managing costs"
+         ],
+         [
+          "How is an error budget calculated",
+          "The difference between the SLO and 100 percent availability"
+         ],
+         [
+          "What is an error budget for",
+          "Measures allowable errors, a gate on release speed"
+         ],
+         [
+          "Purpose of an SLI",
+          "A benchmark metric used to determine and describe SLOs"
+         ],
+         [
+          "How does DevOps treat failure",
+          "Failure is normal; chaos engineering: minimize the blast radius, self-heal, monitor events"
+         ],
+         [
+          "Default shell on macOS and Linux",
+          "Bash"
+         ],
+         [
+          "Automation type dangerous when the starting state is not fully known",
+          "Procedural (imperative scripting)"
+         ],
+         [
+          "What is an imperative procedure",
+          "An ordered sequence of commands used to reach a specific end state"
+         ],
+         [
+          "Declarative static model",
+          "Examines present circumstances and brings real infrastructure into alignment with the desired state"
+         ],
+         [
+          "Idempotency is the quality of what",
+          "Software (the quality of software)"
+         ],
+         [
+          "Ansible file with tasks in top-down order",
+          ".yml (YAML)"
+         ],
+         [
+          "Ansible file that describes the managed devices",
+          "The inventory file"
+         ],
+         [
+          "Ansible ping fails (two causes)",
+          "The destination host IP address is wrong or the SSH service did not start on the host"
+         ],
+         [
+          "Playbook command to see interface names, IPs, and status on a Cisco router",
+          "show ip interface brief"
+         ],
+         [
+          "Language Chef uses for recipes",
+          "Ruby"
+         ],
+         [
+          "pyATS component that bundles and runs jobs",
+          "Easypy"
+         ],
+         [
+          "Command to compare a new .virl backup with the old one",
+          "diff (detects configuration drift)"
+         ],
+         [
+          "Tech that runs on bare metal or large VMs to simulate Cisco networks",
+          "VIRL"
+         ],
+         [
+          "Canary deployment",
+          "The switchover of selected users to a new release"
+         ],
+         [
+          "Create a Python virtual environment",
+          "python3 -m venv /path/to/new/virtual/environment (for example python3 -m venv devenv creates a Python 3 venv named devenv)"
+         ],
+         [
+          "Cannot reach https://192.168.56.101 for the CSR1000v",
+          "Run show ip interface brief in the CSR1000v VM to check its IP address"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Module 8 Extras",
+      "summary": "Module 8 Extras: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Module 8 Extras",
+        "columns": [
+         "Question Style",
+         "Answer"
+        ],
+        "rows": [
+         [
+          "Technology that lets Umbrella block a site",
+          "DNS"
+         ],
+         [
+          "Language NETCONF uses for data and messages",
+          "XML"
+         ],
+         [
+          "Default TCP port for NETCONF over SSH",
+          "830"
+         ],
+         [
+          "Two RESTCONF media types for YANG constructs",
+          "application/yang-data+xml and application/yang-data+json"
+         ],
+         [
+          "Data format that describes a list of interfaces in the exhibit",
+          "YANG"
+         ],
+         [
+          "A characteristic of YANG",
+          "It uses a tree structure"
+         ],
+         [
+          "Two types of YANG models",
+          "Native and open"
+         ],
+         [
+          "Three primary NSO YANG sources",
+          "Data models from devices, the NSO data model, and YANG service models"
+         ],
+         [
+          "Three main capabilities of AMP",
+          "Detection, responses and automation, prevention"
+         ],
+         [
+          "AMP API rate limit header X-Rate-Limit-Limit",
+          "The number of total allowed requests in the current period"
+         ],
+         [
+          "What Finesse REST APIs do (three)",
+          "Integrate contact center functions into existing apps, build a fully functioning agent desktop, build scripts to automate tasks"
+         ],
+         [
+          "What Finesse JavaScript APIs do (two)",
+          "Embed existing web pages into a custom gadget and build a custom gadget for the agent state workflow"
+         ],
+         [
+          "Cisco Finesse is",
+          "A browser-based contact center agent and supervisor desktop"
+         ],
+         [
+          "Two benefits of the Webex Teams Python SDK",
+          "Error reporting and pagination handling (also simpler authentication and file attachments)"
+         ],
+         [
+          "Default maximum items the Webex Teams API returns before pagination",
+          "100"
+         ],
+         [
+          "Why Meraki returns 404 instead of 403 for a bad API key",
+          "So the system does not reveal that resources exist to unauthorized users"
+         ],
+         [
+          "What ISE does when it identifies a user or device",
+          "Automatically and securely places the device and user into the right part of the network"
+         ],
+         [
+          "UCS service profiles",
+          "Assign a unique identity to the server associated with each profile"
+         ],
+         [
+          "AXL function for users",
+          "Provisions and manages objects in the Unified Communication management administration (configuration database)"
+         ],
+         [
+          "Two UCS Director tasks",
+          "Deploy and add capacity to converged infrastructure repeatably; create, clone, and deploy service profiles and templates"
+         ],
+         [
+          "Two Firepower traffic control actions",
+          "Use security intelligence data (IPs, address blocks, domains, URLs) to filter traffic; control which websites users can reach"
+         ],
+         [
+          "SD-WAN dashboard name",
+          "vManage"
+         ],
+         [
+          "SaaS platform offering API keys for remote or service access",
+          "Cisco Intersight"
+         ],
+         [
+          "SDK that is a call widget embedded in an iframe on a web page",
+          "Jabber Guest SDK for Web"
+         ],
+         [
+          "Where to open the FTD API Explorer",
+          "At the URL address of the device itself"
+         ],
+         [
+          "SDK the APIC uses",
+          "Cobra SDK"
+         ]
+        ]
+       }
+      ]
+     },
+     {
+      "heading": "Platform One-Liners",
+      "summary": "Platform One-Liners: key points are below.",
+      "key_terms": [],
+      "properties": [],
+      "worked_examples": [],
+      "common_mistakes": [],
+      "source_refs": [
+       "DEVASC_Module_7",
+       "DEVASC_Module_8"
+      ],
+      "memory_aids": [],
+      "comparisons": [
+       {
+        "title": "Platform One-Liners",
+        "columns": [
+         "Platform",
+         "One Line"
+        ],
+        "rows": [
+         [
+          "Cisco IOS",
+          "Network infrastructure OS with different specialty flavors"
+         ],
+         [
+          "Cisco IOS XR",
+          "Focuses on service provider use cases"
+         ],
+         [
+          "Cisco IOS XE",
+          "Separates the data plane and control plane; next-generation programmable platform"
+         ],
+         [
+          "Cisco NX-OS",
+          "Works across physical and virtual data center deployments"
+         ],
+         [
+          "Edge computing",
+          "Computing capability as close to the actual data as possible"
+         ],
+         [
+          "Data model (networking)",
+          "A programmatic, standards-based way of writing configurations for any network device"
+         ],
+         [
+          "Jabber Web SDK",
+          "For web applications on Cisco Unified Communications (voice, video, IM, presence)"
+         ],
+         [
+          "DNA Center Multivendor SDK",
+          "Adds support for a mix of Cisco and non-Cisco devices"
+         ],
+         [
+          "UCS Python SDK",
+          "Python module that automates all aspects of UCS management"
+         ],
+         [
+          "IMC Python SDK",
+          "Automates Cisco IMC management servers (C-Series and E-Series)"
+         ],
+         [
+          "Webex Teams Python SDK",
+          "Uses the webexteamssdk package; token set with the WEBEX_TEAMS_ACCESS_TOKEN environment variable or passed directly"
+         ]
+        ]
+       }
+      ]
      }
     ],
     "formula_sheet": [],
@@ -1338,1773 +2172,562 @@
    "cards": [
     {
      "type": "multiple_choice",
+     "question": "What is the most common cause of IT outages?",
+     "correct_answer": "an engineer misconfiguring a device or network with manual changes",
+     "options": "[\"an engineer misconfiguring a device or network with manual changes\", \"a threat actor targeting the enterprise equipment\", \"an experienced engineer implementing a configuration using automation\", \"an experienced engineer using an open source product\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is an unopinionated component in a software ecosystem?",
+     "correct_answer": "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary",
+     "options": "[\"a component that is classified as open source and does not require the implementation of specific vendor products\", \"a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary\", \"a component that may function in a limited ability in order to compensate for the selection of companion components or architectures\", \"a component that requires a specific companion component in order to provide full stack implementation\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In the use of container technologies, what is a function of platform abstraction when considering the deployment of a product in a cloud environment?",
+     "correct_answer": "A containerized app can run on a generically-specified host environment.",
+     "options": "[\"A containerized app can run on a generically-specified host environment.\", \"Applications are aware of underlying hardware configurations and are customized to provide increased functionality.\", \"Applications require re-engineering in order to implement scalability and consolidation.\", \"Traditional complementary software components such as a database server and web server would be implemented as a single containerized application.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A student is setting up the DEVASC-LAB VM and CSR1000v VM in VirtualBox that is installed on the local computer. Both VMs are imported to the VirtualBox successfully. The student starts both VMs and tries to verify communications to the CSR1000v VM by opening a web browser on the local computer and enters the URL https://192.168.56.101. After a few seconds, an error message displays that \"The connection has timed out\". How can the student verify the IP address assigned by DHCP to the CSR1000v virtual router?",
+     "correct_answer": "Issue the show ip interface brief command in the CSR1000v VM.",
+     "options": "[\"Issue the show running-config command in the CSR1000v VM.\", \"Issue the ifconfig command in the CSR1000v VM.\", \"Issue the show ip interface brief command in the CSR1000v VM.\", \"Issue the ping 192.168.56.101 command on the local computer.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the historical correlation between software developers and IT operations?",
+     "correct_answer": "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users.",
+     "options": "[\"Operations had the job of brainstorming applications. Developers had the job of testing that these applications work for users and the business.\", \"Developers had the job of testing applications. Operations had the job of implementing these applications for clients.\", \"Developers had the job of creating applications. Operations had the job of verifying that these applications work for users.\", \"Operations had the job of testing applications. Developers had the job of implementing these applications for clients.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How is an error budget calculated in the DevOps/SRE culture?",
+     "correct_answer": "An error budget is the difference between the SLO and 100% availability.",
+     "options": "[\"An error budget is the difference between the and 100% availability.\", \"An error budget is the difference between the SLO and the SLI.\", \"An error budget is the difference between the SLO and the SLA.\", \"An error budget is the difference between the SLO and 100% availability.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "In reviewing a formalized agreement between an organization and a customer, what is the purpose of an SLI?",
+     "correct_answer": "An SLI is a benchmark metric used to determine and describe SLOs.",
+     "options": "[\"An SLI is a specific set of steps for slowing releases as errors occur.\", \"An SLI is a benchmark metric used to determine and describe SLOs.\", \"An SLI is an easy to complete, external agreement that is set between the organization and the customer.\", \"An SLI is an agreed-upon number of errors per unit time.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the default shell commonly used on macOS and Linux?",
+     "correct_answer": "Bash",
+     "options": "[\"csh\", \"Bourne\", \"tcsh\", \"Bash\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which type of automation includes scripting that may be dangerous if the starting state is not completely known and controlled?",
+     "correct_answer": "procedural",
+     "options": "[\"stateful\", \"stateless\", \"declarative\", \"procedural\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is an imperative procedure?",
+     "correct_answer": "An ordered sequence of commands that is used to reach a specific end state.",
+     "options": "[\"A set of commands that examines a target and only performs the tasks needed to achieve the desired state.\", \"An ordered sequence of commands that is used to reach a specific end state.\", \"A set of commands that is piped to a remote host and immediately executed.\", \"A set of commands that require administrator privileges and can only be executed on a local system.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which statement describes the declarative static model?",
+     "correct_answer": "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state.",
+     "options": "[\"A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state.\", \"A declarative model will follow a specific order of sequential steps in order to effect changes on a target system.\", \"A declarative model will execute code that is sequentially task-driven instead of focusing on deployment-specific details.\", \"A declarative model will subdivide code into top-down sections and condition-driven handlers.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Refer to the exhibit. A user is working on Ansible on the local NMS to manage remote network devices. The user issues the ansible webservers -m ping command to test the communication. However, an error message returns. What are two possible causes for the error? (Choose two.) (Exhibit image not shown; see the reviewer note.)",
+     "correct_answer": "The destination host IP address is wrong.; The SSH service does not start on the host.",
+     "options": "[\"The destination host alias is wrong.; The SSH service does not start on the host.\", \"The destination host IP address is wrong.; The SSH service does not start on the host.\", \"The switch -m should be -M; The SSH service does not start on the host.\", \"The SSH client is not installed.; The SSH service does not start on the host.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which component in the pyATS ecology handles bundling and running jobs?",
+     "correct_answer": "EasyPy",
+     "options": "[\"Clover\", \"EasyPy\", \"AEtest\", \"Genie\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "An engineer has just created a backup file of a Cisco VIRL network simulation. Which command should be used to compare the most recent .virl file with the previous backup file?",
+     "correct_answer": "diff",
+     "options": "[\"source\", \"knife\", \"pyats\", \"diff\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "While working in the Ansible code structure, which type of file contains a sequence of tasks, executed in top-down order?",
+     "correct_answer": ".yml",
+     "options": "[\".virl\", \".yml\", \".py\", \".txt\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is a standard command to create a Python virtual environment?",
+     "correct_answer": "python3 -m venv /path/to/new/virtual/environment",
+     "options": "[\"source bin/activate\", \"python3 -m venv /path/to/new/virtual/environment\", \"sudo apt-get install python3-pip\", \"pip install [options] [package-index-options]...\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the average cost per hour of an enterprise outage for the largest enterprises?",
+     "correct_answer": "$300,000.00 per hour",
+     "options": "[\"$700,000.00 per hour\", \"$100,000.00 per hour\", \"$300,000.00 per hour\", \"$500,000.00 per hour\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is idempotency in IT automation?",
+     "correct_answer": "the quality of software",
+     "options": "[\"the security level of software\", \"the scripting of shell commands\", \"the reusing of shell commands\", \"the quality of software\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A student is creating an Ansible playbook to practice management automation of a Cisco router. Which command should the student add to the playbook to find the interface names, assigned IP addresses, and status of interfaces on the router?",
+     "correct_answer": "show ip interface brief",
+     "options": "[\"ip address\", \"show ip interface brief\", \"show running-config\", \"show ip route\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "When following the best practices and core principles of DevOps, how is failure considered?",
+     "correct_answer": "Failure is normal.",
+     "options": "[\"Failure is simply \\\"repair work\\\".\", \"Failure should not influence software design methodology.\", \"Failure should only occur in Ops.\", \"Failure is normal.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is a canary deployment?",
+     "correct_answer": "the switchover of selected users to a new release deployment",
+     "options": "[\"the use of two identical servers with load balancers to redirect traffic for an entire server as needed\", \"a server-by-server switchover to a new release deployment\", \"the switchover of selected users to a new release deployment\", \"a production test using a chaos tool to inject random failures with a limited blast-radius\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are two challenges of cloud computing technologies? (Choose two.)",
+     "correct_answer": "maintaining access control; managing costs",
+     "options": "[\"maintaining access control; managing costs\", \"utilizing generic host environments; managing costs\", \"maintaining configurational consistency of platforms; managing costs\", \"maintaining access control; requesting additional resources\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which technology can run on bare metal or on large virtual machines to simulate Cisco networks and utilities?",
+     "correct_answer": "VIRL",
+     "options": "[\"Git\", \"Puppet\", \"VIRL\", \"Ansible\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "An analyst is using Ansible to perform remote management tasks on network devices. Which file type is in the Ansible file structure that describes the devices under management?",
+     "correct_answer": "inventory file",
+     "options": "[\"playbook file\", \"inventory file\", \"role folders and files\", \"variable file\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is an error budget in the DevOps/SRE culture?",
+     "correct_answer": "It is a method for measuring allowable errors as a gate on release speed.",
+     "options": "[\"It is an internal-only metric for calculating the actual availability of a service.\", \"It is a method for measuring allowable errors as a gate on release speed.\", \"It is the planned percentage of a monetary contract that is given back to a customer when an SLO is not met.\", \"It is a best-practice metric for availability, equivalent to only six minutes of unplanned offline time per year.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which programming language is used by Chef to execute the recipes?",
+     "correct_answer": "Ruby",
+     "options": "[\"Bash\", \"Python\", \"Ruby\", \"Javascript\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A developer issues a Linux command python3 -m venv devenv. What is the developer trying to achieve?",
+     "correct_answer": "to create a Python 3 virtual environment named devenv",
+     "options": "[\"to enter the Python 3 virtual environment named venv using the devnet tool sets\", \"to create a Python 3 virtual environment named devenv\", \"to activate the Python 3 virtual environment named devenv\", \"to install the devnet tool sets in the Python 3 virtual environment named venv\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which underlying technology makes it possible for Cisco Umbrella to prevent a user from accessing a blocked site?",
+     "correct_answer": "DNS",
+     "options": "[\"Cisco Firewall\", \"HTTP and HTTPS\", \"DHCP\", \"DNS\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which language is used by the NETCONF protocol to encode both the configuration data and protocol messages?",
+     "correct_answer": "XML",
+     "options": "[\"YAML\", \"HTML\", \"XML\", \"JSON\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are the three main capabilities provided by Cisco AMP? (Choose three.)",
+     "correct_answer": "detection; responses and automation; prevention",
+     "options": "[\"annihilation; detection; prevention\", \"detection; responses and automation; prevention\", \"responses and automation; relaying; prevention\", \"annihilation; responses and automation; prevention\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which three functions are provided by Cisco Finesse REST APIS? (Choose three.)",
+     "correct_answer": "They can be used to integrate into existing applications to add contact center functionality.; They can be used to build a fully functioning agent desktop.; They can be used to build a script to automate tasks.",
+     "options": "[\"They can be used to integrate into existing applications to add contact center functionality.; They can be used to build a fully functioning agent desktop.; They can be used to build a script to automate tasks.\", \"They can be used to integrate into existing applications to add contact center functionality.; They can be used to build a fully functioning agent desktop.; They can be used to build custom OpenSocial gadgets.\", \"They can be used to integrate into existing applications to add contact center functionality.; They can be used to get termination call detail (TCD) reports.; They can be used to build a fully functioning agent desktop.\", \"They can be used to build a fully functioning agent desktop.; They can be used to build custom OpenSocial gadgets.; They can be used to build a script to automate tasks.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which two benefits are provided by the Python-based WebEx Teams SDK? (Choose two.)",
+     "correct_answer": "It provides error reporting.; It manages requests with pagination.",
+     "options": "[\"It integrates with the Webex Devices API.; It provides error reporting.\", \"It provides access to more API calls within Webex Teams.; It manages requests with pagination.\", \"It manages requests with pagination.; It is better supported than the Webex Teams APIs.\", \"It provides error reporting.; It manages requests with pagination.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Refer to the exhibit. Which data format is used to describe the list of interfaces? (Exhibit image not shown; see the reviewer note.)",
+     "correct_answer": "YANG",
+     "options": "[\"XML\", \"YAML\", \"YANG\", \"JSON\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which two statements describe the usage of Cisco Finesse JavaScript APIs? (Choose two.)",
+     "correct_answer": "They can be used to embed existing web pages into a custom gadget.; They can be used to build a custom gadget for the agent state workflow.",
+     "options": "[\"They can be used to embed existing web pages into a custom gadget.; They can be used to build a fully functioning agent desktop.\", \"They can be used to build custom gadgets to be placed into applications other than Finesse.; They can be used to build a custom gadget for the agent state workflow.\", \"They can be used to embed existing web pages into a custom gadget.; They can be used to build a custom gadget for the agent state workflow.\", \"They can be used to build a custom gadget for the agent state workflow.; They can be used to build a fully functioning agent desktop.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Why does the Meraki dashboard API return a 404 rather than a 403 code in response to a request with an invalid API key?",
+     "correct_answer": "The 404 return code prevents the system from indicating the existence of resources to unauthorized users.",
+     "options": "[\"The 403 return code would indicate that the client definitely has an invalid API key.\", \"The 404 return code prevents the system from indicating the existence of resources to unauthorized users.\", \"The 403 return code would indicate that there are no resources at that endpoint but the API key could be correct.\", \"The 404 return code determines whether unauthorized users will try again.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What does Cisco ISE do when it identifies a user or device accessing the network?",
+     "correct_answer": "It automatically and securely places the device and user into the right part of the network.",
+     "options": "[\"It logs the access attempt.\", \"It processes the originating IP address according to a whitelist.\", \"It quarantines the device and user until an administrator releases the quarantine.\", \"It automatically and securely places the device and user into the right part of the network.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "How are service profiles used by Cisco UCS Manager?",
+     "correct_answer": "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile.",
+     "options": "[\"Cisco UCS Manager saves service profiles to recover servers in case of data loss.\", \"Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile.\", \"Cisco USC Manager uses an assigned service profile to each instance to define network policy.\", \"Cisco UCS Manager uses service profiles as templates to provision policies to multiple versions of the same server.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which function does the AXL interface provide for users?",
+     "correct_answer": "provisions and manages objects in the Unified Communication Management Administration Console",
+     "options": "[\"provisions and manages objects in the Unified Communication Management Administration Console\", \"provisions Webex Devices and customizes each display\", \"looks up the top ten OWASP vulnerabilities and identifies which endpoints are vulnerable\", \"updates network device configurations with a rollback mechanism\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are three primary YANG sources in Cisco NSO? (Choose three.)",
+     "correct_answer": "data models from devices; NSO data model; YANG service models",
+     "options": "[\"NSO data model; configuration models; YANG service models\", \"data models from devices; NSO data model; configuration models\", \"mapping model; data models from devices; YANG service models\", \"data models from devices; NSO data model; YANG service models\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are two tasks a network administrator can perform with Cisco UCS Director? (Choose two.)",
+     "correct_answer": "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.; Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications.",
+     "options": "[\"Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.; Load-balance data traffic.\", \"Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.; Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications.\", \"Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.; Create a direct line of communication between Cisco and non-Cisco components.\", \"Manage multiple Cisco UCS Manager appliances.; Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are two actions taken by Firepower for traffic control? (Choose two.)",
+     "correct_answer": "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs; controlling which websites are available to the users on the network",
+     "options": "[\"using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs; load balancing during high-traffic time periods\", \"controlling which websites are available to the users on the network; load balancing during high-traffic time periods\", \"using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs; directing heavy data traffic to free servers\", \"using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs; controlling which websites are available to the users on the network\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What are two types of YANG models? (Choose two.)",
+     "correct_answer": "native model; open model",
+     "options": "[\"native model; open model\", \"hybrid model; open model\", \"vendor model; open model\", \"native model; vendor model\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is a characteristic of the Yet Another Next Generation (YANG) data model?",
+     "correct_answer": "It uses a tree structure.",
+     "options": "[\"It uses a tree structure.\", \"It uses a list structure.\", \"It uses the JSON data format.\", \"It uses a MIBs structure.\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which two application-specific media types can be used for RESTCONF to identify a YANG construct? (Choose two.)",
+     "correct_answer": "application/yang-data+xml; application/yang-data+json",
+     "options": "[\"application/yang+json+xml; application/yang-data+xml\", \"application/yang-data+xml; application/yang-data+json\", \"application/yang-data+json; application/yang+xml\", \"application/yang-data+json; application/yang+json\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the name of the Cisco SD-WAN dashboard?",
+     "correct_answer": "vManage",
+     "options": "[\"vBond\", \"vManage\", \"vSmart\", \"vEdge\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is Cisco Finesse?",
+     "correct_answer": "a browser-based contact center agent and supervisor desktop",
+     "options": "[\"an application to manage phone users, phones, directory numbers, and to connect and manage calls to the desired destinations\", \"a browser-based contact center agent and supervisor desktop\", \"a network management and analytics platform for Cisco Digital Network Architecture\", \"an easy-to-use collaboration solution that keeps individuals and teams connected anytime and anywhere\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which Software as a Service (SaaS) management platform offers API keys for remote or service access?",
+     "correct_answer": "Cisco Intersight",
+     "options": "[\"APIC\", \"Cisco Intersight\", \"Management Information Tree\", \"YANG Explorer\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Which Cisco SDK is primarily a call widget that is embedded in an iframe within another web page for Cisco UCS application?",
+     "correct_answer": "Jabber Guest SDK for Web",
+     "options": "[\"Jabber Guest SDK for Android\", \"Jabber Guest SDK for Web\", \"Jabber Guest SDK for iOS\", \"Jabber Web SDK\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "A developer is using a REST API to develop an application to communicate with a Webex Teams server. What is the default maximum number of items that can be returned by the Webex Teams API prior to using pagination?",
+     "correct_answer": "100",
+     "options": "[\"150\", \"25\", \"100\", \"50\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Refer to the exhibit. A network administrator is developing an application that communicates with Cisco AMP using an AMP API. A response from an AMP service shows the API rate limits information. What is the unit of value indicated under the item x-ratelimit-limit?",
+     "correct_answer": "requests",
+     "options": "[\"bytes\", \"responses\", \"seconds\", \"requests\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "What is the default TCP port assigned for NETCONF over SSH?",
+     "correct_answer": "830",
+     "options": "[\"830\", \"443\", \"1080\", \"22\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
+     "question": "Where can a corporate developer access the API Explorer with the Firepower Threat Defense API?",
+     "correct_answer": "the URL address of the device itself",
+     "options": "[\"the URL address of the device itself\", \"on the DevNet web site\", \"the domain name of the company\", \"the local computer of the developer\"]",
+     "times_missed": 0
+    },
+    {
+     "type": "multiple_choice",
      "question": "In the DevNet Automation Exchange, which stage is the read-only automation stage?",
      "correct_answer": "Walk",
-     "options": "[\"Walk\", \"Run\", \"Fly\", \"Jog\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which stage of the Automation Exchange deploys applications and network configurations through CI/CD?",
-     "correct_answer": "Fly",
-     "options": "[\"Walk\", \"Fly\", \"Run\", \"Crawl\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which stage of the Automation Exchange lets users safely provision their own network updates with self-service?",
-     "correct_answer": "Run",
-     "options": "[\"Run\", \"Sprint\", \"Fly\", \"Walk\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a disadvantage of manual operations according to the module?",
-     "correct_answer": "They are prone to human error and hard to scale",
-     "options": "[\"They are fully documented and unambiguous\", \"They never become outdated\", \"They are prone to human error and hard to scale\", \"They always cost less than automation\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which full-stack automation benefit lets users requisition infrastructure on demand?",
-     "correct_answer": "Self-service",
-     "options": "[\"Observability\", \"Automated problem mitigation\", \"Self-service\", \"Scale on demand\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which full-stack automation benefit lets users infer the internal state of a complex system from its outputs?",
-     "correct_answer": "Observability",
-     "options": "[\"Self-healing\", \"Self-service\", \"Scale on demand\", \"Observability\"]",
+     "options": "[\"Run\", \"Walk\", \"Jog\", \"Fly\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Software-defined infrastructure is also known as what?",
      "correct_answer": "Cloud computing",
-     "options": "[\"Edge computing\", \"Cloud computing\", \"Containerization\", \"Virtual routing\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which cloud challenge is stressed because users with the wrong permissions can do a lot of damage?",
-     "correct_answer": "Access control",
-     "options": "[\"Platform abstraction\", \"Repeatability\", \"Self-service\", \"Access control\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What are the small, light components of modern distributed applications sometimes called?",
-     "correct_answer": "Microservices",
-     "options": "[\"Monoliths\", \"Hypervisors\", \"Playbooks\", \"Microservices\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a stated challenge of microservices?",
-     "correct_answer": "Increased complexity, so automation is a requirement",
-     "options": "[\"They cannot run in containers\", \"Increased complexity, so automation is a requirement\", \"A single point of failure\", \"No ability to scale\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about Dev and Ops is correct in the module's table?",
-     "correct_answer": "Business treats Dev as a profit center and Ops as a cost center",
-     "options": "[\"Business treats Dev as a profit center and Ops as a cost center\", \"Both are treated as profit centers\", \"Business treats Dev as a cost center and Ops as a profit center\", \"Both are treated as cost centers\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which team is on call regularly, at the 'point of spear'?",
-     "correct_answer": "Ops",
-     "options": "[\"Product management\", \"Ops\", \"QA\", \"Dev\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which skills description matches Ops?",
-     "correct_answer": "More broad than deep",
-     "options": "[\"Only network design\", \"More broad than deep\", \"More deep than broad\", \"Only programming languages\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In what year did Google institutionalize Site Reliability Engineering (SRE)?",
-     "correct_answer": "2003",
-     "options": "[\"2015\", \"2009\", \"2001\", \"2003\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Who presented automating infrastructure with version control and Agile methods in 2009?",
-     "correct_answer": "Patrick Debois",
-     "options": "[\"John Allspaw\", \"Patrick Debois\", \"Paul Hammond\", \"Winston Royce\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which pair presented a simple set of DevOps best practices in 2009?",
-     "correct_answer": "John Allspaw and Paul Hammond",
-     "options": "[\"Puppet Labs and Chef Software\", \"John Allspaw and Paul Hammond\", \"Patrick Debois and Google\", \"Gamma and Helm\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which DevOps principle is the idea that 'failure is normal'?",
-     "correct_answer": "A core principle of DevOps and SRE",
-     "options": "[\"A flaw in the SRE model\", \"A principle only for testers\", \"A core principle of DevOps and SRE\", \"A principle only for Ops teams\"]",
+     "options": "[\"Edge computing\", \"Containerization\", \"Virtual routing\", \"Cloud computing\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "In DevOps/SRE, an SLO is defined in terms of real metrics called what?",
      "correct_answer": "SLIs",
-     "options": "[\"KPIs\", \"Error budgets\", \"SLAs\", \"SLIs\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is an error budget?",
-     "correct_answer": "An amount of allowed failure for a period, from which failures to meet the SLO are subtracted",
-     "options": "[\"The cost of the cloud subscription\", \"An amount of allowed failure for a period, from which failures to meet the SLO are subtracted\", \"The money allocated for fixing bugs\", \"The number of developers on call\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about the SLO/SLI methodology is correct?",
-     "correct_answer": "It removes the obligation to seek perfection",
-     "options": "[\"It demands 100 percent uptime\", \"It applies only to hardware\", \"It replaces monitoring\", \"It removes the obligation to seek perfection\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool is described as historically the bedrock of automation scripting?",
-     "correct_answer": "Shell scripting (Bash)",
-     "options": "[\"SQL\", \"COBOL\", \"Shell scripting (Bash)\", \"Java\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does the module call an ordered sequence of commands aimed at achieving a goal?",
-     "correct_answer": "An imperative procedure",
-     "options": "[\"An imperative procedure\", \"A manifest\", \"A declarative model\", \"A testbed\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which practice makes scripts more reusable?",
-     "correct_answer": "Separating deployment-specific data from the code",
-     "options": "[\"Hard-coding every address\", \"Writing one giant script\", \"Separating deployment-specific data from the code\", \"Avoiding parameters and flags\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the quality of software that examines a target first and only does the tasks needed for the desired state?",
-     "correct_answer": "Idempotency",
-     "options": "[\"Orchestration\", \"Idempotency\", \"Statelessness\", \"Immutability\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a basic principle of idempotency?",
-     "correct_answer": "Ensure the change you want has not already been made",
-     "options": "[\"Make only some components idempotent\", \"Ensure the change you want has not already been made\", \"Always overwrite the existing configuration\", \"Skip testing\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which command pipes a script to a remote machine to be executed over SSH?",
-     "correct_answer": "cat | ssh",
-     "options": "[\"scp -r\", \"wget -O\", \"cat | ssh\", \"sftp -b\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which utility copies a script to a target machine before logging in with ssh to run it?",
-     "correct_answer": "scp",
-     "options": "[\"traceroute\", \"scp\", \"nslookup\", \"ping\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "IaaS clouds usually provide CLIs and SDKs that connect to which kind of interface?",
-     "correct_answer": "REST-based interfaces",
-     "options": "[\"Serial console interfaces\", \"SOAP-only interfaces\", \"Telnet interfaces\", \"REST-based interfaces\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Cisco product's Python SDK is used with the Intersight RESTful API?",
-     "correct_answer": "Cisco UCS (bare metal cloud)",
-     "options": "[\"Cisco Webex\", \"Cisco Meraki\", \"Cisco UCS (bare metal cloud)\", \"Cisco Umbrella\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In a deployment tool, what does idempotency enable?",
-     "correct_answer": "Convergence and composability",
-     "options": "[\"Faster hardware\", \"Convergence and composability\", \"Manual operations\", \"Statelessness only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "A declarative approach is best described as what?",
-     "correct_answer": "A static model that middleware aligns real infrastructure to",
-     "options": "[\"A static model that middleware aligns real infrastructure to\", \"A random sequence of tasks\", \"A manual checklist\", \"An ordered list of shell commands\"]",
+     "options": "[\"SLAs\", \"SLIs\", \"KPIs\", \"Error budgets\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which term means obtaining compute, storage, and network infrastructure and making it ready for use?",
      "correct_answer": "Provisioning",
-     "options": "[\"Orchestration\", \"Deployment\", \"Configuration\", \"Provisioning\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which term means installing base applications and services to prepare a low-level platform?",
-     "correct_answer": "Configuration",
-     "options": "[\"Deployment\", \"Orchestration\", \"Configuration\", \"Provisioning\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which term means building and integrating multi-component applications, often across multiple nodes?",
-     "correct_answer": "Deployment",
-     "options": "[\"Provisioning\", \"Orchestration\", \"Deployment\", \"Configuration\"]",
+     "options": "[\"Configuration\", \"Orchestration\", \"Provisioning\", \"Deployment\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which term covers automation that manages workload lifecycles and reacts to changing conditions?",
      "correct_answer": "Orchestration",
-     "options": "[\"Configuration\", \"Orchestration\", \"Statelessness\", \"Provisioning\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which kind of application persists its state to a separate database?",
-     "correct_answer": "A stateless application",
-     "options": "[\"A not-stateless application\", \"A monolithic application\", \"A compiled application\", \"A stateless application\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What was the first modern automation tool?",
-     "correct_answer": "Puppet",
-     "options": "[\"Chef\", \"Puppet\", \"Ansible\", \"Terraform\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In what year was Puppet introduced as open source?",
-     "correct_answer": "2005",
-     "options": "[\"2005\", \"2011\", \"2003\", \"2009\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In what year was Puppet Enterprise commercialized by Puppet Labs?",
-     "correct_answer": "2011",
-     "options": "[\"2005\", \"2003\", \"2015\", \"2011\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is NOT one of the three most popular automation tools in the module?",
-     "correct_answer": "Terraform",
-     "options": "[\"Chef\", \"Terraform\", \"Puppet\", \"Ansible\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool is mostly managed from the Bash command line and connects to managed resources over SSH?",
-     "correct_answer": "Ansible",
-     "options": "[\"pyATS\", \"Puppet\", \"Chef\", \"Ansible\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "On what does the Ansible control node run?",
-     "correct_answer": "Any Linux machine running Python 2 or 3",
-     "options": "[\"Any Linux machine running Python 2 or 3\", \"Only Windows servers\", \"Only a Puppet Server\", \"Only Cisco IOS XE\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which file type holds Ansible tasks?",
-     "correct_answer": "YAML (.yml) files",
-     "options": "[\"YAML (.yml) files\", \"Puppet manifest (.pp) files\", \"Ruby (.rb) files\", \"XML files\"]",
+     "options": "[\"Configuration\", \"Provisioning\", \"Statelessness\", \"Orchestration\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is an Ansible role?",
      "correct_answer": "A low-level sequence of tasks referenced from higher-level playbooks",
-     "options": "[\"A hardware inventory\", \"A low-level sequence of tasks referenced from higher-level playbooks\", \"A Jenkins job\", \"A user account on the target\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Ansible feature encrypts passwords and other sensitive information?",
-     "correct_answer": "Ansible Vault",
-     "options": "[\"AWX\", \"Ansible Vault\", \"ansible-galaxy\", \"Ansible Tower\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which two solutions control Ansible at scale?",
-     "correct_answer": "Red Hat Ansible Tower and the AWX project",
-     "options": "[\"Jenkins and Omnitruck\", \"Red Hat Ansible Tower and the AWX project\", \"pyATS and Genie\", \"Puppet Forge and Knife\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Ansible example, what does the inventory file define?",
-     "correct_answer": "A group called webservers containing the target host",
-     "options": "[\"The index.html content\", \"A group called webservers containing the target host\", \"The sudo password\", \"The apache2 package state\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Ansible example, which file identifies the hosts and roles to apply?",
-     "correct_answer": "site.yml",
-     "options": "[\"main.yml\", \"site.yml\", \"inventory\", \"index.html\"]",
+     "options": "[\"A hardware inventory\", \"A low-level sequence of tasks referenced from higher-level playbooks\", \"A user account on the target\", \"A Jenkins job\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "In site.yml, what does 'become: true' do?",
      "correct_answer": "Performs the roles as root via sudo",
-     "options": "[\"Creates a new user\", \"Installs Python on the target\", \"Performs the roles as root via sudo\", \"Skips the inventory file\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool created the role folder structure in the Ansible example?",
-     "correct_answer": "ansible-galaxy",
-     "options": "[\"knife\", \"ansible-vault\", \"puppet module\", \"ansible-galaxy\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Where does the Ansible role's code live?",
-     "correct_answer": "In main.yml in the role's tasks directory",
-     "options": "[\"In main.yml in the role's tasks directory\", \"In config.rb in the .chef folder\", \"In default.rb in the recipes folder\", \"In site.pp in the manifests folder\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Ansible main.yml example, which module installs Apache2?",
-     "correct_answer": "apt",
-     "options": "[\"apt\", \"service\", \"copy\", \"yum\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Ansible command 'ansible-playbook -i inventory -u myname -K site.yml', what does -K do?",
-     "correct_answer": "Asks for your sudo password",
-     "options": "[\"Names the inventory file\", \"Asks for your sudo password\", \"Names the playbook\", \"Names the sudo user\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In that same command, what does -i do?",
-     "correct_answer": "Names your inventory file",
-     "options": "[\"Asks for the sudo password\", \"Installs the role\", \"Ignores errors\", \"Names your inventory file\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which CI tool appears in the Ansible CI/CD pipeline example?",
-     "correct_answer": "Jenkins",
-     "options": "[\"Travis CI\", \"Jenkins\", \"CircleCI\", \"Bamboo\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which architecture components does Puppet use?",
-     "correct_answer": "A server and a secure client called the Puppet Agent",
-     "options": "[\"A control node and SSH only\", \"A testbed and Genie only\", \"A server and a secure client called the Puppet Agent\", \"A Workstation and Knife only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In Puppet, how often does a client converge its state?",
-     "correct_answer": "Every 15 minutes",
-     "options": "[\"Every hour\", \"Every 15 seconds\", \"Once a day\", \"Every 15 minutes\"]",
+     "options": "[\"Creates a new user\", \"Installs Python on the target\", \"Skips the inventory file\", \"Performs the roles as root via sudo\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What must happen the first time a Puppet Agent starts before it can get its configuration?",
      "correct_answer": "Its certificate is signed by the server",
-     "options": "[\"An inventory file is created\", \"Its certificate is signed by the server\", \"Knife fetches an SSL certificate\", \"The venv is activated\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Puppet command on the server lists pending certificates?",
-     "correct_answer": "ca list",
-     "options": "[\"knife ssl fetch\", \"pyats --help\", \"chef-run\", \"ca list\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Where can additional Puppet resources be downloaded from?",
-     "correct_answer": "Puppet Forge",
-     "options": "[\"GitHub Pages\", \"Puppet Forge\", \"Chef Supermarket\", \"Ansible Galaxy\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which reserved filename starts the initialization step of a Puppet module?",
-     "correct_answer": "init.pp",
-     "options": "[\"main.yml\", \"default.rb\", \"site.pp\", \"init.pp\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Puppet file invokes the module and applies it to the target machine?",
-     "correct_answer": "site.pp",
-     "options": "[\"puppet.conf\", \"site.pp\", \"init.pp\", \"default.rb\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Puppet init.pp example, what does 'ensure => installed' belong to?",
-     "correct_answer": "The package resource",
-     "options": "[\"The node definition\", \"The service resource\", \"The Puppet Agent\", \"The package resource\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Puppet class, what does the service resource's 'enable => true' do?",
-     "correct_answer": "Restarts the service automatically at server reboot",
-     "options": "[\"Restarts the service automatically at server reboot\", \"Installs the package\", \"Creates the manifest folder\", \"Signs the certificate\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which file tells the Puppet Agent where the server is?",
-     "correct_answer": "puppet.conf",
-     "options": "[\"site.pp\", \"config.rb\", \"inventory\", \"puppet.conf\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does Puppet do at scale to handle more hosts?",
-     "correct_answer": "Adds compile masters behind a load balancer",
-     "options": "[\"Uses ansible-galaxy\", \"Replaces the agent with Knife\", \"Adds compile masters behind a load balancer\", \"Disables certificates\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which database replaces PuppetDB in a scaled Puppet Enterprise deployment?",
-     "correct_answer": "PE-PostgreSQL",
-     "options": "[\"MongoDB\", \"SQLite\", \"PE-PostgreSQL\", \"MySQL\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Chef component is the host agent?",
-     "correct_answer": "Chef Infra Client",
-     "options": "[\"Knife\", \"Chef Infra Server\", \"Chef Workstation\", \"Chef Infra Client\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Chef Infra Server is free for fewer than how many managed nodes?",
-     "correct_answer": "25",
-     "options": "[\"10\", \"100\", \"50\", \"25\"]",
+     "options": "[\"The venv is activated\", \"Its certificate is signed by the server\", \"Knife fetches an SSL certificate\", \"An inventory file is created\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which Chef tool manages cookbooks, recipes, and nodes and talks to the Infra Server?",
      "correct_answer": "Knife",
-     "options": "[\"InSpec\", \"Knife\", \"chef-run\", \"Omnitruck\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Chef command makes basic configuration changes such as installing the ntp package?",
-     "correct_answer": "chef-run",
-     "options": "[\"chef-manage-ctl\", \"knife ssl fetch\", \"chef-run\", \"ca list\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Chef-provided installer is used to preinstall the Infra Client on nodes?",
-     "correct_answer": "Omnitruck",
-     "options": "[\"Test Kitchen\", \"ChefSpec\", \"Knife\", \"Omnitruck\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which file in the .chef folder configures Knife?",
-     "correct_answer": "config.rb",
-     "options": "[\"site.yml\", \"config.rb\", \"puppet.conf\", \"default.rb\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does 'knife ssl fetch' do?",
-     "correct_answer": "Retrieves and stores the server's certificate",
-     "options": "[\"Installs Apache2\", \"Creates a cookbook\", \"Signs an agent certificate\", \"Retrieves and stores the server's certificate\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Chef recipe resource copies index.html from /files/default to the target?",
-     "correct_answer": "cookbook_file",
-     "options": "[\"service\", \"package\", \"apt_update\", \"cookbook_file\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Chef recipe, which resource handles the apt package manager on Debian?",
-     "correct_answer": "apt_update",
-     "options": "[\"apt_update\", \"execute\", \"cookbook_file\", \"package\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which default file is executed when a Chef recipe runs?",
-     "correct_answer": "default.rb",
-     "options": "[\"init.pp\", \"default.rb\", \"main.yml\", \"site.pp\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the run_list in Chef?",
-     "correct_answer": "An ordered list of recipes to apply to a node",
-     "options": "[\"A log of failed runs\", \"A list of SSH keys\", \"A list of agents in the cluster\", \"An ordered list of recipes to apply to a node\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Knife command logs into a node over SSH and runs chef-client?",
-     "correct_answer": "knife ssh",
-     "options": "[\"knife bootstrap\", \"knife ssl fetch\", \"knife ssh\", \"chef-run\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does Cisco provide for Chef on NX-OS switches?",
-     "correct_answer": "Modified Chef Infra Agents that run in the guest shell",
-     "options": "[\"A replacement for Knife\", \"A Windows-only cookbook\", \"A Chef Server appliance\", \"Modified Chef Infra Agents that run in the guest shell\"]",
+     "options": "[\"Omnitruck\", \"InSpec\", \"chef-run\", \"Knife\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Immutability means maintaining systems how?",
      "correct_answer": "Entirely as code, with no manual operations",
-     "options": "[\"Only with agents\", \"With frequent manual edits\", \"Entirely as code, with no manual operations\", \"Only in the cloud\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "GitOps is also referred to as what?",
-     "correct_answer": "Operations by pull request",
-     "options": "[\"Operations by SSH\", \"Manual release management\", \"Operations by pull request\", \"Deployment by email\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which method requires two identical production environments and quickly redirecting traffic?",
-     "correct_answer": "Blue/green deployment",
-     "options": "[\"Blue/green deployment\", \"Waterfall deployment\", \"Test-driven development\", \"Canary testing\"]",
+     "options": "[\"Only in the cloud\", \"Entirely as code, with no manual operations\", \"With frequent manual edits\", \"Only with agents\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which strategy migrates customers or users one by one from the old to the new deployment?",
      "correct_answer": "Canary testing",
-     "options": "[\"Red/black deployment\", \"Blue/green deployment\", \"Canary testing\", \"Rolling restart of hardware\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "According to the slide note, in red/black deployment how is traffic moved?",
-     "correct_answer": "Cut over all at once",
-     "options": "[\"Cut over all at once\", \"Gradually to both systems\", \"User by user\", \"Never\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which unit testing tool does the module name for automatic testing of code changes?",
-     "correct_answer": "pytest",
-     "options": "[\"pytest\", \"Knife\", \"Jenkins\", \"Postman\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does pyATS stand for?",
-     "correct_answer": "Python Automated Test System",
-     "options": "[\"Packet Yield Automation Test Suite\", \"Python API Test Server\", \"Python Automated Test System\", \"Python Automated Template Service\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is the higher-level library of pyATS?",
-     "correct_answer": "Genie",
-     "options": "[\"Genie\", \"Cobra\", \"AEtest\", \"Easypy\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which pyATS components are named in the module?",
-     "correct_answer": "AEtest and Easypy",
-     "options": "[\"Puppet and Facter\", \"Cobra and Genie\", \"AEtest and Easypy\", \"Knife and Chef-run\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In what format can pyATS consume and implement topologies besides JSON?",
-     "correct_answer": "YANG models",
-     "options": "[\"Only XML-RPC\", \"YANG models\", \"Only CSV\", \"Only MIBs\"]",
+     "options": "[\"Red/black deployment\", \"Blue/green deployment\", \"Rolling restart of hardware\", \"Canary testing\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is a pyATS testbed file?",
      "correct_answer": "A YAML file describing the devices and how to communicate with them",
-     "options": "[\"A Docker image\", \"A Postman collection\", \"A Python unit test\", \"A YAML file describing the devices and how to communicate with them\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Why is pyATS best installed inside a Python virtual environment?",
-     "correct_answer": "To avoid permanently changing the state of the system",
-     "options": "[\"Because Genie needs root\", \"Because Python 2 requires it\", \"Because pip cannot run outside a venv\", \"To avoid permanently changing the state of the system\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which command verifies that pyATS was installed?",
-     "correct_answer": "pyats --help",
-     "options": "[\"knife --version\", \"pip freeze --all\", \"pyats --help\", \"ansible --version\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What should you do about 'Failed building wheel' errors while installing pyATS?",
-     "correct_answer": "Safely ignore them",
-     "options": "[\"Safely ignore them\", \"Reinstall the OS\", \"Stop and uninstall pip\", \"Switch to Python 2\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which product is the Cisco network simulation environment in Module 7?",
-     "correct_answer": "VIRL (Virtual Internet Routing Laboratory)",
-     "options": "[\"VIRL (Virtual Internet Routing Laboratory)\", \"Packet Tracer\", \"Webex Teams\", \"pyATS\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the native configuration format of VIRL?",
-     "correct_answer": "A .virl file, which is human-readable YAML",
-     "options": "[\"A .pka file\", \"A .xml MIB\", \"A .virl file, which is human-readable YAML\", \"A .json testbed\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "The virtual equipment inside VIRL runs what code?",
-     "correct_answer": "The same code that runs inside actual Cisco products",
-     "options": "[\"Simulated code unrelated to IOS\", \"The same code that runs inside actual Cisco products\", \"Only Linux kernel code\", \"Only open source code\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What can the .virl file help determine?",
-     "correct_answer": "Whether configuration drift has occurred on the simulation",
-     "options": "[\"Whether configuration drift has occurred on the simulation\", \"Which Puppet module is installed\", \"The API access key\", \"The sudo password\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which group does DevNet create to keep technologies together by category?",
-     "correct_answer": "Dev Centers",
-     "options": "[\"Dev Zones\", \"Dev Centers\", \"API Hubs\", \"Sandbox Labs\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is NOT one of the DevNet Dev Centers listed in the module?",
-     "correct_answer": "Mainframe",
-     "options": "[\"Mainframe\", \"Collaboration\", \"Wireless and mobile\", \"Cloud\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does an SDK contain?",
-     "correct_answer": "A set of integrated software development tools for a specific device or system",
-     "options": "[\"Only a compiler\", \"Only network drivers\", \"A set of integrated software development tools for a specific device or system\", \"Only API documentation\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "SDKs often help with which API constraints?",
-     "correct_answer": "Pagination and rate limiting",
-     "options": "[\"Routing protocols\", \"Disk partitioning\", \"Pagination and rate limiting\", \"Authentication certificates\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which SDK is also known as the Cobra SDK?",
-     "correct_answer": "Cisco APIC Python SDK",
-     "options": "[\"Webex Teams Python SDK\", \"Cisco IMC Python SDK\", \"UCS Python SDK\", \"Cisco APIC Python SDK\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement describes model-driven programmability?",
-     "correct_answer": "Its specification is decoupled from transport, protocol, and encoding",
-     "options": "[\"It is tied to a single transport\", \"It cannot use open source\", \"Its specification is decoupled from transport, protocol, and encoding\", \"It only supports CLI\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which model types does model-driven programmability support?",
-     "correct_answer": "Native, OpenConfig, and IETF",
-     "options": "[\"Native, OpenConfig, and IETF\", \"Only proprietary\", \"Only SNMP MIBs\", \"Only native\"]",
+     "options": "[\"A YAML file describing the devices and how to communicate with them\", \"A Python unit test\", \"A Postman collection\", \"A Docker image\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is YANG?",
      "correct_answer": "A data modeling language for configuration and state data manipulated by NETCONF",
-     "options": "[\"A Cisco SDN controller\", \"A data modeling language for configuration and state data manipulated by NETCONF\", \"A scripting language for Chef\", \"A transport protocol\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What are the two types of YANG models in the module?",
-     "correct_answer": "Open and native",
-     "options": "[\"Public and private\", \"Open and native\", \"Static and dynamic\", \"Primary and secondary\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is NOT one of the four YANG node types?",
-     "correct_answer": "Table node",
-     "options": "[\"Container node\", \"List node\", \"Table node\", \"Leaf node\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool turns a YANG file into an easy-to-follow tree structure?",
-     "correct_answer": "pyang",
-     "options": "[\"pyATS\", \"pyang\", \"Postman\", \"ncclient\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "How is pyang installed in the module?",
-     "correct_answer": "With pip in a virtual environment",
-     "options": "[\"With apt only on routers\", \"With pip in a virtual environment\", \"With Knife\", \"With ansible-galaxy\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What data encoding does NETCONF use for configuration data and messages?",
-     "correct_answer": "XML",
-     "options": "[\"Plain text\", \"YAML\", \"JSON only\", \"XML\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "NETCONF is the primary protocol used with which kind of data models?",
-     "correct_answer": "YANG",
-     "options": "[\"YANG\", \"SOAP\", \"OpenAPI\", \"MIB\"]",
+     "options": "[\"A transport protocol\", \"A scripting language for Chef\", \"A Cisco SDN controller\", \"A data modeling language for configuration and state data manipulated by NETCONF\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which is NOT a NETCONF operation?",
      "correct_answer": "post-config",
-     "options": "[\"kill-session\", \"post-config\", \"edit-config\", \"get-config\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which NETCONF operation retrieves only the configuration data?",
-     "correct_answer": "get-config",
-     "options": "[\"get-config\", \"get\", \"copy-config\", \"lock\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which NETCONF operations ensure only one session edits a datastore at a time?",
-     "correct_answer": "lock and unlock",
-     "options": "[\"get and get-config\", \"lock and unlock\", \"close-session and kill-session\", \"copy-config and delete-config\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about NETCONF versus SNMP is correct?",
-     "correct_answer": "NETCONF supports transactions; SNMP does not",
-     "options": "[\"SNMP supports transactions; NETCONF does not\", \"NETCONF has no capability exchange\", \"Both lack backup and restore\", \"NETCONF supports transactions; SNMP does not\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which datastores does NETCONF support in the module's comparison?",
-     "correct_answer": "Candidate, running, and startup",
-     "options": "[\"Only candidate\", \"Only startup\", \"Candidate, running, and startup\", \"Only running\"]",
+     "options": "[\"edit-config\", \"get-config\", \"post-config\", \"kill-session\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which RFC defines RESTCONF?",
      "correct_answer": "RFC 8040",
-     "options": "[\"RFC 1157\", \"RFC 2616\", \"RFC 6241\", \"RFC 8040\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "RESTCONF encapsulates NETCONF datastore models and verbs in what?",
-     "correct_answer": "HTTP messages",
-     "options": "[\"SOAP envelopes\", \"HTTP messages\", \"SSH channels\", \"SNMP traps\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about RESTCONF is correct?",
-     "correct_answer": "It is not intended to replace NETCONF",
-     "options": "[\"It replaces NETCONF entirely\", \"It is not intended to replace NETCONF\", \"It uses SOAP\", \"It uses only the candidate datastore\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which datastore does RESTCONF support?",
-     "correct_answer": "Only the running datastore",
-     "options": "[\"Only startup\", \"Only candidate\", \"Running and candidate\", \"Only the running datastore\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which RESTCONF method maps to the NETCONF edit-config create operation?",
-     "correct_answer": "POST",
-     "options": "[\"POST\", \"PUT\", \"GET\", \"DELETE\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which RESTCONF method maps to retrieving data with get-config?",
-     "correct_answer": "GET",
-     "options": "[\"POST\", \"PUT\", \"DELETE\", \"GET\"]",
+     "options": "[\"RFC 6241\", \"RFC 1157\", \"RFC 8040\", \"RFC 2616\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which RESTCONF method creates or replaces a data resource?",
      "correct_answer": "PUT",
-     "options": "[\"GET\", \"POST\", \"PUT\", \"PATCH\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which RESTCONF method deletes a data resource?",
-     "correct_answer": "DELETE",
-     "options": "[\"GET\", \"DELETE\", \"POST\", \"PUT\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What happens in RESTCONF if a datastore has an active lock?",
-     "correct_answer": "The edit operation fails",
-     "options": "[\"The lock is released automatically\", \"The edit waits indefinitely\", \"The edit operation fails\", \"The edit succeeds anyway\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is a RESTCONF edit limited to?",
-     "correct_answer": "A single RESTCONF call",
-     "options": "[\"Multiple devices\", \"A single RESTCONF call\", \"A candidate commit\", \"A lock and unlock pair\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement is true about RESTCONF versus NETCONF?",
-     "correct_answer": "RESTCONF is easier for engineers with REST API experience",
-     "options": "[\"RESTCONF is easier for engineers with REST API experience\", \"RESTCONF supports multi-device transactions\", \"RESTCONF supports data store locks\", \"RESTCONF is more comprehensive and complex\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the base of a RESTCONF URL?",
-     "correct_answer": "https://<hostURL>/restconf",
-     "options": "[\"https://<hostURL>/restconf\", \"ssh://<hostURL>/restconf\", \"http://<hostURL>/netconf\", \"https://<hostURL>/api/v1\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which operating system is Cisco IOS XE based on?",
-     "correct_answer": "Linux",
-     "options": "[\"Linux\", \"Windows\", \"Solaris\", \"FreeBSD\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "As of which IOS XE release is NETCONF/YANG supported?",
-     "correct_answer": "16.3.1",
-     "options": "[\"9.2.1\", \"16.3.1\", \"12.5(1)\", \"15.5(3)S5\"]",
+     "options": "[\"PATCH\", \"POST\", \"GET\", \"PUT\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which CLI command enables NETCONF on IOS XE?",
      "correct_answer": "netconf-yang",
-     "options": "[\"netconf-yang\", \"netconf enable\", \"ip http server\", \"restconf\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which CLI command enables RESTCONF on IOS XE?",
-     "correct_answer": "restconf",
-     "options": "[\"ip restconf\", \"restconf\", \"http restconf enable\", \"netconf-yang\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which command enables HTTPS (port 443) support for RESTCONF on IOS XE?",
-     "correct_answer": "ip http secure-server",
-     "options": "[\"crypto key generate rsa\", \"ip http server\", \"ip ssh version 2\", \"ip http secure-server\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "How should NETCONF and RESTCONF connections be authenticated on IOS XE?",
-     "correct_answer": "With AAA credentials",
-     "options": "[\"With no authentication\", \"With a Meraki API key\", \"With SNMP communities\", \"With AAA credentials\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What do you do if 'netconf-yang' returns 'Unknown command'?",
-     "correct_answer": "Double-check the device configuration",
-     "options": "[\"Reload the Firepower device\", \"Double-check the device configuration\", \"Install Chef\", \"Disable AAA\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which IOS XE datastores does the module mention?",
-     "correct_answer": "Running and candidate",
-     "options": "[\"Only startup\", \"Only running\", \"Running and candidate\", \"Startup and archive\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the YangModels GitHub repository, which subdirectory holds Cisco platform models?",
-     "correct_answer": "vendor/cisco",
-     "options": "[\"platforms/ios\", \"cisco/models\", \"ietf/cisco\", \"vendor/cisco\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is Cisco DNA Center?",
-     "correct_answer": "A foundational controller and analytics platform for large and midsize organizations",
-     "options": "[\"A foundational controller and analytics platform for large and midsize organizations\", \"A contact center desktop\", \"A SaaS compute platform\", \"A DNS security service\"]",
+     "options": "[\"netconf enable\", \"ip http server\", \"restconf\", \"netconf-yang\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which sections does the Cisco DNA Center GUI organize services into?",
      "correct_answer": "Design, Policy, Provision, Assurance, and Platform",
-     "options": "[\"Design, Policy, Provision, Assurance, and Platform\", \"Discover, Map, Inventory, Alert, Audit\", \"Create, Update, Delete, Read, Search\", \"Plan, Build, Run, Monitor, Report\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which role is assigned to the initial 'admin' user in Cisco DNA Center?",
-     "correct_answer": "SUPER-ADMIN-ROLE",
-     "options": "[\"SUPER-ADMIN-ROLE\", \"OBSERVER-ROLE\", \"ROOT-ROLE\", \"NETWORK-ADMIN-ROLE\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which API gives programmatic access to Cisco DNA Center services?",
-     "correct_answer": "The Intent API",
-     "options": "[\"The Intent API\", \"The Cobra API\", \"The AXL API\", \"The xAPI\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Where in the DNA Center GUI is the built-in TryIt capability found?",
-     "correct_answer": "Platform > Developer Toolkit",
-     "options": "[\"Policy > Group-Based\", \"Design > Network Settings\", \"Assurance > Health\", \"Platform > Developer Toolkit\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "How are Cisco DNA Center Intent API POST and PUT requests handled?",
-     "correct_answer": "Asynchronously, returning executionId and executionStatusUrl",
-     "options": "[\"Only through the CLI\", \"Through SNMP traps\", \"Synchronously with the full result\", \"Asynchronously, returning executionId and executionStatusUrl\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which payload format do Intent API POST and PUT methods require?",
-     "correct_answer": "JSON",
-     "options": "[\"YAML\", \"CSV\", \"Protocol Buffers\", \"JSON\"]",
+     "options": "[\"Create, Update, Delete, Read, Search\", \"Design, Policy, Provision, Assurance, and Platform\", \"Plan, Build, Run, Monitor, Report\", \"Discover, Map, Inventory, Alert, Audit\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Cisco ACI runs on which hardware?",
      "correct_answer": "Nexus 9000",
-     "options": "[\"ISR 4000\", \"ASR 1000\", \"Nexus 9000\", \"Catalyst 9000\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the centralized management system of Cisco ACI?",
-     "correct_answer": "Application Policy Infrastructure Controller (APIC)",
-     "options": "[\"Application Policy Infrastructure Controller (APIC)\", \"Firepower Management Center\", \"Network Services Orchestrator (NSO)\", \"vManage\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does the ACI object model represent?",
-     "correct_answer": "The complete configuration and run-time state of every component",
-     "options": "[\"The complete configuration and run-time state of every component\", \"Only the CLI commands\", \"Only user accounts\", \"Only the physical switches\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In ACI, what is a Distinguished Name (DN)?",
-     "correct_answer": "A unique name that identifies a specific managed object and maps directly to a URL",
-     "options": "[\"A device hostname\", \"An API key\", \"A name relative only to the parent object\", \"A unique name that identifies a specific managed object and maps directly to a URL\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In ACI, what does a Relative Name (RN) identify?",
-     "correct_answer": "An object within the context of its parent object",
-     "options": "[\"An object globally\", \"An object within the context of its parent object\", \"A fabric only\", \"A tenant only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In ACI, object instances are referred to as what?",
-     "correct_answer": "Managed Objects (MOs)",
-     "options": "[\"Playbooks\", \"Service Profiles\", \"Managed Objects (MOs)\", \"Cookbooks\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which literal string in an ACI URL indicates the API is being invoked?",
-     "correct_answer": "api",
-     "options": "[\"rest\", \"api\", \"aci\", \"apic\"]",
+     "options": "[\"ASR 1000\", \"Catalyst 9000\", \"Nexus 9000\", \"ISR 4000\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is the final mandatory part of an ACI request URI?",
      "correct_answer": "The encoding format, .xml or .json",
-     "options": "[\"The port\", \"The encoding format, .xml or .json\", \"The hostname\", \"The query filter\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which built-in APIC tool lets you view and copy the API messages the GUI sends?",
-     "correct_answer": "API Inspector",
-     "options": "[\"REST Client\", \"API Inspector\", \"TryIt\", \"Cobra\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Python library is the robust library for the APIC REST API?",
-     "correct_answer": "Cobra",
-     "options": "[\"Cobra\", \"PowerTool\", \"ncclient\", \"Genie\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the first step in the Cobra SDK workflow?",
-     "correct_answer": "Create a session object",
-     "options": "[\"Create a session object\", \"Create a configuration request object\", \"Log in to the APIC\", \"Commit\"]",
+     "options": "[\"The hostname\", \"The port\", \"The query filter\", \"The encoding format, .xml or .json\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is the last step in the Cobra SDK workflow?",
      "correct_answer": "Commit",
-     "options": "[\"Add the config object to the request\", \"Log in to the APIC\", \"Commit\", \"Create a session object\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Ansible module in the ACI example idempotently ensures a tenant exists?",
-     "correct_answer": "aci_tenant",
-     "options": "[\"aci_bd\", \"aci_epg\", \"aci_rest\", \"aci_tenant\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool provides access to ACI hybrid cloud resources on AWS and Azure?",
-     "correct_answer": "Multi-Site Orchestrator (MSO)",
-     "options": "[\"Intersight\", \"Multi-Site Orchestrator (MSO)\", \"vManage\", \"Cobra\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Cisco Meraki is best described as what?",
-     "correct_answer": "A suite of cloud-managed network solutions",
-     "options": "[\"A malware analysis platform\", \"A suite of cloud-managed network solutions\", \"An on-premises controller only\", \"A SOAP-based call manager\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which transport and serialization does the Meraki Dashboard API use?",
-     "correct_answer": "HTTPS and JSON",
-     "options": "[\"XML over SSH\", \"HTTPS and JSON\", \"SOAP over HTTP\", \"Telnet and YAML\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Where do you first enable the Meraki Dashboard API for an organization?",
-     "correct_answer": "Organization > Settings",
-     "options": "[\"Network-wide > Alerts\", \"Organization > Settings\", \"Security > Firewall\", \"My Profile\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Where is the Meraki API key generated?",
-     "correct_answer": "The My Profile page",
-     "options": "[\"Wireless > Radio Settings\", \"Organization > Settings\", \"Switch > Ports\", \"The My Profile page\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Meraki API helps retail stores understand location and engagement trends?",
-     "correct_answer": "Location Scanning API",
-     "options": "[\"Snapshot API\", \"Dashboard API\", \"Location Scanning API\", \"Live Link API\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a Meraki camera API?",
-     "correct_answer": "MV Sense",
-     "options": "[\"MX Sense\", \"MS Sense\", \"MV Sense\", \"MR Sense\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is NX-OS?",
-     "correct_answer": "The data center operating system for Nexus switches",
-     "options": "[\"The operating system for Webex devices\", \"A SaaS management platform\", \"The UCS Manager OS\", \"The data center operating system for Nexus switches\"]",
+     "options": "[\"Log in to the APIC\", \"Commit\", \"Create a session object\", \"Add the config object to the request\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What does Open NX-OS use instead of the custom NetStack?",
      "correct_answer": "The native Linux networking stack",
-     "options": "[\"A Windows stack\", \"A proprietary hardware stack\", \"The native Linux networking stack\", \"A BSD stack\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which guest shell does NX-OS provide for running containers?",
-     "correct_answer": "A CentOS 7-based Guest Shell",
-     "options": "[\"A Windows PowerShell\", \"A Debian shell\", \"A CentOS 7-based Guest Shell\", \"An Ubuntu 18.04 shell\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which telemetry applications can be integrated on a Nexus switch with NX-OS?",
-     "correct_answer": "Ganglia, Splunk, and Nagios",
-     "options": "[\"AXL, UDS, and JTAPI\", \"Cobra, Genie, and pyATS\", \"Ganglia, Splunk, and Nagios\", \"Ansible, Puppet, and Chef\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which service provides REST access on Open NX-OS?",
-     "correct_answer": "NX-API REST",
-     "options": "[\"UDS\", \"xAPI\", \"AXL\", \"NX-API REST\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "From which Open NX-OS version do the model-driven programmability instructions apply?",
-     "correct_answer": "9.2.1 and later",
-     "options": "[\"9.2.1 and later\", \"16.3.1 and later\", \"12.5(1) and later\", \"7.0 and later\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which feature must be enabled to install OpenConfig RPMs on an Open NX-OS switch?",
-     "correct_answer": "bash-shell",
-     "options": "[\"restconf\", \"guest-shell\", \"ncclient\", \"bash-shell\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does Cisco NSO stand for?",
-     "correct_answer": "Network Services Orchestrator",
-     "options": "[\"Network Services Orchestrator\", \"Nexus Switch Operating system\", \"Network Security Operator\", \"Node Service Observer\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which are the two functional layers of NSO?",
-     "correct_answer": "Device Manager and Service Manager",
-     "options": "[\"Northbound and Southbound\", \"Device Manager and Service Manager\", \"Control Plane and Data Plane\", \"vManage and vSmart\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does the NSO Configuration Database (CDB) store?",
-     "correct_answer": "NSO's configuration, all services, and a copy of managed device configuration",
-     "options": "[\"Only the YANG models\", \"Only syslog messages\", \"NSO's configuration, all services, and a copy of managed device configuration\", \"Only user passwords\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which file systems are unsuitable for the NSO CDB in production?",
-     "correct_answer": "NFS and other network file systems",
-     "options": "[\"XFS\", \"Local SSD file systems\", \"NFS and other network file systems\", \"ext4\"]",
+     "options": "[\"A Windows stack\", \"A proprietary hardware stack\", \"A BSD stack\", \"The native Linux networking stack\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "A service in NSO consists of a YANG service model and what?",
      "correct_answer": "A device configuration mapping",
-     "options": "[\"A device configuration mapping\", \"A Cobra session\", \"A Puppet manifest\", \"A Webex room\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which can define NSO's device configuration mapping?",
-     "correct_answer": "Service templates or Java",
-     "options": "[\"Chef recipes or cookbooks\", \"Ansible roles only\", \"Service templates or Java\", \"Postman collections\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which tool performs NSO validation that needs external code, such as database look-ups?",
-     "correct_answer": "MAAPI",
-     "options": "[\"AXL\", \"Omnitruck\", \"Cobra\", \"MAAPI\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which are the two NSO CLI flavors?",
-     "correct_answer": "Juniper-style and Cisco XR-style",
-     "options": "[\"Bash and PowerShell\", \"IOS-style and NX-OS-style\", \"Juniper-style and Cisco XR-style\", \"Linux and Windows\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "The NSO Web UI is built with what?",
-     "correct_answer": "Pure client-side JavaScript",
-     "options": "[\"Pure client-side JavaScript\", \"PHP\", \"Flash\", \"Server-side Java only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is an NSO southbound interface?",
-     "correct_answer": "NETCONF",
-     "options": "[\"Java northbound API\", \"NETCONF\", \"Web UI\", \"REST API\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a way to add a device to NSO?",
-     "correct_answer": "Discovery, manually, cloning, or templates",
-     "options": "[\"Only by SNMP trap\", \"Discovery, manually, cloning, or templates\", \"Only by Webex Teams\", \"Only discovery\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In Cisco SD-WAN, which component is the centralized network management system?",
-     "correct_answer": "vManage",
-     "options": "[\"vManage\", \"vSmart\", \"vEdge\", \"vBond\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In Cisco SD-WAN, which component controls the flow of data traffic with vBond authenticating devices?",
-     "correct_answer": "vSmart Controller",
-     "options": "[\"vEdge Router\", \"vManage\", \"vSmart Controller\", \"vBond Orchestrator\"]",
+     "options": "[\"A Webex room\", \"A Cobra session\", \"A Puppet manifest\", \"A device configuration mapping\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "In Cisco SD-WAN, which component orchestrates connectivity between vEdge routers and vSmart controllers?",
      "correct_answer": "vBond Orchestrator",
-     "options": "[\"vEdge Router\", \"vBond Orchestrator\", \"vSmart Controller\", \"vManage\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In Cisco SD-WAN, which routers are provisioned at the perimeter of a site?",
-     "correct_answer": "vEdge Routers",
-     "options": "[\"vManage servers\", \"vBond Orchestrators\", \"vSmart Controllers\", \"vEdge Routers\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a key feature of Cisco SD-WAN?",
-     "correct_answer": "Cloud-first architecture",
-     "options": "[\"Agent-based only management\", \"On-premises only deployment\", \"Cloud-first architecture\", \"No built-in security\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is a feature or operation in the SD-WAN REST API called?",
-     "correct_answer": "A resource",
-     "options": "[\"A collection\", \"A resource\", \"A node\", \"A tenant\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Cisco UCS is described as what type of infrastructure?",
-     "correct_answer": "Hyperconverged",
-     "options": "[\"Hyperconverged\", \"Legacy\", \"Standalone\", \"Disaggregated\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "On which device does Cisco UCS Manager run?",
-     "correct_answer": "The primary fabric interconnect",
-     "options": "[\"The Chef Infra Server\", \"The subordinate server\", \"The primary fabric interconnect\", \"A Webex Room Device\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What are UCS Service Profiles used for?",
-     "correct_answer": "Assigning identity to a server",
-     "options": "[\"Signing certificates\", \"Assigning identity to a server\", \"Collecting syslog\", \"Encrypting passwords\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "How many Service Profiles can a UCS server be associated with at a time?",
-     "correct_answer": "One",
-     "options": "[\"One\", \"Two\", \"Three\", \"Unlimited\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which UCS servers reside in a chassis?",
-     "correct_answer": "B-Series blade servers",
-     "options": "[\"S-Series storage servers\", \"B-Series blade servers\", \"M-Series cartridges\", \"C-Series rack servers\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which redundant pair of switches connects UCS servers?",
-     "correct_answer": "Fabric Interconnects (FIs)",
-     "options": "[\"Nexus 9000 spine switches\", \"Fabric Interconnects (FIs)\", \"Catalyst 3650 switches\", \"vEdge routers\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the top node of the UCS MIT hierarchy?",
-     "correct_answer": "sys",
-     "options": "[\"root\", \"fabric\", \"org\", \"sys\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "UCS managed objects are represented as what?",
-     "correct_answer": "XML",
-     "options": "[\"XML\", \"YAML\", \"Binary blobs\", \"Plain text only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "A UCS Distinguished Name is made of what?",
-     "correct_answer": "A series of Relative Names",
-     "options": "[\"A list of IP addresses\", \"A series of Relative Names\", \"A device serial number\", \"An API key\"]",
+     "options": "[\"vBond Orchestrator\", \"vEdge Router\", \"vManage\", \"vSmart Controller\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "Which UCS XML API method initially logs in and retrieves an authentication cookie?",
      "correct_answer": "aaaLogin",
-     "options": "[\"aaaLogin\", \"configResolveDn\", \"aaaLogout\", \"aaaRefresh\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which UCS XML API method retrieves objects by their DN?",
-     "correct_answer": "configResolveDn",
-     "options": "[\"configConfMo\", \"configResolveClass\", \"configScope\", \"configResolveDn\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which UCS XML API method affects a single managed object?",
-     "correct_answer": "configConfMo",
-     "options": "[\"configConfMo\", \"configResolveChildren\", \"configConfMos\", \"configConfMoGroup\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which UCS XML API method applies the same change to multiple subtrees or managed objects?",
-     "correct_answer": "configConfMoGroup",
-     "options": "[\"configConfMo\", \"configConfMoGroup\", \"configResolveDns\", \"aaaRefresh\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is UCS PowerTool?",
-     "correct_answer": "A library of PowerShell cmdlets for managing UCS",
-     "options": "[\"A Python SDK\", \"A library of PowerShell cmdlets for managing UCS\", \"A set of Ansible modules\", \"A SaaS dashboard\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which cmdlet authenticates to a UCS Manager?",
-     "correct_answer": "Connect-Ucs",
-     "options": "[\"Add-UcsVlan\", \"Get-UcsLanCloud\", \"Get-UcsBlade\", \"Connect-Ucs\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which header carries the API access key in Cisco UCS Director REST requests?",
-     "correct_answer": "X-Cloupia-Request-Key",
-     "options": "[\"X-auth-access-token\", \"X-Cloupia-Request-Key\", \"X-Auth-Token\", \"X-API-Key\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about the UCS Director API version 2 is correct?",
-     "correct_answer": "Only XML is supported",
-     "options": "[\"Only JSON is supported\", \"Only XML is supported\", \"It uses GET only\", \"It requires no access key\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "About how many tasks does the UCS Director task library contain?",
-     "correct_answer": "Over 1000",
-     "options": "[\"Over 1000\", \"About 200\", \"About 50\", \"Exactly 100\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Cisco Intersight is what kind of platform?",
-     "correct_answer": "A SaaS systems management platform",
-     "options": "[\"A SaaS systems management platform\", \"An on-premises call manager\", \"A network simulation tool\", \"A Firepower console\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which format and transport does the Intersight API use?",
-     "correct_answer": "JSON over HTTP over TLS",
-     "options": "[\"JSON over HTTP over TLS\", \"CSV over FTP\", \"XML over SOAP\", \"YAML over SSH\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which specification are the Intersight Python SDK and PowerShell modules generated from?",
-     "correct_answer": "The OpenAPI (Swagger) specification",
-     "options": "[\"The OpenAPI (Swagger) specification\", \"The UCS Object Model\", \"A WSDL file\", \"A YANG module\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Another name for Cisco Unified Communications Manager is what?",
-     "correct_answer": "CallManager (CUCM)",
-     "options": "[\"CallManager (CUCM)\", \"Finesse\", \"Umbrella\", \"Webex Teams\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is Cisco AXL?",
-     "correct_answer": "An XML/SOAP-based interface for administering the Unified CM configuration database",
-     "options": "[\"A REST API for end users\", \"A contact center desktop\", \"A Webex bot framework\", \"An XML/SOAP-based interface for administering the Unified CM configuration database\"]",
+     "options": "[\"aaaLogout\", \"aaaLogin\", \"aaaRefresh\", \"configResolveDn\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "What is Cisco UDS?",
      "correct_answer": "A REST-based API aimed at end users configuring settings",
-     "options": "[\"A SOAP admin interface\", \"A DNS service\", \"A security sandbox\", \"A REST-based API aimed at end users configuring settings\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which AXL method name pattern is correct?",
-     "correct_answer": "listPhone and addUser",
-     "options": "[\"listPhone and addUser\", \"GET /phones and POST /users\", \"getAllPhones and pushUser\", \"readPhone and createUser\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which AXL calls run direct SQL queries on the Unified CM configuration database?",
-     "correct_answer": "ExecuteSQLquery and ExecuteSQLupdate",
-     "options": "[\"SELECT and UPDATE verbs\", \"getQuery and putQuery\", \"listSQL and addSQL\", \"ExecuteSQLquery and ExecuteSQLupdate\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "An AXL schema version is backwards compatible for up to how many major releases?",
-     "correct_answer": "Two",
-     "options": "[\"Ten\", \"One\", \"Four\", \"Two\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which AXL feature lets you see what changed since you last ran the request?",
-     "correct_answer": "Change Notification",
-     "options": "[\"ExecuteSQLquery\", \"Serviceability\", \"Extension Mobility\", \"Change Notification\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which HTTP methods does UDS implement?",
-     "correct_answer": "GET, POST, PUT, and DELETE",
-     "options": "[\"Only POST\", \"GET, POST, PUT, and DELETE\", \"Only GET\", \"SOAP actions\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is Cisco Finesse?",
-     "correct_answer": "A browser-based contact center agent and supervisor desktop",
-     "options": "[\"A security sandbox\", \"A DNS enforcement service\", \"A SaaS compute manager\", \"A browser-based contact center agent and supervisor desktop\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which kind of Finesse request is synchronous?",
-     "correct_answer": "REST APIs using the GET verb",
-     "options": "[\"All REST APIs\", \"REST APIs using POST\", \"REST APIs using the GET verb\", \"JavaScript APIs only\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Over which protocol does Finesse communicate with the contact center system?",
-     "correct_answer": "CTI",
-     "options": "[\"SNMP\", \"SIP trunk only\", \"NETCONF\", \"CTI\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Finesse deployment is used with Unified Contact Center Express?",
-     "correct_answer": "Co-resident Finesse",
-     "options": "[\"Standalone Finesse\", \"Cloud Finesse\", \"Co-resident Finesse\", \"Edge Finesse\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What does an Automatic Call Distributor (ACD) do in a contact center?",
-     "correct_answer": "Performs skill-based routing",
-     "options": "[\"Encrypts voicemail\", \"Compiles Puppet catalogs\", \"Signs certificates\", \"Performs skill-based routing\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In a contact center, what are inbound tasks?",
-     "correct_answer": "Customer-initiated communication with customer service",
-     "options": "[\"Supervisor reports\", \"Internal chat between agents\", \"Agent-initiated calls to customers\", \"Customer-initiated communication with customer service\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Webex Teams API resource represents a person's relationship to a room?",
-     "correct_answer": "Memberships",
-     "options": "[\"Memberships\", \"Organizations\", \"People\", \"Team Memberships\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Webex Teams API resource represents a person's relationship to a team?",
-     "correct_answer": "Team Memberships",
-     "options": "[\"Team Memberships\", \"Memberships\", \"Rooms\", \"Messages\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Webex Teams API resource are virtual meeting places where people post messages?",
-     "correct_answer": "Rooms",
-     "options": "[\"Organizations\", \"Rooms\", \"Teams\", \"Memberships\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Webex device series is described as all-in-one for meeting rooms and spaces?",
-     "correct_answer": "Webex Board Series",
-     "options": "[\"Webex Desk Series\", \"Webex Board Series\", \"Cisco Touch 10\", \"Webex Room Series\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which device is an intuitive touchscreen for interacting with Cisco conferencing systems?",
-     "correct_answer": "Cisco Touch 10",
-     "options": "[\"Webex Desk\", \"Cisco Touch 10\", \"Webex Room\", \"Webex Board\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the API used to customize Webex Devices called?",
-     "correct_answer": "xAPI",
-     "options": "[\"xAPI\", \"AXL\", \"Intent API\", \"UDS\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is a way to access the Webex Devices xAPI?",
-     "correct_answer": "Telnet/SSH, HTTP, or RS-232 serial",
-     "options": "[\"Only SNMP\", \"Telnet/SSH, HTTP, or RS-232 serial\", \"Only SOAP\", \"Only NETCONF\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What were UI Extensions previously called?",
-     "correct_answer": "In-Room Controls",
-     "options": "[\"Macros\", \"xAPI widgets\", \"In-Room Controls\", \"Halfwake controls\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "From which Collaboration Endpoint software version can room devices be personalized with branding?",
-     "correct_answer": "9.2",
-     "options": "[\"12.5\", \"9.2\", \"10.0\", \"7.4\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In which state can you add a background image and a small logo on a room device screen?",
-     "correct_answer": "Halfwake",
-     "options": "[\"Awake only\", \"Boot only\", \"Sleep only\", \"Halfwake\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Cisco AMP for Endpoints includes which advanced capability to inspect suspicious files safely?",
-     "correct_answer": "Sandboxing",
-     "options": "[\"NetFlow collection\", \"Policy-based access\", \"DNS filtering\", \"Sandboxing\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is one of the three main capabilities of AMP?",
-     "correct_answer": "Prevention, detection, and response and automation",
-     "options": "[\"Routing, switching, and wireless\", \"Encryption, hashing, and signing\", \"Prevention, detection, and response and automation\", \"Provisioning, configuration, and deployment\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the Firepower Management Center (FMC)?",
-     "correct_answer": "A central management console that configures all aspects of Firepower Threat Defense",
-     "options": "[\"A DNS security service\", \"A malware sandbox\", \"A contact center desktop\", \"A central management console that configures all aspects of Firepower Threat Defense\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which statement about the FMC API and the FTD APIs is correct?",
-     "correct_answer": "They cannot directly co-exist, so you choose one",
-     "options": "[\"They must always run together\", \"They are the same API\", \"They only work on Webex Boards\", \"They cannot directly co-exist, so you choose one\"]",
+     "options": "[\"A security sandbox\", \"A DNS service\", \"A SOAP admin interface\", \"A REST-based API aimed at end users configuring settings\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
      "question": "How long does a Firepower Management Center API access token last?",
      "correct_answer": "30 minutes",
-     "options": "[\"30 minutes\", \"24 hours\", \"60 minutes\", \"15 minutes\"]",
+     "options": "[\"15 minutes\", \"60 minutes\", \"30 minutes\", \"24 hours\"]",
      "times_missed": 0
     },
     {
      "type": "multiple_choice",
-     "question": "Which header carries the FMC API access token?",
-     "correct_answer": "X-auth-access-token",
-     "options": "[\"X-auth-access-token\", \"X-Cloupia-Request-Key\", \"X-Auth-Token\", \"Authorization-Cisco\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is Cisco ISE?",
-     "correct_answer": "A rule-based engine for policy-based network access for users and devices",
-     "options": "[\"A rule-based engine for policy-based network access for users and devices\", \"A malware sandbox\", \"A SaaS compute platform\", \"A DNS security service\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is an ISE node type?",
-     "correct_answer": "Policy Service",
-     "options": "[\"Core Service\", \"Policy Service\", \"Edge Service\", \"Fabric Service\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which is one of the capabilities of ISE?",
-     "correct_answer": "Asset visibility and segmentation",
-     "options": "[\"DNS blocking\", \"Static malware analysis\", \"Call routing\", \"Asset visibility and segmentation\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is Cisco Threat Grid?",
-     "correct_answer": "A malware analysis platform with static and dynamic analysis",
-     "options": "[\"A malware analysis platform with static and dynamic analysis\", \"An identity access engine\", \"A firewall manager\", \"A DNS security service\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "What is the Threat Grid safe virtual environment for dynamic analysis called?",
-     "correct_answer": "A glovebox",
-     "options": "[\"A vault\", \"A glovebox\", \"A sandbox cube\", \"A honeypot\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Threat Grid static analysis provides what?",
-     "correct_answer": "Identifying information about the file, its headers, and its contents",
-     "options": "[\"Call routing\", \"Live execution of the malware\", \"Identifying information about the file, its headers, and its contents\", \"DNS lookups\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Cisco Umbrella uses which service to enforce security?",
-     "correct_answer": "DNS",
-     "options": "[\"NetFlow\", \"DNS\", \"LDAP\", \"SNMP\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Umbrella API is used to pull threat intelligence data programmatically?",
-     "correct_answer": "Investigate API",
-     "options": "[\"Investigate API\", \"Enforcement API\", \"Reporting API\", \"Network Devices API\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Umbrella API takes actions on a domain request?",
-     "correct_answer": "Enforcement API",
-     "options": "[\"Network Devices API\", \"Reporting API\", \"Investigate API\", \"Enforcement API\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "Which Meraki product does Umbrella integrate with for wireless protection?",
-     "correct_answer": "Meraki MR",
-     "options": "[\"Meraki MV\", \"Meraki MG\", \"Meraki MS\", \"Meraki MR\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Packet Tracer SDN activity, on which port does PT-Controller0 listen for REST calls?",
-     "correct_answer": "58000",
-     "options": "[\"58000\", \"8080\", \"443\", \"80\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Packet Tracer REST lab, which request returns the service ticket?",
-     "correct_answer": "A POST to /api/v1/ticket with a username and password",
-     "options": "[\"A PUT to /api/v1/network-device\", \"A POST to /api/v1/ticket with a username and password\", \"A GET to /api/v1/host\", \"A DELETE to /api/v1/ticket\"]",
-     "times_missed": 0
-    },
-    {
-     "type": "multiple_choice",
-     "question": "In the Packet Tracer REST lab, which header carries the service ticket on later calls?",
-     "correct_answer": "X-Auth-Token",
-     "options": "[\"X-auth-access-token\", \"Authorization: Basic\", \"X-Cloupia-Request-Key\", \"X-Auth-Token\"]",
+     "question": "Which stage of the Automation Exchange deploys applications and network configurations through CI/CD?",
+     "correct_answer": "Fly",
+     "options": "[\"Crawl\", \"Run\", \"Walk\", \"Fly\"]",
      "times_missed": 0
     }
    ]
