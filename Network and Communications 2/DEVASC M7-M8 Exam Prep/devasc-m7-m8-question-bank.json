@@ -1,0 +1,1834 @@
+{
+  "metadata": {
+    "course": "DevNet Associate (DEVASC) v1.0",
+    "modules": {
+      "7": {
+        "title": "Infrastructure and Automation"
+      },
+      "8": {
+        "title": "Cisco Platforms and Development"
+      }
+    },
+    "generated_at": "2026-11-19T08:53:43+08:00 (Asia/Manila / PHT)",
+    "counts": {
+      "total_items": 87,
+      "mcq": 52,
+      "flashcard": 35,
+      "by_module": {
+        "7": 42,
+        "8": 45
+      },
+      "by_bank_type": {
+        "exam": 31,
+        "quiz": 21,
+        "flashcard": 35
+      },
+      "unverified_answers": 0
+    },
+    "notes": [
+      "MCQ banks fully scraped from ITExamAnswers (M7 exam 16, M7 quiz 11, M8 exam 15, M8 quiz 10).",
+      "InfraExam and ExamsCisco mirrors confirmed as English duplicates of M7/M8 exams; URLs merged into sources.",
+      "French CCNA Réponses pages confirmed as translations of M7/M8 exams; FR URLs merged into English MCQ sources (no separate FR items).",
+      "Quizlet DevNet Associate 7 (16) is an M7 exam mirror; Quizlet URL added to M7 exam MCQ sources; redundant flashcards skipped.",
+      "M8 quiz Q10 (Firepower Threat Defense API Explorer): ITExamAnswers quiz page had no visible correct-answer marking; answer confirmed from Brainscape MODULE 8 deck and ITExamAnswers exam-item page listing (correct: the URL address of the device itself). Marked verified.",
+      "Exhibits: m7-exam-12 uses Q12.jpg; m8-exam-06 uses Q6exam8.jpg from ITExamAnswers.",
+      "No questions, choices, answers, or flashcards were invented beyond what was scraped.",
+      "Quizlet Infrastructure and automation: WebFetch partial scrape — 15 concept cards included. Curl Cloudflare 403; Playwright later blocked. Set may contain more cards than extracted.",
+      "Quizlet Cisco Platforms and Development: claimed 149 cards. Included 20 term/definition pairs successfully extracted (WebFetch prefix + Playwright TermText sample before Cloudflare re-block). APIC SDK pairing corrected to 'Cobra SDK' from Playwright DOM (WebFetch had mis-paired). Incomplete scrape — do NOT treat as full 149-card set.",
+      "Playwright briefly cleared Cloudflare once (termTextCount=199 ≈ 99 pairs visible in DOM); full dump was not persisted before subsequent navigations were denied. Honest partial inclusion only."
+    ],
+    "sources_fetched": [
+      "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+      "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html",
+      "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+      "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html",
+      "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+      "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+      "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+      "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+      "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+      "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/",
+      "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/",
+      "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/",
+      "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/",
+      "https://itexamanswers.net/exam-item/where-can-a-corporate-developer-access-the-api-explorer-with-the-firepower-threat-defense-api",
+      "https://www.brainscape.com/flashcards/module-8-18469378/packs/22658848"
+    ],
+    "sources_failed_or_partial": [
+      {
+        "url": "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/",
+        "status": "partial",
+        "detail": "15 concept cards from WebFetch; curl/Playwright later blocked by Cloudflare"
+      },
+      {
+        "url": "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/",
+        "status": "partial",
+        "detail": "20 of claimed 149 cards extracted; curl 403; Playwright denied after first success"
+      },
+      {
+        "url": "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/",
+        "status": "partial_ok",
+        "detail": "M7 exam mirror; MCQ form preferred; Quizlet URL merged into M7 exam sources"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "m7-exam-01",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is the most common cause of IT outages?",
+      "choices": [
+        "a threat actor targeting the enterprise equipment",
+        "an experienced engineer implementing a configuration using automation",
+        "an engineer misconfiguring a device or network with manual changes",
+        "an experienced engineer using an open source product"
+      ],
+      "correct_answers": [
+        "an engineer misconfiguring a device or network with manual changes"
+      ],
+      "explanation": "Most outages are caused by systems being misconfigured, commonly due to human error as manual changes are being made.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-02",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is an unopinionated component in a software ecosystem?",
+      "choices": [
+        "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary",
+        "a component that is classified as open source and does not require the implementation of specific vendor products",
+        "a component that may function in a limited ability in order to compensate for the selection of companion components or architectures",
+        "a component that requires a specific companion component in order to provide full stack implementation"
+      ],
+      "correct_answers": [
+        "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary"
+      ],
+      "explanation": "An unopinionated component is a component that does not show a higher increased preference for specific companion components or architectures unless those components or architectures are necessary.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-03",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "In the use of container technologies, what is a function of platform abstraction when considering the deployment of a product in a cloud environment?",
+      "choices": [
+        "Traditional complementary software components such as a database server and web server would be implemented as a single containerized application.",
+        "Applications require re-engineering in order to implement scalability and consolidation.",
+        "A containerized app can run on a generically-specified host environment.",
+        "Applications are aware of underlying hardware configurations and are customized to provide increased functionality."
+      ],
+      "correct_answers": [
+        "A containerized app can run on a generically-specified host environment."
+      ],
+      "explanation": "Platform abstraction is a benefit of cloud computing and uses container technologies to abstract apps and platforms away from one another, while operating on a generically-specified host environment.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-04",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "A student is setting up the DEVASC-LAB VM and CSR1000v VM in VirtualBox that is installed on the local computer. Both VMs are imported to the VirtualBox successfully. The student starts both VMs and tries to verify communications to the CSR1000v VM by opening a web browser on the local computer and enters the URL https://192.168.56.101. After a few seconds, an error message displays that \"The connection has timed out\". How can the student verify the IP address assigned by DHCP to the CSR1000v virtual router?",
+      "choices": [
+        "Issue the ping 192.168.56.101 command on the local computer.",
+        "Issue the show ip interface brief command in the CSR1000v VM.",
+        "Issue the show running-config command in the CSR1000v VM.",
+        "Issue the ifconfig command in the CSR1000v VM."
+      ],
+      "correct_answers": [
+        "Issue the show ip interface brief command in the CSR1000v VM."
+      ],
+      "explanation": "The error message indicates that the destination host cannot be reached. The show ip interface brief command can be used to verify the IP address configured on the CSR1000v virtual router.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-05",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is the historical correlation between software developers and IT operations?",
+      "choices": [
+        "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users.",
+        "Operations had the job of brainstorming applications. Developers had the job of testing that these applications work for users and the business.",
+        "Operations had the job of testing applications. Developers had the job of implementing these applications for clients.",
+        "Developers had the job of testing applications. Operations had the job of implementing these applications for clients."
+      ],
+      "correct_answers": [
+        "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users."
+      ],
+      "explanation": "Historically, software developers had the job of creating applications, whereas IT operations had the job of ensuring that these applications work for users and the business.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-06",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "How is an error budget calculated in the DevOps/SRE culture?",
+      "choices": [
+        "An error budget is the difference between the SLO and the SLI.",
+        "An error budget is the difference between the SLO and 100% availability.",
+        "An error budget is the difference between the SLO and the SLA.",
+        "An error budget is the difference between the and 100% availability."
+      ],
+      "correct_answers": [
+        "An error budget is the difference between the SLO and 100% availability."
+      ],
+      "explanation": "An error budget is the difference between the Service Level Objective (SLO) and the expectation of 100% availability.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-07",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "In reviewing a formalized agreement between an organization and a customer, what is the purpose of an SLI?",
+      "choices": [
+        "An SLI is a specific set of steps for slowing releases as errors occur.",
+        "An SLI is an easy to complete, external agreement that is set between the organization and the customer.",
+        "An SLI is a benchmark metric used to determine and describe SLOs.",
+        "An SLI is an agreed-upon number of errors per unit time."
+      ],
+      "correct_answers": [
+        "An SLI is a benchmark metric used to determine and describe SLOs."
+      ],
+      "explanation": "A Service Level Indicator or SLI is a real-world benchmark metric used to determine Service-Level Objectives (SLOs).",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-08",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is the default shell commonly used on macOS and Linux?",
+      "choices": [
+        "Bash",
+        "csh",
+        "tcsh",
+        "Bourne"
+      ],
+      "correct_answers": [
+        "Bash"
+      ],
+      "explanation": "The default Unix shell found on most Linux distributions and on macOS is BASH.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-09",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "Which type of automation includes scripting that may be dangerous if the starting state is not completely known and controlled?",
+      "choices": [
+        "stateful",
+        "stateless",
+        "declarative",
+        "procedural"
+      ],
+      "correct_answers": [
+        "procedural"
+      ],
+      "explanation": "Procedural automation is a type of scripting that tends to be dangerous if a starting state is not completely known and controlled.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-10",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is an imperative procedure?",
+      "choices": [
+        "An ordered sequence of commands that is used to reach a specific end state.",
+        "A set of commands that require administrator privileges and can only be executed on a local system.",
+        "A set of commands that is piped to a remote host and immediately executed.",
+        "A set of commands that examines a target and only performs the tasks needed to achieve the desired state."
+      ],
+      "correct_answers": [
+        "An ordered sequence of commands that is used to reach a specific end state."
+      ],
+      "explanation": "An imperative procedure is an ordered sequence of commands aimed at achieving a specific goal.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-11",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "Which statement describes the declarative static model?",
+      "choices": [
+        "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state.",
+        "A declarative model will execute code that is sequentially task-driven instead of focusing on deployment-specific details.",
+        "A declarative model will follow a specific order of sequential steps in order to effect changes on a target system.",
+        "A declarative model will subdivide code into top-down sections and condition-driven handlers."
+      ],
+      "correct_answers": [
+        "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state."
+      ],
+      "explanation": "The declarative model is used by middleware and incorporates deployment-specific details, examines present circumstances, and brings real infrastructure into alignment with the model in order to create a desired end product.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-12",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "Refer to the exhibit. A user is working on Ansible on the local NMS to manage remote network devices. The user issues the ansible webservers -m ping command to test the communication. However, an error message returns. What are two possible causes for the error? (Choose two.)",
+      "choices": [
+        "The SSH credential is wrong.",
+        "The destination host IP address is wrong.",
+        "The switch -m should be -M",
+        "The SSH client is not installed.",
+        "The destination host alias is wrong.",
+        "The SSH service does not start on the host."
+      ],
+      "correct_answers": [
+        "The destination host IP address is wrong.",
+        "The SSH service does not start on the host."
+      ],
+      "explanation": "The error message indicates that the SSH server on the destination host cannot be reached. The possible issue is either the SSH server is not running or the IP address configured in the hosts file is wrong.",
+      "exhibit_image_url": "https://itexamanswers.net/wp-content/uploads/2021/01/Q12.jpg",
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-13",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "Which component in the pyATS ecology handles bundling and running jobs?",
+      "choices": [
+        "EasyPy",
+        "AEtest",
+        "Genie",
+        "Clover"
+      ],
+      "correct_answers": [
+        "EasyPy"
+      ],
+      "explanation": "EasyPy is a runtime engine that can take one or more pyATS scripts and compile them into a job and run them together as a batch.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-14",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "An engineer has just created a backup file of a Cisco VIRL network simulation. Which command should be used to compare the most recent .virl file with the previous backup file?",
+      "choices": [
+        "diff",
+        "pyats",
+        "knife",
+        "source",
+        "list"
+      ],
+      "correct_answers": [
+        "diff"
+      ],
+      "explanation": "The .virl file provides a method for determining if configuration drift has occurred by using the diff command to compare a newly-extracted .virl file with the original .virl file.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-15",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "While working in the Ansible code structure, which type of file contains a sequence of tasks, executed in top-down order?",
+      "choices": [
+        ".virl",
+        ".yml",
+        ".py",
+        ".txt"
+      ],
+      "correct_answers": [
+        ".yml"
+      ],
+      "explanation": "In the Ansible code structure, work is separated into YAML (.yml) files that contain a sequence of tasks, executed in top-down order.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-exam-16",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "exam",
+      "question": "What is a standard command to create a Python virtual environment?",
+      "choices": [
+        "sudo apt-get install python3-pip",
+        "pip install [options] [package-index-options]...",
+        "python3 -m venv /path/to/new/virtual/environment",
+        "source bin/activate"
+      ],
+      "correct_answers": [
+        "python3 -m venv /path/to/new/virtual/environment"
+      ],
+      "explanation": "The venv command is executed to create lightweight virtual environments.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-7-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-7-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-7-exam-answers/",
+        "https://ccnareponses.com/7-9-examen-de-module-7-devnet-associate-reponses-francais/",
+        "https://quizlet.com/ph/857933899/devnet-associate-7-flash-cards/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-01",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "What is the average cost per hour of an enterprise outage for the largest enterprises?",
+      "choices": [
+        "$700,000.00 per hour",
+        "$500,000.00 per hour",
+        "$300,000.00 per hour",
+        "$100,000.00 per hour"
+      ],
+      "correct_answers": [
+        "$300,000.00 per hour"
+      ],
+      "explanation": "According to the Gartner report on 2014, the average cost per hour for a large enterprise outage is $300,000.00 per hour.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-02",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "What is idempotency in IT automation?",
+      "choices": [
+        "the quality of software",
+        "the reusing of shell commands",
+        "the security level of software",
+        "the scripting of shell commands"
+      ],
+      "correct_answers": [
+        "the quality of software"
+      ],
+      "explanation": "Idempotency is a recurring theme in automation and it refers to the quality of software.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-03",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "A student is creating an Ansible playbook to practice management automation of a Cisco router. Which command should the student add to the playbook to find the interface names, assigned IP addresses, and status of interfaces on the router?",
+      "choices": [
+        "show running-config",
+        "show ip interface brief",
+        "show ip route",
+        "ip address"
+      ],
+      "correct_answers": [
+        "show ip interface brief"
+      ],
+      "explanation": "The show ip interface brief command can be used to verify the IP address configured on the router.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-04",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "When following the best practices and core principles of DevOps, how is failure considered?",
+      "choices": [
+        "Failure is normal.",
+        "Failure is simply \"repair work\".",
+        "Failure should only occur in Ops.",
+        "Failure should not influence software design methodology."
+      ],
+      "correct_answers": [
+        "Failure is normal."
+      ],
+      "explanation": "One of the many core principles and best practices of DevOps/SRE is that failure is normal.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-05",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "What is a canary deployment?",
+      "choices": [
+        "the switchover of selected users to a new release deployment",
+        "a production test using a chaos tool to inject random failures with a limited blast-radius",
+        "a server-by-server switchover to a new release deployment",
+        "the use of two identical servers with load balancers to redirect traffic for an entire server as needed"
+      ],
+      "correct_answers": [
+        "the switchover of selected users to a new release deployment"
+      ],
+      "explanation": "A canary deployment occurs when a project is deployed to a small fraction of users in order to reduce risk and improve the quality of feedback.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-06",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "What are two challenges of cloud computing technologies? (Choose two.)",
+      "choices": [
+        "utilizing generic host environments",
+        "maintaining access control",
+        "maintaining configurational consistency of platforms",
+        "managing costs",
+        "requesting additional resources"
+      ],
+      "correct_answers": [
+        "maintaining access control",
+        "managing costs"
+      ],
+      "explanation": "Cloud permissions can be challenging to manage; consumption of cloud resources can be hard to track and unexpected costs may occur.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-07",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "Which technology can run on bare metal or on large virtual machines to simulate Cisco networks and utilities?",
+      "choices": [
+        "Git",
+        "VIRL",
+        "Puppet",
+        "Ansible"
+      ],
+      "correct_answers": [
+        "VIRL"
+      ],
+      "explanation": "Cisco VIRL is an ideal tool for learning and simulating networks and it can run on bare metal or on large virtual machines.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-08",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "An analyst is using Ansible to perform remote management tasks on network devices. Which file type is in the Ansible file structure that describes the devices under management?",
+      "choices": [
+        "role folders and files",
+        "variable file",
+        "inventory file",
+        "playbook file"
+      ],
+      "correct_answers": [
+        "inventory file"
+      ],
+      "explanation": "Ansible uses an inventory file, also called hosts file, that contains device information used by Ansible playbooks.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-09",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "What is an error budget in the DevOps/SRE culture?",
+      "choices": [
+        "It is the planned percentage of a monetary contract that is given back to a customer when an SLO is not met.",
+        "It is a best-practice metric for availability, equivalent to only six minutes of unplanned offline time per year.",
+        "It is an internal-only metric for calculating the actual availability of a service.",
+        "It is a method for measuring allowable errors as a gate on release speed."
+      ],
+      "correct_answers": [
+        "It is a method for measuring allowable errors as a gate on release speed."
+      ],
+      "explanation": "Error budgets define the number of allowable errors per unit time and are also used as a gate on release speed.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-10",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "Which programming language is used by Chef to execute the recipes?",
+      "choices": [
+        "Bash",
+        "Python",
+        "Ruby",
+        "Javascript"
+      ],
+      "correct_answers": [
+        "Ruby"
+      ],
+      "explanation": "Within a repo, code is organized in \"cookbook\" folders, comprising \"recipes\" (actual linear configuration code, written in the extended Ruby syntax of Chef).",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-quiz-11",
+      "type": "mcq",
+      "module": 7,
+      "bank_type": "quiz",
+      "question": "A developer issues a Linux command python3 -m venv devenv. What is the developer trying to achieve?",
+      "choices": [
+        "to install the devnet tool sets in the Python 3 virtual environment named venv",
+        "to activate the Python 3 virtual environment named devenv",
+        "to enter the Python 3 virtual environment named venv using the devnet tool sets",
+        "to create a Python 3 virtual environment named devenv"
+      ],
+      "correct_answers": [
+        "to create a Python 3 virtual environment named devenv"
+      ],
+      "explanation": "The syntax for creating a Python 3 virtual environment in a Linux system is python3 -m venv virtual_environment.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/7-8-2-module-7-introduction-to-automating-developing-and-deploying-applications-with-cisco-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-01",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which underlying technology makes it possible for Cisco Umbrella to prevent a user from accessing a blocked site?",
+      "choices": [
+        "DNS",
+        "HTTP and HTTPS",
+        "Cisco Firewall",
+        "DHCP"
+      ],
+      "correct_answers": [
+        "DNS"
+      ],
+      "explanation": "Cisco Umbrella uses Domain Name Servers (DNS) to enforce security on the network.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-02",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which language is used by the NETCONF protocol to encode both the configuration data and protocol messages?",
+      "choices": [
+        "XML",
+        "YAML",
+        "HTML",
+        "JSON"
+      ],
+      "correct_answers": [
+        "XML"
+      ],
+      "explanation": "The NETCONF protocol uses an Extensible Markup Language (XML) based data encoding for both the configuration data and the protocol messages.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-03",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What are the three main capabilities provided by Cisco AMP? (Choose three.)",
+      "choices": [
+        "annihilation",
+        "detection",
+        "responses and automation",
+        "redirection",
+        "relaying",
+        "prevention"
+      ],
+      "correct_answers": [
+        "detection",
+        "responses and automation",
+        "prevention"
+      ],
+      "explanation": "AMP offers Prevention, Detection, and Responses and automation.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-04",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which three functions are provided by Cisco Finesse REST APIS? (Choose three.)",
+      "choices": [
+        "They can be used to integrate into existing applications to add contact center functionality.",
+        "They can be used to get termination call detail (TCD) reports.",
+        "They can be used to get the call history of an agent.",
+        "They can be used to build a fully functioning agent desktop.",
+        "They can be used to build custom OpenSocial gadgets.",
+        "They can be used to build a script to automate tasks."
+      ],
+      "correct_answers": [
+        "They can be used to integrate into existing applications to add contact center functionality.",
+        "They can be used to build a fully functioning agent desktop.",
+        "They can be used to build a script to automate tasks."
+      ],
+      "explanation": "The Finesse REST APIs can be used to build a fully functioning agent desktop, integrate into existing applications to add contact center functionality, and build a script to automate tasks.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-05",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which two benefits are provided by the Python-based WebEx Teams SDK? (Choose two.)",
+      "choices": [
+        "It integrates with the Webex Devices API.",
+        "It provides error reporting.",
+        "It provides access to more API calls within Webex Teams.",
+        "It manages requests with pagination.",
+        "It is better supported than the Webex Teams APIs."
+      ],
+      "correct_answers": [
+        "It provides error reporting.",
+        "It manages requests with pagination."
+      ],
+      "explanation": "The SDK automatically handles pagination, simplifies authentication, provides built-in error reporting, and manages file attachments.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-06",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Refer to the exhibit. Which data format is used to describe the list of interfaces?",
+      "choices": [
+        "JSON",
+        "YANG",
+        "XML",
+        "YAML"
+      ],
+      "correct_answers": [
+        "YANG"
+      ],
+      "explanation": "YANG models use a tree structure. Within that structure, the models are similar in format to XML and are constructed in modules.",
+      "exhibit_image_url": "https://itexamanswers.net/wp-content/uploads/2021/01/Q6exam8.jpg",
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-07",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which two statements describe the usage of Cisco Finesse JavaScript APIs? (Choose two.)",
+      "choices": [
+        "They can be used to get the call history of an agent.",
+        "They can be used to build custom gadgets to be placed into applications other than Finesse.",
+        "They can be used to embed existing web pages into a custom gadget.",
+        "They can be used to build a custom gadget for the agent state workflow.",
+        "They can be used to build a fully functioning agent desktop."
+      ],
+      "correct_answers": [
+        "They can be used to embed existing web pages into a custom gadget.",
+        "They can be used to build a custom gadget for the agent state workflow."
+      ],
+      "explanation": "The Finesse JavaScript APIs can be used to embed existing web pages into a custom gadget and build a custom gadget for the agent state workflow.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-08",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Why does the Meraki dashboard API return a 404 rather than a 403 code in response to a request with an invalid API key?",
+      "choices": [
+        "The 404 return code determines whether unauthorized users will try again.",
+        "The 403 return code would indicate that the client definitely has an invalid API key.",
+        "The 404 return code prevents the system from indicating the existence of resources to unauthorized users.",
+        "The 403 return code would indicate that there are no resources at that endpoint but the API key could be correct."
+      ],
+      "correct_answers": [
+        "The 404 return code prevents the system from indicating the existence of resources to unauthorized users."
+      ],
+      "explanation": "The Meraki Dashboard API returns a 404 (rather than a 403) for a missing or incorrect API key to prevent leaking the existence of resources to unauthorized users.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-09",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What does Cisco ISE do when it identifies a user or device accessing the network?",
+      "choices": [
+        "It logs the access attempt.",
+        "It automatically and securely places the device and user into the right part of the network.",
+        "It processes the originating IP address according to a whitelist.",
+        "It quarantines the device and user until an administrator releases the quarantine."
+      ],
+      "correct_answers": [
+        "It automatically and securely places the device and user into the right part of the network."
+      ],
+      "explanation": "Once identified, the connecting device and user are automatically and securely placed into the right part of the network.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-10",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "How are service profiles used by Cisco UCS Manager?",
+      "choices": [
+        "Cisco USC Manager uses an assigned service profile to each instance to define network policy.",
+        "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile.",
+        "Cisco UCS Manager saves service profiles to recover servers in case of data loss.",
+        "Cisco UCS Manager uses service profiles as templates to provision policies to multiple versions of the same server."
+      ],
+      "correct_answers": [
+        "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile."
+      ],
+      "explanation": "Cisco UCS Manager uses service profiles to assign an identity to a server. Each profile can have a unique address and identifier.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-11",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "Which function does the AXL interface provide for users?",
+      "choices": [
+        "provisions and manages objects in the Unified Communication Management Administration Console",
+        "looks up the top ten OWASP vulnerabilities and identifies which endpoints are vulnerable",
+        "updates network device configurations with a rollback mechanism",
+        "provisions Webex Devices and customizes each display"
+      ],
+      "correct_answers": [
+        "provisions and manages objects in the Unified Communication Management Administration Console"
+      ],
+      "explanation": "The Administrative XML Web Service (AXL) is an XML/SOAP based interface for inserting, retrieving, updating, and removing data from the Unified Communication configuration database.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-12",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What are three primary YANG sources in Cisco NSO? (Choose three.)",
+      "choices": [
+        "mapping model",
+        "data models from devices",
+        "NSO data model",
+        "configuration models",
+        "communication model",
+        "YANG service models"
+      ],
+      "correct_answers": [
+        "data models from devices",
+        "NSO data model",
+        "YANG service models"
+      ],
+      "explanation": "In Cisco NSO, there are three primary YANG sources: NSO data model, data models from devices, and YANG service models.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-13",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What are two tasks a network administrator can perform with Cisco UCS Director? (Choose two.)",
+      "choices": [
+        "Manage multiple Cisco UCS Manager appliances.",
+        "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.",
+        "Load-balance data traffic.",
+        "Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications.",
+        "Create a direct line of communication between Cisco and non-Cisco components."
+      ],
+      "correct_answers": [
+        "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.",
+        "Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications."
+      ],
+      "explanation": "An administrator can use UCS Director to create/clone/deploy service profiles and templates, and deploy/add capacity to converged infrastructures in a consistent, repeatable manner.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-14",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What are two actions taken by Firepower for traffic control? (Choose two.)",
+      "choices": [
+        "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs",
+        "controlling which websites are available to the users on the network",
+        "shutting down the network in the event of a DDOS attack",
+        "directing heavy data traffic to free servers",
+        "load balancing during high-traffic time periods"
+      ],
+      "correct_answers": [
+        "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs",
+        "controlling which websites are available to the users on the network"
+      ],
+      "explanation": "Firepower uses security intelligence data to filter traffic and controls which websites are available to users on the network.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-exam-15",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "exam",
+      "question": "What are two types of YANG models? (Choose two.)",
+      "choices": [
+        "native model",
+        "vendor model",
+        "private model",
+        "hybrid model",
+        "open model"
+      ],
+      "correct_answers": [
+        "native model",
+        "open model"
+      ],
+      "explanation": "There are two types of YANG models: Open models and Native models.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/devnet-associate-version-1-0-module-8-exam-answers.html",
+        "https://infraexam.com/devnet/devnet-associate-version-1-0-devnet-associate-module-8-exam-answers/",
+        "https://examscisco.com/devnet-associate-v1-0-module-8-exam-answers/",
+        "https://ccnareponses.com/8-10-examen-de-module-8-devnet-associate-reponses-francais/"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-01",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "What is a characteristic of the Yet Another Next Generation (YANG) data model?",
+      "choices": [
+        "It uses a MIBs structure.",
+        "It uses a tree structure.",
+        "It uses the JSON data format.",
+        "It uses a list structure."
+      ],
+      "correct_answers": [
+        "It uses a tree structure."
+      ],
+      "explanation": "YANG models use a tree structure. Within that structure, the models are similar in format to XML and are constructed in modules.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-02",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "Which two application-specific media types can be used for RESTCONF to identify a YANG construct? (Choose two.)",
+      "choices": [
+        "application/yang+json+xml",
+        "application/yang-data+xml",
+        "application/yang-data+json",
+        "application/yang+xml",
+        "application/yang+json"
+      ],
+      "correct_answers": [
+        "application/yang-data+xml",
+        "application/yang-data+json"
+      ],
+      "explanation": "According to RFC 8040, the media types are application/yang-data+xml and application/yang-data+json.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-03",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "What is the name of the Cisco SD-WAN dashboard?",
+      "choices": [
+        "vEdge",
+        "vManage",
+        "vBond",
+        "vSmart"
+      ],
+      "correct_answers": [
+        "vManage"
+      ],
+      "explanation": "The vManage dashboard provides a visual window into the network to configure and manage SD-WAN network devices.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-04",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "What is Cisco Finesse?",
+      "choices": [
+        "an easy-to-use collaboration solution that keeps individuals and teams connected anytime and anywhere",
+        "a network management and analytics platform for Cisco Digital Network Architecture",
+        "a browser-based contact center agent and supervisor desktop",
+        "an application to manage phone users, phones, directory numbers, and to connect and manage calls to the desired destinations"
+      ],
+      "correct_answers": [
+        "a browser-based contact center agent and supervisor desktop"
+      ],
+      "explanation": "Cisco Finesse is a contact center agent and supervisor desktop that is browser-based and comes with many APIs.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-05",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "Which Software as a Service (SaaS) management platform offers API keys for remote or service access?",
+      "choices": [
+        "YANG Explorer",
+        "Management Information Tree",
+        "Cisco Intersight",
+        "APIC"
+      ],
+      "correct_answers": [
+        "Cisco Intersight"
+      ],
+      "explanation": "Cisco Intersight is a SaaS systems management platform; developers can create API keys for remote access through SDKs or other programming environments.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-06",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "Which Cisco SDK is primarily a call widget that is embedded in an iframe within another web page for Cisco UCS application?",
+      "choices": [
+        "Jabber Guest SDK for Web",
+        "Jabber Guest SDK for iOS",
+        "Jabber Guest SDK for Android",
+        "Jabber Web SDK"
+      ],
+      "correct_answers": [
+        "Jabber Guest SDK for Web"
+      ],
+      "explanation": "The Cisco Jabber Guest SDK for Web is primarily a call widget that is embedded in an iframe within another web page.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-07",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "A developer is using a REST API to develop an application to communicate with a Webex Teams server. What is the default maximum number of items that can be returned by the Webex Teams API prior to using pagination?",
+      "choices": [
+        "100",
+        "150",
+        "25",
+        "50"
+      ],
+      "correct_answers": [
+        "100"
+      ],
+      "explanation": "The Webex Teams API returns up to 100 items per page by default.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-08",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "Refer to the exhibit. A network administrator is developing an application that communicates with Cisco AMP using an AMP API. A response from an AMP service shows the API rate limits information. What is the unit of value indicated under the item x-ratelimit-limit?",
+      "choices": [
+        "responses",
+        "requests",
+        "bytes",
+        "seconds"
+      ],
+      "correct_answers": [
+        "requests"
+      ],
+      "explanation": "X-Rate-Limit-Limit: Number of total allowed requests in the current period.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-09",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "What is the default TCP port assigned for NETCONF over SSH?",
+      "choices": [
+        "22",
+        "1080",
+        "443",
+        "830"
+      ],
+      "correct_answers": [
+        "830"
+      ],
+      "explanation": "NETCONF uses SSH as a transport. The default NETCONF SSH port is 830.",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m8-quiz-10",
+      "type": "mcq",
+      "module": 8,
+      "bank_type": "quiz",
+      "question": "Where can a corporate developer access the API Explorer with the Firepower Threat Defense API?",
+      "choices": [
+        "the URL address of the device itself",
+        "the domain name of the company",
+        "the local computer of the developer",
+        "on the DevNet web site"
+      ],
+      "correct_answers": [
+        "the URL address of the device itself"
+      ],
+      "explanation": "The Firepower Threat Defense API Explorer is accessed via the URL address of the device itself (Firewall Device Manager / API Explorer on the device).",
+      "exhibit_image_url": null,
+      "sources": [
+        "https://itexamanswers.net/8-8-4-module-8-cisco-platforms-and-development-quiz-answers.html",
+        "https://itexamanswers.net/exam-item/where-can-a-corporate-developer-access-the-api-explorer-with-the-firepower-threat-defense-api",
+        "https://www.brainscape.com/flashcards/module-8-18469378/packs/22658848"
+      ],
+      "answer_unverified": false,
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-001",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "3 major shifts in automation",
+      "definition": "Walk - get visibility and insight into your network; Run - Activate policy and internet across different network domains; Fly - Proactively manage applications, users, devices with DevOps workflow",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-002",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Walk",
+      "definition": "Using automation tools, you can gather information about your network configuration. This scenario offers answers to the most basic and also most common question you can ask, \"What changed?\"",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-003",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Run",
+      "definition": "With these \"Run stage\" automation scenarios you can safely enable users to provision their own network updates. You can also automate on-boarding workflows, manage day-to-day network configurations, and run through Day 0, Day 1, and daily (Day n) scenarios",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-004",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Fly",
+      "definition": "Here you can get ahead of needs by monitoring and proactively managing your users and devices plus gaining insights with telemetry data.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-005",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Why need automation",
+      "definition": "Speed and agility enable the business to explore, experiment with, and exploit opportunities ahead of competition. Scaling operations enables the business to capture market share efficiently and scaling capacity to match demand. Developers need to accelerate every phase of software building: coding and iterating, testing, and staging.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-006",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "disadvantages of manual operation",
+      "definition": "Manual processes — such as waiting for infrastructure availability, manual app configuration and deployment, and production system maintenance — work against speed and scale. Manual processes are always subject to human error, and documentation meant for humans is often incomplete and ambiguous, hard to test, and quickly outdated.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-007",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "why need automaion- finanical cost",
+      "definition": "An often-quoted Gartner statistic (albeit from 2014) places the average cost of an IT outage at upwards of $5,600 per minute, or over $300,000 USD per hour. The cost of a security breach can be even greater.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-008",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "downside of dependencies",
+      "definition": "Components need to be flexibly configurable and \"unopinionated\". Component developers may abandon support for obsolete features. Dependency-ridden application setups tend to get locked into fragile and increasingly insecure deployment stacks, effectively becoming monoliths.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-009",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Infrastructure automation benefits",
+      "definition": "Speed; Repeatability; The ability to work at scale, with reduced risk",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-010",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "What is self-service",
+      "definition": "Automated self-service frameworks enable users to requisition infrastructure on demand, including: Standard infrastructure components such as database instances and VPN endpoints; Development and testing platforms; Hardened web servers and other application instances; Analytics platforms such as Apache Hadoop, Elastic Stack, InfluxData, and Splunk.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-011",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "What is scale on demand",
+      "definition": "Apps and platforms need to be able to scale up and down in response to traffic and workload requirements and to use heterogeneous capacity; for example, burst-scaling from private to public cloud, and traffic shaping appropriately.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-012",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Observability",
+      "definition": "An observable system enables users to infer the internal state of a complex system from its outputs. Observability (sometimes abbreviated as o11y) can be achieved through platform and application monitoring and through proactive production testing for failure modes and performance issues.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-013",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "Chaos Engineering",
+      "definition": "This philosophy is based on the assertion that failure is normal: as applications scale, some parts are always failing and that apps and platforms should be engineered to: Minimize the \"blast radius\" of issues; Self-heal; Monitor events",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-014",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "automation mitigation - minimize the blast radius of issues",
+      "definition": "recognize problems quickly and route traffic to alternative capacity, ensuring that end users aren't severely impacted and that on-call operations personnel aren't unnecessarily paged.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m7-fc-infra-015",
+      "type": "flashcard",
+      "module": 7,
+      "bank_type": "flashcard",
+      "term": "automation mitigation - self-heal",
+      "definition": "allocate resources according to policy and automatically redeploy failed components as needed to return the application to a healthy state in current conditions.",
+      "sources": [
+        "https://quizlet.com/518859896/cisco-devnet-assoc-infrastructure-and-automation-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-001",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "What is a data model",
+      "definition": "In general, a data model is a structured method to describe any object, whether it's a person, a car, a building, or some other object. For example, the personal data on a passport or driver's license can describe a person in an individual way, so those are both \"data models\".",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-002",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "what is a data model in networking",
+      "definition": "In networking, \"Data models\" are a programmatic and standards-based way of writing configurations for any network device. It can replace manual configuration, implementing YANG as the de-facto data modeling language.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-003",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "What is Edge Computing",
+      "definition": "refers to providing computing capability as close to the actual data as possible.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-004",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco IOS",
+      "definition": "used for network infrastructure, with different specialty flavors",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-005",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco IOS XR",
+      "definition": "focuses on service provider use cases",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-006",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco IOS XE",
+      "definition": "Separates the data plane and control plane for network creation and maintenance",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-007",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco NX-OS",
+      "definition": "works across both physical and virtual data center deployments",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-008",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "What SDK does APIC use?",
+      "definition": "Cobra SDK",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-009",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Webex Teams Android SDK",
+      "definition": "Use the Webex Teams Android SDK to customize your app and to access powerful Webex Teams collaboration features without making your users leave the mobile app.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-010",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Jabber Web SDK",
+      "definition": "This SDK is used for developing web applications on Cisco Unified Communications, including voice and video, IM and Presence, voice messaging, and conferencing.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-011",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Jabber Guest Web SDK",
+      "definition": "The Cisco Jabber Guest SDK for Web is primarily a call widget that is embedded in an iframe within another web page.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-012",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Jabber Guest iOS SDK",
+      "definition": "The Jabber Guest SDK for iOS coordinates and simplifies the implementation, use, and quality of two-way video calls from within an application.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-013",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Jabber Guest Android SDK",
+      "definition": "With the Jabber Guest Android SDK, you can enable your application to instantiate a two-way video call via the public Internet between the user's device and a video endpoint registered with a CUCM inside an enterprise firewall. The SDK handles all aspects of establishing and maintaining the two-way video call within your application",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-014",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco DNA Center Multivendor SDK",
+      "definition": "For partners and customers who have a mix of Cisco and non-Cisco devices in their network, this SDK builds support directly in Cisco DNA Center.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-015",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco UCS Python SDK",
+      "definition": "The Cisco UCS Python SDK is a Python module used to automate all aspects of Cisco UCS management, including server, network, storage, and hypervisor management.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-016",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco APIC Python SDK (Cobra SDK)",
+      "definition": "The Cobra SDK is a native Python language binding for the APIC REST API to interact with the APIC controller. The installation of Cobra requires installing two .egg files: acicobra.egg and acimodel.egg.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-017",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco IMC python SDK",
+      "definition": "Cisco IMC Python SDK is a Python module supporting the automation of all Cisco IMC management servers (C-Series and E-Series).",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-018",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco Instant Connect SDK",
+      "definition": "Cisco Instant Connect has an Android, Windows, and Apple iOS Software Development Kit, providing tools for partners to embed Push-To-Talk in mobile or desktop applications.",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-019",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "Cisco Webex Teams Python SDK",
+      "definition": "You can work with the Webex Teams APIs using a familiar language, in this case Python, with the webexteamssdk available on GitHub at https://github.com/CiscoDevNet/webexteamssdk. This SDK handles pagination for you automatically, simplifies authentication, provides built-in error reporting, and manages file attachments. Here is a simple Python example to retrieve a user's account information:",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    },
+    {
+      "id": "m8-fc-plat-020",
+      "type": "flashcard",
+      "module": 8,
+      "bank_type": "flashcard",
+      "term": "how to set auth token for webexteams call",
+      "definition": "The SDK needs a Webex Teams access token to make API calls. You can either set it with a WEBEX_TEAMS_ACCESS_TOKEN environment variable or by putting the access_token argument into the function call",
+      "sources": [
+        "https://quizlet.com/519488282/cisco-devnet-assoc-cisco-platforms-and-development-flash-cards/"
+      ],
+      "language": "en"
+    }
+  ]
+}

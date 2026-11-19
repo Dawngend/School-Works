@@ -1,12 +1,13 @@
 """On the VM: python import_replace_decks_vm.py <payload.json> [apply].
 
-Payload: {"decks": [{name, subject, modules_included, cards}]}.
-A deck whose name already exists is REPLACED (its cards are deleted first). Dry run is the default and rolls back.
-`andy deploy` backs up reviewer.db before the apply step.
+Payload: {"notes": [{title, subject, module_ids, content}], "decks": [{name, subject, modules_included, cards}]}.
+A note or deck whose name already exists is REPLACED (a deck's cards are deleted first). Dry run is the default
+and rolls back. `andy deploy` backs up reviewer.db before the apply step.
 """
 import json
 import sqlite3
 import sys
+import time
 
 DB = "/home/andreipamesa20/School-Works/All In One Reviewer/Database/reviewer.db"
 
@@ -16,10 +17,20 @@ def main():
         raise SystemExit("Usage: python import_replace_decks_vm.py <payload.json> [apply]")
     data = json.load(open(sys.argv[1], encoding="utf-8"))
     apply = len(sys.argv) == 3
+    now = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
     con = sqlite3.connect(DB, timeout=30)
     try:
         con.execute("begin immediate")
-        for deck in data["decks"]:
+        for note in data.get("notes", []):
+            removed = con.execute("delete from notes where title = ?", (note["title"],)).rowcount
+            if removed:
+                print("DELETE note", note["title"], removed)
+            con.execute(
+                "insert into notes (title, subject, module_ids, content, created_at, updated_at) values (?,?,?,?,?,?)",
+                (note["title"], note["subject"], json.dumps(note["module_ids"]), json.dumps(note["content"], ensure_ascii=False), now, now),
+            )
+            print("INSERT note", note["title"], len(note["content"]["sections"]), "sections")
+        for deck in data.get("decks", []):
             for (deck_id,) in con.execute("select id from decks where name = ?", (deck["name"],)).fetchall():
                 removed = con.execute("delete from cards where deck_id = ?", (deck_id,)).rowcount
                 con.execute("delete from decks where id = ?", (deck_id,))

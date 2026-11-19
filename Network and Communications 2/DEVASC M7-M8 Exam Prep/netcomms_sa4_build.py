@@ -21,6 +21,7 @@ from notes_to_andyhub_v2 import convert_v2
 from andyhub_api.schemas import NoteContent
 from netcomms_sa4_notes import sa4
 from netcomms_sa4_cards import CARDS
+from netcomms_sa4_bankcards import bank_cards
 
 TITLE = "NetComms 2 Summative 4 Reviewer: Modules 7 and 8"
 SUBTITLE = ("CS0016 Network and Communications 2 (DevNet Associate). Study notes for Module 7 (Infrastructure and "
@@ -30,14 +31,23 @@ SUBJECT = "Network and Communications 2"
 SOURCES = ["DEVASC_Module_7", "DEVASC_Module_8"]
 
 
+def deck_cards():
+    """The 52 literal bank questions first (they rank highest), then 28 slide-based cards to make 80."""
+    bank = bank_cards()
+    seen = {q for q, _, _ in bank}
+    extra = [c for c in CARDS[::3] + CARDS[1:2] if c[0] not in seen][:80 - len(bank)]
+    return bank + extra
+
+
 def check_cards():
     seen = set()
-    for q, correct, wrong in CARDS:
+    cards = deck_cards()
+    for q, correct, wrong in cards:
         assert len(wrong) == 3, q
         assert len({correct, *wrong}) == 4, ("duplicate option", q)
         assert q not in seen, ("duplicate question", q)
         seen.add(q)
-    return len(CARDS)
+    return len(cards)
 
 
 def build_docx():
@@ -58,7 +68,7 @@ def build_note():
 def build_deck():
     rnd = random.Random(11)
     cards = []
-    for question, correct, wrong in CARDS:
+    for question, correct, wrong in deck_cards():
         options = [correct] + wrong
         rnd.shuffle(options)
         cards.append({"type": "multiple_choice", "question": question, "correct_answer": correct,

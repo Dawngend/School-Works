@@ -1,12 +1,16 @@
 """NetComms 2 (CS0016) Summative 4 reviewer: DEVASC Module 7 and Module 8. Built from the two slide PDFs."""
 
 
+from netcomms_sa4_bank import bank_section
+
 def sa4(n):
     n.h1("What Is Inside")
     n.p("This reviewer covers the fourth summative assessment: **Module 7 Infrastructure and Automation** and "
         "**Module 8 Cisco Platforms and Development**. Your prof uses **multiple choice only**, so every section "
         "below is written to help you pick the right choice: definitions, counts, which-tool-does-what, and the "
-        "code and command lines the slides show. The blue boxes are memory aids I made; they are not from the slides.")
+        "code and command lines the slides show. The blue boxes are memory aids I made; they are not from the slides. "
+        "**Read the Question Bank part first**: it holds the literal exam-style questions and answers Dawn found, and "
+        "it ranks above everything else in this document. Where the slides and the bank disagree, trust the bank.")
     n.table(
         ["Module", "Topics"],
         [
@@ -46,6 +50,8 @@ def sa4(n):
         ],
         [3.6, 2.9],
     )
+    n.pagebreak()
+    bank_section(n)
     n.pagebreak()
 
     # ------------------------------------------------------------------ MODULE 7
@@ -781,6 +787,96 @@ def sa4(n):
             ["Webex devices", "Board, Room, Desk, Touch 10; xAPI over SSH/HTTP/RS-232; UI Extensions; macros"],
             ["Security", "AMP (prevent, detect, respond); FMC manages FTD; ISE nodes (Admin, Policy Service, Monitoring, pxGrid); Threat Grid glovebox; Umbrella DNS with 4 APIs"],
             ["FMC token", "30 minutes; `X-auth-access-token`"],
+        ],
+        [2.0, 4.5],
+    )
+
+    n.pagebreak()
+    n.h1("Question Bank Extras")
+    n.p("The same question bank, boiled down to the facts it asks, grouped by what the question is about. Use this "
+        "part to review after you have read the literal items.")
+    n.h2("Module 7 Extras")
+    n.table(
+        ["Question Style", "Answer"],
+        [
+            ["Most common cause of IT outages", "An engineer **misconfiguring** a device or network with **manual changes** (human error)"],
+            ["Average outage cost for the largest enterprises", "**$300,000 per hour** (the source quotes Gartner: over $5,600 per minute)"],
+            ["Developers vs operations, historically", "Developers **create** applications; operations **verify they work** for users and the business"],
+            ["What is an unopinionated component", "One that does **not show extra preference for specific companion components or architectures** unless they are necessary"],
+            ["Platform abstraction (containers)", "A **containerized app can run on a generically specified host environment**"],
+            ["Two cloud challenges", "**Maintaining access control** and **managing costs**"],
+            ["How is an error budget calculated", "The difference between the **SLO and 100 percent availability**"],
+            ["What is an error budget for", "Measures **allowable errors**, a **gate on release speed**"],
+            ["Purpose of an SLI", "A **benchmark metric** used to determine and describe **SLOs**"],
+            ["How does DevOps treat failure", "**Failure is normal**; chaos engineering: minimize the **blast radius**, **self-heal**, monitor events"],
+            ["Default shell on macOS and Linux", "**Bash**"],
+            ["Automation type dangerous when the starting state is not fully known", "**Procedural** (imperative scripting)"],
+            ["What is an imperative procedure", "An **ordered sequence of commands** used to reach a specific end state"],
+            ["Declarative static model", "**Examines present circumstances and brings real infrastructure into alignment** with the desired state"],
+            ["Idempotency is the quality of what", "**Software** (the quality of software)"],
+            ["Ansible file with tasks in top-down order", "**.yml** (YAML)"],
+            ["Ansible file that describes the managed devices", "The **inventory file**"],
+            ["Ansible ping fails (two causes)", "The **destination host IP address is wrong** or the **SSH service did not start** on the host"],
+            ["Playbook command to see interface names, IPs, and status on a Cisco router", "**show ip interface brief**"],
+            ["Language Chef uses for recipes", "**Ruby**"],
+            ["pyATS component that bundles and runs jobs", "**Easypy**"],
+            ["Command to compare a new .virl backup with the old one", "**diff** (detects configuration drift)"],
+            ["Tech that runs on bare metal or large VMs to simulate Cisco networks", "**VIRL**"],
+            ["Canary deployment", "The **switchover of selected users** to a new release"],
+            ["Create a Python virtual environment", "**python3 -m venv /path/to/new/virtual/environment** (for example `python3 -m venv devenv` creates a Python 3 venv named devenv)"],
+            ["Cannot reach https://192.168.56.101 for the CSR1000v", "Run **show ip interface brief** in the CSR1000v VM to check its IP address"],
+        ],
+        [2.6, 3.9],
+    )
+    n.memory("Error budget = **100% minus the SLO**. SLO = the target, SLI = the number you measure, budget = the room left to fail.")
+    n.h2("Module 8 Extras")
+    n.table(
+        ["Question Style", "Answer"],
+        [
+            ["Technology that lets Umbrella block a site", "**DNS**"],
+            ["Language NETCONF uses for data and messages", "**XML**"],
+            ["Default TCP port for NETCONF over SSH", "**830**"],
+            ["Two RESTCONF media types for YANG constructs", "**application/yang-data+xml** and **application/yang-data+json**"],
+            ["Data format that describes a list of interfaces in the exhibit", "**YANG**"],
+            ["A characteristic of YANG", "It uses a **tree structure**"],
+            ["Two types of YANG models", "**Native** and **open**"],
+            ["Three primary NSO YANG sources", "**Data models from devices**, the **NSO data model**, and **YANG service models**"],
+            ["Three main capabilities of AMP", "**Detection, responses and automation, prevention**"],
+            ["AMP API rate limit header X-Rate-Limit-Limit", "The number of total allowed **requests** in the current period"],
+            ["What Finesse REST APIs do (three)", "**Integrate** contact center functions into existing apps, **build a fully functioning agent desktop**, **build scripts to automate tasks**"],
+            ["What Finesse JavaScript APIs do (two)", "**Embed existing web pages into a custom gadget** and **build a custom gadget** for the agent state workflow"],
+            ["Cisco Finesse is", "A **browser-based contact center agent and supervisor desktop**"],
+            ["Two benefits of the Webex Teams Python SDK", "**Error reporting** and **pagination** handling (also simpler authentication and file attachments)"],
+            ["Default maximum items the Webex Teams API returns before pagination", "**100**"],
+            ["Why Meraki returns 404 instead of 403 for a bad API key", "So the system does **not reveal that resources exist** to unauthorized users"],
+            ["What ISE does when it identifies a user or device", "**Automatically and securely places** the device and user into the **right part of the network**"],
+            ["UCS service profiles", "Assign a **unique identity** to the server associated with each profile"],
+            ["AXL function for users", "**Provisions and manages objects** in the Unified Communication management administration (configuration database)"],
+            ["Two UCS Director tasks", "**Deploy and add capacity to converged infrastructure** repeatably; **create, clone, and deploy service profiles and templates**"],
+            ["Two Firepower traffic control actions", "Use **security intelligence data** (IPs, address blocks, domains, URLs) to filter traffic; **control which websites** users can reach"],
+            ["SD-WAN dashboard name", "**vManage**"],
+            ["SaaS platform offering API keys for remote or service access", "**Cisco Intersight**"],
+            ["SDK that is a call widget embedded in an iframe on a web page", "**Jabber Guest SDK for Web**"],
+            ["Where to open the FTD API Explorer", "At the **URL address of the device itself**"],
+            ["SDK the APIC uses", "**Cobra SDK**"],
+        ],
+        [2.6, 3.9],
+    )
+    n.h2("Platform One-Liners")
+    n.table(
+        ["Platform", "One Line"],
+        [
+            ["**Cisco IOS**", "Network infrastructure OS with different specialty flavors"],
+            ["**Cisco IOS XR**", "Focuses on **service provider** use cases"],
+            ["**Cisco IOS XE**", "**Separates the data plane and control plane**; next-generation programmable platform"],
+            ["**Cisco NX-OS**", "Works across **physical and virtual data center** deployments"],
+            ["**Edge computing**", "Computing capability as **close to the actual data** as possible"],
+            ["**Data model (networking)**", "A programmatic, standards-based way of writing configurations for any network device"],
+            ["**Jabber Web SDK**", "For web applications on Cisco Unified Communications (voice, video, IM, presence)"],
+            ["**DNA Center Multivendor SDK**", "Adds support for a **mix of Cisco and non-Cisco** devices"],
+            ["**UCS Python SDK**", "Python module that automates all aspects of **UCS management**"],
+            ["**IMC Python SDK**", "Automates **Cisco IMC** management servers (C-Series and E-Series)"],
+            ["**Webex Teams Python SDK**", "Uses the **webexteamssdk** package; token set with the **WEBEX_TEAMS_ACCESS_TOKEN** environment variable or passed directly"],
         ],
         [2.0, 4.5],
     )
