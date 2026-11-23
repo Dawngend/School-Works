@@ -16,7 +16,7 @@ fig_scenario2.png                 scenario 2, 20 percent moved
 fig_scenario3.png                 scenario 3, 50 percent moved
 
 How to run
-1. Open threshold_bunching_simulation.m in MATLAB (R2019b or later, no toolbox needed).
+1. Open threshold_bunching_simulation.m in MATLAB (R2020a or later, no toolbox needed).
 2. Press Run. It takes about 30 seconds.
 3. The results table prints in the Command Window and four figures open.
    The same figures are saved as the fig_*.png files in the current folder.
