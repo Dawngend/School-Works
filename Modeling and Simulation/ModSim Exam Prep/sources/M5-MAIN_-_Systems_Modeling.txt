@@ -1,0 +1,542 @@
+--- page 1 ---
+Modeling and Simulation
+--- page 2 ---
+MODULE 5
+SYSTEMS MODELING
+--- page 3 ---
+SUBTOPIC 1 
+CONCEPTS ON
+SYSTEMS MODELING
+--- page 4 ---
+•
+Demonstrate
+understanding
+of
+the
+concepts
+on
+system model types.
+•
+Discuss various types and methodologies of system
+models.
+•
+Identify tools used in creating system models.
+•
+Discuss operations research methods.
+--- page 5 ---
+Fishwick’s perspective on model types
+1. Declarative Models 
+•
+Connote state-event focused models.
+•
+Describe a system using directionally connected components with mathematical relationships 
+of equations and the variables that relate them.
+2. Functional Models 
+•
+Describe a system using directionally connected components with mathematical relationships 
+of equations and the variables that relate them.
+3. Constraint Models
+•
+Similar to functional models except that the directed nature of the connected components is
+less important than the physics-based relationships among system components and the
+balancing of those physical properties.
+4. Spatial Models
+•
+Multielement models where either the spaces in the system are the elements or the entities
+within the spaces are the elements.
+--- page 6 ---
+
+--- page 7 ---
+Figure A
+Figure B
+--- page 8 ---
+
+--- page 9 ---
+https://slideplayer.com/slide/4950392/
+--- page 10 ---
+• Often used only for communicating the overall functionality of a
+system.
+• Typically very informal in terms of detail and accuracy.
+• The focus is on quickly communicating the main qualities and
+capabilities of the target system.
+• Maybe in one or two paragraphs or figures, a conceptual model
+should convey what is the system, what does the system do, and
+what if anything is unique about the target system.
+• The simplest form of conceptual model is a picture of the system.
+--- page 11 ---
+Example: Easy Pass (EP) toll collection system
+Textual Representation
+Graphic Representation
+Graphic Representation
+--- page 12 ---
+•
+Multimodels or Hybrid models play an important role in most real-
+world systems.
+•
+It is composed of several models carefully connected in a network or
+graph where the models could easily be of more than one type.
+•
+Such
+a
+hybrid
+model
+can
+employ
+a
+number
+of
+abstraction
+perspectives and can address a wider variety of questions.
+•
+Additionally, large complex systems may have innate phases where
+different types of models are needed to define the activity occurring
+at those different stages.
+--- page 13 ---
+Example: Easy Pass (EP) toll collection system
+NOTE:
+Concept maps are very simple and
+informal directed graphs, where:
+•
+The nodes of the graphs capture the
+concepts or elements of the system.
+•
+Directed
+arcs
+(arrows)
+imply
+interactions
+between
+connected
+elements.
+•
+Labels on the directed arcs define
+the nature of the interaction
+•
+The element nodes are shown as
+labeled rectangles or circles.
+--- page 14 ---
+Tools for creating models
+1. Formal Modeling
+
+Methodologies that use precise rules about modeling and simulating are called
+formalisms.
+
+A model created using a formalism is a formal model.
+
+This
+confers
+the
+connotation
+that
+the
+model
+is
+unambiguous
+and
+mathematically manageable often allowing automated analyses.
+
+The advantage of formal models is that they provide a rigorous mathematical
+approach
+for
+representing
+dynamic
+systems
+that
+allow
+unambiguous
+understanding of characteristic system behavior and thorough analyses of
+system capabilities, properties, limits, and constraints.
+
+The disadvantage of formal models is that they are complex and somewhat
+tedious to design and implement.
+--- page 15 ---
+Tools for creating models
+2. Semiformal Modeling
+Semiformal representation methods are a trade-off that allows ease of use with
+less unambiguity, but with still a degree of analytic capability.
+One such representation method is the UML (A standardized, semiformal,
+object-oriented, graphic notation that is widely used to model system and
+software structure and behavior.)
+Tools used:
+Use Cases
+Activity Diagrams
+Class Diagrams
+Sequence Diagrams
+Statecharts
+--- page 16 ---
+Forms of Analysis
+1. Verification
+• It is to ensure that the requirements of the conceptual model have been properly
+translated in the executable system model and that the model is able to be run
+with no unforeseen errors and with reliable results.
+• This can be done with automated debugging tools, manual code reviews, and
+model stress tests.
+Automated debugging tools provide syntax and some logic support in finding
+and fixing bugs, but finding semantic errors can be difficult.
+Manual code reviews are performed by sitting around a table and explaining
+the code to peers that can critique and find problems.
+Model stress tests are performed by running or executing the model with
+inputs set to their maximum and minimum boundary conditions to ensure
+that the model performs as expected.
+--- page 17 ---
+Forms of Analysis
+2. Validation
+• It is mainly concerned with making sure that the robust model provides useful
+results by being a close enough approximation to the target system.
+• This form of analysis is done by performing statistical tests on the difference
+between the output of the model and the output of the target system.
+• If the target system does not exist, a similar system may be used or an expert
+knowledgeable about the system or similar systems can examine the model
+output and make a decision as to the models’ validity based on his or her past
+experiences.
+• This type of subjective validation is called face validation. After validation, the
+model is ready to answer the question for which it was created to answer.
+--- page 18 ---
+• OR is the discipline of using mathematical models applied to complex systems in
+order to optimize various factors that influence the performance of the system and
+to make business decisions that maximize profit or minimize cost.
+• Steps involved in finding the maxima or minima needed for the optimal solution are:
+Formulate the problem
+Develop a mathematical model to represent the system
+Search for a solution to the problem by solving the mathematical model
+• Linear programming is a deterministic technique often used to find optimal
+solutions to OR problems by solving linear equations of system variables including
+objective functions that describe what must be maximized or minimized for the
+system subject to several inequality constraints.
+• OR methods can also use stochastic methods such as Markov chains and queuing
+theory.
+--- page 19 ---
+Check Canvas for instructions
+Formative Assessment 6
+--- page 20 ---
+Check Canvas for instructions
+Summative Assessment 5
+--- page 21 ---
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons
+--- page 22 ---
+Simulation
+--- page 23 ---
+Subtopic 2
+Introduction to MATLAB Simulink
+FEU ALABANG 
+FEU DILIMAN 
+FEU TECH
+--- page 24 ---
+•
+Know what is Simulink and its purpose
+--- page 25 ---
+What  is Simulink
+Simulink provides a graphical editor, customizable block libraries, and solvers for modeling and 
+simulating dynamic systems. It is integrated with MATLAB®, enabling you to incorporate MATLAB 
+algorithms into models and export simulation results to MATLAB for further analysis.
+Simulink is for Simulation
+Design and simulate your system before moving to hardware
+Explore a wide design space and test your systems early with multi domain modeling and simulation.
+Quickly evaluate multiple design ideas in one multi domain simulation environment
+Simulate large-scale system models with reusable components and libraries including specialized, 
+third-party modeling tools
+Deploy simulation models for desktop, real-time, and Hardware-in-the-Loop testing
+Run large simulations on multi core desktops, clusters, and the cloud
+--- page 26 ---
+Wireless Communications 
+•-111: ... .,-............... 
+II f • 
+_!:,_ 
+• 
+Ill 0 
+Autonomous Systems and 
+Robotics 
+FEU ALABANG 
+FEU DILIMAN 
+FEU TECH 
+Simulink is for Every Proje,ct 
+--E3 
+El 
+Power Electronics 
+-----
+.---. . 
+: .I : 
+.... 
+·-
+-■J 
+--
+---1 
+'-----="",=-
+,....., -e
+
+---=--=----,m 
+Advanced Driver Assistance 
+Systems 
+--
+Control Systems 
+• 
+Digital Twins 
+ml 
+)-\. 
+.-.. ..... ,.,... ... 
+El-u?: [ ·0•0-r••J· . 
+-.a 
+ 
+-
+Signall Processing 
+RHit8 
+- 
+lmg 
+ 
+1..anaDaloo1m 
+- * I
+Vel'i:f!e O,,ll,dfon (YOLOv2) 
+Hlgllllg?I. 
+V..hlcln 
+& Lang,; 
+a..1ee1 
+orcLR,U@S 
+Artificial Intelligence
+--- page 27 ---
+Simulink Start Page 
+[:'] Open __ _ 
+Recent 
+2 /MATLAB Drive/scope1 six 
+Learn 
+G Simulink Onramp 
+More __ _ 
+FEU ALABANG 
+FEU DILIMAN 
+FEU TECH 
+□
+X
+New 
+Examples 
+Learn 
+ls_e_a_rc_h _________________________________________________ AII m 
+> My Templates
+Learn More 
+V Simlllinl<
+I 
+
+Blank Model 
+Blank Subsystem 
+Blank Library 
+Blank Project 
+
+Folder to Project 
+Code Generation 
+Dig ital Filter 
+Feedback Controller 
+Show more 
+> Audio Toolbox
+> communications Toolbox
+> DSP System Toolbox
+> Simscape
+> Simulinl< support Package for Parrot Minidrones
+> Simulink Support Package for Raspberry Pi Hardware
+> Stateilow
+--- page 28 ---
+f 
+(3) Messc.-ngc.-r I Fc1 
+X 
+"r 
+important link an( 
+X 
+"' 
+Enbox (1,418) 
+ror 
+X 
+.. > MATLAB 
+X 
+-J, 
+S1muhnk - S1mulat 
+X 
+Ho..v to cr-eate a ft 
+X 
++
+-..._, 
+-
+151 
+X 
+ 
+➔ 
+C 
+ill 
+matlab.mathworks.com 
+ȡ *
+□ · :
+,
+: 
+ 
+ 
+DE::BUG 
+MODELING 
+FORMAT 
+APPS 
+-@ 
+0 C'.:'! Open 
+New  Save 
+FILE 
+(£) 
+a:; 
+ 
+ 
+= 
+§I 
+liwl 
+D 
+Ready 
+ll!lliM 
+11110 
+Library 
+BrOV11Se .. 
+Log 
+i=Jnals 
+Add 
+PREPARE 
+I Enter search term I J_ Ȣ 
+Simulink 
+◄L
+Simul1nk 
+Commonly Used Blocks 
+Continuous 
+►
+Dashboar-d 
+Dis.continuities 
+Discrete 
+Logic :and Bit Operations 
+Lookup Tables 
+Math Operations 
+Matrix Operations 
+Messages & Events 
+Model Verification 
+Model-Wide Utilities 
+Ports & Subsystems 
+Signal Attr-ibut.es 
+► 
+n 
+Signal 
+Table 
+ 
+Stop Time 
+.LO 0 
+Nvrr -i 
+.:$ F 'i. t Restart 
+ 
+Additional Math 
+Con-.monly 
+& Discrete 
+Used Blocks 
+l@tl 
+
+ 
+Dashboard 
+Discontinuities 
+ -
+1y-1
+Logic aind Bit 
+Lookup 
+Step 
+Back._. 
+SIMULATE 
+	 
+Continuous 
+ 
+Discrete 
+ 
+X 
+Mat:h 
+100°/4 
+► 
+Run 
+□ 
+X 
+Stq 
+Fon.vad - l 
+ 
+Data 
+lnspecto.-
+Logic 
+Analyzer 
+Bird's-Eye 
+Scope 
+REVIE\N RESULTS 
+CD 
+VariableStepAuto 
+gl 
+2O=-08-24T1847_ .... csv 
+.,,.._ 
+€1 
+LM5-MAIIN-Plotti .... pptx 
+.,,.._ 
+,€1 
+LM5-MAIN-Plotting.pdf 
+.,,.._ 
+€1 
+LM3-MAIN-Selec .... pptx 
+.,,.._ 
+ȣ 
+X 
+... 
+" 
+i::l• 
+,=-,,. 
+-
+, 
+-
+Ȥ 
+-
+49' 
+..-_ 
+0 
+,.,,.__ 
+ȥ 
+, ) r==, 
+7:06 PM 
+...., 
+I
+.,. 
+/'""' 
+Ȧ, 
+,_., 
+• 
+.-,_c;a 
+l!!t, 
+...... 
+ȧ1 
+C-:-, 
+Ȩ 
+T/6 
+c;;r. 
+. . 
+-
+28 C Cloudy 
+'=' 
+@. (I) = 8/24/2022 
+....-,i 
+FEU ALABANG 
+FEU DILIMAN 
+FEU TECH
+--- page 29 ---
+Arithmetic  Operations
+Constant
+Add
+Product
+Display
+Greater symbol  indicates the result 
+0 = False
+1 = True
+--- page 30 ---
+Arithmetic  Operations
+String Constant
+String Concat
+String Length
+Display
+Greater symbol  indicates the result 
+0 = False
+1 = True
+--- page 31 ---
+Arithmetic  Operations
+Constant
+Square root
+Square
+Sign

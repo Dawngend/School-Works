@@ -1,0 +1,374 @@
+--- page 1 ---
+Modeling and Simulation
+--- page 2 ---
+MODULE 4
+MONTE CARLO SIMULATION
+--- page 3 ---
+SUBTOPIC 1
+CONCEPTS ON 
+MONTE CARLO SIMULATION
+--- page 4 ---
+• Demonstrate understanding of the concepts on Monte
+Carlo Simulation as a simulation technique.
+• Identify
+the different methods
+of
+Monte Carlo
+Simulations.
+• Discuss the importance of sensitivity analysis.
+--- page 5 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 6 ---
+•
+Also known as Monte Carlo Method
+•
+Originated in 1940s at Los Alamos National Laboratory (NM, USA)
+•
+Physicists Stanislaw Ulman, Enrico Fermi, John von Neumann, and Nicholas
+Metropolis had to perform repeated simulations of their atomic physics models to
+understand how these models would behave given the large number of uncertain
+input variable values.
+•
+As random samples of the input variables were chosen for each simulation run, a
+statistical description of the model output emerged that provided evidence as to
+how the real-world system would behave.
+•
+It is this concept of repeated random samples of model input variables over many
+simulation runs that defines Monte Carlo simulation.
+•
+Superior to a deterministic simulation system since it has input variables that are
+random.
+--- page 7 ---
+Source: https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_monte_carlo_simulation.htm
+•
+A computerized mathematical technique to generate random sample
+data based on some known distribution for numerical experiments.
+•
+This method is applied to risk quantitative analysis and decision
+making problems.
+•
+This method is used by the professionals of various profiles such as
+finance, project management, energy, manufacturing, engineering,
+research & development, insurance, oil & gas, transportation, etc.
+--- page 8 ---
+
+--- page 9 ---
+Source: https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_monte_carlo_simulation.htm
+Important Characteristics
+Its output must generate random samples.
+Its input distribution must be known.
+Its
+result
+must
+be
+known
+while
+performing
+an
+experiment.
+--- page 10 ---
+Source: https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_monte_carlo_simulation.htm
+Advantages
+Easy to implement.
+Provides statistical sampling for numerical experiments using the computer.
+Provides approximate solution to mathematical problems.
+Can be used for both stochastic and deterministic problems.
+Disadvantages
+Time consuming as there is a need to generate large number of sampling to
+get the desired output.
+The results of this method are only the approximation of true values, not the
+exact.
+--- page 11 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 12 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 13 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 14 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 15 ---
+Source: Stéphane Paltani, ISDC Data Center for Astrophysics, Astronomical Observatory of the University of Geneva
+--- page 16 ---
+Source: https://www.tutorialspoint.com/modelling_and_simulation/modelling_and_simulation_monte_carlo_simulation.htm
+Flow Diagram
+--- page 17 ---
+When setting up a Monte Carlo simulation or employing the Monte Carlo
+Method, one follows a four-step process. These four steps are:
+1. Define a distribution of possible inputs for each input random
+variable.
+2. Generate inputs randomly from those distributions.
+3. Perform a deterministic computation using that set of inputs.
+4. Aggregate the results of the individual computations into the final
+result.
+--- page 18 ---
+This four-step method requires having the necessary components in
+place to achieve the final result. These components may include:
+1) Probability distribution functions (pdfs) for each random variable
+2) A random number generator
+3) A sampling rule - a prescription for sampling from the pdfs
+4) Scoring - a method for combining the results of each run into the
+final result
+5) Error estimation - an estimate of the statistical error of the
+simulation output as a function of the number of simulation runs and
+other parameters.
+--- page 19 ---
+Determining the Value of PI
+Recall that the value of π is the ratio of a circle’s circumference to its diameter. To calculate this value,
+we can set up a Monte Carlo simulation that employs a geometric representation of the circle.
+Step 1: To start, draw a unit circle arc, that is, an arc of radius one circumscribed by a square as shown
+in the figure below:
+Note: This step represents step 1 of the
+Monte
+Carlo
+method.
+That
+is,
+determining
+the
+domain
+of
+possible
+inputs.
+--- page 20 ---
+Determining the Value of PI
+Step 2: Then, randomly choose an x and y coordinate inside the square, and place a dot at that
+location.
+Step 3. Repeat step 2 at a given number of times. See figure below.
+Note: These steps represent step 2 of
+the Monte Carlo method.
+--- page 21 ---
+Determining the Value of PI
+Step 4: Count the total number of dots inside the square and the number of dots inside the quarter
+circle. With a large number of dots generated, these values will approximate the area of the
+circle and the area of the square. From mathematics, this result can be represented as:
+Note: This step represents steps 3 and 4 of the Monte Carlo method.
+--- page 22 ---
+• The study of how uncertainty in a model’s output can
+be
+assigned
+to
+the
+various
+sources
+of
+input
+uncertainty.
+• Gauging which input random variables have the most
+influence on the output random variables is an
+important fact to know when trying to analyze a
+model’s behavior.
+--- page 23 ---
+Importance of Sensitivity Analysis
+1. It can help uncover model errors and identify important bounds on input variables.
+2. It can help identify research priorities and simplify models.
+NOTE:
+• The most common method for conducting sensitivity analysis is based on
+derivatives.
+• Derivative-based approaches are very efficient from a computational standpoint.
+• However, it does have one serious flaw. Derivative-based approaches are only
+valid at the point that they are computed. This is acceptable for linear systems but
+would be of little value for systems exhibiting nonlinear behavior.
+--- page 24 ---
+Check Canvas for instructions
+Formative Assessment 5
+--- page 25 ---
+Check Canvas for instructions
+Summative Assessment 4
+--- page 26 ---
+Online:
+https://www.tutorialspoint.com/
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons
+--- page 27 ---
+Lab Activity
+--- page 28 ---
+MATLAB Pro
+gramming
+--- page 29 ---
+File Input and Output
+--- page 30 ---
+•
+Construct MATLAB scripts that will save data to a file.
+•
+Construct MATLAB scripts that will read data from a file.
+--- page 31 ---
+Writing Data to a File
+Data export options
+• Rectangular, delimited ASCII data file from an array.
+• Diary (or log) file of keystrokes and the resulting text output.
+• Specialized ASCII file using low-level functions such as fprintf.
+• MEX-file to access your C/C++ or Fortran routine that writes to a particular text
+file format.
+• Export to spreadsheets.
+--- page 32 ---
+Writing Data to a File
+Ways to export a numeric array as a delimited ASCII data file:
+1) Using the save function and specifying the -ascii qualifier
+2) Using the dlmwrite function
+Note:
+•
+Using the save function to write a character array to an ASCII file, writes the ASCII equivalent of the
+characters to the file.
+•
+Using the save command will overwrite the file; save always writes from the beginning of a file.
+--- page 33 ---
+Writing Data to a File
+Example 1:
+testfile.dat
+--- page 34 ---
+Writing Data to a File
+Example 2:
+array_data2.out
+--- page 35 ---
+Writing Data to a File
+Example 3:
+testfile.dat
+Note: Old testfile.dat
+--- page 36 ---
+Writing Data to a File
+Example 4:
+textdata.out
+--- page 37 ---
+Reading from a File
+•
+Reading from a file is accomplished using load, which reads a file into a matrix variable with the same name 
+as the file.
+•
+The load command works only if there are the same number of values in each line so that the data can be 
+stored in a matrix.
+Example 1:
+--- page 38 ---
+Reading from a File
+Example 2:
+timetemp.dat
+output:
+--- page 39 ---
+Online:
+www. tutorialspoint.com
+E-Books and Textbooks:
+• Attaway, Stormy (2013). MATLAB ®. A Practical Introduction to Programming
+and Problem Solving Third Edition. Elsevier, Inc.
+--- page 40 ---
+and Simulation
+--- page 41 ---
+•
+Demonstrate how to create 2D plotting
+•
+Demonstrate how to create 3D plotting
+--- page 42 ---
+Plotting
+Commands
+--- page 43 ---
+Plotting Commands
+--- page 44 ---
+To plot the graph of a function:
+• Define x, by specifying the range of values for the variable x, for which the function is to be plotted
+• Define the function, y = f(x)
+• Call the plot command, as plot(x, y)
+To add titles, labels, grid lines and scaling on the graph
+• The xlabel and ylabel commands generate labels along x-axis and y-axis.
+• The title command allows putting a title on the graph.
+• The grid on command allows putting grid lines on the graph.
+• The axis equal command allows generating the plot with the same scale factors and the spaces on 
+both axes.
+• The axis square command generates a square plot.
+--- page 45 ---
+Customizing a Plot: Color, Line Types, Marker Types
+The LineSpec, or line specification, can specify up to three different properties in a string, including the color, line type,
+and the symbol or marker used for the data points.
+The plot symbols, or markers, 
+that can be used are:
+Line types can also be specified by the 
+following:
+--- page 46 ---
+Scripts to Produce Plots
+Example1:
+%This is a really simple plot of just one point!
+%Create axis ([x-2 x+2 y-10 y+10]) plot a read '*'
+x=11;
+y=48;
+plot(x,y, 'r*')
+%change the axes and label them axis([9 12 34 55])
+xlabel('Time')
+ylabel('Temperature');
+%Put a title on the plot
+title('Time and Temp')
+--- page 47 ---
+Scripts to Produce Plots
+Example 2:
+x = 1:6;
+y=[1 5 3 9 11 8];
+plot(x,y)
+--- page 48 ---
+Scripts to Produce Plots
+Example 3:
+x = 1:5;
+y1 = [2 11 6 9 3];
+bar(x,y1)
+=======================
+x = 1:5;
+plot(x,y1,'k')
+hold on
+plot(x,y1,'ko')
+grid on
+legend('y1','y2')
+--- page 49 ---
+Scripts to Produce Plots
+Example 4:
+x = [0: 0.01: 10];
+y = sin(x);
+g = cos(x);
+plot(x,y,x,g, '.-'), legend('Sin(x)', 'Cos(x)')
+Example 5:
+x= [1:10];
+y=[75, 58, 90, 87, 50, 85, 92, 75, 60, 95];
+bar(x,y)
+xlabel('Student');
+ylabel('Score');
+title('First Sem:')
+--- page 50 ---
+Three Dimensional Plots
+• MATLAB has functions that will display 3D plots.
+• Many of these functions have the same name as the
+corresponding 2D plot function with a ‘3’ at the end.
+For example, plot3, bar3, bar3h, pie3, comet3, and stem3.
+• Vectors representing x, y, and z coordinates are passed to
+the plot3 and stem3 functions. These functions show the
+points in 3D space.
+• Clicking on the rotate 3D icon and then in the plot allows
+the user to rotate to see the plot from different angles.
+• Also, using the grid function makes it easier to visualize,
+as shown in the figure.
+• The function zlabel is used to label the z axis.
+--- page 51 ---
+Three Dimensional Plots
+Example 1:
+x=1:5;
+y=[0 -2 4 11 3];
+z= 2:2:10;
+plot3(x,y,z, 'k*')
+grid
+xlabel('x')
+ylabel('y')
+zlabel('z')
+title('3D Plot')
+y = 1:6;
+x = 1:6;
+z= [ 33 11 5 9 22 30];
+bar3(y,z)
+xlabel('x')
+ylabel('y')
+zlabel('z')
+title('3D Bar')
+Example 2:
+--- page 52 ---
+Three Dimensional Plots
+Example 3:
+mat = spiral(5)
+bar3(mat)
+title('3D Spiral');
+xlabel('x')
+ylabel('y')
+zlabel('z')
