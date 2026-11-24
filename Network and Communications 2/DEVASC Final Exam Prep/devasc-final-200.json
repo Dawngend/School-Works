@@ -1,0 +1,4353 @@
+{
+ "metadata": {
+  "purpose": "200 choice items for the NetComms 2 (CS0016) final reviewer and deck, capped at 200 by Dawn on 2026-11-24",
+  "selection": "all 88 unique Course Final items + all 14 unique Practice Final items + 98 module-exam items (balanced across modules 1-8, no exhibit items, none whose question repeats a final question). Module quizzes and matching or ordering items are not in the 200.",
+  "source": "devasc-final-question-bank.json",
+  "counts": {
+   "course_final": 88,
+   "practice_final": 14,
+   "m1": 13,
+   "m2": 12,
+   "m3": 11,
+   "m4": 12,
+   "m5": 13,
+   "m6": 12,
+   "m7": 12,
+   "m8": 13
+  },
+  "multi_answer_items": 33,
+  "exhibit_items_transcribed": [
+   "course_final-018",
+   "course_final-051",
+   "course_final-052",
+   "course_final-059",
+   "course_final-066",
+   "course_final-090",
+   "course_final-101",
+   "practice_final-012"
+  ]
+ },
+ "items": [
+  {
+   "number": 1,
+   "question": "A pharmaceutical company wants to contract the services of a cloud provider to store employee data and company-specific applications with strict access security. Which type of cloud would be the most appropriate for this scenario?",
+   "choices": [
+    "community cloud",
+    "public cloud",
+    "hybrid cloud",
+    "private cloud"
+   ],
+   "correct": [
+    "private cloud"
+   ],
+   "images": [],
+   "explanation": "Explanation: Private clouds – Cloud-based applications and services offered in a private cloud are intended for a specific organization or entity, such as the government. A private cloud can be set up using the organization’s private network, though this can be expensive to build and maintain. A private cloud can also be managed by an outside organization with strict access security.",
+   "id": "course_final-001",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "What is a function provided by an implementation of a read-only automation solution?",
+   "choices": [
+    "the ability to reduce risk by implementing security policies across the network infrastructure via automated changes",
+    "the ability to use GET and SET requests to retrieve and send data across the network infrastructure",
+    "the ability to use an automated request to audit configurations and manually deploy changes in order to implement compliance",
+    "the ability to implement network infrastructure that receives a configuration from a specific centralized server"
+   ],
+   "correct": [
+    "the ability to use an automated request to audit configurations and manually deploy changes in order to implement compliance"
+   ],
+   "images": [],
+   "explanation": "Explanation: You can use a read scenario to audit configurations and do the next natural step, which is to put the configuration back into compliance",
+   "id": "course_final-002",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "Data is being sent from a source PC to a destination server. Which three statements correctly describe the function of TCP or UDP in this situation? (Choose three.)",
+   "choices": [
+    "The TCP process running on the PC randomly selects the destination port when establishing a session with the server.",
+    "UDP segments are encapsulated within IP packets for transport across the network",
+    "The TCP source port number identifies the sending host on the network",
+    "The UDP destination port number identifies the application or service on the server which will handle the data.",
+    "The source port field identifies the running application or service that will handle data returning to the PC",
+    "TCP is the preferred protocol when a function requires lower network overhead"
+   ],
+   "correct": [
+    "UDP segments are encapsulated within IP packets for transport across the network",
+    "The UDP destination port number identifies the application or service on the server which will handle the data.",
+    "The source port field identifies the running application or service that will handle data returning to the PC"
+   ],
+   "images": [],
+   "explanation": "Explanation: Layer 4 port numbers identify the application or service which will handle the data. The source port number is added by the sending device and will be the destination port number when the requested information is returned. Layer 4 segments are encapsulated within IP packets. UDP, not TCP, is used when low overhead is needed. A source IP address, not a TCP source port number, identifies the sending host on the network. Destination port numbers are specific ports that a server application or service monitors for requests.",
+   "id": "course_final-003",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "quiz_6-009"
+   ]
+  },
+  {
+   "number": 4,
+   "question": "What type of attack targets an SQL database using the input field of a user?",
+   "choices": [
+    "buffer overflow",
+    "SQL injection",
+    "Cross site scripting",
+    "XML injection"
+   ],
+   "correct": [
+    "SQL injection"
+   ],
+   "images": [],
+   "explanation": "Explanation: A criminal can insert a malicious SQL statement in an entry field on a website where the system does not filter the user input correctly.",
+   "id": "course_final-004",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "Which command can be used on Linux and MAC hosts to get IP addressing information?",
+   "choices": [
+    "ipconfig",
+    "ip address",
+    "ifconfig",
+    "networksetup -getinfo"
+   ],
+   "correct": [
+    "ifconfig"
+   ],
+   "images": [],
+   "explanation": "Explanation: Network administrators typically view the IP addressing information on Windows hosts by issuing the ipconfig command, and on Linux and Mac hosts by issuing the ifconfig command. The networksetup -getinfo command is used on Mac hosts to verify IP settings. The ip address command is used on Linux hosts to display IP addresses and properties.",
+   "id": "course_final-005",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "quiz_6-003"
+   ]
+  },
+  {
+   "number": 6,
+   "question": "What are two reasons a network administrator would segment a network with a Layer 2 switch? (Choose two.)",
+   "choices": [
+    "to create fewer collision domains",
+    "to create more broadcast domains",
+    "to enhance user bandwidth",
+    "to isolale ARP request messages from the rest of the network",
+    "to eliminate virtual circuits",
+    "to isolate traffic between segments"
+   ],
+   "correct": [
+    "to enhance user bandwidth",
+    "to isolate traffic between segments"
+   ],
+   "images": [],
+   "explanation": "Explanation: A switch has the ability of creating temporary point-to-point connections between the directly-attached transmitting and receiving network devices. The two devices have full-bandwidth full-duplex connectivity during the transmission.",
+   "id": "course_final-006",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "Which tool might a developer use as part of a Continuous Integration pipeline in order to build and test source code?",
+   "choices": [
+    "SQL",
+    "REST",
+    "Docker",
+    "Jenkins"
+   ],
+   "correct": [
+    "Jenkins"
+   ],
+   "images": [],
+   "explanation": "Explanation: The testing environment often includes automated testing tools such as Jenkins, CircleCI, or Travis CI, as well as integration with a version control system.",
+   "id": "course_final-007",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "A packet is received by a server. The packet has a destination port number of 8008. What protocol or service is requested?",
+   "choices": [
+    "Telnet over SSH",
+    "RESTCONF",
+    "HTTP",
+    "NETCONF"
+   ],
+   "correct": [
+    "RESTCONF"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-008",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "A network contains multiple VLANs spanning multiple switches. What happens when a device in VLAN 20 sends a broadcast Ethernet frame?",
+   "choices": [
+    "Devices in VLAN 20 and the management VLAN see the frame.",
+    "All devices in all VLANs see the frame",
+    "Only devices that are connected to the local switch see the frame",
+    "Only devices in VLAN 20 see the frame."
+   ],
+   "correct": [
+    "Only devices in VLAN 20 see the frame."
+   ],
+   "images": [],
+   "explanation": "Explanation: VLANs create logical broadcast domains that can span multiple VLAN segments. Ethernet frames that are sent by a device on a specific VLAN can only be seen by other devices in the same VLAN.",
+   "id": "course_final-009",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "Which piece of software is responsible for creating and managing virtual machines, including allocating system resources to each virtual machine as needed?",
+   "choices": [
+    "supervisor",
+    "hypervisor",
+    "host operating system",
+    "hosted operating system"
+   ],
+   "correct": [
+    "hypervisor"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-010",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "How is an Ethernet MAC address constructed?",
+   "choices": [
+    "The first 3 bytes represent the network upon which the host resides, and the last 3 bytes uniquely identify the host.",
+    "The first 3 bytes represent the vendor OUI, and the last 3 bytes are assigned uniquely by the vendor",
+    "The first 3 bytes are uniquely assigned by LANA, and the last 3 bytes represent the serial number of the host",
+    "The first 3 byles represent the vendor OUI, and the last 3 byles are assigned randorily by the operating system."
+   ],
+   "correct": [
+    "The first 3 bytes represent the vendor OUI, and the last 3 bytes are assigned uniquely by the vendor"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-011",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "Which Cisco SDK works with ACI?",
+   "choices": [
+    "Cobra",
+    "IMC",
+    "UCS",
+    "Instant Connect"
+   ],
+   "correct": [
+    "Cobra"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-012",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "What platforms are provided by DevNet for community members to share solutions, tool kits, and other resources with each other?",
+   "choices": [
+    "communities",
+    "forums",
+    "sandboxes",
+    "exchanges"
+   ],
+   "correct": [
+    "exchanges"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Automation Exchange provides a collection of network automation use cases with different solutions and toolkits.",
+   "id": "course_final-013",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 14,
+   "question": "Which two data formats can RESTCON use when requesting data or responding with data? (Choose two.)",
+   "choices": [
+    "JSON",
+    "XML",
+    "YAML",
+    "YANG",
+    "HTML"
+   ],
+   "correct": [
+    "JSON",
+    "XML"
+   ],
+   "images": [],
+   "explanation": "Explanation: RESTCONF can be used to access data. The RESTCONF requests and responses can use either JSON or XML structured data formats.",
+   "id": "course_final-014",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "Which DevNet resource would a developer use to look for a Python library that supports APIs for a specific Cisco product?",
+   "choices": [
+    "DevNet Learning Labs",
+    "Devlet Support",
+    "Code Exchange",
+    "DevNet Sandbox"
+   ],
+   "correct": [
+    "Code Exchange"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-015",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 16,
+   "question": "A component was created with the intent of combining the disciplines and skills of Dev and Ops. This component created a new job role and implemented a best-practices playbook for doing Ops with software methods. Which component matches this description?",
+   "choices": [
+    "Agile Infrastructure and Operations",
+    "the SRE approach",
+    "automated infrastructure",
+    "shared Version control"
+   ],
+   "correct": [
+    "the SRE approach"
+   ],
+   "images": [],
+   "explanation": "Explanation: Google was among the first companies to understand and institutionalize a new kind of hybrid Dev+Ops job description. This was the Site Reliability Engineer (SRE). The role of the SRE is intended to fuse the disciplines and skills of Dev and Ops, creating a new specialty and best-practices playbook for doing Ops with software methods.",
+   "id": "course_final-016",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 18,
+   "question": "Refer to the exhibit. A user is working on Ansible on the local NMS to manage remote network devices. Which file is the user creating?",
+   "choices": [
+    "service",
+    "playbook",
+    "variable",
+    "hosts"
+   ],
+   "correct": [
+    "hosts"
+   ],
+   "images": [
+    "2021-03-04_225042.jpg"
+   ],
+   "explanation": "Explanation: Ansible uses an inventory file called hosts that contains device information used by Ansible playbooks. The hosts file begins with an alias for the remote. After the alias, the hosts file specifies three variables that will be used by the Ansible playbook to access the device. These are the SSH credentials Ansible needs to securely access the remote host.",
+   "id": "course_final-018",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (inventory file): comment line 'Enter the devices for Ansible playbooks', then 'Main-RT ansible_user=classuser ansible_password=class123 ansible_host=172.20.20.250'",
+   "duplicate_ids": []
+  },
+  {
+   "number": 19,
+   "question": "Which DevNet resource would a developer use in order to test custom code in a production-like environment?",
+   "choices": [
+    "Devlet Support",
+    "DevNet Learning Labs",
+    "Code Exchange",
+    "DevNet Sandbox"
+   ],
+   "correct": [
+    "DevNet Sandbox"
+   ],
+   "images": [],
+   "explanation": "Explanation: When you're developing and testing technology, you want a test bed where you can try out code within a realistic environment without affecting production systems. To do that, go to the DevNet Sandbox offering, where you can try out Cisco hardware and environments.",
+   "id": "course_final-019",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 20,
+   "question": "In which situation would a company implement a reverse proxy as a security solution?",
+   "choices": [
+    "when the company has a database and needs to point to a DNS server that uses different IP addresses for development resources",
+    "when the company wants all responses to clients to look like they came from the same server instead of individual ones",
+    "when a hash is created based on the IP address of the request to a particular protected server",
+    "when responses frorri servers need to be sent over different paths to ensure quality response time to the client devices making the requests"
+   ],
+   "correct": [
+    "when the company wants all responses to clients to look like they came from the same server instead of individual ones"
+   ],
+   "images": [],
+   "explanation": "Explanation: A reverse proxy is similar to a regular proxy: however, while a regular proxy works to make requests from multiple computers look like they all come from the same client, a reverse proxy works to make sure responses look like they all come from the same server.",
+   "id": "course_final-020",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 21,
+   "question": "A software development company specializes in being able to use whatever software development method their customer wants to use. One customer company wants to use the Agile method. What is a characteristic of this method?",
+   "choices": [
+    "a software development process where the highest priority is to satisfy the customer through early and continuous delivery of valuable software",
+    "a process that eliminates anything that does not add value to the project including meetings and documentation",
+    "a software development process that has the results of one phase feed into the next phase",
+    "a more traditional software development process as they have used this process in past projects"
+   ],
+   "correct": [
+    "a software development process that has the results of one phase feed into the next phase"
+   ],
+   "images": [],
+   "explanation": "Explanation: Agile Methods: The Agile Manifesto by design, wasn't precise about how Agile should work. After forging the Manifesto, its originators (and many others) kept evolving these ideas, absorbing new ideas from many sources, and testing them in practice. As a result, over the past few decades, many takes on Agile have emerged, and some have become widely popular.",
+   "id": "course_final-021",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 22,
+   "question": "A network engineer is creating a Docker container using the docker build command. If the engineer does not specify a tag, which tag will be used by default?",
+   "choices": [
+    "tag",
+    "latest",
+    "(a blank space)",
+    "default"
+   ],
+   "correct": [
+    "latest"
+   ],
+   "images": [],
+   "explanation": "Explanation: The first part, the repository, is usually the username of the account storing the image. Next is the image name, and then finally the optional tag. (Remember, if you do not specify it, it will come up as latest.)",
+   "id": "course_final-022",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 23,
+   "question": "Which component in the pyATS ecology handles bundling and running jobs?",
+   "choices": [
+    "AEtest",
+    "Clover",
+    "Genie",
+    "EasyPy"
+   ],
+   "correct": [
+    "EasyPy"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-023",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "m7-013"
+   ]
+  },
+  {
+   "number": 24,
+   "question": "Which three avenues are available within DevNet for developers who need help with specific developer scenario questions concerning Cisco products? (Choose three.)",
+   "choices": [
+    "logging a ticket",
+    "posting to the DevNet zone",
+    "posting to a news group",
+    "posting to a community forum",
+    "posting to a Webex Teams space",
+    "posting on the Cisco Learning Network"
+   ],
+   "correct": [
+    "logging a ticket",
+    "posting to a community forum",
+    "posting to a Webex Teams space"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-024",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 25,
+   "question": "A student who is interested in network programmability approaches an instructor for advice on learning more about the subject. The student is a kinesthetic learner who learns by doing. Which DevNet resource should the instructor consider telling the student about?",
+   "choices": [
+    "DevNet Create",
+    "DevNet Learning Labs",
+    "DevNet Express",
+    "DevNet Zone"
+   ],
+   "correct": [
+    "DevNet Learning Labs"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-025",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 26,
+   "question": "What is the default shell commonly used on macOS and Linux?",
+   "choices": [
+    "tcsh",
+    "csh",
+    "Bourne",
+    "Bash"
+   ],
+   "correct": [
+    "Bash"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-026",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "m7-008"
+   ]
+  },
+  {
+   "number": 27,
+   "question": "What is immutable infrastructure in DevOps?",
+   "choices": [
+    "infrastructure that is deployed with all component versions locked except for the ability to perform manual configuration changes",
+    "infrastructure that is only deployed and maintained in containers",
+    "infrastructure that is entirely maintained and deployed in code and never subjected to manual changes",
+    "virtualized infrastructure that is deployed as golden images"
+   ],
+   "correct": [
+    "infrastructure that is entirely maintained and deployed in code and never subjected to manual changes"
+   ],
+   "images": [],
+   "explanation": "Explanation: Immutable infrastructure is infrastructure that can never be changed manually. In DevOps, this type of infrastructure is entirely maintained through the use of code.",
+   "id": "course_final-027",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 28,
+   "question": "What is the most common cause of IT outages?",
+   "choices": [
+    "an engineer misconfiguring a device or network with manual changes",
+    "an experienced engineer using an open source product",
+    "an experienced engineer implementing a configuration using automation",
+    "a threat actor largeting the enterprise equipment"
+   ],
+   "correct": [
+    "an engineer misconfiguring a device or network with manual changes"
+   ],
+   "images": [],
+   "explanation": "Explanation: Most outages are caused by systems being misconfigured, commonly due to human error as manual changes are being made.",
+   "id": "course_final-028",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 29,
+   "question": "Which string of characters is used to identify the beginning of a new separate document when multiple documents are in a single YAML file?",
+   "choices": [
+    "three slashes \"///\"",
+    "three dots \"...\"",
+    "three pound signs \"###\"",
+    "three dashes \"---\""
+   ],
+   "correct": [
+    "three dashes \"---\""
+   ],
+   "images": [],
+   "explanation": "Explanation: YAML files conventionally open with three dashes ( --- alone on a line) and end with three dots ( ... also alone a line). YAML also accommodates the notion of multiple \"documents\" within a single physical file, in this case, separating each document with three dashes on its own line.",
+   "id": "course_final-029",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 30,
+   "question": "What is the difference between functions and methods in the Python programming structure?",
+   "choices": [
+    "Functions can use global variables whereas methods can only use local variables.",
+    "Functions are called by a referencing object whereas methods are called by the names.",
+    "Functions can pass arguments whereas methods can pass only predefined keywords.",
+    "Functions are standalone code blocks whereas methods are code blocks associated with an object."
+   ],
+   "correct": [
+    "Functions are standalone code blocks whereas methods are code blocks associated with an object."
+   ],
+   "images": [],
+   "explanation": "Explanation: The difference between methods and functions is that functions are standalone code blocks while methods are code blocks associated with an object, typically for object-oriented programming.",
+   "id": "course_final-030",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 31,
+   "question": "Which command is used to create a new Git repository?",
+   "choices": [
+    "git init",
+    "git add",
+    "git commit",
+    "git clone"
+   ],
+   "correct": [
+    "git init"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-031",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 32,
+   "question": "Which stakeholder determines the useful value of software product features in the Lean process?",
+   "choices": [
+    "the customer",
+    "the Scrum master",
+    "the reviewer",
+    "the programmer"
+   ],
+   "correct": [
+    "the customer"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-032",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 34,
+   "question": "What is a principle of the Lean software development model?",
+   "choices": [
+    "adding additional product features that the customer did not ask for so that the customer is getting more than expected",
+    "assigning resources to multiple projects so that effort can be divided on more than one task at a time",
+    "making decisions as late as possible in the process so that more facts and details are available",
+    "ordering workers to do tasks they may not want to do to ensure they get done"
+   ],
+   "correct": [
+    "making decisions as late as possible in the process so that more facts and details are available"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-034",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 35,
+   "question": "What character is used to separate the key and value pairs in YAML?",
+   "choices": [
+    "colon :",
+    "semi colon ;",
+    "underscore _",
+    "forward slash /"
+   ],
+   "correct": [
+    "colon :"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-035",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 36,
+   "question": "Which git command is used to compare changes between files?",
+   "choices": [
+    "git diff",
+    "git merge",
+    "git checkout",
+    "git status"
+   ],
+   "correct": [
+    "git diff"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-036",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 38,
+   "question": "What is an example of a use supported by Cisco UCS Director and UCS Manager?",
+   "choices": [
+    "bare metal server provisioning and monitoring of virtual environments",
+    "call center and call management over IP networks",
+    "underlying central system workflow management and migration",
+    "telemetry data collection and analysis"
+   ],
+   "correct": [
+    "bare metal server provisioning and monitoring of virtual environments"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-038",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 39,
+   "question": "How can a Webex Teams administrator retrieve additional details about a user through an API call?",
+   "choices": [
+    "by using the value of the organization name in the API call",
+    "by using the value of a Webex Teams registered email address in the API call",
+    "by using the value of the person id key in the API call",
+    "by using the value of orgld in the API call"
+   ],
+   "correct": [
+    "by using the value of the person id key in the API call"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-039",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 40,
+   "question": "Which library is the most commonly used Python library for connecting NETCONF clients with a NETCONF server?",
+   "choices": [
+    "posix",
+    "pyclient",
+    "ncclient",
+    "pypi"
+   ],
+   "correct": [
+    "ncclient"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-040",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 44,
+   "question": "Which two APIs allow for Cisco Meraki device provisioning and real-time notifications? (Choose two.)",
+   "choices": [
+    "Webhook API",
+    "Investigation API",
+    "Dashboard API",
+    "Enforcement API",
+    "Reporting API"
+   ],
+   "correct": [
+    "Webhook API",
+    "Dashboard API"
+   ],
+   "images": [],
+   "explanation": "Explanation: Dashboard API - This a RESTful service for device provisioning, management, and monitoring. Webhook API – This is a real-time notification system for network alerts, covering events and network health.",
+   "id": "course_final-044",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 45,
+   "question": "A packet is received by a server. The packet has a destination port number of 443. What protocol or service is requested?",
+   "choices": [
+    "HTTP",
+    "NTP",
+    "DHCP",
+    "HTTPS"
+   ],
+   "correct": [
+    "HTTPS"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-045",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 46,
+   "question": "When thinking about the functional planes of a network, what is unique about the data plane?",
+   "choices": [
+    "It includes protocols used to remotely access network devices.",
+    "It includes the SSH protocol.",
+    "It manipulates data and outputs it in the XML format.",
+    "It is responsible for the switching of packets in hardware."
+   ],
+   "correct": [
+    "It is responsible for the switching of packets in hardware."
+   ],
+   "images": [],
+   "explanation": "Explanation: The data plane is the forwarding plane, which is responsible for the switching of packets in hardware, using information from the control plane. The data plane processes data in hardware.",
+   "id": "course_final-046",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 47,
+   "question": "Which Docker component defines the steps needed to create an image that can be deployed in a variety of environments?",
+   "choices": [
+    "UnionFS",
+    "Dockerfile",
+    "cross-site script",
+    "namespaces"
+   ],
+   "correct": [
+    "Dockerfile"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-047",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 48,
+   "question": "Which three statements describe characteristics of a virtual machine? (Choose three.)",
+   "choices": [
+    "It is created and deployed using the Docker format.",
+    "It includes a guest operating system.",
+    "It runs on top of a hypervisor",
+    "It shares the operating system of the host computer.",
+    "It is completely self-contained with its own emulated storage, memory, and network interfaces.",
+    "It requires Windows as the host operating system."
+   ],
+   "correct": [
+    "It includes a guest operating system.",
+    "It runs on top of a hypervisor",
+    "It is completely self-contained with its own emulated storage, memory, and network interfaces."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-048",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 50,
+   "question": "What are two characteristics of the staging environment of the four-tier deployment environment structure? (Choose two.)",
+   "choices": [
+    "It is the point where code has been tested multiple times and is error free.",
+    "It is structured as close as possible to the actual production environment.",
+    "It is where the code undergoes final acceptance testing in a realistic environment.",
+    "It is where end users will interact with the code.",
+    "It often includes automated testing tools such as Jenkins, CircleCl, or Travis Cl."
+   ],
+   "correct": [
+    "It is structured as close as possible to the actual production environment.",
+    "It is where the code undergoes final acceptance testing in a realistic environment."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-050",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 51,
+   "question": "Refer to the exhibit. A network engineer has created a Jenkins pipeline. Which menu option would the engineer use to run the pipeline?",
+   "choices": [
+    "Configure",
+    "Changes",
+    "Build Now",
+    "Workspace"
+   ],
+   "correct": [
+    "Build Now"
+   ],
+   "images": [
+    "2021-03-04_224329.jpg"
+   ],
+   "explanation": "",
+   "id": "course_final-051",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (Jenkins job page, job name JobWtihTypo): left menu items are Back to Dashboard, Status, Changes, Workspace, Build Now, Configure, Ask for renaming (bold), Ask for deletion.",
+   "duplicate_ids": []
+  },
+  {
+   "number": 52,
+   "question": "A network engineer is configuring a Jenkins job and finishing with the following script in order to trigger the build:",
+   "choices": [
+    "It makes sure that any previous instances of a particular Docker container are stopped and removed.",
+    "It catches and removes any errors.",
+    "It runs the SUCCESS Docker container.",
+    "It places a log of any errors in the SUCCESS file."
+   ],
+   "correct": [
+    "It makes sure that any previous instances of a particular Docker container are stopped and removed."
+   ],
+   "images": [
+    "2021-03-04_224503.jpg"
+   ],
+   "explanation": "",
+   "id": "course_final-052",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (Jenkins pipeline script): node with three stages. Preparation runs catchError(buildResult SUCCESS) around 'docker stop samplerunning' and 'docker rm samplerunning'. Build runs build 'BuildAppJob'. Results runs build 'TestAppJob'.",
+   "duplicate_ids": []
+  },
+  {
+   "number": 53,
+   "question": "Which technique is used to make the output of password hashing nondeterministic?",
+   "choices": [
+    "password length and complexity",
+    "multifactor authentication",
+    "password salting",
+    "password strength validation tools"
+   ],
+   "correct": [
+    "password salting"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-053",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 54,
+   "question": "What does self-service refer to in the context of enterprise IT?",
+   "choices": [
+    "imaging frequently used server configurations for rapid deployment",
+    "distributing and implementing broad access to public cloud infrastructure-as-a-service services",
+    "mainstreamed processes that promote a lower IT headcount by implementing automation",
+    "automated tools and methods that deliver preconfigured developer platforms on demand"
+   ],
+   "correct": [
+    "automated tools and methods that deliver preconfigured developer platforms on demand"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-054",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 55,
+   "question": "Which statement describes the term orchestration in IT automation?",
+   "choices": [
+    "Orchestration is aimed at managing workload lifecycles and reacting dynamically to changing conditions in order to optimize processes.",
+    "Orchestration is the process of preparing a server through the installation of libraries or daemons.",
+    "Orchestration is the building, arranging, integration, and preparation of multi-component applications across multiple nodes.",
+    "Orchestration is the obtaining and provisioning of compute, storage, and network infrastructure."
+   ],
+   "correct": [
+    "Orchestration is aimed at managing workload lifecycles and reacting dynamically to changing conditions in order to optimize processes."
+   ],
+   "images": [],
+   "explanation": "Explanation: Orchestration may refer to several things. When meant concretely, it usually refers to user-built or platform-inherent automation aimed at managing workload lifecycles and reacting dynamically to changing conditions (e.g., by autoscaling or self-healing), particularly in container environments. When meant abstractly, it may refer to processes or workflows that link automation tasks to deliver business benefits, like self-service.",
+   "id": "course_final-055",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 56,
+   "question": "What is an example of a read-only automation solution?",
+   "choices": [
+    "streamlining the management of L3 firewall rules in Cisco Meraki networks",
+    "gathering SD-WAN inventory data using Python and recording the values in a database",
+    "simplifying the automation of network device authentication, configuration, and consistency",
+    "gathering the current list of ACL entries on an IOS XE router and enforcing consistency"
+   ],
+   "correct": [
+    "gathering SD-WAN inventory data using Python and recording the values in a database"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-056",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 57,
+   "question": "A student is setting up the CSR1000v VM in VirtualBox that is already installed on the local computer. The VM is imported to the VirtualBox and starts successfully. The student tries to verify communications to the CSR1000v VM by opening the Firefox web browser on the local computer and enters the URL https://192.168.56.101. A security message \"Warning: Potential Security Risk Ahead\" appears. What is the security issue that results in this message?",
+   "choices": [
+    "The SSL/TLS certificate uses a public key size of less than 1024 bits.",
+    "The SSL/TLS certificate is self-signed by the router.",
+    "The CA for the SSL/TLS certificate cannot be reached.",
+    "The traffic to the VM is not encrypted."
+   ],
+   "correct": [
+    "The SSL/TLS certificate is self-signed by the router."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-057",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 58,
+   "question": "How do APIs affect traditional IT tasks?",
+   "choices": [
+    "They are used to replace network infrastructure and implement network virtualization.",
+    "They are used to eliminate repetitive manual tasks and replace them with automation.",
+    "They are used to increase computer processing speed and lower power consumption.",
+    "They are used to increase hardware speed and lower power consumption."
+   ],
+   "correct": [
+    "They are used to eliminate repetitive manual tasks and replace them with automation."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-058",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 59,
+   "question": "Refer to the exhibit. PC1 needs to resolve the host name of the web server into an IP address by using DNS. What destination IP address and destination port number will PC1 assign to the DNS query packet?",
+   "choices": [
+    "192.168.20.2 port 80",
+    "192.168.20.3 port 53",
+    "192.168.20.3 port 80",
+    "192.168.10.1 port 53"
+   ],
+   "correct": [
+    "192.168.20.3 port 53"
+   ],
+   "images": [
+    "2021-03-05_085341.jpg"
+   ],
+   "explanation": "Explanation: ____",
+   "id": "course_final-059",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (network): PC1 192.168.10.2 connects to switch S1, which connects to router R1 Fa0/0 192.168.10.1. R1 Fa0/1 192.168.20.1 connects to switch S2, which connects to the DNS server 192.168.20.3 and the web server 192.168.20.2.",
+   "duplicate_ids": []
+  },
+  {
+   "number": 60,
+   "question": "Which two statements are true about NTP servers in an enterprise network? (Choose two.)",
+   "choices": [
+    "There can only be one NTP server on an enterprise network",
+    "All NTP servers synchronize directly to a stratum 1 time source.",
+    "NTP servers at stratum 1 are directly connected to an authoritative time source.",
+    "NTP servers ensure an accurate time stamp on logging and debugging information.",
+    "NTP servers control the mean time between failures (MTBF) for key network devices."
+   ],
+   "correct": [
+    "NTP servers at stratum 1 are directly connected to an authoritative time source.",
+    "NTP servers ensure an accurate time stamp on logging and debugging information."
+   ],
+   "images": [],
+   "explanation": "Explanation: Network Time Protocol (NTP) is used to synchronize the time across all devices on the network to make sure accurate timestamping on devices for managing, securing and troubleshooting. NTP networks use a hierarchical system of time sources. Each level in this hierarchical system is called a stratum. The stratum 1 devices are directly connected to the authoritative time sources.",
+   "id": "course_final-060",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "quiz_6-005"
+   ]
+  },
+  {
+   "number": 62,
+   "question": "A network administrator can successfully ping the server at www.cisco.com, but cannot ping the company web server located at an ISP in another city. Which tool or command would help identify the specific router where the packet was lost or delayed?",
+   "choices": [
+    "traceroute",
+    "ipconfig",
+    "telnet",
+    "netstat"
+   ],
+   "correct": [
+    "traceroute"
+   ],
+   "images": [],
+   "explanation": "Explanation: The traceroute command provides connectivity information about the path a packet takes to reach the destination and about every router (hop) along the way. It also indicates how long a packet takes to get from the source to each hop and back.",
+   "id": "course_final-062",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 63,
+   "question": "Which two HTTP functions correspond to the UPDATE function in CRUD? (Choose two.)",
+   "choices": [
+    "POST",
+    "DELETE",
+    "PATCH",
+    "PUT",
+    "GET"
+   ],
+   "correct": [
+    "PATCH",
+    "PUT"
+   ],
+   "images": [],
+   "explanation": "Explanation: CRUD is an acronym that stands for CREATE, READ, UPDATE, and DELETE. The HTTP functions that correspond to CRUD functions are as follows: GET -> READ POST -> CREATE PUT/PATCH -> UPDATE DELETE -> DELETE",
+   "id": "course_final-063",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 65,
+   "question": "Which HTTP status code category is used in the response to indicate that a REST API request contains an error on the client side?",
+   "choices": [
+    "1xx",
+    "2xx",
+    "3xx",
+    "4xx",
+    "5xx"
+   ],
+   "correct": [
+    "4xx"
+   ],
+   "images": [],
+   "explanation": "Explanation: 4xx - client error: Responses with a 4xx code means that the request contains an error, such as bad syntax or invalid input, which prevents the request from being completed. The client must take action to fix these issues before resending the request.",
+   "id": "course_final-065",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 66,
+   "question": "Refer to the exhibit. A network administrator is using a Python script to test a REST API request. The traceback message indicates that there is an error in the URI. What is the error?",
+   "choices": [
+    "The protocol is wrong.",
+    "The resource path is wrong.",
+    "The SSL certificate is invalid.",
+    "The destination web host address is invalid."
+   ],
+   "correct": [
+    "The SSL certificate is invalid."
+   ],
+   "images": [
+    "2021-03-05_091630.jpg"
+   ],
+   "explanation": "",
+   "id": "course_final-066",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (script and traceback): import requests; url = https://sandboxdnac123.cisco.com/dna/intent/api/v1/network-device; resp = requests.get(url). Traceback: requests.exceptions.SSLError: HTTPSConnectionPool(host sandboxdnac123.cisco.com, port 443): Max retries exceeded with url /dna/intent/api/v1/network-device",
+   "duplicate_ids": []
+  },
+  {
+   "number": 67,
+   "question": "What are two requirements for an application to communicate with a webhook provider? (Choose two.)",
+   "choices": [
+    "The application must support JSON.",
+    "The application must always be running.",
+    "The application must register a URL with the webhook provider.",
+    "The host where the application is running must have an SSH client installed.",
+    "The host where the application is running must have an SSH server running."
+   ],
+   "correct": [
+    "The application must always be running.",
+    "The application must register a URL with the webhook provider."
+   ],
+   "images": [],
+   "explanation": "Explanation: In order to receive a notification from a webhook provider, the application must meet certain requirements: The application must be running at all times to receive HTTP POST requests. The application must register a URI on the webhook provider so that the provider knows where to send a notification when target events occur.",
+   "id": "course_final-067",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 68,
+   "question": "A student is learning network automation by using a REST API. The student sends a request to a network device and receives a response with the status code of 202. What does this status code mean?",
+   "choices": [
+    "The request was understood but has been rejected by the server.",
+    "The request was successful and typically includes a payload.",
+    "The request has been accepted for processing, but the processing has not been completed.",
+    "Because of a server error, the request cannot be fulfilled."
+   ],
+   "correct": [
+    "The request has been accepted for processing, but the processing has not been completed."
+   ],
+   "images": [],
+   "explanation": "Explanation: Code 202: Request has been accepted for processing and is in process",
+   "id": "course_final-068",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 69,
+   "question": "What are two characteristics of stateless applications? (Choose two.)",
+   "choices": [
+    "They must run on container orchestrators like Kubernetes.",
+    "They can be freely scaled across available capacity without disrupting ongoing customer connections.",
+    "They can be scaled only by redeploying them and destroying the data that users or operators previously needed.",
+    "They maintain the user state within the local user machine so that automation can work non-destructively.",
+    "They can store a user state in an accessible database separate from application servers and other components."
+   ],
+   "correct": [
+    "They can be freely scaled across available capacity without disrupting ongoing customer connections.",
+    "They can store a user state in an accessible database separate from application servers and other components."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-069",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 70,
+   "question": "What is a characteristic of the continuous integration component of the CI/CD philosophy for software development?",
+   "choices": [
+    "Code changes are continually merged with the main branch of the application, so change sets are small.",
+    "Code changes are tested and integrated with the main branch then tested again before they are deployed into production.",
+    "Code is constantly deployed into production where users serve as the final testers.",
+    "Application development is performed in short sprints so that enough code is always in a deployable state."
+   ],
+   "correct": [
+    "Code changes are continually merged with the main branch of the application, so change sets are small."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-070",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 71,
+   "question": "A software development company specializes in being able to use whatever software development method their customer wants to use. One customer company wants to use the Waterfall method. What is a characteristic of this method?",
+   "choices": [
+    "a process that amplifies learning as well as delivers as quickly as possible",
+    "a software development process where the highest priority is to satisfy the customer through early and continuous delivery of valuable software",
+    "a software development process where a particular phase depends on the results of the previous phase",
+    "a process that eliminates anything that does not add value to the project including meetings and documentation"
+   ],
+   "correct": [
+    "a software development process where a particular phase depends on the results of the previous phase"
+   ],
+   "images": [],
+   "explanation": "Explanation: With waterfalls, the water flows in one direction only. With the waterfall method, the process goes in one direction, and can never go backwards. Think of it like a relay race where one runner has to finish their distance before handing the baton off to the next person, who is waiting for them. The baton always goes in a forward motion.",
+   "id": "course_final-071",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 72,
+   "question": "In which SDLC phase is the software product installed into the production environment to decide if it is ready for release?",
+   "choices": [
+    "implementation",
+    "deployment",
+    "design",
+    "testing"
+   ],
+   "correct": [
+    "deployment"
+   ],
+   "images": [],
+   "explanation": "Explanation: The deployment phase takes the software from the testing phase as input. During the deployment phase, the software is installed into the production environment. If there are no deployment issues, the product manager works with the architects and qualified engineers to decide whether the software is ready to be released. At the end of the deployment phase, the final piece of software is released to customers and other end users.",
+   "id": "course_final-072",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 73,
+   "question": "Which convention is used in Python to indicate that methods and variables in a class are private and not to be used outside of the class?",
+   "choices": [
+    "by using a single preceding underscore ( _ ) for a method or variable",
+    "by using the command class private classname() : to start the class definition",
+    "by using two preceding hyphens ( — ) for a method or variable",
+    "by declaring a private method or variable in the beginning of the class definition"
+   ],
+   "correct": [
+    "by using a single preceding underscore ( _ ) for a method or variable"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-073",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 74,
+   "question": "A packet is received by a server. The packet has a destination port number of 80. What protocol or service is requested?",
+   "choices": [
+    "DHCP",
+    "Telnet over SSH",
+    "HTTP",
+    "RESTCONF"
+   ],
+   "correct": [
+    "HTTP"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-074",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 75,
+   "question": "A network administrator is developing an application to control a Webex device through xAPI. Which three protocols can be used to access xAPI? (Choose three.)",
+   "choices": [
+    "Telnet",
+    "HTTP",
+    "XML",
+    "RS-232",
+    "FTP",
+    "JSON"
+   ],
+   "correct": [
+    "Telnet",
+    "HTTP",
+    "RS-232"
+   ],
+   "images": [],
+   "explanation": "Explanation: There are multiple ways to access xAPI including Telnet/SSH, HTTP, and RS-232 serial connection.",
+   "id": "course_final-075",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 76,
+   "question": "Which type of request is used to send a message to a Webex Teams space using Python and the Messages API?",
+   "choices": [
+    "PUT",
+    "POST",
+    "GET",
+    "PATCH"
+   ],
+   "correct": [
+    "POST"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-076",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 78,
+   "question": "Which statement describes a stateful firewall?",
+   "choices": [
+    "It can filter packets based on information at Layers 3, 4, 5 and 7 of the OSI reference model.",
+    "It can determine if the connection is in the initiation, data transfer, or termination phase.",
+    "It can only filter packets based on limited Layer 3 and 4 information.",
+    "It can expand the number of IP addresses available and can hide network addressing design."
+   ],
+   "correct": [
+    "It can determine if the connection is in the initiation, data transfer, or termination phase."
+   ],
+   "images": [],
+   "explanation": "Explanation: Basic packet filtering firewalls can only filter based on Layer 3 and sometimes basic Layer 4 information. An application gateway firewall, or proxy firewall, can filter based on information in the upper layers such as the application layer. A NAT firewall can expand the number of available IP addresses on the network.",
+   "id": "course_final-078",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": [
+    "quiz_6-007"
+   ]
+  },
+  {
+   "number": 79,
+   "question": "A software development company specializes in being able to use whatever software development method their customer wants to use. One customer company wants to use the Lean method. What is a characteristic of this method?",
+   "choices": [
+    "a process that eliminates inefficient ways of working like expecting coders to multitask",
+    "a software development process that focuses on frequent delivery of working software as well as collaboration between developers and business employees",
+    "a software development process that has the results of one phase feed into the next phase",
+    "a software development process that can only go forward"
+   ],
+   "correct": [
+    "a software development process that has the results of one phase feed into the next phase"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-079",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 84,
+   "question": "A packet is received by a server. The packet has a destination port number of 123. What protocol or service is requested?",
+   "choices": [
+    "DNS",
+    "SSH",
+    "NTP",
+    "RESTCONF"
+   ],
+   "correct": [
+    "NTP"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-084",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 85,
+   "question": "Which scenario exhibits the “social proof” principle of human influence?",
+   "choices": [
+    "A user receives a phone call from someone claiming to be from the IT department who needs to verify user credentials.",
+    "A user visits a web site offering a free gift if the user provides contact information.",
+    "A user opens an email advertising a free trial on a website that is only available for a few hours.",
+    "A user completes a survey requesting personal information after seeing co-workers completing the survey."
+   ],
+   "correct": [
+    "A user completes a survey requesting personal information after seeing co-workers completing the survey."
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-085",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 86,
+   "question": "Which SQL injection defense method should be used only as a last resort?",
+   "choices": [
+    "escaping all user-supplied input",
+    "using a database firewall",
+    "implementing whitelist input validation",
+    "using parameterized queries"
+   ],
+   "correct": [
+    "escaping all user-supplied input"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-086",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 87,
+   "question": "Which type of ISE node provides network access, posturing, guest access, client provisioning, and profiling services?",
+   "choices": [
+    "monitoring",
+    "administration",
+    "pxGrid",
+    "policy service"
+   ],
+   "correct": [
+    "policy service"
+   ],
+   "images": [],
+   "explanation": "Explanation: Check the Enable Session Services check box to enable network access, posture, guest, and client provisioning services.",
+   "id": "course_final-087",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 88,
+   "question": "Which communication protocol does Ansible use to connect to remote devices?",
+   "choices": [
+    "Telnet over VPN",
+    "HTTPS",
+    "Secure FTP",
+    "SSH"
+   ],
+   "correct": [
+    "SSH"
+   ],
+   "images": [],
+   "explanation": "Explanation: Ansible communicates with remote machines over the SSH protocol. By default, Ansible uses native OpenSSH and connects to remote machines using your current user name, just as SSH does.",
+   "id": "course_final-088",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 90,
+   "question": "Refer to the exhibit. What is the function of the identified missing information in regards to the parameter and method contained in the request?",
+   "choices": [
+    "A Webex Teams space will be identified by using a specified title, and additional details will be retrieved.",
+    "It provides the name for a Webex teams space to be deleted.",
+    "A Webex Teams space will be identified and a message will be posted with the title specified.",
+    "It provides the name for a new Webex teams space."
+   ],
+   "correct": [
+    "It provides the name for a new Webex teams space."
+   ],
+   "images": [
+    "2022-06-08_101518.jpg"
+   ],
+   "explanation": "",
+   "id": "course_final-090",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (Python script): import requests; access_token = your_token_here; url = https://webexapis.com/v1/rooms; headers hold Authorization Bearer access_token and Content-Type application/json; params = title with a blank in the middle (underscores, a question mark, underscores); res = requests.post(url, headers=headers, json=params); print(res.json()). The missing item is the blank inside the title value.",
+   "duplicate_ids": []
+  },
+  {
+   "number": 91,
+   "question": "What is an architectural constraint to which a true RESTful API web service must adhere?",
+   "choices": [
+    "It must support XML-RPC and JSON-RPC.",
+    "It allows resource caching.",
+    "It should be behind a firewall.",
+    "It operates as a cloud service."
+   ],
+   "correct": [
+    "It allows resource caching."
+   ],
+   "images": [],
+   "explanation": "Explanation: These are the REST constraints: -Client/server -Stateless -Cache -Uniform interface -Layered system -Code on demand",
+   "id": "course_final-091",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 92,
+   "question": "A packet is received by a server. The packet has a destination port number of 53. What protocol or service is requested?",
+   "choices": [
+    "DNS",
+    "NetBIOS (NetBT)",
+    "POP3",
+    "IMAP"
+   ],
+   "correct": [
+    "DNS"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-092",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 93,
+   "question": "Which statement accurately describes dynamic NAT?",
+   "choices": [
+    "It always maps a private IP address to a public IP address.",
+    "It provides an automated mapping of inside local to inside global IP addresses.",
+    "It provides a mapping of internal host names to IP addresses.",
+    "It dynamically provides IP addressing to internal hosts."
+   ],
+   "correct": [
+    "It provides an automated mapping of inside local to inside global IP addresses."
+   ],
+   "images": [],
+   "explanation": "Explanation: Dynamic NAT provides a dynamic mapping of inside local to inside global IP addresses. NAT is merely the one-to-one mapping of one address to another address without taking into account whether the address is public or private. DHCP is automatic assignment of IP addresses to hosts. DNS is mapping host names to IP addresses.",
+   "id": "course_final-093",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 94,
+   "question": "A packet is received by a server. The packet has a destination port number of 830. What protocol or service is requested?",
+   "choices": [
+    "NTP",
+    "DHCP",
+    "NETCONF",
+    "HTTPS"
+   ],
+   "correct": [
+    "NETCONF"
+   ],
+   "images": [],
+   "explanation": "Explanation: By default, the NETCONF server on the device runs on TCP port 830 and uses the SSH process for transport. A NETCONF session can be established by using an SSH client and specifying port 830 when connecting to the device",
+   "id": "course_final-094",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 95,
+   "question": "Which programming language is supported by the Webex xAPI to develop macros for on-device customization?",
+   "choices": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C++"
+   ],
+   "correct": [
+    "JavaScript"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-095",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 96,
+   "question": "Which Cisco management system is designed as the solution for Software-Defined Networking and runs on Nexus 9000 hardware?",
+   "choices": [
+    "Application Centric Infrastructure platform (ACI)",
+    "IOS XE",
+    "Nexus Operating System (NX-OS)",
+    "DNA Center"
+   ],
+   "correct": [
+    "Application Centric Infrastructure platform (ACI)"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-096",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 97,
+   "question": "A developer issues a Linux command python3 -m venv devenv. What is the developer trying to achieve?",
+   "choices": [
+    "to install the devnet tool sets in the Python 3 virtual environment named venv",
+    "to create a Python 3 virtual environment named devenv",
+    "to activate the Python 3 virtual environment named devenv",
+    "to enter the Python 3 virtual environment named venv using the devnet tool sets"
+   ],
+   "correct": [
+    "to create a Python 3 virtual environment named devenv"
+   ],
+   "images": [],
+   "explanation": "Explanation: The syntax for creating a Python 3 virtual environment in a Linux system is python3 -m venv virtual_environment , where venv is the Python 3 module to create a virtual environment and -m is the switch to tell Python 3 the venv module is to be used.",
+   "id": "course_final-097",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 99,
+   "question": "Two network engineers are discussing the methods used to forward frames through a switch. What is an important concept related to the cut-through method of switching?",
+   "choices": [
+    "The fragment-free switching offers the lowest level of latency.",
+    "Fast-forward switching can be viewed as a compromise between store-and-forward switching and fragment-free switching.",
+    "Fragment-free switching is the typical cut-through method of switching.",
+    "Packets can be relayed with errors when fast-forward switching is used."
+   ],
+   "correct": [
+    "Packets can be relayed with errors when fast-forward switching is used."
+   ],
+   "images": [],
+   "explanation": "Explanation: Fast-forward switching offers the lowest level of latency and it is the typical cut-through method of switching. Fragment-free switching can be viewed as a compromise between store-and-forward switching and fast-forward switching. Because fast-forward switching starts forwarding before the entire packet has been received, there may be times when packets are relayed with errors.",
+   "id": "course_final-099",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 100,
+   "question": "When thinking about the functional planes of a network, what is unique about the control plane?",
+   "choices": [
+    "It forwards data through a network device.",
+    "It manipulates data and outputs it in the XML format.",
+    "It includes the SNMP protocol.",
+    "It includes network traffic being processed by EIGRP or OSPF."
+   ],
+   "correct": [
+    "It includes network traffic being processed by EIGRP or OSPF."
+   ],
+   "images": [],
+   "explanation": "Explanation: Control Plane - The control plane of a network device processes the traffic that is required to maintain the functionality of the network infrastructure. The control plane consists of applications and protocols between network devices, such as routing protocols OSPF, BGP, and Enhanced Interior Gateway Routing Protocol (EIGRP). The control plane processes data in software.",
+   "id": "course_final-100",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 101,
+   "question": "Refer to the exhibit. If PC1 is communicating with a web server on the Internet, which two TCP/IP layers are responsible for encapsulating the message that requests data from that particular server and assigning a source port number? (Choose two.)",
+   "choices": [
+    "session",
+    "network",
+    "transport",
+    "physical",
+    "application"
+   ],
+   "correct": [
+    "transport",
+    "application"
+   ],
+   "images": [
+    "i264427v5n1_264427.png"
+   ],
+   "explanation": "",
+   "id": "course_final-101",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (network diagram): a Server Block and the Internet (with a web server) both connect through a Firewall to the core switch, which connects to the Internal LANs where PC1 sits.",
+   "duplicate_ids": []
+  },
+  {
+   "number": 102,
+   "question": "A network security administrator is evaluating products that automate threat containment through APIs when a threat is detected. Which Cisco product with the desired capability provides a rule-based engine for enabling policy-based network access to users and devices?",
+   "choices": [
+    "Identity Services Engine",
+    "Umbrella",
+    "Threat Grid",
+    "Advanced Malware Protection"
+   ],
+   "correct": [
+    "Identity Services Engine"
+   ],
+   "images": [],
+   "explanation": "Explanation: ISE (Cisco Identity Services Engine) provides a rule-based engine for enabling policy-based network access to users and devices. It enables you to enforce compliance and streamline user network access operations. With the ISE APIs, you can automate threat containment when a threat is detected. It integrates with existing identity deployments.",
+   "id": "course_final-102",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 106,
+   "question": "When thinking about the functional planes of a network, what is unique about the management plane?",
+   "choices": [
+    "It forwards data based on STP settings.",
+    "It is responsible for the switching of packets in hardware.",
+    "It includes protocols used to monitor network devices.",
+    "It includes applications and protocols used between network devices such as routers."
+   ],
+   "correct": [
+    "It includes protocols used to monitor network devices."
+   ],
+   "images": [],
+   "explanation": "Explanation: Management Plane - The management plane manages traffic destined for the network device itself. Examples include Secure Shell (SSH) and Simple Network Management Protocol (SNMP).",
+   "id": "course_final-106",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 107,
+   "question": "Which two data formats can RESTCONF use when requesting data or responding with data? (Choose two.)",
+   "choices": [
+    "XML",
+    "YANG",
+    "JSON",
+    "YAML",
+    "HTML"
+   ],
+   "correct": [
+    "XML",
+    "JSON"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "course_final-107",
+   "source_page": "course_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "A network engineer is working on a bash script in order to automate some mundane tasks needed by the department. Why would the engineer add a she-bang (#!) to the top of the script as shown:",
+   "choices": [
+    "The script file has specific commands that are preceded by the exclamation mark (!) and should not be executed.",
+    "The script file has specific commands that are preceded by the pound sign (#) and should not be executed.",
+    "The commands within the script fie are to have the output stored in the /bin/bash directory.",
+    "The script file has commands that need to be run in the bash shell."
+   ],
+   "correct": [
+    "The script file has commands that need to be run in the bash shell."
+   ],
+   "images": [],
+   "explanation": "Explanation: A she-bang is the pound sign (#) followed by an exclamation mark (!) and designates the path to the command interpreter. In this case, the interpreter is bash and bash will be used to interpret the script that follows.",
+   "id": "practice_final-001",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "An international manufacturing company is implementing an industrial internet of things plant infrastructure. The design requires that computing resources are located as close to the user as possible. Which cloud model is suitable for this situation?",
+   "choices": [
+    "public",
+    "edge",
+    "private",
+    "hybrid"
+   ],
+   "correct": [
+    "edge"
+   ],
+   "images": [],
+   "explanation": "Explanation: Edge clouds are located as close to the user as possible. Having computing power at the network edge is a benefit for internet of things devices such as cameras, industrial automation equipment, and autonomous vehicles.",
+   "id": "practice_final-002",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What are three tools used by developers for scanning code to check for well-known security issues? (Choose three.)",
+   "choices": [
+    "Viptela",
+    "Brakeman",
+    "VisualCodeGrepper",
+    "Docker",
+    "Bandit",
+    "VIRL"
+   ],
+   "correct": [
+    "Brakeman",
+    "VisualCodeGrepper",
+    "Bandit"
+   ],
+   "images": [],
+   "explanation": "Explanation: Because most code developers are not security experts, it is not uncommon to have security vulnerabilities inadvertently written into applications. To help mitigate this threat, there are code scanning tools that a developer can use to look for any well-know security issues embedded into the code. Examples of such tools are Bandit, Brakeman, and VisualCodeGrepper.",
+   "id": "practice_final-003",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "A network engineer is configuring a Jenkins job and finishing with the following script in order to trigger the build:",
+   "choices": [
+    "Test the script in Docker.",
+    "Run the job.",
+    "Open the Recent Changes option to verify the results of the job.",
+    "Manually run the samplerunning container."
+   ],
+   "correct": [
+    "Run the job."
+   ],
+   "images": [],
+   "explanation": "Explanation: Once a script is created, use the Build Now Jenkins menu option to run the job. If the script is done correctly, then the Stage View should show three green boxes. If errors are found, check the script for errors.",
+   "id": "practice_final-004",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "What are three ways to mitigate SQL injection threats? (Choose three.)",
+   "choices": [
+    "stored procedures configured with the \"db_owner\" rights set as default",
+    "stateless packet-filtering firewalls",
+    "dynamic queries",
+    "database firewalls",
+    "whitelist input validation",
+    "parameterized database queries"
+   ],
+   "correct": [
+    "database firewalls",
+    "whitelist input validation",
+    "parameterized database queries"
+   ],
+   "images": [],
+   "explanation": "Explanation: SQL injection is a basic web application attack technique which, if successful, can delete or change sensitive data or reveal it to the attacker. There are several methods to mitigate the threat of SQL injection such as the use of parameterized database queries, database firewalls, and whitelist input validation.",
+   "id": "practice_final-005",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "What is the purpose of adding salt to the password hashing process?",
+   "choices": [
+    "to decrease password complexity",
+    "to increase the length of a password",
+    "to make hashed passwords deterministic",
+    "to create a unique hash for every password"
+   ],
+   "correct": [
+    "to create a unique hash for every password"
+   ],
+   "images": [],
+   "explanation": "Explanation: Because of the deterministic nature of the hash function, hashed passwords are not unique. The same password always produces the same hash even if the password is created by different users. The salting process adds random data to the input of the hash function to guarantee a unique, nondeterministic output.",
+   "id": "practice_final-006",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "What is an operational characteristic of the local version control system?",
+   "choices": [
+    "It locks a file once it is checked out by a user to prevent modification by others.",
+    "It pushes a working copy of a file to a main repository after individuals have made changes.",
+    "It allows multiple individuals to edit a working copy of a file at the same time.",
+    "It stores a delta of two versions of a file as opposed to the file itself."
+   ],
+   "correct": [
+    "It stores a delta of two versions of a file as opposed to the file itself."
+   ],
+   "images": [],
+   "explanation": "Explanation: There are three types of version control systems: Local version control system Centralized version control system Distributed version control system The local version control system stores the delta between the two versions of the file, as opposed to the file itself. When the user wants to revert to the previous version of the file, the delta is reversed to get to the requested version.",
+   "id": "practice_final-008",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "An organization is using the Waterfall methodology for a software development project. In what order are the SDLC phases completed when using this method?",
+   "choices": [
+    "requirements and analysis, design, testing, implementation, deployment, maintenance",
+    "requirements and analysis, design, implementation, testing, deployment, maintenance",
+    "requirements and analysis, design, implementation, deployment, testing, maintenance",
+    "requirements and analysis, design, deployment, testing, implementation, maintenance"
+   ],
+   "correct": [
+    "requirements and analysis, design, implementation, testing, deployment, maintenance"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Software Development Life Cycle (SDLC) is the process of developing software from concept to final product. The process consists of six phases, with each phase using the results of the previous phase as input. The phases are ordered as follows: (1) requirements & analysis, (2) design, (3) implementation, (4) testing, (5) deployment, and (6) maintenance.",
+   "id": "practice_final-009",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "In which phase of the SDLC process does the product development team gather feedback from the potential customer on the desired features for the new software?",
+   "choices": [
+    "design",
+    "deployment",
+    "implementation",
+    "requirements and analysis"
+   ],
+   "correct": [
+    "requirements and analysis"
+   ],
+   "images": [],
+   "explanation": "Explanation: The first phase of the SDLC is the requirements and analysis phase. In this phase the product owner and qualified team members, using feedback from potential customers, gather the requirements for the software to be built.",
+   "id": "practice_final-010",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "Which Git command is used to get an initial copy on an existing Git repository for the first time?",
+   "choices": [
+    "git add",
+    "git copy",
+    "git clone",
+    "git repo"
+   ],
+   "correct": [
+    "git clone"
+   ],
+   "images": [],
+   "explanation": "Explanation: The command that you would use for the first copy of an existing Git repository is git clone .",
+   "id": "practice_final-011",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "Refer to the exhibit. Which message format is being used?",
+   "choices": [
+    "JSON",
+    "HTML",
+    "YAML",
+    "XML"
+   ],
+   "correct": [
+    "JSON"
+   ],
+   "images": [
+    "Q12Dev.jpg"
+   ],
+   "explanation": "Explanation: JSON objects are unordered sets of name/value pairs that begin and end with curly braces { }.",
+   "id": "practice_final-012",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": "Exhibit (message): edit-config with default-operation merge, test-operation set, some-integers [2,3,5,7,9], a-boolean true, more-numbers [2.25E+2,-1.0735]",
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "A student is learning Python using the interactive interpreter mode. The student issues these commands:",
+   "choices": [
+    "a method",
+    "a class",
+    "a function",
+    "a module"
+   ],
+   "correct": [
+    "a class"
+   ],
+   "images": [],
+   "explanation": "Explanation: In Python, classes are a means of bundling data storage and functionality in a single structure. Each class declaration defines a new object type. A class is defined with the class Class_Name() command.",
+   "id": "practice_final-013",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "How does YAML maintain data-structure hierarchy?",
+   "choices": [
+    "braces",
+    "brackets",
+    "parenthesis",
+    "indentation"
+   ],
+   "correct": [
+    "indentation"
+   ],
+   "images": [],
+   "explanation": "Explanation: In YAML the data-structure hierarchy is maintained by outline indentation.",
+   "id": "practice_final-015",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 16,
+   "question": "Which SDLC phase concludes with a high quality, bug-free, working piece of software that is ready for production?",
+   "choices": [
+    "design",
+    "deployment",
+    "implementation",
+    "testing"
+   ],
+   "correct": [
+    "testing"
+   ],
+   "images": [],
+   "explanation": "Explanation: There are six phases in the SDLC process. Requirements & analysis : The product owner and qualified team members gather the requirements for the software to be built. Design: Software architects and developers design the software based on the provided software requirement specification document. Implementation : Developers take the design documentation and develop the code according to that design. Testing : Test engineers take the code and install it into the testing environment so that they can follow the test plan. Deployment : The software is installed into the production environment. Maintenance : The development team provides support for customers and works on software improvements.",
+   "id": "practice_final-016",
+   "source_page": "practice_final",
+   "bank_type": "exam",
+   "module": null,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "A system administrator issues the apt-get upgrade command on a Linux operating system. What is the purpose of this command?",
+   "choices": [
+    "Every application installed will update itself to the latest version.",
+    "Operating system updates are downloaded and will be installed.",
+    "The remote repository of applications and dependencies will be updated to the latest version.",
+    "A specific application named upgrade will be installed."
+   ],
+   "correct": [
+    "Every application installed will update itself to the latest version."
+   ],
+   "images": [],
+   "explanation": "Explanation: When the apt-get upgrade command is isued in a Linux terminal, all installed applications will attempt to upgrade to the latest version available.",
+   "id": "m1-001",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "What is network programmability?",
+   "choices": [
+    "the ability to easily monitor network devices using traditional network protocols",
+    "the ability to program network devices using repettive manual configuration via a terminal and command sets",
+    "the ability to configure, monitor, and react to events in the network in real time",
+    "the ability to configure virtualized networks and deploy virtualized services in real time"
+   ],
+   "correct": [
+    "the ability to configure, monitor, and react to events in the network in real time"
+   ],
+   "images": [],
+   "explanation": "Explanation: Network programmability is defined as the abity to configure, monitor, and react to events in the network in real tme through the use of APIs.",
+   "id": "m2-001",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "A developer issues the Linux command pip3 freeze in an activated Python 3 virtual environment. What is the function that is provided by the command?",
+   "choices": [
+    "to output a list of installed Python packages",
+    "to lock the current virtual environment",
+    "to prepare the environment before installing a Python package",
+    "to deactivate the current virtual environment"
+   ],
+   "correct": [
+    "to output a list of installed Python packages"
+   ],
+   "images": [],
+   "explanation": "Explanation: The pip3 freeze Linux command is used to output a list of Python 3 packages installed in the current working environment.",
+   "id": "m3-001",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "A client is sending a REST API request to a web server. The request includes the need for data compression. Which three values are acceptable for the Accept-Encoding request header? (Choose three.)",
+   "choices": [
+    "*",
+    "xz",
+    "br",
+    "gzip",
+    "tar",
+    "zip"
+   ],
+   "correct": [
+    "*",
+    "br",
+    "gzip"
+   ],
+   "images": [],
+   "explanation": "Explanation: A few of the acceptable values for the Accept-Encoding request header are gzip, compress, deflate, br, identity, and *.",
+   "id": "m4-005",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "What command can a technician use on a computer to see if DNS is functioning properly?",
+   "choices": [
+    "ipconfig",
+    "net share",
+    "nslookup",
+    "net use"
+   ],
+   "correct": [
+    "nslookup"
+   ],
+   "images": [],
+   "explanation": "Explanation: The nslookup command can be used to test DNS functionality.",
+   "id": "m5-001",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "Which technique is used to help mitigate SQL injection attacks?",
+   "choices": [
+    "using the same owner or admin account in the web applications to connect to the database",
+    "limiting the read access to specific fields of a table or joins of tables",
+    "using stored procedures with the \"db_owner\" default role",
+    "assigning DBA or admin access rights to the application account"
+   ],
+   "correct": [
+    "limiting the read access to specific fields of a table or joins of tables"
+   ],
+   "images": [],
+   "explanation": "Explanation: Recommended practices for defending against SQL injection include the following: Not assigning DBA or admin type access rights to application accounts Avoid using the same owner/admin account in the web applications to connect to the database Limiting the read access to specific fields of a table or joins of tables Not assigning db_owner rights to stored procedures",
+   "id": "m6-001",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "What is an unopinionated component in a software ecosystem?",
+   "choices": [
+    "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary",
+    "a component that is classified as open source and does not require the implementation of specific vendor products",
+    "a component that may function in a limited ability in order to compensate for the selection of companion components or architectures",
+    "a component that requires a specific companion component in order to provide full stack implementation"
+   ],
+   "correct": [
+    "a component that does not show an increased preference for specific companion components or architectures unless those components or architectures are necessary"
+   ],
+   "images": [],
+   "explanation": "Explanation: An unopinionated component is a component that does not show a higher increased preference for specific companion components or architectures unless those components or architectures are necessary.",
+   "id": "m7-002",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 1,
+   "question": "Which underlying technology makes it possible for Cisco Umbrella to prevent a user from accessing a blocked site?",
+   "choices": [
+    "DNS",
+    "HTTP and HTTPS",
+    "Cisco Firewall",
+    "DHCP"
+   ],
+   "correct": [
+    "DNS"
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco Umbrella uses Domain Name Servers (DNS) to enforce security on the network. Umbrella blocks access to malicious domains, URLs, IPs, and files. The system looks at the nature of any DNS requests and takes an action based on its threat intelligence, which is a large-scale repository of historical data about threats. These requests can be deemed safe and allowed, malicious and blocked, or risky and sent to a proxy server for deeper inspection.",
+   "id": "m8-001",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "A Linux system administrator is searching the passwd file for any username that starts with a digit. Which grep command should the administrator use?",
+   "choices": [
+    "grep '(0-9}' /etc/passwd",
+    "grep '[0-9]' /etc/passwd",
+    "grep '_[0-9]' /etc/passwd",
+    "grep '^[0-9]' /etc/passwd"
+   ],
+   "correct": [
+    "grep '^[0-9]' /etc/passwd"
+   ],
+   "images": [],
+   "explanation": "Explanation: The grep Linux command can be used to process text line by line and to print any lines which match a specified pattern. The matching patterns are based on regular expression (regex) query modifiers used to select the appropriate content. Some regex query modifiers are as follows: _ (underscore): matches a space ^ (caret): indicates the start of a string $ (dollar sign): indicates the end of a string . (period): matches a single character, including a space * (asterisk): matches zero or more occurrences of the preceding character [ ] (square bracket): matches a character { } (curly bracket): repeats preceding character",
+   "id": "m1-002",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "What is the purpose of Cisco DevNet?",
+   "choices": [
+    "to be the central resource for everything about networking at Cisco",
+    "to teach everyone about the different Cisco API offerings and how to use them",
+    "to teach specific coding courses such as advanced Python and implementing REST APIs",
+    "to be the central resource for advanced software developers and the use of Cisco APIs"
+   ],
+   "correct": [
+    "to teach everyone about the different Cisco API offerings and how to use them"
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco DevNet exists to teach everyone about the different Cisco API offerings and how to use them. In addition, DevNet also teaches generic coding courses.",
+   "id": "m2-002",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "What are two characteristics of the Git version control system? (Choose two.)",
+   "choices": [
+    "It is a local vcs.",
+    "It is a centralized VCS.",
+    "It is a distributed VCS.",
+    "It is Microsoft proprietary.",
+    "It is Cisco proprietary.",
+    "It is open source"
+   ],
+   "correct": [
+    "It is a distributed VCS.",
+    "It is open source"
+   ],
+   "images": [],
+   "explanation": "Explanation: Git is available for MacOS, Windows, and Linux/Unix. It is an open source implementation of a distributed version control system.",
+   "id": "m3-002",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "What is the meaning of the term flow as it relates to the OAuth 2.0 authorization framework?",
+   "choices": [
+    "It is the number of requests contained in the token bucket.",
+    "It is a process for an API request to send authentication credentials to a web service.",
+    "It is a process for an API user to obtain an access token from the authorization server.",
+    "It is the sequence of data exchanged between a REST API request and a response."
+   ],
+   "correct": [
+    "It is a process for an API user to obtain an access token from the authorization server."
+   ],
+   "images": [],
+   "explanation": "Explanation: Open Authorization, also known as OAuth, combines authentication with authorization. It is usually the recommended form of authentication/authorization for REST APIs. OAuth 2.0 enables preregistered applications to get authorization to perform REST API requests on behalf of a user without the user needing to share its credentials with the application itself. OAuth enables the user to provide credentials directly to the authorization server to obtain an access token that can be shared with the application. This process of obtaining the token is called a flow. The application then uses this token in the REST API as a Bearer Authentication. The web service for the REST API then checks the Authorization server to make sure the token is valid and that the requester is authorized to perform the request.",
+   "id": "m4-006",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "Which two OSI model layers have the same functionality as two layers of the TCP/IP model? (Choose two.)",
+   "choices": [
+    "physical",
+    "data link",
+    "network",
+    "transport",
+    "session"
+   ],
+   "correct": [
+    "network",
+    "transport"
+   ],
+   "images": [],
+   "explanation": "Explanation: The OSI transport layer is functionally equivalent to the TCP/IP transport layer, and the OSI network layer is equivalent to the TCP/IP Internet layer. The OSI data link and physical layers together are equivalent to the TCP/IP network access layer. The OSI session layer (with the presentation layer) is included within the TCP/IP application layer.",
+   "id": "m5-002",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "Which security device is used to make responses to client requests look like they all come from the same server?",
+   "choices": [
+    "stateful firewall",
+    "forward proxy",
+    "reverse proxy",
+    "jump box"
+   ],
+   "correct": [
+    "reverse proxy"
+   ],
+   "images": [],
+   "explanation": "Explanation: The job of a reverse proxy is to make sure responses look like they all come from the same server. This is the opposite of a forward proxy, which makes requests from multiple computers look like they all come from the same client.",
+   "id": "m6-002",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "In the use of container technologies, what is a function of platform abstraction when considering the deployment of a product in a cloud environment?",
+   "choices": [
+    "Traditional complementary software components such as a database server and web server would be implemented as a single containerized application.",
+    "Applications require re-engineering in order to implement scalability and consolidation.",
+    "A containerized app can run on a generically-specified host environment.",
+    "Applications are aware of underlying hardware configurations and are customized to provide increased functionality."
+   ],
+   "correct": [
+    "A containerized app can run on a generically-specified host environment."
+   ],
+   "images": [],
+   "explanation": "Explanation: Platform abstraction is a benefit of cloud computing and uses container technologies to abstract apps and platforms away from one another, while operating on a generically-specified host environment.",
+   "id": "m7-003",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 2,
+   "question": "Which language is used by the NETCONF protocol to encode both the configuration data and protocol messages?",
+   "choices": [
+    "XML",
+    "YAML",
+    "HTML",
+    "JSON"
+   ],
+   "correct": [
+    "XML"
+   ],
+   "images": [],
+   "explanation": "Explanation: The NETCONF protocol uses an Extensible Markup Language (XML) based data encoding for both the configuration data and the protocol messages.",
+   "id": "m8-002",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What is the output when the following code is entered into a Python program interpreter?",
+   "choices": [
+    "[1,2,3,4,5,6]",
+    "[12]+[9]",
+    "[21]",
+    "[1,2,4,5,3,6]"
+   ],
+   "correct": [
+    "[1,2,4,5,3,6]"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Python interpreter performs concatenation of two lists without reordering the list elements",
+   "id": "m1-003",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What are two benefits of using APIs and integrations between applications? (Choose two.)",
+   "choices": [
+    "Integrations are used to verify compatibility between different applications.",
+    "Integrations enable the applications to run a Docker instance using Hyper-V.",
+    "Integrations enable the applications to be installed on any operating system type.",
+    "Integrations are used to provide applications the ability to notify each other when a specific event happens.",
+    "Integrations enable the applications to request actions from each other."
+   ],
+   "correct": [
+    "Integrations are used to provide applications the ability to notify each other when a specific event happens.",
+    "Integrations enable the applications to request actions from each other."
+   ],
+   "images": [],
+   "explanation": "Explanation: Integrations build a network between multiple applications. This allows the applications to share data, request actions to be performed, or even notify each other when a specific event happens.",
+   "id": "m2-003",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "What characteristic describes a formal code review?",
+   "choices": [
+    "Code is automatically sent for review by source code management systems once it is checked in.",
+    "The entire code base is reviewed in a series of meetings.",
+    "It utilizes a peer code review tool to identify code that needs retesting.",
+    "It provides direct interaction between the review team and the code author."
+   ],
+   "correct": [
+    "The entire code base is reviewed in a series of meetings."
+   ],
+   "images": [],
+   "explanation": "Explanation: In a formal code review developers have a series of meetings to review the whole code base and go over the code line by line, discussing each one in detail. The formal code review process promotes discussion between all of the reviewers.",
+   "id": "m3-004",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "What is a characteristic of a RESTful API?",
+   "choices": [
+    "It uses HTTP methods to gather and manipulate data.",
+    "It is a southbound API.",
+    "It facilitates the configuration changes from a network controller to end devices.",
+    "It supports a secure data transmission between a remote user and an enterprise network."
+   ],
+   "correct": [
+    "It uses HTTP methods to gather and manipulate data."
+   ],
+   "images": [],
+   "explanation": "Explanation: RESTful APIs use HTTP methods to gather and manipulate data. They are northbound APIs. Because there is a defined structure for how HTTP works, it offers a consistent way to interact with RESTful APIs from multiple vendors.",
+   "id": "m4-007",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What is one advantage of using the cut-through switching method instead of the store-and-forward switching method?",
+   "choices": [
+    "provides the flexibility to support any of Ethernet speeds",
+    "has a lower latency appropriate for high-performance computing applications",
+    "makes a fast forwarding decision based on the source MAC address of the frame",
+    "has a positive impact on bandwidth by dropping most of the invalid frames"
+   ],
+   "correct": [
+    "has a lower latency appropriate for high-performance computing applications"
+   ],
+   "images": [],
+   "explanation": "Explanation: Cut-through switching provides lower latency switching for high-performance computing (HPC) applications. Cut-through switching allows more invalid frames to cross the network than store-and-forward switching. The cut-through switching method can make a forwarding decision as soon as it looks up the destination MAC address of the frame.",
+   "id": "m5-003",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What is a characteristic of a virtual machine running on a PC?",
+   "choices": [
+    "A virtual machine needs a physical network adapter to connect to the Internet.",
+    "A virtual machine runs its own operating system.",
+    "The number of virtual machines that can be made available depends on the software resources of the host machine.",
+    "A virtual machine is not susceptible to threats and malicious attacks."
+   ],
+   "correct": [
+    "A virtual machine runs its own operating system."
+   ],
+   "images": [],
+   "explanation": "Explanation: Each virtual machine runs its own operating system. The number of virtual machines that can be made available depends on the hardware resources of the host machine. Virtual machines are susceptible to threats and malicious attacks, like physical computers. To connect to the Internet, a virtual machine uses a virtual network adapter, that acts like a physical adapter in a physical computer, connecting through the physical adapter on the host to establish a connection to the Internet.",
+   "id": "m6-003",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "A student is setting up the DEVASC-LAB VM and CSR1000v VM in VirtualBox that is installed on the local computer. Both VMs are imported to the VirtualBox successfully. The student starts both VMs and tries to verify communications to the CSR1000v VM by opening a web browser on the local computer and enters the URL https://192.168.56.101. After a few seconds, an error message displays that \"The connection has timed out\". How can the student verify the IP address assigned by DHCP to the CSR1000v virtual router?",
+   "choices": [
+    "Issue the ping 192.168.56.101 command on the local computer.",
+    "Issue the show ip interface brief command in the CSR1000v VM.",
+    "Issue the show running-config command in the CSR1000v VM.",
+    "Issue the ifconfig command in the CSR1000v VM."
+   ],
+   "correct": [
+    "Issue the show ip interface brief command in the CSR1000v VM."
+   ],
+   "images": [],
+   "explanation": "Explanation: The error message indicates that the destination host cannot be reached. There are a few possible causes, such as a misconfigured IP address on the destination host or a network connection issue. The show ip interface brief command can be used to verify the IP address configured on the CSR1000v virtual router. The show running-config command can be used to see how IP addresses are assigned to the interfaces; however, if an interface obtains the IP address from the DHCP server, the running-config will not show the actual IP address assigned. A ping command can be used to verify connectivity, but it cannot verify the IP address assigned within the CSR1000v VM if the ping fails.",
+   "id": "m7-004",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 3,
+   "question": "What are the three main capabilities provided by Cisco AMP? (Choose three.)",
+   "choices": [
+    "annihilation",
+    "detection",
+    "responses and automation",
+    "redirection",
+    "relaying",
+    "prevention"
+   ],
+   "correct": [
+    "detection",
+    "responses and automation",
+    "prevention"
+   ],
+   "images": [],
+   "explanation": "Explanation: There are three main categories of capabilities that AMP offers: Prevention - protects against identified threats in malware files by preventing breaches Detection - continuously monitors and records all file activity to detect malware Responses and automation - accelerates investigations and automatically remediates malware across PCs, Macs, Linux, servers, and mobile devices (Android and iOS).",
+   "id": "m8-003",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "What is displayed after the following code is entered into a Python interpreter?",
+   "choices": [
+    "nothing ( because the print command is wrong)",
+    "[22]+[10]",
+    "(syntaxerror)-...as there should not be a space between the numerical values",
+    "32"
+   ],
+   "correct": [
+    "32"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Python interpreter will perform the operation and display the result, 32.",
+   "id": "m1-004",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "What is the contracted response time after a developer opens a case-based ticket with the DevNet support service?",
+   "choices": [
+    "one week",
+    "five business days",
+    "one hour",
+    "one business day"
+   ],
+   "correct": [
+    "one business day"
+   ],
+   "images": [],
+   "explanation": "Explanation: The response time on developer support case-based tickets is within one business day.",
+   "id": "m2-004",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "Which fundamental Lean principle forms the basis from which all other Lean principles flow?",
+   "choices": [
+    "build integrity in",
+    "eliminate waste",
+    "deliver as fast as possible",
+    "amplify learning"
+   ],
+   "correct": [
+    "eliminate waste"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Lean SDLC methodology is built on seven principles which are focused on minimizing waste and maximizing value to the customer. The principle of eliminating waste is the most fundamental and it is the one from which all the other principles flow.",
+   "id": "m3-005",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "Which characteristic of the SOAP architecture specifies communication between all similar and dissimilar application types?",
+   "choices": [
+    "independence",
+    "interface uniformity",
+    "neutrality",
+    "extensibility"
+   ],
+   "correct": [
+    "independence"
+   ],
+   "images": [],
+   "explanation": "Explanation: SOAP was designed so that all types of applications can communicate with each other, no matter how dissimilar they are. The applications can be built using different programming languages, can run on different operating systems, and can be as dissimilar as possible.",
+   "id": "m4-008",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "Which solution improves web response time by deploying multiple web servers and DNS servers?",
+   "choices": [
+    "memcaching",
+    "distributed databases",
+    "sharding",
+    "load balancing"
+   ],
+   "correct": [
+    "load balancing"
+   ],
+   "images": [],
+   "explanation": "Explanation: Maintaining availability is the primary concern for companies working with big data. Some solutions to improve the availability include the following: Load Balancing – deploying multiple web servers and DNS servers to respond to requests simultaneously Distributed Databases – improving database access speed and demands Memcaching – offloading demand on database servers by keeping frequently requested data available in memory for fast access Sharding – partitioning a large relational database across multiple servers to improve search speed",
+   "id": "m5-004",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "What is a characteristic of the blue-green upgrade deployment strategy?",
+   "choices": [
+    "A new environment is created with the new code in it, while the old environment is held in reserve in case users experience problems.",
+    "The code changes are periodically rolled out in such a way that they do not impact current users.",
+    "The new code is deployed all at once to the old environment. If users experience no issues, it is then moved to the new environment.",
+    "The new code version is first rolled out to a subset of users. Changes can then be rolled back if the users experience any problems."
+   ],
+   "correct": [
+    "A new environment is created with the new code in it, while the old environment is held in reserve in case users experience problems."
+   ],
+   "images": [],
+   "explanation": "Explanation: With a blue-green deployment, an entirely new environment (blue) is created with the new code in it. The old environment (green) is held in reserve so if users in the new environment experience problems, traffic can be diverted back to the original environment. If there are no problems, the new environment becomes the production environment.",
+   "id": "m6-004",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "What is the historical correlation between software developers and IT operations?",
+   "choices": [
+    "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users.",
+    "Operations had the job of brainstorming applications. Developers had the job of testing that these applications work for users and the business.",
+    "Operations had the job of testing applications. Developers had the job of implementing these applications for clients.",
+    "Developers had the job of testing applications. Operations had the job of implementing these applications for clients."
+   ],
+   "correct": [
+    "Developers had the job of creating applications. Operations had the job of verifying that these applications work for users."
+   ],
+   "images": [],
+   "explanation": "Explanation: Historically, software developers had the job of creating applications, whereas IT operations had the job of ensuring that these applications work for users and the business.",
+   "id": "m7-005",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 4,
+   "question": "Which three functions are provided by Cisco Finesse REST APIS? (Choose three.)",
+   "choices": [
+    "They can be used to integrate into existing applications to add contact center functionality.",
+    "They can be used to get termination call detail (TCD) reports.",
+    "They can be used to get the call history of an agent.",
+    "They can be used to build a fully functioning agent desktop.",
+    "They can be used to build custom OpenSocial gadgets.",
+    "They can be used to build a script to automate tasks."
+   ],
+   "correct": [
+    "They can be used to integrate into existing applications to add contact center functionality.",
+    "They can be used to build a fully functioning agent desktop.",
+    "They can be used to build a script to automate tasks."
+   ],
+   "images": [],
+   "explanation": "Explanation: The Finesse REST APIs can be used to build a fully functioning agent desktop, integrate into existing applications to add contact center functionality, and build a script to automate tasks.",
+   "id": "m8-004",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "A Linux administrator is attempting to use a terminal to configure the network interface card on a computer. The administrator receives a message that the administrator does not have necessary permissions to perform the configuration. What should be done prior to the configuration command?",
+   "choices": [
+    "identify a different network interface",
+    "use a different user account",
+    "use the sudo command",
+    "change the chmod permissions on the network configuration file"
+   ],
+   "correct": [
+    "use the sudo command"
+   ],
+   "images": [],
+   "explanation": "Explanation: Multiple terminal commands require the use of the sudo command as a preface. The command sudo means \"super user do\". Sudo will require an administrator password be entered to complete a configuration. Malicious software usually cannot do damage on its own without knowing the password first.",
+   "id": "m1-005",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "Which Cisco DevNet developer support option provides 1-on-1 support to the members of the Solution Partner program?",
+   "choices": [
+    "case-based ticket",
+    "community forum",
+    "knowledge base",
+    "chat with DevNet"
+   ],
+   "correct": [
+    "case-based ticket"
+   ],
+   "images": [],
+   "explanation": "Explanation: The case-based ticket DevNet developer support option provides 1-on-1 support for certain Cisco APIs at a cost.",
+   "id": "m2-005",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "When a unified diff file is being reviewed, which symbol is used to indicate that a line has been added?",
+   "choices": [
+    "/dev/null",
+    "@@",
+    "+"
+   ],
+   "correct": [
+    "+"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "m3-006",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "In the REST API request URI example http://example.com/update/person?id=42&email=person%40example.com , which term describes the component example.com ?",
+   "choices": [
+    "query",
+    "path",
+    "scheme",
+    "authority"
+   ],
+   "correct": [
+    "authority"
+   ],
+   "images": [],
+   "explanation": "Explanation: REST API requests are essentially HTTP requests that follow the REST principles. REST API requests are made up of 4 major components, namely, Uniform Resource Identifier (URI), HTTP Method, Header, and Body. A URI is essentially the same format as a URL used in a browser to go to a web page. The syntax consists of the following components in syntax order: Scheme - specifies which HTTP protocol should be used. Authority – also called destination, consists of two parts, host and port. Path – also known as resource path, specifies the location of the resource on the website. Query – specifies query parameters with additional details for scope, for filtering, or to clarify a request.",
+   "id": "m4-009",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "What will a host on an Ethernet network do if it receives a frame with a unicast destination MAC address that does not match its own MAC address?",
+   "choices": [
+    "It will remove the frame from the media.",
+    "It will forward the frame to the next host.",
+    "It will strip off the data-link frame to check the destination IP address.",
+    "It will discard the frame."
+   ],
+   "correct": [
+    "It will discard the frame."
+   ],
+   "images": [],
+   "explanation": "Explanation: In an Ethernet network, each NIC in the network checks every arriving frame to see if the destination MAC address in the frame matches its own MAC address. If there is no match, the device discards the frame. If there is a match, the NIC passes the frame up to the next OSI layer.",
+   "id": "m5-005",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "Which mitigation method is effective against cross-site scripting?",
+   "choices": [
+    "requiring multifactor authentication",
+    "consistent hardening of systems and applications",
+    "sanitizing untrusted content",
+    "using only necessary features and secure packages downloaded from official sources and verified with a signature"
+   ],
+   "correct": [
+    "sanitizing untrusted content"
+   ],
+   "images": [],
+   "explanation": "Explanation: Cross-site scripting occurs when an attacker uses the dynamic functions of a site to inject malicious content into a page. Mitigating the attacks requires careful consideration of where untrusted content is included on a page, as well as sanitizing any untrusted content.",
+   "id": "m6-006",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "How is an error budget calculated in the DevOps/SRE culture?",
+   "choices": [
+    "An error budget is the difference between the SLO and the SLI.",
+    "An error budget is the difference between the SLO and 100% availability.",
+    "An error budget is the difference between the SLO and the SLA.",
+    "An error budget is the difference between the and 100% availability."
+   ],
+   "correct": [
+    "An error budget is the difference between the SLO and 100% availability."
+   ],
+   "images": [],
+   "explanation": "Explanation: An error budget is the difference between the Service Level Objective (SLO) and the expectation of 100% availability.",
+   "id": "m7-006",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 5,
+   "question": "Which two benefits are provided by the Python-based WebEx Teams SDK? (Choose two.)",
+   "choices": [
+    "It integrates with the Webex Devices API.",
+    "It provides error reporting.",
+    "It provides access to more API calls within Webex Teams.",
+    "It manages requests with pagination.",
+    "It is better supported than the Webex Teams APIs."
+   ],
+   "correct": [
+    "It provides error reporting.",
+    "It manages requests with pagination."
+   ],
+   "images": [],
+   "explanation": "Explanation: The SDK, available at GitHub as webexteamssdk, automatically handles pagination, simplifies authentication, provides built-in error reporting, and manages file attachments.",
+   "id": "m8-005",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "A network engineer needs to review the status of all network interfaces of a server running a Linux operating system. The engineer enters the command ifconfig -a . What is the resuit of this command?",
+   "choices": [
+    "All active interfaces will display information.",
+    "The ARP table of the computer will be displayed.",
+    "Both active and inactive interfaces will display information.",
+    "The host routing table will be displayed."
+   ],
+   "correct": [
+    "Both active and inactive interfaces will display information."
+   ],
+   "images": [],
+   "explanation": "Explanation: The ifconfig command with the -a modifier will provide information for all network interfaces, even if they are down.",
+   "id": "m1-006",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "Which technology trend enables an industry shift towards automation, applications, and integrations?",
+   "choices": [
+    "smaler and faster CPUs",
+    "advanced API capabilities",
+    "increased storage and RAM",
+    "increased intenet connection bandwidth"
+   ],
+   "correct": [
+    "advanced API capabilities"
+   ],
+   "images": [],
+   "explanation": "Explanation: APIs, known as application programming interfaces, are causing a shift in the IT industry through the replacement of repetitive manual tasks with automation.",
+   "id": "m2-006",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "What special characters are used to enclose JSON objects?",
+   "choices": [
+    "forward slash /",
+    "square brackets []",
+    "curly braces {}",
+    "parenthesis ()"
+   ],
+   "correct": [
+    "curly braces {}"
+   ],
+   "images": [],
+   "explanation": "Explanation: Individual objects in JSON comprise key/value pairs. These individual pairs may be surrounded by braces. JSON objects may also contain multiple key/value pairs that are separated by commas, in which case the entire object is enclosed in braces.",
+   "id": "m3-007",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "Which SOAP message root element defines the XML document as a SOAP message?",
+   "choices": [
+    "Meta tag",
+    "Body",
+    "Envelope",
+    "Header"
+   ],
+   "correct": [
+    "Envelope"
+   ],
+   "images": [],
+   "explanation": "",
+   "id": "m4-010",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 6,
+   "question": "What is the common term given to SNMP log messages that are generated by network devices and sent to the SNMP server?",
+   "choices": [
+    "auditing",
+    "warnings",
+    "acknowledgments",
+    "traps"
+   ],
+   "correct": [
+    "traps"
+   ],
+   "images": [],
+   "explanation": "Explanation: Network devices being monitored by the SNMP protocol can be configured to generate log messages that are sent to an SNMP server. The log messages, also called traps, contain all type of information from simple status reports to complex urgent conditions that require immediate attention.",
+   "id": "m5-006",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "Which attack involves the insertion of malicious code into SQL statements?",
+   "choices": [
+    "SQL injection",
+    "cross-site scripting",
+    "brute force",
+    "local file inclusion"
+   ],
+   "correct": [
+    "SQL injection"
+   ],
+   "images": [],
+   "explanation": "Explanation: SQL injection (SQLi) is basic web application attack technique where the attacker places malicious SQL code into a field on a web page and the server-side code submits it to the database without sanitizing it first. An SQLi attack, if successful, can delete or change sensitive data or reveal it to the attacker.",
+   "id": "m6-008",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "In reviewing a formalized agreement between an organization and a customer, what is the purpose of an SLI?",
+   "choices": [
+    "An SLI is a specific set of steps for slowing releases as errors occur.",
+    "An SLI is an easy to complete, external agreement that is set between the organization and the customer.",
+    "An SLI is a benchmark metric used to determine and describe SLOs.",
+    "An SLI is an agreed-upon number of errors per unit time."
+   ],
+   "correct": [
+    "An SLI is a benchmark metric used to determine and describe SLOs."
+   ],
+   "images": [],
+   "explanation": "Explanation: A Service Level Indicator or SLI is a real-world benchmark metric used to determine Service-Level Objectives (SLOs).",
+   "id": "m7-007",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "Which two statements describe the usage of Cisco Finesse JavaScript APIs? (Choose two.)",
+   "choices": [
+    "They can be used to get the call history of an agent.",
+    "They can be used to build custom gadgets to be placed into applications other than Finesse.",
+    "They can be used to embed existing web pages into a custom gadget.",
+    "They can be used to build a custom gadget for the agent state workflow.",
+    "They can be used to build a fully functioning agent desktop."
+   ],
+   "correct": [
+    "They can be used to embed existing web pages into a custom gadget.",
+    "They can be used to build a custom gadget for the agent state workflow."
+   ],
+   "images": [],
+   "explanation": "Explanation: The Finesse JavaScript APIs can be used to embed existing web pages into a custom gadget and build a custom gadget for the agent state workflow. The Finesse JavaScript APIs can only be used for gadgets in the out-of-the-box Finesse agent and supervisor desktop.",
+   "id": "m8-007",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "A system administrator attempts to determine what is causing a computer to perform slower than normal. The administrator issues the ps command. What is displayed by this command?",
+   "choices": [
+    "current RAM usage",
+    "current NIC status",
+    "active processes using CPU time",
+    "current HDD usage"
+   ],
+   "correct": [
+    "active processes using CPU time"
+   ],
+   "images": [],
+   "explanation": "Explanation: The ps command can be combined with multiple modifiers to display all processes running on a computer, view a specific process, or end processes that are using CPU time.",
+   "id": "m1-007",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "What resources are available in the Cisco DevNet sandboxes?",
+   "choices": [
+    "self-paced tutorials that cover a wide range of automation and integration topics",
+    "support for developer-related issues through the use of forums and live chats",
+    "a repository of sample code writen by developers",
+    "production-like development and code testing environments"
+   ],
+   "correct": [
+    "production-like development and code testing environments"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Cisco DevNet sandboxes provide users with a production-like development and testing environments for a lot of the Cisco technologies.",
+   "id": "m2-007",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "What are two features of the formal code review? (Choose two.)",
+   "choices": [
+    "For a quicker turnaround, it involves only one reviewer",
+    "It involves the developer going through code with the reviewer line-by-line.",
+    "It promotes discussion among all of the reviewers.",
+    "It allows the developer to make changes on the spot.",
+    "It involves a review of the entire code base in a series of meetings."
+   ],
+   "correct": [
+    "It promotes discussion among all of the reviewers.",
+    "It involves a review of the entire code base in a series of meetings."
+   ],
+   "images": [],
+   "explanation": "Explanation: In a formal code review, developers have a series of meetings to review the whole codebase and go over the code line by line, discussing each one in detail. The formal code review process promotes discussion among all of the reviewers.",
+   "id": "m3-008",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "Which type of credential information is used for the bearer authentication in REST APIs?",
+   "choices": [
+    "a username and password set by the client",
+    "a password encoded using Base64",
+    "an MD5 hash string generated by the client application",
+    "a string generated by an authentication server"
+   ],
+   "correct": [
+    "a string generated by an authentication server"
+   ],
+   "images": [],
+   "explanation": "Explanation: Bearer Authentication uses a bearer token, which is a string generated by an authentication server such as an Identity Service (IdS).",
+   "id": "m4-011",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 7,
+   "question": "What is the function of the Nslookup utility?",
+   "choices": [
+    "to manually force a client to send a DHCP request",
+    "to display all cached DNS entries on a host",
+    "to view the network settings on a host",
+    "to manually query the name servers to resolve a given host name"
+   ],
+   "correct": [
+    "to manually query the name servers to resolve a given host name"
+   ],
+   "images": [],
+   "explanation": "Explanation: Nslookup is a command-line utility that is used to send a query to DNS servers to resolve a specific host name to an IP address.",
+   "id": "m5-007",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "In software development, what is the purpose of a jump box?",
+   "choices": [
+    "to act as a single trusted machine used to launch connections to sensitive systems",
+    "to make all requests originating from within a network look like they come from the same source IP address",
+    "to filter packets based on Layer 3 and Layer 4 addressing",
+    "to receive incoming requests and forward them to multiple servers"
+   ],
+   "correct": [
+    "to act as a single trusted machine used to launch connections to sensitive systems"
+   ],
+   "images": [],
+   "explanation": "Explanation: A jump box is a server that users must first access in order to launch a connection to a target system. Because the jump box is the trusted machine for accessing sensitive systems, it provides an additional layer of security.",
+   "id": "m6-009",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "Which type of automation includes scripting that may be dangerous if the starting state is not completely known and controlled?",
+   "choices": [
+    "stateful",
+    "stateless",
+    "declarative",
+    "procedural"
+   ],
+   "correct": [
+    "procedural"
+   ],
+   "images": [],
+   "explanation": "Explanation: Procedural automation is a type of scripting that tends to be dangerous if a starting state is not completely known and controlled. If the script is run multiple times, the act of applying the same changes again to a correctly configured system may break it.",
+   "id": "m7-009",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "Why does the Meraki dashboard API return a 404 rather than a 403 code in response to a request with an invalid API key?",
+   "choices": [
+    "The 404 return code determines whether unauthorized users will try again.",
+    "The 403 return code would indicate that the client definitely has an invalid API key.",
+    "The 404 return code prevents the system from indicating the existence of resources to unauthorized users.",
+    "The 403 return code would indicate that there are no resources at that endpoint but the API key could be correct."
+   ],
+   "correct": [
+    "The 404 return code prevents the system from indicating the existence of resources to unauthorized users."
+   ],
+   "images": [],
+   "explanation": "Explanation: Fo the Meraki Dashboard API, every request must specify an API key via a request header. The API will return a 404 (rather than a 403) code in response to a request with a missing or incorrect API key. This behavior prevents leaking even the existence of resources to unauthorized users.",
+   "id": "m8-008",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "A user issues the Linux command ls -l myfile.sh to check the permission of the file myfile.sh.",
+   "choices": [
+    "Any user in the self group can read, modify, and execute the file.",
+    "The user with the user ID of self can modify the file.",
+    "The user with the user ID of devasc can modify the file.",
+    "All users can execute the file.",
+    "Any user in the test group can execute the file."
+   ],
+   "correct": [
+    "The user with the user ID of self can modify the file.",
+    "Any user in the test group can execute the file."
+   ],
+   "images": [],
+   "explanation": "Explanation: The ls -l command provides a \"long list\" format with more information that includes the following: File type: The hyphen (-) represents a regular file, the d represents a directory. File permissions: The first three letters represent the permissions of the file owner over the file, the next three letters represent the permissions of the group over the file, and the last three letters represent the permissions of others over the fie. The permission letters are as follows: r- read or copy the file w- write to the file x- execute the file hyphen (-) - no value assigned Number of hard links to the file: 1 in this case File owner, self in this case File group: test in this case File size. 15 bytes in this case",
+   "id": "m1-008",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "Which link is used from the Cisco DevNet Learning Labs to access the largest collections of labs?",
+   "choices": [
+    "Sections",
+    "Modules",
+    "Bookends",
+    "Tracks"
+   ],
+   "correct": [
+    "Tracks"
+   ],
+   "images": [],
+   "explanation": "Explanation: The DevNet Learning Labs consist of tracks that contain modules and modules contain labs. So, the largest collection of Learning Labs is tracks.",
+   "id": "m2-008",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "Which statement describes the Waterfall methodology of software development?",
+   "choices": [
+    "Process tasks are broken up into time-boxed iterations called sprints.",
+    "Each step in the process must be completed before the next step starts",
+    "It emphasizes elimination of wasted effort and maximizes customer value.",
+    "Multiple steps in the process are started simultaneously."
+   ],
+   "correct": [
+    "Each step in the process must be completed before the next step starts"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Waterfall model is the earliest SDLC approach. The phases follow a linear sequential flow, where each phase begins only when the previous phase is complete.",
+   "id": "m3-009",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "What are two purposes for using rate limits on public and unrestricted APIs? (Choose two.)",
+   "choices": [
+    "to avoid a server overloading from too many requests at the same time",
+    "to limit the number of authorization requests per API call",
+    "to provide better service and response time to all users",
+    "to ensure a client uses a multifactor authentication mechanism",
+    "to limit the number of passwords that a client can have in making API requests"
+   ],
+   "correct": [
+    "to avoid a server overloading from too many requests at the same time",
+    "to provide better service and response time to all users"
+   ],
+   "images": [],
+   "explanation": "Explanation: Using an API rate limit is a way for a web service to control the number of requests a user or application can make per defined unit of time and it is considered a best practice for public and unrestricted APIs. Some benefits of using rate limits include the following: Avoid a server overload from too many requests at once. Provide better service and response time to all users. Protect against a denial of service (DoS) attack.",
+   "id": "m4-012",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 8,
+   "question": "What type of address is 01-00-5E-0A-00-02?",
+   "choices": [
+    "an address that reaches every host in the network",
+    "an address that reaches every host inside a local subnet",
+    "an address that reaches a specific group of hosts",
+    "an address that reaches one specific host"
+   ],
+   "correct": [
+    "an address that reaches a specific group of hosts"
+   ],
+   "images": [],
+   "explanation": "Explanation: The multicast MAC address is a special value that begins with 01-00-5E in hexadecimal. It allows a source device to send a packet to a group of devices.",
+   "id": "m5-008",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "Which characters are used to separate batched SQL statements?",
+   "choices": [
+    "semicolons ;",
+    "colons :",
+    "parentheses ()",
+    "pound signs #"
+   ],
+   "correct": [
+    "semicolons ;"
+   ],
+   "images": [],
+   "explanation": "Explanation: A batch of SQL statements is a group of two or more SQL statements separated by semicolons.",
+   "id": "m6-010",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "What is an imperative procedure?",
+   "choices": [
+    "An ordered sequence of commands that is used to reach a specific end state.",
+    "A set of commands that require administrator privileges and can only be executed on a local system.",
+    "A set of commands that is piped to a remote host and immediately executed.",
+    "A set of commands that examines a target and only performs the tasks needed to achieve the desired state."
+   ],
+   "correct": [
+    "An ordered sequence of commands that is used to reach a specific end state."
+   ],
+   "images": [],
+   "explanation": "Explanation: An imperative procedure is an ordered sequence of commands aimed at achieving a specific goal.",
+   "id": "m7-010",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "What does Cisco ISE do when it identifies a user or device accessing the network?",
+   "choices": [
+    "It logs the access attempt.",
+    "It automatically and securely places the device and user into the right part of the network.",
+    "It processes the originating IP address according to a whitelist.",
+    "It quarantines the device and user until an administrator releases the quarantine."
+   ],
+   "correct": [
+    "It automatically and securely places the device and user into the right part of the network."
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco ISE identifies every single device and user accessing the network whether the device connects to a wired or wireless network or is on a remote network. Once identified, the connecting device and user are then automatically and securely placed into the right part of the network. This segmentation offers efficiency gains as one network can be used for two separate organizations. It enables secure wired access while also giving asset visibility.",
+   "id": "m8-009",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "Which Python command creates a conditional control structure?",
+   "choices": [
+    "def",
+    "delay",
+    "from",
+    "if"
+   ],
+   "correct": [
+    "if"
+   ],
+   "images": [],
+   "explanation": "Explanation: The commands if and else are used for conditional logic. The commands for and while are used for repetition logic, and from is for module importing.",
+   "id": "m1-009",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 9,
+   "question": "Which Cisco DevNet online resource provides use cases for network automation, including listing data and activating policies across domains?",
+   "choices": [
+    "Automation Exchange",
+    "DevNet Learning Labs",
+    "DevNet Sandbox",
+    "Code Exchange"
+   ],
+   "correct": [
+    "Automation Exchange"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Automation Exchange provides various use cases for network automation. Listing data Adding configurations Activating policies across domains Activating policies across users Activating policies across devices",
+   "id": "m2-009",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "What is clean code?",
+   "choices": [
+    "code that has no reviewer comments",
+    "code that has passed functional testing",
+    "code that is easy to read and understand",
+    "code that performs a discrete task"
+   ],
+   "correct": [
+    "code that is easy to read and understand"
+   ],
+   "images": [],
+   "explanation": "Explanation: Clean code is code that meets common principles that make it easy to read and understand. Some of these principles are as follows: Neat formatting to generally-accepted practices Code intuitive variables and objects Documented with appropriate comments Written so that it can be reused and easily unit-tested",
+   "id": "m3-010",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "Which HTTP response status code indicates that the user is not authenticated to access the site?",
+   "choices": [
+    "201",
+    "400",
+    "401",
+    "403",
+    "404"
+   ],
+   "correct": [
+    "401"
+   ],
+   "images": [],
+   "explanation": "Explanation: Most common HTTP status codes include the following: 200 – OK (using GET or POST to exchange data with an API successfully) 201 – Created (creating resources by using a REST API call successfully) 400 – Bad Request (The request from the client is failed due to client-side issue.) 401 – Unauthorized (The client is not authenticated to access site or API call.) 403 – Forbidden (The access request is not granted based on the supplied credentials.) 404 – Not Found (The page requested at HTTP URL location does not exist or is hidden.)",
+   "id": "m4-013",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "A high school in New York (school A) is using videoconferencing technology to establish student interactions with another high school (school B) in Russia. The videoconferencing is conducted between two end devices through the Internet. The network administrator of school A configures the end device with the IP address 209.165.201.10. The administrator sends a request for the IP address for the end device in school B and the response is 192.168.25.10. Neither school is using a VPN. The administrator knows immediately that this IP will not work. Why?",
+   "choices": [
+    "This is a link-local address.",
+    "This is a private IP address.",
+    "There is an IP address conflict.",
+    "This is a loopback address."
+   ],
+   "correct": [
+    "This is a private IP address."
+   ],
+   "images": [],
+   "explanation": "Explanation: The IP address 192.168.25.10 is an IPv4 private address. This address will not be routed over the Internet, so school A will not be able to reach school B. Because the address is a private one, it can be used freely on an internal network. As long as no two devices on the internal network are assigned the same private IP, there is no IP conflict issue. Devices that are assigned a private IP will need to use NAT in order to communicate over the Internet.",
+   "id": "m5-011",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "What is a philosophy for software deployment used in the field of DevOps?",
+   "choices": [
+    "OWASP",
+    "DevNet",
+    "SOAP",
+    "CI/CD"
+   ],
+   "correct": [
+    "CI/CD"
+   ],
+   "images": [],
+   "explanation": "Explanation: CI/CD (continuous integration/continuous delivery) is a philosophy for software deployment that figures prominently in the field of DevOps.",
+   "id": "m6-011",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "Which statement describes the declarative static model?",
+   "choices": [
+    "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state.",
+    "A declarative model will execute code that is sequentially task-driven instead of focusing on deployment-specific details.",
+    "A declarative model will follow a specific order of sequential steps in order to effect changes on a target system.",
+    "A declarative model will subdivide code into top-down sections and condition-driven handlers."
+   ],
+   "correct": [
+    "A declarative model will examine present circumstances and bring real infrastructure into alignment in order to reach a desired state."
+   ],
+   "images": [],
+   "explanation": "Explanation: The declarative model is used by middleware and incorporates deployment-specific details, examines present circumstances, and brings real infrastructure into alignment with the model in order to create a desired end product.",
+   "id": "m7-011",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "How are service profiles used by Cisco UCS Manager?",
+   "choices": [
+    "Cisco USC Manager uses an assigned service profile to each instance to define network policy.",
+    "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile.",
+    "Cisco UCS Manager saves service profiles to recover servers in case of data loss.",
+    "Cisco UCS Manager uses service profiles as templates to provision policies to multiple versions of the same server."
+   ],
+   "correct": [
+    "Cisco UCS Manager uses service profiles to assign a unique identity to the server associated with each profile."
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco UCS Manager uses service profiles to assign an identity to a server. Each profile can have a unique address and identifier. Each UCS server can only have one service profile association at a time.",
+   "id": "m8-010",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "A user enters the commands as shown. What is the result after the mv command is entered?",
+   "choices": [
+    "The file myfile.sh is copied to the /home/devasc/Desktop directory and renamed as myfile2.sh.",
+    "The file myfile.sh is copied to the /home/devasc/Desktop directory and replaces the file myfile2.sh.",
+    "The file myfile.sh is copied and renamed to myfile2.sh in the current directory.",
+    "The file myfile.sh is moved to the /home/devasc/Desktop directory and renamed as myfile2.sh."
+   ],
+   "correct": [
+    "The file myfile.sh is moved to the /home/devasc/Desktop directory and renamed as myfile2.sh."
+   ],
+   "images": [],
+   "explanation": "Explanation: The mv Linux command can be used either to move a file to a different directory or to rename a file. The syntax of the command is mv source destination . In this case, the destination filename is different and the file is renamed after it is moved.",
+   "id": "m1-010",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 10,
+   "question": "What are two requirements when participating in the DevNet Learning Labs? (Choose two.)",
+   "choices": [
+    "The user must successfully log in with a DevNet account.",
+    "The user must have successfully passed the 200-901 DEVASC exam.",
+    "The user must have an active internet connection.",
+    "The user must have purchased the DevNet Learning Labs activation license.",
+    "The user must install a developer environment on a local computer."
+   ],
+   "correct": [
+    "The user must successfully log in with a DevNet account.",
+    "The user must have an active internet connection."
+   ],
+   "images": [],
+   "explanation": "Explanation: When starting the DevNet Learning Labs for the first time there are only two requirements: You must have an internet connection. You must have a DevNet account.",
+   "id": "m2-010",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "What is the role of the view component in the Model-View-Controller (MVC) flow?",
+   "choices": [
+    "It accepts selected data and displays the visual representation to the user.",
+    "It accepts the input and applies the required rules to format the data.",
+    "It requests user input and manipulates it to fit the format for the model.",
+    "It manages the data, logic and rules of the application."
+   ],
+   "correct": [
+    "It accepts selected data and displays the visual representation to the user."
+   ],
+   "images": [],
+   "explanation": "Explanation: The Model-View-Controller (MVC) design pattern abstracts code and responsibility into three distinct components: model, view, and controller. The controller accepts the input, manipulates the data, and sends the manipulated data to the model. The view is the visual representation of the data. There can be multiple representations of the same data.",
+   "id": "m3-012",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 14,
+   "question": "Which API architectural style uses an XML-based messaging protocol to communicate between applications?",
+   "choices": [
+    "SOAP",
+    "REST",
+    "NFS",
+    "XML-RPC"
+   ],
+   "correct": [
+    "SOAP"
+   ],
+   "images": [],
+   "explanation": "Explanation: Simple Object Access Protocol (SOAP) is a messaging protocol used when applications need to communicate. It is an XML-based protocol that was developed by Microsoft.",
+   "id": "m4-014",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "Consider the following routing table entry for R1:",
+   "choices": [
+    "It is the interface on the final destination router that is directly connected to the 10.1.1.0/24 network.",
+    "It is the R1 interface through which the EIGRP update was learned.",
+    "It is the interface on the next-hop router when the destination IP address the 10.1.1.0/24 network.",
+    "It is the interface on R1 used to send data that is destined for 10.1.1.0/24."
+   ],
+   "correct": [
+    "It is the interface on R1 used to send data that is destined for 10.1.1.0/24."
+   ],
+   "images": [],
+   "explanation": "Explanation: The Serial0/0/0 indicates the outgoing interface on R1 that is used to send packets for the 10.1.1.0/24 destination network.",
+   "id": "m5-013",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "Which statement is a characteristic of the broken access control threat to web applications?",
+   "choices": [
+    "It allows attackers to access, and potentially change, serialized versions of data and objects.",
+    "It allows an attacker to use the dynamic functions of a site to inject malicious content into the page.",
+    "It allows users to circumvent existing authentication requirements.",
+    "It allows attackers to steal sensitive information such as passwords or personal information."
+   ],
+   "correct": [
+    "It allows users to circumvent existing authentication requirements."
+   ],
+   "images": [],
+   "explanation": "Explanation: Broken access control can occur if a developer builds an application that enables users to circumvent existing authentication requirements. Developers must make sure to protect all resources and functions that need to be protected on the server side, ensuring that all access is authorized.",
+   "id": "m6-012",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 14,
+   "question": "An engineer has just created a backup file of a Cisco VIRL network simulation. Which command should be used to compare the most recent .virl file with the previous backup file?",
+   "choices": [
+    "diff",
+    "pyats",
+    "knife",
+    "source",
+    "list"
+   ],
+   "correct": [
+    "diff"
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco VIRL saves a topology in a file that can then be opened in an editor for review. The .virl file also provides a method for determining if configuration drift has occurred on the simulation by using the diff command to compare a newly-extracted .virl file with the original .virl file used to launch the simulation.",
+   "id": "m7-014",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "Which function does the AXL interface provide for users?",
+   "choices": [
+    "provisions and manages objects in the Unified Communication Management Administration Console",
+    "looks up the top ten OWASP vulnerabilities and identifies which endpoints are vulnerable",
+    "updates network device configurations with a rollback mechanism",
+    "provisions Webex Devices and customizes each display"
+   ],
+   "correct": [
+    "provisions and manages objects in the Unified Communication Management Administration Console"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Administrative XML Web Service (AXL) is an XML/SOAP based interface that provides a mechanism for inserting, retrieving, updating, and removing data from the Unified Communication configuration database.",
+   "id": "m8-011",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "A student new to Python is working in the interactive interpreter mode. The student issues the commands:",
+   "choices": [
+    "list",
+    "array",
+    "tuple",
+    "dictionary"
+   ],
+   "correct": [
+    "dictionary"
+   ],
+   "images": [],
+   "explanation": "Explanation: In Python, a variable using the dictionary type can be created by placing a sequence of elements within curly braces {}, separated by a comma. Each element in a dictionary holds a pair of values, one being the key and the other corresponding pair element being its assigned value, in the format of key:value.",
+   "id": "m1-011",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 11,
+   "question": "What are three major areas that comprise DevNet? (Choose three.)",
+   "choices": [
+    "on-line training site for various technology vendors",
+    "interactive and collaborative developer community",
+    "integrated community forums",
+    "automation and programmability standards development area",
+    "providing support for website creation and maintenance",
+    "coordinated developer tools"
+   ],
+   "correct": [
+    "interactive and collaborative developer community",
+    "integrated community forums",
+    "coordinated developer tools"
+   ],
+   "images": [],
+   "explanation": "Explanation: DevNet is a fully-integrated developer program consisting of a website, an interactive developer community, coordinated developer tools, integrated community forums, and sandboxes.",
+   "id": "m2-011",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "A developer is constructing some functions in Python. When is a function referred to as a module in Python?",
+   "choices": [
+    "when the function is declared during the execution of a Python program",
+    "when the function is initiated during the execution of a Python program",
+    "when the function is packaged in a single Python file",
+    "when the function is used for the first time"
+   ],
+   "correct": [
+    "when the function is packaged in a single Python file"
+   ],
+   "images": [],
+   "explanation": "Explanation: Modules are a way to build independent and self-contained blocks of code that can be reused. A module consists of a set of functions and typically contains an interface that allows for integration with other modules. A module, in Python, is a Python file with packaged functions.",
+   "id": "m3-013",
+   "source_page": "m3",
+   "bank_type": "exam",
+   "module": 3,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "A network engineer is learning about Rest APIs. When executing a particular API, the server responds with curl. How is this information useful?",
+   "choices": [
+    "Curl shows the retrieved information in JSON format.",
+    "Curl shows how to access the content displayed in the response body using curl.",
+    "Curl shows the information the API returned from the server.",
+    "Curl shows the URL used in the API request."
+   ],
+   "correct": [
+    "Curl shows how to access the content displayed in the response body using curl."
+   ],
+   "images": [],
+   "explanation": "Explanation: Clients for URLs (curl or cURL) is a tool used on many platforms for getting or sending files using URL syntax. The information returned can be copied, then used from a command prompt with the curl command to either get information using the GET parameter or send data using the POST parameter.",
+   "id": "m4-015",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 14,
+   "question": "A device has an IPV6 address listed as 2001:0DB8:75a3:0214:0607:1234:aa10:ba01. What is the interface ID of the device?",
+   "choices": [
+    "2001:0DB8:75a3",
+    "ba01",
+    "0607:1234:aa10:ba01",
+    "2001:0DB8"
+   ],
+   "correct": [
+    "0607:1234:aa10:ba01"
+   ],
+   "images": [],
+   "explanation": "Explanation: An IPv6 address comprises 128 bits represented as eight blocks of four hexadecimal digits. The last four blocks of the address represent the interface ID and is controlled by the administrator.",
+   "id": "m5-014",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "Which technology is used to containerize applications and allows them to run in a variety of environments?",
+   "choices": [
+    "Docker",
+    "GitHub",
+    "VirtualBox",
+    "Cisco DNA"
+   ],
+   "correct": [
+    "Docker"
+   ],
+   "images": [],
+   "explanation": "Explanation: Docker is a technology designed to make it easier to create, deploy, and run applications by using containers. Containers allow a developer to package an application with all of the parts the application needs to run in most any environment.",
+   "id": "m6-013",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "While working in the Ansible code structure, which type of file contains a sequence of tasks, executed in top-down order?",
+   "choices": [
+    ".virl",
+    ".yml",
+    ".py",
+    ".txt"
+   ],
+   "correct": [
+    ".yml"
+   ],
+   "images": [],
+   "explanation": "Explanation: In the Ansible code structure, work is separated into YAML (.yml) files that contain a sequence of tasks, executed in top-down order.",
+   "id": "m7-015",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "What are three primary YANG sources in Cisco NSO? (Choose three.)",
+   "choices": [
+    "mapping model",
+    "data models from devices",
+    "NSO data model",
+    "configuration models",
+    "communication model",
+    "YANG service models"
+   ],
+   "correct": [
+    "data models from devices",
+    "NSO data model",
+    "YANG service models"
+   ],
+   "images": [],
+   "explanation": "Explanation: In Cisco NSO, there are three primary YANG sources: NSO data model - defining the built-in functions of NSO. Data models from devices - such as native YANG modules from NETCONF devices, generated YANG modules from SNMP MIBs, or reverse engineered YANG modules from a CLI device. YANG service models - When developing service applications, a developer specifies the service model, such as a BGP peer, firewall setting, or MPLS VPN, in YANG.",
+   "id": "m8-012",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "A student new to Python is working in the interactive interpreter mode. The student issues the command:",
+   "choices": [
+    "ipAddress{'R2'}",
+    "ipAddress['R2']",
+    "ipAddress[R2]",
+    "ipAddress{\"R2\"}"
+   ],
+   "correct": [
+    "ipAddress['R2']"
+   ],
+   "images": [],
+   "explanation": "Explanation: In Python, an object inside a dictionary structure is referenced by using its key and the key is enclosed with brackets [ ].",
+   "id": "m1-012",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 12,
+   "question": "What resources are available in the Cisco DevNet Code Exchange?",
+   "choices": [
+    "a repository of sample code written by other developers",
+    "production-like development and code testing environments",
+    "support for developer-related issues using forums and live chats",
+    "self-paced tutorials that cover a wide range of automation and integration topics"
+   ],
+   "correct": [
+    "a repository of sample code written by other developers"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Cisco DevNet Code Exchange provides a repository of sample code to be shared with other developers.",
+   "id": "m2-012",
+   "source_page": "m2",
+   "bank_type": "exam",
+   "module": 2,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 16,
+   "question": "In which situation would a synchronous API be used?",
+   "choices": [
+    "when a server is not part of the process",
+    "when the original API request or data from the request is delayed",
+    "when data is being retrieved from a database",
+    "when the client is not required to take action"
+   ],
+   "correct": [
+    "when data is being retrieved from a database"
+   ],
+   "images": [],
+   "explanation": "Explanation: Synchronous APIs respond to a request directly and immediately such as when data is being provided from memory or a database. In contrast, asynchronous APIs may send a notification that a data request has been made, send the data later, trigger a callback to provide the data, or process the request and then take an appropriate action. The action can be immediate, but it does not have to be.",
+   "id": "m4-016",
+   "source_page": "m4",
+   "bank_type": "exam",
+   "module": 4,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "In what two situations would UDP be the preferred transport protocol over TCP? (Choose two.)",
+   "choices": [
+    "when applications need to guarantee that a packet arrives intact, in sequence, and unduplicated",
+    "when a faster delivery mechanism is needed",
+    "when delivery overhead is not an issue",
+    "when applications do not need to guarantee delivery of the data",
+    "when destination port numbers are dynamic"
+   ],
+   "correct": [
+    "when a faster delivery mechanism is needed",
+    "when applications do not need to guarantee delivery of the data"
+   ],
+   "images": [],
+   "explanation": "Explanation: UDP is a stateless protocol, which means that neither device on either end of the conversation must keep track of the conversation. As a stateless protocol, UDP is used as the Layer 4 protocol for applications that need speedy (best-effort) delivery. An example of such traffic is the transport of digitized voice or video.",
+   "id": "m5-015",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 15,
+   "question": "What is used to isolate the different parts of a running container?",
+   "choices": [
+    "wrappers",
+    "namespaces",
+    "control groups",
+    "union file systems"
+   ],
+   "correct": [
+    "namespaces"
+   ],
+   "images": [],
+   "explanation": "Explanation: Containers use namespaces to define and isolate each part of an application within a container.",
+   "id": "m6-015",
+   "source_page": "m6",
+   "bank_type": "exam",
+   "module": 6,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 16,
+   "question": "What is a standard command to create a Python virtual environment?",
+   "choices": [
+    "sudo apt-get install python3-pip",
+    "pip install [options] [package-index-options]...",
+    "python3 -m venv /path/to/new/virtual/environment",
+    "source bin/activate"
+   ],
+   "correct": [
+    "python3 -m venv /path/to/new/virtual/environment"
+   ],
+   "images": [],
+   "explanation": "Explanation: The venv command is executed to create lightweight virtual environments.",
+   "id": "m7-016",
+   "source_page": "m7",
+   "bank_type": "exam",
+   "module": 7,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "What are two tasks a network administrator can perform with Cisco UCS Director? (Choose two.)",
+   "choices": [
+    "Manage multiple Cisco UCS Manager appliances.",
+    "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.",
+    "Load-balance data traffic.",
+    "Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications.",
+    "Create a direct line of communication between Cisco and non-Cisco components."
+   ],
+   "correct": [
+    "Deploy and add capacity to converged infrastructures in a consistent and repeatable manner.",
+    "Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications."
+   ],
+   "images": [],
+   "explanation": "Explanation: Cisco UCS Director extends the unification of computing and networking layers through Cisco UCS to provide visibility and management of data center infrastructure components. A network administrator can use Cisco UCS Director to configure, administer, and monitor supported Cisco and non-Cisco components. The administrator can use UCS Director to perform the following tasks: Create, clone, and deploy service profiles and templates for all Cisco UCS servers and compute applications. Monitor organizational usage, trends, and capacity across a converged infrastructure on a continuous basis. Deploy and add capacity to converged infrastructures in a consistent, repeatable manner. Manage, monitor, and report on data center components, such as Cisco UCS domains or Cisco Nexus network devices. Extend virtual service catalogs to include services for your physical infrastructure. Manage secure multitenant environments to accommodate virtualized workloads that run with nonvirtualized workloads.",
+   "id": "m8-013",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 13,
+   "question": "A user issues a series of Linux commands as shown.",
+   "choices": [
+    "/",
+    "/home",
+    "/home/devasc/",
+    "/home/devasc/labs",
+    "/home/devasc/labs/ansible"
+   ],
+   "correct": [
+    "/home/devasc/labs"
+   ],
+   "images": [],
+   "explanation": "Explanation: The Linux cd command is used to change from the current directory to another directory in the file system. The cd command with the .. or ../ option will move up a single directory. This option can be used in the format of multiple ../.. to move back multiple directories in the directory structure.",
+   "id": "m1-013",
+   "source_page": "m1",
+   "bank_type": "exam",
+   "module": 1,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 18,
+   "question": "What IPv4-related DNS record type is used by a DNS server in response to a host requesting for a web server address via the URL?",
+   "choices": [
+    "AAAA record",
+    "NS record",
+    "A record",
+    "MX record"
+   ],
+   "correct": [
+    "A record"
+   ],
+   "images": [],
+   "explanation": "Explanation: A DNS server uses an A record type for an IPv4 end device address. The AAAA record is for an IPv6 end device address. The MX record is used to map the domain name to mail exchange servers. The NS record indicates the authoritative name server.",
+   "id": "m5-018",
+   "source_page": "m5",
+   "bank_type": "exam",
+   "module": 5,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  },
+  {
+   "number": 14,
+   "question": "What are two actions taken by Firepower for traffic control? (Choose two.)",
+   "choices": [
+    "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs",
+    "controlling which websites are available to the users on the network",
+    "shutting down the network in the event of a DDOS attack",
+    "directing heavy data traffic to free servers",
+    "load balancing during high-traffic time periods"
+   ],
+   "correct": [
+    "using security intelligence data to filter traffic, including IP addresses, address blocks, domain names, and URLs",
+    "controlling which websites are available to the users on the network"
+   ],
+   "images": [],
+   "explanation": "Explanation: Firepower takes multiple actions for traffic control including these: Inspecting, logging, and acting on network traffic. Using security intelligence data to filter traffic. A network administrator can create lists of blocked and allowed IP addresses or address blocks, domain names, or URLs. Controlling which websites are available to users on the network. Blocking or filtering certain files based on lists containing data about the files. Rate limiting network traffic based on access control. Creating protective measures to redirect traffic to a \"sinkhole server\", where the firewall can fake a DNS query response for a known malicious domain.",
+   "id": "m8-014",
+   "source_page": "m8",
+   "bank_type": "exam",
+   "module": 8,
+   "exhibit_text": null,
+   "duplicate_ids": []
+  }
+ ]
+}
