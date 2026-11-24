@@ -1,0 +1,727 @@
+{
+  "module": "M3",
+  "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+  "sections": [
+    {
+      "heading": "Continuous systems and modeling strategy",
+      "paragraphs": [
+        "A continuous-state model describes variables evolving over continuous time; its input and output need not be identical or constant. Page 5 incorrectly claims signals are the same and do not vary. Applications listed include dam and tunnel engineering, missile trajectories, airport passenger flow, and business planning.",
+        "Translate the system into quantitative equations, then choose a numerical implementation. State variables must collectively capture the relevant dynamics to the accuracy required; state equations describe their change, often with time as the independent variable. Output equations specify quantities requested by users."
+      ],
+      "pages": [
+        5,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "heading": "Reservoir and differential-equation classes",
+      "paragraphs": [
+        "For the slide’s ideal infinite-capacity reservoir, q is the contents, x is signed input rate, dq/dt = x(t), and y = q. Thus q(t) = q(0) + integral from 0 to t of x(s) ds; if q(0)=4 and x=2 for three time units, q(3)=10.",
+        "The slides classify predator–prey models as first-order ODEs, orbital motion and RLC circuits as second-order ODEs, and wave or heat models as PDEs. A second-order ODE can be expressed as a first-order system by introducing velocity as another state."
+      ],
+      "pages": [
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "heading": "Orbit states and outputs",
+      "paragraphs": [
+        "For a planetary orbit the state vector contains three-dimensional position and velocity. Position derivatives are velocities; under the slide’s central-gravity model acceleration is −GM r-vector/|r-vector|³. The state can be used to calculate desired outputs such as distance or speed."
+      ],
+      "pages": [
+        9,
+        11
+      ]
+    },
+    {
+      "heading": "Predator–prey dynamics",
+      "paragraphs": [
+        "With prey x and predators y, the general model is dx/dt = x f(x,y), dy/dt = y g(x,y). For positive populations, f and g are per-capita growth rates. Increasing predators suppresses prey growth; increasing prey supports predator growth. The qualitative cycle goes from abundant prey to more predators, falling prey, predator starvation, and prey recovery.",
+        "The Lotka–Volterra choice is f=b−py and g=rx−d, giving dx/dt=x(b−py) and dy/dt=y(rx−d). With positive parameters the positive equilibrium is (x,y)=(d/r,b/p). For b=p=r=d=1 it is (1,1), matching the slide’s phase-plane example.",
+        "For positive x,y the conserved quantity is C=b ln(y)−py−rx+d ln(x). Page 16 omits r before x; its expression is valid when r=1, as on page 17. The correction follows by differentiating C using the two state equations. Parameter values and initial conditions determine the trajectory."
+      ],
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "heading": "Numerical integration",
+      "paragraphs": [
+        "Forward Euler approximates the derivative using the current slope: x(n+1)=x(n)+h f(t(n),x(n)). For x′=x, x(0)=1 and h=0.2, one Euler step gives 1.2.",
+        "The slide’s Runge–Kutta formula is the explicit midpoint RK2 method: t_mid=t0+h/2, x_mid=x0+(h/2)f(t0,x0), then x1=x0+h f(t_mid,x_mid). For the same example, x_mid=1.1 and x1=1.22. These are approximations, not exact solutions."
+      ],
+      "pages": [
+        18,
+        19
+      ]
+    },
+    {
+      "heading": "MATLAB scripts, functions, input and output",
+      "paragraphs": [
+        "Scripts and function files both use the .m extension. Scripts execute commands in the workspace; functions can take inputs, return outputs, and use local internal variables. The editor can be opened with edit or edit followed by a filename.",
+        "input(\"Enter a number\") reads a numerical expression; input(\"Enter text\", \"s\") reads text. disp(X) displays a value without the variable name, whereas fprintf supports formatted output such as %s for text and %d for an integer; \\n produces a newline."
+      ],
+      "pages": [
+        27,
+        29,
+        30,
+        34,
+        35,
+        36,
+        38,
+        40
+      ]
+    },
+    {
+      "heading": "MATLAB arrays and plots",
+      "paragraphs": [
+        "Examples include row vectors a=1:2, column vectors b=(1:3)' and matrix addition A+B. The example with a and b uses compatible implicit expansion to form a 3-by-2 result.",
+        "To graph a function, define x and y, then use plot(x,y). xlabel, ylabel, title, and grid on annotate the figure; axis equal uses equal scales and axis square makes the plot box square. A LineSpec can specify color, line style, and marker."
+      ],
+      "pages": [
+        33,
+        47,
+        48
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size((1:3)' + (1:2))",
+          "expected": "[3 2]"
+        }
+      ]
+    },
+    {
+      "heading": "MATLAB selection and loops",
+      "paragraphs": [
+        "if, elseif, else and end select branches; switch selects cases and otherwise handles unmatched cases. The age example on page 62 does not classify ages 20 and 60 correctly and can classify nonpositive ages as senior; check boundaries explicitly rather than copying it.",
+        "The page 61 parity example is erroneous: % starts a MATLAB comment, not a remainder operation, and both branches print Even number. Use mod(x,2)==0 for even integers and print Odd number in the other branch.",
+        "menu displays choices and returns the selected button number. A for loop iterates over a supplied sequence such as 1:10 or 1.0:-0.2:0.0; a while loop repeats while its condition is true."
+      ],
+      "pages": [
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "What distinguishes a continuous-state system model?",
+      "options": [
+        "State variables evolve continuously over time",
+        "Input and output must be identical",
+        "All variables must be integers",
+        "Outputs cannot vary"
+      ],
+      "correct_answer": "State variables evolve continuously over time",
+      "pages": [
+        5,
+        10
+      ]
+    },
+    {
+      "question": "For the reservoir on page 6, what does q(t) represent?",
+      "options": [
+        "Current contents",
+        "Input rate",
+        "Reservoir capacity",
+        "Elapsed time"
+      ],
+      "correct_answer": "Current contents",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "question": "In the ideal reservoir, which state equation applies?",
+      "options": [
+        "dq/dt=x(t)",
+        "dq/dt=q(t)",
+        "x(t)=q(t)²",
+        "dq/dt=−q(t)"
+      ],
+      "correct_answer": "dq/dt=x(t)",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "question": "If initial reservoir contents are 4 and input rate is 2 for 3 time units, what are the final contents?",
+      "options": [
+        "10",
+        "6",
+        "12",
+        "2"
+      ],
+      "correct_answer": "10",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "question": "What output does the page 6 reservoir model specify?",
+      "options": [
+        "y(t)=q(t)",
+        "y(t)=dq/dt always",
+        "y(t)=0",
+        "y(t)=1/q(t)"
+      ],
+      "correct_answer": "y(t)=q(t)",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "question": "Which is a listed continuous simulation application?",
+      "options": [
+        "Missile trajectory simulation",
+        "Only alphabetic sorting",
+        "Static file compression",
+        "Password hashing"
+      ],
+      "correct_answer": "Missile trajectory simulation",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "question": "What is the first broad step in the slide’s modeling strategy?",
+      "options": [
+        "Translate the physical system into quantitative equations",
+        "Select a plot color",
+        "Discard the governing physics",
+        "Set all state variables to zero"
+      ],
+      "correct_answer": "Translate the physical system into quantitative equations",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "question": "What must a useful state-variable set provide?",
+      "options": [
+        "Sufficient information for relevant dynamics at required accuracy",
+        "Only the final output",
+        "Only integer values",
+        "A list of software filenames"
+      ],
+      "correct_answer": "Sufficient information for relevant dynamics at required accuracy",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "question": "What do state equations describe?",
+      "options": [
+        "How the state changes with an independent variable",
+        "Only how to format output text",
+        "The user interface color",
+        "The file extension"
+      ],
+      "correct_answer": "How the state changes with an independent variable",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "question": "What do output equations address?",
+      "options": [
+        "Quantities the simulation consumer needs",
+        "The operating system version",
+        "Only the numerical step size",
+        "The names of all source files"
+      ],
+      "correct_answer": "Quantities the simulation consumer needs",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "question": "Which states describe the slide’s planetary-orbit example?",
+      "options": [
+        "Three-dimensional position and velocity",
+        "Only mass and temperature",
+        "Only elapsed time",
+        "Predator and prey populations"
+      ],
+      "correct_answer": "Three-dimensional position and velocity",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "question": "What type of equations describe the slide’s predator–prey system?",
+      "options": [
+        "Coupled first-order ordinary differential equations",
+        "Only algebraic equations",
+        "A single integer counter",
+        "A sorting rule"
+      ],
+      "correct_answer": "Coupled first-order ordinary differential equations",
+      "pages": [
+        8,
+        14
+      ]
+    },
+    {
+      "question": "In the Kolmogorov model dx/dt=x f(x,y), what is f for positive x?",
+      "options": [
+        "Per-capita prey growth rate",
+        "Predator population",
+        "Total prey population",
+        "Elapsed time"
+      ],
+      "correct_answer": "Per-capita prey growth rate",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "question": "In the model, what effect does increasing predators have on prey per-capita growth?",
+      "options": [
+        "It decreases",
+        "It always increases",
+        "It becomes unrelated to predators",
+        "It becomes the predator population"
+      ],
+      "correct_answer": "It decreases",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question": "Which Lotka–Volterra equation gives prey growth?",
+      "options": [
+        "dx/dt=x(b−py)",
+        "dx/dt=y(rx−d)",
+        "dx/dt=b+py",
+        "dx/dt=x(rx−d)"
+      ],
+      "correct_answer": "dx/dt=x(b−py)",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question": "Which Lotka–Volterra equation gives predator growth?",
+      "options": [
+        "dy/dt=y(rx−d)",
+        "dy/dt=x(b−py)",
+        "dy/dt=y(b−py)",
+        "dy/dt=rx+d"
+      ],
+      "correct_answer": "dy/dt=y(rx−d)",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question": "In the Lotka–Volterra model with positive p, what is the slope of prey per-capita growth versus predator population?",
+      "options": [
+        "−p",
+        "p",
+        "r",
+        "d"
+      ],
+      "correct_answer": "−p",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "What happens after prey become scarce in the qualitative predator–prey cycle?",
+      "options": [
+        "Predators starve and their population declines",
+        "Predators necessarily increase forever",
+        "Prey cannot recover",
+        "Both populations instantly become constant"
+      ],
+      "correct_answer": "Predators starve and their population declines",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "question": "For positive b,p,r,d, what is the positive Lotka–Volterra equilibrium?",
+      "options": [
+        "(d/r, b/p)",
+        "(b/p, d/r)",
+        "(p/b, r/d)",
+        "(b+d, p+r)"
+      ],
+      "correct_answer": "(d/r, b/p)",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question": "With b=p=r=d=1, what is the positive equilibrium?",
+      "options": [
+        "(1,1)",
+        "(0,1)",
+        "(2,2)",
+        "(1,0)"
+      ],
+      "correct_answer": "(1,1)",
+      "pages": [
+        15,
+        17
+      ]
+    },
+    {
+      "question": "What correction makes the page 16 conserved expression valid for general r?",
+      "options": [
+        "Replace −x with −rx",
+        "Replace −py with +py",
+        "Remove both logarithms",
+        "Replace b ln y with b/y"
+      ],
+      "correct_answer": "Replace −x with −rx",
+      "pages": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "question": "What determines a particular Lotka–Volterra trajectory?",
+      "options": [
+        "Parameters and initial conditions",
+        "Only the file extension",
+        "Only the output label",
+        "The marker color"
+      ],
+      "correct_answer": "Parameters and initial conditions",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "question": "Why are numerical solution techniques used for continuous-system equations?",
+      "options": [
+        "Many equations are not analytically integrable",
+        "All derivatives are zero",
+        "Numerical methods eliminate modeling assumptions",
+        "Continuous time is always integer-valued"
+      ],
+      "correct_answer": "Many equations are not analytically integrable",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "Which is the forward Euler update for x′=f(t,x) with step h?",
+      "options": [
+        "x_next=x+h f(t,x)",
+        "x_next=x−h always",
+        "x_next=h/f(t,x)",
+        "x_next=f(t,x) only"
+      ],
+      "correct_answer": "x_next=x+h f(t,x)",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "For x′=x, x0=1 and h=0.2, what is one forward Euler step?",
+      "options": [
+        "1.2",
+        "1.02",
+        "1.22",
+        "0.8"
+      ],
+      "correct_answer": "1.2",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "Which slope does the slide’s midpoint Runge–Kutta update use for the full step?",
+      "options": [
+        "The slope at the predicted midpoint",
+        "Only the initial slope",
+        "The final exact slope",
+        "A slope fixed at zero"
+      ],
+      "correct_answer": "The slope at the predicted midpoint",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "question": "For x′=x, x0=1 and h=0.2, what does one explicit midpoint step produce?",
+      "options": [
+        "1.22",
+        "1.2",
+        "1.1",
+        "1.4"
+      ],
+      "correct_answer": "1.22",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "question": "What file extension do MATLAB scripts and functions use?",
+      "options": [
+        ".m",
+        ".csv",
+        ".exe",
+        ".pdf"
+      ],
+      "correct_answer": ".m",
+      "pages": [
+        27,
+        29
+      ]
+    },
+    {
+      "question": "Which statement contrasts scripts and functions?",
+      "options": [
+        "Scripts use the workspace; functions can accept inputs and return outputs",
+        "Scripts always have local variables and functions never do",
+        "Only scripts have .m files",
+        "Functions cannot return values"
+      ],
+      "correct_answer": "Scripts use the workspace; functions can accept inputs and return outputs",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "question": "How can the MATLAB editor be opened from the command prompt?",
+      "options": [
+        "Type edit",
+        "Type disp only",
+        "Type plot only",
+        "Type switch only"
+      ],
+      "correct_answer": "Type edit",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "question": "Which command requests text rather than evaluating numerical input?",
+      "options": [
+        "input(\"Enter text\", \"s\")",
+        "input(\"Enter text\") without a text option",
+        "disp(\"s\")",
+        "plot(\"s\")"
+      ],
+      "correct_answer": "input(\"Enter text\", \"s\")",
+      "pages": [
+        34,
+        40
+      ]
+    },
+    {
+      "question": "What does disp(X) do?",
+      "options": [
+        "Displays X without printing the variable name",
+        "Reads X from a user",
+        "Deletes X",
+        "Plots X automatically"
+      ],
+      "correct_answer": "Displays X without printing the variable name",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "question": "What does fprintf format code %s represent?",
+      "options": [
+        "Text",
+        "An integer only",
+        "A matrix inverse",
+        "A loop condition"
+      ],
+      "correct_answer": "Text",
+      "pages": [
+        36,
+        38
+      ]
+    },
+    {
+      "question": "What does the newline escape \\n do in fprintf?",
+      "options": [
+        "Starts a new line",
+        "Computes a remainder",
+        "Stops MATLAB",
+        "Creates an array"
+      ],
+      "correct_answer": "Starts a new line",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "question": "What is the shape of b=(1:3)' in the slide example?",
+      "options": [
+        "3-by-1 column",
+        "1-by-3 row",
+        "3-by-3 matrix",
+        "1-by-1 scalar"
+      ],
+      "correct_answer": "3-by-1 column",
+      "pages": [
+        33
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size((1:3)')",
+          "expected": "[3 1]"
+        }
+      ]
+    },
+    {
+      "question": "Given a=1:2 and b=(1:3)', what shape is a+b with implicit expansion?",
+      "options": [
+        "3-by-2",
+        "1-by-2",
+        "3-by-1",
+        "2-by-3"
+      ],
+      "correct_answer": "3-by-2",
+      "pages": [
+        33
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size((1:3)' + (1:2))",
+          "expected": "[3 2]"
+        }
+      ]
+    },
+    {
+      "question": "How do you plot values y against x in MATLAB?",
+      "options": [
+        "plot(x,y)",
+        "input(x,y)",
+        "fprintf(x,y)",
+        "switch(x,y)"
+      ],
+      "correct_answer": "plot(x,y)",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "question": "What does axis equal specify?",
+      "options": [
+        "Equal scale factors on both axes",
+        "A square plot box regardless of scale",
+        "A hidden x-axis",
+        "An automatic title"
+      ],
+      "correct_answer": "Equal scale factors on both axes",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "question": "What can a MATLAB LineSpec encode?",
+      "options": [
+        "Color, line style, and marker",
+        "Only input prompts",
+        "Variable scope and file names",
+        "Only numeric precision"
+      ],
+      "correct_answer": "Color, line style, and marker",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "question": "Which construct handles unmatched switch cases?",
+      "options": [
+        "otherwise",
+        "elseif",
+        "while",
+        "xlabel"
+      ],
+      "correct_answer": "otherwise",
+      "pages": [
+        64
+      ]
+    },
+    {
+      "question": "What does menu return when a button is selected?",
+      "options": [
+        "The selected button number",
+        "Always the displayed title",
+        "A differential equation",
+        "The plot axis limits"
+      ],
+      "correct_answer": "The selected button number",
+      "pages": [
+        65
+      ]
+    },
+    {
+      "question": "How can an integer x be tested for evenness in MATLAB?",
+      "options": [
+        "mod(x,2)==0",
+        "x % 2 == 0",
+        "x/2 == 0 for every even x",
+        "x==2 only"
+      ],
+      "correct_answer": "mod(x,2)==0",
+      "pages": [
+        61
+      ]
+    },
+    {
+      "question": "Which values does for v=1:2:5 visit?",
+      "options": [
+        "1, 3, 5",
+        "1, 2, 3, 4, 5",
+        "2, 4",
+        "1, 5"
+      ],
+      "correct_answer": "1, 3, 5",
+      "pages": [
+        66
+      ],
+      "matlab_checks": [
+        {
+          "expression": "1:2:5",
+          "expected": "[1 3 5]"
+        }
+      ]
+    },
+    {
+      "question": "What controls repetition in a while loop?",
+      "options": [
+        "A logical condition",
+        "A mandatory fixed count only",
+        "The plot title",
+        "The filename extension"
+      ],
+      "correct_answer": "A logical condition",
+      "pages": [
+        67
+      ]
+    }
+  ]
+}
