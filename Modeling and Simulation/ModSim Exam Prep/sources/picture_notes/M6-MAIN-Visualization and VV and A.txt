@@ -1,0 +1,1181 @@
+=== M6-MAIN-Visualization and VV and A.pdf | page 1 ===
+Modeling and Simulation
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 2 ===
+MODULE 6
+VISUALIZATION AND
+VV & A
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 3 ===
+SUBTOPIC 1
+VISUALIZATION
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 4 ===
+• Demonstrate
+understanding
+of
+the
+concepts
+on
+visualization.
+• Demonstrate
+understanding
+of
+the
+fundamental
+theories of computer graphics in order to develop
+effective and efficient visualizations.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 5 ===
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+• A process that generates visual representations, such as imagery, graph, and
+animations, of information that is otherwise more difficult to understand through
+other forms of representations, such as text and audio.
+• An essential component in modeling and simulation and is widely utilized at
+various stages of modeling and simulation applications.
+• It is important and useful for conveying large amount of information and dynamic
+information that varies with time.
+• In modeling and simulation, the term visualization generally refers to the use of
+computer graphics for various purposes, such as visual representation of data for
+analysis and visual simulation of military exercises for training.
+• At the core of visualization is computer graphics.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 6 ===
+(Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, 
+Chapter 7. Publisher: John Wiley & Sons)
+Computer graphics 
+• It is a subfield of computer science that is concerned with the generation or
+manipulation of images using computer software and hardware.
+• It played an essential role in easing the use of computers and thus bringing
+about the omnipresence of personal computers and other computing devices.
+• Now computer graphics is used in almost all computer applications, including,
+but not limited to, human–computer user interface, computer-aided design
+(CAD) and manufacturing (CAM), motion pictures, video games, and
+advertisement.
+• It is the technology that deals with designs and pictures on computers.
+(Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics)
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 7 ===
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+• Generation of sophisticated and realistic images using computer graphics usually involves
+sophisticated algorithms and large amount of data, which in turn translate into requirements on
+both computational power and memory capacity in order to execute the algorithms and store
+the data.
+•
+Mid-1980s : Dedicated graphics acceleration hardware first became available on expensive
+workstations.
+•
+Mid-1990s : 2D graphics accelerators became available for personal computers.
+•
+Late 1990s : 3D graphics accelerations became commonplace on personal computers.
+These graphics cards contained what are now called fixed graphics pipeline.
+•
+Early 2000s : Programmable graphics pipelines were introduced that allow application
+programmers to write their own shading programs (vertex and pixel shaders) to perform their
+customized graphics computations.
+Computer Graphics Hardware
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 8 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems - Images
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 9 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems - Images
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 10 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems - Images
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 11 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 12 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 13 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 14 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 15 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 16 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 17 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Input Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 18 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 19 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 20 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 21 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 22 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 23 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+3D Object Representations and Transformations
+•
+Modern graphics hardware is optimized for rendering convex polygons. A convex object means
+that if we form a line segment by connecting two points in the object, then any point on that line
+segment is also in the same object.
+•
+Convexity simplifies many graphics computations. For this reason, 3D objects are represented
+using convex polygonal meshes.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 24 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+3D Object Representations and Transformations
+Fundamental mathematical entities used to represent 3D object locations and transformations
+1.
+Point - represents a location in space, and a mathematical point has neither size nor shape.
+2.
+Vector - has direction and length but no location.
+•
+In addition to points and vectors, scalars such as real numbers are used in computer graphics to
+represent quantities such as length.
+•
+Most computer graphics computations are represented using matrix operations, such as matrix
+multiplication, transpose, and inverse. Thus, in-depth understanding and grasp of matrix operations
+is essential in order to develop effective and efficient computer graphics applications.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 25 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+3D Object Representations and Transformations
+•
+For 3D computer graphics, both points and vectors are represented using three components of real
+numbers, corresponding to the x , y , and z coordinates in the Cartesian coordinate system.
+•
+Both points and vectors can be represented as column matrices (matrices that have only one column) and
+row matrices (matrices that have only one row).
+•
+In practice, all points and vectors are internally represented by four-component column matrices in computer
+memory, which are called homogeneous coordinates .
+•
+All affine transformations such as translations and rotations can be represented by matrix multiplications
+using a homogeneous coordinate system, which greatly simplifies hardware implementation and facilitates
+pipeline realization and execution.
+•
+In the homogeneous coordinate system, a point P and a vector v can be represented as follows:
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 26 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+3D Object Representations and Transformations
+•
+Visualizations usually involve dynamic objects, which can change location, size, and shape with
+time such as a running soldier, a flying plane, and so on.
+•
+Many of these dynamic changes can be represented using affine transformations, which preserve
+the collinearity between points and ratios of distances.
+•
+Affine transformations are essentially functions that map straight lines to straight lines.
+Most commonly used affine transformations
+1.
+Translation
+2.
+Rotation
+3.
+Scaling
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 27 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+3D Object Representations and Transformations
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 28 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Computation Stage
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 29 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 30 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 31 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 32 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 33 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 34 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 35 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 36 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 37 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Hardware – Output Systems
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 38 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+•
+Synthetic camera model that mimics real physical imaging systems, such as real cameras and human visual
+systems.
+•
+Input: 3D objects and camera parameters such as camera location, orientation, and viewing frustum.
+•
+Output: 2D image representing the projections of objects onto projection plane of the synthetic camera
+(corresponding to the film plane of a real camera).
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 39 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+• Three parameters are used to position and orient the camera: camera location PC,
+object location PO, and camera up direction vup.
+• The camera location be considered as the center of the camera or the camera
+lens.
+• The object location is the target location, or where the camera is looking at.
+• The camera up direction is a vector from the center of the camera to the top of the
+camera.
+• The camera location and object location are 3D points, while the camera up
+direction is a 3D vector.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 40 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+A camera coordinate system can
+be constructed based on these
+three parameters, and the three
+axes of the camera coordinate
+system are represented as u, v,
+and n in the world coordinate
+system.
+The transformation from the world
+coordinate system to the camera
+coordinate system
+A
+point
+with
+world
+coordinate
+Pworld
+is
+transformed
+into
+its
+camera
+coordinate
+Pcamera
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 41 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+Relationship between the world coordinate system and
+the camera coordinate system. The three axes of the
+camera coordinate systems are represented as u, v, and
+n in the world coordinate system. All objects’ world
+coordinates are first converted to camera coordinates in
+all computer graphics applications.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 42 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+Types of projections
+1. Perspective projections
+•
+The camera is located within a finite distance from the object
+•
+The camera is called the center of projection (COP), and the rays that connect the camera and points on
+the object are called projectors.
+•
+The intersections between the projection plane and the projectors are the projections (or images) of the
+points on the object.
+The most common type of perspective projection is symmetric perspective
+projection.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 43 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+Types of projections
+2. Parallel projections
+•
+The camera is at infinity.
+•
+Can be considered as special cases of perspective projections.
+•
+There is no COP in parallel projections. Instead, direction of projection (DOP) is used.
+•
+Defined by specifying the six clipping planes (left, right, bottom, top, near, and far) and the
+DOP.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 44 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+Classifications of parallel projections based on the relationship between the DOP and the
+projection plane
+1.
+Orthographic projections
+•
+If the DOP is perpendicular to the projection plane.
+•
+Frequently used in architectural design, CAD and CAM, and so on, because they preserve
+distances
+and
+directions
+along
+the
+projection
+plane,
+thus
+allowing
+accurate
+measurements.
+2.
+Oblique projections
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 45 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Synthetic Camera and Projections
+Screen capture of Autodesk Maya. It is
+common to have multiple views of the
+same object in 3D modeling software and
+other modeling and simulation software.
+Shown here are three orthographic views
+(top, front, and side) and one perspective
+view (persp).
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 46 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Lighting and Shading - Color
+•
+Sources of excitation are needed to form images in physical imaging systems.
+•
+For human visual systems, the source of excitation is visible light, which is one form of
+electromagnetic radiation with wavelengths in the range of 380 – 750 nm of the electromagnetic
+spectrum.
+•
+The retina on the back of human eye is responsible for forming images of the real world, and it
+has two types of photoreceptors cells: rods and cones.
+o Rods are mainly responsible for night vision or low-intensity light
+o Cones are for color vision
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 47 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Lighting and Shading - Lights
+The most commonly used light models in computer graphics applications
+1. Ambient lights 
+•
+Provide uniform lighting; that is, all objects in the scene receive the same
+amount of illumination from the same ambient light, independent of location
+and direction.
+•
+Used to model lights that have been scattered so many times that their
+directions cannot be determined.
+•
+Commonly used to provide environment lighting.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 48 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Lighting and Shading - Lights
+2. Point light
+• It is an ideal light source that emits light equally in all
+directions.
+• It is specified by its color and location.
+• The luminance of a point light attenuates with the
+distance from the light, and the received light at point Q
+can be computed as follows:
+where I0 is the point light intensity, d is the
+distance between the light and the point Q,
+and a, b, and c are attenuation coefficients,
+called constant, linear, and quadratic terms,
+respectively.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 49 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Lighting and Shading - Lights
+3. Spotlights
+• Produce cone-shaped lighting effects and are specified by three parameters:
+location, direction, and cutoff angle.
+•
+There is no light outside the
+cone determined by the light
+location and the cutoff angle.
+•
+Inside
+the
+cone,
+the
+light
+intensity
+is
+a
+decreasing
+function of the angle φ, usually
+computed as cose φ .
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 50 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Lighting and Shading - Lights
+4. Directional Lights or Distant Lights
+• Used to model light sources that are very far from the object, such as the
+sunlight.
+• A directional light has constant intensity and is specified by its direction.
+• Directional lights are assumed to be located at infinity; thus, they do not have a
+location.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 51 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Reflection Models
+• Reflections are the interactions between lights and objects.
+• It is these interactions that make non-self-illuminating objects visible.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 52 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Shading Models
+• Come into play when there is a need to determine the shade or the color of the 
+points inside a polygon. 
+Commonly used shading models
+1. Flat shading
+2. Smooth shading
+3. Phong shading
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 53 ===
+Overview of Graphics Systems – Computation Stage
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+Digital Images and Texture Mapping
+• Texture
+mapping
+is
+a
+revolutionary
+technique
+that
+enriches
+object
+visual
+appearance without increasing geometric complexity significantly.
+• Digital images can be stored on hard drives in uncompressed formats or
+compressed formats.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 54 ===
+Source: https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics
+Overview of Graphics Systems – Software
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 55 ===
+Low-level Graphics Libraries
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+1. OpenGL
+•
+Originally introduced by Silicon Graphics, Inc. in 1992
+•
+It is now the industry standard for high-performance
+professional graphics, such as scientific visualization,
+CAD, 3D animation, and visual simulations.
+•
+A cross-platform API that is available on all operating
+systems (e.g., Windows, Linux, UNIX, Mac OS, etc.)
+and
+many
+hardware
+platforms
+(e.g.,
+personal
+computers, supercomputers, cell phones, PDAs ,
+etc.).
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 56 ===
+Low-level Graphics Libraries
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+2. Direct3D
+• A 3D graphics API developed by Microsoft for its Windows operating systems 
+and Xbox series game consoles. 
+• Direct3D was first introduced in 1995. 
+• Based on Microsoft’s Component Object Model (COM) technology, and it has
+a graphics pipeline for tessellation, vertex processing, geometry processing,
+texture mapping, rasterization, pixel processing, and pixel rendering.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 57 ===
+High-level Graphics Libraries
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+1. OpenSceneGraph
+• An open source, cross-platform 3D graphics library for high - performance
+visualization applications.
+2. XNA Game Studio
+• An integrated development environment to facilitate game development for
+Windows PC, Xbox 360 game console, and Zune media player.
+3. Java 3D
+• A revolutionary programming language that is independent of any hardware
+and software platforms.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 58 ===
+Advanced Visualization Tools
+Source: Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation Fundamentals Theoretical Underpinnings and Practical Domains, Chapter 7. Publisher: 
+John Wiley & Sons
+1. MATLAB
+•
+A high-level computing language and interactive environment for numeric computation,
+algorithm development, data analysis, and data visualization.
+•
+It is the most widely used tool for teaching science, technology, engineering, and
+mathematics (STEM) in universities and colleges and for research and rapid prototype
+development in the industry.
+2. Maya
+•
+The industry standard for 3D modeling, animation, visual effects, and rendering.
+3. Flash
+•
+An advanced multimedia authoring and development environment for creating animations
+and interactive applications inside Web pages.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 59 ===
+Check Canvas for instructions
+Formative Assessment 7
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 60 ===
+SUBTOPIC 2
+VERIFICATION, VALIDATION
+AND ACCREDITATION
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 61 ===
+• Demonstrate
+understanding
+on
+the
+concepts
+of
+visualization.
+• Identify the methods and processes to perform
+verification and validation (V&V).
+• Define accreditation and discuss how it relates to V &
+V.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 62 ===
+• Simulations are often used in situations that entail taking a rather large risk,
+personal or financial, on the assumption that the model used in the simulation is
+accurate.
+• In a properly conducted simulation project, the accuracy of the simulation, and the
+model upon which the simulation is based, is assessed and measured via V&V,
+and the sufficiency of the model’s accuracy is certified via accreditation.
+• V&V are processes, performed using methods suited to the model and to an extent
+appropriate for the application.
+• The goals of VV&A are to produce a model that is sufficiently accurate to be useful
+for its intended applications and to give the model credibility with potential users
+and decision makers.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 63 ===
+Simuland
+• The real-world item of interest.
+• It is the object, process, or phenomenon to be simulated.
+Examples:
+o The aircraft in a flight simulator (an object), including weather phenomena that
+affect the aircraft’s flight
+o The assembly of automobiles in a factory assembly line simulation (a process)
+o Underground water flow in a hydrology simulation (a phenomenon)
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 64 ===
+Referent
+• The body of knowledge that the model developers have about the simuland.
+• It may include everything from quantitative formal knowledge, such as
+engineering equations describing an aircraft engine’s thrust at various throttle
+settings, to qualitative informal knowledge, such as an experienced pilot’s
+intuitive expectation for the feeling of buffet that occurs just before a high-speed
+stall.
+Model
+• A representation of a simuland.
+• Often developed with their intended application in mind, thereby emphasizing
+characteristics of the simuland considered important for the application and de-
+emphasizing or omitting others.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 65 ===
+Categories of Models
+1. Conceptual models
+• It document those aspects of the simuland that are to be represented and
+those that are to be omitted.
+• Information contained in this model may include the physics of the simuland,
+the objects and environmental phenomena to be modeled, and representative
+use cases.
+• It also document assumptions made about the components, interactions, and
+parameters of the simuland.
+• A design specification for the executable model.
+• Several different forms or documentation, or combinations of them, may be
+used for conceptual models, including mathematical equations, flowcharts,
+UML diagrams, data tables, or expository text.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 66 ===
+Categories of Models
+2. Executable models
+• A model that can be executed.
+• The primary example of this model is a computer program.
+• Execution of the executable model is intended to simulate the simuland as
+detailed in the conceptual model.
+• An executable implementation of the conceptual model.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 67 ===
+Simulation
+• The process of executing a model over time.
+Example: The process of running a flight simulator.
+Results
+• The output produced by a model during a simulation.
+• Maybe available to the user during the simulation, such as the out-the-window
+views generated in real time by a flight simulator, or at the end of the
+simulation, such as the queue length and wait time statistics produced by a
+discrete-event simulation model of a factory assembly line.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 68 ===
+Requirements
+• Specify what must be modeled, and how accurately. 
+• With respect to V & V, the requirements specify which aspects of the
+simuland must be modeled, and for those to be included, how accurate the
+model must be.
+• These are driven by the intended application.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 69 ===
+Example:
+Simuland Gravity (phenomenon)
+Referent
+
+The
+model
+is
+intended
+to
+represent the height over time of an object
+freely falling to the earth. A mathematical
+(and nonexecutable) model is given by the
+following equation:
+Model and Simulation Executable model
+Results 
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 70 ===
+Verification
+• The process of determining if an implemented model is consistent with its
+specification.
+• It is also concerned with whether the model as designed will satisfy the
+requirements of the intended application.
+• Examines transformational accuracy, that is, the accuracy of transforming the
+model’s requirements into a conceptual model and the conceptual model into
+an executable model.
+• Typical questions to be answered during verification include:
+1) Does the program code of the executable model correctly implement the
+conceptual model?
+2) Does the conceptual model satisfy the intended uses of the model?
+3) Does the executable model produce results when needed and in the
+required format?
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 71 ===
+Validation
+• The process of determining the degree to which the model is an accurate
+representation of the simuland.
+•
+Examines representational accuracy, that is, the accuracy of representing the
+simuland in the conceptual model and in the results produced by the
+executable model.
+• The process of validation assesses the accuracy of the models.
+• Typical questions to be answered during validation include:
+1) Is the conceptual model a correct representation of the simuland?
+2) How close are the results produced by the executable model to the
+behavior of the simuland?
+3) Under what range of inputs are the model ’ s results credible and useful?
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 72 ===
+Accreditation
+• A decision made based on the results of the V & V processes.
+• A decision process and is nontechnical in nature, though it may be informed by
+technical data.
+• Accreditation is the official certification by a responsible authority that a model
+is acceptable for use for a specific purpose.
+• Concerned with official usability, that is, the determination that the model may
+be used.
+• Typical questions to be answered during accreditation include:
+1) Are the capabilities of the model and requirements of the planned
+application consistent?
+2) Do the V & V results show that the model will produce usefully accurate
+results if used for the planned application?
+3) What are the consequences if an insufficiently accurate model is used for
+the planned application?
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 73 ===
+•
+Boxes The objects or artifacts involved in a simulation project.
+•
+Solid arrows The processes that produce one object or artifact by transforming or using another.
+•
+Dashed arrows The comparisons between the artifacts.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 74 ===
+Types of simulation projects
+1. Simulation Study
+•
+The primary objective is to use simulation to obtain insight into the
+simuland being studied.
+•
+The model code itself is not a primary deliverable, and so it may
+be
+developed
+using
+software
+engineering
+practices
+or
+an
+implementation language that reflect the fact that it may not be
+used again.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 75 ===
+Types of simulation projects
+2. Simulation Software Development
+• One where the implemented executable model, which may be a
+very large software system, is the primary deliverable.
+• There is an expectation that the implemented executable model will
+be used repeatedly, and most likely modified and enhanced, by a
+community of users over a long period of time.
+• In this type of project, proper software engineering practices and
+software project management techniques move to the forefront.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 76 ===
+Types of simulation projects
+3. Simulation Event
+• It is a particular use of an existing model, or some combination of
+models, to support a specific objective.
+• In simulation events, software development is often not an issue (or
+at least not a major one), but event logistics, scenario development,
+database
+preparation,
+and
+security
+can
+be
+important
+considerations.)
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 77 ===
+Types of V&V errors and risks
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 78 ===
+1. Type I error
+•
+Occurs when a valid model is not used.
+•
+For example, a valid flight simulator is not used to train and qualify
+a pilot. This may be due to insufficient validation to persuade the
+accrediting authority to certify the model.
+•
+Can result in model development costs that are entirely wasted if
+the model is never used or needlessly increased if model
+development continues.
+•
+Whatever potential benefits that using the model might have
+conferred, such as reduced training costs or improved decision
+analyses, are delayed or lost
+•
+The likelihood of a type I error is termed model builder’s risk.
+Types of V&V errors and risks
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 79 ===
+2. A type II error
+•
+Occurs when an invalid model is used.
+•
+For example, an invalid flight simulator is used to train and qualify a
+pilot. This may occur when validation is done incorrectly but
+convincingly, erroneously persuading the accrediting authority to
+certify the model for use.
+•
+A type II error can result in disastrous consequences, such as an
+aircraft crash because of an improperly trained pilot or a bridge
+collapsing because of faulty analyses of structural loads and
+stresses.
+•
+The likelihood of a type II error is termed model user’s risk.
+Types of V&V errors and risks
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 80 ===
+3. Type III error
+•
+Occurs when an irrelevant model, that is, one not appropriate for the intended
+application, is used.
+•
+The model is valid for some purpose or simuland, but it is not suitable for the
+intended application.
+•
+For example, a pilot may be trained and qualified for an aircraft type in a flight
+simulator valid for some other type.
+•
+Type III errors are distressingly common; models that are successfully used for
+their original applications often acquire an unjustified reputation for broad
+validity, tempting project managers eager to reduce costs by leveraging past
+investments to use the models inappropriately.
+•
+The potential consequences of a type III error are similar, and thus similarly
+serious, to those of a type II error.
+•
+The likelihood of a type III error is termed model accreditor’s risk.
+Types of V&V errors and risks
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 81 ===
+• Reducing validation risk can be accomplished, in part, by establishing a model’s
+bounds of validity.
+Example: Gravity model versions:
+Model (1) is an extremely simple and low-fidelity model;
+it always returns the same height regardless of time. It
+corresponds to the horizontal line in the figure. Essentially
+by coincidence, it is accurate for one time value ( t = 8).
+Model (2) is a slightly better linear model, corresponding
+to the downward sloping line in the figure. As can be seen
+there, model (2) returns height values that are reasonably
+close to correct over a range of time values (from t = 5 to t =
+10).
+Model (3) is the original example gravity model, which is
+quite accurate within its assumptions of negligible air
+resistance and proximity to the surface of the earth.
+Let v = 100 and s = 1000.
+Time values
+from 0 to 11
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 82 ===
+Model Credibility
+•
+Can be understood as a measure of how likely a
+model’s results are to be considered acceptable
+for an application.
+•
+VV & A all relate to credibility.
+•
+V & V are processes that contribute to model
+credibility,
+and
+accreditation
+is
+an
+official
+recognition that a model has sufficient credibility to
+be used for a specific purpose.
+•
+Developing
+model
+credibility
+requires
+an
+investment of resources in model development,
+verification,
+and
+validation;
+in
+other
+words,
+credibility comes at a cost.
+•
+It is up to the simulation project manager to
+balance the projects requirements for credibility
+(higher for some applications than for others)
+against the resources available to achieve it, and
+to judge that utility that will result from a given
+level of credibility.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 83 ===
+Informal V & V methods
+• Are more qualitative than quantitative and generally rely heavily on
+subjective human evaluation, rather than detailed mathematical
+analysis.
+• Experts examine an artifact of the simulation project, for example,
+a conceptual model expressed as UML diagrams, or the simulation
+results, for example, variation in service time in a manufacturing
+simulation, and assess the model based on that examination and
+their reasoning and expertise.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 84 ===
+Inspection
+• A verification method that compares project artifacts to each other.
+• Organized teams of developers and testers inspect model artifacts, such as
+design documents, algorithms, physics equations, and programming language
+code.
+• Based on their own expertise, the inspectors manually compare the artifacts
+being inspected with the appropriate object of comparison, for example,
+programming language code (the executable model) might be compared with
+algorithms and equations (the conceptual model).
+• The persons doing the inspection may or may not be the developers of the
+model being inspected, depending on the resources of the project and the
+developing organization.
+• Inspections may be ad hoc or highly structured, with members of an
+inspection team assigned specific roles, such as moderator, reader, and
+recorder, and specific procedure steps used in the inspection.
+• The inspectors identify, assess, and prioritize potential faults in the model.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 85 ===
+Face Validation
+• A validation method that compares simuland behavior to model results.
+• Observers who may be potential users of the model and/or subject matter
+experts with respect to the simuland review or observe the results of a
+simulation (an execution of the executable model).
+• Based on their knowledge of the simuland, the observers subjectively compare
+the behavior of the simuland as reflected in the simulation results with their
+knowledge of the behavior of the actual simuland under the same conditions,
+and judge whether the former is acceptably accurate.
+• Differences between the simulation results and the experts’ expectations may
+indicate model accuracy issues.
+• Frequently used in interactive real-time virtual simulations where the experience
+of a user interacting with the simulation is an important part of its application.
+• It is often used as a validation method of last resort, when a shortage of time or
+a lack of reliable data describing simuland behavior precludes the use of more
+objective and quantitative methods.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 86 ===
+The Turing Test
+• An informal validation method well suited to validating models of human
+behavior, a category of models that can be difficult to validate.
+• It compares human behavior generated by a model to the expectations of
+human observers for such behavior.
+• First proposed by English mathematician Alan Turing as a means to evaluate
+the intelligence of a computer system.
+• It can be seen as a specialized form of face validation.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 87 ===
+Static V & V methods
+• Involve assessment of the model’s accuracy on the basis of characteristics of
+the model and executable model that can be determined without the execution
+of a simulation.
+• Techniques often involve analysis of the programming language code of the
+implemented model, and may be supported by automated tools to perform the
+analysis or manual notations or diagrams to support it.
+• More often performed by developers and other technical experts, as compared
+with informal methods, which depend more on subject matter experts.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 88 ===
+Data Analysis
+• A verification method that compares data definitions and operations in the
+conceptual model to those in the executable model.
+• Ensures that data are properly defined (correct data types, suitable allowable
+data ranges) and that proper operations are applied to the data structures in
+the executable model.
+• Includes data dependency analysis (analyzing which data variables depend on
+which other variables) and data flow analysis (analyzing which variables are
+passed between modules in the executable model code).
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 89 ===
+Cause–Effect Graphing 
+• A validation method that compares cause-and-effect relationships in the
+simuland to those in the conceptual model.
+• Causes are events or conditions that may occur in the simuland, and effects
+are the consequences or state changes that result from the causes.
+• In cause–effect graphing, all causes and effects considered to be important in
+the intended application of the model are identified in the simuland and in the
+conceptual model and compared; missing and extraneous cause–effect
+relationships are corrected.
+• Causes and effects are documented and analyzed through the use of cause–
+effect graphs, which are essentially directed graphs where causes and effects,
+represented by nodes in the graph, are connected by the effects that related
+them, represented by directed edges.
+• Petri nets are a graphic or diagrammatic notation widely used for a variety of
+modeling applications.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 90 ===
+Dynamic V & V methods
+• Assess model accuracy by executing the executable model and evaluating the
+results. The evaluation may involve comparing the results with data describing
+the behavior or the simuland or the results of other models.
+• Because the comparisons in dynamic methods are typically of numerical results
+and data, dynamic methods are generally objective and quantitative.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 91 ===
+Sensitivity Analysis
+• A validation method that compares magnitude and variability in simuland
+behavior to magnitude and variability in the model results.
+• It is an analysis of the range and variability in model results.
+• The magnitude and variability of the results produced are measured and
+compared with the magnitude and variability of the simuland’s behavior over
+the same range of input values.
+• If sufficient data regarding the simuland is available, sensitivity analysis can be
+conducted by comparing the response surfaces of the model and the simuland
+for
+appropriately
+chosen
+independent
+variables
+(the
+input
+values)
+and
+dependent variables (the output results); the sign and magnitude of the
+difference between the two response surfaces can be calculated and analyzed
+• Can also be used to evaluate model response to errors in the input and to
+establish which inputs have the greatest impact on the results.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 92 ===
+Predictive Validation
+• A validation method that compares specific outcomes in simuland behavior to
+corresponding outcomes in the model results.
+• Maybe used when available information about the behavior of the simuland
+includes corresponding input and ways, some of which are considered
+validation methods in their own right (e.g., statistical methods.
+• It is a valuable method because it can be applied in some circumstances where
+other methods would be problematic.
+Comparison Testing
+• A dynamic verification method that can be used when multiple models of the
+same simuland are available.
+• The models are executed with the same input, and their results are compared
+with each other.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 93 ===
+Regression Analysis
+• A multipurpose statistical technique that can be used as a dynamic validation
+method.
+• In general, regression analysis seeks to determine the degree of relatedness
+between variables, or to determine the extent that variation in one variable is
+caused by variation in another variable.
+• When directly related values can be identified, regression analysis compares
+specific model result values to simuland observation values.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 94 ===
+Hypothesis Testing
+• In general, a statistical hypothesis is a statistical statement about a population,
+which is evaluated on the basis of information obtained from a sample of that
+population.
+• Typically, when a hypothesis test is used for validating a model, the results of
+multiple simulations using the model are treated as a sample from the
+population of all possible simulations using that model for relevant input
+conditions.
+• Then an appropriate test is selected and used to compare the distribution of
+the model’s possible results to the distribution of valid results; the latter may
+be represented by parameters or a sample from a distribution given as valid.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 95 ===
+Formal V & V methods
+• Employ mathematical proofs of correctness to establish model characteristics.
+• Statements about the model are developed using a formal language or notation
+and manipulated using logical rules; conclusions derived about the model are
+unassailable from a mathematical perspective.
+• Quite difficult to apply in practice, as the complexity of most useful models is too
+great for current tools and methods to deal with practically. Nevertheless, useful
+results can be achieved using formal methods in some highly constrained
+situations.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 96 ===
+Inductive Assertions
+• This verification method compares the programming language code for the
+executable model to the descriptions of the simuland in the conceptual model.
+• It is closely related to techniques from program proving.
+• Assertion statements, which are statements about the input-to-output relations
+for model variables that must be true for the executable model to be correct,
+are associated with the beginning and end of each of the possible execution
+paths in the executable model.
+• If it can then be proven for each execution path that the truth of beginning
+assertion and the execution of the instructions along the path imply the truth of
+the ending assertion, then the model is considered to be correct.
+• The proofs are done using mathematical induction.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 97 ===
+Predicate Calculus
+• A validation method that compares the simuland to the conceptual model.
+• A formal logic system that allows the creation, manipulation, and proof of
+formal statements that describe the existence and properties of objects.
+• Characteristics of both the simuland and the conceptual model can be
+described using predicate calculus.
+• One procedure of predicate calculus is the proving of arguments, which can
+demonstrate that one set of properties of the object in question, if true,
+together implies additional properties.
+• The goal of the method is that by describing properties of the simuland and
+conceptual model using predicate calculus, it can be possible to prove that
+the two are consistent.
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 98 ===
+• The specific methods to be applied to a given model depend on many factors,
+including model type, availability of simuland data for comparison, and ease of
+conducting multiple executions of the model.
+• The model developer should examine previous V & V efforts for similar models for
+possible applicable methods.
+• It should not be assumed that the process of V & V for any given model will
+always use exactly one of these methods.
+• More often, performing V & V on a large complex model, or even a simpler one,
+will involve multiple methods (e.g., separate methods will be used for verification
+and for validation).
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 99 ===
+Check Canvas for instructions
+Formative Assessment 8
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 100 ===
+Check Canvas for instructions
+Summative Assessment 6
+
+=== M6-MAIN-Visualization and VV and A.pdf | page 101 ===
+Online:
+https://www.slideshare.net/dipongkersen81/overview-of-computer-graphics)
+E-Books and Textbooks:
+• Sokolowski, John A. & Banks, Catherine M. (2010). Modeling and Simulation
+Fundamentals Theoretical Underpinnings and Practical Domains. John Wiley &
+Sons
