@@ -1,0 +1,1846 @@
+{
+  "sections": [
+    {
+      "heading": "M6: Visualization, Graphics Pipeline And Displays",
+      "summary": "Visualization uses images, graphs, and animation to make information easier to understand. It is especially useful for large datasets and behavior that changes over time, but a convincing image is not proof that the model is valid. Computer graphics supplies the software and hardware that generate and manipulate these images. Follow the graphics pipeline from input through computation to output, keeping the representation, memory, and display jobs separate.",
+      "key_terms": [
+        {
+          "term": "Visualization",
+          "definition": "Generating visual representations of information that is harder to understand in other forms."
+        },
+        {
+          "term": "Computer graphics",
+          "definition": "Generation or manipulation of images using computer software and hardware."
+        },
+        {
+          "term": "Bitmap",
+          "definition": "A rectangular pixel-oriented array representing an image."
+        },
+        {
+          "term": "Vertex and edge",
+          "definition": "A vertex is a point used to represent an object; an edge connects two vertices according to connectivity data."
+        },
+        {
+          "term": "Frame buffer",
+          "definition": "Memory storing the picture definition used to refresh a raster display."
+        },
+        {
+          "term": "Pixel",
+          "definition": "A picture element: one addressable unit in a raster image or display."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Hardware development timeline",
+          "statement": "The slides trace dedicated workstation graphics acceleration in the mid-1980s, PC 2D acceleration in the mid-1990s, widespread PC 3D fixed pipelines in the late 1990s, and programmable vertex/pixel shaders in the early 2000s."
+        },
+        {
+          "name": "Coordinates and color",
+          "statement": "2D uses horizontal x and vertical y; 3D adds depth z, not a special middle axis. RGB components range from zero to one in the cube. Other color models named are HSV (hue, saturation, value), CMY, and YIQ."
+        },
+        {
+          "name": "Computation pipeline",
+          "statement": "Input -> computation -> output. Computation transforms the model, producing a transformed model, then rasterizes it into output image samples. System memory and a frame buffer connect over a system bus with the CPU and video controller; the controller drives the monitor."
+        },
+        {
+          "name": "Input mechanisms",
+          "statement": "Locator devices return position/orientation, such as tablets/styli, joysticks, and VR trackers. Keyboards supply text/numeric GUI or CAD parameters; hard-coding inserts vertex locations into program code. Scanners and cameras acquire images."
+        },
+        {
+          "name": "Image quality factors",
+          "statement": "The pictured list names screen resolution, color fidelity, inter-pixel blank space, intentional image degradation, brightness, contrast ratio, refresh rate, and viewing-angle sensitivity. Screen resolution m by n describes horizontal pixels by rows."
+        },
+        {
+          "name": "CRT mechanism",
+          "statement": "A cathode ray tube uses an electron gun, focusing/deflection systems, a beam, and a phosphor-coated screen, with high voltages/fields. It is bulky and heavy; beam penetration gives a limited palette, while shadow masking directs RGB beams to color phosphors."
+        },
+        {
+          "name": "LCD mechanism",
+          "statement": "The pictured twisted-nematic cell rotates polarization without applied field so light passes crossed polarizers; applying a field aligns molecules and blocks that path in this shown arrangement. LCDs modulate light rather than emit an electron beam; the cited advantages are flatness, low weight, and low power."
+        },
+        {
+          "name": "Projection displays",
+          "statement": "Bright miniature CRT/LCD image engines and lenses project a large image for simulators and immersive environments. The diagram contrasts reflection off a modulating element with transmission through one."
+        },
+        {
+          "name": "Frame-buffer assumption",
+          "statement": "The page 22 arithmetic assumes one bit per pixel and no additional buffers or overhead. Its decimal 38.4 kB is not 38.4 KiB. More bits per pixel multiply the storage requirement."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: reproduce the slide frame-buffer calculation and distinguish decimal kB from binary KiB.",
+          "steps": [
+            "Multiply width by height by bits per pixel, divide by eight for bytes, then use the appropriate unit divisor. The snippet calculates only the explicitly assumed single monochrome buffer.",
+            "```matlab\nwidth = 640; height = 480; bpp = 1;\nbits = width*height*bpp;\nbytes = bits/8;\nfprintf('Bits=%d, bytes=%d\\n',bits,bytes);\nfprintf('kB=%.1f, KiB=%.1f\\n',bytes/1000,bytes/1024);\n```"
+          ],
+          "answer": "Expected printed output:\nBits=307200, bytes=38400\nkB=38.4, KiB=37.5\n"
+        }
+      ],
+      "common_mistakes": [
+        "A vector display is an output technology even though page 13 sits under an Input Systems heading.",
+        "Do not confuse bitmap pixels with geometric vertices and their connectivity.",
+        "The frame-buffer example assumes monochrome 1 bpp; color storage is not the same size.",
+        "Resolution, refresh rate, and color fidelity are different quality factors.",
+        "The Z axis is depth; the slide word middle is nonstandard."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Pipeline: input describes, computation transforms and rasterizes, output displays. Memory stores the picture; the monitor shows it."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Representations",
+          "columns": [
+            "Representation",
+            "Stored Idea",
+            "Typical Consequence"
+          ],
+          "rows": [
+            [
+              "Bitmap/raster",
+              "Individual grid samples/pixels",
+              "Image tied to sampling resolution"
+            ],
+            [
+              "Vector/stroke display",
+              "Lines traced as strokes",
+              "Also called random, calligraphic, or stroke display"
+            ],
+            [
+              "Vertex connectivity",
+              "Points plus which pairs are connected",
+              "Defines geometric edges"
+            ],
+            [
+              "Surface / mesh / vertex views",
+              "Solid surface / wireframe / point cloud",
+              "Three pictured levels of object detail"
+            ]
+          ]
+        },
+        {
+          "title": "Input Devices",
+          "columns": [
+            "Input",
+            "Data Supplied"
+          ],
+          "rows": [
+            [
+              "Locator",
+              "Position and/or orientation"
+            ],
+            [
+              "Keyboard / hard-coded coordinates",
+              "Text, parameters, vertex numbers"
+            ],
+            [
+              "Scanner",
+              "Digitized image/shape information"
+            ],
+            [
+              "Camera",
+              "Captured imagery"
+            ]
+          ]
+        },
+        {
+          "title": "Output Technologies",
+          "columns": [
+            "Kind",
+            "How It Produces An Image"
+          ],
+          "rows": [
+            [
+              "Hardcopy",
+              "Physical print/plot"
+            ],
+            [
+              "Vector display",
+              "Trace strokes"
+            ],
+            [
+              "Raster CRT",
+              "Electron beams excite phosphors"
+            ],
+            [
+              "Transmissive LCD",
+              "Backlight passes through modulated panel"
+            ],
+            [
+              "Reflective LCD",
+              "Ambient light reflects from rear surface"
+            ],
+            [
+              "Projection",
+              "Lens enlarges a modulated image onto a screen"
+            ]
+          ]
+        },
+        {
+          "title": "Normalized RGB Cube",
+          "columns": [
+            "Color",
+            "R",
+            "G",
+            "B"
+          ],
+          "rows": [
+            [
+              "Black",
+              "0",
+              "0",
+              "0"
+            ],
+            [
+              "Red",
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "Green",
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "Blue",
+              "0",
+              "0",
+              "1"
+            ],
+            [
+              "Yellow",
+              "1",
+              "1",
+              "0"
+            ],
+            [
+              "Cyan",
+              "0",
+              "1",
+              "1"
+            ],
+            [
+              "Magenta",
+              "1",
+              "0",
+              "1"
+            ],
+            [
+              "White",
+              "1",
+              "1",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "Display Quality Factors",
+          "columns": [
+            "Factor",
+            "What To Keep Separate"
+          ],
+          "rows": [
+            [
+              "Resolution",
+              "Spatial sample grid"
+            ],
+            [
+              "Color fidelity",
+              "Accuracy of color reproduction"
+            ],
+            [
+              "Inter-pixel blank space",
+              "Spacing/fill between samples"
+            ],
+            [
+              "Intentional degradation",
+              "Deliberate reduction of image quality"
+            ],
+            [
+              "Brightness",
+              "Light-output level"
+            ],
+            [
+              "Contrast ratio",
+              "Bright-versus-dark distinction"
+            ],
+            [
+              "Refresh rate",
+              "Temporal updating"
+            ],
+            [
+              "Viewing-angle sensitivity",
+              "Appearance changes with observer angle"
+            ]
+          ]
+        },
+        {
+          "title": "Hardware Timeline",
+          "columns": [
+            "Period",
+            "Slide Milestone"
+          ],
+          "rows": [
+            [
+              "Mid-1980s",
+              "Dedicated workstation acceleration"
+            ],
+            [
+              "Mid-1990s",
+              "PC 2D accelerators"
+            ],
+            [
+              "Late 1990s",
+              "PC 3D fixed graphics pipelines"
+            ],
+            [
+              "Early 2000s",
+              "Programmable vertex and pixel shaders"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Geometry, Homogeneous Coordinates And Affine Transforms",
+      "summary": "A point is a location, while a vector has direction and length without a fixed location. Scalars represent quantities such as lengths and scale factors. Homogeneous coordinates add a fourth component so that translation, rotation, and scaling can use matrix multiplication. Affine transformations preserve collinearity and ratios of distances along a line, making them useful for moving and resizing dynamic objects.",
+      "key_terms": [
+        {
+          "term": "Convex object",
+          "definition": "Every line segment joining two points of the object stays entirely in it."
+        },
+        {
+          "term": "Point",
+          "definition": "A location with no size or shape."
+        },
+        {
+          "term": "Vector",
+          "definition": "A quantity with direction and magnitude, but no fixed location."
+        },
+        {
+          "term": "Homogeneous coordinate",
+          "definition": "A four-component representation used for uniform matrix treatment of 3D transformations."
+        },
+        {
+          "term": "Affine transformation",
+          "definition": "A transformation preserving collinearity and ratios along lines; translation, rotation, and scaling are examples."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Convex polygon meshes",
+          "statement": "The slides motivate convex polygonal meshes because convexity simplifies graphics computations and graphics hardware is optimized for rendering polygons."
+        },
+        {
+          "name": "Point and vector forms",
+          "statement": "A point is [x;y;z;1] and a vector is [x;y;z;0] in the shown homogeneous convention. The fourth component lets a translation affect a point but not a direction vector."
+        },
+        {
+          "name": "Matrix operations",
+          "statement": "Graphics computations use matrix multiplication, transpose, and inverse. The MATLAB snippet below is ours for the slide mathematics; no MATLAB import is needed."
+        },
+        {
+          "name": "Dynamic transformations",
+          "statement": "The sports-car pictures contrast the original, a translated version, a version rotated 45 degrees about the vertical axis, and a scaled-down version. Affine transforms need not preserve all lengths or angles."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: use the slide homogeneous convention to translate a point and a direction vector by the same matrix.",
+          "steps": [
+            "Choose translation (10,-2,3). Matrix multiplication adds it only when the fourth component is one; the direction vector remains unchanged.",
+            "```matlab\nT = [1 0 0 10; 0 1 0 -2; 0 0 1 3; 0 0 0 1];\npoint = [1;2;3;1];\nvector = [1;2;3;0];\np2 = T*point; v2 = T*vector;\nfprintf('Point: %.0f %.0f %.0f %.0f\\n',p2);\nfprintf('Vector: %.0f %.0f %.0f %.0f\\n',v2);\n```"
+          ],
+          "answer": "Expected printed output:\nPoint: 11 0 6 1\nVector: 1 2 3 0\n"
+        }
+      ],
+      "common_mistakes": [
+        "A vector is not a point with a fixed position.",
+        "Do not assign homogeneous w=1 to a direction vector.",
+        "Affine preservation of distance ratios along a line does not mean that all lengths or angles remain unchanged.",
+        "A mesh made of convex faces does not require the entire depicted object to be convex."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 23, 24, 25, 26, 27"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "One locates, zero directs: homogeneous point w=1, vector w=0. T-R-S = Translation, Rotation, Scaling."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Point, Vector And Scalar",
+          "columns": [
+            "Entity",
+            "Meaning",
+            "Homogeneous Form"
+          ],
+          "rows": [
+            [
+              "Point",
+              "Location; no size/shape",
+              "[x;y;z;1]"
+            ],
+            [
+              "Vector",
+              "Direction and length; no fixed location",
+              "[x;y;z;0]"
+            ],
+            [
+              "Scalar",
+              "Single numerical quantity",
+              "Real number"
+            ]
+          ]
+        },
+        {
+          "title": "Affine Operations",
+          "columns": [
+            "Operation",
+            "Main Change",
+            "Important Distinction"
+          ],
+          "rows": [
+            [
+              "Translation",
+              "Location",
+              "Direction vectors unaffected by pure translation"
+            ],
+            [
+              "Rotation",
+              "Orientation",
+              "Rotates around an axis"
+            ],
+            [
+              "Scaling",
+              "Size/shape",
+              "Nonuniform scaling can change angles"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Synthetic Cameras And Projection",
+      "summary": "A synthetic camera converts 3D scene geometry into a 2D image. Camera location, target location, and up direction determine where it looks and how it is oriented. Geometry first moves from world coordinates into the camera coordinate system. Perspective uses a finite center of projection, while parallel projection uses a common direction of projection.",
+      "key_terms": [
+        {
+          "term": "Synthetic camera",
+          "definition": "A computational model of an imaging system whose input is 3D objects and camera parameters and whose output is a 2D projected image."
+        },
+        {
+          "term": "Center of projection (COP)",
+          "definition": "The finite point from which perspective projectors pass through object points."
+        },
+        {
+          "term": "Direction of projection (DOP)",
+          "definition": "The common direction used by parallel projectors."
+        },
+        {
+          "term": "Viewing frustum",
+          "definition": "The bounded viewing region used to select visible scene geometry."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Camera parameters",
+          "statement": "P_C is the camera location, P_O is the target/object location, and v_up is the camera up direction. The first two are 3D points; the third is a vector."
+        },
+        {
+          "name": "Camera basis and matrix",
+          "statement": "For orthonormal camera axes u,v,n expressed in world coordinates and camera position C, M has rows [u_x u_y u_z -u dot C], [v_x v_y v_z -v dot C], [n_x n_y n_z -n dot C], [0 0 0 1]. The pictured rule is P_camera = M*P_world."
+        },
+        {
+          "name": "Perspective projection",
+          "statement": "A finite COP sends projectors through scene points; their intersection with the projection plane forms the image. The symmetric frustum picture identifies field of view, near/far distances, and window width/height."
+        },
+        {
+          "name": "Parallel clipping",
+          "statement": "Parallel projection is described as the camera-at-infinity limit, without a finite COP. Specify DOP and six clipping planes: left, right, bottom, top, near, and far."
+        },
+        {
+          "name": "Orthographic and oblique",
+          "statement": "Orthographic DOP is perpendicular to the projection plane; oblique is the nonperpendicular counterpart (the slide lists its heading without explaining it). Orthographic views preserve distances and directions along the projection plane, useful for CAD/CAM and architectural measurements."
+        },
+        {
+          "name": "Multiple views",
+          "statement": "The Maya screenshot shows orthographic top, front, and side views plus one perspective view of the same object."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Camera target is a point, not the camera up vector.",
+        "Do not use a finite COP to define parallel projection.",
+        "Orthographic projection is one kind of parallel projection, not a synonym for all parallel projections.",
+        "Measurements are preserved along the projection plane, not all arbitrary 3D distances."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 38, 39, 40, 41, 42, 43, 44, 45"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Locate, look, orient: camera point, target point, up vector. Perspective has a center; parallel has a direction."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Camera Parameters",
+          "columns": [
+            "Symbol",
+            "Entity",
+            "Job"
+          ],
+          "rows": [
+            [
+              "P_C",
+              "Point",
+              "Camera location"
+            ],
+            [
+              "P_O",
+              "Point",
+              "Look-at target"
+            ],
+            [
+              "v_up",
+              "Vector",
+              "Upward orientation"
+            ]
+          ]
+        },
+        {
+          "title": "Projection Families",
+          "columns": [
+            "Projection",
+            "Projectors",
+            "Measurement/Appearance"
+          ],
+          "rows": [
+            [
+              "Perspective",
+              "From a finite COP",
+              "Depth-dependent apparent size"
+            ],
+            [
+              "Parallel orthographic",
+              "Common DOP perpendicular to plane",
+              "Preserves plane-parallel distances/directions"
+            ],
+            [
+              "Parallel oblique",
+              "Common DOP nonperpendicular to plane",
+              "Oblique view, not the orthographic case"
+            ]
+          ]
+        },
+        {
+          "title": "Six Clipping Boundaries",
+          "columns": [
+            "Pair",
+            "Boundaries"
+          ],
+          "rows": [
+            [
+              "Horizontal",
+              "Left and right"
+            ],
+            [
+              "Vertical",
+              "Bottom and top"
+            ],
+            [
+              "Depth",
+              "Near and far"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Color, Lighting, Reflection And Shading",
+      "summary": "Lighting determines how surfaces receive illumination, while reflection describes how light interacts with objects. Shading calculates colors inside polygons, and texture mapping adds surface appearance without greatly increasing geometric complexity. Human rods mainly support low-light vision and cones support color vision. Keep the four light models separate because their position, direction, and falloff assumptions differ.",
+      "key_terms": [
+        {
+          "term": "Ambient light",
+          "definition": "Uniform background illumination independent of location and direction."
+        },
+        {
+          "term": "Point light",
+          "definition": "An ideal localized source radiating equally in all directions with distance attenuation."
+        },
+        {
+          "term": "Spotlight",
+          "definition": "A cone-shaped source specified by location, direction, and cutoff angle."
+        },
+        {
+          "term": "Directional light",
+          "definition": "A distant source modeled by direction and constant intensity rather than finite location."
+        },
+        {
+          "term": "Texture mapping",
+          "definition": "Mapping image detail to surfaces to enrich appearance without much additional geometry."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Visible spectrum",
+          "statement": "The slides use approximately 380 to 750 nm for visible light. Rods handle low-intensity/night vision; cones provide color vision."
+        },
+        {
+          "name": "Point attenuation",
+          "statement": "I(Q) = I0/(a+b*d+c*d^2). Here d is light-to-point distance, and a,b,c are constant, linear, and quadratic attenuation coefficients."
+        },
+        {
+          "name": "Spotlight falloff",
+          "statement": "There is no illumination outside the cutoff cone. Within it the angular factor is commonly cos(phi)^e, where phi is measured from the cone axis and e controls concentration. The formula is cos raised to e, not the cosecant function."
+        },
+        {
+          "name": "Reflection components",
+          "statement": "The picture contrasts ambient, diffuse, and specular reflection. They describe background response, broadly scattered surface reflection, and concentrated highlights, respectively."
+        },
+        {
+          "name": "Shading methods",
+          "statement": "Flat shading gives a polygon a uniform shade. Smooth shading interpolates vertex colors. Phong shading interpolates normals for per-point lighting and specular highlights. These are distinct from choosing a texture image."
+        },
+        {
+          "name": "Digital image storage",
+          "statement": "Images can be stored compressed or uncompressed. Texture detail changes visual appearance without demanding an equivalently detailed polygon mesh."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: evaluate the slide attenuation equation and an inside-cone cosine falloff using fixed sample inputs.",
+          "steps": [
+            "For the point light use I0=100, a=1, b=0, c=1, d=3. For the spotlight factor, assume pi/3 is inside its cutoff cone and use exponent two.",
+            "```matlab\nI0 = 100; a = 1; b = 0; c = 1; d = 3;\nI = I0/(a+b*d+c*d^2);\nphi = pi/3; exponent = 2;\nfalloff = cos(phi)^exponent;\nfprintf('Point intensity=%.2f\\n',I);\nfprintf('Inside-cone angular factor=%.2f\\n',falloff);\n```"
+          ],
+          "answer": "Expected printed output:\nPoint intensity=10.00\nInside-cone angular factor=0.25\n"
+        }
+      ],
+      "common_mistakes": [
+        "Ambient illumination is not a point source whose distance merely happens to be large.",
+        "A point light has a location; an ideal directional light does not.",
+        "Specular reflection and Phong shading are related concepts, not the same category.",
+        "Do not apply the inside-cone cosine rule outside the cutoff cone."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 46, 47, 48, 49, 50, 51, 52, 53"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "A-P-S-D = Ambient, Point, Spotlight, Directional: A Picture Shows Detail. Reflection interacts, shading fills, texture decorates."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Four Light Models",
+          "columns": [
+            "Model",
+            "Specified By",
+            "Characteristic"
+          ],
+          "rows": [
+            [
+              "Ambient",
+              "Background illumination",
+              "Uniform; location/direction independent"
+            ],
+            [
+              "Point",
+              "Color and location",
+              "Omnidirectional; distance attenuation"
+            ],
+            [
+              "Spotlight",
+              "Location, direction, cutoff angle",
+              "Cone with angular falloff"
+            ],
+            [
+              "Directional",
+              "Direction and constant intensity",
+              "Distant-source parallel illumination"
+            ]
+          ]
+        },
+        {
+          "title": "Surface Appearance Concepts",
+          "columns": [
+            "Concept",
+            "Question",
+            "Examples"
+          ],
+          "rows": [
+            [
+              "Reflection",
+              "How does light interact with the surface?",
+              "Ambient, diffuse, specular"
+            ],
+            [
+              "Shading",
+              "How is color determined across a polygon?",
+              "Flat, smooth, Phong"
+            ],
+            [
+              "Texture mapping",
+              "How is image detail applied to geometry?",
+              "Mapped digital image"
+            ]
+          ]
+        },
+        {
+          "title": "Shading Models",
+          "columns": [
+            "Method",
+            "Interpolated Quantity/Rule",
+            "Appearance"
+          ],
+          "rows": [
+            [
+              "Flat",
+              "One shade per polygon",
+              "Faceted"
+            ],
+            [
+              "Smooth",
+              "Vertex colors across polygon",
+              "Smoother color transitions"
+            ],
+            [
+              "Phong",
+              "Surface normals for lighting",
+              "Detailed specular highlights"
+            ]
+          ]
+        },
+        {
+          "title": "Photoreceptors",
+          "columns": [
+            "Cell",
+            "Primary Role"
+          ],
+          "rows": [
+            [
+              "Rods",
+              "Low-light/night vision"
+            ],
+            [
+              "Cones",
+              "Color vision"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Graphics Software And Tool Layers",
+      "summary": "Graphics applications can use ready-made domain tools or programming interfaces. Low-level graphics APIs sit above device drivers and hardware, while higher-level libraries organize more of the scene and application behavior. The slides survey historical technologies rather than a current product-support guide. Java 3D is a graphics API, not a separate programming language.",
+      "key_terms": [
+        {
+          "term": "Graphics API",
+          "definition": "An interface through which application code requests graphics operations."
+        },
+        {
+          "term": "OpenGL",
+          "definition": "A cross-platform low-level graphics API introduced by SGI in 1992."
+        },
+        {
+          "term": "Direct3D",
+          "definition": "Microsoft 3D graphics API for Windows and Xbox, introduced in 1995."
+        },
+        {
+          "term": "High-level graphics library",
+          "definition": "A layer offering more application/scene organization above low-level graphics calls."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Software stack",
+          "statement": "The picture shows Application program -> High-level libraries -> OpenGL/Direct3D -> Device drivers -> Graphics hardware."
+        },
+        {
+          "name": "Direct3D pipeline stages",
+          "statement": "The slide lists tessellation, vertex processing, geometry processing, texture mapping, rasterization, pixel processing, and pixel rendering; it also identifies Microsoft COM technology."
+        },
+        {
+          "name": "Historical tool caution",
+          "statement": "XNA Game Studio and Flash are included because they appear in the lecture, not as recommendations for a new project. No API import statements, MATLAB plotting commands, fitting commands, or GUI-building scripts are taught in these slides."
+        },
+        {
+          "name": "MATLAB role",
+          "statement": "MATLAB is a high-level computing language and interactive environment for numerical computation, algorithm development, data analysis, and visualization. Ordinary MATLAB use requires no Python-style import line."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Page 57 incorrectly calls Java 3D a programming language; it is an API/scene-graph library for Java.",
+        "Do not treat a historical slide list as evidence that a product is currently supported.",
+        "MATLAB is an environment and language; Simulink block screenshots are not source-code imports."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 54, 55, 56, 57, 58"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Application asks libraries; libraries call the API; drivers talk to hardware."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Graphics Tool Categories",
+          "columns": [
+            "Category",
+            "Slide Names",
+            "Role"
+          ],
+          "rows": [
+            [
+              "Special-purpose applications",
+              "Excel; AutoCAD; medical visualization",
+              "Ready-made domain work"
+            ],
+            [
+              "Low-level APIs",
+              "OpenGL; Direct3D",
+              "Rendering interfaces"
+            ],
+            [
+              "High-level tools/libraries",
+              "OpenSceneGraph; XNA Game Studio; Java 3D",
+              "Scene/application or game-development support"
+            ],
+            [
+              "Advanced visualization tools",
+              "MATLAB; Maya; Flash",
+              "Numerical visualization; 3D authoring; historical web authoring"
+            ]
+          ]
+        },
+        {
+          "title": "Named Tools",
+          "columns": [
+            "Name",
+            "Accurate Description"
+          ],
+          "rows": [
+            [
+              "OpenSceneGraph",
+              "Open-source cross-platform 3D library"
+            ],
+            [
+              "XNA Game Studio",
+              "Historical Microsoft game-development environment"
+            ],
+            [
+              "Java 3D",
+              "High-level 3D API for Java"
+            ],
+            [
+              "MATLAB",
+              "Numerical computing and visualization language/environment"
+            ],
+            [
+              "Maya",
+              "3D modeling, animation, effects, rendering"
+            ],
+            [
+              "Flash",
+              "Historical multimedia/web-animation authoring tool"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Simuland, Referent, Models And Gravity Example",
+      "summary": "The simuland is the real object, process, or phenomenon of interest, and the referent is the knowledge available about it. A conceptual model records what is represented, omitted, and assumed, then serves as the specification for an executable model. Executing that model over time is a simulation, and its outputs are results. Requirements come from the intended use and specify both what must be modeled and how accurate it must be.",
+      "key_terms": [
+        {
+          "term": "Simuland",
+          "definition": "The real-world object, process, or phenomenon being simulated."
+        },
+        {
+          "term": "Referent",
+          "definition": "The developers' quantitative and qualitative knowledge about the simuland."
+        },
+        {
+          "term": "Conceptual model",
+          "definition": "A documented representation of included/omitted aspects, assumptions, relationships, and use cases; the executable-model specification."
+        },
+        {
+          "term": "Executable model",
+          "definition": "An implementation that can be executed to simulate the conceptual description."
+        },
+        {
+          "term": "Simulation and results",
+          "definition": "Simulation is executing the model over time; results are the outputs produced during or after that execution."
+        },
+        {
+          "term": "Requirements",
+          "definition": "Intended-use-driven statements of what to represent and the accuracy required."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Examples of simulands",
+          "statement": "The slide examples are aircraft/weather (object and environmental phenomena), automobile assembly (process), and underground water flow (phenomenon). A flight simulator is the model/system, not the real aircraft simuland."
+        },
+        {
+          "name": "Forms of conceptual documentation",
+          "statement": "Equations, flowcharts, UML diagrams, data tables, and expository text can be combined. The referent may contain engineering equations or qualitative knowledge such as a pilot's expectation of pre-stall buffet."
+        },
+        {
+          "name": "Gravity model and units",
+          "statement": "The slide model is h(t)=-16*t^2+v*t+s with time in seconds, initial upward-positive velocity v in ft/s, and initial height s in feet. The coefficient -16 has units ft/s^2 and represents one-half the downward acceleration, not a fixed change in height measured only in feet."
+        },
+        {
+          "name": "Exact Java Source From PDF Page 69",
+          "statement": "The following is Java, not MATLAB. It prints before incrementing time and recomputing height, so the first negative sampled height is not printed. The source is included for code recognition, not as a claim of a Java execution.\n```java\n// Height of a falling object\npublic class Gravity\n{\n    public static void main (String args[])\n    {\n        double h, s = 1000.0, v = 100.0;\n        int    t = 0;\n        h = s;\n        while (h >= 0.0)\n        {\n            System.out.println(\"Height at time \" + t + \"=\" + h);\n            t++;\n            h = (-16 * t * t) + (v * t) + s;\n        }\n    }\n}\n```"
+        },
+        {
+          "name": "MATLAB translation, ours",
+          "statement": "The worked script below translates the same discrete-time sampling logic to MATLAB and uses our deterministic fprintf formatting. There are no MATLAB import statements in this example."
+        },
+        {
+          "name": "Sampled versus continuous peak",
+          "statement": "The displayed table has its largest sampled height at t=3, h=1156. The continuous quadratic reaches its vertex at t=100/32=3.125 seconds and height1156.25 feet, so t=3 is not the exact continuous peak."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: translate the page 69 Java gravity loop to MATLAB with the same initial values and whole-second sampling.",
+          "steps": [
+            "Start at t=0 and print only while height is nonnegative. Increment time before the next height calculation, exactly as in the pictured Java program.",
+            "```matlab\ns = 1000; v = 100; t = 0; h = s;\nwhile h >= 0\n    fprintf('t=%d h=%.0f\\n',t,h);\n    t = t+1;\n    h = -16*t^2 + v*t + s;\nend\n```"
+          ],
+          "answer": "Expected printed output:\nt=0 h=1000\nt=1 h=1084\nt=2 h=1136\nt=3 h=1156\nt=4 h=1144\nt=5 h=1100\nt=6 h=1024\nt=7 h=916\nt=8 h=776\nt=9 h=604\nt=10 h=400\nt=11 h=164\n"
+        }
+      ],
+      "common_mistakes": [
+        "The referent is knowledge about the real system, not the physical system itself.",
+        "A model deliberately omits aspects irrelevant to its intended application.",
+        "The page 69 Java while loop samples whole seconds; do not claim it locates exact ground-contact time or continuous peak time.",
+        "The coefficient -16 is an acceleration coefficient with ft/s^2 units, not a 16-foot displacement."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 62, 63, 64, 65, 66, 67, 68, 69"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Reality -> knowledge -> description -> executable -> run -> results. Requirements say what is needed and how close is enough."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Core Vocabulary",
+          "columns": [
+            "Item",
+            "What It Is",
+            "Gravity Example"
+          ],
+          "rows": [
+            [
+              "Simuland",
+              "Reality of interest",
+              "Gravitational motion"
+            ],
+            [
+              "Referent",
+              "Knowledge of reality",
+              "Near-surface free-fall relationship and assumptions"
+            ],
+            [
+              "Conceptual model",
+              "Specified representation",
+              "h(t)=-16t^2+vt+s"
+            ],
+            [
+              "Executable model",
+              "Runnable implementation",
+              "Java Gravity class"
+            ],
+            [
+              "Simulation",
+              "Execution over time",
+              "Run the sampled loop"
+            ],
+            [
+              "Results",
+              "Produced outputs",
+              "Heights/table/plot"
+            ],
+            [
+              "Requirements",
+              "Use and accuracy needs",
+              "Which heights and accuracy the application needs"
+            ]
+          ]
+        },
+        {
+          "title": "Two Model Categories",
+          "columns": [
+            "Conceptual",
+            "Executable"
+          ],
+          "rows": [
+            [
+              "Documents included and omitted aspects",
+              "Implements those decisions"
+            ],
+            [
+              "Records assumptions and relationships",
+              "Runs the stated relationships"
+            ],
+            [
+              "Can use equations, text, diagrams, tables",
+              "Often a computer program"
+            ]
+          ]
+        },
+        {
+          "title": "Result Timing",
+          "columns": [
+            "When",
+            "Slide Example"
+          ],
+          "rows": [
+            [
+              "During simulation",
+              "Flight simulator out-the-window view"
+            ],
+            [
+              "After simulation",
+              "Queue lengths and waiting-time statistics"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Verification, Validation And Accreditation",
+      "summary": "Verification checks whether the model and implementation agree with their specifications. Validation checks whether the representation and its results are sufficiently accurate for the real simuland. Accreditation is an official decision by a responsible authority that the model is acceptable for a specific purpose. Technical V&V evidence informs that decision but does not make the authority or the intended use disappear.",
+      "key_terms": [
+        {
+          "term": "Verification",
+          "definition": "Assessment of transformational accuracy across requirements, conceptual model, and executable model."
+        },
+        {
+          "term": "Validation",
+          "definition": "Assessment of representational accuracy between the simuland, its conceptual representation, and the resulting behavior."
+        },
+        {
+          "term": "Accreditation",
+          "definition": "Official certification by a responsible authority that a model is acceptable for a specific purpose."
+        },
+        {
+          "term": "Credibility",
+          "definition": "How likely model results are to be regarded as acceptable for an application."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Verification questions",
+          "statement": "Does program code implement the conceptual model? Does the conceptual model satisfy intended-use requirements? Does the executable model deliver results when needed and in the required format?"
+        },
+        {
+          "name": "Validation questions",
+          "statement": "Does the conceptual model represent the simuland correctly? How close are computed results to actual behavior? Over which inputs are the results credible and useful?"
+        },
+        {
+          "name": "Accreditation questions",
+          "statement": "Are model capabilities consistent with the planned application? Does V&V demonstrate useful accuracy? What happens if an insufficiently accurate model is used?"
+        },
+        {
+          "name": "Reading the comparison diagram",
+          "statement": "Boxes are artifacts; solid arrows are transformations producing artifacts; dashed arrows are comparisons. Requirements analysis, modeling, implementation, and execution are production processes, not interchangeable names for validation."
+        },
+        {
+          "name": "Purpose and resources",
+          "statement": "VV&A aims for sufficient accuracy for the intended application and credibility with decision makers. Developing credibility consumes resources; the project manager balances required credibility, cost, and resulting utility rather than assuming a free route to perfect credibility."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Verification does not by itself prove real-world validity.",
+        "Accreditation is purpose-specific, not a guarantee for every future use.",
+        "Apparent visual realism is not a substitute for appropriate accuracy evidence.",
+        "A technically informed accreditation decision is still an authority's decision, not another numerical test."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 62, 70, 71, 72, 73, 82"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Transform, represent, authorize: verification, validation, accreditation. The repeated V does not mean the first two ask the same question."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "VV&A At A Glance",
+          "columns": [
+            "Process",
+            "Accuracy/Decision",
+            "Main Comparison"
+          ],
+          "rows": [
+            [
+              "Verification",
+              "Transformational accuracy",
+              "Requirements <-> conceptual model; conceptual <-> executable model"
+            ],
+            [
+              "Validation",
+              "Representational accuracy",
+              "Simuland <-> conceptual model; simuland <-> results"
+            ],
+            [
+              "Accreditation",
+              "Official usability",
+              "V&V evidence/capabilities <-> planned use and requirements"
+            ]
+          ]
+        },
+        {
+          "title": "Solid Transformations In The Diagram",
+          "columns": [
+            "From",
+            "Process",
+            "To"
+          ],
+          "rows": [
+            [
+              "Simuland",
+              "Requirements analysis",
+              "Requirements"
+            ],
+            [
+              "Simuland",
+              "Modeling",
+              "Conceptual model"
+            ],
+            [
+              "Conceptual model",
+              "Implementation",
+              "Executable model"
+            ],
+            [
+              "Executable model",
+              "Execution",
+              "Results"
+            ]
+          ]
+        },
+        {
+          "title": "Dashed Comparisons In The Diagram",
+          "columns": [
+            "Artifacts Compared",
+            "Label"
+          ],
+          "rows": [
+            [
+              "Requirements and conceptual model",
+              "Verification"
+            ],
+            [
+              "Conceptual and executable model",
+              "Verification"
+            ],
+            [
+              "Simuland and conceptual model",
+              "Validation"
+            ],
+            [
+              "Simuland and results",
+              "Validation"
+            ],
+            [
+              "Requirements and results",
+              "Accreditation"
+            ]
+          ]
+        },
+        {
+          "title": "Credibility Trade-Off",
+          "columns": [
+            "Aspect",
+            "Slide Point"
+          ],
+          "rows": [
+            [
+              "Utility",
+              "Initially rises quickly then levels off"
+            ],
+            [
+              "Cost",
+              "Becomes steep at very high credibility"
+            ],
+            [
+              "Management decision",
+              "Balance application needs and available resources"
+            ],
+            [
+              "Accreditation",
+              "Official recognition of sufficient credibility for a specific use"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Project Types, Decision Risks And Bounds Of Validity",
+      "summary": "Different simulation projects have different deliverables and therefore different development priorities. A study seeks insight, software development delivers a reusable executable, and an event applies existing models to a particular objective. Validity also has limits: accepting an invalid or irrelevant model can cause serious harm, while rejecting a valid one wastes potential benefits. Establishing bounds of validity helps prevent unjustified reuse outside the conditions that the evidence supports.",
+      "key_terms": [
+        {
+          "term": "Simulation study",
+          "definition": "A project primarily seeking insight into a simuland; reusable model code need not be the main deliverable."
+        },
+        {
+          "term": "Simulation software development",
+          "definition": "A project whose primary deliverable is executable simulation software expected to be reused, maintained, and enhanced."
+        },
+        {
+          "term": "Simulation event",
+          "definition": "A particular use of existing model(s) for a specified objective."
+        },
+        {
+          "term": "Type I error",
+          "definition": "A valid model is not used; associated with model builder's risk."
+        },
+        {
+          "term": "Type II error",
+          "definition": "An invalid model is used; associated with model user's risk."
+        },
+        {
+          "term": "Type III error",
+          "definition": "A model valid for another purpose is used in an inappropriate application; associated with model accreditor's risk."
+        },
+        {
+          "term": "Bounds of validity",
+          "definition": "The conditions and input domain in which the model is sufficiently accurate for its intended application."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Project implications",
+          "statement": "A study emphasizes findings; software development emphasizes disciplined engineering and long-term maintenance; an event may emphasize scenario development, logistics, database preparation, and security rather than new software."
+        },
+        {
+          "name": "Risk consequences",
+          "statement": "Type I can waste development costs or delay benefits. Types II and III can produce severe consequences such as improper training or unsafe analyses. The lecture labels them more serious than Type I, not harmless whenever the model once worked elsewhere."
+        },
+        {
+          "name": "Three gravity models exactly as printed",
+          "statement": "Page 81 prints (1) h(t)=776; (2) h(t)=(-420/9)*t+1864; (3) h(t)=-16*t^2+v*t+s, with v=100,s=1000 and plotted time0 through11. Model1 meets the physical curve at t=8 within that plotted nonnegative interval."
+        },
+        {
+          "name": "Verified equation/graph inconsistency",
+          "statement": "The actual PDF equation unambiguously gives model2 slope -420/9, about -46.666667 ft/s. It does not match the steep plotted line or the textual claim of closeness over t=5 to10: at t=8 it gives about1490.667 ft rather than776. There is no uniquely established intended replacement coefficient, so preserve the printed formula and flag the discrepancy instead of silently repairing it."
+        },
+        {
+          "name": "Physical-model limits",
+          "statement": "The quadratic assumes negligible air resistance and proximity to Earth's surface. Its higher fidelity within those assumptions does not grant validity for every physical setting."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: test the printed model2 against the physical model, without inventing a replacement slope.",
+          "steps": [
+            "Use the exact photographed coefficient -420/9. The differences are arithmetic evidence of a source inconsistency, not an execution problem to hide.",
+            "```matlab\nt = [5 8 10];\nh1 = 776*ones(size(t));\nh2 = (-420/9)*t + 1864;\nh3 = -16*t.^2 + 100*t + 1000;\nfprintf('Printed slope=%.6f\\n',-420/9);\nfor k = 1:numel(t)\n    fprintf('t=%d constant=%.3f printedLinear=%.3f physical=%.3f\\n',t(k),h1(k),h2(k),h3(k));\nend\n```"
+          ],
+          "answer": "Expected printed output:\nPrinted slope=-46.666667\nt=5 constant=776.000 printedLinear=1630.667 physical=1100.000\nt=8 constant=776.000 printedLinear=1490.667 physical=776.000\nt=10 constant=776.000 printedLinear=1397.333 physical=400.000\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not swap builder, user, and accreditor risks.",
+        "A model valid for one aircraft type is not automatically valid for another.",
+        "The page81 printed linear equation contradicts its graph/text; do not memorize a guessed repaired slope as a slide fact.",
+        "The constant model agrees at t=8 in the plotted interval, not at every time.",
+        "A study may use one-off code, but this does not make the findings exempt from V&V."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 74, 75, 76, 77, 78, 79, 80, 81, 82"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Errors I-II-III: Idle valid model, Invalid used model, Irrelevant used model. Risks B-U-A: Builder, User, Accreditor."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Simulation Project Types",
+          "columns": [
+            "Type",
+            "Main Objective",
+            "Practical Priority"
+          ],
+          "rows": [
+            [
+              "Study",
+              "Obtain insight",
+              "Findings; code need not be the deliverable"
+            ],
+            [
+              "Software development",
+              "Deliver reusable executable",
+              "Engineering, maintenance, enhancement"
+            ],
+            [
+              "Event",
+              "Apply existing model(s) to an objective",
+              "Scenario, logistics, data, security"
+            ]
+          ]
+        },
+        {
+          "title": "Decision Error Matrix",
+          "columns": [
+            "Decision",
+            "Valid Model",
+            "Invalid Model",
+            "Irrelevant Model"
+          ],
+          "rows": [
+            [
+              "Use model",
+              "Correct",
+              "Type II: user risk",
+              "Type III: accreditor risk"
+            ],
+            [
+              "Do not use model",
+              "Type I: builder risk",
+              "Correct",
+              "Correct"
+            ]
+          ]
+        },
+        {
+          "title": "Gravity Models And Evidence",
+          "columns": [
+            "Model",
+            "Printed Equation",
+            "Safe Interpretation"
+          ],
+          "rows": [
+            [
+              "1",
+              "h=776",
+              "Constant; matches physical curve at t8 in plotted interval"
+            ],
+            [
+              "2",
+              "h=(-420/9)t+1864",
+              "Printed linear formula is inconsistent with graph and claimed range"
+            ],
+            [
+              "3",
+              "h=-16t^2+100t+1000",
+              "Physical approximation within stated assumptions"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Informal And Static V&V Methods",
+      "summary": "Informal methods rely strongly on expert observation and reasoning rather than detailed quantitative analysis. Inspection compares project artifacts, whereas face validation compares behavior with experts' knowledge of the simuland. Static methods examine model characteristics without executing a simulation. The method name matters less than knowing what is compared and whether the question is implementation correctness or real-system representation.",
+      "key_terms": [
+        {
+          "term": "Inspection",
+          "definition": "An informal verification method comparing artifacts such as code, equations, algorithms, and design documents."
+        },
+        {
+          "term": "Face validation",
+          "definition": "An informal validation method comparing simulation behavior with knowledgeable observers' expectations."
+        },
+        {
+          "term": "Turing test",
+          "definition": "A specialized face-validation approach for models of human behavior."
+        },
+        {
+          "term": "Static V&V",
+          "definition": "Assessment of model characteristics without executing a simulation."
+        },
+        {
+          "term": "Data analysis",
+          "definition": "Static verification of data definitions, allowed ranges, structures, operations, dependencies, and flows."
+        },
+        {
+          "term": "Cause-effect graphing",
+          "definition": "Static validation comparing important causal relationships in the simuland and conceptual model."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Inspection process",
+          "statement": "Teams compare artifacts using expertise, identify potential faults, assess them, and prioritize them. Inspections can be ad hoc or structured; structured teams may assign moderator, reader, and recorder roles."
+        },
+        {
+          "name": "Face validation evidence",
+          "statement": "Potential users or subject-matter experts observe outputs under given conditions and judge acceptability using their knowledge. It is common in interactive virtual simulations, and may be used when data or time for more objective methods are scarce."
+        },
+        {
+          "name": "Turing test focus",
+          "statement": "The test concerns modeled human behavior and human expectations. It is a specialized face-validation method, not an accreditation certificate or proof of general correctness."
+        },
+        {
+          "name": "Data definitions and operations",
+          "statement": "Check data types, allowable ranges, and appropriate operations. Data dependency analysis asks which variables depend on which others; data flow analysis asks what is passed between executable-model modules."
+        },
+        {
+          "name": "Causal graphs",
+          "statement": "Identify important causes/events/conditions and effects/state changes in both simuland and conceptual model. Nodes represent causes/effects and directed edges represent causal relationships; correct missing or extraneous links. Petri nets are mentioned as a widely used diagrammatic modeling notation."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Inspection is verification, while face validation is validation; do not classify both by the fact that humans participate.",
+        "Static means no simulation execution for that assessment, not that the modeled physical system never changes.",
+        "The slide's wording about effects connecting nodes is confusing: directed edges express causal relationships.",
+        "A convincing human-like output is not proof that every internal equation is implemented correctly."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 83, 84, 85, 86, 87, 88, 89"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "I-F-T: Inspection checks artifacts, Face validation checks felt realism, Turing targets human behavior. Dependency asks depends on what; flow asks passed where."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Informal Methods",
+          "columns": [
+            "Method",
+            "Class",
+            "Compared Evidence"
+          ],
+          "rows": [
+            [
+              "Inspection",
+              "Verification",
+              "Code/design/equations/algorithms against each other"
+            ],
+            [
+              "Face validation",
+              "Validation",
+              "Observed model behavior against expert simuland knowledge"
+            ],
+            [
+              "Turing test",
+              "Validation",
+              "Generated human behavior against human expectations"
+            ]
+          ]
+        },
+        {
+          "title": "Static Methods",
+          "columns": [
+            "Method",
+            "Class",
+            "Checks"
+          ],
+          "rows": [
+            [
+              "Data analysis",
+              "Verification",
+              "Data definitions and operations between conceptual and executable models"
+            ],
+            [
+              "Cause-effect graphing",
+              "Validation",
+              "Causal relationships between simuland and conceptual model"
+            ]
+          ]
+        },
+        {
+          "title": "Two Data Analyses",
+          "columns": [
+            "Analysis",
+            "Question",
+            "Study Example, Ours"
+          ],
+          "rows": [
+            [
+              "Dependency",
+              "Which variable depends on which?",
+              "Height depends on t, v, and s"
+            ],
+            [
+              "Flow",
+              "Which variables cross module boundaries?",
+              "A routine passes initial velocity into a height calculation"
+            ]
+          ]
+        },
+        {
+          "title": "Structured Inspection Roles",
+          "columns": [
+            "Role",
+            "Study Explanation"
+          ],
+          "rows": [
+            [
+              "Moderator",
+              "Guides the review process"
+            ],
+            [
+              "Reader",
+              "Walks through the artifact"
+            ],
+            [
+              "Recorder",
+              "Captures identified issues"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M6: Dynamic And Formal V&V Methods",
+      "summary": "Dynamic methods execute the model and assess its results, often using numerical comparisons. Sensitivity analysis studies responses over changing inputs, while predictive validation compares particular corresponding outcomes. Formal methods instead seek mathematical proofs using explicit statements and logical rules. A practical V&V effort normally combines methods selected for the model, the available simuland data, and the feasibility of repeated execution.",
+      "key_terms": [
+        {
+          "term": "Dynamic V&V",
+          "definition": "Accuracy assessment by executing a model and evaluating its results."
+        },
+        {
+          "term": "Sensitivity analysis",
+          "definition": "Comparing magnitude and variability of model responses with simuland behavior over the same input range; also identifies influential inputs."
+        },
+        {
+          "term": "Predictive validation",
+          "definition": "Comparing specific corresponding model outcomes and simuland outcomes."
+        },
+        {
+          "term": "Comparison testing",
+          "definition": "Dynamic verification that runs multiple models of the same simuland with identical inputs and compares outputs."
+        },
+        {
+          "term": "Regression analysis",
+          "definition": "A statistical technique for relationships between variables; here, a dynamic validation method using paired model and observation values."
+        },
+        {
+          "term": "Hypothesis testing",
+          "definition": "A statistical comparison of simulation-result samples with a valid-results distribution, its parameters, or a reference sample."
+        },
+        {
+          "term": "Formal V&V",
+          "definition": "Use of mathematical statements and proofs to establish model characteristics."
+        },
+        {
+          "term": "Inductive assertions",
+          "definition": "Formal verification proving that path-entry assertions plus executed instructions imply path-exit assertions."
+        },
+        {
+          "term": "Predicate calculus",
+          "definition": "Formal validation expressing properties of simuland and conceptual model and using logical arguments to assess consistency."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Sensitivity evidence",
+          "statement": "Compare response surfaces for appropriately selected independent/input and dependent/output variables. Examine both sign and magnitude of differences and how input errors affect results."
+        },
+        {
+          "name": "Predictive and comparison tests",
+          "statement": "Predictive validation compares model outputs with corresponding actual outcomes. Comparison testing compares multiple models using the same inputs; agreement alone does not prove that all represent reality correctly."
+        },
+        {
+          "name": "Regression caveat",
+          "statement": "The lecture describes relatedness and variation between variables and paired comparisons. Statistical association by itself does not establish causation or eliminate bias shared by model and observations."
+        },
+        {
+          "name": "Hypothesis-testing setup",
+          "statement": "Treat multiple relevant simulation results as a sample from the population of possible model outcomes. Choose an appropriate test and compare with accepted valid results; a single pleasing plot is not that test."
+        },
+        {
+          "name": "Inductive proof structure",
+          "statement": "For each possible execution path, prove that a true starting assertion and the path instructions imply the ending assertion. Mathematical induction supports the correctness argument relative to the stated specification."
+        },
+        {
+          "name": "Predicate proof scope",
+          "statement": "Describe properties of the simuland and conceptual model in formal logic and prove their consistency under the stated premises. A proof based on assumptions does not independently prove the physical truth of those assumptions."
+        },
+        {
+          "name": "Practical method selection",
+          "statement": "Formal proofs are difficult for complex useful models and more practical in constrained situations. Select methods using model type, available comparison data, and ease of repeated runs; study prior V&V for similar models and combine complementary methods."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Comparison testing is classified as verification in the slides, not an automatic validation against reality.",
+        "Do not confuse repeated simulation samples with a proof of all possible behavior.",
+        "Regression association is not proof of causality.",
+        "Formal verification of code does not guarantee that its conceptual physics is valid.",
+        "One V&V method need not address every concern; the slides explicitly favor combinations when appropriate."
+      ],
+      "source_refs": [
+        "M6-MAIN-Visualization and VV and A.pdf, PDF p. 90, 91, 92, 93, 94, 95, 96, 97, 98"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Dynamic runs; formal proves. Sensitivity varies inputs, prediction checks outcomes, comparison checks models against models."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Dynamic Methods",
+          "columns": [
+            "Method",
+            "Slide Class",
+            "Comparison"
+          ],
+          "rows": [
+            [
+              "Sensitivity analysis",
+              "Validation",
+              "Magnitude/variability of model and simuland responses"
+            ],
+            [
+              "Predictive validation",
+              "Validation",
+              "Specific matching outcomes"
+            ],
+            [
+              "Comparison testing",
+              "Verification",
+              "Same-input results from multiple models"
+            ],
+            [
+              "Regression analysis",
+              "Validation",
+              "Paired model and observed values/relationships"
+            ],
+            [
+              "Hypothesis testing",
+              "Validation",
+              "Simulation distribution and accepted reference distribution"
+            ]
+          ]
+        },
+        {
+          "title": "Formal Methods",
+          "columns": [
+            "Method",
+            "Slide Class",
+            "Proof Target"
+          ],
+          "rows": [
+            [
+              "Inductive assertions",
+              "Verification",
+              "Executable paths satisfy conceptual input-output assertions"
+            ],
+            [
+              "Predicate calculus",
+              "Validation",
+              "Simuland and conceptual-model properties are consistent"
+            ]
+          ]
+        },
+        {
+          "title": "Four Method Families",
+          "columns": [
+            "Family",
+            "Main Evidence",
+            "Run Required For The Described Assessment?"
+          ],
+          "rows": [
+            [
+              "Informal",
+              "Human expertise and qualitative assessment",
+              "Depends on artifact or behavior reviewed"
+            ],
+            [
+              "Static",
+              "Model/code characteristics",
+              "No simulation execution"
+            ],
+            [
+              "Dynamic",
+              "Runtime results and comparisons",
+              "Yes"
+            ],
+            [
+              "Formal",
+              "Mathematical statements and proof",
+              "Proof rather than empirical running"
+            ]
+          ]
+        },
+        {
+          "title": "Selection Factors",
+          "columns": [
+            "Factor",
+            "Decision It Affects"
+          ],
+          "rows": [
+            [
+              "Model type/complexity",
+              "Which methods are meaningful and tractable"
+            ],
+            [
+              "Simuland data availability",
+              "Which real-system comparisons can be made"
+            ],
+            [
+              "Repeated-execution feasibility",
+              "Which dynamic analyses are practical"
+            ],
+            [
+              "Prior comparable V&V",
+              "Which methods may transfer with justification"
+            ],
+            [
+              "Verification and validation concerns",
+              "Which complementary methods to combine"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Frame-Buffer Storage",
+      "expression": "bits = width*height*bits_per_pixel; bytes = bits/8",
+      "when_to_use": "Compute one uncompressed buffer, explicitly stating bit depth and overhead assumptions."
+    },
+    {
+      "name": "Decimal And Binary Storage",
+      "expression": "kB = bytes/1000; KiB = bytes/1024",
+      "when_to_use": "Avoid confusing the slide 38.4 kB with 37.5 KiB."
+    },
+    {
+      "name": "Homogeneous Coordinates",
+      "expression": "Point=[x;y;z;1]; vector=[x;y;z;0]",
+      "when_to_use": "Distinguish the effect of translation on locations and directions."
+    },
+    {
+      "name": "World-To-Camera Transform",
+      "expression": "P_camera = M*P_world; M=[u_x u_y u_z -u dot C; v_x v_y v_z -v dot C; n_x n_y n_z -n dot C; 0 0 0 1]",
+      "when_to_use": "Express world coordinates in an orthonormal camera frame at camera position C."
+    },
+    {
+      "name": "Point-Light Attenuation",
+      "expression": "I(Q)=I0/(a+b*d+c*d^2)",
+      "when_to_use": "Use the slide constant, linear, and quadratic distance attenuation terms."
+    },
+    {
+      "name": "Spotlight Angular Factor",
+      "expression": "cos(phi)^e inside the cutoff cone; zero outside",
+      "when_to_use": "Represent angular concentration, not a cosecant function."
+    },
+    {
+      "name": "Physical Gravity Approximation",
+      "expression": "h(t)=-16*t^2+v*t+s; for v=100,s=1000: h=-16*t^2+100*t+1000",
+      "when_to_use": "Near-surface, negligible-air-resistance motion in feet and seconds."
+    },
+    {
+      "name": "Printed Linear Gravity Model, Inconsistent With Figure",
+      "expression": "h2(t)=(-420/9)*t+1864; slope=-46.666666...",
+      "when_to_use": "Recognize the exact page81 equation and explain why it cannot match the plotted line/text claim."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "What is the difference between a geometric vector and a raster pixel?",
+      "answer": "A vector has direction and magnitude; a pixel is an addressable picture element. A vector display traces strokes and is an output technology."
+    },
+    {
+      "question": "Why do homogeneous points and vectors use different fourth coordinates?",
+      "answer": "The shown point w=1 permits translation; a direction vector w=0 is unchanged by pure translation."
+    },
+    {
+      "question": "How do perspective and orthographic projections differ?",
+      "answer": "Perspective projectors meet at a finite COP. Orthographic projectors share a perpendicular DOP and preserve measurements along the projection plane."
+    },
+    {
+      "question": "What are verification, validation, and accreditation?",
+      "answer": "Verification: specification/implementation consistency. Validation: sufficiently accurate representation of the simuland. Accreditation: official acceptance for a specified purpose."
+    },
+    {
+      "question": "Which errors are builder, user, and accreditor risks?",
+      "answer": "Type I: valid model not used, builder risk. Type II: invalid model used, user risk. Type III: irrelevant model used, accreditor risk."
+    },
+    {
+      "question": "What should be said about page81 model2 and the selection of V&V methods?",
+      "answer": "The printed -420/9 slope is inconsistent with its plotted line and claimed t5 to10 accuracy; no unique corrected coefficient is established. Select complementary methods based on model, data, and feasible execution rather than accepting appearance alone."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Graphics Pipeline",
+      "remember": "Input -> transforms -> rasterization -> output. Frame buffer stores pixels; color depth changes storage."
+    },
+    {
+      "topic": "Geometry",
+      "remember": "Convex segments stay inside. Point w1, vector w0. Affine: translation, rotation, scaling; preserves collinearity and ratios along a line."
+    },
+    {
+      "topic": "Camera",
+      "remember": "Camera point, target point, up vector. Perspective COP; parallel DOP; orthographic DOP perpendicular to plane."
+    },
+    {
+      "topic": "Appearance",
+      "remember": "Ambient uniform; point localized/attenuated; spotlight cone; directional distant. Reflection interacts, shading fills, texture decorates."
+    },
+    {
+      "topic": "Software And Vocabulary",
+      "remember": "OpenGL cross-platform, Direct3D Microsoft, Java3D API not language. Simuland reality, referent knowledge, conceptual specification, executable implementation."
+    },
+    {
+      "topic": "VV&A And Risk",
+      "remember": "Verification transforms; validation represents; accreditation authorizes specific use. I builder nonuse; II user invalid use; III accreditor wrong-purpose use."
+    },
+    {
+      "topic": "Gravity Source Traps",
+      "remember": "h=-16t^2+100t+1000; -16 has ft/s^2 units. Sample peak t3 differs from true vertex3.125. Printed linear -420/9 contradicts its graph, not a verified repaired slope."
+    },
+    {
+      "topic": "Methods",
+      "remember": "Informal expertise; static no simulation run; dynamic executes; formal proves. Inspection/data analysis/inductive assertions verify; face/causal/predictive/sensitivity/regression/hypothesis/predicate methods validate. Comparison testing verifies."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "width = 640; height = 480; bpp = 1;\nbits = width*height*bpp;\nbytes = bits/8;\nfprintf('Bits=%d, bytes=%d\\n',bits,bytes);\nfprintf('kB=%.1f, KiB=%.1f\\n',bytes/1000,bytes/1024);",
+      "expected_output": "Bits=307200, bytes=38400\nkB=38.4, KiB=37.5\n"
+    },
+    {
+      "code": "T = [1 0 0 10; 0 1 0 -2; 0 0 1 3; 0 0 0 1];\npoint = [1;2;3;1];\nvector = [1;2;3;0];\np2 = T*point; v2 = T*vector;\nfprintf('Point: %.0f %.0f %.0f %.0f\\n',p2);\nfprintf('Vector: %.0f %.0f %.0f %.0f\\n',v2);",
+      "expected_output": "Point: 11 0 6 1\nVector: 1 2 3 0\n"
+    },
+    {
+      "code": "I0 = 100; a = 1; b = 0; c = 1; d = 3;\nI = I0/(a+b*d+c*d^2);\nphi = pi/3; exponent = 2;\nfalloff = cos(phi)^exponent;\nfprintf('Point intensity=%.2f\\n',I);\nfprintf('Inside-cone angular factor=%.2f\\n',falloff);",
+      "expected_output": "Point intensity=10.00\nInside-cone angular factor=0.25\n"
+    },
+    {
+      "code": "s = 1000; v = 100; t = 0; h = s;\nwhile h >= 0\n    fprintf('t=%d h=%.0f\\n',t,h);\n    t = t+1;\n    h = -16*t^2 + v*t + s;\nend",
+      "expected_output": "t=0 h=1000\nt=1 h=1084\nt=2 h=1136\nt=3 h=1156\nt=4 h=1144\nt=5 h=1100\nt=6 h=1024\nt=7 h=916\nt=8 h=776\nt=9 h=604\nt=10 h=400\nt=11 h=164\n"
+    },
+    {
+      "code": "t = [5 8 10];\nh1 = 776*ones(size(t));\nh2 = (-420/9)*t + 1864;\nh3 = -16*t.^2 + 100*t + 1000;\nfprintf('Printed slope=%.6f\\n',-420/9);\nfor k = 1:numel(t)\n    fprintf('t=%d constant=%.3f printedLinear=%.3f physical=%.3f\\n',t(k),h1(k),h2(k),h3(k));\nend",
+      "expected_output": "Printed slope=-46.666667\nt=5 constant=776.000 printedLinear=1630.667 physical=1100.000\nt=8 constant=776.000 printedLinear=1490.667 physical=776.000\nt=10 constant=776.000 printedLinear=1397.333 physical=400.000\n"
+    }
+  ]
+}

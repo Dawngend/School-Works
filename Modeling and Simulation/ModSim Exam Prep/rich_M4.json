@@ -1,0 +1,1708 @@
+{
+  "sections": [
+    {
+      "heading": "M4: Monte Carlo Fundamentals",
+      "summary": "Monte Carlo simulation estimates a quantity or output distribution by repeating model evaluations with randomly sampled inputs. Its modern development is associated with 1940s Los Alamos atomic-physics work involving Stanislaw Ulam, Enrico Fermi, John von Neumann and Nicholas Metropolis. Randomness is useful for representing uncertainty, but it does not make Monte Carlo universally better than a deterministic method.",
+      "key_terms": [
+        {
+          "term": "Monte Carlo method",
+          "definition": "Broad class of computational algorithms relying on repeated random sampling for numerical experiments and approximate solutions."
+        },
+        {
+          "term": "Deterministic computation",
+          "definition": "For a fixed input set and fixed model, the evaluation produces a fixed output; random sampling can wrap around that evaluation."
+        },
+        {
+          "term": "Risk analysis",
+          "definition": "Using possible outcomes and their probabilities to support decisions under uncertainty."
+        },
+        {
+          "term": "Historical correction",
+          "definition": "The slide name Stanislaw Ulman refers to Stanislaw Ulam; use Ulam."
+        }
+      ],
+      "properties": [
+        {
+          "name": "What is specified",
+          "statement": "Specify a model, input distributions, sampling assumptions and a quantity to estimate. The desired numerical result need not be known in advance."
+        },
+        {
+          "name": "Statistical basis",
+          "statement": "Page 5 calls the method not a statistical tool, but Monte Carlo uses probability, statistical sampling and output analysis. It is an algorithmic approach with statistical foundations."
+        },
+        {
+          "name": "Method choice",
+          "statement": "Monte Carlo handles stochastic input uncertainty and can estimate deterministic quantities such as areas. Direct deterministic methods can be more suitable when tractable and sufficiently accurate."
+        },
+        {
+          "name": "Costs of approximation",
+          "statement": "The slide advantages are straightforward implementation, computerized sampling, approximate mathematical solutions, and use on stochastic or deterministic problems. The limitations are sampling cost and non-exact answers."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Why simulate a quantity if the slide says its result must be known?",
+          "steps": [
+            "The model and sampling law must be specified, but an unknown mean, probability or integral is the target.",
+            "Repeated sampled model evaluations estimate that target and its statistical uncertainty."
+          ],
+          "answer": "The result is estimated, not supplied in advance. The page 9 statement is misleading."
+        }
+      ],
+      "common_mistakes": [
+        "Use Ulam, not Ulman.",
+        "A deterministic numerical answer is not automatically exact; deterministic and exact are different ideas.",
+        "Monte Carlo does not eliminate input assumptions, model error or sampling error."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 5, 6, 7, 9, 10"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Known model and sampling law; unknown target quantity."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Monte Carlo And Deterministic Methods",
+          "columns": [
+            "Aspect",
+            "Monte Carlo",
+            "Deterministic Method"
+          ],
+          "rows": [
+            [
+              "Inputs or evaluation locations",
+              "Sampled according to a specified law",
+              "Specified without random sampling"
+            ],
+            [
+              "Repeated computation",
+              "Many sampled evaluations",
+              "May also need many evaluations"
+            ],
+            [
+              "Result",
+              "Statistical estimate or output distribution",
+              "Fixed result for fixed inputs and algorithm"
+            ],
+            [
+              "Error",
+              "Sampling error plus possible modeling/numerical error",
+              "May still have numerical and modeling error"
+            ],
+            [
+              "When useful",
+              "Uncertain inputs or difficult high-dimensional quantities",
+              "Tractable sufficiently accurate direct computation"
+            ]
+          ]
+        },
+        {
+          "title": "Slide Tradeoffs",
+          "columns": [
+            "Side",
+            "Point",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Advantage",
+              "Easy to implement",
+              "Sampling workflows can be straightforward"
+            ],
+            [
+              "Advantage",
+              "Computerized statistical sampling",
+              "Repeated numerical experiments"
+            ],
+            [
+              "Advantage",
+              "Approximate mathematical solutions",
+              "Useful when exact solutions are impractical"
+            ],
+            [
+              "Advantage",
+              "Stochastic and deterministic problems",
+              "Uncertainty propagation or numerical estimation"
+            ],
+            [
+              "Limitation",
+              "Time consuming",
+              "High precision may need many samples"
+            ],
+            [
+              "Limitation",
+              "Approximate answers",
+              "Not exact values"
+            ]
+          ]
+        },
+        {
+          "title": "Application Industries Named On Page 7",
+          "columns": [
+            "Field",
+            "Decision Context"
+          ],
+          "rows": [
+            [
+              "Finance",
+              "Risk and uncertain returns"
+            ],
+            [
+              "Project management",
+              "Schedule or cost uncertainty"
+            ],
+            [
+              "Energy",
+              "Uncertain demand or supply"
+            ],
+            [
+              "Manufacturing",
+              "Process or capacity uncertainty"
+            ],
+            [
+              "Engineering",
+              "Uncertain system inputs"
+            ],
+            [
+              "Research and development",
+              "Numerical experiments"
+            ],
+            [
+              "Insurance",
+              "Risk estimation"
+            ],
+            [
+              "Oil and gas",
+              "Uncertain engineering/economic inputs"
+            ],
+            [
+              "Transportation",
+              "Uncertain system performance"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: Model Structures And Applications",
+      "summary": "The model diagrams distinguish independent-looking runs, mixtures, staged dependence and state-to-state transitions. The application slides then show integration, distribution analysis, optimization and physical simulation. These share repeated sampling, but they do not all have independent outputs or the same scoring rule.",
+      "key_terms": [
+        {
+          "term": "Simple Monte Carlo",
+          "definition": "The diagram shows a source N feeding output nodes A, B and C."
+        },
+        {
+          "term": "Mixture modelling",
+          "definition": "Combines component populations or distributions, as illustrated by grouped output variables."
+        },
+        {
+          "term": "Two-stage Monte Carlo",
+          "definition": "An initial stage produces A, B and C, with C feeding a later stage D and E."
+        },
+        {
+          "term": "Markov chain",
+          "definition": "A sequence of states linked by transition probabilities; successive states need not be independent."
+        },
+        {
+          "term": "Curse of dimensionality",
+          "definition": "A grid with N evaluation points in each of D dimensions requires N^D points."
+        },
+        {
+          "term": "Radiative transfer",
+          "definition": "The physical-simulation example follows radiation interactions such as scattering and fluorescence."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Integration",
+          "statement": "Page 11 identifies numerical integration as a major application. A fixed grid grows as N^D and requires a chosen step size; Monte Carlo substitutes sampling for that rigid grid."
+        },
+        {
+          "name": "Distribution calculations",
+          "statement": "Page 12 covers mean, variance, higher moments, tail probabilities P(X>α)=∫[α,∞]f(x)dx, and transformed distributions such as h(x)=x^2 or cos(x)-sin(x). A tail probability is not by itself a complete confidence-interval procedure."
+        },
+        {
+          "name": "Optimization",
+          "statement": "Random moves may permit escape from a local minimum. This is an opportunity, not a guarantee of locating the global minimum."
+        },
+        {
+          "name": "Physical simulation",
+          "statement": "The slide illustrates radiative transfer, Fe Kα fluorescence, Compton shoulders and scattered continua. Particle/collision processes can naturally have discrete stochastic interactions."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "A grid uses 10 points per dimension. Compare 3 and 6 dimensions.",
+          "steps": [
+            "The count is N^D, not N*D.",
+            "10^3=1,000; 10^6=1,000,000."
+          ],
+          "answer": "1,000 versus 1,000,000 evaluations."
+        },
+        {
+          "problem": "Pedagogic completion of page 12: score a tail probability and the taught transform h(x)=x^2 using fixed illustrative samples.",
+          "steps": [
+            "```matlab\nX = [0.2 0.6 1.1 1.5 0.9 1.8 0.4 1.3 1.7 0.5];\nalpha = 1;\nh = X.^2;\nfprintf('tail hits=%d of %d; estimate=%.3f\\n',sum(X>alpha),numel(X),mean(X>alpha));\nfprintf('mean h(X)=%.3f\\n',mean(h));\n```",
+            "The fixed values are ours, not slide observations and not new random draws. Logical indicators estimate the tail; elementwise .^2 applies the exact transform shown on the slide."
+          ],
+          "answer": "tail hits=5 of 10; estimate=0.500\nmean h(X)=1.290\n"
+        }
+      ],
+      "common_mistakes": [
+        "N^D is exponential in dimension, not N times D.",
+        "A Markov-chain sequence is generally dependent; do not assume ordinary independent-sample precision formulas without adjustment.",
+        "Random optimization does not guarantee a global optimum."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 8, 11, 12, 13, 14"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Silly Monkeys Toss Mangoes = Simple, Mixture, Two-stage, Markov."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "I Eat Orange Noodles = Integration, Error estimation, Optimization, Numerical simulation."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Four Illustrated Structures",
+          "columns": [
+            "Structure",
+            "Dependency Pattern"
+          ],
+          "rows": [
+            [
+              "Simple Monte Carlo",
+              "Source N to A, B, C"
+            ],
+            [
+              "Mixture modelling",
+              "Component populations or distributions combined"
+            ],
+            [
+              "Two-stage",
+              "N to A, B, C; C to D, E"
+            ],
+            [
+              "Markov chain",
+              "State-to-state transitions with feedback"
+            ]
+          ]
+        },
+        {
+          "title": "Four Application Families",
+          "columns": [
+            "Application",
+            "Quantity Or Purpose"
+          ],
+          "rows": [
+            [
+              "Numerical integration",
+              "Definite integrals without a full rigid grid"
+            ],
+            [
+              "Error/distribution estimation",
+              "Mean, variance, moments, tails, transformed distributions"
+            ],
+            [
+              "Optimization",
+              "Explore minima with randomized moves"
+            ],
+            [
+              "Numerical simulation",
+              "Physical interactions such as radiative transfer"
+            ]
+          ]
+        },
+        {
+          "title": "Distribution Calculations",
+          "columns": [
+            "Calculation",
+            "Sample-Based Idea"
+          ],
+          "rows": [
+            [
+              "Mean",
+              "Average sampled values"
+            ],
+            [
+              "Variance",
+              "Summarize squared deviations"
+            ],
+            [
+              "Higher moments",
+              "Average appropriate powers"
+            ],
+            [
+              "Tail probability",
+              "Average indicators X>α"
+            ],
+            [
+              "Transformation",
+              "Compute h(X), then analyze transformed samples"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: Four-Step Method And Sampling Precision",
+      "summary": "A Monte Carlo experiment first defines input distributions, then generates samples, evaluates the model and aggregates the outputs. Distributions, a generator, a sampling rule, a scoring rule and error estimation support those steps. With independent finite-variance sampling, the typical standard error decreases like one over the square root of the sample count, so better precision can be expensive.",
+      "key_terms": [
+        {
+          "term": "Sampling rule",
+          "definition": "A prescription for generating values from specified input distributions."
+        },
+        {
+          "term": "Scoring",
+          "definition": "A rule for combining per-run results into an estimate."
+        },
+        {
+          "term": "Error estimation",
+          "definition": "Quantification of sampling uncertainty as a function of run count and other parameters."
+        },
+        {
+          "term": "Standard error",
+          "definition": "Typical sampling variability of an estimator, not a guaranteed bound on its realized error."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Four steps",
+          "statement": "Define distributions; generate input sets; perform a deterministic computation for each set; aggregate results."
+        },
+        {
+          "name": "Five ingredients",
+          "statement": "Probability distributions, random-number generator, sampling rule, scoring, error estimation."
+        },
+        {
+          "name": "Flowchart mapping",
+          "statement": "Page 16 flows from input distribution through sampled input variables, model evaluation F=g(X), output variables and statistical analysis. Its final output label is grammatically truncated, not a different computation."
+        },
+        {
+          "name": "Precision condition",
+          "statement": "For ordinary independent samples with finite variance, SE is proportional to 1/sqrt(N). Four times the samples halve typical SE; 100 times the samples reduce it by a factor of ten. This is not a promise that every enlarged run is closer to truth."
+        },
+        {
+          "name": "MATLAB imports",
+          "statement": "MATLAB needs no import statement for the built-ins used in these notes. All Monte Carlo MATLAB code here is our explicit completion of the slide algorithms; the Monte Carlo concept slides themselves contain no MATLAB program."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic MATLAB completion: compare the slide 1/sqrt(N) error scale.",
+          "steps": [
+            "```matlab\nN = [100 10000 1000000];\nscale = 1./sqrt(N);\nfprintf('N=%d scale=%.3f\\n',[N; scale]);\n```",
+            "These are relative scales with proportionality constant one, not measured errors from MATLAB simulations."
+          ],
+          "answer": "N=100 scale=0.100\nN=10000 scale=0.010\nN=1000000 scale=0.001\n"
+        }
+      ],
+      "common_mistakes": [
+        "Four process steps and five ingredients are different lists.",
+        "The generator supplies base randomness; the sampling rule maps it into the intended joint input distribution.",
+        "Error is typically O(N^(-1/2)), not O(N^(-1)); quadrupling, not doubling, halves typical standard error."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 15, 16, 17, 18"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Dogs Get Playful Anywhere = Define, Generate, Perform, Aggregate."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Penguins Race Swiftly, Slipping Everywhere = Probability distributions, Random-number generator, Sampling rule, Scoring, Error estimation."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Four Process Steps",
+          "columns": [
+            "Step",
+            "Action",
+            "Role"
+          ],
+          "rows": [
+            [
+              "1",
+              "Define input distributions",
+              "Specify assumptions"
+            ],
+            [
+              "2",
+              "Generate random input sets",
+              "Sample"
+            ],
+            [
+              "3",
+              "Perform deterministic model computation",
+              "Evaluate F=g(X)"
+            ],
+            [
+              "4",
+              "Aggregate outputs",
+              "Estimate the quantity or distribution"
+            ]
+          ]
+        },
+        {
+          "title": "Five Ingredients",
+          "columns": [
+            "Ingredient",
+            "Responsibility"
+          ],
+          "rows": [
+            [
+              "Probability distributions",
+              "Describe input randomness"
+            ],
+            [
+              "Random-number generator",
+              "Supply base pseudorandom numbers"
+            ],
+            [
+              "Sampling rule",
+              "Draw from the desired distributions"
+            ],
+            [
+              "Scoring",
+              "Combine run outputs"
+            ],
+            [
+              "Error estimation",
+              "Assess statistical precision"
+            ]
+          ]
+        },
+        {
+          "title": "Precision Scaling",
+          "columns": [
+            "Sample Multiplier",
+            "Typical Standard-Error Multiplier"
+          ],
+          "rows": [
+            [
+              "4",
+              "1/2"
+            ],
+            [
+              "100",
+              "1/10"
+            ],
+            [
+              "10,000",
+              "1/100"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: Estimating Pi With A Quarter Circle",
+      "summary": "Draw points uniformly in the unit square and count those inside the first-quadrant part of a unit circle. The quarter-circle area is π/4 and the square area is one, so the hit fraction estimates π/4. Multiplying that fraction by four gives an estimate of π, not an exact value.",
+      "key_terms": [
+        {
+          "term": "Sampling domain",
+          "definition": "The unit square 0≤x≤1 and 0≤y≤1."
+        },
+        {
+          "term": "Hit indicator",
+          "definition": "A point is inside the quarter circle if x^2+y^2≤1."
+        },
+        {
+          "term": "Hit count H and sample count N",
+          "definition": "H counts accepted points; N counts all sampled square points."
+        },
+        {
+          "term": "Area ratio",
+          "definition": "Quarter-circle area divided by square area equals (πr^2/4)/r^2=π/4."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Estimator",
+          "statement": "π_hat=4H/N, provided points sample the square uniformly. The pictured numerator refers to a quarter circle even though the formula label says circle."
+        },
+        {
+          "name": "Geometry wording",
+          "statement": "Use the region inside the quarter-circle arc, not just the arc boundary. The square bounds the quarter-circle region; the area is πr^2/4, not πr^2."
+        },
+        {
+          "name": "Executable sampling pattern, ours",
+          "statement": "For a fresh repeatable run: rng(1); N=10000; x=rand(1,N); y=rand(1,N); H=sum(x.^2+y.^2<=1); piHat=4*H/N; No particular random-run output is quoted here."
+        },
+        {
+          "name": "Baseline illustrative count",
+          "statement": "785 hits among 1,000 uniformly sampled points give 4*785/1000=3.14. This supplied illustrative count is not a claimed execution result."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Translate the slide hit-count algorithm using eight fixed illustrative point pairs, ours.",
+          "steps": [
+            "```matlab\nx = [0.2 0.9 0.5 0.7 0.1 0.8 0.6 0.3];\ny = [0.3 0.8 0.5 0.6 0.95 0.7 0.9 0.4];\nr2 = x.^2+y.^2;\ninside = r2<=1;\nH = sum(inside); N = numel(x);\nfprintf('r2:'); fprintf(' %.4f',r2); fprintf('\\n');\nfprintf('H=%d N=%d pi estimate=%.4f\\n',H,N,4*H/N);\n```",
+            "The fixed points make the code deterministic for arithmetic practice. They are not claimed to be a fresh random sample or an accurate small-sample estimate of π. Use .^ for elementwise squaring."
+          ],
+          "answer": "r2: 0.1300 1.4500 0.5000 0.8500 0.9125 1.1300 1.1700 0.2500\nH=5 N=8 pi estimate=2.5000\n"
+        }
+      ],
+      "common_mistakes": [
+        "H/N estimates π/4, not π.",
+        "Do not confuse the quarter circle with a full unit circle or count points only on the arc.",
+        "Uniform sampling is required for this area-ratio estimator; an arbitrary biased point cloud does not estimate the same ratio.",
+        "A larger sample improves typical precision, but does not guarantee improvement on every realization."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 19, 20, 21"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Four hits over N: the four undoes the quarter."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Geometry And Counts",
+          "columns": [
+            "Object",
+            "Area Or Count",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Unit square",
+              "1; N points",
+              "All sampled input pairs"
+            ],
+            [
+              "Quarter unit disk",
+              "π/4; H points",
+              "Pairs with x^2+y^2≤1"
+            ],
+            [
+              "Hit ratio",
+              "H/N",
+              "Estimate of π/4"
+            ],
+            [
+              "Pi estimate",
+              "4H/N",
+              "Estimate of π"
+            ]
+          ]
+        },
+        {
+          "title": "Picture Steps And General Method",
+          "columns": [
+            "Picture Action",
+            "General Monte Carlo Step"
+          ],
+          "rows": [
+            [
+              "Draw the unit-square domain and quarter-circle region",
+              "Define possible inputs"
+            ],
+            [
+              "Pick x,y in the square and repeat",
+              "Generate random inputs"
+            ],
+            [
+              "Test x^2+y^2≤1",
+              "Perform deterministic computation"
+            ],
+            [
+              "Count hits and compute 4H/N",
+              "Aggregate outputs"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: Sensitivity Analysis",
+      "summary": "Sensitivity analysis asks which uncertain inputs most influence the output and how that influence changes. It can expose model errors, locate important input bounds, focus research and support simplification. Derivative-based methods are computationally efficient, but a derivative describes behavior locally and may not represent the whole range of a nonlinear model.",
+      "key_terms": [
+        {
+          "term": "Sensitivity analysis",
+          "definition": "Relates uncertainty in model outputs to sources of input uncertainty."
+        },
+        {
+          "term": "Influential input",
+          "definition": "An input whose uncertainty substantially affects the output quantity being studied."
+        },
+        {
+          "term": "Local derivative",
+          "definition": "Rate of output change with input near a specified evaluation point."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Why analyze sensitivity",
+          "statement": "The two slide importance statements cover errors and bounds, then research priorities and model simplification."
+        },
+        {
+          "name": "Linear versus nonlinear",
+          "statement": "A linear model has constant derivative sensitivity. A nonlinear model can have different sensitivities in different regions, so one local derivative is not a global analysis."
+        },
+        {
+          "name": "Care with the slide wording",
+          "statement": "The claim that derivatives are of little value for nonlinear behavior is too sweeping. They remain useful locally, but cannot by themselves characterize global nonlinear uncertainty."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic completion using the slide transform h(x)=x^2: compare local sensitivity at x=1 and x=3.",
+          "steps": [
+            "For h(x)=x^2, dh/dx=2x.",
+            "At x=1 the slope is 2; at x=3 it is 6."
+          ],
+          "answer": "The same input increment can have different effects at different operating points. A slope of 2 at x=1 does not describe the entire nonlinear range."
+        }
+      ],
+      "common_mistakes": [
+        "Sensitivity analysis is not simply a second name for Monte Carlo sampling.",
+        "Local efficiency does not imply global validity.",
+        "Do not rank input influence from derivative size alone when input units and uncertainty ranges differ."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 12, 22, 23"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Errors and Bounds; Research and Simplification: the slide benefits form two pairs."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Sensitivity Purposes",
+          "columns": [
+            "Purpose",
+            "What It Helps Decide"
+          ],
+          "rows": [
+            [
+              "Uncover model errors",
+              "Find implausible responses"
+            ],
+            [
+              "Identify bounds",
+              "Locate important input limits"
+            ],
+            [
+              "Research priorities",
+              "Focus effort on influential uncertainty"
+            ],
+            [
+              "Simplify model",
+              "Reduce effort on weak influences"
+            ]
+          ]
+        },
+        {
+          "title": "Derivative-Based Sensitivity",
+          "columns": [
+            "Aspect",
+            "Linear Model",
+            "Nonlinear Model"
+          ],
+          "rows": [
+            [
+              "Computational cost",
+              "Often efficient",
+              "Often efficient locally"
+            ],
+            [
+              "Derivative across range",
+              "Constant for a linear model",
+              "Can vary with operating point"
+            ],
+            [
+              "One-point interpretation",
+              "Representative slope",
+              "Local information only"
+            ],
+            [
+              "Usefulness",
+              "Direct local and global slope information",
+              "Useful locally, not sufficient for global behavior"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: MATLAB File Input And Output",
+      "summary": "The file examples write numeric arrays with save or dlmwrite and read rectangular numeric ASCII data with load. A normal save replaces the target, while the shown -append option adds more data. Saving a character array with -ascii writes its numeric character codes rather than ordinary text letters.",
+      "key_terms": [
+        {
+          "term": "ASCII export",
+          "definition": "Text representation of numeric array values."
+        },
+        {
+          "term": "save and -ascii",
+          "definition": "Command form save filename variable -ascii writes the named array as numeric ASCII."
+        },
+        {
+          "term": "dlmwrite",
+          "definition": "Legacy slide function for delimited numeric output; a delimiter argument controls separators."
+        },
+        {
+          "term": "type",
+          "definition": "Displays a file in the Command Window."
+        },
+        {
+          "term": "load",
+          "definition": "In the shown numeric ASCII command form, reads a file into a variable named after its base filename."
+        },
+        {
+          "term": "Append",
+          "definition": "Adds data rather than replacing the existing file; matching column counts are needed to retain a rectangular numeric file."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Imports and file requirements",
+          "statement": "These MATLAB built-ins require no import statements. Examples that read a file assume it already exists; they are syntax notes, not checks that create or modify files."
+        },
+        {
+          "name": "Page 32 generic syntax",
+          "statement": "save filename matrixvariablename -ascii\ndlmwrite('my_data.out', num_array, 'dlm_char')\nHere dlm_char is a placeholder for a chosen delimiter, not a required literal delimiter name."
+        },
+        {
+          "name": "Page 33 exact example syntax",
+          "statement": "mymat = rand(2,3)\nsave testfile.dat mymat -ascii\ntype testfile.dat\nThe matrix is random; the screenshot values are one historical run, not reproducible expected output."
+        },
+        {
+          "name": "Page 34 exact example syntax",
+          "statement": "num_array = [ 1 2 3 4 ; 4 5 6 7 ; 7 8 9 0];\ndlmwrite('array_data2.out', num_array, ' ');\ntype array_data2.out"
+        },
+        {
+          "name": "Page 35 exact example syntax",
+          "statement": "mat2 = rand(3,3)\nsave testfile.dat mat2 -ascii -append\nAppending the 3-by-3 array to the shown 2-by-3 file yields five rows. The screenshot response label mymat is a typo for mat2."
+        },
+        {
+          "name": "Page 36 exact example syntax",
+          "statement": "h = 'hello';\nsave textdata.out h -ascii\ntype textdata.out\nThe numeric codes represent h, e, l, l, o; no file transcript is claimed here."
+        },
+        {
+          "name": "Page 37 original session commands",
+          "statement": "clear\nload testfile.dat\nwho\ntestfile\nThis is the slide session syntax only. clear removes workspace variables; who lists current variables and is workspace-sensitive. Neither is used in deterministic checks. In this example the loaded ASCII variable is testfile, not mymat or mat2."
+        },
+        {
+          "name": "Page 38 exact time-temperature script",
+          "statement": "load timetemp.dat\ntime = timetemp(1,:);\ntemp = timetemp(2,:);\nplot(time,temp,'k*')\nxlabel('Time')\nylabel('Temperature')\ntitle('Temperatures one afternoon')"
+        },
+        {
+          "name": "Time-temperature input data",
+          "statement": "The two file rows are times [0 3 6 9 12 15 18 21] and temperatures [55.5 52.4 52.6 55.7 75.6 77.7 70.3 66.6]. Colon indexing selects every column of the specified row."
+        },
+        {
+          "name": "Export alternatives",
+          "statement": "Page 31 also names diary logging, low-level formatted output such as fprintf, MEX access to C/C++ or Fortran writers, and spreadsheet export. It does not provide concrete MEX or spreadsheet code."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic no-file completion of page 36: inspect the character codes that ASCII save would write.",
+          "steps": [
+            "```matlab\nh = 'hello';\ncodes = double(h);\nfprintf('codes:'); fprintf(' %d',codes); fprintf('\\n');\n```",
+            "double is our way to expose the numeric codes without writing a file. This does not claim to reproduce save ASCII spacing or scientific-notation layout."
+          ],
+          "answer": "codes: 104 101 108 108 111\n"
+        },
+        {
+          "problem": "Use the actual page 38 data and row extraction without requiring a file or opening a plot, then summarize temperatures (ours).",
+          "steps": [
+            "```matlab\ntimetemp = [0 3 6 9 12 15 18 21; 55.5 52.4 52.6 55.7 75.6 77.7 70.3 66.6];\ntime = timetemp(1,:);\ntemp = timetemp(2,:);\nfprintf('points=%d first time=%d last time=%d\\n',numel(time),time(1),time(end));\nfprintf('temperature sum=%.1f mean=%.1f max=%.1f\\n',sum(temp),mean(temp),max(temp));\n```",
+            "The numeric input and row indexing are from the slide; the in-memory assignment and statistics are ours. The plot command is preserved separately as syntax, not run as an output check."
+          ],
+          "answer": "points=8 first time=0 last time=21\ntemperature sum=506.4 mean=63.3 max=77.7\n"
+        }
+      ],
+      "common_mistakes": [
+        "Without -append, the save example replaces the file.",
+        "load uses the filename base, not the variable name originally saved in an ASCII file.",
+        "Rows need consistent numbers of numeric values for this rectangular ASCII load example.",
+        "Do not use displayed rand screenshot values as guaranteed output.",
+        "save -ascii on a character array writes codes, not the original literal word."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 30, 31, 32, 33, 34, 35, 36, 37, 38"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Save sends out, load brings in, type shows the file. Append adds."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "(row,:) means one row and all columns."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Export Options",
+          "columns": [
+            "Option",
+            "Use"
+          ],
+          "rows": [
+            [
+              "Delimited numeric ASCII",
+              "Rectangular numeric arrays"
+            ],
+            [
+              "Diary",
+              "Session logging"
+            ],
+            [
+              "fprintf",
+              "Specialized formatted text"
+            ],
+            [
+              "MEX writer",
+              "Call compiled C/C++ or Fortran routines"
+            ],
+            [
+              "Spreadsheet",
+              "Export to spreadsheet format"
+            ]
+          ]
+        },
+        {
+          "title": "File Commands",
+          "columns": [
+            "Exact Slide Syntax",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "save testfile.dat mymat -ascii",
+              "Write array, normally replace file"
+            ],
+            [
+              "dlmwrite('array_data2.out', num_array, ' ')",
+              "Write with spaces as delimiters"
+            ],
+            [
+              "save testfile.dat mat2 -ascii -append",
+              "Append additional numeric data"
+            ],
+            [
+              "type testfile.dat",
+              "Display file contents"
+            ],
+            [
+              "load testfile.dat",
+              "Create testfile from numeric ASCII"
+            ],
+            [
+              "clear",
+              "Remove workspace variables; shown but not used in checks"
+            ],
+            [
+              "who",
+              "List workspace variables; shown but not used in checks"
+            ]
+          ]
+        },
+        {
+          "title": "Writing And Reading",
+          "columns": [
+            "Aspect",
+            "save -ascii",
+            "dlmwrite",
+            "load"
+          ],
+          "rows": [
+            [
+              "Direction",
+              "Out",
+              "Out",
+              "In"
+            ],
+            [
+              "Control shown",
+              "ASCII and append options",
+              "Delimiter",
+              "Numeric rectangular input"
+            ],
+            [
+              "Name",
+              "Specified filename and source variable",
+              "Specified filename and array",
+              "Command form creates filename-base variable"
+            ]
+          ]
+        },
+        {
+          "title": "Slide File Examples",
+          "columns": [
+            "Example",
+            "Array Or Resulting Shape",
+            "Point"
+          ],
+          "rows": [
+            [
+              "Random save",
+              "2 by 3",
+              "Save numeric array"
+            ],
+            [
+              "Delimited save",
+              "3 by 4",
+              "Space-separated numeric values"
+            ],
+            [
+              "Append",
+              "2 rows plus 3 rows, each 3 columns",
+              "Five-row rectangular file"
+            ],
+            [
+              "Character save",
+              "Five character codes",
+              "Codes, not literal text"
+            ],
+            [
+              "Time-temperature load",
+              "2 by 8",
+              "Row 1 time, row 2 temperature"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: MATLAB Two-Dimensional Plotting",
+      "summary": "To plot a function, define its x values, compute matching y values and call plot. Labels and titles explain the data, while LineSpec combines a color, line style and marker. Equal axis scaling and a square plot box are different settings, and overlays need hold on when separate plot calls should remain visible.",
+      "key_terms": [
+        {
+          "term": "LineSpec",
+          "definition": "A string combining up to color, line style and marker, such as r* for red asterisks."
+        },
+        {
+          "term": "axis equal",
+          "definition": "Equal data-unit scale lengths along the axes."
+        },
+        {
+          "term": "axis square",
+          "definition": "A square plotting box; it does not by itself make data-unit scales equal."
+        },
+        {
+          "term": "hold on",
+          "definition": "Retains the current plot when another plot is added."
+        },
+        {
+          "term": "legend",
+          "definition": "Labels plotted graphics; it is not primarily a mouse-placement command."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Basic syntax",
+          "statement": "Define x, define y=f(x), then plot(x, y). xlabel, ylabel, title and grid on annotate the figure. axis equal and axis square control different geometric aspects."
+        },
+        {
+          "name": "Page 46 exact single-point script",
+          "statement": "%This is a really simple plot of just one point!\n%Create axis ([x-2 x+2 y-10 y+10]) plot a read '*'\nx=11;\ny=48;\nplot(x,y, 'r*')\n%change the axes and label them axis([9 12 34 55])\nxlabel('Time')\nylabel('Temperature');\n%Put a title on the plot\ntitle('Time and Temp')\nThe axis([9 12 34 55]) text is inside a comment and does not execute. To apply those limits, put axis([9 12 34 55]) on its own executable line (our correction)."
+        },
+        {
+          "name": "Page 47 exact line script",
+          "statement": "x = 1:6;\ny=[1 5 3 9 11 8];\nplot(x,y)"
+        },
+        {
+          "name": "Page 48 exact bar script",
+          "statement": "x = 1:5;\ny1 = [2 11 6 9 3];\nbar(x,y1)"
+        },
+        {
+          "name": "Page 48 exact overlay syntax",
+          "statement": "x = 1:5;\nplot(x,y1,'k')\nhold on\nplot(x,y1,'ko')\ngrid on\nlegend('y1','y2')\nThis continuation requires y1 from the preceding example. Both layers use y1, so the second legend label y2 is misleading; our corrected labels would be legend('y1 line','y1 markers')."
+        },
+        {
+          "name": "Page 49 exact trigonometric script",
+          "statement": "x = [0: 0.01: 10];\ny = sin(x);\ng = cos(x);\nplot(x,y,x,g, '.-'), legend('Sin(x)', 'Cos(x)')"
+        },
+        {
+          "name": "Page 49 exact score-bar script",
+          "statement": "x= [1:10];\ny=[75, 58, 90, 87, 50, 85, 92, 75, 60, 95];\nbar(x,y)\nxlabel('Student');\nylabel('Score');\ntitle('First Sem:')"
+        },
+        {
+          "name": "Command-table scope",
+          "statement": "The comparison table preserves every command named on page 43, including legacy polar. Only names and purposes are taught there; no invented function signatures are presented as slide code."
+        },
+        {
+          "name": "Graphics and deterministic checks",
+          "statement": "Plotting scripts create figures rather than stable printed text. They are preserved as syntax notes and are deliberately not run by the non-GUI output checks."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Read the page 46 code before copying its displayed axes.",
+          "steps": [
+            "x=11 and y=48 select the single plotted point.",
+            "The r* LineSpec selects a red asterisk.",
+            "The axis command appears after %, so the original script does not execute that limit change."
+          ],
+          "answer": "The plotted datum is (11,48), with red asterisk marker. Move the intended axis command out of the comment to apply limits."
+        }
+      ],
+      "common_mistakes": [
+        "axis equal and axis square are not synonyms.",
+        "A command after % is a comment, not executable MATLAB.",
+        "Both page 48 overlay layers plot y1; the legend text y2 does not create a second dataset.",
+        "A color code k means black, not blue. A dot marker and a colon dotted-line style are different.",
+        "A fresh script for the overlay needs y1=[2 11 6 9 3]; because the displayed continuation otherwise assumes existing data."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 43, 44, 45, 46, 47, 48, 49"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Define x, compute y, plot; then label and scale."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Equal units versus square box: units and box are different."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "All Page 43 Plotting Commands",
+          "columns": [
+            "Command",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "axis",
+              "Set axis limits or scaling"
+            ],
+            [
+              "fplot",
+              "Plot a function adaptively"
+            ],
+            [
+              "grid",
+              "Toggle grid lines"
+            ],
+            [
+              "plot",
+              "Standard x-y plot"
+            ],
+            [
+              "print",
+              "Print or export a figure"
+            ],
+            [
+              "title",
+              "Add plot title"
+            ],
+            [
+              "xlabel",
+              "Label x axis"
+            ],
+            [
+              "ylabel",
+              "Label y axis"
+            ],
+            [
+              "axes",
+              "Create axes objects"
+            ],
+            [
+              "close",
+              "Close current figure"
+            ],
+            [
+              "close all",
+              "Close all figures"
+            ],
+            [
+              "figure",
+              "Open a figure"
+            ],
+            [
+              "gtext",
+              "Place text interactively with mouse"
+            ],
+            [
+              "hold",
+              "Control retaining plots for overlays"
+            ],
+            [
+              "legend",
+              "Label plotted series"
+            ],
+            [
+              "refresh",
+              "Redraw current figure"
+            ],
+            [
+              "set",
+              "Set graphics-object properties"
+            ],
+            [
+              "subplot",
+              "Arrange axes in subwindows"
+            ],
+            [
+              "text",
+              "Place text at coordinates"
+            ],
+            [
+              "bar",
+              "Bar chart"
+            ],
+            [
+              "loglog",
+              "Logarithmic x and y axes"
+            ],
+            [
+              "polar",
+              "Legacy polar-coordinate plot"
+            ],
+            [
+              "semilogx",
+              "Logarithmic x axis"
+            ],
+            [
+              "semilogy",
+              "Logarithmic y axis"
+            ],
+            [
+              "stairs",
+              "Stair-step plot"
+            ],
+            [
+              "stem",
+              "Discrete stem plot"
+            ]
+          ]
+        },
+        {
+          "title": "Axis Controls",
+          "columns": [
+            "Syntax",
+            "What Changes"
+          ],
+          "rows": [
+            [
+              "axis([xmin xmax ymin ymax])",
+              "Visible x and y limits"
+            ],
+            [
+              "axis equal",
+              "Relative data-unit scales"
+            ],
+            [
+              "axis square",
+              "Plot-box aspect"
+            ],
+            [
+              "grid on",
+              "Display grid lines"
+            ]
+          ]
+        },
+        {
+          "title": "LineSpec Colors",
+          "columns": [
+            "Code",
+            "Color"
+          ],
+          "rows": [
+            [
+              "b",
+              "Blue"
+            ],
+            [
+              "c",
+              "Cyan"
+            ],
+            [
+              "g",
+              "Green"
+            ],
+            [
+              "k",
+              "Black"
+            ],
+            [
+              "m",
+              "Magenta"
+            ],
+            [
+              "r",
+              "Red"
+            ],
+            [
+              "w",
+              "White"
+            ],
+            [
+              "y",
+              "Yellow"
+            ]
+          ]
+        },
+        {
+          "title": "LineSpec Markers",
+          "columns": [
+            "Code",
+            "Marker"
+          ],
+          "rows": [
+            [
+              "o",
+              "Circle"
+            ],
+            [
+              "d",
+              "Diamond"
+            ],
+            [
+              "h",
+              "Hexagram"
+            ],
+            [
+              "p",
+              "Pentagram"
+            ],
+            [
+              "+",
+              "Plus"
+            ],
+            [
+              ".",
+              "Point"
+            ],
+            [
+              "s",
+              "Square"
+            ],
+            [
+              "*",
+              "Asterisk"
+            ],
+            [
+              "v",
+              "Down triangle"
+            ],
+            [
+              "<",
+              "Left triangle"
+            ],
+            [
+              ">",
+              "Right triangle"
+            ],
+            [
+              "^",
+              "Up triangle"
+            ],
+            [
+              "x",
+              "X mark"
+            ]
+          ]
+        },
+        {
+          "title": "LineSpec Line Styles",
+          "columns": [
+            "Code",
+            "Style"
+          ],
+          "rows": [
+            [
+              "--",
+              "Dashed"
+            ],
+            [
+              "-.",
+              "Dash-dot"
+            ],
+            [
+              ":",
+              "Dotted"
+            ],
+            [
+              "-",
+              "Solid"
+            ]
+          ]
+        },
+        {
+          "title": "Actual Plot Examples",
+          "columns": [
+            "Page",
+            "Key Syntax",
+            "Visible Meaning"
+          ],
+          "rows": [
+            [
+              "46",
+              "plot(x,y,'r*')",
+              "Red asterisk at (11,48)"
+            ],
+            [
+              "47",
+              "plot(x,y)",
+              "Connected x-y data"
+            ],
+            [
+              "48",
+              "bar(x,y1)",
+              "Five bars"
+            ],
+            [
+              "48",
+              "plot(x,y1,'k'); hold on; plot(x,y1,'ko')",
+              "Same data as a black line and circles"
+            ],
+            [
+              "49",
+              "plot(x,y,x,g,'.-')",
+              "Sine and cosine in one call"
+            ],
+            [
+              "49",
+              "bar(x,y)",
+              "Student score bars"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M4: MATLAB Three-Dimensional Plotting",
+      "summary": "Three-dimensional plots add a z coordinate or represent values as bar heights or pie slices. Coordinate-vector plots use matching x, y and z data, and zlabel names the third axis. Grid lines and interactive rotation can improve interpretation, but the code still needs the intended data orientation and labels.",
+      "key_terms": [
+        {
+          "term": "plot3 and stem3",
+          "definition": "Functions receiving x, y and z coordinate vectors to plot points or stems in space."
+        },
+        {
+          "term": "bar3 and bar3h",
+          "definition": "Three-dimensional vertical and horizontal bar charts."
+        },
+        {
+          "term": "pie3",
+          "definition": "Three-dimensional pie slices proportional to input values."
+        },
+        {
+          "term": "spiral(n)",
+          "definition": "An n-by-n matrix of integers 1 through n^2 arranged spirally."
+        },
+        {
+          "term": "zlabel",
+          "definition": "Adds the z-axis label."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Page 50 named functions",
+          "statement": "plot3, bar3, bar3h, pie3, comet3, stem3. comet3 traces a three-dimensional trajectory. The slide names these functions but does not supply complete call signatures for every one."
+        },
+        {
+          "name": "Page 51 exact coordinate script",
+          "statement": "x=1:5;\ny=[0 -2 4 11 3];\nz= 2:2:10;\nplot3(x,y,z, 'k*')\ngrid\nxlabel('x')\nylabel('y')\nzlabel('z')\ntitle('3D Plot')"
+        },
+        {
+          "name": "Page 51 exact bar script",
+          "statement": "y = 1:6;\nx = 1:6;\nz= [ 33 11 5 9 22 30];\nbar3(y,z)\nxlabel('x')\nylabel('y')\nzlabel('z')\ntitle('3D Bar')\nThe x assignment is not used by bar3(y,z). To make six row positions explicit, a pedagogic orientation-explicit version is bar3(y,z(:)); the exact slide call is preserved above."
+        },
+        {
+          "name": "Page 52 exact spiral script",
+          "statement": "mat = spiral(5)\nbar3(mat)\ntitle('3D Spiral');\nxlabel('x')\nylabel('y')\nzlabel('z')\nThe first unsuppressed assignment displays a matrix; no pretty-printed matrix transcript is claimed here. A semicolon suppresses that display."
+        },
+        {
+          "name": "Page 52 exact pie syntax",
+          "statement": "pie3([3 10 5 2])\nThe slices are proportional to the inputs. Their total is 20 and their percentages are 15%, 50%, 25%, 10% in input order."
+        },
+        {
+          "name": "Interactive viewing",
+          "statement": "The slides describe the rotate-3D toolbar tool and grid for inspecting spatial data. No interactive operation is included in deterministic checks."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use the exact page 51 coordinate data and print the five points instead of opening its plot (our completion).",
+          "steps": [
+            "```matlab\nx = 1:5;\ny = [0 -2 4 11 3];\nz = 2:2:10;\nfprintf('x y z\\n');\nfprintf('%d %d %d\\n',[x; y; z]);\n```",
+            "The same three matching vectors are passed to plot3 on the slide. fprintf here makes the underlying data readable without GUI output."
+          ],
+          "answer": "x y z\n1 0 2\n2 -2 4\n3 4 6\n4 11 8\n5 3 10\n"
+        },
+        {
+          "problem": "Compute the proportions underlying the actual page 52 pie3 input without opening a figure (our completion).",
+          "steps": [
+            "```matlab\nvalues = [3 10 5 2];\npercent = 100*values/sum(values);\nfprintf('total=%d; percentages:',sum(values));\nfprintf(' %.0f',percent); fprintf('\\n');\n```",
+            "These proportions explain pie3([3 10 5 2]); they do not replace its preserved plotting syntax."
+          ],
+          "answer": "total=20; percentages: 15 50 25 10\n"
+        }
+      ],
+      "common_mistakes": [
+        "plot3 needs corresponding coordinate values; zlabel labels an axis rather than supplying z data.",
+        "The page 51 x vector is unused by bar3(y,z), so defining x does not set bar3 x positions.",
+        "A 3D-looking pie chart still represents relative proportions of the original values.",
+        "Do not quote spiral pretty-print whitespace as a stable output expectation."
+      ],
+      "source_refs": [
+        "M4-MAIN - Monte Carlo Simulation.pdf, PDF p. 50, 51, 52"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Three coordinates need three labels: x, y, z."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Named 3D Functions",
+          "columns": [
+            "Function",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "plot3",
+              "Three-coordinate line or point plot"
+            ],
+            [
+              "bar3",
+              "Vertical 3D bars"
+            ],
+            [
+              "bar3h",
+              "Horizontal 3D bars"
+            ],
+            [
+              "pie3",
+              "3D pie chart"
+            ],
+            [
+              "comet3",
+              "Animated 3D trajectory"
+            ],
+            [
+              "stem3",
+              "3D discrete stems"
+            ]
+          ]
+        },
+        {
+          "title": "Actual Three-Dimensional Examples",
+          "columns": [
+            "Example",
+            "Data",
+            "Key Syntax"
+          ],
+          "rows": [
+            [
+              "Coordinate points",
+              "x=1:5; y=[0 -2 4 11 3]; z=2:2:10",
+              "plot3(x,y,z,'k*')"
+            ],
+            [
+              "Bar heights",
+              "[33 11 5 9 22 30]",
+              "bar3(y,z)"
+            ],
+            [
+              "Spiral matrix",
+              "spiral(5)",
+              "bar3(mat)"
+            ],
+            [
+              "Pie proportions",
+              "[3 10 5 2]",
+              "pie3([3 10 5 2])"
+            ]
+          ]
+        },
+        {
+          "title": "Labels And Viewing",
+          "columns": [
+            "Tool",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "xlabel",
+              "Name x axis"
+            ],
+            [
+              "ylabel",
+              "Name y axis"
+            ],
+            [
+              "zlabel",
+              "Name z axis"
+            ],
+            [
+              "title",
+              "Name the plotted relationship"
+            ],
+            [
+              "grid",
+              "Show reference grid"
+            ],
+            [
+              "Rotate-3D toolbar",
+              "Inspect another viewing angle"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Fixed-grid cost",
+      "expression": "N^D",
+      "when_to_use": "N grid points in each of D dimensions."
+    },
+    {
+      "name": "Monte Carlo average",
+      "expression": "Q_hat=(1/N)*sum(g(X_i))",
+      "when_to_use": "Aggregate sampled model scores."
+    },
+    {
+      "name": "Tail probability",
+      "expression": "P(X>α)=∫[α,∞]f(x)dx ≈ (1/N)*sum(1[X_i>α])",
+      "when_to_use": "Estimate a tail from samples of the stated distribution."
+    },
+    {
+      "name": "Ordinary precision",
+      "expression": "SE proportional to 1/sqrt(N)",
+      "when_to_use": "Independent finite-variance sampling; not a universal dependent-chain formula."
+    },
+    {
+      "name": "Required sample scaling",
+      "expression": "N_new/N_old=(SE_old/SE_new)^2",
+      "when_to_use": "Compare ordinary Monte Carlo precision at fixed variance."
+    },
+    {
+      "name": "Quarter-circle membership",
+      "expression": "x^2+y^2≤1, 0≤x,y≤1",
+      "when_to_use": "Test a uniformly sampled unit-square point."
+    },
+    {
+      "name": "Pi estimate",
+      "expression": "π_hat=4H/N",
+      "when_to_use": "Convert quarter-circle hit fraction to a pi estimate."
+    },
+    {
+      "name": "Area ratio",
+      "expression": "(πr^2/4)/r^2=π/4",
+      "when_to_use": "Understand why the multiplier is four."
+    },
+    {
+      "name": "Pie percentages",
+      "expression": "100*v_i/sum(v)",
+      "when_to_use": "Interpret the slide pie3 values."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "Correct the name Ulman and the claim that the answer must be known.",
+      "answer": "Stanislaw Ulam. The model and sampling assumptions are specified; the target result is generally estimated."
+    },
+    {
+      "question": "List the four process steps in order.",
+      "answer": "Define input distributions, generate random inputs, perform deterministic computations, aggregate outputs."
+    },
+    {
+      "question": "What happens to typical standard error when sample count is quadrupled?",
+      "answer": "It halves under ordinary independent finite-variance sampling."
+    },
+    {
+      "question": "Why is pi estimated by four times the hit fraction?",
+      "answer": "The quarter-circle to unit-square area ratio is π/4, so multiply H/N by 4."
+    },
+    {
+      "question": "Why is a local derivative insufficient for global nonlinear sensitivity?",
+      "answer": "The derivative can change across the input range; it describes the selected operating point."
+    },
+    {
+      "question": "Distinguish axis equal, axis square, save -ascii and load.",
+      "answer": "axis equal equalizes unit scales; axis square makes the plot box square. save -ascii writes numeric ASCII; the shown load reads a rectangular ASCII file into a filename-base variable."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Core meaning",
+      "remember": "Repeated random input sampling plus model evaluation and aggregation. Approximate, statistically grounded, not universally superior."
+    },
+    {
+      "topic": "Model diagrams",
+      "remember": "Simple, mixture, two-stage, Markov. In the staged picture, C feeds D and E."
+    },
+    {
+      "topic": "Applications",
+      "remember": "Integration; distribution/error estimation; optimization; physical numerical simulation."
+    },
+    {
+      "topic": "Process and precision",
+      "remember": "Define, Generate, Perform, Aggregate. Distributions, RNG, sampling, scoring, error. Typical SE scales as N^(-1/2)."
+    },
+    {
+      "topic": "Quarter circle",
+      "remember": "Uniform unit-square sampling, x^2+y^2≤1, π_hat=4H/N. 785/1000 gives 3.14, not an exact answer."
+    },
+    {
+      "topic": "Sensitivity",
+      "remember": "Input uncertainty to output uncertainty; derivatives are efficient and local."
+    },
+    {
+      "topic": "File I/O",
+      "remember": "No imports needed. save -ascii writes codes/numbers; -append adds; dlmwrite chooses delimiter; load needs rectangular numeric rows."
+    },
+    {
+      "topic": "Plotting",
+      "remember": "Define x,y then plot. r*=red asterisk; k*=black asterisk. hold on overlays; equal units are not a square box; plot3 adds z and zlabel."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "X = [0.2 0.6 1.1 1.5 0.9 1.8 0.4 1.3 1.7 0.5];\nalpha = 1;\nh = X.^2;\nfprintf('tail hits=%d of %d; estimate=%.3f\\n',sum(X>alpha),numel(X),mean(X>alpha));\nfprintf('mean h(X)=%.3f\\n',mean(h));",
+      "expected_output": "tail hits=5 of 10; estimate=0.500\nmean h(X)=1.290\n"
+    },
+    {
+      "code": "N = [100 10000 1000000];\nscale = 1./sqrt(N);\nfprintf('N=%d scale=%.3f\\n',[N; scale]);",
+      "expected_output": "N=100 scale=0.100\nN=10000 scale=0.010\nN=1000000 scale=0.001\n"
+    },
+    {
+      "code": "x = [0.2 0.9 0.5 0.7 0.1 0.8 0.6 0.3];\ny = [0.3 0.8 0.5 0.6 0.95 0.7 0.9 0.4];\nr2 = x.^2+y.^2;\ninside = r2<=1;\nH = sum(inside); N = numel(x);\nfprintf('r2:'); fprintf(' %.4f',r2); fprintf('\\n');\nfprintf('H=%d N=%d pi estimate=%.4f\\n',H,N,4*H/N);",
+      "expected_output": "r2: 0.1300 1.4500 0.5000 0.8500 0.9125 1.1300 1.1700 0.2500\nH=5 N=8 pi estimate=2.5000\n"
+    },
+    {
+      "code": "h = 'hello';\ncodes = double(h);\nfprintf('codes:'); fprintf(' %d',codes); fprintf('\\n');",
+      "expected_output": "codes: 104 101 108 108 111\n"
+    },
+    {
+      "code": "timetemp = [0 3 6 9 12 15 18 21; 55.5 52.4 52.6 55.7 75.6 77.7 70.3 66.6];\ntime = timetemp(1,:);\ntemp = timetemp(2,:);\nfprintf('points=%d first time=%d last time=%d\\n',numel(time),time(1),time(end));\nfprintf('temperature sum=%.1f mean=%.1f max=%.1f\\n',sum(temp),mean(temp),max(temp));",
+      "expected_output": "points=8 first time=0 last time=21\ntemperature sum=506.4 mean=63.3 max=77.7\n"
+    },
+    {
+      "code": "x = 1:5;\ny = [0 -2 4 11 3];\nz = 2:2:10;\nfprintf('x y z\\n');\nfprintf('%d %d %d\\n',[x; y; z]);",
+      "expected_output": "x y z\n1 0 2\n2 -2 4\n3 4 6\n4 11 8\n5 3 10\n"
+    },
+    {
+      "code": "values = [3 10 5 2];\npercent = 100*values/sum(values);\nfprintf('total=%d; percentages:',sum(values));\nfprintf(' %.0f',percent); fprintf('\\n');",
+      "expected_output": "total=20; percentages: 15 50 25 10\n"
+    }
+  ]
+}

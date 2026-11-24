@@ -1,0 +1,1812 @@
+{
+  "sections": [
+    {
+      "heading": "M2: Sets And Functions",
+      "summary": "Sets describe which outcomes belong together before probability is assigned. Union collects either set, intersection keeps the overlap, and difference removes the second set from the first. A function assigns exactly one output to each input; it has an inverse on its full codomain only when it is both one-to-one and onto.",
+      "key_terms": [
+        {
+          "term": "Set and element",
+          "definition": "A collection of distinct objects; x ∈ S means x belongs to S. The empty set ∅ has no elements."
+        },
+        {
+          "term": "Finite, infinite and countable",
+          "definition": "A finite count terminates, including the empty set; an infinite one does not. Countable includes finite and countably infinite sets; the slide definition using all positive integers describes the latter."
+        },
+        {
+          "term": "Subset, disjoint and equal",
+          "definition": "A ⊆ B means every A element is in B. Disjoint sets have no common elements. Equal sets contain exactly the same elements."
+        },
+        {
+          "term": "Universal set U",
+          "definition": "The reference collection within which complements are taken."
+        },
+        {
+          "term": "Domain, codomain and range",
+          "definition": "The domain contains allowed inputs, codomain contains allowed outputs, and range contains outputs actually reached."
+        },
+        {
+          "term": "Bijective function",
+          "definition": "Both one-to-one (distinct inputs give distinct outputs) and onto (range equals codomain)."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Function structure",
+          "statement": "f:X→Y comprises domain X, codomain Y, and a correspondence giving each x exactly one y. Equal functions require all three parts to agree."
+        },
+        {
+          "name": "Inverse",
+          "statement": "f^(-1):Y→X satisfies f^(-1)(f(x))=x when f is bijective."
+        },
+        {
+          "name": "Linear example",
+          "statement": "For f(x)=mx+b with X=Y=R and m≠0, f^(-1)(y)=(y-b)/m. For m=0, range={b}, so it is neither onto R nor one-to-one."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Use U={2,4,6,8,10,12}, A={2,4,10}, B={4,6,8,10}. Find all five slide set results.",
+          "steps": [
+            "Collect distinct elements for union, shared elements for intersection, and remove the second set for each difference.",
+            "Take the complement relative to U, not relative to B."
+          ],
+          "answer": "A∪B={2,4,6,8,10}; A∩B={4,10}; A-B={2}; B-A={6,8}; A^C={6,8,12}."
+        },
+        {
+          "problem": "Pedagogic completion, ours: invert f(x)=2x+3.",
+          "steps": [
+            "Set y=2x+3 and isolate x=(y-3)/2.",
+            "Check x=5 gives y=13, and (13-3)/2 returns 5."
+          ],
+          "answer": "f^(-1)(y)=(y-3)/2."
+        }
+      ],
+      "common_mistakes": [
+        "Difference is directional: A-B need not equal B-A.",
+        "Range need not equal codomain. A constant real-to-real function is not invertible.",
+        "The inverse exponent is -1, not +1; ∅ is the standard empty-set symbol."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 6, 7, 8, 9, 10, 11, 12"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "An inverse needs two gates: no collisions (one-to-one), no missing codomain outputs (onto)."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Set Operations",
+          "columns": [
+            "Operation",
+            "Membership Rule",
+            "Slide Result"
+          ],
+          "rows": [
+            [
+              "Union A∪B",
+              "In A or B, including both",
+              "{2,4,6,8,10}"
+            ],
+            [
+              "Intersection A∩B",
+              "In both",
+              "{4,10}"
+            ],
+            [
+              "Difference A-B",
+              "In A, not B",
+              "{2}"
+            ],
+            [
+              "Difference B-A",
+              "In B, not A",
+              "{6,8}"
+            ],
+            [
+              "Complement A^C",
+              "In U, not A",
+              "{6,8,12}"
+            ]
+          ]
+        },
+        {
+          "title": "Set Characteristics",
+          "columns": [
+            "Characteristic",
+            "Test"
+          ],
+          "rows": [
+            [
+              "Finite",
+              "Counting terminates"
+            ],
+            [
+              "Infinite",
+              "Not finite"
+            ],
+            [
+              "Countable",
+              "Finite or listable with positive integers"
+            ],
+            [
+              "Subset",
+              "All members also lie in the reference set"
+            ],
+            [
+              "Disjoint",
+              "Intersection is empty"
+            ],
+            [
+              "Equal",
+              "Exactly the same elements"
+            ]
+          ]
+        },
+        {
+          "title": "Function Vocabulary",
+          "columns": [
+            "Item",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Domain",
+              "Input set X"
+            ],
+            [
+              "Codomain",
+              "Declared output set Y"
+            ],
+            [
+              "Range",
+              "Actually reached outputs"
+            ],
+            [
+              "One-to-one",
+              "No two distinct inputs share an output"
+            ],
+            [
+              "Onto",
+              "Every codomain value is reached"
+            ],
+            [
+              "Inverse",
+              "Requires both one-to-one and onto"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Probability Spaces And Distribution Functions",
+      "summary": "A probability space separates possible outcomes, permitted events, and the probabilities assigned to those events. A random variable turns an outcome into a real number. Its CDF accumulates probability up to a cutoff, while a continuous density describes probability through area rather than through the height at a single point.",
+      "key_terms": [
+        {
+          "term": "Probability space (S,A,P)",
+          "definition": "Sample space S, sigma-algebra A of events, and probability measure P."
+        },
+        {
+          "term": "Random experiment and event",
+          "definition": "A random experiment has an outcome not predictable beforehand; an event is a measurable subset of its sample space."
+        },
+        {
+          "term": "Sigma-algebra",
+          "definition": "Contains S and is closed under complements and countable unions, hence also countable intersections."
+        },
+        {
+          "term": "Random variable X",
+          "definition": "A measurable function X:S→R: {s:X(s)≤x} belongs to A for every real x."
+        },
+        {
+          "term": "CDF F(x)",
+          "definition": "F(x)=P(X≤x), defined for every real x and taking values in [0,1]."
+        },
+        {
+          "term": "Continuous PDF f(x)",
+          "definition": "A nonnegative density with integral 1; F(x)=∫ from -∞ to x of f(t)dt."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Probability rules",
+          "statement": "P(E)≥0; P(S)=1; disjoint event probabilities add. The complete measure axiom is countable additivity."
+        },
+        {
+          "name": "Power set qualification",
+          "statement": "The full event collection for k finite outcomes has 2^k events. Not every possible sigma-algebra has that many."
+        },
+        {
+          "name": "CDF rules",
+          "statement": "F(-∞)=0, F(+∞)=1, 0≤F≤1, F is nondecreasing and right-continuous, and P(a<X≤b)=F(b)-F(a)."
+        },
+        {
+          "name": "Density rules",
+          "statement": "For an absolutely continuous distribution f=dF/dx where the derivative exists; ∫f=1 and P(a<X≤b)=∫ from a to b of f(x)dx. The discrete die uses probability masses instead."
+        },
+        {
+          "name": "Exact die CDF",
+          "statement": "With X(B)=1, X(C)=2, X(D)=3: F(x)=0 for x<1; 1/6 for 1≤x<2; 1/2 for 2≤x<3; 1 for x≥3. In the slide step-function representation take u(0)=1 to preserve right continuity."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic MATLAB completion of the slide die: compute the CDF and an interval probability.",
+          "steps": [
+            "```matlab\np = [1/6 1/3 1/2];\nF = cumsum(p);\nfprintf('CDF: %.6f %.6f %.6f\\n',F);\nfprintf('P(1<X<=3): %.6f\\n',F(3)-F(1));\n```",
+            "The three probabilities belong to B, C and D respectively. cumsum implements accumulation, not a density calculation."
+          ],
+          "answer": "CDF: 0.166667 0.500000 1.000000\nP(1<X<=3): 0.833333\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not replace ≤ with < at a CDF jump. F(2)=1/2, not 1/6.",
+        "A PDF can exceed 1; its integral, not every height, must equal 1.",
+        "The slide count 2^k applies to the full power set, not an arbitrary event sigma-algebra."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 13, 14, 15, 16, 17, 18, 19, 20, 21, 22"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "SAP = Sample space, Algebra of events, Probability measure."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "CDF climbs and finishes at one; PDF contributes area."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Probability Space Components",
+          "columns": [
+            "Component",
+            "Objects",
+            "Role"
+          ],
+          "rows": [
+            [
+              "S",
+              "Outcomes",
+              "What can happen"
+            ],
+            [
+              "A",
+              "Events, which are subsets of S",
+              "What may be assigned a probability"
+            ],
+            [
+              "P",
+              "Numbers in [0,1] assigned to events",
+              "How likely each event is"
+            ]
+          ]
+        },
+        {
+          "title": "All Die Events",
+          "columns": [
+            "Event",
+            "Probability"
+          ],
+          "rows": [
+            [
+              "∅",
+              "0"
+            ],
+            [
+              "{B}",
+              "1/6"
+            ],
+            [
+              "{C}",
+              "1/3"
+            ],
+            [
+              "{D}",
+              "1/2"
+            ],
+            [
+              "{B,C}",
+              "1/2"
+            ],
+            [
+              "{B,D}",
+              "2/3"
+            ],
+            [
+              "{C,D}",
+              "5/6"
+            ],
+            [
+              "S={B,C,D}",
+              "1"
+            ]
+          ]
+        },
+        {
+          "title": "CDF And Continuous PDF",
+          "columns": [
+            "Feature",
+            "CDF",
+            "PDF"
+          ],
+          "rows": [
+            [
+              "Meaning",
+              "P(X≤x)",
+              "Density f(x)"
+            ],
+            [
+              "Bounds",
+              "Between 0 and 1",
+              "Nonnegative, may exceed 1"
+            ],
+            [
+              "Shape",
+              "Nondecreasing, right-continuous",
+              "Need not be monotone"
+            ],
+            [
+              "Interval probability",
+              "F(b)-F(a)",
+              "Area from a to b"
+            ],
+            [
+              "Total",
+              "Limit at +∞ is 1",
+              "Integral over R is 1"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Common Input Distributions",
+      "summary": "Choose an input distribution to match the quantity being modeled, not because its name is familiar. Uniform fits equally likely intervals, triangular uses a minimum, mode and maximum, exponential often represents interarrival durations, and normal describes variation around a mean. The distribution parameters have different meanings, especially the exponential mean and rate.",
+      "key_terms": [
+        {
+          "term": "Uniform(a,b)",
+          "definition": "Constant density on [a,b], with a<b; equal-length intervals have equal probabilities."
+        },
+        {
+          "term": "Triangular(a,m,b)",
+          "definition": "Minimum a, most likely value or mode m, maximum b, with a<m<b."
+        },
+        {
+          "term": "Exponential(m)",
+          "definition": "Nonnegative duration with mean m>0 and rate λ=1/m."
+        },
+        {
+          "term": "Normal(m,σ)",
+          "definition": "Mean m∈R and standard deviation σ>0; symmetric bell-shaped density."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Uniform PDF",
+          "statement": "f(x)=1/(b-a) for a≤x≤b, otherwise 0."
+        },
+        {
+          "name": "Triangular PDF",
+          "statement": "f(x)=2(x-a)/((b-a)(m-a)) for a≤x≤m; 2(b-x)/((b-a)(b-m)) for m≤x≤b; otherwise 0."
+        },
+        {
+          "name": "Exponential correction",
+          "statement": "For x≥0, f(x)=λexp(-λx), P(X>x)=exp(-λx), F(x)=1-exp(-λx). Density is 0 for x<0. Page 25 omits the required factor λ and mislabels the intercept as m; f(0)=λ=1/m."
+        },
+        {
+          "name": "Normal PDF and approximation",
+          "statement": "f(x)=exp(-0.5*((x-m)/σ)^2)/(σ*sqrt(2π)). The slide uses μ and m for the same mean. Approximately normal sums require suitable conditions such as independence and finite variances; not every sum is normal."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic values: Uniform(2,6) and Triangular(2,4,8).",
+          "steps": [
+            "Uniform height=1/(6-2)=1/4; probability on (3,5] is (5-3)/4=1/2.",
+            "Triangular peak=2/(8-2)=1/3; triangle area=(1/2)*6*(1/3)=1."
+          ],
+          "answer": "Uniform density 0.25, interval probability 0.5; triangular peak 1/3 and total area 1."
+        },
+        {
+          "problem": "Pedagogic MATLAB completion: exponential mean 5 minutes, survival past 5 and arrival within 2.",
+          "steps": [
+            "```matlab\nm = 5;\nlambda = 1/m;\nfprintf('rate=%.4f P(X>5)=%.4f P(X<2)=%.4f\\n',lambda,exp(-lambda*5),1-exp(-lambda*2));\n```",
+            "Use exp for the exponential function. No Statistics Toolbox or import statement is needed."
+          ],
+          "answer": "rate=0.2000 P(X>5)=0.3679 P(X<2)=0.3297\n"
+        }
+      ],
+      "common_mistakes": [
+        "A mean of 5 minutes corresponds to rate 0.2 per minute, not 5 per minute.",
+        "For a continuous uniform variable, every individual point has probability zero. Equal likelihood refers to equal-length intervals.",
+        "The triangular m is a mode; exponential and normal m are means. Normal σ is a standard deviation, not variance."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 23, 24, 25, 26"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Parameter-count hook in slide order: Uniform 2, Triangular 3, Exponential 1, Normal 2."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Distribution Selection",
+          "columns": [
+            "Distribution",
+            "Parameters",
+            "Typical Use",
+            "Shape Or Support"
+          ],
+          "rows": [
+            [
+              "Uniform",
+              "a,b",
+              "Equal-likelihood intervals",
+              "Flat on [a,b]"
+            ],
+            [
+              "Triangular",
+              "a,m,b",
+              "Only min, mode and max estimated",
+              "Triangle on [a,b]"
+            ],
+            [
+              "Exponential",
+              "Mean m or rate λ=1/m",
+              "Interarrival durations",
+              "Nonnegative decreasing density"
+            ],
+            [
+              "Normal",
+              "Mean m, standard deviation σ",
+              "Variation about an average",
+              "Symmetric over all real values"
+            ]
+          ]
+        },
+        {
+          "title": "Exponential Quantities",
+          "columns": [
+            "Quantity",
+            "Expression",
+            "Units"
+          ],
+          "rows": [
+            [
+              "Mean",
+              "m=1/λ",
+              "Time"
+            ],
+            [
+              "Rate",
+              "λ=1/m",
+              "Events per time"
+            ],
+            [
+              "Density",
+              "λexp(-λx)",
+              "Inverse time"
+            ],
+            [
+              "Survival",
+              "exp(-λx)",
+              "Probability"
+            ],
+            [
+              "CDF",
+              "1-exp(-λx)",
+              "Probability"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Random Numbers And Random Variates",
+      "summary": "A generator first supplies uniform pseudorandom numbers, then a transformation produces variates for the chosen input distribution. The slides use a linear congruential generator to show why a seed and period matter. A full-period sequence visits every integer residue before repeating, but full period alone does not guarantee good statistical quality.",
+      "key_terms": [
+        {
+          "term": "LCG",
+          "definition": "Linear congruential generator: Z_k=(aZ_(k-1)+c) mod m."
+        },
+        {
+          "term": "Seed Z_0",
+          "definition": "Initial integer that determines the repeatable sequence."
+        },
+        {
+          "term": "Period p",
+          "definition": "Number of distinct states in a cycle, with p≤m; full period means p=m."
+        },
+        {
+          "term": "Uniform number U_k",
+          "definition": "The normalized generator output Z_k/m. A finite LCG takes values in [0,1), not every real number in the interval."
+        },
+        {
+          "term": "Random variate",
+          "definition": "A generated sample from the target distribution, obtained by a suitable transformation or sampling rule."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Parameters",
+          "statement": "a is multiplier, c is increment, m is a positive integer modulus. The slide says nonnegative modulus, but m=0 is not a valid LCG modulus. Z_k lies between 0 and m-1."
+        },
+        {
+          "name": "Hull-Dobell conditions",
+          "statement": "For a mixed LCG to have full period: gcd(c,m)=1; every prime factor of m divides a-1; if 4 divides m, then 4 divides a-1."
+        },
+        {
+          "name": "Picture sequence",
+          "statement": "Page 30 displays the m=16 cycle: 1,6,15,12,13,2,11,8,9,14,7,4,5,10,3,0. Treat it as a displayed sequence, not evidence of independently random draws."
+        },
+        {
+          "name": "MATLAB and imports",
+          "statement": "M2 teaches the LCG algorithm, not a MATLAB source listing. The executable translation below is ours and uses mod, zeros, for, end, indexing, division and fprintf. MATLAB built-ins require no imports."
+        },
+        {
+          "name": "Optional pedagogic transformation, ours",
+          "statement": "For U uniform in (0,1), X=a+(b-a)*U gives Uniform(a,b); X=-m*log(1-U) gives Exponential(mean m). These executable formulas explain the transformation step but are not printed on the slides."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Translate the actual page 31 LCG example into MATLAB: a=1, c=3, m=20, Z_0=2.",
+          "steps": [
+            "```matlab\na = 1; c = 3; m = 20; z = 2;\nZ = zeros(1,20);\nfor k = 1:20\n    z = mod(a*z+c,m);\n    Z(k) = z;\nend\nfprintf('Z:'); fprintf(' %d',Z); fprintf('\\n');\nfprintf('First U: %.2f; period states: %d\\n',Z(1)/m,numel(unique(Z)));\n```",
+            "gcd(3,20)=1. Prime factors 2 and 5 divide a-1=0, and 4 divides 0. Thus all 20 residues appear and the last value returns to the seed."
+          ],
+          "answer": "Z: 5 8 11 14 17 0 3 6 9 12 15 18 1 4 7 10 13 16 19 2\nFirst U: 0.25; period states: 20\n"
+        }
+      ],
+      "common_mistakes": [
+        "Pseudorandom means deterministic given the seed; it does not mean independent true randomness.",
+        "The distinct prime factors of 20 are 2 and 5; 2×2×5 is its factorization.",
+        "Do not use Z_k as a probability: divide it by m. Check all three period conditions."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 27, 28, 29, 30, 31"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "C-P-4: Coprime increment, Prime-factor divisibility, Four-divisibility condition."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Generation Stages",
+          "columns": [
+            "Stage",
+            "Input",
+            "Operation",
+            "Output"
+          ],
+          "rows": [
+            [
+              "1",
+              "Seed and generator constants",
+              "LCG recurrence",
+              "Uniform-like U in [0,1)"
+            ],
+            [
+              "2",
+              "Uniform U and target distribution",
+              "Transformation or sampling rule",
+              "Target random variate"
+            ]
+          ]
+        },
+        {
+          "title": "LCG Symbols",
+          "columns": [
+            "Symbol",
+            "Meaning",
+            "Constraint"
+          ],
+          "rows": [
+            [
+              "a",
+              "Multiplier",
+              "Integer"
+            ],
+            [
+              "c",
+              "Increment",
+              "Integer"
+            ],
+            [
+              "m",
+              "Modulus",
+              "Positive integer"
+            ],
+            [
+              "Z_0",
+              "Seed",
+              "Starting state modulo m"
+            ],
+            [
+              "Z_k",
+              "State",
+              "0≤Z_k≤m-1"
+            ],
+            [
+              "U_k",
+              "Normalized output",
+              "Z_k/m"
+            ],
+            [
+              "p",
+              "Period",
+              "p≤m"
+            ]
+          ]
+        },
+        {
+          "title": "Full-Period Conditions For The Slide Example",
+          "columns": [
+            "Condition",
+            "For a=1,c=3,m=20"
+          ],
+          "rows": [
+            [
+              "gcd(c,m)=1",
+              "gcd(3,20)=1"
+            ],
+            [
+              "Each prime factor of m divides a-1",
+              "2 and 5 divide 0"
+            ],
+            [
+              "If 4 divides m, 4 divides a-1",
+              "4 divides 20 and 0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Input Modeling And Output Analysis",
+      "summary": "A structural model says what the system contains and how its parts interact; a data model supplies the numerical inputs that make it run. Input streams may replay observations, sample an empirical distribution, or sample a fitted theoretical distribution. Output analysis then turns the resulting observations into evidence about performance rather than treating one random run as the final truth.",
+      "key_terms": [
+        {
+          "term": "Structural modeling",
+          "definition": "Defines entities, locations, resources and processes, producing a logical or mathematical system representation."
+        },
+        {
+          "term": "Data modeling",
+          "definition": "Supplies interarrival and service durations, schedules, failure rates, travel durations and other quantitative inputs."
+        },
+        {
+          "term": "Direct sample use",
+          "definition": "Replays stored sample observations."
+        },
+        {
+          "term": "Empirical distribution",
+          "definition": "Nonparametric distribution constructed from the available sample."
+        },
+        {
+          "term": "Theoretical distribution",
+          "definition": "Mathematical family with fitted location, scale or shape parameters."
+        },
+        {
+          "term": "Output data analysis",
+          "definition": "Analysis of simulated observations to describe system performance, including uncertainty in a mean."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Choosing a stream",
+          "statement": "A direct record preserves observed values but may omit rare possibilities and require many retrievals. An empirical distribution supports arbitrary-length sampling but does not recover unobserved extremes. A fitted family smooths sample irregularities and can be efficient, but fitting costs effort and a good fit may not exist."
+        },
+        {
+          "name": "Complex input cases",
+          "statement": "The picture taxonomy identifies no data, multimodal data, correlated data and nonstationary data. These need more care than choosing an independent stationary one-family fit."
+        },
+        {
+          "name": "Output analysis scope",
+          "statement": "Page 39 outlines a queue example, confidence interval estimation for a mean, and more complex output cases. It does not teach a detailed confidence-interval calculation or justify treating dependent within-run observations as independent."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Which input strategy fits observed service times that fit no standard family well, when many draws are required?",
+          "steps": [
+            "Replaying a finite record does not by itself give a well-designed fresh stochastic stream.",
+            "The slides recommend an empirical distribution when a good theoretical fit cannot be found."
+          ],
+          "answer": "Use an empirical distribution, retaining the limitation that unobserved tail values are not recovered."
+        }
+      ],
+      "common_mistakes": [
+        "Unlimited draws do not create new knowledge of rare events.",
+        "Correlated data should not silently be replaced with independent draws; nonstationary data should not silently use one fixed distribution.",
+        "Direct replay need not literally run out if repeated, but replaying a record is not equivalent to obtaining new independent observations."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 32, 33, 34, 35, 36, 37, 38, 39"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "SET = Sample data, Empirical distribution, Theoretical distribution."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "No Mouse Can Nap = No data, Multimodal, Correlated, Nonstationary."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Structural And Data Models",
+          "columns": [
+            "Aspect",
+            "Structural",
+            "Data"
+          ],
+          "rows": [
+            [
+              "Question",
+              "What exists and interacts?",
+              "What quantities drive it?"
+            ],
+            [
+              "Content",
+              "Entities, locations, resources, processes",
+              "Interarrival times, service times, schedules, failures, travel"
+            ],
+            [
+              "Result",
+              "System structure or queue network",
+              "Quantitative input streams"
+            ]
+          ]
+        },
+        {
+          "title": "Input Stream Choices",
+          "columns": [
+            "Method",
+            "Strength",
+            "Limitation"
+          ],
+          "rows": [
+            [
+              "Direct sample data",
+              "Uses observed legal values",
+              "Limited tail coverage and retrieval cost"
+            ],
+            [
+              "Empirical distribution",
+              "Arbitrary-length sampling from observations",
+              "No unobserved outlying values"
+            ],
+            [
+              "Theoretical distribution",
+              "Smooths irregularities; efficient generation",
+              "Fitting effort and possible poor fit"
+            ]
+          ]
+        },
+        {
+          "title": "Complex Input Situations",
+          "columns": [
+            "Case",
+            "What Makes It Different"
+          ],
+          "rows": [
+            [
+              "No data",
+              "No direct observations to fit"
+            ],
+            [
+              "Multimodal",
+              "More than one peak or subpopulation"
+            ],
+            [
+              "Correlated",
+              "Observations depend on one another"
+            ],
+            [
+              "Nonstationary",
+              "Distribution changes over time"
+            ]
+          ]
+        },
+        {
+          "title": "Output Analysis Outline",
+          "columns": [
+            "Part",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "Queue example",
+              "Show why output needs analysis"
+            ],
+            [
+              "Confidence interval for mean",
+              "Express uncertainty in average performance"
+            ],
+            [
+              "Complex output situations",
+              "Recognize more demanding analysis cases"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Entities Resources Queues And Events",
+      "summary": "DES represents a system through state changes at separated event times. Entities carry their own attributes, compete for resources, and wait in queues when service is unavailable. A train journey can be reduced to departure and arrival with a delay between them, without tracing every intermediate position.",
+      "key_terms": [
+        {
+          "term": "DES",
+          "definition": "Discrete-event simulation models instantaneous state changes at separated points in simulated time."
+        },
+        {
+          "term": "Entity",
+          "definition": "Object such as a customer, patient or part that interacts or competes for a resource."
+        },
+        {
+          "term": "Attribute",
+          "definition": "Entity-specific information carried through the model, such as age, health status or amount of money."
+        },
+        {
+          "term": "Resource",
+          "definition": "Service-providing capacity shared by entities, such as a teller or ATM."
+        },
+        {
+          "term": "Queue",
+          "definition": "Waiting list used when the required resource is occupied."
+        },
+        {
+          "term": "Event",
+          "definition": "Instantaneous occurrence changing modeled state, including arrival, interaction, service completion or departure."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Capacity and utilization",
+          "statement": "Capacity is simultaneous service count: one ATM has capacity 1 and a bank with three tellers has capacity 3. Resource utilization=busy time/total observation time for a single server."
+        },
+        {
+          "name": "Nature of the examples",
+          "statement": "The module calls its DES models stochastic, dynamic and discrete. Dynamic and discrete describe the event-time evolution; a DES model need not be stochastic if its inputs are fixed."
+        },
+        {
+          "name": "Train picture",
+          "statement": "Departure at 4:00 pm and arrival at 6:00 pm define a two-hour delay. The modeled movement between those events is abstracted, not absent from reality."
+        },
+        {
+          "name": "Applications",
+          "statement": "Hospital patient queues, traffic at intersections, manufacturing flows, clinics and ATMs all motivate event-driven models."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Classify a bank with three tellers.",
+          "steps": [
+            "Customers are entities; a customer transaction amount is an attribute.",
+            "The three tellers form resource capacity 3; waiting customers form a queue.",
+            "Arrival and departure change state and are events."
+          ],
+          "answer": "Entity=customer; attribute=transaction amount; resource=tellers; queue=waiting line; capacity=3."
+        }
+      ],
+      "common_mistakes": [
+        "A queue is waiting capacity, not service capacity.",
+        "An attribute belongs to an entity; the global simulation clock does not.",
+        "DES omits unmodeled between-event changes, not all physical processes in the real system."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 60"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Entity carries Attributes; Resources serve; Queues wait; Events change state."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Five DES Elements",
+          "columns": [
+            "Element",
+            "Role",
+            "Example"
+          ],
+          "rows": [
+            [
+              "Entity",
+              "Moves or competes",
+              "Customer"
+            ],
+            [
+              "Attribute",
+              "Individual information",
+              "Arrival time or health status"
+            ],
+            [
+              "Resource",
+              "Provides service",
+              "Teller"
+            ],
+            [
+              "Queue",
+              "Holds waiting entities",
+              "Bank line"
+            ],
+            [
+              "Event",
+              "Changes state",
+              "Arrival or departure"
+            ]
+          ]
+        },
+        {
+          "title": "Discrete And Continuous Systems",
+          "columns": [
+            "Aspect",
+            "Discrete",
+            "Continuous"
+          ],
+          "rows": [
+            [
+              "State evolution",
+              "Instantaneous jumps at event times",
+              "Continuous change over time"
+            ],
+            [
+              "Slide example",
+              "Fast-food customer queue",
+              "Volume in a filling tank"
+            ],
+            [
+              "Representation",
+              "Events and delays",
+              "Continuously changing state variables"
+            ]
+          ]
+        },
+        {
+          "title": "Application Pictures",
+          "columns": [
+            "Domain",
+            "Modeled Flow"
+          ],
+          "rows": [
+            [
+              "Train",
+              "Departure, travel delay, arrival"
+            ],
+            [
+              "Healthcare",
+              "Patients waiting for medical service"
+            ],
+            [
+              "ATM",
+              "Customers waiting for a machine"
+            ],
+            [
+              "Traffic",
+              "Vehicles waiting at an intersection"
+            ],
+            [
+              "Manufacturing",
+              "Products through processing stations"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Simulation Executive And Clock Advancement",
+      "summary": "The executive coordinates initialization, event selection, state updates and final reporting. A next-event list tells the timing routine where to move the simulated clock. Fixed-increment advancement checks chosen time boundaries, while next-event advancement jumps directly to an actual event and skips inactive intervals.",
+      "key_terms": [
+        {
+          "term": "System state",
+          "definition": "State variables describing the model at an instant."
+        },
+        {
+          "term": "Simulation clock",
+          "definition": "Elapsed simulated time, not necessarily elapsed wall-clock time."
+        },
+        {
+          "term": "Next-event list",
+          "definition": "Ordered schedule of future event times and event identities."
+        },
+        {
+          "term": "Accumulator",
+          "definition": "Counter or running quantity collecting evolving performance information."
+        },
+        {
+          "term": "Simulation executive",
+          "definition": "Controls the clock and execution of event routines."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Main loop",
+          "statement": "Initialize state, clock and initial events; select the next event; advance time; update accumulators and state through its event routine; use library sampling if needed; schedule later events; check termination; repeat or report."
+        },
+        {
+          "name": "Fixed increment",
+          "statement": "Starts at zero and advances by Δt. An event between boundaries may be forced to a boundary for updating; choice of Δt can affect performance measures."
+        },
+        {
+          "name": "Next event",
+          "statement": "Starts at zero, moves to the earliest scheduled event, and updates state there. It avoids computing through inactive periods."
+        },
+        {
+          "name": "Feature qualification",
+          "statement": "The slides list entities, relationships, executive, RNG and results/statistics. Results help evaluate and validate a model, but reporting statistics alone does not prove validity."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Pedagogic clock comparison: scheduled events occur at t=1.3 and t=5.8.",
+          "steps": [
+            "Next-event advancement goes directly to 1.3 and then 5.8.",
+            "A fixed step Δt=1 visits integer times; handling these off-grid events requires a stated approximation rule."
+          ],
+          "answer": "Next event preserves both event timestamps. A fixed increment can shift their recorded effects; do not invent an unstated rounding rule."
+        }
+      ],
+      "common_mistakes": [
+        "The simulation clock is model time, not a stopwatch measuring program execution.",
+        "Do not update only the clock and forget state, event scheduling and accumulators.",
+        "The library routine generates observations; the timing routine chooses the next scheduled event."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 55, 56, 57, 58, 59, 60, 61, 62"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Initialize, time, update, stop-or-repeat, report: the executive runs the loop; the library supplies draws."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Five Software Features",
+          "columns": [
+            "Feature",
+            "Responsibility"
+          ],
+          "rows": [
+            [
+              "Entities",
+              "Represent real elements"
+            ],
+            [
+              "Relationships",
+              "Link entities"
+            ],
+            [
+              "Simulation executive",
+              "Advance time and execute events"
+            ],
+            [
+              "Random number generator",
+              "Supply stochastic inputs"
+            ],
+            [
+              "Results and statistics",
+              "Provide performance measures"
+            ]
+          ]
+        },
+        {
+          "title": "DES Routines And Records",
+          "columns": [
+            "Item",
+            "Responsibility"
+          ],
+          "rows": [
+            [
+              "System state",
+              "Current model condition"
+            ],
+            [
+              "Clock",
+              "Current simulated time"
+            ],
+            [
+              "Next-event list",
+              "Scheduled future events"
+            ],
+            [
+              "Accumulator",
+              "Performance totals"
+            ],
+            [
+              "Initialization",
+              "Set initial clock, state and schedule"
+            ],
+            [
+              "Timing",
+              "Choose next event and advance clock"
+            ],
+            [
+              "Event",
+              "Change state and schedule consequences"
+            ],
+            [
+              "Library",
+              "Generate random observations"
+            ],
+            [
+              "Main",
+              "Coordinate routines and termination"
+            ],
+            [
+              "Report generator",
+              "Compute and present final statistics"
+            ]
+          ]
+        },
+        {
+          "title": "Clock Advancement",
+          "columns": [
+            "Aspect",
+            "Fixed Increment / Time Slicing",
+            "Next Event"
+          ],
+          "rows": [
+            [
+              "Advance",
+              "Chosen Δt",
+              "Earliest scheduled event time"
+            ],
+            [
+              "Off-grid events",
+              "May be forced to time boundary",
+              "Handled at scheduled time"
+            ],
+            [
+              "Idle gaps",
+              "Still stepped through",
+              "Skipped"
+            ],
+            [
+              "Main concern",
+              "Step-size effects on measures",
+              "Correct scheduling and event ordering"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Queue Policies Structures And Costs",
+      "summary": "Queues form when arrivals and service durations vary and service capacity is occupied. A queue model must describe arrivals, the service mechanism and the rule for choosing the next customer. Design then balances the cost of providing service against the cost of waiting, which can include lost customers as well as time.",
+      "key_terms": [
+        {
+          "term": "Interarrival time",
+          "definition": "Duration between successive arrivals, not the absolute arrival timestamp."
+        },
+        {
+          "term": "IID",
+          "definition": "Independent and identically distributed: a stated assumption for successive interarrival or service durations, not for cumulative arrival times."
+        },
+        {
+          "term": "Queue discipline",
+          "definition": "Selection rule determining which waiting customer enters service."
+        },
+        {
+          "term": "Servers and phases",
+          "definition": "Servers are parallel service channels; phases are successive processing stages."
+        },
+        {
+          "term": "Service and waiting costs",
+          "definition": "Capacity costs versus costs of delay and dissatisfaction; the design goal is minimum total expected cost."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Queue model inputs",
+          "statement": "Specify arrival rate, service rate and number of servers; maximum queue length and calling-population size may also matter."
+        },
+        {
+          "name": "Service mechanism assumption",
+          "statement": "The illustrated simple model serves an arrival immediately if idle; otherwise it joins the queue. Successive service times are IID and independent of interarrival times under the stated model assumptions."
+        },
+        {
+          "name": "Real slide syntax",
+          "statement": "No MATLAB queue source code is printed in M2. The following cost and FCFS scripts are pedagogic implementations of its actual tabular algorithms."
+        },
+        {
+          "name": "Page 68 cost correction",
+          "statement": "For five customers at $10 per customer-minute and $60 per barista, four baristas with a two-minute wait cost 5*2*10=$100 in waiting plus $240 in service, totaling $340. The slide prints $125 and $365 inconsistently."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Translate the coffee-shop cost table and correct its fourth row.",
+          "steps": [
+            "```matlab\nn = 1:4;\nwait = [7 4 3 2];\nwaitingCost = 5*wait*10;\nserviceCost = n*60;\ntotal = waitingCost+serviceCost;\nfprintf('baristas waiting service total\\n');\nfprintf('%d %d %d %d\\n',[n; waitingCost; serviceCost; total]);\n[bestCost,bestIndex] = min(total);\nfprintf('best: %d baristas, cost %d\\n',n(bestIndex),bestCost);\n```",
+            "fprintf consumes matrix entries column by column, so the stacked rows create one record per barista choice. This is the minimum among these four choices, not a universal staffing optimum."
+          ],
+          "answer": "baristas waiting service total\n1 350 60 410\n2 200 120 320\n3 150 180 330\n4 100 240 340\nbest: 2 baristas, cost 320\n"
+        }
+      ],
+      "common_mistakes": [
+        "Page 66 labels Last In, First Out as FIFO; the correct acronym is LIFO or LCFS.",
+        "The slide writes STP; the standard ordering is SPT, shortest processing time.",
+        "Balking means not joining, reneging means leaving after joining, and jockeying means switching.",
+        "Absolute arrival times are cumulative and generally not IID; the durations between them may be IID.",
+        "The slide acronym HVF is given without expansion in the source text; do not treat an inferred expansion as a separate taught formula."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 53, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "FIFO is the oldest waiting customer; LIFO is the newest."
+        },
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Balk before joining, renege after joining, jockey to another line."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Queue Model Ingredients",
+          "columns": [
+            "Ingredient",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Arrivals",
+              "Interarrival pattern or distribution"
+            ],
+            [
+              "Service mechanism",
+              "Servers, service-duration model and availability"
+            ],
+            [
+              "Discipline",
+              "Selection order"
+            ],
+            [
+              "Arrival rate",
+              "How quickly customers appear"
+            ],
+            [
+              "Service rate",
+              "How quickly a server handles customers"
+            ],
+            [
+              "Server count",
+              "Parallel capacity"
+            ],
+            [
+              "Maximum queue length",
+              "Optional waiting limit"
+            ],
+            [
+              "Population size",
+              "Optional calling-population limit"
+            ]
+          ]
+        },
+        {
+          "title": "Queue Disciplines",
+          "columns": [
+            "Rule",
+            "Service Selection"
+          ],
+          "rows": [
+            [
+              "FIFO / FCFS",
+              "Earliest waiting arrival first"
+            ],
+            [
+              "LIFO / LCFS",
+              "Most recent waiting arrival first"
+            ],
+            [
+              "Priority",
+              "By assigned class or rank"
+            ],
+            [
+              "SIRO",
+              "Service in random order"
+            ],
+            [
+              "SPT (slide STP)",
+              "Shortest processing time first"
+            ],
+            [
+              "HVF",
+              "A queue-logic acronym listed on p.53; no expansion supplied there"
+            ]
+          ]
+        },
+        {
+          "title": "Customer Behaviors",
+          "columns": [
+            "Behavior",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Balking",
+              "Does not enter the line"
+            ],
+            [
+              "Reneging",
+              "Joins, then leaves before service"
+            ],
+            [
+              "Jockeying",
+              "Switches to another line"
+            ],
+            [
+              "Faffing",
+              "Delays departure while gathering belongings after payment"
+            ]
+          ]
+        },
+        {
+          "title": "Servers And Phases",
+          "columns": [
+            "Structure",
+            "Parallel Channels",
+            "Successive Stages"
+          ],
+          "rows": [
+            [
+              "Single server, single phase",
+              "One",
+              "One"
+            ],
+            [
+              "Single server, multiple phase",
+              "One channel at each stage in the schematic",
+              "More than one"
+            ],
+            [
+              "Multiple server, single phase",
+              "Several",
+              "One"
+            ],
+            [
+              "Multiple server, multiple phase",
+              "Several at relevant stages",
+              "More than one"
+            ]
+          ]
+        },
+        {
+          "title": "Queue Modeling Approaches",
+          "columns": [
+            "Approach",
+            "Use",
+            "Slide Example"
+          ],
+          "rows": [
+            [
+              "Analytic",
+              "Tractable mathematical equations for simple cases",
+              "Fast-food model"
+            ],
+            [
+              "Simulation",
+              "Complex multiple-station systems",
+              "Low-observable aircraft maintenance"
+            ]
+          ]
+        },
+        {
+          "title": "Corrected Coffee-Shop Costs",
+          "columns": [
+            "Baristas",
+            "Average Wait",
+            "Waiting Cost",
+            "Service Cost",
+            "Total"
+          ],
+          "rows": [
+            [
+              "1",
+              "7 min",
+              "$350",
+              "$60",
+              "$410"
+            ],
+            [
+              "2",
+              "4 min",
+              "$200",
+              "$120",
+              "$320"
+            ],
+            [
+              "3",
+              "3 min",
+              "$150",
+              "$180",
+              "$330"
+            ],
+            [
+              "4",
+              "2 min",
+              "$100",
+              "$240",
+              "$340"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M2: Single-Server FCFS Worked Table",
+      "summary": "Process customers in arrival order and keep the previous service-completion time. Service starts only when the customer has arrived and the server is free, so take the later of those two times. Waiting, time in the system and server idle time then follow from simple differences with distinct meanings.",
+      "key_terms": [
+        {
+          "term": "Arrival A_i",
+          "definition": "Clock time customer i reaches the system."
+        },
+        {
+          "term": "Service duration S_i",
+          "definition": "Time needed for that customer once service begins."
+        },
+        {
+          "term": "Begin B_i and departure D_i",
+          "definition": "B_i=max(A_i,D_(i-1)); D_i=B_i+S_i."
+        },
+        {
+          "term": "Queue wait W_i",
+          "definition": "B_i-A_i, always nonnegative in this model."
+        },
+        {
+          "term": "System time T_i",
+          "definition": "D_i-A_i=W_i+S_i."
+        },
+        {
+          "term": "Server idle I_i",
+          "definition": "max(0,A_i-D_(i-1)) when the initial server is idle at time zero."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Initial condition",
+          "statement": "Set D_0=0 for an initially idle server observed from time zero. Then B_1=A_1 if A_1≥0; it is not always zero."
+        },
+        {
+          "name": "Interarrival indexing",
+          "statement": "For i≥2, IAT_i=A_i-A_(i-1). Arrival clock times can be obtained by cumulative sums from the first arrival."
+        },
+        {
+          "name": "Slide results",
+          "statement": "Arrivals 0,4,5,9,11,15; services 2,3,1,4,2,3. Total service=15, total wait=4, total system time=19, idle time=3, completion horizon=18."
+        },
+        {
+          "name": "Derived performance, ours",
+          "statement": "For observation [0,18], utilization=15/18=0.833333; average queue wait=4/6=0.666667; average system time=19/6=3.166667. Two of six customers wait. These describe this finite example, not steady-state estimates."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Implement the slide six-customer single-server FCFS algorithm in MATLAB, with the corrected waiting sign.",
+          "steps": [
+            "```matlab\narrival = [0 4 5 9 11 15];\nservice = [2 3 1 4 2 3];\nn = numel(arrival);\nbegin = zeros(1,n); departure = zeros(1,n);\nwait = zeros(1,n); systemTime = zeros(1,n); idle = zeros(1,n);\npreviousEnd = 0;\nfor i = 1:n\n    begin(i) = max(arrival(i),previousEnd);\n    wait(i) = begin(i)-arrival(i);\n    departure(i) = begin(i)+service(i);\n    systemTime(i) = departure(i)-arrival(i);\n    idle(i) = max(0,arrival(i)-previousEnd);\n    previousEnd = departure(i);\nend\nfprintf('i arrival service begin wait end system idle\\n');\nfprintf('%d %d %d %d %d %d %d %d\\n',[(1:n); arrival; service; begin; wait; departure; systemTime; idle]);\nfprintf('totals: service=%d wait=%d system=%d idle=%d\\n',sum(service),sum(wait),sum(systemTime),sum(idle));\nfprintf('mean wait=%.6f mean system=%.6f utilization=%.6f\\n',mean(wait),mean(systemTime),sum(service)/departure(end));\n```",
+            "For customer 5, begin=max(11,13)=13; wait=2; departure=15; system time=15-11=4. The total horizon 18 equals busy 15 plus idle 3."
+          ],
+          "answer": "i arrival service begin wait end system idle\n1 0 2 0 0 2 2 0\n2 4 3 4 0 7 3 2\n3 5 1 7 2 8 3 0\n4 9 4 9 0 13 4 1\n5 11 2 13 2 15 4 0\n6 15 3 15 0 18 3 0\ntotals: service=15 wait=4 system=19 idle=3\nmean wait=0.666667 mean system=3.166667 utilization=0.833333\n"
+        }
+      ],
+      "common_mistakes": [
+        "Page 77 reverses waiting subtraction. Correct wait=service begin minus arrival.",
+        "The first service begins at the first arrival when the server is available, not always zero.",
+        "The slide header idle time of queue should mean idle time of server. Time since last arrival is an interarrival duration, not an arrival timestamp.",
+        "Average wait is total wait divided by all six customers; dividing by only the two who wait gives a different conditional average."
+      ],
+      "source_refs": [
+        "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 76, 77, 78, 79"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Begin=max(arrival,previous end); Wait=Begin-Arrival; End=Begin+Service; System=End-Arrival."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Full Corrected FCFS Table",
+          "columns": [
+            "Customer",
+            "IAT",
+            "Arrival",
+            "Service",
+            "Begin",
+            "Wait",
+            "End",
+            "System",
+            "Idle"
+          ],
+          "rows": [
+            [
+              "1",
+              "-",
+              "0",
+              "2",
+              "0",
+              "0",
+              "2",
+              "2",
+              "0"
+            ],
+            [
+              "2",
+              "4",
+              "4",
+              "3",
+              "4",
+              "0",
+              "7",
+              "3",
+              "2"
+            ],
+            [
+              "3",
+              "1",
+              "5",
+              "1",
+              "7",
+              "2",
+              "8",
+              "3",
+              "0"
+            ],
+            [
+              "4",
+              "4",
+              "9",
+              "4",
+              "9",
+              "0",
+              "13",
+              "4",
+              "1"
+            ],
+            [
+              "5",
+              "2",
+              "11",
+              "2",
+              "13",
+              "2",
+              "15",
+              "4",
+              "0"
+            ],
+            [
+              "6",
+              "4",
+              "15",
+              "3",
+              "15",
+              "0",
+              "18",
+              "3",
+              "0"
+            ],
+            [
+              "Totals",
+              "15",
+              "-",
+              "15",
+              "-",
+              "4",
+              "-",
+              "19",
+              "3"
+            ]
+          ]
+        },
+        {
+          "title": "Do Not Confuse These Durations",
+          "columns": [
+            "Quantity",
+            "Calculation",
+            "Customer 5"
+          ],
+          "rows": [
+            [
+              "Interarrival",
+              "A_i-A_(i-1)",
+              "11-9=2"
+            ],
+            [
+              "Service",
+              "Given S_i",
+              "2"
+            ],
+            [
+              "Queue wait",
+              "B_i-A_i",
+              "13-11=2"
+            ],
+            [
+              "System time",
+              "D_i-A_i",
+              "15-11=4"
+            ],
+            [
+              "Idle before service",
+              "max(0,A_i-D_(i-1))",
+              "max(0,11-13)=0"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Set complement",
+      "expression": "A^C=U-A",
+      "when_to_use": "Find all reference outcomes not in A."
+    },
+    {
+      "name": "Inverse line",
+      "expression": "f^(-1)(y)=(y-b)/m, m≠0",
+      "when_to_use": "Invert a real-to-real nonconstant line."
+    },
+    {
+      "name": "Full event count",
+      "expression": "|2^S|=2^k",
+      "when_to_use": "Finite sample space with k outcomes and full power-set events."
+    },
+    {
+      "name": "CDF interval",
+      "expression": "P(a<X≤b)=F(b)-F(a)",
+      "when_to_use": "Use a CDF with the stated endpoint convention."
+    },
+    {
+      "name": "Continuous density",
+      "expression": "F(x)=∫[-∞,x]f(t)dt; ∫[-∞,∞]f(t)dt=1",
+      "when_to_use": "Convert density area to probability."
+    },
+    {
+      "name": "Uniform PDF",
+      "expression": "f(x)=1/(b-a) on [a,b], otherwise 0",
+      "when_to_use": "Equal-length intervals in a bounded range."
+    },
+    {
+      "name": "Triangular PDF",
+      "expression": "2(x-a)/((b-a)(m-a)) for a≤x≤m; 2(b-x)/((b-a)(b-m)) for m≤x≤b; otherwise 0",
+      "when_to_use": "Known minimum, mode and maximum."
+    },
+    {
+      "name": "Exponential",
+      "expression": "λ=1/m; f(x)=λexp(-λx); P(X>x)=exp(-λx), x≥0",
+      "when_to_use": "Nonnegative interarrival duration model."
+    },
+    {
+      "name": "Normal PDF",
+      "expression": "f(x)=exp(-0.5*((x-m)/σ)^2)/(σ*sqrt(2π))",
+      "when_to_use": "Normal mean m and standard deviation σ."
+    },
+    {
+      "name": "LCG",
+      "expression": "Z_k=mod(aZ_(k-1)+c,m); U_k=Z_k/m",
+      "when_to_use": "Generate the slide pseudorandom recurrence."
+    },
+    {
+      "name": "FCFS start and finish",
+      "expression": "B_i=max(A_i,D_(i-1)); D_i=B_i+S_i",
+      "when_to_use": "Initially idle single server with customers in FCFS order."
+    },
+    {
+      "name": "FCFS durations",
+      "expression": "W_i=B_i-A_i; T_i=D_i-A_i; I_i=max(0,A_i-D_(i-1))",
+      "when_to_use": "Separate queue waiting, total system time and idle time."
+    },
+    {
+      "name": "Interarrival duration",
+      "expression": "IAT_i=A_i-A_(i-1), i≥2",
+      "when_to_use": "Convert absolute arrivals into durations."
+    },
+    {
+      "name": "Utilization",
+      "expression": "busy time/observation time",
+      "when_to_use": "Single-server utilization over a specified horizon."
+    },
+    {
+      "name": "Queue design cost",
+      "expression": "waiting cost + service cost",
+      "when_to_use": "Compare the supplied staffing alternatives."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "What two function properties are required for an inverse on the full codomain?",
+      "answer": "One-to-one and onto."
+    },
+    {
+      "question": "Why is F(2)=1/2 in the three-sided die?",
+      "answer": "X≤2 includes B and C, so 1/6+1/3=1/2."
+    },
+    {
+      "question": "Correct the slide exponential density.",
+      "answer": "λexp(-λx) for x≥0, 0 otherwise; λ=1/m."
+    },
+    {
+      "question": "Why is the page 31 LCG full period?",
+      "answer": "gcd(3,20)=1; factors 2 and 5 divide a-1=0; and 4 divides both 20 and 0. Its period is 20."
+    },
+    {
+      "question": "How do balking, reneging and jockeying differ?",
+      "answer": "Not joining, leaving after joining before service, and switching lines respectively."
+    },
+    {
+      "question": "What are customer 5 wait and system time in the FCFS example?",
+      "answer": "Wait=13-11=2; system=15-11=4."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Sets and functions",
+      "remember": "Union either, intersection both, difference directional, complement relative to U. Inverse needs one-to-one and onto."
+    },
+    {
+      "topic": "Probability",
+      "remember": "Space=(S,A,P). Full power set has 2^k events; a CDF uses ≤ and is right-continuous."
+    },
+    {
+      "topic": "Distributions",
+      "remember": "Uniform: bounds. Triangular: minimum, mode, maximum. Exponential: mean m and rate 1/m. Normal: mean and standard deviation."
+    },
+    {
+      "topic": "RNG",
+      "remember": "LCG: multiply, add, mod, divide by m. Full period needs all three Hull-Dobell conditions."
+    },
+    {
+      "topic": "Input and output",
+      "remember": "Structural=components; data=quantities. Sample, empirical, theoretical have different tail and fitting limitations."
+    },
+    {
+      "topic": "DES clock",
+      "remember": "Next-event jumps to actual scheduled changes; fixed increment can shift events onto boundaries. Clock time is simulated time."
+    },
+    {
+      "topic": "Queues",
+      "remember": "FIFO oldest, LIFO newest; interarrival durations may be IID, cumulative timestamps are not. Servers are parallel; phases are sequential."
+    },
+    {
+      "topic": "FCFS table",
+      "remember": "Begin=max(arrival,previous end). Wait=begin-arrival. Totals: busy 15, wait 4, system 19, idle 3; horizon 18."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "p = [1/6 1/3 1/2];\nF = cumsum(p);\nfprintf('CDF: %.6f %.6f %.6f\\n',F);\nfprintf('P(1<X<=3): %.6f\\n',F(3)-F(1));",
+      "expected_output": "CDF: 0.166667 0.500000 1.000000\nP(1<X<=3): 0.833333\n"
+    },
+    {
+      "code": "m = 5;\nlambda = 1/m;\nfprintf('rate=%.4f P(X>5)=%.4f P(X<2)=%.4f\\n',lambda,exp(-lambda*5),1-exp(-lambda*2));",
+      "expected_output": "rate=0.2000 P(X>5)=0.3679 P(X<2)=0.3297\n"
+    },
+    {
+      "code": "a = 1; c = 3; m = 20; z = 2;\nZ = zeros(1,20);\nfor k = 1:20\n    z = mod(a*z+c,m);\n    Z(k) = z;\nend\nfprintf('Z:'); fprintf(' %d',Z); fprintf('\\n');\nfprintf('First U: %.2f; period states: %d\\n',Z(1)/m,numel(unique(Z)));",
+      "expected_output": "Z: 5 8 11 14 17 0 3 6 9 12 15 18 1 4 7 10 13 16 19 2\nFirst U: 0.25; period states: 20\n"
+    },
+    {
+      "code": "n = 1:4;\nwait = [7 4 3 2];\nwaitingCost = 5*wait*10;\nserviceCost = n*60;\ntotal = waitingCost+serviceCost;\nfprintf('baristas waiting service total\\n');\nfprintf('%d %d %d %d\\n',[n; waitingCost; serviceCost; total]);\n[bestCost,bestIndex] = min(total);\nfprintf('best: %d baristas, cost %d\\n',n(bestIndex),bestCost);",
+      "expected_output": "baristas waiting service total\n1 350 60 410\n2 200 120 320\n3 150 180 330\n4 100 240 340\nbest: 2 baristas, cost 320\n"
+    },
+    {
+      "code": "arrival = [0 4 5 9 11 15];\nservice = [2 3 1 4 2 3];\nn = numel(arrival);\nbegin = zeros(1,n); departure = zeros(1,n);\nwait = zeros(1,n); systemTime = zeros(1,n); idle = zeros(1,n);\npreviousEnd = 0;\nfor i = 1:n\n    begin(i) = max(arrival(i),previousEnd);\n    wait(i) = begin(i)-arrival(i);\n    departure(i) = begin(i)+service(i);\n    systemTime(i) = departure(i)-arrival(i);\n    idle(i) = max(0,arrival(i)-previousEnd);\n    previousEnd = departure(i);\nend\nfprintf('i arrival service begin wait end system idle\\n');\nfprintf('%d %d %d %d %d %d %d %d\\n',[(1:n); arrival; service; begin; wait; departure; systemTime; idle]);\nfprintf('totals: service=%d wait=%d system=%d idle=%d\\n',sum(service),sum(wait),sum(systemTime),sum(idle));\nfprintf('mean wait=%.6f mean system=%.6f utilization=%.6f\\n',mean(wait),mean(systemTime),sum(service)/departure(end));",
+      "expected_output": "i arrival service begin wait end system idle\n1 0 2 0 0 2 2 0\n2 4 3 4 0 7 3 2\n3 5 1 7 2 8 3 0\n4 9 4 9 0 13 4 1\n5 11 2 13 2 15 4 0\n6 15 3 15 0 18 3 0\ntotals: service=15 wait=4 system=19 idle=3\nmean wait=0.666667 mean system=3.166667 utilization=0.833333\n"
+    }
+  ]
+}

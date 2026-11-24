@@ -1,0 +1,1684 @@
+{
+  "sections": [
+    {
+      "heading": "M3: Continuous Systems, States, And Reservoirs",
+      "summary": "A continuous-state model describes continuously evolving state variables over continuous time; input and output do not have to be identical or constant. Start by translating the system into quantitative equations, then choose a numerical implementation. State variables must jointly contain enough information for the relevant dynamics at the required accuracy. State equations describe change, while output equations describe what the user wants to measure.",
+      "key_terms": [
+        {
+          "term": "State Variable",
+          "definition": "A real- or complex-valued quantity describing relevant dynamic condition, such as position, velocity, mass, angle, current, or voltage."
+        },
+        {
+          "term": "State Equation",
+          "definition": "An equation for state change with respect to the independent variable, usually time."
+        },
+        {
+          "term": "Output Equation",
+          "definition": "A mapping from state and inputs to requested measurements."
+        },
+        {
+          "term": "ODE / PDE",
+          "definition": "An ordinary differential equation differentiates with respect to one independent variable; a partial differential equation involves partial derivatives across multiple independent variables."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Reservoir Model",
+          "statement": "Ideal infinite-capacity reservoir: q is contents; x(t) is signed input rate; dq/dt=x(t); y(t)=q(t). Therefore q(t)=q(0)+integral from 0 to t of x(s) ds. Positive x adds contents and negative x removes them."
+        },
+        {
+          "name": "Application Scope",
+          "statement": "Listed applications: dam embankments/tunnels, missile trajectories, aircraft training, underwater-vehicle control, toll plazas, airport passenger flow and flight schedules, product/staff planning, market analysis. A continuous model is not automatically suitable for every listed application; some logistics questions are naturally discrete-event."
+        },
+        {
+          "name": "Second-Order ODEs",
+          "statement": "F=m*a covers orbit, oscillator, and ballistic examples. RLC circuit equation: L*d2q/dt2+R*dq/dt+(1/C)*q=V(t). Introduce velocity or another first-derivative state to rewrite a second-order ODE as a first-order system."
+        },
+        {
+          "name": "PDEs Shown But Not Developed",
+          "statement": "Page 8 prints ∇^2 f=(1/D)*∂f/∂t-(1/v^2)*∂^2 f/∂t^2 for wave/diffusion examples. Preserve this displayed relation as a slide expression, not the universal standard equation for both processes. Standard diffusion is ∂f/∂t=D*∇^2 f; standard lossless waves satisfy ∂^2 f/∂t^2=v^2*∇^2 f."
+        },
+        {
+          "name": "Schrodinger Equation On Page 8",
+          "statement": "i*hbar*∂ψ/∂t=-(hbar^2/(2*m))*∇^2ψ+V*ψ. It is first order in time and second order in space; the table groups it with second-order partial differential equations."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Compute a reservoir state from its initial contents and constant signed input.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nq0 = 4; rate = 2; duration = 3;\nq = q0 + rate*duration;\ny = q;\nfprintf('contents=%.0f output=%.0f\\n',q,y);\n```"
+          ],
+          "answer": "Exact printed output:\ncontents=10 output=10\n"
+        }
+      ],
+      "common_mistakes": [
+        "Correct page 5: continuous does not mean identical or unvarying input/output.",
+        "State and output variables can differ.",
+        "Include the initial condition in the reservoir integral.",
+        "Do not repeat the page 8 mixed wave/diffusion relation as the standard equation for both."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 5, 6, 7, 8, 9, 10, 11"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "S-S-O: State variables store condition, State equations supply slopes, Output equations supply observations. The repeated S is intentional."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Model Ingredients",
+          "columns": [
+            "Ingredient",
+            "Question",
+            "Reservoir"
+          ],
+          "rows": [
+            [
+              "Input",
+              "What acts on it?",
+              "Signed rate x(t)"
+            ],
+            [
+              "State",
+              "What condition must be remembered?",
+              "Contents q(t)"
+            ],
+            [
+              "State Equation",
+              "How does state change?",
+              "dq/dt=x(t)"
+            ],
+            [
+              "Output Equation",
+              "What is reported?",
+              "y=q"
+            ]
+          ]
+        },
+        {
+          "title": "Differential-Equation Classes",
+          "columns": [
+            "Class",
+            "Slide Applications",
+            "Example"
+          ],
+          "rows": [
+            [
+              "First-Order ODE",
+              "Predator-prey",
+              "dx/dt=x*f(x,y), dy/dt=y*g(x,y)"
+            ],
+            [
+              "Second-Order ODE",
+              "Orbits, oscillators, ballistics, RLC",
+              "F=m*a; L*q''+R*q'+q/C=V(t)"
+            ],
+            [
+              "PDE",
+              "Water/sound waves, electromagnetic radiation, heat, chemical diffusion, quantum mechanics",
+              "Spatial and temporal partial derivatives"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Orbital State Equations And Solver Syntax",
+      "summary": "An orbital state vector contains three position components and three velocity components. Position derivatives equal velocity, while central gravity supplies acceleration directed toward the central mass. Distance, speed, and energy are outputs derived from the state. A solver call needs a derivative function, time interval, initial state, and any solver options, not just a pasted function name.",
+      "key_terms": [
+        {
+          "term": "State Vector",
+          "definition": "xv=[x;y;z;vx;vy;vz], using the slide position-then-velocity order."
+        },
+        {
+          "term": "Central Gravity",
+          "definition": "Acceleration a=-GM*r_vector/|r_vector|^3."
+        },
+        {
+          "term": "Relative Tolerance",
+          "definition": "A solver accuracy-control option, set with odeset."
+        },
+        {
+          "term": "Anonymous Function Handle",
+          "definition": "@(t,xv) ... adapts a derivative call to ode45's input interface."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Complete State Equations",
+          "statement": "dx/dt=vx, dy/dt=vy, dz/dt=vz; dvx/dt=-GM*x/r^3, dvy/dt=-GM*y/r^3, dvz/dt=-GM*z/r^3; r=sqrt(x^2+y^2+z^2). The model is singular at r=0."
+        },
+        {
+          "name": "Outputs And Energy",
+          "statement": "r=sqrt(x^2+y^2+z^2); speed=sqrt(vx^2+vy^2+vz^2); E=-GM*m/r+0.5*m*speed^2. For a bound Kepler ellipse, E=-GM*m/(2*a), where a is semimajor axis. The displayed E includes m and is total orbital energy, not energy per unit mass."
+        },
+        {
+          "name": "Exact Page 9 Solver Lines",
+          "statement": "options = odeset('RelTol',1.e-4);\n[t,xvOut] = ode45(@(t,xv) gravFunc(t,xv,m),[t0,t1],xv0,options);\nThe printed declaration is function xvderiv = orbitfunc_complete(t,xv). gravFunc and orbitfunc_complete are different names, and the slide omits setup."
+        },
+        {
+          "name": "Exact Page 9 Derivative Assignments",
+          "statement": "xvderiv(1,1) = xv(4,1);\nxvderiv(2,1) = xv(5,1);\nxvderiv(3,1) = xv(6,1);\nxvderiv(4,1) = -GM*xv(1,1)/r^3;\nxvderiv(5,1) = -GM*xv(2,1)/r^3;\nxvderiv(6,1) = -GM*xv(3,1)/r^3;"
+        },
+        {
+          "name": "Ours: Executable Solver Completion Without Printed Output",
+          "statement": "GM = 1; m = 1; t0 = 0; t1 = 1; xv0 = [1;0;0;0;1;0];\ngravFunc = @(t,xv,m) [xv(4:6); -GM*xv(1:3)/norm(xv(1:3))^3];\noptions = odeset('RelTol',1.e-4);\n[t,xvOut] = ode45(@(t,xv) gravFunc(t,xv,m),[t0,t1],xv0,options);\nThis uses the slide call interface consistently; planet mass cancels in acceleration. These unit parameters and completion are ours, not slide-provided Earth/Sun data."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate orbital derivatives and outputs from fixed unit-example states.",
+          "steps": [
+            "Ours: fixed unit parameters illustrate the page 11 formulas, not an asserted real planetary orbit.",
+            "```matlab\nGM = 1; m = 2;\nxv = [2;0;0;0;1;0];\nr = sqrt(sum(xv(1:3).^2));\nspeed = sqrt(sum(xv(4:6).^2));\nacceleration = -GM*xv(1:3)/r^3;\nE = -GM*m/r + 0.5*m*speed^2;\nfprintf('distance=%.1f speed=%.1f ax=%.2f energy=%.1f\\n',r,speed,acceleration(1),E);\n```"
+          ],
+          "answer": "Exact printed output:\ndistance=2.0 speed=1.0 ax=-0.25 energy=0.0\n"
+        }
+      ],
+      "common_mistakes": [
+        "A call to gravFunc does not automatically find a differently named orbitfunc_complete.",
+        "Do not confuse position with velocity components in the state vector.",
+        "The orbit energy shown includes mass m; calling it specific energy would be incorrect.",
+        "The solver output is approximate and depends on tolerances; no exact trajectory output is asserted here."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 9, 10, 11"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Three positions, then three velocities. First copy velocities into position derivatives; then apply gravity to velocity derivatives."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Orbital Quantities",
+          "columns": [
+            "Quantity",
+            "Role",
+            "Formula"
+          ],
+          "rows": [
+            [
+              "Position And Velocity",
+              "Six states",
+              "[x;y;z;vx;vy;vz]"
+            ],
+            [
+              "Acceleration",
+              "Derivative of velocity",
+              "-GM*r_vector/r^3"
+            ],
+            [
+              "Distance",
+              "Output",
+              "sqrt(x^2+y^2+z^2)"
+            ],
+            [
+              "Speed",
+              "Output",
+              "sqrt(vx^2+vy^2+vz^2)"
+            ],
+            [
+              "Energy",
+              "Output/invariant for ideal model",
+              "-GM*m/r+0.5*m*speed^2"
+            ]
+          ]
+        },
+        {
+          "title": "Solver Components",
+          "columns": [
+            "Syntax",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "odeset('RelTol',1.e-4)",
+              "Set relative tolerance"
+            ],
+            [
+              "ode45",
+              "Numerically integrate first-order state equations"
+            ],
+            [
+              "@(t,xv) gravFunc(t,xv,m)",
+              "Pass derivative interface with extra parameter"
+            ],
+            [
+              "[t0,t1], xv0",
+              "Time interval and initial state"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Predator-Prey Dynamics And Conservation",
+      "summary": "Predator and prey populations influence each other through their growth rates. More prey can support predator growth, but more predators suppress prey growth. The resulting feedback can create cycles, with prey recovery following predator decline. The parameters and initial populations determine the particular trajectory, rather than the equations specifying a single universal orbit.",
+      "key_terms": [
+        {
+          "term": "Kolmogorov Form",
+          "definition": "dx/dt=x*f(x,y), dy/dt=y*g(x,y)."
+        },
+        {
+          "term": "Per-Capita Growth",
+          "definition": "For positive populations, f=(1/x)*dx/dt=d(ln x)/dt and g=(1/y)*dy/dt=d(ln y)/dt."
+        },
+        {
+          "term": "Lotka-Volterra Model",
+          "definition": "Choose f=b-p*y and g=r*x-d."
+        },
+        {
+          "term": "Equilibrium",
+          "definition": "A state with both time derivatives zero."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Population Equations",
+          "statement": "dx/dt=x*(b-p*y); dy/dt=y*(r*x-d). Positive parameters: b is intrinsic prey growth, p scales predation, r scales predator growth with prey, d is predator death rate."
+        },
+        {
+          "name": "Positive Equilibrium",
+          "statement": "For positive populations, b-p*y=0 and r*x-d=0, giving (x*,y*)=(d/r,b/p). With b=p=r=d=1, the positive equilibrium is (1,1). The origin is also an equilibrium but is not the positive coexistence equilibrium."
+        },
+        {
+          "name": "Correct General Conservation Law",
+          "statement": "For x>0,y>0: C=b*ln(y)-p*y-r*x+d*ln(x). Page 16 prints -x instead of -r*x; that matches the general formula only when r=1, as in page 17. The negative of C is an equivalent conserved expression."
+        },
+        {
+          "name": "Why The Correction Works",
+          "statement": "dC/dt=(d/x-r)*x*(b-p*y)+(b/y-p)*y*(r*x-d)=(d-r*x)*(b-p*y)+(b-p*y)*(r*x-d)=0."
+        },
+        {
+          "name": "Nine-Stage Slide Cycle",
+          "statement": "1 Prey increase; 2 predators feast; 3 predators increase; 4 predators overhunt; 5 prey decrease; 6 predators starve; 7 predators decline; 8 prey become less vulnerable; 9 prey thrive; repeat. Page 17 plots closed orbits with all four parameters equal to one."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate rates, coexistence equilibrium, and the corrected conserved quantity.",
+          "steps": [
+            "Ours: chosen positive parameters expose the missing-r error instead of hiding it by setting r=1.",
+            "```matlab\nb = 2; p = 0.5; r = 0.25; d = 1; x = 8; y = 2;\ndx = x*(b-p*y); dy = y*(r*x-d);\nC = b*log(y)-p*y-r*x+d*log(x);\nfprintf('dx=%.1f dy=%.1f\\n',dx,dy);\nfprintf('equilibrium=(%.1f,%.1f)\\n',d/r,b/p);\nfprintf('C=%.6f\\n',C);\n```"
+          ],
+          "answer": "Exact printed output:\ndx=8.0 dy=2.0\nequilibrium=(4.0,4.0)\nC=0.465736\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not swap prey x and predators y.",
+        "f and g are per-capita rates, not total population derivatives.",
+        "Keep r in -r*x in the general conserved quantity.",
+        "Logarithms require positive populations in the invariant formula."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 8, 12, 13, 14, 15, 16, 17"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Prey up -> predators up -> prey down -> predators down -> prey recover. Memorize the lagged feedback, not a claim that both peaks occur together."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Species Equations",
+          "columns": [
+            "Species",
+            "Population",
+            "Per-Capita Rate",
+            "Derivative"
+          ],
+          "rows": [
+            [
+              "Prey",
+              "x",
+              "b-p*y",
+              "x*(b-p*y)"
+            ],
+            [
+              "Predators",
+              "y",
+              "r*x-d",
+              "y*(r*x-d)"
+            ]
+          ]
+        },
+        {
+          "title": "Parameter Roles",
+          "columns": [
+            "Parameter",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "b",
+              "Prey growth without predators"
+            ],
+            [
+              "p",
+              "Predator pressure on prey"
+            ],
+            [
+              "r",
+              "Predator growth supported by prey"
+            ],
+            [
+              "d",
+              "Predator death without prey"
+            ]
+          ]
+        },
+        {
+          "title": "Thresholds",
+          "columns": [
+            "Question",
+            "Condition"
+          ],
+          "rows": [
+            [
+              "Prey Grow",
+              "y<b/p"
+            ],
+            [
+              "Prey Decline",
+              "y>b/p"
+            ],
+            [
+              "Predators Grow",
+              "x>d/r"
+            ],
+            [
+              "Predators Decline",
+              "x<d/r"
+            ],
+            [
+              "Positive Equilibrium",
+              "x=d/r, y=b/p"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Euler And Midpoint Numerical Integration",
+      "summary": "Many continuous-system equations need numerical integration because a convenient analytical solution is unavailable. Forward Euler extends the current tangent slope over a short step. The slide's Runge-Kutta formula instead predicts a midpoint and uses its slope for the full step. This is explicit midpoint RK2, not the classical four-stage RK4 method.",
+      "key_terms": [
+        {
+          "term": "Step Size",
+          "definition": "h or Δt, the time increment."
+        },
+        {
+          "term": "Forward Euler",
+          "definition": "A first-order update using the initial slope."
+        },
+        {
+          "term": "Explicit Midpoint RK2",
+          "definition": "A two-stage update using a predicted midpoint slope."
+        },
+        {
+          "term": "Approximation",
+          "definition": "A numerical estimate rather than an exact symbolic solution."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Euler Derivation",
+          "statement": "dx/dt approximately equals (x(t+h)-x(t))/h, so x_next=x+h*f(t,x). This also applies componentwise to a state vector."
+        },
+        {
+          "name": "Midpoint Equations",
+          "statement": "t_mid=t0+h/2; x_mid=x0+(h/2)*f(t0,x0); x1=x0+h*f(t_mid,x_mid)."
+        },
+        {
+          "name": "Step-Size Caution",
+          "statement": "Changing h changes numerical error and can affect stability. Smaller steps are not a replacement for a correct model or correct initial conditions."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Compare one Euler step and one midpoint step for x'=x, x(0)=1, h=0.2.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nf = @(t,x) x;\nt0 = 0; x0 = 1; h = 0.2;\nxEuler = x0+h*f(t0,x0);\ntMid = t0+h/2;\nxMid = x0+(h/2)*f(t0,x0);\nxRK2 = x0+h*f(tMid,xMid);\nfprintf('Euler=%.2f midpoint-state=%.2f RK2=%.2f\\n',xEuler,xMid,xRK2);\n```"
+          ],
+          "answer": "Exact printed output:\nEuler=1.20 midpoint-state=1.10 RK2=1.22\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not call the page 19 formula RK4.",
+        "Use the predicted midpoint state and midpoint time, not just half of the original slope in the final update.",
+        "Euler and RK2 outputs are approximations."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 18, 19"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Euler uses the start; midpoint uses a halfway prediction. Predict halfway, evaluate there, then take the full step."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "One-Step Methods",
+          "columns": [
+            "Method",
+            "Slope Evaluations",
+            "Full-Step Slope"
+          ],
+          "rows": [
+            [
+              "Forward Euler",
+              "One",
+              "At (t0,x0)"
+            ],
+            [
+              "Explicit Midpoint RK2",
+              "Two",
+              "At predicted (t_mid,x_mid)"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Scripts, User-Defined Functions, And Imports",
+      "summary": "Scripts and functions both use .m files, but they differ in how they receive data and where variables live. A script executes a sequence in its workspace; a function can accept arguments, return outputs, and keep internal variables local. The function's output variable must receive a value, and the primary function name should match its filename. MATLAB needs no imports for the built-in commands, functions, or plotting taught in this module.",
+      "key_terms": [
+        {
+          "term": "Script",
+          "definition": "A file of commands with no formal input/output argument list."
+        },
+        {
+          "term": "Function",
+          "definition": "A callable program unit with input/output arguments and local variables."
+        },
+        {
+          "term": "Argument",
+          "definition": "A value passed into or returned from a function."
+        },
+        {
+          "term": "M-File",
+          "definition": "A MATLAB source file with extension .m."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Editor And Directory Syntax",
+          "statement": "Exact commands from pages 30-32: edit; edit prog1.m; mkdir progs; chdir progs; type script1; script1. The directory commands change the filesystem/current folder; these are reference syntax, not replay checks."
+        },
+        {
+          "name": "Radius Script",
+          "statement": "Exact script1.m calculation: radius = 5\narea = pi * (radius^2)\nThe interactive page 29 variant is r = input('Enter the radius: ') followed by A = pi * (r^2)."
+        },
+        {
+          "name": "Function Structure",
+          "statement": "General signature: function outputargument = functionname(input_arguments), followed by statements assigning outputargument, then end. Page 55 architecture is script input -> function call -> returned output -> script display. The slide template describes structure rather than runnable statements."
+        },
+        {
+          "name": "Exact Circle Function",
+          "statement": "function area = calcarea(rad)\n% calcarea calculates the area of a circle\n% Format of call: calcarea(radius)\n% Returns the area\narea = pi * rad * rad;\nend"
+        },
+        {
+          "name": "Circle Caller Syntax",
+          "statement": "radius = input('Please enter the radius: ');\narea = calcarea(radius);\nfprintf('For a circle with a radius of %.2f,', radius)\nfprintf(' the area is %.2f\\n', area)\nThe check below supplies the sample radius directly instead of prompting."
+        },
+        {
+          "name": "Exact Cone Function And Calls",
+          "statement": "function outarg = conevol(radius, height)\n% conevol calculates the volume of a cone\n% Format of call: conevol(radius, height)\n% Returns the volume\noutarg = (pi/3) * radius .^ 2 .* height;\nend\nCalls taught: conevol(4,6.1); fprintf('The cone volume is %.2f\\n',conevol(3,5.5));."
+        },
+        {
+          "name": "Geometry From Page 32",
+          "statement": "Rectangle area=l*w; square area=a^2; triangle area=0.5*b*h; circle area=pi*r^2; cone volume=(pi/3)*r^2*h."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Call the slide functions with fixed arguments and stable formatting.",
+          "steps": [
+            "Slide function bodies retained; ours supplies deterministic arguments and combines their calls into one independent script with local functions.",
+            "```matlab\nradius = 5;\narea = calcarea(radius);\nfprintf('For a circle with a radius of %.2f,',radius);\nfprintf(' the area is %.2f\\n',area);\nfprintf('cone(4,6.1)=%.4f\\n',conevol(4,6.1));\nfprintf('The cone volume is %.2f\\n',conevol(3,5.5));\nfunction area = calcarea(rad)\narea = pi * rad * rad;\nend\nfunction outarg = conevol(radius,height)\noutarg = (pi/3) * radius .^ 2 .* height;\nend\n```"
+          ],
+          "answer": "Exact printed output:\nFor a circle with a radius of 5.00, the area is 78.54\ncone(4,6.1)=102.2065\nThe cone volume is 51.84\n"
+        }
+      ],
+      "common_mistakes": [
+        "A script can read workspace values and call input, even though it has no formal function argument list.",
+        "Function internals are local; do not assume a base-workspace variable is automatically an input.",
+        "A saved .mlx Live Script is not the same file format as a plain .m script.",
+        "Keep dots in conevol when allowing vector inputs."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 27, 28, 29, 30, 31, 32, 55, 56, 57, 58"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Script shares its workspace; function receives arguments and returns results. The signature is the data doorway."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Script And Function",
+          "columns": [
+            "Feature",
+            "Script",
+            "Function"
+          ],
+          "rows": [
+            [
+              "Extension",
+              ".m",
+              ".m"
+            ],
+            [
+              "Formal Arguments",
+              "None",
+              "Inputs and outputs supported"
+            ],
+            [
+              "Variables",
+              "Runs in calling workspace",
+              "Internal variables local"
+            ],
+            [
+              "Typical Job",
+              "Coordinate input, calls, output",
+              "Compute reusable result"
+            ]
+          ]
+        },
+        {
+          "title": "Geometry Calculations",
+          "columns": [
+            "Shape",
+            "Expression"
+          ],
+          "rows": [
+            [
+              "Rectangle",
+              "l*w"
+            ],
+            [
+              "Square",
+              "a^2"
+            ],
+            [
+              "Triangle",
+              "0.5*b*h"
+            ],
+            [
+              "Circle",
+              "pi*r^2"
+            ],
+            [
+              "Cone Volume",
+              "(pi/3)*r^2*h"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Input, Output, And Numeric Display",
+      "summary": "input prompts for a value and normally evaluates an entered MATLAB expression; adding the s option reads literal text instead. disp shows a value without its variable name, whereas fprintf gives deliberate control over wording and numeric formatting. A semicolon suppresses automatic expression display, not an explicit disp or fprintf call. fprintf consumes arrays column by column, so transpose a matrix deliberately when printing visual rows.",
+      "key_terms": [
+        {
+          "term": "Format String",
+          "definition": "Text containing conversion codes, widths, precision, and escapes."
+        },
+        {
+          "term": "Field Width",
+          "definition": "Minimum space reserved by a conversion such as %3d."
+        },
+        {
+          "term": "Precision",
+          "definition": "Digits requested by a format such as %.2f."
+        },
+        {
+          "term": "Column-Major Order",
+          "definition": "Process column 1, then column 2, and so on."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Numeric And Text Input Syntax",
+          "statement": "Exact slide forms: input(\"Enter an integer : \"); input(\"Enter a string : \",\"s\"); x = input(\"Enter a number\"); y = input(\"Enter another number\"); rad = input('Enter the radius: '); x = input('Enter the \\nx coordinate: '); letter = input('Enter a char: ','s'); mychar = input('Enter a character: ','s'); mystr = input('Enter a string: ','s');. Text input retains leading spaces; pressing Enter with the s option yields empty character input."
+        },
+        {
+          "name": "Arithmetic Input Script",
+          "statement": "x = input(\"Enter a number \")\ny = input(\"Enter another number \")\nz1 = x + y\nz2 = x - y\nz3 = x * y\nz4 = (x + y)/2\nfprintf('\\n Sum is. %d ',z1);\nfprintf('\\n Difference is. %d',z2);\nfprintf('\\n Product is. %d',z3);\nfprintf('\\n Average is. %d',z4);\nThese are the page 35 lines. Use a floating format for potentially fractional averages, as in our deterministic example below."
+        },
+        {
+          "name": "disp Syntax From Page 36",
+          "statement": "A = [15 150]; disp(A);\nS = 'Hello World.'; disp(S);\ndisp('Corn      Oats      Hay');\nX = rand(5,3); disp(X);\nX = '<a href = \"https://www.mathworks.com\">MathWorks Web Site</a>'; disp(X);\nThe last example demonstrates command-window hyperlink markup, not an import. No fixed random or GUI-rendered output is asserted."
+        },
+        {
+          "name": "I/O Command Catalogue",
+          "statement": "disp(X) displays array/text values; fscanf(fid,formatSpec) reads formatted file data; format controls ordinary numeric display; fprintf(formatSpec,values) writes to screen and fprintf(fid,formatSpec,values) to a file; input(prompt) requests input; ; suppresses automatic printing. The fid syntax is our completion of the command-only slide listing, not a request to modify files."
+        },
+        {
+          "name": "Format Codes",
+          "statement": "%s text; %c character; %d integer; %f fixed-point; %e scientific; %g compact fixed/scientific. \\n inserts a newline and \\t a tab. %3d requests width 3; %6.2f requests width 6 with two decimal places. ... continues a long MATLAB statement."
+        },
+        {
+          "name": "Display Modes",
+          "statement": "Exact slide forms: format short; format long; format short e; format long e; format bank; format +; format rat; format compact; format loose. Short/long affect displayed digits, e selects scientific notation, bank uses two decimals, + shows signs, rat shows rational approximations, compact/loose affect spacing. Stored values are unchanged."
+        },
+        {
+          "name": "Exact Vector And Matrix Print Syntax",
+          "statement": "vec = 2:5; fprintf('%d\\n',vec); fprintf('%d',vec); fprintf('%d %d %d %d\\n',vec); mat = [5 9 8;4 1 10]; fprintf('%d\\n',mat); fprintf('%d %d %d\\n',mat);. Format codes recycle over the column-major data stream."
+        },
+        {
+          "name": "Exact circleIO.m Lines",
+          "statement": "fprintf('Note: the units will be inches.\\n')\nradius = input('Please enter the radius: ');\narea = pi * (radius^2);\nfprintf('For a circle with a radius of %.2f inches,\\n',radius)\nfprintf('the area is %.2f inches squared\\n',area)\nThe replay below replaces only the interactive radius with the slide sample value."
+        },
+        {
+          "name": "Other Exact Page 41 Output Expressions",
+          "statement": "disp('Hello'); disp(4^3); fprintf('The value is %d, for sure!\\n',4^3); fprintf('The int is %d and the char is %c\\n',33-2,'x'); fprintf('The int is %3d and the float is %6.2f\\n',5,4.9);"
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Replace interactive arithmetic input with the slide-study values x=5 and y=9.",
+          "steps": [
+            "Ours: fixed inputs replace prompting; Alice formatting is the page 36 example.",
+            "```matlab\nx = 5; y = 9;\nz1 = x+y; z2 = x-y; z3 = x*y; z4 = (x+y)/2;\nfprintf('sum=%d difference=%d product=%d average=%.2f\\n',z1,z2,z3,z4);\nname = 'Alice'; age = 12;\nfprintf('%s will be %d this year.\\n',name,age);\n```"
+          ],
+          "answer": "Exact printed output:\nsum=14 difference=-4 product=45 average=7.00\nAlice will be 12 this year.\n"
+        },
+        {
+          "problem": "Use the page 41 formatted-output expressions without display-mode-dependent numeric disp spacing.",
+          "steps": [
+            "Slide expressions use explicit formatting, so the output does not depend on format short/long or compact/loose.",
+            "```matlab\ndisp('Hello');\nfprintf('The value is %d, for sure!\\n',4^3);\nfprintf('The int is %d and the char is %c\\n', ...\n33-2,'x');\nfprintf('The int is %3d and the float is %6.2f\\n',5,4.9);\n```"
+          ],
+          "answer": "Exact printed output:\nHello\nThe value is 64, for sure!\nThe int is 31 and the char is x\nThe int is   5 and the float is   4.90\n"
+        },
+        {
+          "problem": "Trace the column-major print stream on page 42.",
+          "steps": [
+            "Slide data and print formats; ours adds a newline after the no-newline example and a rowwise comparison using dot-transpose.",
+            "```matlab\nvec = 2:5;\nfprintf('%d\\n',vec);\nfprintf('%d',vec); fprintf('\\n');\nfprintf('%d %d %d %d\\n',vec);\nmat = [5 9 8;4 1 10];\nfprintf('%d %d %d\\n',mat);\nfprintf('row=%d %d %d\\n',mat.');\n```"
+          ],
+          "answer": "Exact printed output:\n2\n3\n4\n5\n2345\n2 3 4 5\n5 4 9\n1 8 10\nrow=5 9 8\nrow=4 1 10\n"
+        },
+        {
+          "problem": "Replay circleIO with the slide sample radius and no interactive input.",
+          "steps": [
+            "Ours: fixed sample radius replaces input; the displayed result uses the slide formatting.",
+            "```matlab\nfprintf('Note: the units will be inches.\\n');\nradius = 3.9;\narea = pi*(radius^2);\nfprintf('For a circle with a radius of %.2f inches,\\n',radius);\nfprintf('the area is %.2f inches squared\\n',area);\n```"
+          ],
+          "answer": "Exact printed output:\nNote: the units will be inches.\nFor a circle with a radius of 3.90 inches,\nthe area is 47.78 inches squared\n"
+        }
+      ],
+      "common_mistakes": [
+        "%d is not the appropriate promise of decimal formatting for a fractional average; use %.2f or another floating conversion.",
+        "Without \\n, the next printed item can appear on the same line.",
+        "fprintf does not automatically print one visible matrix row at a time.",
+        "format controls ordinary display, while explicit fprintf conversion specifications control fprintf."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 34, 35, 36, 37, 38, 39, 40, 41, 42, 45"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Prompt with input, plain display with disp, precise display with fprintf. For rowwise matrix printing, transpose before feeding the columnwise stream."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Input And Output Choices",
+          "columns": [
+            "Task",
+            "Syntax",
+            "Behavior"
+          ],
+          "rows": [
+            [
+              "Numeric Input",
+              "input(prompt)",
+              "Evaluates entered expression"
+            ],
+            [
+              "Text Input",
+              "input(prompt,'s')",
+              "Preserves literal characters"
+            ],
+            [
+              "Plain Display",
+              "disp(X)",
+              "No variable-name header"
+            ],
+            [
+              "Formatted Display",
+              "fprintf(formatSpec,values)",
+              "Explicit layout and precision"
+            ]
+          ]
+        },
+        {
+          "title": "Conversion Codes",
+          "columns": [
+            "Code",
+            "Use"
+          ],
+          "rows": [
+            [
+              "%s / %c",
+              "Text / single character"
+            ],
+            [
+              "%d",
+              "Integer format"
+            ],
+            [
+              "%f",
+              "Fixed decimal"
+            ],
+            [
+              "%e",
+              "Scientific notation"
+            ],
+            [
+              "%g",
+              "Compact fixed or scientific"
+            ],
+            [
+              "\\n / \\t",
+              "Newline / tab"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: String Arrays, Numeric Arrays, And Command Reference",
+      "summary": "The script examples combine string arrays, add matrices, and add a row to a column using implicit expansion. String addition concatenates corresponding text values, whereas numeric addition combines numeric entries. The command tables extend the earlier vector and matrix tools to spacing, sorting, linear algebra, and cell arrays. Treat a command-only slide listing as vocabulary to recognize, not as permission to invent a particular slide result.",
+      "key_terms": [
+        {
+          "term": "String Array",
+          "definition": "Double-quoted text values stored as string elements."
+        },
+        {
+          "term": "Implicit Expansion",
+          "definition": "Compatible singleton dimensions expand during an array operation."
+        },
+        {
+          "term": "Cell Array",
+          "definition": "An array whose cells can hold values of different sizes or types."
+        },
+        {
+          "term": "Rank",
+          "definition": "Number of linearly independent columns or rows."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Exact Page 33 Script",
+          "statement": "s1 = [\"Red\" \"Blue\" \"Green\"]\ns2 = [\"Truck\" \"Sky\" \"Tree\"]\ns = s1 + s2\nA = [1 0;2 4];\nB = [5 9;2 1];\nC = A + B\na = 1:2;\nb = (1:3)';\na + b"
+        },
+        {
+          "name": "Page 43 Array Commands With Ours Syntax Completions",
+          "statement": "cat(1,A,B) concatenates vertically; find(A) returns nonzero indices; length(A) is the largest dimension; linspace(a,b,n) creates n linearly spaced points; logspace(a,b,n) creates n powers-of-ten spaced points; max(A), min(A), prod(A), sum(A) reduce columns for ordinary multirow matrices; reshape(A,r,c) preserves element count; size(A) gives dimensions; sort(A) sorts each column. These call forms complete a command-name table, not literal slide examples."
+        },
+        {
+          "name": "Page 44 Numeric Commands With Ours Syntax Completions",
+          "statement": "eye(n) makes an identity; ones(r,c), zeros(r,c) initialize arrays; cross(u,v) computes vector cross products for three-component vectors; dot(u,v) computes vector dot products; det(A) needs square A; inv(A) needs square nonsingular A; pinv(A) is a pseudoinverse; rank(A) finds numerical rank; rref(A) returns reduced row echelon form."
+        },
+        {
+          "name": "Page 44 Cell Commands With Ours Syntax Completions",
+          "statement": "C = cell(2,2); creates empty cells; C = num2cell(A); converts numeric elements into cells; iscell(C); tests the type; celldisp(C); displays contents; cellplot(C); draws the cell-array structure; [a,b] = deal(1,2); distributes corresponding inputs to outputs. cellplot is graphical, so it is reference syntax only here."
+        },
+        {
+          "name": "Dimension Correction",
+          "statement": "The table description of length as an element count is correct for a vector, not a general matrix. A 3-by-2 expanded result has length 3, numel 6, and size [3 2]."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Replay string concatenation, matrix addition, and implicit expansion from page 33.",
+          "steps": [
+            "Slide calculations retained; ours adds deterministic fprintf formatting.",
+            "```matlab\ns1 = [\"Red\" \"Blue\" \"Green\"];\ns2 = [\"Truck\" \"Sky\" \"Tree\"];\ns = s1+s2;\nfprintf('%s %s %s\\n',s(1),s(2),s(3));\nA = [1 0;2 4]; B = [5 9;2 1]; C = A+B;\nfprintf('C=%d %d\\n',C.');\na = 1:2; b = (1:3)'; D = a+b;\nfprintf('expanded=%d-by-%d\\n',size(D,1),size(D,2));\nfprintf('%d %d\\n',D.');\n```"
+          ],
+          "answer": "Exact printed output:\nRedTruck BlueSky GreenTree\nC=6 9\nC=4 5\nexpanded=3-by-2\n2 3\n3 4\n4 5\n"
+        }
+      ],
+      "common_mistakes": [
+        "Double-quoted string arrays and single-quoted character arrays are distinct types.",
+        "a+b in the slide is 3-by-2 on MATLAB versions supporting implicit expansion, not a dimension error.",
+        "cross and dot are vector operations, not ordinary matrix multiplication.",
+        "det and inv are not defined as stated for arbitrary nonsquare arrays."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 33, 43, 44"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Text plus joins words; numeric plus joins values by addition. Shape still matters: a column plus a row expands to a grid."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Array Examples",
+          "columns": [
+            "Expression",
+            "Operation",
+            "Result Shape"
+          ],
+          "rows": [
+            [
+              "s1+s2",
+              "Corresponding string concatenation",
+              "1 x 3 string array"
+            ],
+            [
+              "A+B",
+              "Numeric matrix addition",
+              "2 x 2"
+            ],
+            [
+              "(1:3)' + (1:2)",
+              "Compatible singleton expansion",
+              "3 x 2"
+            ]
+          ]
+        },
+        {
+          "title": "Array Command Families",
+          "columns": [
+            "Family",
+            "Commands"
+          ],
+          "rows": [
+            [
+              "Assembly And Spacing",
+              "cat, linspace, logspace, reshape"
+            ],
+            [
+              "Inspect And Reduce",
+              "find, length, size, max, min, prod, sum, sort"
+            ],
+            [
+              "Initialize",
+              "eye, ones, zeros"
+            ],
+            [
+              "Vector And Matrix Algebra",
+              "cross, dot, det, inv, pinv, rank, rref"
+            ],
+            [
+              "Cells",
+              "cell, celldisp, cellplot, num2cell, deal, iscell"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Plotting Syntax And All Slide Plot Scripts",
+      "summary": "To plot a function, define x values, compute the corresponding y values, and call plot(x,y). Labels, titles, legends, grids, and axis commands explain how to read the figure. LineSpec combines color, line style, and markers, while figure and subplot organize separate plots. These slide commands create graphical output rather than printed numerical answers, so they are documented as syntax and are not replay checks.",
+      "key_terms": [
+        {
+          "term": "LineSpec",
+          "definition": "A string specifying up to color, line style, and marker."
+        },
+        {
+          "term": "Axes",
+          "definition": "The plotting area with limits and coordinate scales."
+        },
+        {
+          "term": "Subplot",
+          "definition": "One plotting region within a tiled figure."
+        },
+        {
+          "term": "Elementwise Formula",
+          "definition": "A vector expression using dotted multiplication/division/power where required."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Plotting Command Table, Part One",
+          "statement": "Exact command names: axis, fplot, grid, plot, print, title, xlabel, ylabel, axes, close, close all, figure, gtext. Ours syntax completions: axis([xmin xmax ymin ymax]); fplot(@sin,[0 2*pi]); grid on; plot(x,y); print; title('Title'); xlabel('x'); ylabel('y'); axes; close; close all; figure; gtext('label');. print can print or save graphical output; gtext uses mouse placement. Do not run interactive/printing commands in numerical replay checks."
+        },
+        {
+          "name": "Plotting Command Table, Part Two",
+          "statement": "Exact command names: hold, legend, refresh, set, subplot, text, bar, loglog, polar, semilogx, semilogy, stairs, stem. Ours call completions: hold on; legend('y1','y2'); refresh; set(gca,'FontSize',12); subplot(2,2,1); text(1,2,'label'); bar(x,y); loglog(x,y); polar(theta,r); semilogx(x,y); semilogy(x,y); stairs(x,y); stem(x,y);. hold retains existing objects rather than freezing their data; legend labels plotted series and is not intrinsically mouse-only."
+        },
+        {
+          "name": "Axis And Annotation Syntax",
+          "statement": "plot(x,y); xlabel('x'); ylabel('y'); title('Title'); grid on; axis equal; axis square;. Equal means equal unit scales on the axes; square means a square plot box, not necessarily equal scales."
+        },
+        {
+          "name": "Page 49 Single-Point Script",
+          "statement": "x = 11;\ny = 48;\nplot(x,y,'r*')\nxlabel('Time')\nylabel('Temperature')\ntitle('Time and Temp')\nThe picture places axis([9 12 35 55]) in a comment. Ours correction: execute axis([9 12 35 55]) separately to enforce those bounds; a comment has no effect. The other commented candidate axis([x-2 x+2 y-10 y+10]) is also reference syntax."
+        },
+        {
+          "name": "Page 50 Line Script",
+          "statement": "x = 1:6;\ny = [1 5 3 9 11 8];\nplot(x,y)"
+        },
+        {
+          "name": "Page 51 Separate Figures And Overlays",
+          "statement": "clf\nx = 1:5;\ny1 = [2 11 6 9 3];\ny2 = [4 5 8 6 2];\nfigure(1)\nbar(x,y1)\nfigure(2)\nplot(x,y1,'k')\nhold on\nplot(x,y2,'ko')\ngrid on\nlegend('y1','y2')"
+        },
+        {
+          "name": "Page 52 Sine And Cosine Script",
+          "statement": "clf\nx = 0:2*pi/40:2*pi;\ny = sin(x);\nplot(x,y,'ro')\nhold on\ny = cos(x);\nplot(x,y,'b+')\nlegend('sin','cos')\nxlabel('x')\nylabel('sin(x) or cos(x)')\ntitle('sin and cos on one graph')\nThe slide also shows the single-call equivalent plot(x,sin(x),'ro',x,cos(x),'b+'), which does not need hold on."
+        },
+        {
+          "name": "Page 53 Two Datasets In One Call",
+          "statement": "x = [0:0.01:10];\ny = sin(x);\ng = cos(x);\nplot(x,y,x,g,'.-'), legend('Sin(x)','Cos(x)')"
+        },
+        {
+          "name": "Page 54 Damped Sine Subplots",
+          "statement": "x = [0:0.01:5];\ny = exp(-1.5*x).*sin(10*x);\nsubplot(1,2,1)\nplot(x,y), xlabel('x'), ylabel('exp(-1.5x)*sin(10x)'), axis([0 5 -1 1])\ny = exp(-2*x).*sin(10*x);\nsubplot(1,2,2)\nplot(x,y), xlabel('x'), ylabel('exp(-2x)*sin(10x)'), axis([0 5 -1 1])"
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Use .* between the two vector factors in the damped-sine examples.",
+        "A comment mentioning axis does not set axis limits.",
+        "axis equal and axis square are not synonyms.",
+        "hold on retains the current axes; figure creates/selects a figure, and subplot selects a plotting region."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 46, 47, 48, 49, 50, 51, 52, 53, 54"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Define x -> compute y -> plot -> label. In r*, r is red and * is the marker; neither is a variable name."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "LineSpec Colors",
+          "columns": [
+            "Code",
+            "Color"
+          ],
+          "rows": [
+            [
+              "b",
+              "Blue"
+            ],
+            [
+              "c",
+              "Cyan"
+            ],
+            [
+              "g",
+              "Green"
+            ],
+            [
+              "k",
+              "Black"
+            ],
+            [
+              "m",
+              "Magenta"
+            ],
+            [
+              "r",
+              "Red"
+            ],
+            [
+              "w",
+              "White"
+            ],
+            [
+              "y",
+              "Yellow"
+            ]
+          ]
+        },
+        {
+          "title": "Line Styles",
+          "columns": [
+            "Code",
+            "Style"
+          ],
+          "rows": [
+            [
+              "-",
+              "Solid"
+            ],
+            [
+              "--",
+              "Dashed"
+            ],
+            [
+              ":",
+              "Dotted"
+            ],
+            [
+              "-.",
+              "Dash-dot"
+            ]
+          ]
+        },
+        {
+          "title": "Marker Symbols",
+          "columns": [
+            "Code",
+            "Marker"
+          ],
+          "rows": [
+            [
+              "o",
+              "Circle"
+            ],
+            [
+              "d",
+              "Diamond"
+            ],
+            [
+              "h",
+              "Hexagram"
+            ],
+            [
+              "p",
+              "Pentagram"
+            ],
+            [
+              "+",
+              "Plus"
+            ],
+            [
+              ".",
+              "Point"
+            ],
+            [
+              "s",
+              "Square"
+            ],
+            [
+              "*",
+              "Star"
+            ],
+            [
+              "v",
+              "Down triangle"
+            ],
+            [
+              "<",
+              "Left triangle"
+            ],
+            [
+              ">",
+              "Right triangle"
+            ],
+            [
+              "^",
+              "Up triangle"
+            ],
+            [
+              "x",
+              "X-mark"
+            ]
+          ]
+        },
+        {
+          "title": "Figure Organization",
+          "columns": [
+            "Syntax",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "figure(n)",
+              "Select/open figure n"
+            ],
+            [
+              "clf",
+              "Clear current figure"
+            ],
+            [
+              "subplot(r,c,k)",
+              "Select tile k of an r-by-c layout"
+            ],
+            [
+              "hold on",
+              "Retain existing objects for overlay"
+            ],
+            [
+              "axis equal",
+              "Equal data-unit scales"
+            ],
+            [
+              "axis square",
+              "Square plotting box"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: Branching, Corrected Conditions, And Menus",
+      "summary": "An if block executes the first satisfied condition and can use elseif and else for alternatives. A switch compares one expression with cases and uses otherwise when none match. Range boundaries must be chosen explicitly so values such as zero, twenty, and sixty follow the intended branch. The slides contain deliberate review traps: a leading period before x, a percent sign used as remainder, and a copied even-message in the odd branch.",
+      "key_terms": [
+        {
+          "term": "Condition",
+          "definition": "A logical test controlling execution."
+        },
+        {
+          "term": "elseif",
+          "definition": "An additional condition tested only after earlier branches fail."
+        },
+        {
+          "term": "otherwise",
+          "definition": "The unmatched-case branch of switch."
+        },
+        {
+          "term": "menu",
+          "definition": "A graphical choice function returning a selected button number."
+        }
+      ],
+      "properties": [
+        {
+          "name": "if Forms And Exact Page 60 Example",
+          "statement": "Single branch: if condition, action, end. Two branches: if condition, action1, else, action2, end. Example:\na = 100;\nif a < 20\n fprintf('a is less than 20\\n');\nelse\n fprintf('a is not less than 20\\n');\nend\nfprintf('value of a is : %d\\n',a);"
+        },
+        {
+          "name": "Page 61 Sign Example And Correction",
+          "statement": "Slide intent: x = input(\"Enter a number \"); if x < 0, fprintf('Negative'); else, fprintf('Positive'); end. Remove the stray leading period in .x. This two-way version groups zero with the else branch; a true three-way sign classifier must test x>0 and reserve else for zero."
+        },
+        {
+          "name": "Page 61 Parity Error And Required Fix",
+          "statement": "The literal slide line y = x % 2; assigns x to y and starts a comment, rather than taking a remainder. The source also repeats fprintf('Even number') in both branches. Correct integer test: y = mod(x,2); if y == 0, fprintf('Even number'); else, fprintf('Odd number'); end."
+        },
+        {
+          "name": "Exact Page 62 Age Conditions, With Known Bugs",
+          "statement": "age = input(\"Enter a age \");\nif age > 0 && age <=13\n fprintf('young \\n ');\nelseif age > 13 && age <20\n fprintf('teen \\n ');\nelseif age > 20 && age <60\n fprintf('adult \\n ');\nelseif age <=100\n fprintf('senior \\n ');\nelse\n fprintf('sorry \\n ');\nend\nfprintf(\"Thanks, keep safe\");\nThese are source syntax, not recommended age rules: age 20 and nonpositive ages can fall to senior; age 60 already reaches senior correctly."
+        },
+        {
+          "name": "Ours: Complete Age Ranges",
+          "statement": "For the intended integer ranges, use age>=1 && age<=13; elseif age>=14 && age<=19; elseif age>=20 && age<=59; elseif age>=60 && age<=100; else invalid. The worked code states these bounds explicitly rather than relying on accidental fallthrough."
+        },
+        {
+          "name": "Exact Grade Switch",
+          "statement": "grade = 'B';\nswitch(grade)\ncase 'A'\n fprintf('Excellent!\\n');\ncase 'B'\n fprintf('Well done\\n');\ncase 'C'\n fprintf('Well done\\n');\ncase 'D'\n fprintf('You passed\\n');\ncase 'F'\n fprintf('Better try again\\n');\notherwise\n fprintf('Invalid grade\\n');\nend"
+        },
+        {
+          "name": "Exact Page 64 Relational Switch",
+          "statement": "x = 3, y = 3;\nswitch x\ncase x*(x==y)\n disp('x and y are equal');\ncase x*(x>y)\n disp('x is greater than y');\notherwise\n disp('x is less than y');\nend\nFor these fixed values the first case matches. This numeric-case trick is not a robust general relational comparison: x=0 can match a false case multiplied by zero; ordinary if/elseif is clearer for ordering."
+        },
+        {
+          "name": "Exact Pizza Menu Syntax",
+          "statement": "pick = menu('Pick a Pizza','Cheese','Sausage','Mushroom');\nswitch pick\ncase 1\n disp('Order a cheese pizza')\ncase 2\n disp('Order a Sausage pizza')\ncase 3\n disp('Order a Mushroom pizza')\notherwise\n disp('No pizza for us today')\nend\nThis opens a GUI, so replay uses a fixed pick if illustrating the switch rather than opening menu."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Exercise both parity branches with noninteractive integer inputs.",
+          "steps": [
+            "Ours: fixed inputs exercise both corrected branches; the else message is Odd number, unlike the source typo.",
+            "```matlab\nfor x = [4 5]\n if mod(x,2) == 0\n  fprintf('%d: Even number\\n',x);\n else\n  fprintf('%d: Odd number\\n',x);\n end\nend\n```"
+          ],
+          "answer": "Exact printed output:\n4: Even number\n5: Odd number\n"
+        },
+        {
+          "problem": "Classify explicit age boundaries without the original fallthrough bugs.",
+          "steps": [
+            "Ours: explicitly chosen integer-age intervals repair the page 62 logic; they do not assert a universal social definition of age categories.",
+            "```matlab\nfor age = [-1 0 13 14 19 20 59 60 100 101]\n if age >= 1 && age <= 13\n  category = 'young';\n elseif age >= 14 && age <= 19\n  category = 'teen';\n elseif age >= 20 && age <= 59\n  category = 'adult';\n elseif age >= 60 && age <= 100\n  category = 'senior';\n else\n  category = 'invalid';\n end\n fprintf('%d: %s\\n',age,category);\nend\n```"
+          ],
+          "answer": "Exact printed output:\n-1: invalid\n0: invalid\n13: young\n14: teen\n19: teen\n20: adult\n59: adult\n60: senior\n100: senior\n101: invalid\n"
+        },
+        {
+          "problem": "Trace the slide if, grade switch, and fixed relational-switch examples.",
+          "steps": [
+            "Slide branch bodies retained; ours suppresses the incidental x/y assignment echoes and combines fixed examples into one independent script.",
+            "```matlab\na = 100;\nif a < 20\n fprintf('a is less than 20\\n');\nelse\n fprintf('a is not less than 20\\n');\nend\nfprintf('value of a is : %d\\n',a);\ngrade = 'B';\nswitch grade\n case 'A'\n  fprintf('Excellent!\\n');\n case 'B'\n  fprintf('Well done\\n');\n case 'C'\n  fprintf('Well done\\n');\n case 'D'\n  fprintf('You passed\\n');\n case 'F'\n  fprintf('Better try again\\n');\n otherwise\n  fprintf('Invalid grade\\n');\nend\nx = 3; y = 3;\nswitch x\n case x*(x==y)\n  disp('x and y are equal');\n case x*(x>y)\n  disp('x is greater than y');\n otherwise\n  disp('x is less than y');\nend\n```"
+          ],
+          "answer": "Exact printed output:\na is not less than 20\nvalue of a is : 100\nWell done\nx and y are equal\n"
+        }
+      ],
+      "common_mistakes": [
+        "% starts a comment; use mod(x,2) for parity and print Odd number in the odd branch.",
+        "Zero is neither positive nor negative.",
+        "The original age script misclassifies 20 and can misclassify nonpositive ages; 60 is not an uncovered boundary.",
+        "switch has no C-style fallthrough between cases and needs no break between its branches."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 60, 61, 62, 63, 64, 65"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "If asks whether a condition holds; switch asks which value matches. Write boundary cases down before choosing the inequalities."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Selection Constructs",
+          "columns": [
+            "Construct",
+            "Best Fit",
+            "Fallback"
+          ],
+          "rows": [
+            [
+              "if / elseif",
+              "Logical ranges and arbitrary conditions",
+              "else"
+            ],
+            [
+              "switch / case",
+              "Matching one expression against cases",
+              "otherwise"
+            ],
+            [
+              "menu",
+              "Human choice among graphical buttons",
+              "Handle no matching/selected option"
+            ]
+          ]
+        },
+        {
+          "title": "Corrected Age Ranges, Ours",
+          "columns": [
+            "Category",
+            "Integer Range"
+          ],
+          "rows": [
+            [
+              "Young",
+              "1-13"
+            ],
+            [
+              "Teen",
+              "14-19"
+            ],
+            [
+              "Adult",
+              "20-59"
+            ],
+            [
+              "Senior",
+              "60-100"
+            ],
+            [
+              "Invalid",
+              "Outside those ranges"
+            ]
+          ]
+        },
+        {
+          "title": "Parity And Sign",
+          "columns": [
+            "Question",
+            "Correct Test"
+          ],
+          "rows": [
+            [
+              "Even Integer",
+              "mod(x,2)==0"
+            ],
+            [
+              "Odd Integer",
+              "mod(x,2)~=0"
+            ],
+            [
+              "Negative",
+              "x<0"
+            ],
+            [
+              "Positive",
+              "x>0"
+            ],
+            [
+              "Zero",
+              "x==0"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M3: For Loops, While Loops, Break, And Continue",
+      "summary": "A for loop iterates over a supplied sequence, which need not be consecutive or increasing. A while loop repeats while its logical condition remains true. break ends the nearest loop, while continue skips the rest of the current iteration. Place updates carefully so a skipped iteration cannot prevent progress toward termination.",
+      "key_terms": [
+        {
+          "term": "for",
+          "definition": "Iterate over the values supplied by a sequence or array."
+        },
+        {
+          "term": "while",
+          "definition": "Repeat while a condition is true."
+        },
+        {
+          "term": "break",
+          "definition": "Leave the nearest enclosing loop."
+        },
+        {
+          "term": "continue",
+          "definition": "Skip to the next iteration of the nearest loop."
+        }
+      ],
+      "properties": [
+        {
+          "name": "General Loop Forms",
+          "statement": "for loopvar = range\n action\nend\nwhile expression\n statements\nend\nThe words action/statements in these general templates describe where the body belongs, rather than literal MATLAB commands."
+        },
+        {
+          "name": "Exact Page 66 Counted Example",
+          "statement": "for a = 10:20\n fprintf('value of a: %d\\n',a);\nend"
+        },
+        {
+          "name": "Other Exact Page 66 Examples",
+          "statement": "for v = [1:10]\n disp(v)\nend\nfor v = [1 5 8 17]\n disp(v)\nend\nfor v = 1.0:-0.2:0.0\n disp(v)\nend\nfor v = [1:10]\n disp(\"Hello\")\nend"
+        },
+        {
+          "name": "Exact Page 67 Basic while",
+          "statement": "a = 10;\nwhile(a < 20)\n fprintf('value of a: %d\\n',a);\n a = a + 1;\nend"
+        },
+        {
+          "name": "Exact Page 67 break Example",
+          "statement": "a = 10;\nwhile(a < 20)\n fprintf('value of a: %d\\n',a);\n a = a + 1;\n if(a > 15)\n  break;\n end\nend\nBecause printing occurs before increment and test, the last printed value is 15."
+        },
+        {
+          "name": "Exact Page 67 continue Example",
+          "statement": "a = 9;\nwhile a < 20\n a = a + 1;\n if a == 15\n  continue;\n end\n fprintf('value of a: %d\\n',a);\nend\nIncrement occurs before continue, so 15 is skipped and the loop still makes progress. The last printed value is 20, since the prior test was made at 19."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Trace the list and descending for sequences with stable formatting.",
+          "steps": [
+            "Ours: fprintf avoids disp numeric padding; counting the last loop explains the ten repetitions in the Hello example without interactive output assumptions.",
+            "```matlab\nfor v = [1 5 8 17]\n fprintf('list=%d\\n',v);\nend\nfor v = 1.0:-0.2:0.0\n fprintf('down=%.1f\\n',v);\nend\ncount = 0;\nfor v = [1:10]\n count = count+1;\nend\nfprintf('repetitions=%d\\n',count);\n```"
+          ],
+          "answer": "Exact printed output:\nlist=1\nlist=5\nlist=8\nlist=17\ndown=1.0\ndown=0.8\ndown=0.6\ndown=0.4\ndown=0.2\ndown=0.0\nrepetitions=10\n"
+        },
+        {
+          "problem": "Compare all three while-loop traces from the picture slide.",
+          "steps": [
+            "Slide control flow retained; ours uses distinct stable prefixes to make the three traces unambiguous.",
+            "```matlab\na = 10;\nwhile a < 20\n fprintf('basic=%d\\n',a);\n a = a+1;\nend\na = 10;\nwhile a < 20\n fprintf('break=%d\\n',a);\n a = a+1;\n if a > 15\n  break;\n end\nend\na = 9;\nwhile a < 20\n a = a+1;\n if a == 15\n  continue;\n end\n fprintf('continue=%d\\n',a);\nend\n```"
+          ],
+          "answer": "Exact printed output:\nbasic=10\nbasic=11\nbasic=12\nbasic=13\nbasic=14\nbasic=15\nbasic=16\nbasic=17\nbasic=18\nbasic=19\nbreak=10\nbreak=11\nbreak=12\nbreak=13\nbreak=14\nbreak=15\ncontinue=10\ncontinue=11\ncontinue=12\ncontinue=13\ncontinue=14\ncontinue=16\ncontinue=17\ncontinue=18\ncontinue=19\ncontinue=20\n"
+        }
+      ],
+      "common_mistakes": [
+        "for includes the endpoint when the sequence reaches it; 10:20 has eleven values.",
+        "The basic while a<20 example prints through 19 because it tests before the body.",
+        "The continue example prints 20 because increment occurs inside the body after its test.",
+        "break is not the same as continue."
+      ],
+      "source_refs": [
+        "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 66, 67"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Break leaves; continue skips. Trace each loop in order: test, update position, print position, and control transfer."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Loop And Transfer Choices",
+          "columns": [
+            "Construct",
+            "Control",
+            "Key Trap"
+          ],
+          "rows": [
+            [
+              "for",
+              "Supplied sequence",
+              "Not limited to unit steps"
+            ],
+            [
+              "while",
+              "Condition checked before each body execution",
+              "May run zero times or never terminate"
+            ],
+            [
+              "break",
+              "Exit nearest loop",
+              "Stops all remaining iterations of that loop"
+            ],
+            [
+              "continue",
+              "Next iteration",
+              "Skips remaining body, not the whole loop"
+            ]
+          ]
+        },
+        {
+          "title": "Slide while Boundaries",
+          "columns": [
+            "Example",
+            "First Printed",
+            "Last Printed",
+            "Special Behavior"
+          ],
+          "rows": [
+            [
+              "Basic",
+              "10",
+              "19",
+              "Print then increment"
+            ],
+            [
+              "break",
+              "10",
+              "15",
+              "Increment then break if a>15"
+            ],
+            [
+              "continue",
+              "10",
+              "20",
+              "Increment first; skip printing 15"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Continuous State And Output",
+      "expression": "dx/dt=f(t,x,u); y=g(t,x,u)",
+      "when_to_use": "Separate dynamics from measurements."
+    },
+    {
+      "name": "Reservoir",
+      "expression": "dq/dt=x(t); y=q; q(t)=q(0)+integral_0^t x(s) ds",
+      "when_to_use": "Integrate signed input rate from initial contents."
+    },
+    {
+      "name": "Newton And RLC",
+      "expression": "F=m*a; L*q''+R*q'+q/C=V(t)",
+      "when_to_use": "Recognize second-order ODE examples."
+    },
+    {
+      "name": "Diffusion And Wave Equations",
+      "expression": "∂f/∂t=D*∇^2f; ∂^2f/∂t^2=v^2*∇^2f",
+      "when_to_use": "Distinguish standard diffusion and lossless wave equations; see the caveat on page 8's printed mixed expression."
+    },
+    {
+      "name": "Schrodinger Equation",
+      "expression": "i*hbar*∂ψ/∂t=-(hbar^2/(2*m))*∇^2ψ+V*ψ",
+      "when_to_use": "Recognize the quantum-mechanics PDE shown, not developed, on page 8."
+    },
+    {
+      "name": "Orbital Dynamics",
+      "expression": "r'=v; v'=-GM*r_vector/|r_vector|^3",
+      "when_to_use": "Use three position and three velocity states."
+    },
+    {
+      "name": "Orbital Outputs",
+      "expression": "r=sqrt(x^2+y^2+z^2); speed=sqrt(vx^2+vy^2+vz^2); E=-GM*m/r+0.5*m*speed^2",
+      "when_to_use": "Compute distance, speed, and total energy from state."
+    },
+    {
+      "name": "Bound-Orbit Energy",
+      "expression": "E=-GM*m/(2*a)",
+      "when_to_use": "For a Kepler ellipse with semimajor axis a."
+    },
+    {
+      "name": "Kolmogorov And Lotka-Volterra",
+      "expression": "x'=x*f(x,y), y'=y*g(x,y); f=b-p*y, g=r*x-d",
+      "when_to_use": "Model per-capita interactions and population derivatives."
+    },
+    {
+      "name": "Coexistence Equilibrium",
+      "expression": "(x*,y*)=(d/r,b/p)",
+      "when_to_use": "Set both positive-population growth factors to zero."
+    },
+    {
+      "name": "Corrected Conserved Quantity",
+      "expression": "C=b*ln(y)-p*y-r*x+d*ln(x)",
+      "when_to_use": "Positive Lotka-Volterra populations; keep r in -r*x."
+    },
+    {
+      "name": "Forward Euler",
+      "expression": "x_next=x+h*f(t,x)",
+      "when_to_use": "One approximate step using initial slope."
+    },
+    {
+      "name": "Explicit Midpoint RK2",
+      "expression": "t_mid=t+h/2; x_mid=x+(h/2)*f(t,x); x_next=x+h*f(t_mid,x_mid)",
+      "when_to_use": "One approximate step using predicted midpoint slope."
+    },
+    {
+      "name": "Circle And Cone",
+      "expression": "A=pi*r^2; V=(pi/3)*r^2*h",
+      "when_to_use": "Implement the slide calcarea and conevol functions."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "What is wrong with saying a continuous system has identical constant input and output?",
+      "answer": "Continuity concerns time/state evolution, not equality or constancy of input and output."
+    },
+    {
+      "question": "What is the reservoir state equation, including an initial condition in its integral form?",
+      "answer": "dq/dt=x(t); q(t)=q(0)+integral from 0 to t of x(s)ds; output y=q."
+    },
+    {
+      "question": "What correction is needed in the general predator-prey invariant?",
+      "answer": "Replace -x by -r*x: C=b ln(y)-p*y-r*x+d ln(x)."
+    },
+    {
+      "question": "How do Euler and the slide's Runge-Kutta method differ?",
+      "answer": "Euler uses the initial slope; the slide shows explicit midpoint RK2, using a predicted midpoint slope."
+    },
+    {
+      "question": "How do scripts/functions, input/disp/fprintf differ?",
+      "answer": "Scripts run in a workspace; functions have formal arguments/results and local internals. input reads, disp displays plainly, fprintf formats output."
+    },
+    {
+      "question": "What are the selection/loop traps?",
+      "answer": "% comments, so use mod for parity and print Odd number in the odd branch; handle age 20 and invalid ages explicitly; 60 already goes to senior. break exits, continue skips the current iteration, and update placement controls while endpoints."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Continuous Framework",
+      "remember": "Translate physics -> equations -> numerical method; complete state -> derivatives -> requested outputs."
+    },
+    {
+      "topic": "Reservoir And Orbit",
+      "remember": "Contents integrates signed rate; orbital state is three positions plus three velocities; energy shown is total energy including m."
+    },
+    {
+      "topic": "Predator-Prey",
+      "remember": "x prey, y predators; x'=x(b-py), y'=y(rx-d); equilibrium (d/r,b/p); corrected invariant includes -r*x."
+    },
+    {
+      "topic": "Numerical Steps",
+      "remember": "Euler start slope; explicit midpoint RK2 predicts halfway then uses that slope. Neither is exact; page 19 is not RK4."
+    },
+    {
+      "topic": "MATLAB Programs",
+      "remember": "No imports needed. Scripts use workspace; functions accept inputs, assign outputs, and use local variables; .m filenames matter."
+    },
+    {
+      "topic": "I/O And Arrays",
+      "remember": "input(...,'s') reads literal text; fprintf precision controls decimals; arrays print columnwise; modern implicit expansion makes column+row a grid."
+    },
+    {
+      "topic": "Plots",
+      "remember": "Define x/y; plot; label. Keep .* for vector products. axis equal is unit scale, square is box shape; every slide plot script is included above."
+    },
+    {
+      "topic": "Control Flow",
+      "remember": "if/elseif for ranges; switch/case/otherwise for matches; mod for parity; for follows its sequence; while tests before body; break leaves, continue skips."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "q0 = 4; rate = 2; duration = 3;\nq = q0 + rate*duration;\ny = q;\nfprintf('contents=%.0f output=%.0f\\n',q,y);",
+      "expected_output": "contents=10 output=10\n"
+    },
+    {
+      "code": "GM = 1; m = 2;\nxv = [2;0;0;0;1;0];\nr = sqrt(sum(xv(1:3).^2));\nspeed = sqrt(sum(xv(4:6).^2));\nacceleration = -GM*xv(1:3)/r^3;\nE = -GM*m/r + 0.5*m*speed^2;\nfprintf('distance=%.1f speed=%.1f ax=%.2f energy=%.1f\\n',r,speed,acceleration(1),E);",
+      "expected_output": "distance=2.0 speed=1.0 ax=-0.25 energy=0.0\n"
+    },
+    {
+      "code": "b = 2; p = 0.5; r = 0.25; d = 1; x = 8; y = 2;\ndx = x*(b-p*y); dy = y*(r*x-d);\nC = b*log(y)-p*y-r*x+d*log(x);\nfprintf('dx=%.1f dy=%.1f\\n',dx,dy);\nfprintf('equilibrium=(%.1f,%.1f)\\n',d/r,b/p);\nfprintf('C=%.6f\\n',C);",
+      "expected_output": "dx=8.0 dy=2.0\nequilibrium=(4.0,4.0)\nC=0.465736\n"
+    },
+    {
+      "code": "f = @(t,x) x;\nt0 = 0; x0 = 1; h = 0.2;\nxEuler = x0+h*f(t0,x0);\ntMid = t0+h/2;\nxMid = x0+(h/2)*f(t0,x0);\nxRK2 = x0+h*f(tMid,xMid);\nfprintf('Euler=%.2f midpoint-state=%.2f RK2=%.2f\\n',xEuler,xMid,xRK2);",
+      "expected_output": "Euler=1.20 midpoint-state=1.10 RK2=1.22\n"
+    },
+    {
+      "code": "radius = 5;\narea = calcarea(radius);\nfprintf('For a circle with a radius of %.2f,',radius);\nfprintf(' the area is %.2f\\n',area);\nfprintf('cone(4,6.1)=%.4f\\n',conevol(4,6.1));\nfprintf('The cone volume is %.2f\\n',conevol(3,5.5));\nfunction area = calcarea(rad)\narea = pi * rad * rad;\nend\nfunction outarg = conevol(radius,height)\noutarg = (pi/3) * radius .^ 2 .* height;\nend",
+      "expected_output": "For a circle with a radius of 5.00, the area is 78.54\ncone(4,6.1)=102.2065\nThe cone volume is 51.84\n"
+    },
+    {
+      "code": "x = 5; y = 9;\nz1 = x+y; z2 = x-y; z3 = x*y; z4 = (x+y)/2;\nfprintf('sum=%d difference=%d product=%d average=%.2f\\n',z1,z2,z3,z4);\nname = 'Alice'; age = 12;\nfprintf('%s will be %d this year.\\n',name,age);",
+      "expected_output": "sum=14 difference=-4 product=45 average=7.00\nAlice will be 12 this year.\n"
+    },
+    {
+      "code": "disp('Hello');\nfprintf('The value is %d, for sure!\\n',4^3);\nfprintf('The int is %d and the char is %c\\n', ...\n33-2,'x');\nfprintf('The int is %3d and the float is %6.2f\\n',5,4.9);",
+      "expected_output": "Hello\nThe value is 64, for sure!\nThe int is 31 and the char is x\nThe int is   5 and the float is   4.90\n"
+    },
+    {
+      "code": "vec = 2:5;\nfprintf('%d\\n',vec);\nfprintf('%d',vec); fprintf('\\n');\nfprintf('%d %d %d %d\\n',vec);\nmat = [5 9 8;4 1 10];\nfprintf('%d %d %d\\n',mat);\nfprintf('row=%d %d %d\\n',mat.');",
+      "expected_output": "2\n3\n4\n5\n2345\n2 3 4 5\n5 4 9\n1 8 10\nrow=5 9 8\nrow=4 1 10\n"
+    },
+    {
+      "code": "fprintf('Note: the units will be inches.\\n');\nradius = 3.9;\narea = pi*(radius^2);\nfprintf('For a circle with a radius of %.2f inches,\\n',radius);\nfprintf('the area is %.2f inches squared\\n',area);",
+      "expected_output": "Note: the units will be inches.\nFor a circle with a radius of 3.90 inches,\nthe area is 47.78 inches squared\n"
+    },
+    {
+      "code": "s1 = [\"Red\" \"Blue\" \"Green\"];\ns2 = [\"Truck\" \"Sky\" \"Tree\"];\ns = s1+s2;\nfprintf('%s %s %s\\n',s(1),s(2),s(3));\nA = [1 0;2 4]; B = [5 9;2 1]; C = A+B;\nfprintf('C=%d %d\\n',C.');\na = 1:2; b = (1:3)'; D = a+b;\nfprintf('expanded=%d-by-%d\\n',size(D,1),size(D,2));\nfprintf('%d %d\\n',D.');",
+      "expected_output": "RedTruck BlueSky GreenTree\nC=6 9\nC=4 5\nexpanded=3-by-2\n2 3\n3 4\n4 5\n"
+    },
+    {
+      "code": "for x = [4 5]\n if mod(x,2) == 0\n  fprintf('%d: Even number\\n',x);\n else\n  fprintf('%d: Odd number\\n',x);\n end\nend",
+      "expected_output": "4: Even number\n5: Odd number\n"
+    },
+    {
+      "code": "for age = [-1 0 13 14 19 20 59 60 100 101]\n if age >= 1 && age <= 13\n  category = 'young';\n elseif age >= 14 && age <= 19\n  category = 'teen';\n elseif age >= 20 && age <= 59\n  category = 'adult';\n elseif age >= 60 && age <= 100\n  category = 'senior';\n else\n  category = 'invalid';\n end\n fprintf('%d: %s\\n',age,category);\nend",
+      "expected_output": "-1: invalid\n0: invalid\n13: young\n14: teen\n19: teen\n20: adult\n59: adult\n60: senior\n100: senior\n101: invalid\n"
+    },
+    {
+      "code": "a = 100;\nif a < 20\n fprintf('a is less than 20\\n');\nelse\n fprintf('a is not less than 20\\n');\nend\nfprintf('value of a is : %d\\n',a);\ngrade = 'B';\nswitch grade\n case 'A'\n  fprintf('Excellent!\\n');\n case 'B'\n  fprintf('Well done\\n');\n case 'C'\n  fprintf('Well done\\n');\n case 'D'\n  fprintf('You passed\\n');\n case 'F'\n  fprintf('Better try again\\n');\n otherwise\n  fprintf('Invalid grade\\n');\nend\nx = 3; y = 3;\nswitch x\n case x*(x==y)\n  disp('x and y are equal');\n case x*(x>y)\n  disp('x is greater than y');\n otherwise\n  disp('x is less than y');\nend",
+      "expected_output": "a is not less than 20\nvalue of a is : 100\nWell done\nx and y are equal\n"
+    },
+    {
+      "code": "for v = [1 5 8 17]\n fprintf('list=%d\\n',v);\nend\nfor v = 1.0:-0.2:0.0\n fprintf('down=%.1f\\n',v);\nend\ncount = 0;\nfor v = [1:10]\n count = count+1;\nend\nfprintf('repetitions=%d\\n',count);",
+      "expected_output": "list=1\nlist=5\nlist=8\nlist=17\ndown=1.0\ndown=0.8\ndown=0.6\ndown=0.4\ndown=0.2\ndown=0.0\nrepetitions=10\n"
+    },
+    {
+      "code": "a = 10;\nwhile a < 20\n fprintf('basic=%d\\n',a);\n a = a+1;\nend\na = 10;\nwhile a < 20\n fprintf('break=%d\\n',a);\n a = a+1;\n if a > 15\n  break;\n end\nend\na = 9;\nwhile a < 20\n a = a+1;\n if a == 15\n  continue;\n end\n fprintf('continue=%d\\n',a);\nend",
+      "expected_output": "basic=10\nbasic=11\nbasic=12\nbasic=13\nbasic=14\nbasic=15\nbasic=16\nbasic=17\nbasic=18\nbasic=19\nbreak=10\nbreak=11\nbreak=12\nbreak=13\nbreak=14\nbreak=15\ncontinue=10\ncontinue=11\ncontinue=12\ncontinue=13\ncontinue=14\ncontinue=16\ncontinue=17\ncontinue=18\ncontinue=19\ncontinue=20\n"
+    }
+  ]
+}

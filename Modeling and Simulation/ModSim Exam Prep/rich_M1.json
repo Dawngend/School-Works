@@ -1,0 +1,1771 @@
+{
+  "sections": [
+    {
+      "heading": "M1: System, Model, And Simulation",
+      "summary": "A system is a collection of interacting or interdependent elements working toward an end. A model represents that system physically, mathematically, or logically, while a simulation imitates its operation over time or space. Modeling and simulation is a problem-based discipline for repeatedly testing hypotheses and supporting decisions. Its four precepts are modeling, simulation, visualization, and analysis.",
+      "key_terms": [
+        {
+          "term": "System",
+          "definition": "The subject being investigated, including relevant people, hardware, software, facilities, policies, and documents."
+        },
+        {
+          "term": "Model",
+          "definition": "A representation of a system, entity, phenomenon, or process."
+        },
+        {
+          "term": "Simulation",
+          "definition": "Using or executing a model to investigate behavior."
+        },
+        {
+          "term": "Notional System",
+          "definition": "A proposed physical system that does not yet exist."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Study Route",
+          "statement": "Choose the actual system or a model; choose a physical or mathematical model; for a mathematical model choose analytical evaluation or simulation."
+        },
+        {
+          "name": "Modeler Priorities",
+          "statement": "Quantify behavior, support system design/control/use, and measure performance."
+        },
+        {
+          "name": "Falling-Object Equations",
+          "statement": "With initial velocity v0=100 ft/s, initial height s0=1000 ft, and a=-32 ft/s^2: h(t)=0.5*a*t^2+v0*t+s0=-16*t^2+100*t+1000; v(t)=100-32*t."
+        },
+        {
+          "name": "Page 13 C Code, Not MATLAB",
+          "statement": "The slide uses float h, v = 100.0, s = 1000.0; int t; for (t = 0, h = s; h >= 0.0; t++) { h = (-16.0 * t * t) + (v * t) + s; printf(\"Height at time %d = %f\\n\", t, h); }. Its comment reverses height and velocity; its loop tests the preceding height before updating, so it can print a negative height."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Recalculate the falling-object table rather than memorize the inconsistent slide table.",
+          "steps": [
+            "Ours: MATLAB translation of the page 11 equation and page 13 C calculation; fixed times avoid the C loop termination issue.",
+            "```matlab\nt = 0:7;\nh = -16*t.^2 + 100*t + 1000;\nv = 100 - 32*t;\nfprintf('t=%d h=%.0f v=%.0f\\n',[t;h;v]);\n```"
+          ],
+          "answer": "Exact printed output:\nt=0 h=1000 v=100\nt=1 h=1084 v=68\nt=2 h=1136 v=36\nt=3 h=1156 v=4\nt=4 h=1144 v=-28\nt=5 h=1100 v=-60\nt=6 h=1024 v=-92\nt=7 h=916 v=-124\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not confuse the real system, its representation, and the act of running the representation.",
+        "Page 13 height values do not follow its own equation: at t=1 and t=2 the correct heights are 1084 and 1136 ft.",
+        "Notional does not mean impossible to model."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 16, 65, 66, 67"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "MSVA: Model, Simulate, Visualize, Analyze. The letters match the four precepts in order."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Four Precepts",
+          "columns": [
+            "Precept",
+            "Job"
+          ],
+          "rows": [
+            [
+              "Modeling",
+              "Build a representation"
+            ],
+            [
+              "Simulation",
+              "Execute or operate it"
+            ],
+            [
+              "Visualization",
+              "Represent data and behavior visually"
+            ],
+            [
+              "Analysis",
+              "Interpret results for decisions"
+            ]
+          ]
+        },
+        {
+          "title": "Subjects And Representations",
+          "columns": [
+            "Distinction",
+            "First",
+            "Second"
+          ],
+          "rows": [
+            [
+              "Physical / notional system",
+              "Already exists",
+              "Proposed concept"
+            ],
+            [
+              "Physical / mathematical model",
+              "Tangible representation",
+              "Equations and logical relationships"
+            ],
+            [
+              "Modeling / simulation",
+              "Build the model",
+              "Use the model"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Boundaries, Components, And Modeling Principles",
+      "summary": "The boundary decides which activities belong to the system and which come from its environment. Entities are objects, attributes are their properties, and activities change the system; the state records the relevant condition at one time. Establish the structure first, then supply attribute values and activity relationships as data. Model only what the study needs, using accurate information and an appropriate amount of aggregation.",
+      "key_terms": [
+        {
+          "term": "Entity",
+          "definition": "An object of interest."
+        },
+        {
+          "term": "Attribute",
+          "definition": "A property of an entity."
+        },
+        {
+          "term": "Activity",
+          "definition": "A process causing system changes."
+        },
+        {
+          "term": "State",
+          "definition": "Relevant entities, attributes, and activities at a specified instant."
+        },
+        {
+          "term": "Environment",
+          "definition": "What lies outside the chosen system boundary."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Deriving A Model",
+          "statement": "Structure: set boundary and identify entities, attributes, activities. Data: provide attribute values and define activity relationships."
+        },
+        {
+          "name": "Boundary-Dependent Example",
+          "statement": "Page 19 lists supermarket purchasing/checkout as endogenous and customer arrivals as exogenous. Its parking example lists supermarket customer arrival as endogenous and car arrival as exogenous; interpret this only after stating the boundary."
+        },
+        {
+          "name": "Reasons To Model",
+          "statement": "Model when the actual system is inaccessible, dangerous, unacceptable to engage, or not yet in existence."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Identify entity, attribute, and activity for a bank.",
+          "steps": [
+            "Choose a customer as the object of interest.",
+            "Record account number and balance as properties.",
+            "Treat a deposit as a state-changing process."
+          ],
+          "answer": "Entity: customer. Attributes: account number and balance. Activity: deposit."
+        }
+      ],
+      "common_mistakes": [
+        "An event is not inherently endogenous or exogenous; its classification depends on the declared boundary.",
+        "Sampled-data does not mean the underlying dynamics are discrete.",
+        "Aggregation groups entities; it does not guarantee greater accuracy."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 15, 17, 18, 19, 20, 21, 22, 23, 24, 25"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "EAA: Entity is an object, Attribute is a property, Activity is a change. BRAA: Block Building, Relevance, Accuracy, Aggregation."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "System Components In The Slides",
+          "columns": [
+            "System",
+            "Entity",
+            "Attribute",
+            "Activity"
+          ],
+          "rows": [
+            [
+              "Supermarket",
+              "Customers",
+              "Shopping list",
+              "Checkout"
+            ],
+            [
+              "Bank",
+              "Customers",
+              "Account number, balance, credit status",
+              "Deposits and withdrawals"
+            ],
+            [
+              "Communication",
+              "Messages",
+              "Length and priority",
+              "Transmitting"
+            ],
+            [
+              "Rapid Rail",
+              "Passengers",
+              "Origin and destination",
+              "Traveling"
+            ],
+            [
+              "Traffic",
+              "Cars",
+              "Speed and distance",
+              "Driving"
+            ]
+          ]
+        },
+        {
+          "title": "Boundaries And State Change",
+          "columns": [
+            "Type",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Endogenous / exogenous",
+              "Activity originates inside / outside boundary"
+            ],
+            [
+              "Open / closed",
+              "Has / has no exogenous activities"
+            ],
+            [
+              "Continuous",
+              "State changes continuously; aircraft example"
+            ],
+            [
+              "Discrete",
+              "State changes at separate instants; factory example"
+            ],
+            [
+              "Sampled-data",
+              "Continuous dynamics observed only at separate times"
+            ]
+          ]
+        },
+        {
+          "title": "Modeling Principles",
+          "columns": [
+            "Principle",
+            "What To Do"
+          ],
+          "rows": [
+            [
+              "Block Building",
+              "Connect manageable input-output blocks"
+            ],
+            [
+              "Relevance",
+              "Include only study-relevant aspects"
+            ],
+            [
+              "Accuracy",
+              "Use correct information"
+            ],
+            [
+              "Aggregation",
+              "Combine individual entities into larger groups"
+            ]
+          ]
+        },
+        {
+          "title": "Reasons To Model Instead Of Engage",
+          "columns": [
+            "Reason",
+            "Interpretation"
+          ],
+          "rows": [
+            [
+              "Inaccessible",
+              "Cannot directly access the system"
+            ],
+            [
+              "Dangerous",
+              "A trial could cause harm"
+            ],
+            [
+              "Unacceptable",
+              "A trial is inappropriate for practical or ethical reasons"
+            ],
+            [
+              "Nonexistent",
+              "Only a proposed system is available"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Study Process, Solutions, And Supporting Disciplines",
+      "summary": "Analytical methods use mathematics to obtain exact or general results under a model's assumptions when the model is tractable. Simulation evaluates configured scenarios numerically when interactions or constraints make analysis difficult. Both require a sound model, and simulation is not automatically cheap, quick, or random. A useful study repeatedly defines the problem, builds and checks the model, experiments, and interprets results.",
+      "key_terms": [
+        {
+          "term": "Analytical Solution",
+          "definition": "Mathematical evaluation using algebra, calculus, or probability."
+        },
+        {
+          "term": "Verification",
+          "definition": "Checking that implementation correctly represents its specified model."
+        },
+        {
+          "term": "Validation",
+          "definition": "Checking model suitability for the real purpose."
+        },
+        {
+          "term": "Output Analysis",
+          "definition": "Turning generated data into interpretable performance information."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Seven-Step Simulation Process",
+          "statement": "1 Define problem; 2 introduce important variables; 3 construct simulation model; 4 specify values to test; 5 conduct simulation; 6 examine results; 7 select best course of action. Revisit model or test values when results require it."
+        },
+        {
+          "name": "Ten Model-Building Steps",
+          "statement": "1 Define achievable goal; 2 assemble complete skill mix; 3 involve end user; 4 choose tools; 5 choose detail; 6 collect input data early; 7 document continuously; 8 plan verification; 9 plan validation; 10 plan statistical output analysis."
+        },
+        {
+          "name": "History As Presented",
+          "statement": "1940s Monte Carlo for neutron scattering, associated with John von Neumann, Stanislaw Ulam, Edward Teller, Herman Kahn; 1960s SIMSCRIPT and special-purpose languages; 1970s mathematical foundations; 1980s PCs, GUIs, object orientation; 1990s web simulation, animation, optimization, MCMC."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Do not copy page 33 as a guarantee that simulation takes only minutes or little money.",
+        "Verification is not a substitute for validation.",
+        "Random variation limits stochastic predictions, not every possible simulation."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "MCEA: Model, Code, Execute, Analyze. Pair each phase with the technology serving it."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Analytical And Simulation Solutions",
+          "columns": [
+            "Aspect",
+            "Analytical",
+            "Simulation"
+          ],
+          "rows": [
+            [
+              "Approach",
+              "Deductive mathematics",
+              "Numerical experimentation"
+            ],
+            [
+              "Result",
+              "Exact/general under assumptions when available",
+              "Scenario-specific output or estimates"
+            ],
+            [
+              "Fit",
+              "Tractable formulations",
+              "Complex interactions, delays, stops, nonlinearities"
+            ],
+            [
+              "Caution",
+              "May still require difficult numerical evaluation",
+              "Requires expertise, time, cost, checking, interpretation"
+            ]
+          ]
+        },
+        {
+          "title": "Development Cycle",
+          "columns": [
+            "Phase",
+            "Technology"
+          ],
+          "rows": [
+            [
+              "Model",
+              "Modeling"
+            ],
+            [
+              "Code",
+              "Development"
+            ],
+            [
+              "Execute",
+              "Computational"
+            ],
+            [
+              "Analyze",
+              "Data/information"
+            ]
+          ]
+        },
+        {
+          "title": "Supporting Disciplines",
+          "columns": [
+            "Discipline",
+            "Contribution"
+          ],
+          "rows": [
+            [
+              "Probability And Statistics",
+              "Random variates for uncertain inputs and stochastic output analysis"
+            ],
+            [
+              "Analysis And Operations Research",
+              "Convert data to information and develop analytical techniques"
+            ],
+            [
+              "Computer Visualization",
+              "Data interfaces and animations"
+            ],
+            [
+              "Human Factors",
+              "Human cognition and perception"
+            ],
+            [
+              "Project Management",
+              "Skills, schedule, resources for large studies"
+            ]
+          ]
+        },
+        {
+          "title": "Benefits And Costs",
+          "columns": [
+            "Benefit",
+            "Associated Caution"
+          ],
+          "rows": [
+            [
+              "Understand interactions",
+              "Modeling needs domain expertise"
+            ],
+            [
+              "Safely test policies and configurations",
+              "Data collection and development cost time and money"
+            ],
+            [
+              "Find bottlenecks and diagnose problems",
+              "Output needs careful expert/statistical interpretation"
+            ]
+          ]
+        },
+        {
+          "title": "Simulation Timeline As Presented",
+          "columns": [
+            "Period",
+            "Milestone"
+          ],
+          "rows": [
+            [
+              "1940s",
+              "Monte Carlo and neutron scattering"
+            ],
+            [
+              "1960s",
+              "Special-purpose languages including SIMSCRIPT"
+            ],
+            [
+              "1970s",
+              "Mathematical foundations"
+            ],
+            [
+              "1980s",
+              "PC tools, GUIs, object orientation"
+            ],
+            [
+              "1990s",
+              "Web, animation, optimization, MCMC"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Classifications, Paradigms, And Model Detail",
+      "summary": "Classifications answer different questions, so a model can be dynamic, stochastic, and discrete at the same time. Monte Carlo emphasizes random sampling, continuous simulation follows continuously evolving states, and discrete-event simulation changes state at event times. Fidelity measures realism, resolution measures detail, and scale measures the size of the represented scenario. Choose the paradigm and detail needed for the question rather than assuming more detail is always better.",
+      "key_terms": [
+        {
+          "term": "Fidelity",
+          "definition": "Closeness to reality for the intended behavior."
+        },
+        {
+          "term": "Resolution",
+          "definition": "Granularity or degree of detail."
+        },
+        {
+          "term": "Scale",
+          "definition": "Size or level of the overall scenario."
+        },
+        {
+          "term": "Hybrid Modeling",
+          "definition": "Combining more than one modeling paradigm."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Continuous Example",
+          "statement": "Page 43 displays V(t)=V_DD*(1-exp(-t/(R*C_L))). This is an ideal RC charging relation; do not assume it is a full nonlinear transistor model."
+        },
+        {
+          "name": "DES Example",
+          "statement": "The emergency-department picture traces arrival, triage, waiting, treatment, disposition, discharge or inpatient-bed waiting/admission, with a leave-without-being-seen branch."
+        },
+        {
+          "name": "Other Model Types",
+          "statement": "The slides also name Markov chains, finite-state automata, particle systems, queueing models, bond graphs, and Petri nets."
+        },
+        {
+          "name": "Other Simulation Types",
+          "statement": "Hybrid combines approaches; real-time coordinates modeled and wall-clock time; web-based describes delivery/access rather than a requirement for randomness."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Randomness and treatment of time are separate classification axes.",
+        "High resolution does not ensure high fidelity.",
+        "The page 47 games are illustrative slide comparisons, not universal rankings of realism."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 23, 30, 31, 42, 43, 44, 45, 46, 47, 48, 49, 50, 57"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "FRS: Fidelity, Resolution, Scale. Remember their meanings as realism, detail, and scenario size."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Independent Classification Axes",
+          "columns": [
+            "Axis",
+            "First Case",
+            "Second Case"
+          ],
+          "rows": [
+            [
+              "Static / dynamic",
+              "No time evolution",
+              "Time evolution"
+            ],
+            [
+              "Deterministic / stochastic",
+              "Unique output for fixed input",
+              "Random inputs lead to random outputs"
+            ],
+            [
+              "Continuous / discrete",
+              "State evolves continuously",
+              "State changes at distinct instants"
+            ]
+          ]
+        },
+        {
+          "title": "Three Simulation Paradigms",
+          "columns": [
+            "Paradigm",
+            "Main Mechanism",
+            "Time Treatment"
+          ],
+          "rows": [
+            [
+              "Monte Carlo",
+              "Repeatedly sample input distributions and calculate outputs",
+              "Time need not be modeled"
+            ],
+            [
+              "Continuous",
+              "Differential equations for state evolution",
+              "Continuous modeled time"
+            ],
+            [
+              "Discrete-Event",
+              "Events update state, often queueing systems",
+              "Jump to next event"
+            ]
+          ]
+        },
+        {
+          "title": "Six Modeling Approaches",
+          "columns": [
+            "Approach",
+            "Basis"
+          ],
+          "rows": [
+            [
+              "Physics-Based",
+              "Equations from physical principles"
+            ],
+            [
+              "Finite Element",
+              "Decompose complex bodies into small elements"
+            ],
+            [
+              "Data-Based",
+              "Data describing represented aspects"
+            ],
+            [
+              "Agent-Based",
+              "Interacting entities and emergent human/social phenomena"
+            ],
+            [
+              "Aggregate",
+              "Represent smaller objects/actions together"
+            ],
+            [
+              "Hybrid",
+              "Combine paradigms"
+            ]
+          ]
+        },
+        {
+          "title": "Page 47 Fidelity And Resolution Examples",
+          "columns": [
+            "Resolution",
+            "Low Fidelity",
+            "High Fidelity"
+          ],
+          "rows": [
+            [
+              "Low",
+              "Chess",
+              "Swarm agent-based simulation"
+            ],
+            [
+              "High",
+              "Microsoft Flight Simulator",
+              "Airline flight simulator"
+            ]
+          ]
+        },
+        {
+          "title": "Page 47 Fidelity And Scale Examples",
+          "columns": [
+            "Scale",
+            "Low Fidelity",
+            "High Fidelity"
+          ],
+          "rows": [
+            [
+              "High",
+              "Battleground",
+              "World of Warcraft"
+            ],
+            [
+              "Low",
+              "Doom",
+              "Halo"
+            ]
+          ]
+        },
+        {
+          "title": "Page 47 Resolution And Scale Examples",
+          "columns": [
+            "Scale",
+            "Low Resolution",
+            "High Resolution"
+          ],
+          "rows": [
+            [
+              "Low",
+              "Not interesting (slide label)",
+              "Shrapnel: Urban Warfare 2025"
+            ],
+            [
+              "High",
+              "WarSim",
+              "Not practical (slide label)"
+            ]
+          ]
+        },
+        {
+          "title": "Other Named Model Types",
+          "columns": [
+            "Type",
+            "Recognition Hook, Ours"
+          ],
+          "rows": [
+            [
+              "Markov Chains",
+              "Probabilistic transitions between states"
+            ],
+            [
+              "Finite-State Automata",
+              "Finite states with transition rules"
+            ],
+            [
+              "Particle Systems",
+              "Collections of interacting particles"
+            ],
+            [
+              "Queueing Models",
+              "Arrivals, waiting, service"
+            ],
+            [
+              "Bond Graphs",
+              "Energy-flow representation"
+            ],
+            [
+              "Petri Nets",
+              "Places, transitions, tokens"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Participation, Applications, And Domains",
+      "summary": "Participation categories distinguish who acts and whether the operated systems are real or simulated. Applications describe why the simulation is built, while domains describe the subject area. Constructive simulations still receive real human inputs even though their represented actors and systems are simulated. The same domain can support training, analysis, experimentation, engineering, or acquisition.",
+      "key_terms": [
+        {
+          "term": "Live Simulation",
+          "definition": "Real people operate real systems."
+        },
+        {
+          "term": "Virtual Simulation",
+          "definition": "Real people operate simulated systems."
+        },
+        {
+          "term": "Constructive Simulation",
+          "definition": "Real people supply inputs carried out by simulated people operating simulated systems."
+        },
+        {
+          "term": "Domain",
+          "definition": "The subject area of the M&S process."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Slide Examples",
+          "statement": "Live: CyberSurgeons classroom activity; virtual: A320 flight simulator; constructive: ModSAF combat model for doctrine and engagement rules."
+        },
+        {
+          "name": "Engineering Tools",
+          "statement": "The slides identify finite element tools, MATLAB for continuous modeling, and ARENA for discrete-event systems."
+        },
+        {
+          "name": "Application Examples",
+          "statement": "Manufacturing, weapons/logistics, communication and computer requirements, transportation, service organizations, business-process redesign, inventory control, production planning, and finance/economics."
+        },
+        {
+          "name": "Named Software And Scope",
+          "statement": "AnyLogic demonstrates GIS supply chains/logistics; GeoFS demonstrates global flight simulation; Morild Interaktiv demonstrates maritime VR training. Page 71 names GNS3, Cisco Packet Tracer, PuTTY, SecureCRT, Microsoft Visio, PRTG Network Monitor, Wireshark, EVE-NG, NS3, and SNMP Agent Simulator, but terminal clients, diagramming, monitoring, and packet-analysis tools are not all simulators."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Do not classify constructive as having no real human involvement.",
+        "Domain is not the same as application purpose.",
+        "A product appearing on the network-tools slide is not proof it performs simulation."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 28, 51, 52, 53, 54, 55, 56, 57, 58, 68, 69, 70, 71"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Live: real-real; Virtual: real-simulated; Constructive: simulated-simulated. Read the pair as participants then systems."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Participation Matrix",
+          "columns": [
+            "Category",
+            "Participants",
+            "Systems"
+          ],
+          "rows": [
+            [
+              "Live",
+              "Real",
+              "Real"
+            ],
+            [
+              "Virtual",
+              "Real",
+              "Simulated"
+            ],
+            [
+              "Constructive",
+              "Simulated",
+              "Simulated"
+            ]
+          ]
+        },
+        {
+          "title": "Five Application Purposes",
+          "columns": [
+            "Application",
+            "Intent"
+          ],
+          "rows": [
+            [
+              "Training",
+              "Produce learning"
+            ],
+            [
+              "Analysis",
+              "Study behavior/performance and predict responses"
+            ],
+            [
+              "Experimentation",
+              "Explore solution spaces and incompletely understood situations"
+            ],
+            [
+              "Engineering",
+              "Design and test/change systems; establish validity"
+            ],
+            [
+              "Acquisition",
+              "Evaluate correctness and cost-effectiveness before funding across concept-to-disposal life cycle"
+            ]
+          ]
+        },
+        {
+          "title": "Domains Named In The Slides",
+          "columns": [
+            "Domain",
+            "Example Focus"
+          ],
+          "rows": [
+            [
+              "Military",
+              "Combat and doctrine"
+            ],
+            [
+              "Transportation",
+              "Traffic, airports, ports"
+            ],
+            [
+              "Decision Support",
+              "Compare operational choices"
+            ],
+            [
+              "Game-Based Learning",
+              "Learning through simulation games"
+            ],
+            [
+              "Medical",
+              "Healthcare and treatment systems"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: MATLAB Workspace, Variables, And Classes",
+      "summary": "MATLAB means Matrix Laboratory and provides computation, visualization, and programming in a matrix-based language. The Command Window accepts commands, the workspace shows variables, the Current Folder shows files, and Command History records earlier commands. Numeric values default to double, while casts deliberately select other numeric, character, or logical classes. MATLAB needs no imports for the built-in commands taught here.",
+      "key_terms": [
+        {
+          "term": "Workspace",
+          "definition": "Variables available in the active execution context."
+        },
+        {
+          "term": "Class",
+          "definition": "The data type of an array."
+        },
+        {
+          "term": "Type Cast",
+          "definition": "Conversion using a class function such as int32(num)."
+        },
+        {
+          "term": "Scalar",
+          "definition": "A one-element, 1-by-1 array."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Help And Session Commands",
+          "statement": "Exact command names: demo; help; help help; lookfor; doc; quit; exit. demo/doc open help interfaces, help explains functions, lookfor searches help, and quit/exit end MATLAB. These are reference syntax, not replay checks."
+        },
+        {
+          "name": "Page 80 Command-History Expressions",
+          "statement": "The desktop example includes res = 9 - 2; num = res; x = 1:4;. Command History recalls commands, while Workspace shows the variables currently retained."
+        },
+        {
+          "name": "Names And Assignment",
+          "statement": "Start with a letter; continue with letters, digits, underscores; names are case-sensitive and cannot be keywords. namelengthmax gives the supported maximum. Avoid shadowing built-ins. Slide expressions: mynum = 6; 6 + 3; res = 9 - 2;. An unassigned result uses ans, and a trailing semicolon suppresses automatic display."
+        },
+        {
+          "name": "Workspace Commands",
+          "statement": "who lists names; whos includes size/bytes/class. Exact slide cleanup syntax: clear; clear variablename; clear variablename1 variablename2. Slide trace: mynum = 3; mynum + 5; clear mynum. These workspace-dependent commands are documented, not used for output checks."
+        },
+        {
+          "name": "Classes And Casting",
+          "statement": "Numeric classes: single, double; signed int8, int16, int32, int64; unsigned uint8, uint16, uint32, uint64. Text shown with single quotes is char; logical stores true/false. Slide code: num = 6 + 3; numi = int32(num);. class(num) identifies a class; single(num), double(num), char(num), logical(num) illustrate corresponding conversions."
+        },
+        {
+          "name": "Ranges",
+          "statement": "Use intmin('int8') and intmax('int8'); the signed range is -128 through 127. Unsigned uint8 includes zero and reaches 255. The slides recommend int32 when an integer type is needed."
+        },
+        {
+          "name": "Format And Scientific Notation",
+          "statement": "Exact forms: format short; format long; format loose; format compact. These affect display, not stored precision. Slide expressions: 2 * sin(1.4); 2 * 10^4; 2e4. The last two represent the same number."
+        },
+        {
+          "name": "MATLAB Background",
+          "statement": "Originally exposed LINPACK and EISPACK matrix software; supports matrix manipulation, algorithms, plotting, multiple programming paradigms, Simulink/Model-Based Design, and interaction with C, C++, Java, Python, and .NET. The page 74 C bit-field image is not MATLAB syntax or an import requirement."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Inspect classes and stable numeric facts without quoting workspace-dependent whos output.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nnum = 6 + 3;\nnumi = int32(num);\nfprintf('class=%s cast=%s value=%d\\n',class(num),class(numi),numi);\nfprintf('int8=[%d,%d]\\n',intmin('int8'),intmax('int8'));\nfprintf('scientific=%.0f sine=%.15f\\n',2e4,2*sin(1.4));\n```"
+          ],
+          "answer": "Exact printed output:\nclass=double cast=int32 value=9\nint8=[-128,127]\nscientific=20000 sine=1.970899459976920\n"
+        }
+      ],
+      "common_mistakes": [
+        "Unsigned means nonnegative, not strictly positive.",
+        "format does not change the precision stored in a variable.",
+        "A semicolon suppresses automatic display but does not prevent the calculation.",
+        "who and whos output depends on the workspace, so do not memorize a fixed variable listing."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 92"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Name, assign, inspect: choose a valid name, use = to store, then use class/size or the workspace to inspect. This is our workflow, not a slide rule."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Core Classes",
+          "columns": [
+            "Family",
+            "Classes",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "Floating Point",
+              "single, double",
+              "Approximate real/complex numeric values"
+            ],
+            [
+              "Signed Integer",
+              "int8, int16, int32, int64",
+              "Negative, zero, positive integers"
+            ],
+            [
+              "Unsigned Integer",
+              "uint8, uint16, uint32, uint64",
+              "Zero and positive integers"
+            ],
+            [
+              "Character",
+              "char",
+              "Single-quoted character arrays"
+            ],
+            [
+              "Logical",
+              "logical, true, false",
+              "Truth values"
+            ]
+          ]
+        },
+        {
+          "title": "Display And Workspace Commands",
+          "columns": [
+            "Command",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "who / whos",
+              "Names / detailed variable information"
+            ],
+            [
+              "clear / clear name",
+              "Remove variables / named variable"
+            ],
+            [
+              "format short / long",
+              "Short / long numeric display"
+            ],
+            [
+              "format loose / compact",
+              "More / fewer blank lines"
+            ]
+          ]
+        },
+        {
+          "title": "MATLAB Desktop Windows",
+          "columns": [
+            "Window",
+            "Purpose"
+          ],
+          "rows": [
+            [
+              "Command Window",
+              "Enter commands at prompt"
+            ],
+            [
+              "Workspace",
+              "Inspect variables"
+            ],
+            [
+              "Current Folder",
+              "Find current-directory files"
+            ],
+            [
+              "Command History",
+              "Recall entered commands"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: MATLAB Operators, Functions, And Special Values",
+      "summary": "Operators distinguish assignment, comparison, logical decisions, and numerical calculation. Parentheses make precedence explicit and help prevent accidental changes in meaning. Many mathematical functions act elementwise, but reduction functions follow separate dimension rules. Character encoding examples use ASCII values, although MATLAB character handling is not limited to ASCII.",
+      "key_terms": [
+        {
+          "term": "Assignment",
+          "definition": "The = operator stores a value."
+        },
+        {
+          "term": "Comparison",
+          "definition": "Relational operators return logical results."
+        },
+        {
+          "term": "Short-Circuit Logic",
+          "definition": "&& and || evaluate scalar conditions and can skip an unnecessary right-hand operand."
+        },
+        {
+          "term": "Natural Logarithm",
+          "definition": "log(x) is the logarithm to base e, not the value e."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Arithmetic And Delimiters",
+          "statement": "Exact taught syntax: +, -, *, /, \\, ^, .*, ./, .\\, .^, :, (), [], ., ..., comma, semicolon, %, =, apostrophe ('), and dot-apostrophe (.'). % begins a comment outside text; within fprintf format text it introduces conversion specifications. ... continues a statement onto the next line."
+        },
+        {
+          "name": "Relational And Logical Syntax",
+          "statement": "<, <=, >, >=, ==, ~=; &&, ||, ~, xor. Slide expressions: 3 < 5; 2 > 9; 2 < 4 || 'a' == 'c'; xor(3 < 5, 'a' > 'c'). Use parentheses, then powers, unary operations, multiplication/division, addition/subtraction, relations, AND, OR as the practical slide precedence order."
+        },
+        {
+          "name": "Rounding And Remainders",
+          "statement": "fix(x) truncates toward zero; floor(x) rounds down; ceil(x) rounds up; round(x) rounds to nearest. mod(x,n) and rem(x,n) are remainder functions with different negative-argument conventions. Exact slide syntax includes rem(13, 5) and nthroot(64, 3)."
+        },
+        {
+          "name": "Functions And Units",
+          "statement": "sign(x) is -1, 0, or 1 for negative, zero, positive real values; sqrt(x), nthroot(x,n), log(x), log2(x), log10(x), exp(x), sin(x), sind(x), abs(x). sin uses radians and sind uses degrees."
+        },
+        {
+          "name": "Additional Page 92 Functions",
+          "statement": "Exact names: asin, sinh, asinh, asind, rand, rng, clock, randn, randi. Syntax completions (ours, not slide examples): asin(0.5); sinh(1); asinh(1); asind(0.5); rng(1); rand(2,3); randn(2,3); randi(10,2,3); clock;. These demonstrate inverse/hyperbolic functions, random-state control, random arrays, and current date/time; no fixed random or clock output is claimed."
+        },
+        {
+          "name": "Constants And Characters",
+          "statement": "pi is the circle constant; i and j are imaginary units unless shadowed; inf/Inf denotes infinity; NaN denotes an undefined numeric result. Exact character examples: double('a'); char(97); double('abcd'); char('abcd' + 1);. Apostrophe conjugates complex values as it transposes; dot-apostrophe only transposes."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Evaluate the corrected sign rule, remainder syntax, and character example.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nfprintf('rounding=%d %d %d %d\\n',fix(-2.7),floor(-2.7),ceil(-2.7),round(-2.7));\nfprintf('sign0=%d rem=%d root=%.0f\\n',sign(0),rem(13,5),nthroot(64,3));\nfprintf('code=%d shifted=%s\\n',double('a'),char('abcd'+1));\nfprintf('relations=%d %d xor=%d\\n',3<5,2>9,xor(3<5,'a'>'c'));\n```"
+          ],
+          "answer": "Exact printed output:\nrounding=-2 -3 -2 -3\nsign0=0 rem=3 root=4\ncode=97 shifted=bcde\nrelations=1 0 xor=1\n"
+        }
+      ],
+      "common_mistakes": [
+        "sign(0) is 0, correcting page 88.",
+        "== tests equality; = assigns.",
+        "% is not a modulo operator.",
+        "log(x) does not equal e.",
+        "Do not use short-circuit && and || as substitutes for elementwise logical array operations."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 87, 88, 89, 90, 91, 92, 107"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Remainder needs a function: mod or rem. Percent starts a comment. For angles, the d in sind means degrees."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Rounding Negative Values",
+          "columns": [
+            "Function",
+            "Direction",
+            "Value At -2.7"
+          ],
+          "rows": [
+            [
+              "fix",
+              "Toward zero",
+              "-2"
+            ],
+            [
+              "floor",
+              "Down toward negative infinity",
+              "-3"
+            ],
+            [
+              "ceil",
+              "Up toward positive infinity",
+              "-2"
+            ],
+            [
+              "round",
+              "Nearest integer",
+              "-3"
+            ]
+          ]
+        },
+        {
+          "title": "Logarithms And Exponentials",
+          "columns": [
+            "Syntax",
+            "Meaning"
+          ],
+          "rows": [
+            [
+              "log(x)",
+              "Natural logarithm, base e"
+            ],
+            [
+              "log2(x)",
+              "Base 2 logarithm"
+            ],
+            [
+              "log10(x)",
+              "Base 10 logarithm"
+            ],
+            [
+              "exp(x)",
+              "e raised to x"
+            ]
+          ]
+        },
+        {
+          "title": "Transpose Operators",
+          "columns": [
+            "Operator",
+            "Real Input",
+            "Complex Input"
+          ],
+          "rows": [
+            [
+              "'",
+              "Swap rows and columns",
+              "Swap rows and columns and conjugate"
+            ],
+            [
+              ".'",
+              "Swap rows and columns",
+              "Swap rows and columns without conjugation"
+            ]
+          ]
+        },
+        {
+          "title": "Additional Function Reference",
+          "columns": [
+            "Group",
+            "Functions",
+            "Use"
+          ],
+          "rows": [
+            [
+              "Remainders",
+              "mod, rem",
+              "Remainders with distinct negative-input conventions"
+            ],
+            [
+              "Roots",
+              "sqrt, nthroot",
+              "Square and real nth roots"
+            ],
+            [
+              "Signs And Magnitudes",
+              "sign, abs",
+              "Sign and magnitude"
+            ],
+            [
+              "Trigonometry",
+              "sin, asin, sind, asind",
+              "Radian or degree sine and inverse sine"
+            ],
+            [
+              "Hyperbolic",
+              "sinh, asinh",
+              "Hyperbolic sine and inverse"
+            ],
+            [
+              "Random Values",
+              "rand, randn, randi",
+              "Uniform, normal, integer samples"
+            ],
+            [
+              "Random State And Time",
+              "rng, clock",
+              "Control random stream; current date/time"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Vectors, Matrices, And Indexing",
+      "summary": "A matrix has rows and columns, while a vector has only one row or one column. Construct rows using spaces or commas and separate rows using semicolons. MATLAB indexing starts at one and gives row before column for matrix subscripts. size, length, and numel answer different questions and should not be interchanged.",
+      "key_terms": [
+        {
+          "term": "Row Vector",
+          "definition": "A 1-by-n array."
+        },
+        {
+          "term": "Column Vector",
+          "definition": "An n-by-1 array."
+        },
+        {
+          "term": "Subscript",
+          "definition": "An element index, starting at 1."
+        },
+        {
+          "term": "Concatenation",
+          "definition": "Joining compatible arrays along a dimension."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Exact Page 93 Shape Examples",
+          "statement": "Scalar [5]; column [3;7;4]; row [5,88,3,11]; matrix [9 6 3;5 7 2]. Their shapes are 1-by-1, 3-by-1, 1-by-4, and 2-by-3 respectively."
+        },
+        {
+          "name": "Creation Syntax",
+          "statement": "Exact slide examples: v = [1 2 3 4]; v = [1,2,3,4]; vec = 1:5; nv = 1:2:9; c = [1;2;3;4]; r = 1:3; c = r'; mat = [4 3 1;2 5 6]; m = [1 2 3;4 5 6;7 8 9];. All rows in an ordinary matrix must have equal lengths."
+        },
+        {
+          "name": "Concatenation Syntax",
+          "statement": "Exact page 96 setup and forms: r1 = [1 2 3 4]; r2 = [5 6 7 8]; r = [r1,r2]; rMat = [r1;r2]; c1 = [1;2;3;4]; c2 = [5;6;7;8]; c = [c1;c2]; cMat = [c1,c2];. Horizontal joins need matching row counts; vertical joins need matching column counts."
+        },
+        {
+          "name": "Vector Subscripts",
+          "statement": "Slide setup: newvec = [1 3 5 7 9 3 6 9 12 15]; newvec(5); b = newvec(4:6); newvec([1 10 5]); b(2) = 11;. A list of indices can select nonadjacent entries in the requested order."
+        },
+        {
+          "name": "Matrix Subscripts",
+          "statement": "Exact slide setup: mat = [2:4;3:5]; mat(2,3); mat(1:2,2:3); mat(1,2) = 11;. In mat(row,column), the first argument always selects rows."
+        },
+        {
+          "name": "Dimension Syntax",
+          "statement": "length(vec), size(vec), [r,c] = size(mat), length(mat), numel(mat). Additional slide setups: vec = -2:1; vec = 9:-2:1; mat = [3:2:7;9 33 11];."
+        },
+        {
+          "name": "Empty And Deletion Syntax",
+          "statement": "Slide code: evec = []; length(evec); evec = [evec 4]; evec = [evec 11]; vec = 4:8; vec(3) = [];. Remaining vector elements are reindexed. The illustrated mat(1,2) = [] is invalid two-subscript deletion of one matrix cell, since it leaves a nonrectangular hole; deleting a full row/column is different."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Trace index order, modification, and dimension functions.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nnewvec = [1 3 5 7 9 3 6 9 12 15];\nb = newvec(4:6); b(2) = 11;\nfprintf('slice=%d %d %d\\n',b);\nfprintf('picked=%d %d %d\\n',newvec([1 10 5]));\nmat = [2:4;3:5];\nfprintf('entry=%d\\n',mat(2,3));\nmat(1,2) = 11;\n[r,c] = size(mat);\nfprintf('rows=%d cols=%d length=%d numel=%d\\n',r,c,length(mat),numel(mat));\nevec = []; evec = [evec 4]; evec = [evec 11];\nvec = 4:8; vec(3) = [];\nfprintf('appended=%d %d\\n',evec);\nfprintf('deleted=%d %d %d %d\\n',vec);\n```"
+          ],
+          "answer": "Exact printed output:\nslice=7 11 3\npicked=1 15 9\nentry=5\nrows=2 cols=3 length=3 numel=6\nappended=4 11\ndeleted=4 5 7 8\n"
+        }
+      ],
+      "common_mistakes": [
+        "Index zero is not the first MATLAB index.",
+        "length(matrix) is its largest dimension, not total element count.",
+        "The colon operator creates a row; transpose it for a column.",
+        "A rectangular matrix cannot lose one cell through two-subscript deletion."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 93, 94, 95, 96, 97, 98, 99, 100, 105, 106"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "RC: Row then Column in A(row,column). Count all elements with numel; ask shape with size."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Shapes",
+          "columns": [
+            "Object",
+            "Dimensions"
+          ],
+          "rows": [
+            [
+              "Scalar",
+              "1 x 1"
+            ],
+            [
+              "Row Vector",
+              "1 x n"
+            ],
+            [
+              "Column Vector",
+              "n x 1"
+            ],
+            [
+              "Matrix",
+              "r x c"
+            ]
+          ]
+        },
+        {
+          "title": "Dimension Functions",
+          "columns": [
+            "Function",
+            "Returns For A 2-By-3 Matrix"
+          ],
+          "rows": [
+            [
+              "size(A)",
+              "[2 3]"
+            ],
+            [
+              "length(A)",
+              "3"
+            ],
+            [
+              "numel(A)",
+              "6"
+            ]
+          ]
+        },
+        {
+          "title": "Joining Arrays",
+          "columns": [
+            "Syntax",
+            "Direction"
+          ],
+          "rows": [
+            [
+              "[r1,r2]",
+              "Horizontal"
+            ],
+            [
+              "[r1;r2]",
+              "Vertical"
+            ],
+            [
+              "A(row,column)",
+              "Row subscript before column subscript"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Reshaping, Rearrangement, And Reductions",
+      "summary": "Rearrangement changes shape or positions without changing the values being represented, while replication makes copies. reshape preserves MATLAB's columnwise linear order and must preserve the element count. Mathematical functions such as sin and sign usually act elementwise, but sum, prod, min, and max reduce along a dimension. For ordinary matrices with multiple rows, these reductions work down columns by default; specifying dimension two works across rows.",
+      "key_terms": [
+        {
+          "term": "Reshape",
+          "definition": "Reinterpret the same elements with new dimensions."
+        },
+        {
+          "term": "Reduction",
+          "definition": "Combine several entries into fewer values."
+        },
+        {
+          "term": "Cumulative Operation",
+          "definition": "Running totals/products that preserve vector length."
+        },
+        {
+          "term": "Replication",
+          "definition": "Tiling copies into a larger array."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Rearrangement Syntax",
+          "statement": "Exact slide syntax: mat = randi(100,3,4); reshape(mat,2,6); fliplr(mat); flipud(mat); rot90(mat); intmat = randi(100,2); repmat(intmat,3,2);. randi output is random; reuse a saved matrix instead of expecting the same values on each call."
+        },
+        {
+          "name": "Elementwise Function Syntax",
+          "statement": "Slide examples: vec = -2:1; sinvec = sin(vec); mat = [0 4 -3;-1 0 2]; sign(mat);. This size-preserving rule does not cover every MATLAB function."
+        },
+        {
+          "name": "Vector Reduction Syntax",
+          "statement": "Exact examples: vec1 = 1:5; vec2 = [3 5 8 2]; min(vec1); sum(vec1); max(vec2); prod(vec2); cumsum(vec1); cumsum(vec2); cumprod(vec1);."
+        },
+        {
+          "name": "Column Reduction Syntax",
+          "statement": "Slide setup: mat = randi([1 20],3,5); max(mat); sum(mat);. min(mat) and prod(mat) follow the same default reduction convention for this shape."
+        },
+        {
+          "name": "Rows And Output Orientation",
+          "statement": "Exact slide examples: max(mat'); sum(mat'); max(mat,[],2); sum(mat,2);. Also use min(mat,[],2) and prod(mat,2). Transposing first yields row-oriented row summaries; dimension 2 returns a column of summaries."
+        },
+        {
+          "name": "Default-Dimension Qualification",
+          "statement": "The general MATLAB rule is first nonsingleton dimension. Thus a 1-by-c row vector reduces to one scalar rather than being treated as c independent one-element columns."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Reproduce the slide reshape using fixed displayed values, not a fresh random draw.",
+          "steps": [
+            "Ours: fixed sample inputs copied from the displayed slide matrices, with stable row-oriented fprintf formatting.",
+            "```matlab\nmat = [14 61 2 94;21 28 75 47;20 20 45 42];\nR = reshape(mat,2,6);\nfprintf('%d %d %d %d %d %d\\n',R.');\nF = rot90(mat);\nfprintf('rot=%d %d %d\\n',F.');\nT = repmat([50 34;96 59],3,2);\nfprintf('tile=%d-by-%d\\n',size(T,1),size(T,2));\n```"
+          ],
+          "answer": "Exact printed output:\n14 20 28 2 45 47\n21 61 20 75 94 42\nrot=94 47 42\nrot=2 75 45\nrot=61 28 20\nrot=14 21 20\ntile=6-by-4\n"
+        },
+        {
+          "problem": "Separate column reductions, row reductions, and cumulative operations.",
+          "steps": [
+            "Ours: fixed values from pages 109-111 avoid a random-output dependency; ones(2,3) makes the baseline reduction-shape correction explicit.",
+            "```matlab\nmat = [3 16 1 14 8;9 20 17 16 14;19 14 19 15 4];\nfprintf('column-sum=%d %d %d %d %d\\n',sum(mat));\nfprintf('column-max=%d %d %d %d %d\\n',max(mat));\nfprintf('row-sum=%d %d %d\\n',sum(mat,2));\nfprintf('row-max=%d %d %d\\n',max(mat,[],2));\nfprintf('cumsum=%d %d %d %d %d\\n',cumsum(1:5));\nfprintf('cumprod=%d %d %d %d %d\\n',cumprod(1:5));\nfprintf('min=%d sum=%d max=%d prod=%d\\n',min(1:5),sum(1:5),max([3 5 8 2]),prod([3 5 8 2]));\nfprintf('sum-shape=%d %d\\n',size(sum(ones(2,3))));\n```"
+          ],
+          "answer": "Exact printed output:\ncolumn-sum=31 50 37 45 26\ncolumn-max=19 20 19 16 14\nrow-sum=42 76 71\nrow-max=16 20 19\ncumsum=1 3 6 10 15\ncumprod=1 2 6 24 120\nmin=1 sum=15 max=8 prod=240\nsum-shape=1 3\n"
+        }
+      ],
+      "common_mistakes": [
+        "reshape reads/writes columnwise, not rowwise.",
+        "repmat(A,m,n) means m-by-n copies, not a final m-by-n element array.",
+        "Page 107 is too broad: reductions do not generally preserve input size.",
+        "For max/min, put [] before dimension 2; sum/prod take the dimension directly."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "LR swaps Left and Right; UD swaps Up and Down. For row summaries, ask for dimension 2."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Rearrangement Functions",
+          "columns": [
+            "Function",
+            "Effect"
+          ],
+          "rows": [
+            [
+              "reshape",
+              "Change dimensions, preserving linear order"
+            ],
+            [
+              "fliplr",
+              "Reverse columns"
+            ],
+            [
+              "flipud",
+              "Reverse rows"
+            ],
+            [
+              "rot90",
+              "Rotate counterclockwise 90 degrees"
+            ],
+            [
+              "repmat",
+              "Tile copies"
+            ]
+          ]
+        },
+        {
+          "title": "Function Families",
+          "columns": [
+            "Family",
+            "Examples",
+            "Shape Behavior"
+          ],
+          "rows": [
+            [
+              "Elementwise",
+              "sin, sign",
+              "Preserves shape"
+            ],
+            [
+              "Reduction",
+              "min, max, sum, prod",
+              "Combines entries along a dimension"
+            ],
+            [
+              "Cumulative",
+              "cumsum, cumprod",
+              "Preserves vector length"
+            ]
+          ]
+        },
+        {
+          "title": "Row-Reduction Syntax",
+          "columns": [
+            "Goal",
+            "Transpose First",
+            "Explicit Dimension"
+          ],
+          "rows": [
+            [
+              "Maximum",
+              "max(mat')",
+              "max(mat,[],2)"
+            ],
+            [
+              "Sum",
+              "sum(mat')",
+              "sum(mat,2)"
+            ],
+            [
+              "Output Orientation",
+              "Row vector",
+              "Column vector"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M1: Array Operations And Matrix Algebra",
+      "summary": "Scalar multiplication or division scales each array element. Array multiplication, division, and power use a dot so that corresponding elements are combined. Matrix multiplication instead sums row-by-column products and needs matching inner dimensions. Determinants are defined for square matrices, and transpose exchanges row and column roles.",
+      "key_terms": [
+        {
+          "term": "Elementwise Operation",
+          "definition": "Operate on corresponding compatible array entries."
+        },
+        {
+          "term": "Matrix Product",
+          "definition": "A row-by-column sum of products."
+        },
+        {
+          "term": "Determinant",
+          "definition": "A scalar property of a square matrix."
+        },
+        {
+          "term": "Implicit Expansion",
+          "definition": "Compatible singleton dimensions expand for array operations in modern MATLAB."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Scalar Slide Syntax",
+          "statement": "v = [3 7 2 1]; v = v*3; v = [3 7 2 1]; v/2; mat = [4:6;3:-1:1]; mat*2;."
+        },
+        {
+          "name": "Addition And Subtraction Syntax",
+          "statement": "v1 = 2:5; v2 = [33 11 5 1]; v1+v2; mata = [5:8;9:-2:3]; matb = reshape(1:8,2,4); mata-matb;."
+        },
+        {
+          "name": "Dotted Operator Syntax",
+          "statement": "v = [3 7 2 1]; v.^2; v1 = 2:5; v2 = [33 11 5 1]; v1.*v2;. Division syntax is A./B or A.\\B. + and - are already elementwise and do not need a dot."
+        },
+        {
+          "name": "Shape Compatibility Correction",
+          "statement": "Page 113 teaches equal-size arrays. Equal sizes are sufficient, but modern MATLAB also supports compatible singleton dimensions: (1:3)' + (1:2) forms a 3-by-2 result."
+        },
+        {
+          "name": "Matrix Product Rule",
+          "statement": "If A is m-by-n and B is n-by-p, A*B is m-by-p. C(i,j)=sum over k of A(i,k)*B(k,j). Ordinary / and \\ are matrix divisions, not corresponding-entry array division."
+        },
+        {
+          "name": "Transpose And Determinant Syntax",
+          "statement": "Exact examples: a = [10 12 23;14 8 6;27 8 9]; b = a'; a = [1 2 3;2 3 4;1 2 5]; det(a);."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Calculate the actual matrix product and determinant on the slides.",
+          "steps": [
+            "Ours: deterministic study example using the slide operations.",
+            "```matlab\nA = [3 8 0;1 2 5];\nB = [1 2 3 1;4 5 1 2;0 2 3 0];\nC = A*B;\nfprintf('C=%d %d %d %d\\n',C.');\nfprintf('shape=%d %d\\n',size(C));\na = [1 2 3;2 3 4;1 2 5];\nfprintf('det=%.0f\\n',det(a));\nv1 = 2:5; v2 = [33 11 5 1];\nfprintf('array=%d %d %d %d\\n',v1.*v2);\n```"
+          ],
+          "answer": "Exact printed output:\nC=35 46 17 19\nC=9 22 20 5\nshape=2 4\ndet=-2\narray=66 33 20 5\n"
+        }
+      ],
+      "common_mistakes": [
+        "A*B and A.*B are different operations even when both are legal.",
+        "The product keeps outer dimensions only after the inner dimensions match.",
+        "Do not add dots to + or -.",
+        "For complex matrices, apostrophe also conjugates."
+      ],
+      "source_refs": [
+        "M1-MAIN-Introduction to Modeling and Simulation.pdf, PDF p. 112, 113, 114, 115, 116, 117, 118"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Inside dimensions agree; outside dimensions survive. A(m,n)*B(n,p) gives C(m,p)."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Scalar, Array, And Matrix Operations",
+          "columns": [
+            "Syntax",
+            "Meaning",
+            "Requirement"
+          ],
+          "rows": [
+            [
+              "A*3 or A/2",
+              "Scale every element",
+              "Scalar factor/divisor"
+            ],
+            [
+              "A.*B, A./B, A.^B",
+              "Corresponding-entry operation",
+              "Compatible elementwise sizes"
+            ],
+            [
+              "A*B",
+              "Row-by-column multiplication",
+              "Inner dimensions match"
+            ],
+            [
+              "det(A)",
+              "Determinant",
+              "A is square"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Constant-Acceleration Height",
+      "expression": "h(t)=0.5*a*t^2+v0*t+s0",
+      "when_to_use": "Position with constant acceleration and stated initial conditions."
+    },
+    {
+      "name": "Constant-Acceleration Velocity",
+      "expression": "v(t)=v0+a*t",
+      "when_to_use": "Velocity for the same model."
+    },
+    {
+      "name": "Matrix Dimensions",
+      "expression": "A(m x n)*B(n x p)=C(m x p)",
+      "when_to_use": "Check whether a matrix product exists and its size."
+    },
+    {
+      "name": "Matrix Product Entry",
+      "expression": "C(i,j)=sum_k A(i,k)*B(k,j)",
+      "when_to_use": "Compute individual product entries."
+    },
+    {
+      "name": "Element Count",
+      "expression": "numel(A)=r*c for a 2D r-by-c matrix",
+      "when_to_use": "Distinguish total count from length and size."
+    },
+    {
+      "name": "Ideal RC Charging",
+      "expression": "V(t)=V_DD*(1-exp(-t/(R*C_L)))",
+      "when_to_use": "Recognize the continuous example on page 43; it is an ideal RC relation."
+    },
+    {
+      "name": "Signed n-Bit Integer Range",
+      "expression": "-2^(n-1) to 2^(n-1)-1",
+      "when_to_use": "Explain the int8 limits without treating the bits as sign-magnitude storage."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "How do system, model, and simulation differ?",
+      "answer": "The system is the subject, the model represents it, and simulation operates that model."
+    },
+    {
+      "question": "Does observing a continuous system once per second make it a discrete system?",
+      "answer": "No. This is sampled-data observation of underlying continuous dynamics."
+    },
+    {
+      "question": "How do fidelity, resolution, and scale differ?",
+      "answer": "Realism, detail, and represented scenario size respectively."
+    },
+    {
+      "question": "What does sum return for a general 2-by-3 matrix, and what about sum(A,2)?",
+      "answer": "sum(A) is 1-by-3 column totals; sum(A,2) is 2-by-1 row totals."
+    },
+    {
+      "question": "What distinguishes A*B from A.*B?",
+      "answer": "Matrix multiplication sums row-column products and matches inner dimensions; elementwise multiplication combines corresponding compatible entries."
+    },
+    {
+      "question": "Which baseline slide corrections are easy exam traps?",
+      "answer": "sign(0)=0; log is base e, not equal to e; unsigned integers include zero; page 13 heights are 1084 and 1136 at t=1,2; not every function preserves shape."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Core Map",
+      "remember": "System -> representation/model -> execute/simulate -> analyze decisions; MSVA precepts."
+    },
+    {
+      "topic": "Structure",
+      "remember": "Boundary first; entity object, attribute property, activity change; data fills values and relationships."
+    },
+    {
+      "topic": "Classification",
+      "remember": "Static/dynamic, deterministic/stochastic, continuous/discrete are independent axes."
+    },
+    {
+      "topic": "Study Quality",
+      "remember": "Verify implementation, validate purpose, analyze stochastic outputs; simulation is not automatically cheap or random."
+    },
+    {
+      "topic": "Detail And Participation",
+      "remember": "Fidelity realism; resolution detail; scale size. Live real/real, virtual real/simulated, constructive simulated/simulated."
+    },
+    {
+      "topic": "MATLAB Basics",
+      "remember": "No imports needed. Default double; valid case-sensitive names; format affects display only; % comments, == compares, = assigns."
+    },
+    {
+      "topic": "Arrays",
+      "remember": "One-based indexing, row then column; size shape, numel count, length largest dimension; reshape columnwise; reductions usually down columns."
+    },
+    {
+      "topic": "Algebra",
+      "remember": ".* ./ .^ are elementwise; * is matrix product; transpose changes shape; det needs square input."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "t = 0:7;\nh = -16*t.^2 + 100*t + 1000;\nv = 100 - 32*t;\nfprintf('t=%d h=%.0f v=%.0f\\n',[t;h;v]);",
+      "expected_output": "t=0 h=1000 v=100\nt=1 h=1084 v=68\nt=2 h=1136 v=36\nt=3 h=1156 v=4\nt=4 h=1144 v=-28\nt=5 h=1100 v=-60\nt=6 h=1024 v=-92\nt=7 h=916 v=-124\n"
+    },
+    {
+      "code": "num = 6 + 3;\nnumi = int32(num);\nfprintf('class=%s cast=%s value=%d\\n',class(num),class(numi),numi);\nfprintf('int8=[%d,%d]\\n',intmin('int8'),intmax('int8'));\nfprintf('scientific=%.0f sine=%.15f\\n',2e4,2*sin(1.4));",
+      "expected_output": "class=double cast=int32 value=9\nint8=[-128,127]\nscientific=20000 sine=1.970899459976920\n"
+    },
+    {
+      "code": "fprintf('rounding=%d %d %d %d\\n',fix(-2.7),floor(-2.7),ceil(-2.7),round(-2.7));\nfprintf('sign0=%d rem=%d root=%.0f\\n',sign(0),rem(13,5),nthroot(64,3));\nfprintf('code=%d shifted=%s\\n',double('a'),char('abcd'+1));\nfprintf('relations=%d %d xor=%d\\n',3<5,2>9,xor(3<5,'a'>'c'));",
+      "expected_output": "rounding=-2 -3 -2 -3\nsign0=0 rem=3 root=4\ncode=97 shifted=bcde\nrelations=1 0 xor=1\n"
+    },
+    {
+      "code": "newvec = [1 3 5 7 9 3 6 9 12 15];\nb = newvec(4:6); b(2) = 11;\nfprintf('slice=%d %d %d\\n',b);\nfprintf('picked=%d %d %d\\n',newvec([1 10 5]));\nmat = [2:4;3:5];\nfprintf('entry=%d\\n',mat(2,3));\nmat(1,2) = 11;\n[r,c] = size(mat);\nfprintf('rows=%d cols=%d length=%d numel=%d\\n',r,c,length(mat),numel(mat));\nevec = []; evec = [evec 4]; evec = [evec 11];\nvec = 4:8; vec(3) = [];\nfprintf('appended=%d %d\\n',evec);\nfprintf('deleted=%d %d %d %d\\n',vec);",
+      "expected_output": "slice=7 11 3\npicked=1 15 9\nentry=5\nrows=2 cols=3 length=3 numel=6\nappended=4 11\ndeleted=4 5 7 8\n"
+    },
+    {
+      "code": "mat = [14 61 2 94;21 28 75 47;20 20 45 42];\nR = reshape(mat,2,6);\nfprintf('%d %d %d %d %d %d\\n',R.');\nF = rot90(mat);\nfprintf('rot=%d %d %d\\n',F.');\nT = repmat([50 34;96 59],3,2);\nfprintf('tile=%d-by-%d\\n',size(T,1),size(T,2));",
+      "expected_output": "14 20 28 2 45 47\n21 61 20 75 94 42\nrot=94 47 42\nrot=2 75 45\nrot=61 28 20\nrot=14 21 20\ntile=6-by-4\n"
+    },
+    {
+      "code": "mat = [3 16 1 14 8;9 20 17 16 14;19 14 19 15 4];\nfprintf('column-sum=%d %d %d %d %d\\n',sum(mat));\nfprintf('column-max=%d %d %d %d %d\\n',max(mat));\nfprintf('row-sum=%d %d %d\\n',sum(mat,2));\nfprintf('row-max=%d %d %d\\n',max(mat,[],2));\nfprintf('cumsum=%d %d %d %d %d\\n',cumsum(1:5));\nfprintf('cumprod=%d %d %d %d %d\\n',cumprod(1:5));\nfprintf('min=%d sum=%d max=%d prod=%d\\n',min(1:5),sum(1:5),max([3 5 8 2]),prod([3 5 8 2]));\nfprintf('sum-shape=%d %d\\n',size(sum(ones(2,3))));",
+      "expected_output": "column-sum=31 50 37 45 26\ncolumn-max=19 20 19 16 14\nrow-sum=42 76 71\nrow-max=16 20 19\ncumsum=1 3 6 10 15\ncumprod=1 2 6 24 120\nmin=1 sum=15 max=8 prod=240\nsum-shape=1 3\n"
+    },
+    {
+      "code": "A = [3 8 0;1 2 5];\nB = [1 2 3 1;4 5 1 2;0 2 3 0];\nC = A*B;\nfprintf('C=%d %d %d %d\\n',C.');\nfprintf('shape=%d %d\\n',size(C));\na = [1 2 3;2 3 4;1 2 5];\nfprintf('det=%.0f\\n',det(a));\nv1 = 2:5; v2 = [33 11 5 1];\nfprintf('array=%d %d %d %d\\n',v1.*v2);",
+      "expected_output": "C=35 46 17 19\nC=9 22 20 5\nshape=2 4\ndet=-2\narray=66 33 20 5\n"
+    }
+  ]
+}

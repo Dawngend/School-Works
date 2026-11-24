@@ -1,0 +1,1154 @@
+{
+  "sections": [
+    {
+      "heading": "M5: Fishwick's Model Types And Declarative Examples",
+      "summary": "Choose a model type by the part of the system you need to explain. Declarative models organize states and events, while functional models show directed mathematical relationships. Constraint models emphasize physical balance, and spatial models organize spaces or the entities in them. The Easy Pass diagrams show that a state machine, an event queue, and a Markov chain are different declarative views of the same setting.",
+      "key_terms": [
+        {
+          "term": "Declarative model",
+          "definition": "A state-event focused representation, illustrated by finite state automata, queuing event models, and Markov models."
+        },
+        {
+          "term": "Functional model",
+          "definition": "Directionally connected components related through equations and variables."
+        },
+        {
+          "term": "Constraint model",
+          "definition": "A representation whose physics-based relationships and balanced properties matter more than the direction of connections."
+        },
+        {
+          "term": "Spatial model",
+          "definition": "A multielement model whose elements are spaces or entities within spaces."
+        },
+        {
+          "term": "Transition matrix",
+          "definition": "A row-stochastic table: entry P(i,j) gives the probability of next state j from current state i."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Easy Pass state machine",
+          "statement": "The pictured states are Start, Initializing accounts, Waiting for input, Checking accounts, Giving green light, Giving red light, and Sending ticket. A pictured guard is [Red light > 2 s]."
+        },
+        {
+          "name": "Queuing diagram notation",
+          "statement": "The slide schedules arrivals with expo(mu) and departures with norm(mu,sigma), and illustrates the event list (A9, 2:15), (D1, 2:16). These are diagram distribution labels, not MATLAB built-in function calls to copy into a script. Process the earliest timestamp first."
+        },
+        {
+          "name": "Markov matrix",
+          "statement": "P = [0 1 0 0 0; 0 0 0.8 0.2 0; 0 0 0 0.3 0.7; 1 0 0 0 0; 1 0 0 0 0]. Rows represent current states; columns represent next states. Every entry is nonnegative and each row sums to one."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: check the slide transition matrix and find the state distribution two steps after starting in S2.",
+          "steps": [
+            "Use a row probability vector. The two-step paths give S1: 0.2, S4: 0.8(0.3), and S5: 0.8(0.7); all other probabilities are zero.",
+            "```matlab\nP = [0 1 0 0 0; 0 0 0.8 0.2 0; 0 0 0 0.3 0.7; 1 0 0 0 0; 1 0 0 0 0];\np0 = [0 1 0 0 0];\np2 = p0*P^2;\nfprintf('Row sums: %.0f %.0f %.0f %.0f %.0f\\n',sum(P,2));\nfprintf('After two: %.2f %.2f %.2f %.2f %.2f\\n',p2);\n```"
+          ],
+          "answer": "Expected printed output:\nRow sums: 1 1 1 1 1\nAfter two: 0.20 0.00 0.00 0.24 0.56\n"
+        }
+      ],
+      "common_mistakes": [
+        "Page 5 duplicates the functional definition beneath declarative models. Use the state-event definition and page 6 examples, not the duplicated sentence.",
+        "Do not transpose the interpretation of the transition matrix: row i is the current state.",
+        "Normal departure timing is the particular diagram assumption, not a universal law for service times."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 5, 6"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Dogs Fetch Crunchy Snacks = Declarative, Functional, Constraint, Spatial (D-F-C-S). For declarative examples, F-Q-M = Finite state automaton, Queuing, Markov."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Four Model Types",
+          "columns": [
+            "Type",
+            "Main Question",
+            "Slide Example"
+          ],
+          "rows": [
+            [
+              "Declarative",
+              "What state or event occurs next?",
+              "Easy Pass account states, queue, Markov chain"
+            ],
+            [
+              "Functional",
+              "How does a directed calculation propagate?",
+              "Integrate acceleration to velocity and position"
+            ],
+            [
+              "Constraint",
+              "Which physical quantities must balance?",
+              "Kinetic energy equals friction work"
+            ],
+            [
+              "Spatial",
+              "Where are the regions or entities?",
+              "GIS crop-yield grids"
+            ]
+          ]
+        },
+        {
+          "title": "Three Declarative Views",
+          "columns": [
+            "View",
+            "What It Stores",
+            "What Advances It"
+          ],
+          "rows": [
+            [
+              "Finite state automaton",
+              "Named operating state",
+              "Event or guard"
+            ],
+            [
+              "Queuing event model",
+              "Pending arrival/departure timestamps",
+              "Earliest scheduled event"
+            ],
+            [
+              "Markov model",
+              "State probabilities",
+              "Transition probabilities"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Functional, Constraint And Spatial Models",
+      "summary": "The vehicle example connects a physical story to two mathematical views. In the functional view, acceleration is integrated into velocity and velocity into position. In the constraint view, the initial kinetic energy is balanced by work done against friction. The crop-yield example instead organizes the calculation around geographic layers and grid cells.",
+      "key_terms": [
+        {
+          "term": "Integrator",
+          "definition": "A component that accumulates the input over time; initial conditions determine the integration constant."
+        },
+        {
+          "term": "Work-energy constraint",
+          "definition": "For a vehicle stopped by constant friction magnitude F_f, the energy lost is one-half m v0 squared and the friction work is F_f d."
+        },
+        {
+          "term": "Area-weighted yield",
+          "definition": "A combined yield that weights each region or cell by its area rather than treating unequal areas equally."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Functional chain",
+          "statement": "a = dv/dt and v = dx/dt. The first integrator has initial velocity v0; the second gives position x. With forward motion positive, constant braking acceleration is negative."
+        },
+        {
+          "name": "Stopping constraint",
+          "statement": "(1/2)*m*v0^2 = F_f*d, so d = m*v0^2/(2*F_f). F_f is a positive friction magnitude; this assumes friction accounts for the kinetic energy lost."
+        },
+        {
+          "name": "Spatial crop pipeline",
+          "statement": "The picture combines Weather surface, Soil Map, Wheat area, Crop Parameters, LAI Map (Leaf Area Index), and Phenology map. A Crop Simulation Model produces Simulated Grid Yield, followed by Area Weighted Yield or a Yield map."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: compute the stopping distance of the reviewed 1000 kg, 10 m/s vehicle with 5000 N constant friction in both views.",
+          "steps": [
+            "Use the slide equations with the reviewed numerical inputs. The negative acceleration stops the vehicle after two seconds; the energy and motion distances must agree.",
+            "```matlab\nm = 1000; v0 = 10; Ff = 5000;\na = -Ff/m;\ntstop = -v0/a;\ndEnergy = m*v0^2/(2*Ff);\ndMotion = v0*tstop + 0.5*a*tstop^2;\nfprintf('a=%.1f m/s^2, stop=%.1f s\\n',a,tstop);\nfprintf('Energy=%.1f m, motion=%.1f m\\n',dEnergy,dMotion);\n```"
+          ],
+          "answer": "Expected printed output:\na=-5.0 m/s^2, stop=2.0 s\nEnergy=10.0 m, motion=10.0 m\n"
+        }
+      ],
+      "common_mistakes": [
+        "Do not integrate acceleration directly to position in a single ordinary integrator.",
+        "Do not omit the square on speed in kinetic energy.",
+        "Do not use a positive forward acceleration to represent braking without changing your sign convention.",
+        "Do not average yields without accounting for unequal areas when area weighting is intended."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 7, 8, 9"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Flow follows a -> v -> x; balance matches energy to work; space stacks map layers."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Same Vehicle, Different Emphasis",
+          "columns": [
+            "Aspect",
+            "Functional",
+            "Constraint"
+          ],
+          "rows": [
+            [
+              "Organizing idea",
+              "Directed signal/equation flow",
+              "Physical balance"
+            ],
+            [
+              "Key relation",
+              "a=dv/dt; v=dx/dt",
+              "(1/2)mv0^2=F_f d"
+            ],
+            [
+              "Useful question",
+              "What happens over time?",
+              "Which stopping distance satisfies the energy balance?"
+            ]
+          ]
+        },
+        {
+          "title": "Crop Inputs And Outputs",
+          "columns": [
+            "Role",
+            "Items"
+          ],
+          "rows": [
+            [
+              "Spatial/environmental inputs",
+              "Weather surface; Soil Map; Wheat area"
+            ],
+            [
+              "Crop descriptors",
+              "Crop Parameters; LAI Map; Phenology map"
+            ],
+            [
+              "Model output",
+              "Simulated Grid Yield"
+            ],
+            [
+              "Summary/display",
+              "Area Weighted Yield; Yield map"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Conceptual Models, Hybrids And Concept Maps",
+      "summary": "A conceptual model communicates what the system is, what it does, and what makes it distinctive. In this introductory use it can be informal, such as a picture or one or two descriptive paragraphs. A hybrid connects several models so that different questions or operating phases can use different abstractions. A concept map is an informal graph for explaining the elements and their interactions, not automatically an executable hybrid.",
+      "key_terms": [
+        {
+          "term": "Conceptual model",
+          "definition": "A high-level communication of system functionality and distinctive characteristics."
+        },
+        {
+          "term": "Multimodel or hybrid",
+          "definition": "Several models connected in a network or graph, potentially of different types and abstraction levels."
+        },
+        {
+          "term": "Concept map",
+          "definition": "An informal directed graph with labeled nodes for elements and labeled arrows for interactions."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Easy Pass overview",
+          "statement": "The textual and graphical conceptual representations show two main highway lanes with electronic toll collection and a 500 m double bypass for continuous manual cash/card transactions."
+        },
+        {
+          "name": "Concept-map reading",
+          "statement": "Nodes are labeled rectangles or circles. Read each directed arc as a sentence: Car triggers Easy Pass sensor; sensor relies on License plate camera; sensor compares with Easy Pass account system."
+        },
+        {
+          "name": "Account-system outcomes",
+          "statement": "The concept map links the account system to giving a green light to an Easy Pass driver or a red light to an ordinary driver, who receives a ticket."
+        },
+        {
+          "name": "Hybrid advantage",
+          "statement": "Different types and abstraction perspectives can answer a wider variety of questions; different phases of a large system may need different model types."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "A conceptual model is not automatically a fully specified executable program.",
+        "A hybrid need not use one model type everywhere.",
+        "Do not read a concept-map arrow backwards or ignore its verb label."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 10, 11, 12, 13"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Read a concept map as noun -> verb -> noun. A hybrid joins models, not merely boxes on a page."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Three Related Ideas",
+          "columns": [
+            "Idea",
+            "Purpose",
+            "Typical Form"
+          ],
+          "rows": [
+            [
+              "Conceptual overview",
+              "Communicate system identity and capabilities",
+              "Text or pictures"
+            ],
+            [
+              "Hybrid model",
+              "Combine complementary abstractions or phases",
+              "Connected model network"
+            ],
+            [
+              "Concept map",
+              "Explain concepts and interactions",
+              "Nodes plus labeled directed arcs"
+            ]
+          ]
+        },
+        {
+          "title": "Easy Pass Concept Links",
+          "columns": [
+            "From",
+            "Interaction",
+            "To"
+          ],
+          "rows": [
+            [
+              "Car",
+              "Triggers",
+              "Easy Pass sensor"
+            ],
+            [
+              "Easy Pass sensor",
+              "Relies on",
+              "License plate camera"
+            ],
+            [
+              "Easy Pass sensor",
+              "Compares with",
+              "Easy Pass account system"
+            ],
+            [
+              "Easy Pass account system",
+              "Gives green light to",
+              "Easy Pass driver"
+            ],
+            [
+              "Easy Pass account system",
+              "Gives red light to",
+              "Ordinary driver"
+            ],
+            [
+              "Ordinary driver",
+              "Receives",
+              "Ticket"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Formal And Semiformal Modeling Tools",
+      "summary": "A formalism supplies precise rules for constructing and analyzing a model. Formal models support unambiguous mathematical reasoning, often with automated analyses, but can be complex and tedious to develop. Semiformal models trade some precision for easier use while keeping some analytical capability. UML is the slide example of a standardized semiformal graphical notation for structure and behavior.",
+      "key_terms": [
+        {
+          "term": "Formalism",
+          "definition": "A methodology with precise modeling and simulation rules."
+        },
+        {
+          "term": "Formal model",
+          "definition": "A model defined under a formalism with mathematically manageable semantics."
+        },
+        {
+          "term": "UML",
+          "definition": "Unified Modeling Language: standardized, semiformal, object-oriented graphical notation."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Formal strength and cost",
+          "statement": "Formal models permit rigorous examination of behavior, capabilities, properties, limits, and constraints. Their construction and implementation may require substantial mathematical and design effort."
+        },
+        {
+          "name": "Five listed UML tools",
+          "statement": "Use Cases, Activity Diagrams, Class Diagrams, Sequence Diagrams, and Statecharts are the five tools named on page 15. The functional descriptions in the comparison below are study explanations, not additional slide code."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "The phrase less unambiguity on page 15 is awkward: the useful contrast is less precision than a formal representation, not greater mathematical rigor.",
+        "A standardized notation such as UML is not therefore a completely formal mathematical model."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 14, 15"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Use Active Classes, Sequence States = Use Cases, Activity Diagrams, Class Diagrams, Sequence Diagrams, Statecharts (U-A-C-S-S)."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Formal Versus Semiformal",
+          "columns": [
+            "Aspect",
+            "Formal",
+            "Semiformal"
+          ],
+          "rows": [
+            [
+              "Rules/meaning",
+              "Precise and unambiguous",
+              "Some precision traded for ease"
+            ],
+            [
+              "Analysis",
+              "Rigorous mathematical analysis; often automation",
+              "Some analytic capability"
+            ],
+            [
+              "Main cost/benefit",
+              "Complex and tedious construction",
+              "More accessible graphical communication"
+            ],
+            [
+              "Slide example",
+              "Models created under formalisms",
+              "UML"
+            ]
+          ]
+        },
+        {
+          "title": "Listed UML Views",
+          "columns": [
+            "Tool",
+            "Study Explanation Of Focus"
+          ],
+          "rows": [
+            [
+              "Use Cases",
+              "User goals and interactions"
+            ],
+            [
+              "Activity Diagrams",
+              "Workflow or activity flow"
+            ],
+            [
+              "Class Diagrams",
+              "Static classes and relationships"
+            ],
+            [
+              "Sequence Diagrams",
+              "Time-ordered interactions"
+            ],
+            [
+              "Statecharts",
+              "States and transitions"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Verification And Validation",
+      "summary": "Verification asks whether the conceptual requirements have been translated correctly into the executable model. Validation asks whether that model approximates the target system closely enough to give useful results. A program can be free of obvious coding errors while representing the wrong real-world behavior. When direct target data are unavailable, evidence from a similar system or experienced experts can help assess validity.",
+      "key_terms": [
+        {
+          "term": "Verification",
+          "definition": "Checking correct translation and reliable execution of the conceptual model."
+        },
+        {
+          "term": "Validation",
+          "definition": "Assessing whether the model sufficiently approximates its target for the question it was built to answer."
+        },
+        {
+          "term": "Face validation",
+          "definition": "Knowledgeable experts assess model outputs using their experience of the target or a similar system."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Verification techniques",
+          "statement": "Automated debugging provides syntax and some logic support; semantic errors can remain difficult. Manual peer code review explains the implementation to others. Stress testing uses minimum and maximum boundary inputs."
+        },
+        {
+          "name": "Validation evidence",
+          "statement": "Statistical tests compare model outputs with target-system outputs. A similar system or expert assessment may be used when the target does not yet exist; these alternatives do not magically create measured target data."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "A successful run is not proof of real-world validity.",
+        "An expert opinion is face validation, not an automated syntax check.",
+        "Testing only average inputs omits the stress-test boundaries emphasized in the slides."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 16, 17"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Verification: translation right. Validation: target close enough. Keep the evidence source beside each claim."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Verification Versus Validation",
+          "columns": [
+            "Question",
+            "Verification",
+            "Validation"
+          ],
+          "rows": [
+            [
+              "Comparison",
+              "Executable model against conceptual requirements",
+              "Model/results against target behavior"
+            ],
+            [
+              "Typical methods",
+              "Debugging; peer code review; boundary stress tests",
+              "Statistical output comparison; similar system; face validation"
+            ],
+            [
+              "Failure example",
+              "Wrong equation coded",
+              "Correctly coded equation unsuitable for target"
+            ]
+          ]
+        },
+        {
+          "title": "Verification Techniques",
+          "columns": [
+            "Technique",
+            "What It Helps Find",
+            "Limitation"
+          ],
+          "rows": [
+            [
+              "Automated debugging",
+              "Syntax and some logic problems",
+              "Semantic errors may be hard"
+            ],
+            [
+              "Manual review",
+              "Problems exposed while explaining code to peers",
+              "Depends on careful review"
+            ],
+            [
+              "Stress test",
+              "Unexpected behavior at min/max inputs",
+              "Not by itself real-system validation"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Operations Research And Optimization",
+      "summary": "Operations research uses mathematical models to improve decisions about complex systems. The objective may be to maximize profit or minimize cost while satisfying restrictions. The slide workflow moves from problem formulation to a mathematical model and then to a solution. Linear programming is deterministic, while Markov chains and queuing theory provide stochastic methods.",
+      "key_terms": [
+        {
+          "term": "Operations research",
+          "definition": "Use of mathematical system models to optimize performance factors and support decisions."
+        },
+        {
+          "term": "Objective function",
+          "definition": "The quantity to maximize or minimize."
+        },
+        {
+          "term": "Constraint",
+          "definition": "A restriction that feasible decisions must satisfy."
+        },
+        {
+          "term": "Linear programming",
+          "definition": "Optimization with a linear objective and linear equality or inequality constraints."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Three-step workflow",
+          "statement": "1. Formulate the problem. 2. Develop a mathematical model representing the system. 3. Search for a solution by solving the model."
+        },
+        {
+          "name": "Method distinction",
+          "statement": "The slide lists linear programming as a deterministic technique and Markov chains and queuing theory as stochastic methods. Linear programming is not merely solving any set of equations: the objective and feasible constraints matter."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Do not confuse finding an optimum with finding any feasible point.",
+        "Linear programming needs a linear objective as well as linear constraints.",
+        "Stochastic OR methods explicitly accommodate uncertainty rather than making every input fixed."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 18"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Formulate, Develop, Search = F-D-S: First Define Success."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Optimization Ingredients",
+          "columns": [
+            "Ingredient",
+            "Role",
+            "Example, Ours"
+          ],
+          "rows": [
+            [
+              "Decision variables",
+              "What can be chosen",
+              "Units of two products"
+            ],
+            [
+              "Objective",
+              "What should improve",
+              "Maximize total profit"
+            ],
+            [
+              "Constraints",
+              "What must remain feasible",
+              "Limited labor and materials"
+            ]
+          ]
+        },
+        {
+          "title": "OR Methods Named In The Slides",
+          "columns": [
+            "Class",
+            "Method",
+            "Defining Emphasis"
+          ],
+          "rows": [
+            [
+              "Deterministic",
+              "Linear programming",
+              "Fixed coefficients and linear optimization"
+            ],
+            [
+              "Stochastic",
+              "Markov chains",
+              "Probabilistic state changes"
+            ],
+            [
+              "Stochastic",
+              "Queuing theory",
+              "Random arrivals/service and congestion"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Simulink Environment And Workflow",
+      "summary": "Simulink is a graphical environment for modeling and simulating dynamic systems. Its editor, customizable block libraries, and solvers are integrated with MATLAB. This lets engineers test designs before building hardware and exchange algorithms and results with MATLAB. The screenshots introduce the Start Page and Library Browser rather than a text-programming or symbolic-algebra lesson.",
+      "key_terms": [
+        {
+          "term": "Simulink",
+          "definition": "Graphical editor, block libraries, and solvers integrated with MATLAB for dynamic-system simulation."
+        },
+        {
+          "term": "Library Browser",
+          "definition": "Interface for finding and placing categorized Simulink blocks."
+        },
+        {
+          "term": "Hardware-in-the-loop",
+          "definition": "Testing that couples simulation with hardware components."
+        }
+      ],
+      "properties": [
+        {
+          "name": "MATLAB integration and imports",
+          "statement": "MATLAB algorithms can be incorporated into models and simulation results exported for MATLAB analysis. Ordinary MATLAB commands need no import statement. These slides teach graphical block operations, not a required Python-style import or symbolic-toolbox setup."
+        },
+        {
+          "name": "Design and execution uses",
+          "statement": "Explore designs early, reuse components and specialized/third-party libraries, deploy desktop or real-time models and hardware-in-the-loop tests, and scale simulations across multicore desktops, clusters, and cloud resources."
+        },
+        {
+          "name": "Start Page controls",
+          "statement": "New, Examples, Learn, search, Recent models, and Simulink Onramp appear. Templates shown are Blank Model, Blank Subsystem, Blank Library, Blank Project, Folder to Project, Code Generation, Digital Filter, and Feedback Controller."
+        },
+        {
+          "name": "Library Browser categories",
+          "statement": "Commonly Used Blocks, Continuous, Dashboard, Discontinuities, Discrete, Logic and Bit Operations, Lookup Tables, Math Operations, Matrix Operations, Messages & Events, Model Verification, Model-Wide Utilities, Ports & Subsystems, and Signal Attributes are visible."
+        },
+        {
+          "name": "Screenshot settings",
+          "statement": "The shown model has stop time 10.0 and solver VariableStepAuto. These are screenshot settings, not universal recommendations for every model."
+        },
+        {
+          "name": "Available library families",
+          "statement": "The Start Page includes Audio Toolbox, Communications Toolbox, DSP System Toolbox, Simscape, Simulink support packages for Parrot Minidrones and Raspberry Pi, and Stateflow. Availability depends on installation/licensing; seeing a library name is not a MATLAB import line."
+        }
+      ],
+      "worked_examples": [],
+      "common_mistakes": [
+        "Do not claim a GUI screenshot has a deterministic Command Window output.",
+        "The screenshots do not supply a command-line model-building script; the later MATLAB checks are our equivalents of the shown calculations.",
+        "A design simulation supports early exploration but does not guarantee that physical testing is unnecessary."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 25, 26, 27, 28"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Build the blocks, choose the solver, run the model, inspect results. The editor, libraries, and solver are three different jobs."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Simulink Building Blocks Of The Environment",
+          "columns": [
+            "Component",
+            "Job"
+          ],
+          "rows": [
+            [
+              "Graphical editor",
+              "Connect blocks into a model"
+            ],
+            [
+              "Block libraries",
+              "Supply reusable components"
+            ],
+            [
+              "Solvers",
+              "Advance dynamic equations in simulation time"
+            ],
+            [
+              "MATLAB integration",
+              "Bring algorithms in and results out"
+            ]
+          ]
+        },
+        {
+          "title": "Application Domains Pictured",
+          "columns": [
+            "Domain",
+            "Picture Emphasis"
+          ],
+          "rows": [
+            [
+              "Wireless Communications",
+              "Transmitter/receiver and signal displays"
+            ],
+            [
+              "Power Electronics",
+              "Switching circuits and power conversion"
+            ],
+            [
+              "Control Systems",
+              "Feedback and plant dynamics"
+            ],
+            [
+              "Signal Processing",
+              "Time/frequency signal analysis"
+            ],
+            [
+              "Autonomous Systems and Robotics",
+              "Robotic modeling/control"
+            ],
+            [
+              "Advanced Driver Assistance Systems",
+              "Driving/test-bench scenarios"
+            ],
+            [
+              "Digital Twins",
+              "Models of physical assets"
+            ],
+            [
+              "Artificial Intelligence",
+              "Resize Image; Vehicle Detection (YOLOv2); Lane Detection; Detect Coordinates; Highlight Vehicles & Lanes"
+            ]
+          ]
+        },
+        {
+          "title": "Start Page Templates",
+          "columns": [
+            "Purpose Group",
+            "Templates Shown"
+          ],
+          "rows": [
+            [
+              "Basic artifacts",
+              "Blank Model; Blank Subsystem; Blank Library; Blank Project"
+            ],
+            [
+              "Project/code workflow",
+              "Folder to Project; Code Generation"
+            ],
+            [
+              "Application starting points",
+              "Digital Filter; Feedback Controller"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: Arithmetic And Relational Block Examples",
+      "summary": "The arithmetic diagrams combine constant sources with calculation blocks and Display sinks. Trace the additions and subtractions before following the signal into multiplication. Relational blocks produce logical values rather than another physical quantity. The final diagram combines square root, square, and sign operations before testing equality.",
+      "key_terms": [
+        {
+          "term": "Constant",
+          "definition": "A source block that supplies a fixed value."
+        },
+        {
+          "term": "Display",
+          "definition": "A sink that shows a signal value."
+        },
+        {
+          "term": "Relational Operator",
+          "definition": "A block that compares inputs using a relation such as > or ==."
+        },
+        {
+          "term": "Sign function",
+          "definition": "Returns a negative, zero, or positive sign indication; sign(-5) is negative one."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Page 29 upper network",
+          "statement": "The visible calculation is (1+100)+(50+100)-75-10, then multiplication by (10*1). The upper result is 1660."
+        },
+        {
+          "name": "Page 29 comparison caution",
+          "statement": "The cropped lower comparator does not establish its entire input wiring. A separate calculation 1660 > 5000 is false, but do not assert that the lower cropped network necessarily receives the upper product."
+        },
+        {
+          "name": "Page 31 complete block inventory",
+          "statement": "Constant, Square root, Square, Sign, Add, equality Relational Operator (==), and Display are used. The slide side list omits the latter three."
+        },
+        {
+          "name": "MATLAB equivalents, ours",
+          "statement": "The scalar equivalents are +, -, *, sqrt(16), 3^2, sign(-5), >, and ==. Assignment uses =; equality testing uses ==. These are executable pedagogic equivalents of block operations, not transcribed slide scripts."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: reproduce the upper page 29 arithmetic and perform a separately labeled comparison.",
+          "steps": [
+            "The signed sum is 166; multiplying by ten gives 1660. This standalone comparison does not resolve the cropped lower wiring.",
+            "```matlab\ns = (1+100) + (50+100) - 75 - 10;\np = s*(10*1);\nfprintf('Sum=%d, product=%d\\n',s,p);\nfprintf('Separate comparison=%d\\n',p>5000);\n```"
+          ],
+          "answer": "Expected printed output:\nSum=166, product=1660\nSeparate comparison=0\n"
+        },
+        {
+          "problem": "Ours: reproduce page 31 and test the computed sum against twelve.",
+          "steps": [
+            "Compute each unary operation first, add the results, and then apply the equality operator.",
+            "```matlab\nvalue = sqrt(16) + 3^2 + sign(-5);\nfprintf('Root=%.0f, square=%.0f, sign=%.0f\\n',sqrt(16),3^2,sign(-5));\nfprintf('Sum=%.0f, equals12=%d\\n',value,value==12);\n```"
+          ],
+          "answer": "Expected printed output:\nRoot=4, square=9, sign=-1\nSum=12, equals12=1\n"
+        }
+      ],
+      "common_mistakes": [
+        "Use the signs at the Add inputs: subtract both 75 and 10.",
+        "0 means false and 1 means true for these relational outputs, not the computed arithmetic result.",
+        "Do not replace == with = in a condition.",
+        "A cropped wire is not enough evidence to reconstruct a missing signal source."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 29, 31"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Calculate first, compare second. For the last diagram: root four, square nine, sign minus one."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "Blocks And Scalar MATLAB Equivalents",
+          "columns": [
+            "Block",
+            "Meaning",
+            "Equivalent, Ours"
+          ],
+          "rows": [
+            [
+              "Constant",
+              "Fixed signal",
+              "x = 16;"
+            ],
+            [
+              "Add",
+              "Signed sum",
+              "a+b-c"
+            ],
+            [
+              "Product",
+              "Multiply signals",
+              "a*b"
+            ],
+            [
+              "Square root",
+              "Nonnegative square root",
+              "sqrt(x)"
+            ],
+            [
+              "Square",
+              "Raise scalar to two",
+              "x^2"
+            ],
+            [
+              "Sign",
+              "Signum",
+              "sign(x)"
+            ],
+            [
+              "Relational Operator",
+              "Logical comparison",
+              "a>b or a==b"
+            ],
+            [
+              "Display",
+              "Show result",
+              "fprintf with chosen formatting"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "M5: String Concatenation And Length",
+      "summary": "Page 30 is a string-operation example even though its title says arithmetic operations. String Constant sources feed String Concat, and String Length measures the number of characters in a string. Spaces count as characters. The lower cropped diagram displays a length of 16, but its missing input sources do not establish why that value differs from the visible greeting.",
+      "key_terms": [
+        {
+          "term": "String Constant",
+          "definition": "A source block containing text."
+        },
+        {
+          "term": "String Concat",
+          "definition": "A block that joins text values in input order."
+        },
+        {
+          "term": "String Length",
+          "definition": "A block that returns the number of characters in its input, including spaces."
+        }
+      ],
+      "properties": [
+        {
+          "name": "Exact visible inputs",
+          "statement": "The upper source labels are \"Hello \" and \"FEU Tech\". The String Concat icon shows \"abc\"+\"xyz\" and the String Length icon uses \"abcdef\"; these are illustrative block icons, not extra source values."
+        },
+        {
+          "name": "Verified character count",
+          "statement": "The visible greeting Hello FEU Tech has 5 characters in Hello, one separating space, 3 in FEU, another space, and 4 in Tech: 5+1+3+1+4=14."
+        },
+        {
+          "name": "What the image does not prove",
+          "statement": "The lower inputs are cropped, and its displayed 16 cannot establish that the upper greeting has 16 characters. Do not invent hidden spaces or assume a shared signal connection."
+        },
+        {
+          "name": "MATLAB text syntax, ours",
+          "statement": "For a MATLAB string scalar, \"Hello \" + \"FEU Tech\" joins the two strings and strlength(greeting) counts its characters. This pedagogic equivalent needs no import. It does not use length(greeting), which measures array dimensions rather than string content length."
+        }
+      ],
+      "worked_examples": [
+        {
+          "problem": "Ours: implement the visible upper greeting in MATLAB and count its characters.",
+          "steps": [
+            "Concatenate the exact visible constants. Use strlength for the text content rather than the number of elements in the string array.",
+            "```matlab\ngreeting = \"Hello \" + \"FEU Tech\";\nfprintf('%s\\n',greeting);\nfprintf('Characters=%d\\n',strlength(greeting));\n```"
+          ],
+          "answer": "Expected printed output:\nHello FEU Tech\nCharacters=14\n"
+        }
+      ],
+      "common_mistakes": [
+        "The copied explanation about greater-than and 0/1 is unrelated to the pictured string blocks.",
+        "Do not silently change the visible greeting to force a count of 16.",
+        "Do not count only letters: the two visible spaces count too.",
+        "MATLAB + concatenates string scalars; adding character-array numeric codes is a different operation."
+      ],
+      "source_refs": [
+        "M5-MAIN - Systems Modeling.pdf, PDF p. 30"
+      ],
+      "memory_aids": [
+        {
+          "label": "Ours, Not The Slides",
+          "text": "Count words and spaces: Hello(5) + space(1) + FEU(3) + space(1) + Tech(4)."
+        }
+      ],
+      "comparisons": [
+        {
+          "title": "String Blocks Versus Their Jobs",
+          "columns": [
+            "Block",
+            "Input",
+            "Result Type"
+          ],
+          "rows": [
+            [
+              "String Constant",
+              "Configured text",
+              "Text signal"
+            ],
+            [
+              "String Concat",
+              "Ordered text signals",
+              "Joined text"
+            ],
+            [
+              "String Length",
+              "Text signal",
+              "Numeric character count"
+            ],
+            [
+              "Display",
+              "A signal",
+              "Visible value"
+            ]
+          ]
+        },
+        {
+          "title": "Visible Evidence Versus Unsupported Inference",
+          "columns": [
+            "Evidence",
+            "Safe Conclusion"
+          ],
+          "rows": [
+            [
+              "Upper constants and greeting are visible",
+              "The shown greeting has 14 characters"
+            ],
+            [
+              "Lower Display shows 16",
+              "That lower branch displays 16"
+            ],
+            [
+              "Lower inputs are cropped",
+              "Its exact input text is unknown"
+            ],
+            [
+              "Two extra spaces are not visible",
+              "Do not claim hidden spaces as a fact"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "formula_sheet": [
+    {
+      "name": "Functional Motion Relations",
+      "expression": "a = dv/dt; v = dx/dt",
+      "when_to_use": "Follow the two integrators in the vehicle model; include initial conditions."
+    },
+    {
+      "name": "Friction Stopping Distance",
+      "expression": "(1/2)m v0^2 = F_f d; d = m v0^2/(2 F_f)",
+      "when_to_use": "Constant friction magnitude is the sole cause of kinetic-energy loss."
+    },
+    {
+      "name": "Markov State Update",
+      "expression": "p_next = p*P; p_after_n = p*P^n",
+      "when_to_use": "Ours: propagate a row-vector state distribution using the pictured transition matrix."
+    },
+    {
+      "name": "Page 29 Arithmetic",
+      "expression": "((1+100)+(50+100)-75-10)*(10*1) = 1660",
+      "when_to_use": "Trace the upper arithmetic network, not the unknown lower wiring."
+    },
+    {
+      "name": "Page 31 Arithmetic",
+      "expression": "sqrt(16)+3^2+sign(-5) = 12",
+      "when_to_use": "Evaluate the three operation blocks before testing equality."
+    },
+    {
+      "name": "Visible Greeting Length",
+      "expression": "5+1+3+1+4 = 14",
+      "when_to_use": "Count the characters and spaces in the visible Hello FEU Tech greeting."
+    }
+  ],
+  "self_check": [
+    {
+      "question": "How do the four Fishwick types differ?",
+      "answer": "Declarative: states/events. Functional: directed equation flow. Constraint: physical relationships/balance. Spatial: spaces or entities in them."
+    },
+    {
+      "question": "Why do the functional and constraint braking results agree?",
+      "answer": "They express the same constant-friction physics: integrating acceleration gives the motion; equating initial energy to friction work gives the same stopping distance."
+    },
+    {
+      "question": "Is a concept map automatically a hybrid executable model?",
+      "answer": "No. A concept map informally explains elements/interactions; a hybrid connects models, potentially of multiple types."
+    },
+    {
+      "question": "What distinguishes verification from validation?",
+      "answer": "Verification checks correct implementation of conceptual requirements. Validation checks useful accuracy against the target system."
+    },
+    {
+      "question": "Which methods and workflow does the OR slide list?",
+      "answer": "Formulate the problem, develop its mathematical model, solve it. Linear programming is deterministic; Markov chains and queuing theory are stochastic methods."
+    },
+    {
+      "question": "Does page 30 establish a 16-character Hello FEU Tech greeting?",
+      "answer": "No. The visible greeting has 14 characters. The lower 16 belongs to a cropped branch whose input text is not established."
+    }
+  ],
+  "cram_sheet": [
+    {
+      "topic": "Four Types",
+      "remember": "D-F-C-S: Declarative states/events; Functional flow; Constraint balance; Spatial location."
+    },
+    {
+      "topic": "Easy Pass Views",
+      "remember": "FSA state/guard; queue earliest event; Markov transition probabilities with row sums one."
+    },
+    {
+      "topic": "Vehicle Physics",
+      "remember": "a integrates to v, v to x; (1/2)mv0^2=F_f d."
+    },
+    {
+      "topic": "Representation Tools",
+      "remember": "Conceptual overview communicates; hybrids connect models; formal rules are rigorous but costly; UML is semiformal."
+    },
+    {
+      "topic": "Verification And Validation",
+      "remember": "Debug/review/stress for translation; output comparisons or expert face validation for target adequacy."
+    },
+    {
+      "topic": "OR",
+      "remember": "Formulate, develop, solve. Objective plus constraints; LP deterministic, Markov/queues stochastic."
+    },
+    {
+      "topic": "Simulink",
+      "remember": "Editor + libraries + solvers; MATLAB integration; design before hardware; HIL and scalable execution."
+    },
+    {
+      "topic": "Picture Traps",
+      "remember": "Page 29 upper product1660; lower wiring cropped. Page31 sum12 and equality true. Page30 visible greeting14, lower16 unexplained."
+    }
+  ],
+  "matlab_checks": [
+    {
+      "code": "P = [0 1 0 0 0; 0 0 0.8 0.2 0; 0 0 0 0.3 0.7; 1 0 0 0 0; 1 0 0 0 0];\np0 = [0 1 0 0 0];\np2 = p0*P^2;\nfprintf('Row sums: %.0f %.0f %.0f %.0f %.0f\\n',sum(P,2));\nfprintf('After two: %.2f %.2f %.2f %.2f %.2f\\n',p2);",
+      "expected_output": "Row sums: 1 1 1 1 1\nAfter two: 0.20 0.00 0.00 0.24 0.56\n"
+    },
+    {
+      "code": "m = 1000; v0 = 10; Ff = 5000;\na = -Ff/m;\ntstop = -v0/a;\ndEnergy = m*v0^2/(2*Ff);\ndMotion = v0*tstop + 0.5*a*tstop^2;\nfprintf('a=%.1f m/s^2, stop=%.1f s\\n',a,tstop);\nfprintf('Energy=%.1f m, motion=%.1f m\\n',dEnergy,dMotion);",
+      "expected_output": "a=-5.0 m/s^2, stop=2.0 s\nEnergy=10.0 m, motion=10.0 m\n"
+    },
+    {
+      "code": "s = (1+100) + (50+100) - 75 - 10;\np = s*(10*1);\nfprintf('Sum=%d, product=%d\\n',s,p);\nfprintf('Separate comparison=%d\\n',p>5000);",
+      "expected_output": "Sum=166, product=1660\nSeparate comparison=0\n"
+    },
+    {
+      "code": "value = sqrt(16) + 3^2 + sign(-5);\nfprintf('Root=%.0f, square=%.0f, sign=%.0f\\n',sqrt(16),3^2,sign(-5));\nfprintf('Sum=%.0f, equals12=%d\\n',value,value==12);",
+      "expected_output": "Root=4, square=9, sign=-1\nSum=12, equals12=1\n"
+    },
+    {
+      "code": "greeting = \"Hello \" + \"FEU Tech\";\nfprintf('%s\\n',greeting);\nfprintf('Characters=%d\\n',strlength(greeting));",
+      "expected_output": "Hello FEU Tech\nCharacters=14\n"
+    }
+  ]
+}
