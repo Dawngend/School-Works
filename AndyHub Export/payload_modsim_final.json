@@ -190,26 +190,26 @@
           },
           {
             "heading": "M2: Distributions and random variates",
-            "summary": "Uniform(a,b) has constant density over its interval; triangular(a,m,b) is useful when minimum, most likely value, and maximum are known but the exact shape is not. Exponential interarrival times have mean m and rate λ=1/m; for x≥0, P(X>x)=exp(−λx). Normal(m,σ) describes variability around a mean, with σ the standard deviation.\n\nPage 25’s displayed exponential density omits the rate multiplier: the normalized density is λ exp(−λx) for x≥0. A continuous uniform distribution gives equal probabilities to equal-length intervals, not a positive equal probability to each individual real value.\n\nSimulation first generates a uniform random number and transforms it into a random variate with the desired distribution. A linear congruential generator uses Zₖ₊₁=(aZₖ+c) mod m and Uₖ=Zₖ/m; its integers repeat after a period no longer than m, so parameter and seed selection matter.",
+            "summary": "Uniform(a,b) has constant density over its interval; triangular(a,m,b) is useful when minimum, most likely value, and maximum are known but the exact shape is not. Exponential interarrival times have mean m and rate λ=1/m; for x≥0, P(X>x)=exp(−λx). Normal(m,σ) describes variability around a mean, with σ the standard deviation.\n\nPage 25’s displayed exponential density omits the rate multiplier: the normalized density is λ exp(−λx) for x≥0. A continuous uniform distribution gives equal probabilities to equal-length intervals, not a positive equal probability to each individual real value.\n\nSimulation first generates a uniform random number and transforms it into a random variate with the desired distribution. A linear congruential generator uses Zₖ₊₁=(aZₖ+c) mod m and Uₖ=Zₖ/m; its integers repeat after a period no longer than m. For a full cycle, c and m must be relatively prime; every prime factor of m divides a−1; and if 4 divides m, then 4 divides a−1.",
             "key_terms": [],
             "properties": [],
             "worked_examples": [],
             "common_mistakes": [],
             "source_refs": [
-              "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 23, 24, 25, 26, 27, 28, 29, 30"
+              "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 23, 24, 25, 26, 27, 28, 29, 30, 31"
             ],
             "memory_aids": [],
             "comparisons": []
           },
           {
             "heading": "M2: Input and output modeling",
-            "summary": "Structural modeling identifies entities, locations, resources and processes; data modeling supplies quantitative inputs such as interarrival times, service times, schedules, failures and travel times.\n\nDirect sample use preserves recorded values but limited samples may miss rare possibilities and repeated retrieval can be costly. An empirical distribution represents observed samples and can generate arbitrarily long streams, but cannot produce unobserved outliers. A fitted theoretical distribution can smooth sample irregularities, but fitting takes effort and a good fit may not exist.\n\nOutput data analysis converts simulation output into information about system performance; the slides introduce the confidence interval for a mean and identify more complex analysis situations without giving a detailed procedure.",
+            "summary": "Structural modeling identifies entities, locations, resources and processes; data modeling supplies quantitative inputs such as interarrival times, service times, schedules, failures and travel times.\n\nDirect sample use preserves recorded values but limited samples may miss rare possibilities and repeated retrieval can be costly. An empirical distribution represents observed samples and can generate arbitrarily long streams, but cannot produce unobserved outliers. A fitted theoretical distribution can smooth sample irregularities, but fitting takes effort and a good fit may not exist. Complex input-data cases include no data, multimodal, correlated, and nonstationary data.\n\nOutput data analysis converts simulation output into information about system performance; the slides introduce the confidence interval for a mean and identify more complex analysis situations without giving a detailed procedure.",
             "key_terms": [],
             "properties": [],
             "worked_examples": [],
             "common_mistakes": [],
             "source_refs": [
-              "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 32, 33, 34, 35, 36, 37, 39"
+              "M2-MAIN-Discrete Event Simulation.pdf, PDF p. 32, 33, 34, 35, 36, 37, 38, 39"
             ],
             "memory_aids": [],
             "comparisons": []
@@ -333,13 +333,13 @@
           },
           {
             "heading": "M3: MATLAB selection and loops",
-            "summary": "if, elseif, else and end select branches; switch selects cases and otherwise handles unmatched cases. The age example on page 62 does not classify ages 20 and 60 correctly and can classify nonpositive ages as senior; check boundaries explicitly rather than copying it.\n\nThe page 61 parity example is erroneous: % starts a MATLAB comment, not a remainder operation, and both branches print Even number. Use mod(x,2)==0 for even integers and print Odd number in the other branch.\n\nmenu displays choices and returns the selected button number. A for loop iterates over a supplied sequence such as 1:10 or 1.0:-0.2:0.0; a while loop repeats while its condition is true.",
+            "summary": "if, elseif, else and end select branches; switch selects cases and otherwise handles unmatched cases. The age example on page 62 misclassifies age 20 and can classify nonpositive ages as senior; age 60 is correctly classified as senior. Check boundaries explicitly rather than copying it.\n\nThe page 61 parity example is erroneous: % starts a MATLAB comment, not a remainder operation, and both branches print Even number. Use mod(x,2)==0 for even integers and print Odd number in the other branch.\n\nmenu displays choices and returns the selected button number. A for loop iterates over a supplied sequence such as 1:10 or 1.0:-0.2:0.0; a while loop repeats while its condition is true.\n\nA MATLAB function can be declared as function area = calcarea(rad), assign its output with area = pi * rad * rad, and end with end. A caller can use calcarea(5) or assign area = calcarea(radius).",
             "key_terms": [],
             "properties": [],
             "worked_examples": [],
             "common_mistakes": [],
             "source_refs": [
-              "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 60, 61, 62, 63, 64, 65, 66, 67"
+              "M3-MAIN - Modeling Continuous Systems.pdf, PDF p. 56, 57, 58, 60, 61, 62, 63, 64, 65, 66, 67"
             ],
             "memory_aids": [],
             "comparisons": []
@@ -502,7 +502,7 @@
           },
           {
             "heading": "M5: Simulink and worked block examples",
-            "summary": "Simulink integrates with MATLAB and provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. MATLAB algorithms can be included in models and results exported to MATLAB. Applications include pre-hardware exploration, reusable components, hardware-in-the-loop testing, and large simulations on multicore desktops, clusters, or the cloud.\n\nIn the arithmetic block example, (1+100)+(50+100)−75−10 = 166 and 166×(10×1) = 1660. A greater-than comparison with 5000 returns 0 (false). In the other example, √16 + 3² + sign(−5) = 4+9−1 = 12, so equality to 12 returns 1 (true).\n\nPage 30 is labeled arithmetic but shows string concatenation and length, while its comparison explanation is unrelated. The visible text ‘Hello FEU Tech’ contains 14 characters including spaces; the displayed length 16 is not explained by the visible text, so hidden spaces or different inputs cannot be established from the slide.",
+            "summary": "Simulink integrates with MATLAB and provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. MATLAB algorithms can be included in models and results exported to MATLAB. Applications include pre-hardware exploration, reusable components, hardware-in-the-loop testing, and large simulations on multicore desktops, clusters, or the cloud.\n\nIn the arithmetic block example, (1+100)+(50+100)−75−10 = 166 and 166×(10×1) = 1660. Separately, 1660 > 5000 returns 0 (false); the cropped slide does not establish the input of its lower comparator. In the other example, √16 + 3² + sign(−5) = 4+9−1 = 12, so equality to 12 returns 1 (true).\n\nPage 30 is labeled arithmetic but shows string concatenation and length, while its comparison explanation is unrelated. The visible text ‘Hello FEU Tech’ contains 14 characters including spaces; the displayed length 16 is not explained by the visible text, so hidden spaces or different inputs cannot be established from the slide.",
             "key_terms": [],
             "properties": [],
             "worked_examples": [],
@@ -776,7 +776,7 @@
         },
         {
           "type": "multiple_choice",
-          "question": "In an initially idle single-server FCFS queue, how is a customer’s service start determined?",
+          "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
           "correct_answer": "The later of arrival and the preceding service completion",
           "options": "[\"The later of arrival and the preceding service completion\", \"The earlier of arrival and preceding completion\", \"Arrival minus service time\", \"Always zero\"]",
           "times_missed": 0
@@ -1469,7 +1469,7 @@
         },
         {
           "type": "multiple_choice",
-          "question": "What does the page 29 comparison 1660 > 5000 return?",
+          "question": "As a separate calculation, what does 1660 > 5000 return?",
           "correct_answer": "0, false",
           "options": "[\"0, false\", \"1, true\", \"1660\", \"5000\"]",
           "times_missed": 0
@@ -1700,7 +1700,7 @@
         },
         {
           "type": "multiple_choice",
-          "question": "For an r-by-c matrix, what is the shape of sum(A) using the default dimension?",
+          "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
           "correct_answer": "1 by c",
           "options": "[\"1 by c\", \"r by 1\", \"r by c\", \"1 by 1 in every case\"]",
           "times_missed": 0

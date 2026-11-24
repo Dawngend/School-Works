@@ -70,7 +70,7 @@
       "heading": "Simulink and worked block examples",
       "paragraphs": [
         "Simulink integrates with MATLAB and provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. MATLAB algorithms can be included in models and results exported to MATLAB. Applications include pre-hardware exploration, reusable components, hardware-in-the-loop testing, and large simulations on multicore desktops, clusters, or the cloud.",
-        "In the arithmetic block example, (1+100)+(50+100)−75−10 = 166 and 166×(10×1) = 1660. A greater-than comparison with 5000 returns 0 (false). In the other example, √16 + 3² + sign(−5) = 4+9−1 = 12, so equality to 12 returns 1 (true).",
+        "In the arithmetic block example, (1+100)+(50+100)−75−10 = 166 and 166×(10×1) = 1660. Separately, 1660 > 5000 returns 0 (false); the cropped slide does not establish the input of its lower comparator. In the other example, √16 + 3² + sign(−5) = 4+9−1 = 12, so equality to 12 returns 1 (true).",
         "Page 30 is labeled arithmetic but shows string concatenation and length, while its comparison explanation is unrelated. The visible text ‘Hello FEU Tech’ contains 14 characters including spaces; the displayed length 16 is not explained by the visible text, so hidden spaces or different inputs cannot be established from the slide."
       ],
       "pages": [
@@ -639,7 +639,7 @@
       ]
     },
     {
-      "question": "What does the page 29 comparison 1660 > 5000 return?",
+      "question": "As a separate calculation, what does 1660 > 5000 return?",
       "options": [
         "0, false",
         "1, true",

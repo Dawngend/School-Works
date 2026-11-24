@@ -43,7 +43,7 @@
       "paragraphs": [
         "Uniform(a,b) has constant density over its interval; triangular(a,m,b) is useful when minimum, most likely value, and maximum are known but the exact shape is not. Exponential interarrival times have mean m and rate λ=1/m; for x≥0, P(X>x)=exp(−λx). Normal(m,σ) describes variability around a mean, with σ the standard deviation.",
         "Page 25’s displayed exponential density omits the rate multiplier: the normalized density is λ exp(−λx) for x≥0. A continuous uniform distribution gives equal probabilities to equal-length intervals, not a positive equal probability to each individual real value.",
-        "Simulation first generates a uniform random number and transforms it into a random variate with the desired distribution. A linear congruential generator uses Zₖ₊₁=(aZₖ+c) mod m and Uₖ=Zₖ/m; its integers repeat after a period no longer than m, so parameter and seed selection matter."
+        "Simulation first generates a uniform random number and transforms it into a random variate with the desired distribution. A linear congruential generator uses Zₖ₊₁=(aZₖ+c) mod m and Uₖ=Zₖ/m; its integers repeat after a period no longer than m. For a full cycle, c and m must be relatively prime; every prime factor of m divides a−1; and if 4 divides m, then 4 divides a−1."
       ],
       "pages": [
         23,
@@ -53,14 +53,15 @@
         27,
         28,
         29,
-        30
+        30,
+        31
       ]
     },
     {
       "heading": "Input and output modeling",
       "paragraphs": [
         "Structural modeling identifies entities, locations, resources and processes; data modeling supplies quantitative inputs such as interarrival times, service times, schedules, failures and travel times.",
-        "Direct sample use preserves recorded values but limited samples may miss rare possibilities and repeated retrieval can be costly. An empirical distribution represents observed samples and can generate arbitrarily long streams, but cannot produce unobserved outliers. A fitted theoretical distribution can smooth sample irregularities, but fitting takes effort and a good fit may not exist.",
+        "Direct sample use preserves recorded values but limited samples may miss rare possibilities and repeated retrieval can be costly. An empirical distribution represents observed samples and can generate arbitrarily long streams, but cannot produce unobserved outliers. A fitted theoretical distribution can smooth sample irregularities, but fitting takes effort and a good fit may not exist. Complex input-data cases include no data, multimodal, correlated, and nonstationary data.",
         "Output data analysis converts simulation output into information about system performance; the slides introduce the confidence interval for a mean and identify more complex analysis situations without giving a detailed procedure."
       ],
       "pages": [
@@ -70,6 +71,7 @@
         35,
         36,
         37,
+        38,
         39
       ]
     },
@@ -589,7 +591,7 @@
       ]
     },
     {
-      "question": "In an initially idle single-server FCFS queue, how is a customer’s service start determined?",
+      "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
       "options": [
         "The later of arrival and the preceding service completion",
         "The earlier of arrival and preceding completion",

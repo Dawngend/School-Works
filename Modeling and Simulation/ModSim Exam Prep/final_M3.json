@@ -104,11 +104,15 @@
     {
       "heading": "MATLAB selection and loops",
       "paragraphs": [
-        "if, elseif, else and end select branches; switch selects cases and otherwise handles unmatched cases. The age example on page 62 does not classify ages 20 and 60 correctly and can classify nonpositive ages as senior; check boundaries explicitly rather than copying it.",
+        "if, elseif, else and end select branches; switch selects cases and otherwise handles unmatched cases. The age example on page 62 misclassifies age 20 and can classify nonpositive ages as senior; age 60 is correctly classified as senior. Check boundaries explicitly rather than copying it.",
         "The page 61 parity example is erroneous: % starts a MATLAB comment, not a remainder operation, and both branches print Even number. Use mod(x,2)==0 for even integers and print Odd number in the other branch.",
-        "menu displays choices and returns the selected button number. A for loop iterates over a supplied sequence such as 1:10 or 1.0:-0.2:0.0; a while loop repeats while its condition is true."
+        "menu displays choices and returns the selected button number. A for loop iterates over a supplied sequence such as 1:10 or 1.0:-0.2:0.0; a while loop repeats while its condition is true.",
+        "A MATLAB function can be declared as function area = calcarea(rad), assign its output with area = pi * rad * rad, and end with end. A caller can use calcarea(5) or assign area = calcarea(radius)."
       ],
       "pages": [
+        56,
+        57,
+        58,
         60,
         61,
         62,

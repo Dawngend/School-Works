@@ -678,7 +678,7 @@
       ]
     },
     {
-      "question": "For an r-by-c matrix, what is the shape of sum(A) using the default dimension?",
+      "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
       "options": [
         "1 by c",
         "r by 1",

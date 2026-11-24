@@ -6,7 +6,7 @@
       "module": "M1",
       "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
       "source_sha256": "8a8a1269aab7f8e84598cbb2b99617defde8ad51a6389b2cea91ee0062eff435",
-      "module_json_sha256": "ff85ace9aca15bdef7d091436bcde1025ab8e8ec3ffb39d36145f023b8421b7b",
+      "module_json_sha256": "4d9ffa459e564566ad5d5db44a188c031c78028b1f5d13ce6fd62930514077bc",
       "pdf_page_count": 121,
       "referenced_pages": [
         {
@@ -320,7 +320,7 @@
       "module": "M2",
       "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
       "source_sha256": "2f2366f49843cf3e36f8f39c1ba2082902d756fc046291f2690abf5804d6978b",
-      "module_json_sha256": "58b91e87aa3d70c79721da55922995018b2eda1d6260d34becef699c7101d11e",
+      "module_json_sha256": "cfe1d2be60c8e59aa815451b5a1871f84c60c910bf808668440fae4ea15a77e2",
       "pdf_page_count": 82,
       "referenced_pages": [
         {
@@ -444,6 +444,11 @@
           "text_sha256": "ec16a259b3540fc537805e9798d29290b356cae3a2f97d9b4ccf3abae3850fe7"
         },
         {
+          "page": 31,
+          "extractable_text_characters": 135,
+          "text_sha256": "13b90745b7f794fa86f6a9e3c21faa679cb7b06c447b81682ea01b1d7319573c"
+        },
+        {
           "page": 32,
           "extractable_text_characters": 718,
           "text_sha256": "309e8d66e2ea6bed4055b83601f8b886da4d256b479e947c61c97a0c4d0ec00f"
@@ -472,6 +477,11 @@
           "page": 37,
           "extractable_text_characters": 332,
           "text_sha256": "58c85a65e3ee757adb603265f8fb8fff13feda1077b0b3d72c05ce71a9315105"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 0,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         },
         {
           "page": 39,
@@ -629,7 +639,7 @@
       "module": "M3",
       "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
       "source_sha256": "170206580f302e5a95c65d1cd736c1f20cddc26aa095639885e7a46d2d9fda80",
-      "module_json_sha256": "3a273e0e6743d53623117d5eb468ca56ab9a246293c84b90671101738c379693",
+      "module_json_sha256": "b3dad046a0dfa93fa161a0b7c067686699a89bf11c67a7f4ddb8338bf4aa4409",
       "pdf_page_count": 68,
       "referenced_pages": [
         {
@@ -761,6 +771,21 @@
           "page": 48,
           "extractable_text_characters": 336,
           "text_sha256": "57a6336f5dfe670c4a173fb022897b6c1f9c4c7cdfde7b9ac2a6669a053ba596"
+        },
+        {
+          "page": 56,
+          "extractable_text_characters": 215,
+          "text_sha256": "22a3596cd9c0ff5809dd3b3a70ce32771afd4e3114e6f70f88641b20adec2439"
+        },
+        {
+          "page": 57,
+          "extractable_text_characters": 33,
+          "text_sha256": "7055d6e74dd54b5ad4a3d68a4b035efdb3275d4447b4dd61d027b42f670e06d9"
+        },
+        {
+          "page": 58,
+          "extractable_text_characters": 33,
+          "text_sha256": "38005870061771993cba90abf577eb83ce8d94b2e31d46f2b9e45984be60987e"
         },
         {
           "page": 60,
@@ -982,7 +1007,7 @@
       "module": "M5",
       "source_file": "M5-MAIN - Systems Modeling.pdf",
       "source_sha256": "b14f3d0abf907b8c8459e712a42abf1382044c1a5b22aa7f5ab96c39f994312d",
-      "module_json_sha256": "d89e3c2c6bb4444d759805744df8ac57d792f94e50941d51a8a6c83f113ef233",
+      "module_json_sha256": "7523823e062f3611891814908ee4e987e312fed0d9882f2cbe6a101875b05e4f",
       "pdf_page_count": 31,
       "referenced_pages": [
         {
@@ -1588,7 +1613,8 @@
         27,
         28,
         29,
-        30
+        30,
+        31
       ]
     },
     {
@@ -1603,6 +1629,7 @@
         35,
         36,
         37,
+        38,
         39
       ]
     },
@@ -1743,6 +1770,9 @@
       "heading": "MATLAB selection and loops",
       "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
       "pages": [
+        56,
+        57,
+        58,
         60,
         61,
         62,
@@ -2204,7 +2234,7 @@
       "deck_index": 14,
       "module": "M2",
       "module_card_index": 36,
-      "question": "In an initially idle single-server FCFS queue, how is a customer’s service start determined?",
+      "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
       "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
       "pages": [
         77,
@@ -3225,7 +3255,7 @@
       "deck_index": 113,
       "module": "M5",
       "module_card_index": 40,
-      "question": "What does the page 29 comparison 1660 > 5000 return?",
+      "question": "As a separate calculation, what does 1660 > 5000 return?",
       "source_file": "M5-MAIN - Systems Modeling.pdf",
       "pages": [
         29
@@ -3561,7 +3591,7 @@
       "deck_index": 146,
       "module": "M1",
       "module_card_index": 38,
-      "question": "For an r-by-c matrix, what is the shape of sum(A) using the default dimension?",
+      "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
       "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
       "pages": [
         109
