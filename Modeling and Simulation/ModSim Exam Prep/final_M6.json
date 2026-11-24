@@ -1,0 +1,718 @@
+{
+  "module": "M6",
+  "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+  "sections": [
+    {
+      "heading": "Visualization and graphics",
+      "paragraphs": [
+        "Visualization turns information into imagery, graphs, or animation, making large or time-varying information easier to understand. In modeling and simulation it includes data analysis and visual training simulations; computer graphics is its core technology. Computer graphics generates or manipulates images using software and hardware."
+      ],
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "heading": "Graphics hardware and 3D geometry",
+      "paragraphs": [
+        "Realistic graphics requires computation and memory. The slides trace dedicated workstation acceleration in the mid-1980s, 2D PC acceleration in the mid-1990s, 3D PC acceleration in the late 1990s, and programmable vertex and pixel shaders in the early 2000s. Convex polygon meshes simplify rendering: a line segment joining any two points in a convex object lies entirely within it."
+      ],
+      "pages": [
+        7,
+        23
+      ]
+    },
+    {
+      "heading": "Coordinates and transformations",
+      "paragraphs": [
+        "A point represents a location without size or shape; a vector has direction and length but no location. Graphics use Cartesian components, matrices, and homogeneous coordinates to express transformations. Affine transformations preserve collinearity and ratios of distances along a line; translation, rotation, and scaling are examples. They can represent changes in dynamic objects."
+      ],
+      "pages": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "heading": "Synthetic cameras and projection",
+      "paragraphs": [
+        "A synthetic camera maps 3D objects to a 2D projection using camera parameters. Location, target location, and up direction position and orient it; world coordinates are converted into camera coordinates. Perspective projection uses a finite center of projection and rays through object points. Parallel projection uses a direction of projection and six clipping planes; orthographic projection has a direction perpendicular to the projection plane and preserves distances and directions along that plane, useful for CAD measurements."
+      ],
+      "pages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "heading": "Lighting, shading, and textures",
+      "paragraphs": [
+        "Rods primarily support low-light vision, while cones support color vision. Ambient light gives uniform illumination independent of location and direction. A point light radiates equally in all directions and attenuates with distance. A spotlight is specified by location, direction, and cutoff angle; a directional light models a distant source such as sunlight. Reflection describes light–object interaction, shading determines colors within polygons, and texture mapping enriches appearance without greatly increasing geometric complexity."
+      ],
+      "pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "heading": "Graphics software",
+      "paragraphs": [
+        "The slides identify OpenGL as a cross-platform low-level graphics API and Direct3D as a Microsoft 3D graphics API; they also describe OpenSceneGraph as an open-source cross-platform library, MATLAB for numerical work and visualization, and Maya for 3D modeling and animation. These slides describe historical tools and should not be treated as an up-to-date product survey. Page 57 calls Java 3D a programming language; more accurately, Java 3D is an API for 3D graphics, not the Java language itself."
+      ],
+      "pages": [
+        55,
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "heading": "VV&A vocabulary and requirements",
+      "paragraphs": [
+        "The simuland is the real object, process, or phenomenon of interest; the referent is the knowledge available about it, both quantitative and qualitative. A conceptual model documents represented and omitted aspects and assumptions, serving as a specification for an executable model. A simulation executes a model over time and produces results. Requirements, driven by intended use, specify what must be modeled and how accurately."
+      ],
+      "pages": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "heading": "Verification, validation, and accreditation",
+      "paragraphs": [
+        "Verification examines transformational accuracy: whether requirements, conceptual model, and executable implementation are consistent. Validation examines representational accuracy: how accurately the model and its results represent the simuland, including the range of credible inputs. Accreditation is a responsible authority’s official decision that a model is acceptable for a specific purpose, informed by V&V results. Neither general apparent realism nor verification alone establishes validity for every use."
+      ],
+      "pages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "heading": "Project types and credibility",
+      "paragraphs": [
+        "A simulation study primarily seeks insight; code need not be its primary deliverable. Simulation software development delivers executable software expected to be reused and maintained. A simulation event uses existing models for a particular objective, with scenario, data, logistics, and security potentially important. Credibility concerns whether results are considered acceptable for an application and costs resources to develop; managers balance credibility requirements against available resources."
+      ],
+      "pages": [
+        74,
+        75,
+        76,
+        82
+      ]
+    },
+    {
+      "heading": "Errors and bounds of validity",
+      "paragraphs": [
+        "Type I error is not using a valid model, with likelihood called model builder’s risk. Type II is using an invalid model, with likelihood called model user’s risk. Type III is using a model valid for another purpose but inappropriate for the intended application, with likelihood called model accreditor’s risk. The gravity examples illustrate bounds of validity: a simple approximation can be adequate only over a limited range, while the gravity model depends on assumptions including negligible air resistance and proximity to Earth’s surface."
+      ],
+      "pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "heading": "Informal and static methods",
+      "paragraphs": [
+        "Informal V&V relies on qualitative expert judgment. Inspection compares artifacts such as code against design equations; face validation compares observed results against experts’ knowledge of the simuland. The Turing test is a specialized face-validation approach for human behavior. Static methods examine characteristics without executing a simulation: data analysis checks definitions, operations, dependencies, and flows, while cause–effect graphing compares important causal relationships between simuland and conceptual model."
+      ],
+      "pages": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    {
+      "heading": "Dynamic and formal methods",
+      "paragraphs": [
+        "Dynamic V&V executes models and evaluates results. Sensitivity analysis compares the magnitude and variability of outputs and can reveal influential inputs; predictive validation compares specific corresponding outcomes; comparison testing runs multiple models with the same input. Regression and hypothesis testing provide statistical approaches. Formal methods use mathematical proof: inductive assertions address executable-model correctness along execution paths, and predicate calculus can express and compare simuland and conceptual-model properties. Appropriate methods depend on the model, available data, and practical execution, and multiple methods are often combined."
+      ],
+      "pages": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "Why use visualization in simulation?",
+      "options": [
+        "To convey large or time-varying information visually",
+        "To eliminate all model assumptions",
+        "To replace every numerical output with audio",
+        "To prove a model valid automatically"
+      ],
+      "correct_answer": "To convey large or time-varying information visually",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "question": "What is a convex object?",
+      "options": [
+        "One with no straight edges",
+        "One whose points all lie on one plane",
+        "One that must be a sphere",
+        "One in which every segment joining two of its points lies entirely inside it"
+      ],
+      "correct_answer": "One in which every segment joining two of its points lies entirely inside it",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "question": "Which describes a mathematical vector in the slides?",
+      "options": [
+        "It has size and shape but no direction",
+        "It is necessarily a point on a surface",
+        "It has length and direction but no location",
+        "It has location but neither length nor direction"
+      ],
+      "correct_answer": "It has length and direction but no location",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "question": "What is the role of homogeneous coordinates in 3D graphics?",
+      "options": [
+        "They convert every 3D object directly into audio",
+        "They allow affine transformations such as translation and rotation to be expressed by matrix multiplication",
+        "They eliminate the need for camera coordinates",
+        "They guarantee all rendered objects are convex"
+      ],
+      "correct_answer": "They allow affine transformations such as translation and rotation to be expressed by matrix multiplication",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "Which transformation family includes translation, rotation, and scaling?",
+      "options": [
+        "Affine transformations",
+        "Hypothesis tests",
+        "Texture compression",
+        "Accreditation decisions"
+      ],
+      "correct_answer": "Affine transformations",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "question": "What does a synthetic camera produce from a 3D scene and camera parameters?",
+      "options": [
+        "A new physical camera",
+        "A proof of model validity",
+        "A simulation requirement",
+        "A 2D projected image"
+      ],
+      "correct_answer": "A 2D projected image",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "question": "Which three parameters position and orient the slide’s camera?",
+      "options": [
+        "Simulation time, event count, and queue length",
+        "Near plane, model credibility, and screen resolution",
+        "Camera location, target location, and up direction",
+        "Light color, surface texture, and pixel depth"
+      ],
+      "correct_answer": "Camera location, target location, and up direction",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "question": "What characterizes perspective projection?",
+      "options": [
+        "It cannot produce a 2D image",
+        "Projectors run from a finite center of projection through object points",
+        "All projectors have a single parallel direction with no finite center",
+        "The direction of projection is necessarily perpendicular to the image plane"
+      ],
+      "correct_answer": "Projectors run from a finite center of projection through object points",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "question": "How is parallel projection specified in the slides?",
+      "options": [
+        "By a direction of projection and six clipping planes",
+        "By a finite center of projection alone",
+        "By point-light color and intensity",
+        "By validation and accreditation criteria"
+      ],
+      "correct_answer": "By a direction of projection and six clipping planes",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "question": "When is a parallel projection orthographic?",
+      "options": [
+        "When every object is infinitely far from the camera",
+        "When the projection plane is curved",
+        "When the model uses only perspective projectors",
+        "When the direction of projection is perpendicular to the projection plane"
+      ],
+      "correct_answer": "When the direction of projection is perpendicular to the projection plane",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "Why are orthographic projections useful in architectural design and CAD?",
+      "options": [
+        "They automatically validate architectural safety",
+        "They require no geometric model",
+        "They preserve distances and directions along the projection plane for measurement",
+        "They make every distant object appear larger"
+      ],
+      "correct_answer": "They preserve distances and directions along the projection plane for measurement",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "Which photoreceptors mainly support low-intensity vision?",
+      "options": [
+        "Pixels",
+        "Rods",
+        "Cones",
+        "Camera projectors"
+      ],
+      "correct_answer": "Rods",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "question": "Which light model illuminates all objects uniformly regardless of location and direction?",
+      "options": [
+        "Ambient light",
+        "Spotlight",
+        "Point light with distance attenuation",
+        "A finite perspective camera"
+      ],
+      "correct_answer": "Ambient light",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "question": "What distinguishes the ideal point light in the slides?",
+      "options": [
+        "It illuminates only outside a cone",
+        "It has no location and is always at infinity",
+        "It illuminates uniformly regardless of distance",
+        "It emits equally in every direction and attenuates with distance"
+      ],
+      "correct_answer": "It emits equally in every direction and attenuates with distance",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "question": "Which parameters define a spotlight?",
+      "options": [
+        "Six clipping planes alone",
+        "Only color and an image file",
+        "Location, direction, and cutoff angle",
+        "Location, target, and camera up vector"
+      ],
+      "correct_answer": "Location, direction, and cutoff angle",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "question": "Which source is appropriately approximated by a directional light?",
+      "options": [
+        "A uniform ambient field with no direction",
+        "Sunlight from a very distant source",
+        "A nearby light bulb whose distance attenuation matters",
+        "A cone-shaped flashlight with a cutoff angle"
+      ],
+      "correct_answer": "Sunlight from a very distant source",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "question": "What is the main benefit of texture mapping described in the slides?",
+      "options": [
+        "Richer visual appearance without greatly increasing geometric complexity",
+        "Proof that the model is accurate",
+        "Elimination of all light sources",
+        "Conversion of a conceptual model into requirements"
+      ],
+      "correct_answer": "Richer visual appearance without greatly increasing geometric complexity",
+      "pages": [
+        53
+      ]
+    },
+    {
+      "question": "Which graphics API is described as cross-platform?",
+      "options": [
+        "Direct3D only on Xbox and Windows",
+        "The accreditation process",
+        "The Turing test",
+        "OpenGL"
+      ],
+      "correct_answer": "OpenGL",
+      "pages": [
+        55,
+        56
+      ]
+    },
+    {
+      "question": "In an assembly-line simulation, what is the simuland?",
+      "options": [
+        "The authority granting accreditation",
+        "The model’s randomly generated output only",
+        "The automobile assembly process being represented",
+        "The model’s source code only"
+      ],
+      "correct_answer": "The automobile assembly process being represented",
+      "pages": [
+        63
+      ]
+    },
+    {
+      "question": "What is the referent?",
+      "options": [
+        "The actual object independent of what is known about it",
+        "The developers’ body of knowledge about the simuland",
+        "The final accreditation certificate",
+        "Only the compiled executable model"
+      ],
+      "correct_answer": "The developers’ body of knowledge about the simuland",
+      "pages": [
+        64
+      ]
+    },
+    {
+      "question": "What does a conceptual model document?",
+      "options": [
+        "Represented and omitted simuland aspects and model assumptions",
+        "Only the final simulation results",
+        "Only the source code’s syntax",
+        "The authority’s accreditation decision alone"
+      ],
+      "correct_answer": "Represented and omitted simuland aspects and model assumptions",
+      "pages": [
+        65
+      ]
+    },
+    {
+      "question": "What is an executable model?",
+      "options": [
+        "A description that can never be executed",
+        "The physical simuland itself",
+        "An accreditation authority",
+        "An implementation that can be executed to simulate the simuland as specified conceptually"
+      ],
+      "correct_answer": "An implementation that can be executed to simulate the simuland as specified conceptually",
+      "pages": [
+        66
+      ]
+    },
+    {
+      "question": "What determines which simuland aspects and accuracy levels requirements specify?",
+      "options": [
+        "The graphics API vendor",
+        "Whether the model is open source",
+        "The intended application",
+        "The number of animation frames alone"
+      ],
+      "correct_answer": "The intended application",
+      "pages": [
+        68
+      ]
+    },
+    {
+      "question": "Which question is principally a verification question?",
+      "options": [
+        "Is a pilot familiar with the simulator controls?",
+        "Does the executable code correctly implement the conceptual model?",
+        "Does simulated behavior accurately represent the simuland?",
+        "Has an authority officially approved this use?"
+      ],
+      "correct_answer": "Does the executable code correctly implement the conceptual model?",
+      "pages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "question": "Which question is principally a validation question?",
+      "options": [
+        "How close are model results to the simuland’s behavior?",
+        "Does source code implement its conceptual specification?",
+        "Is the executable delivered in the required format?",
+        "Has the responsible authority issued certification?"
+      ],
+      "correct_answer": "How close are model results to the simuland’s behavior?",
+      "pages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "question": "What is accreditation?",
+      "options": [
+        "Proof that any use of a model is valid",
+        "An automatic consequence of compiling code",
+        "The process of drawing a conceptual model",
+        "Official certification by a responsible authority that a model is acceptable for a specific purpose"
+      ],
+      "correct_answer": "Official certification by a responsible authority that a model is acceptable for a specific purpose",
+      "pages": [
+        72
+      ]
+    },
+    {
+      "question": "What is the primary deliverable of a simulation software development project?",
+      "options": [
+        "An existing model’s one-time scenario only",
+        "A physical prototype of the simuland",
+        "An executable model expected to be reused and maintained",
+        "Insight alone, with code never a primary deliverable"
+      ],
+      "correct_answer": "An executable model expected to be reused and maintained",
+      "pages": [
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "question": "What is a simulation event?",
+      "options": [
+        "A synonym for the real-world simuland",
+        "A particular use of existing model or models for a specific objective",
+        "A project whose only objective is creating reusable simulation software",
+        "An automatic formal proof"
+      ],
+      "correct_answer": "A particular use of existing model or models for a specific objective",
+      "pages": [
+        76
+      ]
+    },
+    {
+      "question": "A valid flight simulator is not used because the authority is not persuaded to certify it. Which error is this?",
+      "options": [
+        "Type I error, associated with model builder’s risk",
+        "Type II error, associated with model user’s risk",
+        "Type III error, associated with model accreditor’s risk",
+        "A correct accreditation decision by definition"
+      ],
+      "correct_answer": "Type I error, associated with model builder’s risk",
+      "pages": [
+        78
+      ]
+    },
+    {
+      "question": "An invalid flight simulator is used to train pilots. Which error is this?",
+      "options": [
+        "Type I error, associated with model builder’s risk",
+        "Type III error, associated only with model accreditor’s risk",
+        "A harmless visualization issue by definition",
+        "Type II error, associated with model user’s risk"
+      ],
+      "correct_answer": "Type II error, associated with model user’s risk",
+      "pages": [
+        79
+      ]
+    },
+    {
+      "question": "A simulator valid for one aircraft type is used to qualify pilots for a different type. Which error is illustrated?",
+      "options": [
+        "Type II: never executing the model",
+        "No error because any valid model is valid for every purpose",
+        "Type III: using a model inappropriate for its intended application",
+        "Type I: refusing to use a valid model"
+      ],
+      "correct_answer": "Type III: using a model inappropriate for its intended application",
+      "pages": [
+        80
+      ]
+    },
+    {
+      "question": "What is the purpose of establishing bounds of validity?",
+      "options": [
+        "Guarantee accreditation for all future applications",
+        "Identify conditions under which a model can be sufficiently accurate and reduce validation risk",
+        "Prove the model works for every possible input",
+        "Eliminate the need for intended-use requirements"
+      ],
+      "correct_answer": "Identify conditions under which a model can be sufficiently accurate and reduce validation risk",
+      "pages": [
+        81
+      ]
+    },
+    {
+      "question": "What does face validation compare?",
+      "options": [
+        "Simulation results with knowledgeable observers’ expectations of simuland behavior",
+        "Program code with its design specification only",
+        "An accreditation certificate with a budget",
+        "Two programming languages without executing a simulation"
+      ],
+      "correct_answer": "Simulation results with knowledgeable observers’ expectations of simuland behavior",
+      "pages": [
+        85
+      ]
+    },
+    {
+      "question": "What is inspection in the slides?",
+      "options": [
+        "A validation method requiring independent physical experiments in every case",
+        "An official certification for any use",
+        "A method that requires no human assessment",
+        "A verification method comparing artifacts such as code and conceptual design"
+      ],
+      "correct_answer": "A verification method comparing artifacts such as code and conceptual design",
+      "pages": [
+        84
+      ]
+    },
+    {
+      "question": "What distinguishes static V&V from dynamic V&V?",
+      "options": [
+        "Dynamic methods cannot compare numeric results",
+        "Static methods are identical to accreditation",
+        "Static methods assess characteristics without executing a simulation; dynamic methods execute the model",
+        "Static methods always use real-time animation"
+      ],
+      "correct_answer": "Static methods assess characteristics without executing a simulation; dynamic methods execute the model",
+      "pages": [
+        87,
+        90
+      ]
+    },
+    {
+      "question": "What does data analysis check in static verification?",
+      "options": [
+        "Whether the simuland is a physical object",
+        "Data definitions and operations in the executable model against the conceptual model",
+        "Only whether the simulation looks realistic",
+        "Whether an authority issued an accreditation certificate"
+      ],
+      "correct_answer": "Data definitions and operations in the executable model against the conceptual model",
+      "pages": [
+        88
+      ]
+    },
+    {
+      "question": "What does cause–effect graphing validate?",
+      "options": [
+        "Important cause-and-effect relationships in the simuland against those in the conceptual model",
+        "The choice of graphics card against the budget",
+        "The accreditation signature against a software license",
+        "Only the formatting of simulation output"
+      ],
+      "correct_answer": "Important cause-and-effect relationships in the simuland against those in the conceptual model",
+      "pages": [
+        89
+      ]
+    },
+    {
+      "question": "What can sensitivity analysis reveal?",
+      "options": [
+        "Whether an executable exists without examining it",
+        "The name of the accrediting authority",
+        "That every output is correct for every input",
+        "Which input variations have the greatest impact on model results"
+      ],
+      "correct_answer": "Which input variations have the greatest impact on model results",
+      "pages": [
+        91
+      ]
+    },
+    {
+      "question": "How does comparison testing use multiple models?",
+      "options": [
+        "Compare only their source file names",
+        "Accredit each model without execution",
+        "Run them with the same inputs and compare their results",
+        "Use unrelated inputs and assume differences prove validity"
+      ],
+      "correct_answer": "Run them with the same inputs and compare their results",
+      "pages": [
+        92
+      ]
+    },
+    {
+      "question": "How is hypothesis testing applied to model validation in the slides?",
+      "options": [
+        "Compare the size of two executable files",
+        "Treat multiple simulation results as a sample and compare their distribution with a valid-results distribution",
+        "Prove all source code correct by inspecting one screenshot",
+        "Replace the simuland with a different application"
+      ],
+      "correct_answer": "Treat multiple simulation results as a sample and compare their distribution with a valid-results distribution",
+      "pages": [
+        94
+      ]
+    },
+    {
+      "question": "What is the core idea of inductive assertions?",
+      "options": [
+        "Prove that beginning assertions and execution-path instructions imply ending assertions",
+        "Ask experts whether an animation looks plausible",
+        "Compare unrelated model outputs without running them",
+        "Officially certify all future applications"
+      ],
+      "correct_answer": "Prove that beginning assertions and execution-path instructions imply ending assertions",
+      "pages": [
+        96
+      ]
+    },
+    {
+      "question": "Why might a project combine multiple V&V methods?",
+      "options": [
+        "Every method is mandatory for every model",
+        "One method always proves suitability for all applications",
+        "The model’s intended use is irrelevant",
+        "Different methods address different verification and validation concerns, subject to model and data constraints"
+      ],
+      "correct_answer": "Different methods address different verification and validation concerns, subject to model and data constraints",
+      "pages": [
+        98
+      ]
+    }
+  ]
+}

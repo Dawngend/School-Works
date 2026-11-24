@@ -1,0 +1,649 @@
+{
+  "module": "M4",
+  "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+  "sections": [
+    {
+      "heading": "Monte Carlo fundamentals",
+      "paragraphs": [
+        "Monte Carlo simulation uses repeated random sampling of input variables and model evaluations to estimate an output distribution or numerical quantity. It arose in the 1940s at Los Alamos in atomic physics and is used in risk analysis and decision-making across engineering, finance, and other fields.",
+        "Random inputs make Monte Carlo useful for uncertainty, but it is not universally superior to deterministic methods. The slide's assertion that the result must already be known is misleading: the model and sampling assumptions must be specified, while the quantity of interest is generally estimated. The slide's historical name 'Ulman' refers to Stanislaw Ulam."
+      ],
+      "pages": [
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "heading": "Model types, applications, and precision",
+      "paragraphs": [
+        "The module illustrates simple Monte Carlo, mixture modelling, two-stage Monte Carlo, and Markov chains. Its two-stage diagram has an initial set of nodes, with one node feeding a further stage; a Markov chain depicts transitions among states.",
+        "Applications illustrated include numerical integration, distribution properties and tail probabilities, optimization, and physical simulation. A fixed grid with N points per dimension requires N^D points in D dimensions; random sampling is an alternative. Randomized optimization can escape local minima, without guaranteeing a global optimum.",
+        "Monte Carlo estimates are approximate. For ordinary independent sampling with finite variance, standard error typically scales as 1/sqrt(N): four times as many runs halve the standard error. Greater precision can therefore be computationally expensive."
+      ],
+      "pages": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "heading": "Four-step procedure and ingredients",
+      "paragraphs": [
+        "Define the input distributions; randomly generate input sets; apply the deterministic model to each set; aggregate the resulting outputs. The slide's required ingredients are probability distributions, a random-number generator, a sampling rule, a scoring rule, and an estimate of statistical error.",
+        "For example, to estimate P(X > α), draw X from its specified distribution and average the indicator 1[X > α]. This estimates the tail integral ∫α∞ f(x) dx; it need not be known before the experiment."
+      ],
+      "pages": [
+        12,
+        17,
+        18
+      ]
+    },
+    {
+      "heading": "Estimating π with a quarter circle",
+      "paragraphs": [
+        "Sample points uniformly in the unit square 0 ≤ x,y ≤ 1. A point is inside the quarter unit circle when x² + y² ≤ 1. Its area is π/4, so the proportion of points inside approximates π/4 and π̂ = 4H/N, where H is the hit count and N is the total number of points.",
+        "Worked example: 785 hits among 1,000 points give π̂ = 4(785/1000) = 3.14. This is an illustrative sample estimate, not an exact value. The diagram concerns a quarter circle, although the slide labels its numerator as points inside the 'circle'."
+      ],
+      "pages": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "heading": "Sensitivity analysis",
+      "paragraphs": [
+        "Sensitivity analysis studies how output uncertainty is associated with sources of input uncertainty and identifies influential inputs. It can reveal model errors and important input bounds, prioritize research, and support model simplification.",
+        "Derivative-based sensitivity is computationally efficient but local to the point of evaluation. For nonlinear models, sensitivity may change across the input range; a local derivative alone need not represent global behavior, although it can still be useful locally."
+      ],
+      "pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "heading": "MATLAB file input and output",
+      "paragraphs": [
+        "The slides list delimited ASCII, diary logs, formatted output using fprintf, MEX-based file access, and spreadsheet export. For a numeric matrix A, save data.dat A -ascii writes ASCII numeric data; dlmwrite('data.out', A, ' ') writes a space-delimited array. These are the slide's legacy commands.",
+        "A normal save overwrites the target; the example save testfile.dat mat2 -ascii -append appends data. Saving a character array with -ascii writes numeric character codes rather than the original text. In the displayed numeric ASCII example, load testfile.dat creates testfile; rows must have consistent numbers of values.",
+        "In the time-temperature example, load timetemp.dat creates the array, time = timetemp(1,:) selects its first row, temp = timetemp(2,:) selects its second, and plot(time,temp,'k*') plots black asterisks."
+      ],
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "heading": "MATLAB 2D and 3D plots",
+      "paragraphs": [
+        "For a function, define x, compute y = f(x), then plot(x,y). xlabel, ylabel, and title annotate the plot; grid on displays a grid. axis equal gives equal scale factors, while axis square makes the plotting box square; these are different settings.",
+        "A LineSpec can combine color, line style, and marker. For example plot(x,y,'r*') marks points with red asterisks, and hold on allows a subsequent plot to be overlaid. The module also shows bar(x,y), and plot(x,y,x,g,'.-') with a legend for sine and cosine.",
+        "For 3D data, plot3(x,y,z) plots coordinate vectors and zlabel labels the third axis. The slide also lists bar3 and stem3, and recommends grid and 3D rotation to aid viewing."
+      ],
+      "pages": [
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "What defines a Monte Carlo simulation?",
+      "options": [
+        "Repeated random sampling and model evaluation",
+        "A single fixed input and exact calculation",
+        "Only plotting observed data",
+        "Solving every model symbolically"
+      ],
+      "correct_answer": "Repeated random sampling and model evaluation",
+      "pages": [
+        6,
+        7,
+        17
+      ]
+    },
+    {
+      "question": "Which situation is especially suited to Monte Carlo?",
+      "options": [
+        "Estimating output uncertainty from uncertain inputs",
+        "Proving every simulated result is exact",
+        "Avoiding all probability assumptions",
+        "Eliminating the need for a model"
+      ],
+      "correct_answer": "Estimating output uncertainty from uncertain inputs",
+      "pages": [
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "question": "Where did the slide place the development of the Monte Carlo method?",
+      "options": [
+        "Los Alamos in the 1940s",
+        "Geneva in the 1890s",
+        "London in the 1800s",
+        "Silicon Valley in the 2000s"
+      ],
+      "correct_answer": "Los Alamos in the 1940s",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "question": "Which statement corrects the slide claim that a simulation result must be known?",
+      "options": [
+        "The desired result can be unknown and estimated from simulated outputs",
+        "The result must be specified before sampling",
+        "No model or sampling rule is needed",
+        "Every output must equal its expectation"
+      ],
+      "correct_answer": "The desired result can be unknown and estimated from simulated outputs",
+      "pages": [
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "question": "Which is a limitation of Monte Carlo simulation?",
+      "options": [
+        "High precision may require many samples",
+        "It cannot handle deterministic computations",
+        "It always gives an exact answer",
+        "It cannot use computers"
+      ],
+      "correct_answer": "High precision may require many samples",
+      "pages": [
+        10,
+        17
+      ]
+    },
+    {
+      "question": "Which model shown has a node from an initial stage feeding a subsequent stage?",
+      "options": [
+        "Two-stage Monte Carlo",
+        "A single fixed equation without stages",
+        "A bar chart",
+        "A square plot"
+      ],
+      "correct_answer": "Two-stage Monte Carlo",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "question": "What distinguishes the Markov chain illustration from a collection of unrelated points?",
+      "options": [
+        "It depicts transitions between states",
+        "It has no states",
+        "It forbids transitions",
+        "It is a 2D plot command"
+      ],
+      "correct_answer": "It depicts transitions between states",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "question": "With N grid points per dimension, how many evaluations does a full D-dimensional grid require?",
+      "options": [
+        "N^D",
+        "N + D",
+        "N/D",
+        "D^N in all cases"
+      ],
+      "correct_answer": "N^D",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "question": "For independent finite-variance Monte Carlo samples, what happens to typical standard error if N is quadrupled?",
+      "options": [
+        "It is halved",
+        "It is doubled",
+        "It is quartered",
+        "It is unchanged"
+      ],
+      "correct_answer": "It is halved",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "Which is the first of the four steps in the slide procedure?",
+      "options": [
+        "Define distributions for the random inputs",
+        "Aggregate all outputs",
+        "Plot the final result",
+        "Assume the exact answer"
+      ],
+      "correct_answer": "Define distributions for the random inputs",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "After drawing an input set, what does the slide procedure do next?",
+      "options": [
+        "Perform a deterministic computation using that set",
+        "Discard it without evaluation",
+        "Choose the final answer",
+        "Redefine every distribution from the output"
+      ],
+      "correct_answer": "Perform a deterministic computation using that set",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "What is the purpose of scoring in the listed components?",
+      "options": [
+        "Combine individual run results into an estimate",
+        "Generate the model source code",
+        "Set the plot color",
+        "Guarantee zero error"
+      ],
+      "correct_answer": "Combine individual run results into an estimate",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What does the sampling rule specify?",
+      "options": [
+        "How to draw values from the input distributions",
+        "How to save a plot",
+        "Which result must be known in advance",
+        "How to eliminate all uncertainty"
+      ],
+      "correct_answer": "How to draw values from the input distributions",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What does the random-number generator supply in the Monte Carlo workflow?",
+      "options": [
+        "Random numbers used to generate samples",
+        "The final answer without computations",
+        "A replacement for the output model",
+        "A guaranteed analytical solution"
+      ],
+      "correct_answer": "Random numbers used to generate samples",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What is the function of error estimation?",
+      "options": [
+        "Assess statistical uncertainty in the simulation output",
+        "Make every run identical",
+        "Replace the sampling rule",
+        "Set the number of axes"
+      ],
+      "correct_answer": "Assess statistical uncertainty in the simulation output",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "How can P(X > α) be estimated using samples from X?",
+      "options": [
+        "Average the indicators 1[X > α]",
+        "Average α without drawing X",
+        "Count only samples below α and divide by α",
+        "Plot X without counting samples"
+      ],
+      "correct_answer": "Average the indicators 1[X > α]",
+      "pages": [
+        12,
+        17,
+        18
+      ]
+    },
+    {
+      "question": "What is the tail probability P(X > α) for a continuous density f?",
+      "options": [
+        "∫ from α to infinity of f(x) dx",
+        "∫ from negative infinity to α of f(x) dx",
+        "f(α) alone",
+        "α times f(0)"
+      ],
+      "correct_answer": "∫ from α to infinity of f(x) dx",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "question": "What domain is sampled in the π demonstration?",
+      "options": [
+        "The unit square containing a quarter unit circle",
+        "The entire infinite plane",
+        "Only the circle boundary",
+        "A cube of side two"
+      ],
+      "correct_answer": "The unit square containing a quarter unit circle",
+      "pages": [
+        19,
+        20
+      ]
+    },
+    {
+      "question": "Which test identifies a point in the quarter unit circle in the first quadrant?",
+      "options": [
+        "x² + y² ≤ 1",
+        "x + y > 2",
+        "x² + y² > 1",
+        "x = y only"
+      ],
+      "correct_answer": "x² + y² ≤ 1",
+      "pages": [
+        19,
+        21
+      ]
+    },
+    {
+      "question": "Why does the π estimator multiply the hit proportion by four?",
+      "options": [
+        "The quarter-circle area is π/4 of the unit-square area",
+        "The square has four random-number generators",
+        "The circle radius is four",
+        "Four points are required per run"
+      ],
+      "correct_answer": "The quarter-circle area is π/4 of the unit-square area",
+      "pages": [
+        19,
+        21
+      ]
+    },
+    {
+      "question": "If 785 of 1,000 uniformly sampled square points fall inside the quarter circle, what is the π estimate?",
+      "options": [
+        "3.14",
+        "0.785",
+        "1.57",
+        "4.00"
+      ],
+      "correct_answer": "3.14",
+      "pages": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "question": "What does sensitivity analysis seek to identify?",
+      "options": [
+        "How input uncertainty contributes to output uncertainty",
+        "Only the name of the input file",
+        "Whether every output is deterministic",
+        "The exact value of π"
+      ],
+      "correct_answer": "How input uncertainty contributes to output uncertainty",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "question": "Which is a benefit of sensitivity analysis identified in the module?",
+      "options": [
+        "Guiding research priorities and simplifying models",
+        "Guaranteeing all inputs have equal influence",
+        "Removing the need for assumptions",
+        "Proving that a model has no errors"
+      ],
+      "correct_answer": "Guiding research priorities and simplifying models",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "question": "Why can a single derivative-based sensitivity be insufficient for a nonlinear model?",
+      "options": [
+        "It describes sensitivity locally and may change elsewhere",
+        "Derivatives are never computable",
+        "Nonlinear models have no inputs",
+        "The derivative always equals zero"
+      ],
+      "correct_answer": "It describes sensitivity locally and may change elsewhere",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "question": "Which MATLAB option writes a numeric array as an ASCII file in the slide example?",
+      "options": [
+        "save data.dat A -ascii",
+        "plot data.dat A",
+        "grid on",
+        "title A"
+      ],
+      "correct_answer": "save data.dat A -ascii",
+      "pages": [
+        32,
+        33
+      ]
+    },
+    {
+      "question": "What does the delimiter argument in dlmwrite('data.out', A, ' ') specify?",
+      "options": [
+        "A space between values",
+        "A red marker",
+        "The number of matrix rows",
+        "The plot title"
+      ],
+      "correct_answer": "A space between values",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "question": "What effect does -append have in the shown ASCII save example?",
+      "options": [
+        "Adds the matrix to the existing file",
+        "Deletes the existing file",
+        "Converts numbers to a plot",
+        "Reads the first row only"
+      ],
+      "correct_answer": "Adds the matrix to the existing file",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "question": "What does save with -ascii do to a character array in the slide example?",
+      "options": [
+        "Writes numerical character codes",
+        "Preserves the literal text as ordinary characters",
+        "Plots each letter",
+        "Encrypts the text"
+      ],
+      "correct_answer": "Writes numerical character codes",
+      "pages": [
+        32,
+        36
+      ]
+    },
+    {
+      "question": "For the numeric ASCII example, what is required for load to produce a rectangular matrix?",
+      "options": [
+        "Each line must contain the same number of values",
+        "Each line must contain a different number of values",
+        "The file must contain a graph",
+        "Every value must be a character"
+      ],
+      "correct_answer": "Each line must contain the same number of values",
+      "pages": [
+        37
+      ]
+    },
+    {
+      "question": "After load timetemp.dat in the slide example, what does timetemp(2,:) select?",
+      "options": [
+        "The entire second row",
+        "The second column only",
+        "The second scalar in the first row",
+        "All but the second row"
+      ],
+      "correct_answer": "The entire second row",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "question": "Which command plots the slide time-temperature data using black asterisks?",
+      "options": [
+        "plot(time,temp,'k*')",
+        "plot(time,temp,'r-')",
+        "bar3(time,temp)",
+        "xlabel('k*')"
+      ],
+      "correct_answer": "plot(time,temp,'k*')",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "question": "Which sequence plots a function in 2D as described in the slide?",
+      "options": [
+        "Define x, calculate y, then call plot(x,y)",
+        "Call zlabel before defining data",
+        "Use load to draw every curve automatically",
+        "Call axis square instead of plot"
+      ],
+      "correct_answer": "Define x, calculate y, then call plot(x,y)",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "What does axis equal control?",
+      "options": [
+        "The scale factors of the axes",
+        "The name of the output file",
+        "The color of every line",
+        "The number of random samples"
+      ],
+      "correct_answer": "The scale factors of the axes",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "How does axis square differ from axis equal?",
+      "options": [
+        "It makes the plot box square rather than specifically equalizing axis scale factors",
+        "It saves a square matrix to ASCII",
+        "It sets a red asterisk marker",
+        "It always plots a square function"
+      ],
+      "correct_answer": "It makes the plot box square rather than specifically equalizing axis scale factors",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "In plot(x,y,'r*'), what does the LineSpec indicate?",
+      "options": [
+        "Red asterisk markers",
+        "Black dashed lines",
+        "Blue circle markers",
+        "A green solid line"
+      ],
+      "correct_answer": "Red asterisk markers",
+      "pages": [
+        45,
+        46
+      ]
+    },
+    {
+      "question": "What does hold on allow in the plotted example?",
+      "options": [
+        "Adding a subsequent plot without replacing the current one",
+        "Appending matrix rows to a file",
+        "Changing a 2D plot into a 3D plot",
+        "Sampling from a distribution"
+      ],
+      "correct_answer": "Adding a subsequent plot without replacing the current one",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "question": "Which MATLAB command labels the vertical axis of a 2D plot?",
+      "options": [
+        "ylabel('Temperature')",
+        "xlabel('Temperature')",
+        "save('Temperature')",
+        "hold on"
+      ],
+      "correct_answer": "ylabel('Temperature')",
+      "pages": [
+        44,
+        46
+      ]
+    },
+    {
+      "question": "Which command plots 3D coordinate vectors?",
+      "options": [
+        "plot3(x,y,z)",
+        "plot(x,y) only",
+        "xlabel(z)",
+        "dlmwrite(x,y,z)"
+      ],
+      "correct_answer": "plot3(x,y,z)",
+      "pages": [
+        50,
+        51
+      ]
+    },
+    {
+      "question": "Which command labels the third axis of a 3D figure?",
+      "options": [
+        "zlabel('z')",
+        "ylabel('z')",
+        "grid('z')",
+        "save('z')"
+      ],
+      "correct_answer": "zlabel('z')",
+      "pages": [
+        50,
+        51
+      ]
+    },
+    {
+      "question": "What is a potential use of randomized moves in optimization?",
+      "options": [
+        "Escaping a local minimum, without a guarantee of finding the global minimum",
+        "Making local minima impossible in all functions",
+        "Determining the global minimum with one sample",
+        "Replacing the objective function"
+      ],
+      "correct_answer": "Escaping a local minimum, without a guarantee of finding the global minimum",
+      "pages": [
+        13
+      ]
+    }
+  ]
+}

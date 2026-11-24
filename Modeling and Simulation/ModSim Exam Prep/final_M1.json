@@ -1,0 +1,760 @@
+{
+  "module": "M1",
+  "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+  "sections": [
+    {
+      "heading": "Foundations and system components",
+      "paragraphs": [
+        "Modeling and simulation is a problem-based discipline supporting repeated hypothesis testing; its four precepts are modeling, simulation, visualization, and analysis. A system is a collection of interacting or interdependent elements working toward an end, and may be physical (already existing) or notional (a proposed concept). A model represents a system; simulation imitates its behavior over time. The overall M&S process develops a model, executes it, and analyzes output to support decisions."
+      ],
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "heading": "System structure and boundaries",
+      "paragraphs": [
+        "An entity is an object of interest, an attribute is its property, and an activity causes system changes. The system state describes the entities, attributes, and activities at a point in time. Endogenous activities occur within the system boundary; exogenous activities occur outside it. The slides classify systems with exogenous activities as open, and those without them as closed. Establishing the boundary and identifying entities, attributes, and activities defines model structure; data supplies attribute values and activity relationships."
+      ],
+      "pages": [
+        15,
+        18,
+        20,
+        22
+      ]
+    },
+    {
+      "heading": "System behavior and modeling principles",
+      "paragraphs": [
+        "Discrete state variables change at separate instants, whereas continuous state variables change continuously over time. A sampled-data system is intrinsically continuous but observed only at discrete points. Models are useful when direct study is inaccessible, dangerous, unacceptable, or impossible because the system does not yet exist. Block building divides a system into interconnected parts; relevance selects important aspects, accuracy demands correct information, and aggregation combines individual entities into larger ones."
+      ],
+      "pages": [
+        9,
+        20,
+        21,
+        25
+      ]
+    },
+    {
+      "heading": "Analytical solutions and simulation",
+      "paragraphs": [
+        "Simple models can sometimes be evaluated analytically using mathematics; numerical simulation can evaluate complex models and gather data to estimate their properties. Simulation facilitates testing alternatives, diagnosing interactions, and identifying bottlenecks without changing the real system. Limitations include the expertise, time, and cost needed to build and interpret models. Simulation is not inherently inexpensive or fast, despite the broad comparison on page 33."
+      ],
+      "pages": [
+        26,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "heading": "Worked falling-object model and slide correction",
+      "paragraphs": [
+        "With initial height s=1000 ft, initial upward velocity v=100 ft/s, and acceleration -32 ft/s², h(t)=-16t²+100t+1000 and velocity is 100-32t. At t=1 s, h=1084 ft; at t=2 s, h=1136 ft. Page 13's table instead shows 1052 and 972: these do not match the displayed code. The code comment also swaps the meanings of v and s; v is initial velocity and s is initial height."
+      ],
+      "pages": [11, 13]
+    },
+    {
+      "heading": "Model classifications and the development cycle",
+      "paragraphs": [
+        "Models can be static or dynamic, deterministic or stochastic, and continuous or discrete. A deterministic simulation produces a unique output for a specified input; a stochastic simulation uses random inputs and requires statistical analysis of random outputs. The model-code-execute-analyze cycle associates modeling, development, computational, and data/information technologies with the respective phases. Probability and statistics provide random variates for uncertain inputs and methods for analyzing stochastic output."
+      ],
+      "pages": [
+        30,
+        38,
+        39,
+        57
+      ]
+    },
+    {
+      "heading": "Simulation approaches",
+      "paragraphs": [
+        "Monte Carlo simulation repeatedly samples input distributions and computes outputs to examine output variability. Continuous simulation represents variables as continuous functions of time and often uses differential equations. Discrete-event simulation changes system variables at distinct event times and advances from one event to the next. These methods differ in their treatment of inputs and time; randomness is not required of every simulation."
+      ],
+      "pages": [
+        42,
+        43,
+        44,
+        57
+      ]
+    },
+    {
+      "heading": "Fidelity, resolution, and modeling paradigms",
+      "paragraphs": [
+        "Fidelity describes how closely a model matches reality; low fidelity can be acceptable for aspects unimportant to the study. Resolution or granularity is the level of detail. Physics-based models derive equations from physical principles; finite element modeling decomposes complex objects into smaller elements. Data-based models use data describing the subject; agent-based modeling investigates interacting entities and social phenomena; aggregate modeling combines smaller objects or actions; hybrid modeling combines paradigms."
+      ],
+      "pages": [
+        45,
+        46,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "heading": "Simulation participation and applications",
+      "paragraphs": [
+        "Live simulation involves real people operating real systems; virtual simulation involves real people operating simulated systems; constructive simulation uses real inputs that simulated people execute in simulated systems. Training aims at learning, analysis examines system behavior and performance, and experimentation explores solution spaces. Engineering supports design and testing, while acquisition evaluates proposed systems and cost-effectiveness across the system life cycle."
+      ],
+      "pages": [
+        51,
+        52,
+        53,
+        55,
+        56
+      ]
+    },
+    {
+      "heading": "MATLAB basics",
+      "paragraphs": [
+        "MATLAB stands for Matrix Laboratory and supports mathematical computation, visualization, and programming. The workspace displays variables and command history records entered commands. Variable names begin with a letter, may contain letters, digits, and underscores, and are case-sensitive; avoid naming variables after built-in functions. help documents functions, who lists variables, whos provides more details, and clear removes variables. Numeric values default to double; logical values represent true or false."
+      ],
+      "pages": [
+        73,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "heading": "MATLAB arrays and indexing",
+      "paragraphs": [
+        "An r-by-c matrix has r rows and c columns; a row vector has one row and a column vector has one column. MATLAB indexing starts at 1, and matrix subscripts specify row before column. size returns dimensions, numel counts all elements, and length returns the largest dimension for a matrix. reshape changes dimensions; fliplr reverses columns, flipud reverses rows, rot90 rotates counterclockwise, and repmat tiles copies."
+      ],
+      "pages": [
+        93,
+        95,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "heading": "MATLAB calculations and source cautions",
+      "paragraphs": [
+        "For a matrix, sum, prod, min, and max operate down columns by default; specifying dimension 2 operates rowwise. Array multiplication, division, and exponentiation use dotted operators such as .*; matrix multiplication uses * and requires the left column count to equal the right row count. The result has the left matrix’s row count and the right matrix’s column count. Page 88 incorrectly implies sign(0) is -1: it is 0. Page 113 states arrays must be the same size, but compatible sizes can also be implicitly expanded in modern MATLAB. Page 107 overgeneralizes elementwise function behavior: reduction functions such as sum do not preserve the input size."
+      ],
+      "pages": [
+        88,
+        107,
+        109,
+        111,
+        113,
+        114,
+        116,
+        117
+      ],
+      "matlab_checks": [
+        {
+          "expression": "sign(0)",
+          "expected": "0"
+        },
+        {
+          "expression": "size(sum(ones(2,3)))",
+          "expected": "[1 3]"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "Which four precepts underpin the M&S curriculum in the slides?",
+      "options": [
+        "Modeling, simulation, visualization, and analysis",
+        "Planning, purchasing, staffing, and disposal",
+        "Sampling, sorting, searching, and storage",
+        "Hardware, software, networking, and security"
+      ],
+      "correct_answer": "Modeling, simulation, visualization, and analysis",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "question": "What distinguishes a notional system from a physical system in the slides?",
+      "options": [
+        "It is a plan or concept for something physical that does not yet exist",
+        "It already exists physically",
+        "It must be a computer program",
+        "It cannot be modeled"
+      ],
+      "correct_answer": "It is a plan or concept for something physical that does not yet exist",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "question": "What is an entity in system modeling?",
+      "options": [
+        "An object of interest in the system",
+        "A property of an object",
+        "A change-causing process",
+        "The system boundary"
+      ],
+      "correct_answer": "An object of interest in the system",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "In a factory model, what is a property of a machine called?",
+      "options": [
+        "An attribute",
+        "An activity",
+        "An environment",
+        "A simulation run"
+      ],
+      "correct_answer": "An attribute",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "What is the role of an activity in the slides’ system terminology?",
+      "options": [
+        "It is a process that causes system changes",
+        "It is a property of an entity",
+        "It is the system boundary",
+        "It is always external to the system"
+      ],
+      "correct_answer": "It is a process that causes system changes",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "An activity occurring outside the chosen system boundary is called what?",
+      "options": [
+        "Exogenous",
+        "Endogenous",
+        "Continuous",
+        "Aggregate"
+      ],
+      "correct_answer": "Exogenous",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What defines a sampled-data system?",
+      "options": [
+        "It is intrinsically continuous but information is available at discrete times",
+        "Its state changes only at events",
+        "It has no outside activities",
+        "It has no measurable variables"
+      ],
+      "correct_answer": "It is intrinsically continuous but information is available at discrete times",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "question": "Which is a reason to model rather than directly engage a system?",
+      "options": [
+        "The system may be dangerous or may not yet exist",
+        "Models always reproduce every detail",
+        "Modeling never requires data",
+        "Analytical solutions are always impossible"
+      ],
+      "correct_answer": "The system may be dangerous or may not yet exist",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "question": "What belongs to establishing a model structure?",
+      "options": [
+        "Determining the boundary and identifying entities, attributes, and activities",
+        "Only collecting final output statistics",
+        "Executing a model before identifying its boundary",
+        "Removing all entities from consideration"
+      ],
+      "correct_answer": "Determining the boundary and identifying entities, attributes, and activities",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "question": "What does the relevance principle recommend?",
+      "options": [
+        "Include only aspects relevant to the investigation",
+        "Represent every physical detail",
+        "Use only randomly generated data",
+        "Avoid defining system inputs"
+      ],
+      "correct_answer": "Include only aspects relevant to the investigation",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "What does aggregation do in modeling?",
+      "options": [
+        "Groups individual entities into larger entities",
+        "Converts all variables into constants",
+        "Guarantees exact predictions",
+        "Removes the model boundary"
+      ],
+      "correct_answer": "Groups individual entities into larger entities",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "When can an analytical solution be useful?",
+      "options": [
+        "When the model is simple enough for mathematical methods to yield the desired information",
+        "Only when all system behavior is random",
+        "Only when the actual system is inaccessible",
+        "When no mathematical representation exists"
+      ],
+      "correct_answer": "When the model is simple enough for mathematical methods to yield the desired information",
+      "pages": [
+        26,
+        32
+      ]
+    },
+    {
+      "question": "Which is an advantage of simulation described in the slides?",
+      "options": [
+        "Testing changes and policies without affecting the real system",
+        "Eliminating all uncertainty in predictions",
+        "Removing the need for domain expertise",
+        "Guaranteeing that modeling is inexpensive"
+      ],
+      "correct_answer": "Testing changes and policies without affecting the real system",
+      "pages": [
+        34,
+        35
+      ]
+    },
+    {
+      "question": "Which limitation of simulation is identified in the slides?",
+      "options": [
+        "Model development and interpretation can require expertise, time, and expense",
+        "It cannot represent complex systems",
+        "It never uses numerical methods",
+        "It cannot help identify bottlenecks"
+      ],
+      "correct_answer": "Model development and interpretation can require expertise, time, and expense",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "question": "Which sequence describes the M&S development cycle presented?",
+      "options": [
+        "Model, code, execute, analyze",
+        "Execute, acquire, discard, model",
+        "Visualize, procure, close, eliminate",
+        "Sample, stop, delete, deploy"
+      ],
+      "correct_answer": "Model, code, execute, analyze",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "question": "What makes a simulation deterministic?",
+      "options": [
+        "A given input set produces a unique determined output",
+        "All inputs are random variables",
+        "The system necessarily advances by events",
+        "The model is always physical"
+      ],
+      "correct_answer": "A given input set produces a unique determined output",
+      "pages": [
+        57
+      ]
+    },
+    {
+      "question": "Why are statistical techniques important for stochastic simulation?",
+      "options": [
+        "Random inputs produce random outputs that need analysis",
+        "They remove all random variation",
+        "They guarantee a single output for every input distribution",
+        "They replace model construction"
+      ],
+      "correct_answer": "Random inputs produce random outputs that need analysis",
+      "pages": [
+        39,
+        57
+      ]
+    },
+    {
+      "question": "What is the central procedure in Monte Carlo simulation?",
+      "options": [
+        "Repeatedly sample input distributions and calculate outputs",
+        "Advance exclusively from one event to the next",
+        "Solve only a single differential equation analytically",
+        "Operate real equipment with real people"
+      ],
+      "correct_answer": "Repeatedly sample input distributions and calculate outputs",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "question": "Which model type commonly uses differential equations for variables evolving with time?",
+      "options": [
+        "Continuous simulation",
+        "Constructive simulation",
+        "Live simulation",
+        "Static physical modeling"
+      ],
+      "correct_answer": "Continuous simulation",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "question": "How does a discrete-event simulation advance time?",
+      "options": [
+        "From one event to the next",
+        "Only in fixed one-second increments",
+        "By ignoring event occurrences",
+        "Only backward from the final state"
+      ],
+      "correct_answer": "From one event to the next",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "What does fidelity describe?",
+      "options": [
+        "How closely a model or simulation matches reality",
+        "The number of rows in a matrix",
+        "The duration of a simulation run",
+        "The number of input distributions"
+      ],
+      "correct_answer": "How closely a model or simulation matches reality",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "question": "What does higher resolution mean in the slides?",
+      "options": [
+        "More detail is included in the simulation",
+        "The simulation necessarily matches reality perfectly",
+        "The model cannot be aggregated",
+        "The simulation has no random input"
+      ],
+      "correct_answer": "More detail is included in the simulation",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "question": "What is the basic idea of finite element modeling?",
+      "options": [
+        "Decompose a complicated object into small elements and model them",
+        "Replace all physical laws with random numbers",
+        "Represent only aggregate populations",
+        "Require real people to operate real systems"
+      ],
+      "correct_answer": "Decompose a complicated object into small elements and model them",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "question": "Which approach combines more than one modeling paradigm?",
+      "options": [
+        "Hybrid modeling",
+        "Data-based modeling alone",
+        "Finite element modeling alone",
+        "Physics-based modeling alone"
+      ],
+      "correct_answer": "Hybrid modeling",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "question": "Which participation category involves real people operating simulated systems?",
+      "options": [
+        "Virtual simulation",
+        "Live simulation",
+        "Constructive simulation",
+        "Analytical solution"
+      ],
+      "correct_answer": "Virtual simulation",
+      "pages": [
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "question": "How is constructive simulation characterized in the slides?",
+      "options": [
+        "Real people provide inputs executed by simulated people in simulated systems",
+        "Real people operate real systems",
+        "Only physical models can be used",
+        "No human inputs are permitted"
+      ],
+      "correct_answer": "Real people provide inputs executed by simulated people in simulated systems",
+      "pages": [
+        53
+      ]
+    },
+    {
+      "question": "What is the main intent of a training application?",
+      "options": [
+        "Produce learning in the participant",
+        "Calculate a matrix determinant",
+        "Eliminate the need for testing",
+        "Guarantee acquisition funding"
+      ],
+      "correct_answer": "Produce learning in the participant",
+      "pages": [
+        55
+      ]
+    },
+    {
+      "question": "What is an acquisition application intended to evaluate before committing funds?",
+      "options": [
+        "Cost-effectiveness and correctness of a proposed system",
+        "Only the color of visualization graphics",
+        "Only the length of a MATLAB vector",
+        "Whether all physical systems are continuous"
+      ],
+      "correct_answer": "Cost-effectiveness and correctness of a proposed system",
+      "pages": [
+        56
+      ]
+    },
+    {
+      "question": "What does MATLAB stand for?",
+      "options": [
+        "Matrix Laboratory",
+        "Mathematical Logic Table",
+        "Model Analysis Testing Language",
+        "Machine Learning Tabulator"
+      ],
+      "correct_answer": "Matrix Laboratory",
+      "pages": [
+        73
+      ]
+    },
+    {
+      "question": "Which MATLAB command displays more detail about workspace variables?",
+      "options": [
+        "whos",
+        "clear",
+        "quit",
+        "format"
+      ],
+      "correct_answer": "whos",
+      "pages": [
+        83
+      ]
+    },
+    {
+      "question": "Which is a valid MATLAB variable name under the slide rules?",
+      "options": [
+        "value_1",
+        "1value",
+        "value-1",
+        "for"
+      ],
+      "correct_answer": "value_1",
+      "pages": [
+        82
+      ]
+    },
+    {
+      "question": "What is the default MATLAB numeric type described in the slides?",
+      "options": [
+        "double",
+        "int8",
+        "logical",
+        "char"
+      ],
+      "correct_answer": "double",
+      "pages": [
+        84
+      ]
+    },
+    {
+      "question": "What are the dimensions of a column vector with five elements?",
+      "options": [
+        "5 by 1",
+        "1 by 5",
+        "5 by 5",
+        "1 by 1"
+      ],
+      "correct_answer": "5 by 1",
+      "pages": [
+        93
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size(ones(5,1))",
+          "expected": "[5 1]"
+        }
+      ]
+    },
+    {
+      "question": "In MATLAB, which expression addresses row 2, column 3 of matrix A?",
+      "options": [
+        "A(2,3)",
+        "A(3,2)",
+        "A[2,3]",
+        "A(0,2)"
+      ],
+      "correct_answer": "A(2,3)",
+      "pages": [
+        97,
+        98
+      ]
+    },
+    {
+      "question": "For a 2-by-3 matrix, what does numel return?",
+      "options": [
+        "6",
+        "3",
+        "2",
+        "5"
+      ],
+      "correct_answer": "6",
+      "pages": [
+        100
+      ],
+      "matlab_checks": [
+        {
+          "expression": "numel(ones(2,3))",
+          "expected": "6"
+        }
+      ]
+    },
+    {
+      "question": "Which function reverses matrix columns from left to right?",
+      "options": [
+        "fliplr",
+        "flipud",
+        "reshape",
+        "numel"
+      ],
+      "correct_answer": "fliplr",
+      "pages": [
+        102
+      ]
+    },
+    {
+      "question": "What does repmat(A,2,3) construct?",
+      "options": [
+        "A 2-by-3 arrangement of copies of A",
+        "A matrix with exactly 2 rows and 3 columns regardless of A",
+        "The second and third elements of A",
+        "A rotated copy of A"
+      ],
+      "correct_answer": "A 2-by-3 arrangement of copies of A",
+      "pages": [
+        104
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size(repmat(ones(2,2),2,3))",
+          "expected": "[4 6]"
+        }
+      ]
+    },
+    {
+      "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
+      "options": [
+        "1 by c",
+        "r by 1",
+        "r by c",
+        "1 by 1 in every case"
+      ],
+      "correct_answer": "1 by c",
+      "pages": [
+        109
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size(sum(ones(2,3)))",
+          "expected": "[1 3]"
+        }
+      ]
+    },
+    {
+      "question": "Which MATLAB operation multiplies corresponding array elements?",
+      "options": [
+        "A .* B",
+        "A * B",
+        "A + B followed by det",
+        "A transpose B"
+      ],
+      "correct_answer": "A .* B",
+      "pages": [
+        113,
+        114,
+        117
+      ]
+    },
+    {
+      "question": "If A is 2-by-3 and B is 3-by-4, what is the size of A * B?",
+      "options": [
+        "2 by 4",
+        "3 by 3",
+        "4 by 2",
+        "2 by 3"
+      ],
+      "correct_answer": "2 by 4",
+      "pages": [
+        116
+      ],
+      "matlab_checks": [
+        {
+          "expression": "size(ones(2,3)*ones(3,4))",
+          "expected": "[2 4]"
+        }
+      ]
+    },
+    {
+      "question": "Which MATLAB function calculates the determinant of square matrix A?",
+      "options": [
+        "det(A)",
+        "size(A)",
+        "numel(A)",
+        "repmat(A,2,2)"
+      ],
+      "correct_answer": "det(A)",
+      "pages": [
+        118
+      ]
+    },
+    {
+      "question": "Which function returns the natural logarithm of x in MATLAB?",
+      "options": [
+        "log(x)",
+        "log10(x)",
+        "log2(x)",
+        "exp(x)"
+      ],
+      "correct_answer": "log(x)",
+      "pages": [
+        88
+      ]
+    }
+  ]
+}

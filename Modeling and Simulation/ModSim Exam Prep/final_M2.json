@@ -1,0 +1,676 @@
+{
+  "module": "M2",
+  "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+  "sections": [
+    {
+      "heading": "Sets and functions",
+      "paragraphs": [
+        "A set contains distinct elements; a subset contains only elements of its reference set, and disjoint sets share no elements. Union includes either set, intersection includes both, A−B includes elements only in A, and A’s complement contains the elements of the universal set outside A.",
+        "Worked example: U={2,4,6,8,10,12}, A={2,4,10}, B={4,6,8,10}. A∪B={2,4,6,8,10}; A∩B={4,10}; A−B={2}; B−A={6,8}; Aᶜ={6,8,12}.",
+        "A function maps each domain element to exactly one codomain element. Its range is the set actually reached; onto means the range equals the codomain, and one-to-one means distinct inputs have distinct outputs. A function has an inverse on its full codomain when it is both one-to-one and onto. For f(x)=mx+b on the reals with m≠0, f⁻¹(y)=(y−b)/m."
+      ],
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "heading": "Probability and random variables",
+      "paragraphs": [
+        "A probability space consists of sample space S, an event σ-algebra, and probability measure P. Events are measurable subsets of S; P(S)=1, and probabilities of disjoint events add. A σ-algebra includes S and is closed under complements and countable unions. Page 15’s claim that any σ-algebra on k outcomes has 2^k events is too broad: this count applies to the full power set.",
+        "For the three-sided die, P(B)=1/6, P(C)=1/3 and P(D)=1/2; therefore P(B or C)=1/2 and P(C or D)=5/6. The full event collection has 2³=8 events.",
+        "A random variable assigns real numbers to outcomes. Its cumulative distribution F(x)=P(X≤x) is nondecreasing, and P(a<X≤b)=F(b)−F(a). For a continuous distribution with density f, interval probabilities are areas under f, and F(x) is the integral of f up to x."
+      ],
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "heading": "Distributions and random variates",
+      "paragraphs": [
+        "Uniform(a,b) has constant density over its interval; triangular(a,m,b) is useful when minimum, most likely value, and maximum are known but the exact shape is not. Exponential interarrival times have mean m and rate λ=1/m; for x≥0, P(X>x)=exp(−λx). Normal(m,σ) describes variability around a mean, with σ the standard deviation.",
+        "Page 25’s displayed exponential density omits the rate multiplier: the normalized density is λ exp(−λx) for x≥0. A continuous uniform distribution gives equal probabilities to equal-length intervals, not a positive equal probability to each individual real value.",
+        "Simulation first generates a uniform random number and transforms it into a random variate with the desired distribution. A linear congruential generator uses Zₖ₊₁=(aZₖ+c) mod m and Uₖ=Zₖ/m; its integers repeat after a period no longer than m. For a full cycle, c and m must be relatively prime; every prime factor of m divides a−1; and if 4 divides m, then 4 divides a−1."
+      ],
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "heading": "Input and output modeling",
+      "paragraphs": [
+        "Structural modeling identifies entities, locations, resources and processes; data modeling supplies quantitative inputs such as interarrival times, service times, schedules, failures and travel times.",
+        "Direct sample use preserves recorded values but limited samples may miss rare possibilities and repeated retrieval can be costly. An empirical distribution represents observed samples and can generate arbitrarily long streams, but cannot produce unobserved outliers. A fitted theoretical distribution can smooth sample irregularities, but fitting takes effort and a good fit may not exist. Complex input-data cases include no data, multimodal, correlated, and nonstationary data.",
+        "Output data analysis converts simulation output into information about system performance; the slides introduce the confidence interval for a mean and identify more complex analysis situations without giving a detailed procedure."
+      ],
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "heading": "DES elements and clock advance",
+      "paragraphs": [
+        "Discrete-event simulation represents a system whose modeled state changes at separated event times. The module describes its DES examples as stochastic and dynamic; stochasticity is not inherent to every possible DES model. An entity moves through the system, attributes carry entity-specific information, resources provide service, and queues hold entities waiting for occupied resources. An event changes system state.",
+        "Resource capacity is the number served simultaneously; utilization is busy time divided by total observed time. The simulation executive controls clock advance and event execution. A next-event list holds scheduled event times; timing selects the next event, the event routine updates state, accumulators gather performance information, and the report generator summarizes results.",
+        "Fixed-increment advancement updates at chosen time steps and can force between-step events onto a boundary. Next-event advancement moves directly to the earliest scheduled event, updates state there, and skips inactive intervals. The simulation clock represents elapsed simulated time, not necessarily elapsed wall-clock time."
+      ],
+      "pages": [
+        44,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ]
+    },
+    {
+      "heading": "Queue behavior and worked example",
+      "paragraphs": [
+        "A queueing model describes arrivals, service and the rule for selecting waiting customers. Variation in arrival and service times can cause waiting. FCFS/FIFO serves the earliest arrival first; LIFO/LCFS serves the most recent first; priority and shortest-processing-time rules select differently. Page 66 mistakenly labels last-in-first-out as FIFO; it should be LIFO.",
+        "Balking means deciding not to enter a line, reneging means leaving after joining but before service, and jockeying means switching lines. A design may balance the cost of service capacity against the cost of waiting. Systems may have single or multiple servers and single or multiple service phases.",
+        "For the page 78–79 single-server FCFS example, arrivals are 0,4,5,9,11,15 and service times are 2,3,1,4,2,3. Service starts at 0,4,7,9,13,15 and ends at 2,7,8,13,15,18. Waits are 0,0,2,0,2,0; total wait is 4 and mean wait is 4/6. Customer 5 spends 15−11=4 time units in the system.",
+        "For an initially idle single server, startᵢ=max(arrivalᵢ, endᵢ₋₁), waitᵢ=startᵢ−arrivalᵢ, endᵢ=startᵢ+serviceᵢ, and time in system=endᵢ−arrivalᵢ. Idle time before a customer is max(0, arrivalᵢ−endᵢ₋₁). Page 77 reverses the waiting-time subtraction and incorrectly says the first service always begins at zero; it begins at the first arrival when the initially idle server is available. Its interarrival indexing is also inconsistent."
+      ],
+      "pages": [
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "Which set contains elements in both A and B?",
+      "options": [
+        "A∩B",
+        "A∪B",
+        "A−B",
+        "Aᶜ"
+      ],
+      "correct_answer": "A∩B",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "question": "For A={2,4,10} and B={4,6,8,10}, what is B−A?",
+      "options": [
+        "{6,8}",
+        "{2}",
+        "{4,10}",
+        "{2,6,8}"
+      ],
+      "correct_answer": "{6,8}",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "question": "For U={2,4,6,8,10,12} and A={2,4,10}, what is A’s complement?",
+      "options": [
+        "{6,8,12}",
+        "{2,4,10}",
+        "{4,6,8,10}",
+        "{12}"
+      ],
+      "correct_answer": "{6,8,12}",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "question": "When does a function have an inverse on its full codomain?",
+      "options": [
+        "When it is one-to-one and onto",
+        "When it is onto only",
+        "When every input maps to two outputs",
+        "When its range is empty"
+      ],
+      "correct_answer": "When it is one-to-one and onto",
+      "pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "question": "What is the inverse of f(x)=2x+3 on the real numbers?",
+      "options": [
+        "(y−3)/2",
+        "2y+3",
+        "(y+3)/2",
+        "2y−3"
+      ],
+      "correct_answer": "(y−3)/2",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "question": "Which three components form a probability space?",
+      "options": [
+        "Sample space, event σ-algebra and probability measure",
+        "Domain, slope and intercept",
+        "Queue, server and customer",
+        "Mean, median and mode"
+      ],
+      "correct_answer": "Sample space, event σ-algebra and probability measure",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "question": "For the three-sided die with probabilities B=1/6 and C=1/3, what is P(B or C)?",
+      "options": [
+        "1/2",
+        "1/6",
+        "2/3",
+        "5/6"
+      ],
+      "correct_answer": "1/2",
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "question": "How many events are in the full power set of a three-outcome sample space?",
+      "options": [
+        "8",
+        "3",
+        "6",
+        "9"
+      ],
+      "correct_answer": "8",
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "question": "What does a random variable associate with each experimental outcome?",
+      "options": [
+        "A real number",
+        "A queue discipline",
+        "A different sample space",
+        "A simulation clock"
+      ],
+      "correct_answer": "A real number",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "question": "What does F(x) represent for random variable X?",
+      "options": [
+        "P(X≤x)",
+        "P(X>x) always",
+        "The mean of X",
+        "The density at x for every distribution"
+      ],
+      "correct_answer": "P(X≤x)",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "question": "How is P(a<X≤b) calculated from a CDF?",
+      "options": [
+        "F(b)−F(a)",
+        "F(a)−F(b)",
+        "F(a)+F(b)",
+        "1−F(b)−F(a)"
+      ],
+      "correct_answer": "F(b)−F(a)",
+      "pages": [
+        20,
+        22
+      ]
+    },
+    {
+      "question": "For a continuous density, what is the total area under its curve?",
+      "options": [
+        "1",
+        "0",
+        "Its mean",
+        "Its standard deviation"
+      ],
+      "correct_answer": "1",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "question": "Which distribution is useful when minimum, most likely, and maximum values are known but the exact shape is not?",
+      "options": [
+        "Triangular",
+        "Normal",
+        "Exponential",
+        "Uniform with no specified bounds"
+      ],
+      "correct_answer": "Triangular",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "question": "What is the density of a uniform distribution on [2,6] within that interval?",
+      "options": [
+        "1/4",
+        "1/6",
+        "1/2",
+        "4"
+      ],
+      "correct_answer": "1/4",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "question": "If exponential interarrival times have mean 5 time units, what is their rate?",
+      "options": [
+        "0.2 per time unit",
+        "5 per time unit",
+        "25 per time unit",
+        "1 per time unit"
+      ],
+      "correct_answer": "0.2 per time unit",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "Which distribution is described as modeling variability around an average with parameters mean and standard deviation?",
+      "options": [
+        "Normal",
+        "Triangular",
+        "Exponential only",
+        "Discrete uniform only"
+      ],
+      "correct_answer": "Normal",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "question": "What are the two basic stages of random variate generation in the module?",
+      "options": [
+        "Generate a uniform random number, then transform it",
+        "Calculate the sample mean, then discard it",
+        "Schedule an event, then stop",
+        "Select a queue, then set its capacity"
+      ],
+      "correct_answer": "Generate a uniform random number, then transform it",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "question": "In a linear congruential generator, how is Uₖ obtained from integer Zₖ and modulus m?",
+      "options": [
+        "Uₖ=Zₖ/m",
+        "Uₖ=m/Zₖ",
+        "Uₖ=Zₖ+m",
+        "Uₖ=Zₖm"
+      ],
+      "correct_answer": "Uₖ=Zₖ/m",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "question": "Why select LCG constants and a seed carefully?",
+      "options": [
+        "The sequence eventually repeats, so a long period is desirable",
+        "The sequence can never repeat",
+        "The modulus determines service discipline",
+        "A seed removes the need for a distribution"
+      ],
+      "correct_answer": "The sequence eventually repeats, so a long period is desirable",
+      "pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "question": "Which belongs to structural rather than data modeling?",
+      "options": [
+        "Defining entities and processes",
+        "Estimating interarrival times",
+        "Specifying failure rates",
+        "Estimating service-time distributions"
+      ],
+      "correct_answer": "Defining entities and processes",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "question": "What is a limitation of using an empirical distribution built from observed samples?",
+      "options": [
+        "It cannot generate unobserved outlying values",
+        "It can generate only one value in total",
+        "It requires no observed data",
+        "It always provides a perfect theoretical fit"
+      ],
+      "correct_answer": "It cannot generate unobserved outlying values",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "question": "What is one advantage of fitting a theoretical distribution to sample data?",
+      "options": [
+        "It can smooth irregularities caused by limited samples",
+        "It guarantees a good fit for every dataset",
+        "It only generates previously recorded values",
+        "It eliminates all modeling effort"
+      ],
+      "correct_answer": "It can smooth irregularities caused by limited samples",
+      "pages": [
+        36,
+        37
+      ]
+    },
+    {
+      "question": "What is the purpose of output data analysis?",
+      "options": [
+        "Turn simulation output into information about system performance",
+        "Define the system’s physical entities only",
+        "Replace all random inputs with constants",
+        "Ensure every run has the same output"
+      ],
+      "correct_answer": "Turn simulation output into information about system performance",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "question": "In DES, when are modeled state changes represented?",
+      "options": [
+        "At separated event times",
+        "Continuously at every real-valued instant",
+        "Only once before the clock starts",
+        "Only at the end of the experiment"
+      ],
+      "correct_answer": "At separated event times",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "question": "Which DES element carries information specific to an individual entity?",
+      "options": [
+        "Attribute",
+        "Global clock",
+        "Report generator",
+        "Event list"
+      ],
+      "correct_answer": "Attribute",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "question": "A resource is busy for 6 hours of a 10-hour observation. What is its utilization?",
+      "options": [
+        "60%",
+        "40%",
+        "6%",
+        "166.7%"
+      ],
+      "correct_answer": "60%",
+      "pages": [
+        52
+      ]
+    },
+    {
+      "question": "What does the simulation executive primarily control?",
+      "options": [
+        "Advancement of simulated time and execution of events",
+        "Only the physical location of servers",
+        "Only the choice of chart colors",
+        "The number of real-world customers"
+      ],
+      "correct_answer": "Advancement of simulated time and execution of events",
+      "pages": [
+        55
+      ]
+    },
+    {
+      "question": "What does the next-event list contain?",
+      "options": [
+        "Scheduled future event times",
+        "Only completed customer waits",
+        "All possible distributions",
+        "A list of model authors"
+      ],
+      "correct_answer": "Scheduled future event times",
+      "pages": [
+        57
+      ]
+    },
+    {
+      "question": "How does next-event time advance differ from fixed-increment advance?",
+      "options": [
+        "It jumps to the next scheduled event and skips inactive intervals",
+        "It always updates every fixed minute",
+        "It forces all events to interval boundaries",
+        "It cannot update state variables"
+      ],
+      "correct_answer": "It jumps to the next scheduled event and skips inactive intervals",
+      "pages": [
+        61,
+        62
+      ]
+    },
+    {
+      "question": "What are two causes of queues named in the slides?",
+      "options": [
+        "Variation in arrivals and service",
+        "Constant arrival and service definitions alone",
+        "Only the number of report pages",
+        "The use of a simulation clock"
+      ],
+      "correct_answer": "Variation in arrivals and service",
+      "pages": [
+        63
+      ]
+    },
+    {
+      "question": "Under FCFS, who is selected first from the waiting line?",
+      "options": [
+        "The customer who arrived earliest",
+        "The most recent arrival",
+        "The customer with the longest service time",
+        "A randomly selected customer in every case"
+      ],
+      "correct_answer": "The customer who arrived earliest",
+      "pages": [
+        66
+      ]
+    },
+    {
+      "question": "What is balking?",
+      "options": [
+        "Deciding not to enter the waiting line",
+        "Leaving after joining but before service",
+        "Switching from one line to another",
+        "Finishing service immediately"
+      ],
+      "correct_answer": "Deciding not to enter the waiting line",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "question": "What is reneging?",
+      "options": [
+        "Leaving a line after joining but before being served",
+        "Deciding not to join the line",
+        "Switching to a different line",
+        "Receiving service out of order"
+      ],
+      "correct_answer": "Leaving a line after joining but before being served",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "question": "What is jockeying?",
+      "options": [
+        "Switching lines in an effort to reduce waiting",
+        "Leaving without entering any line",
+        "Leaving after joining but before service",
+        "Serving the shortest job first"
+      ],
+      "correct_answer": "Switching lines in an effort to reduce waiting",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "question": "What is an interarrival time?",
+      "options": [
+        "The interval between successive arrivals",
+        "The time from service start to service completion",
+        "The total waiting time of all customers",
+        "The clock time of the first departure"
+      ],
+      "correct_answer": "The interval between successive arrivals",
+      "pages": [
+        70
+      ]
+    },
+    {
+      "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
+      "options": [
+        "The later of arrival and the preceding service completion",
+        "The earlier of arrival and preceding completion",
+        "Arrival minus service time",
+        "Always zero"
+      ],
+      "correct_answer": "The later of arrival and the preceding service completion",
+      "pages": [
+        77,
+        79
+      ]
+    },
+    {
+      "question": "In the slide example, customer 3 arrives at 5 and starts service at 7. How long is the wait?",
+      "options": [
+        "2",
+        "0",
+        "1",
+        "7"
+      ],
+      "correct_answer": "2",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "question": "In the slide example, customer 5 arrives at 11 and finishes service at 15. How long is the time in system?",
+      "options": [
+        "4",
+        "2",
+        "11",
+        "15"
+      ],
+      "correct_answer": "4",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "question": "In the slide example, what is the mean queue wait for all six customers?",
+      "options": [
+        "4/6 time units",
+        "4 time units",
+        "19/6 time units",
+        "2 time units"
+      ],
+      "correct_answer": "4/6 time units",
+      "pages": [
+        79
+      ]
+    },
+    {
+      "question": "In the slide example, when does customer 4 begin service?",
+      "options": [
+        "9",
+        "8",
+        "13",
+        "7"
+      ],
+      "correct_answer": "9",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "question": "What is the queue-design tradeoff described by the module?",
+      "options": [
+        "Service cost versus waiting cost",
+        "Only the number of colors in the animation",
+        "Probability versus set membership",
+        "Server names versus customer names"
+      ],
+      "correct_answer": "Service cost versus waiting cost",
+      "pages": [
+        68
+      ]
+    }
+  ]
+}

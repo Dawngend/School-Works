@@ -1,0 +1,718 @@
+{
+  "module": "M5",
+  "source_file": "M5-MAIN - Systems Modeling.pdf",
+  "sections": [
+    {
+      "heading": "Model types and examples",
+      "paragraphs": [
+        "Fishwick’s categories include declarative models focused on states and events; functional models connect components directionally through mathematical relationships; constraint models emphasize relationships and physical balances rather than direction; spatial models represent spaces or entities within spaces. Page 5 repeats the functional definition under declarative models; use the state-event description and page 6 examples instead.",
+        "The Easy Pass deceleration functional diagram uses a = dv/dt and v = dx/dt: an acceleration signal is integrated to velocity (initial condition v₀), then velocity to position. The constraint example adds ½mv² = F_f d; for constant friction magnitude and stopping from initial speed v, d = mv²/(2F_f). For example, m = 1000 kg, v = 10 m/s, F_f = 5000 N gives d = 10 m. This assumes friction accounts for the kinetic energy lost."
+      ],
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "matlab_checks": [
+        {
+          "expression": "1000*10^2/(2*5000)",
+          "expected": "10"
+        }
+      ]
+    },
+    {
+      "heading": "Conceptual and hybrid models",
+      "paragraphs": [
+        "A conceptual model communicates the target system’s main functionality and distinctive qualities quickly, often informally in a picture or one or two paragraphs. The Easy Pass example uses both textual and graphical representations.",
+        "A multimodel or hybrid connects several models, potentially of different types, in a network. Different abstractions support different questions or different phases of a complex system. In a concept map, nodes represent concepts or elements, directed arrows indicate interactions, and arrow labels describe their nature."
+      ],
+      "pages": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "heading": "Formal and semiformal tools",
+      "paragraphs": [
+        "A formalism specifies precise rules for modeling and simulation; its formal models support unambiguous mathematical analysis, often automated, but can be complex and tedious to design and implement. Semiformal representations trade some precision for ease of use while retaining some analytical capability. The slide’s phrase ‘less unambiguity’ is confusing; the intended contrast is less precision than formal models.",
+        "UML is a standardized, semiformal, object-oriented graphic notation for system and software structure and behavior. The slide lists use cases, activity diagrams, class diagrams, sequence diagrams, and statecharts."
+      ],
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "heading": "Verification and validation",
+      "paragraphs": [
+        "Verification checks whether conceptual-model requirements were correctly translated into the executable model and whether it runs reliably. Techniques include automated debugging, peer code review, and stress tests at minimum and maximum boundary conditions; debugging may struggle with semantic errors.",
+        "Validation asks whether the model approximates its target system sufficiently well to provide useful results. Compare model and target outputs statistically when possible; when the target does not exist, use a similar system or expert judgment. Expert judgment of outputs is face validation."
+      ],
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "heading": "Operations research",
+      "paragraphs": [
+        "Operations research applies mathematical models to complex systems to optimize performance and support decisions, such as maximizing profit or minimizing cost. Formulate the problem, develop a mathematical model, then solve it to search for an optimum.",
+        "Linear programming is a deterministic method using a linear objective and linear constraints. Stochastic operations-research methods include Markov chains and queuing theory."
+      ],
+      "pages": [
+        18
+      ]
+    },
+    {
+      "heading": "Simulink and worked block examples",
+      "paragraphs": [
+        "Simulink integrates with MATLAB and provides a graphical editor, customizable block libraries, and solvers for modeling and simulating dynamic systems. MATLAB algorithms can be included in models and results exported to MATLAB. Applications include pre-hardware exploration, reusable components, hardware-in-the-loop testing, and large simulations on multicore desktops, clusters, or the cloud.",
+        "In the arithmetic block example, (1+100)+(50+100)−75−10 = 166 and 166×(10×1) = 1660. Separately, 1660 > 5000 returns 0 (false); the cropped slide does not establish the input of its lower comparator. In the other example, √16 + 3² + sign(−5) = 4+9−1 = 12, so equality to 12 returns 1 (true).",
+        "Page 30 is labeled arithmetic but shows string concatenation and length, while its comparison explanation is unrelated. The visible text ‘Hello FEU Tech’ contains 14 characters including spaces; the displayed length 16 is not explained by the visible text, so hidden spaces or different inputs cannot be established from the slide."
+      ],
+      "pages": [
+        25,
+        29,
+        30,
+        31
+      ],
+      "matlab_checks": [
+        {
+          "expression": "(1+100)+(50+100)-75-10",
+          "expected": "166"
+        },
+        {
+          "expression": "166*(10*1)",
+          "expected": "1660"
+        },
+        {
+          "expression": "1660>5000",
+          "expected": "false"
+        },
+        {
+          "expression": "sqrt(16)+3^2+sign(-5)",
+          "expected": "12"
+        },
+        {
+          "expression": "(sqrt(16)+3^2+sign(-5))==12",
+          "expected": "true"
+        },
+        {
+          "expression": "strlength(\"Hello FEU Tech\")",
+          "expected": "14"
+        }
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "question": "Which model type emphasizes states and events?",
+      "options": [
+        "Declarative",
+        "Functional",
+        "Spatial",
+        "Conceptual"
+      ],
+      "correct_answer": "Declarative",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "question": "Which type uses directionally connected components with mathematical relationships?",
+      "options": [
+        "Functional",
+        "Spatial",
+        "Concept map",
+        "Face validation"
+      ],
+      "correct_answer": "Functional",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "question": "Which model emphasizes relationships and physical balances over directed connections?",
+      "options": [
+        "Constraint",
+        "Functional",
+        "Conceptual",
+        "Queuing only"
+      ],
+      "correct_answer": "Constraint",
+      "pages": [
+        5,
+        8
+      ]
+    },
+    {
+      "question": "What can constitute the elements of a spatial model?",
+      "options": [
+        "Spaces or entities within spaces",
+        "Only equations without variables",
+        "Only events with timestamps",
+        "Only debugging commands"
+      ],
+      "correct_answer": "Spaces or entities within spaces",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "question": "In the Easy Pass functional diagram, integrating acceleration yields what?",
+      "options": [
+        "Velocity",
+        "Force",
+        "Mass",
+        "Friction coefficient"
+      ],
+      "correct_answer": "Velocity",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "question": "What does integrating velocity give in the Easy Pass block diagram?",
+      "options": [
+        "Position",
+        "Acceleration",
+        "Mass",
+        "Force"
+      ],
+      "correct_answer": "Position",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "question": "What initial condition is shown for the velocity integrator?",
+      "options": [
+        "Initial velocity v₀",
+        "Zero mass",
+        "Final stopping distance",
+        "Initial force F_f"
+      ],
+      "correct_answer": "Initial velocity v₀",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "question": "The constraint example uses which work-energy relationship?",
+      "options": [
+        "½mv² = F_f d",
+        "mv = F_f/d",
+        "½mv = F_f d²",
+        "m/v = F_f d"
+      ],
+      "correct_answer": "½mv² = F_f d",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "question": "For m=1000 kg, initial speed 10 m/s and constant friction force magnitude 5000 N, what stopping distance follows from ½mv²=F_f d?",
+      "options": [
+        "10 m",
+        "1 m",
+        "20 m",
+        "100 m"
+      ],
+      "correct_answer": "10 m",
+      "pages": [
+        8
+      ],
+      "matlab_checks": [
+        {
+          "expression": "1000*10^2/(2*5000)",
+          "expected": "10"
+        }
+      ]
+    },
+    {
+      "question": "Which description best fits a conceptual model as presented?",
+      "options": [
+        "An informal overview communicating key system functionality",
+        "An executable implementation guaranteed free of bugs",
+        "A complete numerical solver specification",
+        "A mandatory optimization algorithm"
+      ],
+      "correct_answer": "An informal overview communicating key system functionality",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "question": "What is the simplest form of conceptual model in the slides?",
+      "options": [
+        "A picture of the system",
+        "A compiled program",
+        "A transition matrix",
+        "A proof of optimality"
+      ],
+      "correct_answer": "A picture of the system",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "question": "Which example illustrates textual and graphical conceptual representations?",
+      "options": [
+        "Easy Pass toll collection",
+        "A weather satellite launch",
+        "A stock market portfolio",
+        "A chemical refinery"
+      ],
+      "correct_answer": "Easy Pass toll collection",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "question": "What makes a multimodel or hybrid useful?",
+      "options": [
+        "Connected models may use different types and abstractions to address different questions",
+        "It removes the need to represent system phases",
+        "It requires all components to be the same model type",
+        "It guarantees perfect real-world accuracy"
+      ],
+      "correct_answer": "Connected models may use different types and abstractions to address different questions",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "question": "In a concept map, what do nodes represent?",
+      "options": [
+        "System concepts or elements",
+        "Only output errors",
+        "Solver iterations",
+        "Proofs of model accuracy"
+      ],
+      "correct_answer": "System concepts or elements",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "question": "What do labeled directed arcs in a concept map convey?",
+      "options": [
+        "Interactions between connected elements and their nature",
+        "Only physical distance",
+        "A numerical solution method",
+        "Source code syntax"
+      ],
+      "correct_answer": "Interactions between connected elements and their nature",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "question": "What is a modeling formalism?",
+      "options": [
+        "A methodology with precise modeling and simulation rules",
+        "Any informal sketch regardless of rules",
+        "A specific Simulink solver",
+        "An expert’s subjective assessment"
+      ],
+      "correct_answer": "A methodology with precise modeling and simulation rules",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "question": "Which advantage is associated with formal models?",
+      "options": [
+        "Unambiguous mathematical representation that can enable automated analysis",
+        "They never require mathematical work",
+        "They are always faster to construct than sketches",
+        "They eliminate the need for validation"
+      ],
+      "correct_answer": "Unambiguous mathematical representation that can enable automated analysis",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "question": "What disadvantage of formal modeling does the slide identify?",
+      "options": [
+        "Complexity and tedious design and implementation",
+        "Inability to analyze dynamic systems",
+        "Mandatory dependence on physical hardware",
+        "Lack of mathematical rules"
+      ],
+      "correct_answer": "Complexity and tedious design and implementation",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "question": "What is the main trade-off in semiformal representations?",
+      "options": [
+        "Ease of use with less precision than formal methods but some analytic capability",
+        "Perfect precision with no design effort",
+        "Only numerical analysis with no diagrams",
+        "No ability to describe behavior"
+      ],
+      "correct_answer": "Ease of use with less precision than formal methods but some analytic capability",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "question": "How is UML characterized on the slide?",
+      "options": [
+        "Standardized semiformal object-oriented graphical notation",
+        "A purely numerical optimization solver",
+        "A real-world validation data set",
+        "A hardware-only programming language"
+      ],
+      "correct_answer": "Standardized semiformal object-oriented graphical notation",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "Which is among the UML tools listed in the slide?",
+      "options": [
+        "Sequence diagrams",
+        "Linear programming tableaux",
+        "Histograms only",
+        "Compiler assembly"
+      ],
+      "correct_answer": "Sequence diagrams",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "question": "What does verification primarily check?",
+      "options": [
+        "Whether the conceptual model was correctly translated into an executable model",
+        "Whether the model is a sufficiently close approximation of the target",
+        "Whether the system is profitable",
+        "Whether all models use UML"
+      ],
+      "correct_answer": "Whether the conceptual model was correctly translated into an executable model",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "question": "Which is an example of verification?",
+      "options": [
+        "Peer review of model code",
+        "Comparing model output with observed target output to judge validity",
+        "An expert assessing whether simulated behavior looks realistic",
+        "Estimating a real system’s profit"
+      ],
+      "correct_answer": "Peer review of model code",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "question": "What inputs does the slide recommend for model stress tests?",
+      "options": [
+        "Maximum and minimum boundary conditions",
+        "Only average inputs",
+        "Only randomly chosen midrange inputs",
+        "No input values"
+      ],
+      "correct_answer": "Maximum and minimum boundary conditions",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "question": "What limitation of automated debugging is noted?",
+      "options": [
+        "Semantic errors can be difficult to find",
+        "It cannot provide any syntax support",
+        "It guarantees physical validity",
+        "It eliminates code reviews"
+      ],
+      "correct_answer": "Semantic errors can be difficult to find",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "question": "What is validation primarily concerned with?",
+      "options": [
+        "Whether the model approximates the target well enough to provide useful results",
+        "Whether source code has the correct indentation",
+        "Whether a diagram has arrows",
+        "Whether execution uses maximum inputs only"
+      ],
+      "correct_answer": "Whether the model approximates the target well enough to provide useful results",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "What is face validation?",
+      "options": [
+        "A knowledgeable expert judges model outputs using experience",
+        "A compiler checks syntax",
+        "A programmer runs only boundary cases",
+        "An optimization solver proves a maximum"
+      ],
+      "correct_answer": "A knowledgeable expert judges model outputs using experience",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "When the target system does not exist, what validation option is identified?",
+      "options": [
+        "Use a similar system or knowledgeable expert judgment",
+        "Skip validation and assume accuracy",
+        "Always use only syntax checking",
+        "Replace all outputs with zeros"
+      ],
+      "correct_answer": "Use a similar system or knowledgeable expert judgment",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "What is a statistical validation approach described in the slides?",
+      "options": [
+        "Test differences between model and target-system outputs",
+        "Count the number of blocks in the model",
+        "Check whether source code compiles",
+        "Replace an expert with a compiler"
+      ],
+      "correct_answer": "Test differences between model and target-system outputs",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "question": "What does operations research use to support complex-system decisions?",
+      "options": [
+        "Mathematical models to optimize performance factors",
+        "Only informal sketches with no objectives",
+        "Only graphical interface templates",
+        "Solely manual debugging"
+      ],
+      "correct_answer": "Mathematical models to optimize performance factors",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "Which ordering matches the operations research workflow?",
+      "options": [
+        "Formulate the problem, develop a model, solve the model",
+        "Solve first, then invent the problem, then validate syntax",
+        "Develop hardware, delete the objective, draw a map",
+        "Debug source code, estimate a target, discard constraints"
+      ],
+      "correct_answer": "Formulate the problem, develop a model, solve the model",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What does a linear programming objective specify?",
+      "options": [
+        "A linear quantity to maximize or minimize",
+        "The only permitted graphical shape",
+        "A guarantee that every feasible point is optimal",
+        "A random arrival-time distribution"
+      ],
+      "correct_answer": "A linear quantity to maximize or minimize",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "Which pair is listed as stochastic operations research methods?",
+      "options": [
+        "Markov chains and queuing theory",
+        "UML class diagrams and use cases",
+        "Manual review and debugging",
+        "Pictures and paragraphs"
+      ],
+      "correct_answer": "Markov chains and queuing theory",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "question": "What does Simulink provide for dynamic-system modeling?",
+      "options": [
+        "A graphical editor, block libraries, and solvers",
+        "Only a text editor without simulation",
+        "Only physical testing equipment",
+        "A replacement for all MATLAB algorithms"
+      ],
+      "correct_answer": "A graphical editor, block libraries, and solvers",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "How can Simulink work with MATLAB according to the slide?",
+      "options": [
+        "Include MATLAB algorithms in models and export results to MATLAB",
+        "Require results to remain inaccessible outside the model",
+        "Run only without MATLAB integration",
+        "Replace every solver with manual calculations"
+      ],
+      "correct_answer": "Include MATLAB algorithms in models and export results to MATLAB",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "Which use of Simulink occurs before building hardware?",
+      "options": [
+        "Explore and simulate system designs",
+        "Guarantee that no later hardware testing is required",
+        "Remove all system constraints",
+        "Measure a nonexistent device directly"
+      ],
+      "correct_answer": "Explore and simulate system designs",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "What testing mode is explicitly mentioned for deploying simulation models?",
+      "options": [
+        "Hardware-in-the-loop testing",
+        "Only handwritten inspection",
+        "Only testing without any simulation",
+        "Testing without any system model"
+      ],
+      "correct_answer": "Hardware-in-the-loop testing",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "question": "In the page 29 arithmetic example, what is (1+100)+(50+100)−75−10?",
+      "options": [
+        "166",
+        "176",
+        "251",
+        "151"
+      ],
+      "correct_answer": "166",
+      "pages": [
+        29
+      ],
+      "matlab_checks": [
+        {
+          "expression": "(1+100)+(50+100)-75-10",
+          "expected": "166"
+        }
+      ]
+    },
+    {
+      "question": "In the page 29 example, what is 166 × (10 × 1)?",
+      "options": [
+        "1660",
+        "166",
+        "1760",
+        "5000"
+      ],
+      "correct_answer": "1660",
+      "pages": [
+        29
+      ],
+      "matlab_checks": [
+        {
+          "expression": "166*(10*1)",
+          "expected": "1660"
+        }
+      ]
+    },
+    {
+      "question": "As a separate calculation, what does 1660 > 5000 return?",
+      "options": [
+        "0, false",
+        "1, true",
+        "1660",
+        "5000"
+      ],
+      "correct_answer": "0, false",
+      "pages": [
+        29
+      ],
+      "matlab_checks": [
+        {
+          "expression": "1660>5000",
+          "expected": "false"
+        }
+      ]
+    },
+    {
+      "question": "What is √16 + 3² + sign(−5)?",
+      "options": [
+        "12",
+        "14",
+        "8",
+        "−12"
+      ],
+      "correct_answer": "12",
+      "pages": [
+        31
+      ],
+      "matlab_checks": [
+        {
+          "expression": "sqrt(16)+3^2+sign(-5)",
+          "expected": "12"
+        }
+      ]
+    },
+    {
+      "question": "In the page 31 example, comparing the computed 12 to 12 using equality returns what?",
+      "options": [
+        "1, true",
+        "0, false",
+        "−1",
+        "24"
+      ],
+      "correct_answer": "1, true",
+      "pages": [
+        31
+      ],
+      "matlab_checks": [
+        {
+          "expression": "(sqrt(16)+3^2+sign(-5))==12",
+          "expected": "true"
+        }
+      ]
+    },
+    {
+      "question": "What issue should a reader note about the page 30 string example?",
+      "options": [
+        "The visible string has 14 characters but the slide displays 16; the difference is unexplained",
+        "Its relational comparison proves 16 is greater than 14",
+        "The slide explicitly identifies two hidden spaces",
+        "String length ignores all spaces"
+      ],
+      "correct_answer": "The visible string has 14 characters but the slide displays 16; the difference is unexplained",
+      "pages": [
+        30
+      ],
+      "matlab_checks": [
+        {
+          "expression": "strlength(\"Hello FEU Tech\")",
+          "expected": "14"
+        }
+      ]
+    }
+  ]
+}

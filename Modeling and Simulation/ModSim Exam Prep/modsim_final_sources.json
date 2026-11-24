@@ -1,0 +1,4304 @@
+{
+  "title": "ModSim Final Reviewer",
+  "source_directory": "D:\\School-Works\\Modeling and Simulation\\ModSim Exam Prep\\sources",
+  "sources": [
+    {
+      "module": "M1",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "source_sha256": "8a8a1269aab7f8e84598cbb2b99617defde8ad51a6389b2cea91ee0062eff435",
+      "module_json_sha256": "4d9ffa459e564566ad5d5db44a188c031c78028b1f5d13ce6fd62930514077bc",
+      "pdf_page_count": 121,
+      "referenced_pages": [
+        {
+          "page": 5,
+          "extractable_text_characters": 389,
+          "text_sha256": "77c22a7c5f1164242a1e97aa1e35139fb729d34e1f6ecd9bf89991340629b8f2"
+        },
+        {
+          "page": 6,
+          "extractable_text_characters": 908,
+          "text_sha256": "1fd3987232acce06d95528bd84c8698187313bf9aca638bd30624e5e831f0100"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 65,
+          "text_sha256": "074a9949652f34582bee6468f187269e733dc1f69e45fea271a18db60a82a17b"
+        },
+        {
+          "page": 8,
+          "extractable_text_characters": 98,
+          "text_sha256": "eccb30b90d8adb45e853b569b9a179e3939fceb26822ac96b0dc02ad525c62eb"
+        },
+        {
+          "page": 9,
+          "extractable_text_characters": 533,
+          "text_sha256": "11c8c58932d247df0a3dad2afdaadf2bbc5a3f30dbe5cba5e1ac36628b8b1232"
+        },
+        {
+          "page": 11,
+          "extractable_text_characters": 478,
+          "text_sha256": "1465ec99321a839b771ef80baa674d992ef45d61d6cf24a54165c71f31a7d1a0"
+        },
+        {
+          "page": 13,
+          "extractable_text_characters": 452,
+          "text_sha256": "90f5e34437114e8ddb52da2f992dace5bef6acc732dc0204ca6fbb7b0e91cb80"
+        },
+        {
+          "page": 14,
+          "extractable_text_characters": 588,
+          "text_sha256": "aa439da58f11e19b2e03d705951374dec12020ad5d86e91ddca3306eb3af6937"
+        },
+        {
+          "page": 15,
+          "extractable_text_characters": 356,
+          "text_sha256": "9b9013f976c2e56757724a6928537d342ef0fa2b5a3db96e59cb66f6ca9c0306"
+        },
+        {
+          "page": 18,
+          "extractable_text_characters": 473,
+          "text_sha256": "79c0509d52120b8aafeb1148a00d3a3ceffcb4e31ec57918fde6c7763d64dd3d"
+        },
+        {
+          "page": 20,
+          "extractable_text_characters": 495,
+          "text_sha256": "fd4c03b2ae80f18083aee9540ad00fb17f8f15a2520c7b88ccab9131773816b3"
+        },
+        {
+          "page": 21,
+          "extractable_text_characters": 187,
+          "text_sha256": "f28f450b6cda0282a6a3c0de9338dfd95ea51707918e2e6635dab9b53f8d38c4"
+        },
+        {
+          "page": 22,
+          "extractable_text_characters": 307,
+          "text_sha256": "6325da27326e3feec1bbeae99af308a859f6f3c6affb41a9435f7b94cce21043"
+        },
+        {
+          "page": 25,
+          "extractable_text_characters": 638,
+          "text_sha256": "f494c7cbcc3e039335f1d49128823ca0a6e287eee4b8e4c69b1c84b47c786d14"
+        },
+        {
+          "page": 26,
+          "extractable_text_characters": 813,
+          "text_sha256": "cc380d0e648e1ed38c31c2600871865ea417811502e81d16ad014facb720fd8e"
+        },
+        {
+          "page": 30,
+          "extractable_text_characters": 219,
+          "text_sha256": "5c66fc51fec9f5fd7d56dbe3c04223f7b6eb61ed571940d976787f83e0828d1c"
+        },
+        {
+          "page": 32,
+          "extractable_text_characters": 582,
+          "text_sha256": "e8225b9c696e13aca746e419227335d256861b23d076d2def88d83376c076732"
+        },
+        {
+          "page": 33,
+          "extractable_text_characters": 843,
+          "text_sha256": "92e406faedcfcadeb1602cb822e6f48e6a00282311b61f1f7b9ce1ef11a6025e"
+        },
+        {
+          "page": 34,
+          "extractable_text_characters": 869,
+          "text_sha256": "87bfb00b0a79a6cc79054506c2e380876b324fba44e5eda6218e1dbb3fd76410"
+        },
+        {
+          "page": 35,
+          "extractable_text_characters": 441,
+          "text_sha256": "4912bb9e8f7c40e052e61eb5ef93ee8d6b1025b0590d189521c0fb7d12b86a2b"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 344,
+          "text_sha256": "de5fcc4946cddc40c26f68abcb5c0f84284565be0200bd2954462c3b2d12b0f7"
+        },
+        {
+          "page": 39,
+          "extractable_text_characters": 526,
+          "text_sha256": "d9cec84b87590dad634dd443ff877ac0add91dc04cbd2a026ac0037c5267d1b6"
+        },
+        {
+          "page": 42,
+          "extractable_text_characters": 302,
+          "text_sha256": "b72fc04dd236958c52da1a464597b10162bdbfefea097d9c68d505c88e285b25"
+        },
+        {
+          "page": 43,
+          "extractable_text_characters": 345,
+          "text_sha256": "867846836b84d86c0563a25f5a4c58b2922a87c0081982c25dc930fc91653f95"
+        },
+        {
+          "page": 44,
+          "extractable_text_characters": 360,
+          "text_sha256": "7bd3f8dbabe9b53e9d3eded6505b20d049f8d60c54b31047ca3c8c5af66c1ce5"
+        },
+        {
+          "page": 45,
+          "extractable_text_characters": 382,
+          "text_sha256": "efc18097b47f69c8bbdf543effd3bf0e5cf7be7d3c045697933fd02aa79bb291"
+        },
+        {
+          "page": 46,
+          "extractable_text_characters": 298,
+          "text_sha256": "363272de606e5c3b0834452c8a59865a493fbf3c6c9bf01b35d2ad5506288522"
+        },
+        {
+          "page": 48,
+          "extractable_text_characters": 445,
+          "text_sha256": "c793fb60342bdcee6a9f57fac03f31d23ae270f1975c2ddd9142f882da660bd1"
+        },
+        {
+          "page": 49,
+          "extractable_text_characters": 519,
+          "text_sha256": "265dd88198df803eb3bf7d51245db62774ffbef51eba548ce585b5ad78987fd8"
+        },
+        {
+          "page": 50,
+          "extractable_text_characters": 198,
+          "text_sha256": "e7063719b1938a82660048cc010b22e7c9e17a11b396767f2bfeb07d5aed0e39"
+        },
+        {
+          "page": 51,
+          "extractable_text_characters": 464,
+          "text_sha256": "87bc987569926e550a5c4fc328f168a26f63d704cb14746972924ac3cdc6927c"
+        },
+        {
+          "page": 52,
+          "extractable_text_characters": 202,
+          "text_sha256": "f9c4ef7ef6b36cfc5402731c924c5eb576e744acfe35388aead80fac4bc796ed"
+        },
+        {
+          "page": 53,
+          "extractable_text_characters": 371,
+          "text_sha256": "9e98548fde49bb2d2fedc726e0f02b1724bdbaa25221fa9b3bd094ab75bc0a24"
+        },
+        {
+          "page": 55,
+          "extractable_text_characters": 658,
+          "text_sha256": "cfe3de11ed815deed25545a46a37740b6beb35850259c114cce9cdf488d71690"
+        },
+        {
+          "page": 56,
+          "extractable_text_characters": 620,
+          "text_sha256": "5f9c727f09bf126148ae6559da160a9bb0cdd4d6d74e46ab1e4284ca9acdca5f"
+        },
+        {
+          "page": 57,
+          "extractable_text_characters": 662,
+          "text_sha256": "869eae809af1f05d0060f03186390417521087df754f0718664781c323b0c694"
+        },
+        {
+          "page": 73,
+          "extractable_text_characters": 945,
+          "text_sha256": "6f479f40fc8b64fb42b3dda4e6e14c052c3df4e5c0ba944d7e231753584a7b7f"
+        },
+        {
+          "page": 80,
+          "extractable_text_characters": 221,
+          "text_sha256": "7483a30827528730399e27444a718a87fa23a5555b9488e45bc966d1990f5b92"
+        },
+        {
+          "page": 81,
+          "extractable_text_characters": 484,
+          "text_sha256": "341cc47ac4041e35aa861cbc5bc56233e7b1d835c9793d530c9e39516f66e77d"
+        },
+        {
+          "page": 82,
+          "extractable_text_characters": 883,
+          "text_sha256": "34a2bbb3d6030eec8bfe7158b3ce8cccf09b8651095f8047d0fee3f1f9f7c594"
+        },
+        {
+          "page": 83,
+          "extractable_text_characters": 494,
+          "text_sha256": "1663de22305ed282bb5210fd5c4ec32df909b6e706cd45a5f9dbf85962b8e97b"
+        },
+        {
+          "page": 84,
+          "extractable_text_characters": 612,
+          "text_sha256": "7cc9a4527e58726091108077e0df08e7f21083e7b54a44d679da1c2aea73fca9"
+        },
+        {
+          "page": 88,
+          "extractable_text_characters": 605,
+          "text_sha256": "d9dd63c0397f73c0b1d3bd6158217a538250e2b98d357226ec96ddd57700d39d"
+        },
+        {
+          "page": 93,
+          "extractable_text_characters": 494,
+          "text_sha256": "e582b2163095dcac5af1f534c500806f136ab8bade09b8558d5e20b6e41d015b"
+        },
+        {
+          "page": 95,
+          "extractable_text_characters": 540,
+          "text_sha256": "f0be8a5b4d82fe9deaaea3657c526bfdb6192aaadfa546c7476f9e24a1730e6e"
+        },
+        {
+          "page": 97,
+          "extractable_text_characters": 188,
+          "text_sha256": "26bed961557c91afaa6351d97522ff70182574556b8de1ff4cc4ac67131a300f"
+        },
+        {
+          "page": 98,
+          "extractable_text_characters": 470,
+          "text_sha256": "87b113260e20960671aa2eeb8dada181fe4049fe2d4ca0e6fb76b4442a0ce686"
+        },
+        {
+          "page": 99,
+          "extractable_text_characters": 505,
+          "text_sha256": "965b4a80e8d24b2fde609c4e48e0216eae8f2b68dc354335e00c8b7def541ab4"
+        },
+        {
+          "page": 100,
+          "extractable_text_characters": 411,
+          "text_sha256": "05361212a6be0cb0122b8ba10825d4ea78adf1322492fb17fc152de42c538857"
+        },
+        {
+          "page": 101,
+          "extractable_text_characters": 115,
+          "text_sha256": "6c77757636679dcbbc102ff1742c951942d7b3db927c4b3241caec8c2c9da4ae"
+        },
+        {
+          "page": 102,
+          "extractable_text_characters": 248,
+          "text_sha256": "8e1f4705fac3c169072088c470e4d30d08fa77295fd204765662333c7a193741"
+        },
+        {
+          "page": 103,
+          "extractable_text_characters": 240,
+          "text_sha256": "346bf6e38840ba733d47bbd93544db7e6922c83f39ffb6079825287e1feb21a4"
+        },
+        {
+          "page": 104,
+          "extractable_text_characters": 196,
+          "text_sha256": "4be4af0ca0ffff1e41f281509d76de7a6644852b51b9e645a652c58d528d9fd0"
+        },
+        {
+          "page": 107,
+          "extractable_text_characters": 330,
+          "text_sha256": "4ff20db6189df6a739f5deec844f31f466c14cbc3d9e00b715b7d566c447a35e"
+        },
+        {
+          "page": 109,
+          "extractable_text_characters": 320,
+          "text_sha256": "95364496c532d6c01eb46cefc206a587afa44670552fa8a1f705278d6b4c6545"
+        },
+        {
+          "page": 111,
+          "extractable_text_characters": 632,
+          "text_sha256": "2b194e381e3669cdf8d6bfcabe719704ee0e8f6766696cdd6a4b50f67a6b838d"
+        },
+        {
+          "page": 113,
+          "extractable_text_characters": 228,
+          "text_sha256": "7678a3c9dfd8bd6eee3664dc7bc0c93102b2c4ae6be777e2b577ea655a49cc35"
+        },
+        {
+          "page": 114,
+          "extractable_text_characters": 220,
+          "text_sha256": "4e14e5816593e0bf42d4a616863488633207f8292bc263f3cfb6d606e44e17b3"
+        },
+        {
+          "page": 116,
+          "extractable_text_characters": 380,
+          "text_sha256": "29461c4834e65337cba35df78ff2e54d2451082190e10dc2244a5edf7b2331af"
+        },
+        {
+          "page": 117,
+          "extractable_text_characters": 97,
+          "text_sha256": "7dd98fd3a9ea02034caa03fc6dba05bd0fc067009b9e2bb04ba0e93e159269a7"
+        },
+        {
+          "page": 118,
+          "extractable_text_characters": 152,
+          "text_sha256": "935e649446537d023b457fe212ea5d360e75bc25e149b8c6373668c004487205"
+        }
+      ]
+    },
+    {
+      "module": "M2",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "source_sha256": "2f2366f49843cf3e36f8f39c1ba2082902d756fc046291f2690abf5804d6978b",
+      "module_json_sha256": "cfe1d2be60c8e59aa815451b5a1871f84c60c910bf808668440fae4ea15a77e2",
+      "pdf_page_count": 82,
+      "referenced_pages": [
+        {
+          "page": 6,
+          "extractable_text_characters": 343,
+          "text_sha256": "17b29e15e66e13af171d349e2f59db182b2efb4abd00eedfe4a645f0dfc875a5"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 769,
+          "text_sha256": "066c53d03644f4f63e517b7cf82437f6ac31bf9ee503dc2ed46e075b36ffe58c"
+        },
+        {
+          "page": 8,
+          "extractable_text_characters": 615,
+          "text_sha256": "a782abb8fc4e2b07759608b6c1e46c183256cc299e532a902c0ec9d343ad3c95"
+        },
+        {
+          "page": 9,
+          "extractable_text_characters": 204,
+          "text_sha256": "67d309bc10de9af7339b928cc55763564c1c9db9056c72934c1d9432a2a7c19e"
+        },
+        {
+          "page": 10,
+          "extractable_text_characters": 472,
+          "text_sha256": "703ec2b20e7b0740f2127d2535d4857c617bb35bb33f328e244e483dd2b09b78"
+        },
+        {
+          "page": 11,
+          "extractable_text_characters": 622,
+          "text_sha256": "f13e1186e18c1900496d85944a309f4d0d6eecb78cca8cac63633625aa1e5ec3"
+        },
+        {
+          "page": 12,
+          "extractable_text_characters": 495,
+          "text_sha256": "a6e67447c34db473186800d5620a2a8094183d9211ff968009ef2f6b8a433666"
+        },
+        {
+          "page": 13,
+          "extractable_text_characters": 242,
+          "text_sha256": "21eb482f60da348089190387792901d4f78dc8ce1b54787d48e61e77d8d9c312"
+        },
+        {
+          "page": 14,
+          "extractable_text_characters": 286,
+          "text_sha256": "b034a4cbf5a17b9c8f83341ae6c2ccfa80a727ea821461459165dcc170838417"
+        },
+        {
+          "page": 15,
+          "extractable_text_characters": 360,
+          "text_sha256": "3ac2b23f19aa046099937ebc7887581636a2b968d11a68b556090aad6c047465"
+        },
+        {
+          "page": 16,
+          "extractable_text_characters": 231,
+          "text_sha256": "ed1678b21e010cd6ebad6c2c9d16bec0b14dd98fa0d24edd98e9b6131a1f98d4"
+        },
+        {
+          "page": 17,
+          "extractable_text_characters": 460,
+          "text_sha256": "bbb4489e9fb2a1f1695987ff3b122911669640cb93bb47959d2987c3d0ac2bb9"
+        },
+        {
+          "page": 18,
+          "extractable_text_characters": 231,
+          "text_sha256": "8ac29fe8a4f330ec46c4f3a4561bace054a71596b51de0bcc7634dd47aabd765"
+        },
+        {
+          "page": 19,
+          "extractable_text_characters": 610,
+          "text_sha256": "6bcb54474ec9a1fb1495523f5d01d5f053e39b0383a1b5afaf6ae6e14a4abb66"
+        },
+        {
+          "page": 20,
+          "extractable_text_characters": 307,
+          "text_sha256": "4237ae58f36c2a3e6f34899beb2afdc412b89dcf5bc4b9067376e57e5d6c9b9d"
+        },
+        {
+          "page": 22,
+          "extractable_text_characters": 478,
+          "text_sha256": "8c81cd76e3a94afdce7aef7d1962469ffc5d315bee6223b29e00b33a62a02323"
+        },
+        {
+          "page": 23,
+          "extractable_text_characters": 385,
+          "text_sha256": "99479041a96a87b5efc4495a6ea5aa5871ea08edd7775210ee39ce242a8b1783"
+        },
+        {
+          "page": 24,
+          "extractable_text_characters": 511,
+          "text_sha256": "69387ef65d832cb239b4ec5e2d93d9ee048844de0feb012d7597804ea6286bca"
+        },
+        {
+          "page": 25,
+          "extractable_text_characters": 453,
+          "text_sha256": "63756622fd67cc39aa5258fd3a35503c4453f9ed16e1cb29be02eef32eb4aa71"
+        },
+        {
+          "page": 26,
+          "extractable_text_characters": 595,
+          "text_sha256": "6170da4e70a6268f2f15a4e0aaf57ea629b23957570a24d8bf16e973a1623c7b"
+        },
+        {
+          "page": 27,
+          "extractable_text_characters": 396,
+          "text_sha256": "c8208dcf17ce1922a44fb2fc03374bb461426d4bec1d626803c82975dd0e9df5"
+        },
+        {
+          "page": 28,
+          "extractable_text_characters": 669,
+          "text_sha256": "136584a36d36002267053c1c7db74a0d451c23b3da563ba634e3219187f0bfb0"
+        },
+        {
+          "page": 29,
+          "extractable_text_characters": 626,
+          "text_sha256": "73cf0f5e98df0cacc290e2930a07fd02145053674ed503d11e1239f9f13985a5"
+        },
+        {
+          "page": 30,
+          "extractable_text_characters": 458,
+          "text_sha256": "ec16a259b3540fc537805e9798d29290b356cae3a2f97d9b4ccf3abae3850fe7"
+        },
+        {
+          "page": 31,
+          "extractable_text_characters": 135,
+          "text_sha256": "13b90745b7f794fa86f6a9e3c21faa679cb7b06c447b81682ea01b1d7319573c"
+        },
+        {
+          "page": 32,
+          "extractable_text_characters": 718,
+          "text_sha256": "309e8d66e2ea6bed4055b83601f8b886da4d256b479e947c61c97a0c4d0ec00f"
+        },
+        {
+          "page": 33,
+          "extractable_text_characters": 168,
+          "text_sha256": "32266a4473815d93b680432e7303d22a5182ca0471fc8486087d3668b752aa28"
+        },
+        {
+          "page": 34,
+          "extractable_text_characters": 507,
+          "text_sha256": "7641af1debf2efc1e7bf5914034b91a811e4c4dae1cee306bb59da3b91847c3c"
+        },
+        {
+          "page": 35,
+          "extractable_text_characters": 608,
+          "text_sha256": "1da8d539bf7157c2ba95c2ad9e5404bad6b3609cfa66f6a0f7d7fc87ef04ec6a"
+        },
+        {
+          "page": 36,
+          "extractable_text_characters": 309,
+          "text_sha256": "e523afe558113542cf0f19a06a3dbac0186c272f925c9e57a4755994989d6f94"
+        },
+        {
+          "page": 37,
+          "extractable_text_characters": 332,
+          "text_sha256": "58c85a65e3ee757adb603265f8fb8fff13feda1077b0b3d72c05ce71a9315105"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 0,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "page": 39,
+          "extractable_text_characters": 461,
+          "text_sha256": "08ba67fb6a54763df828aa63a7f331aeb7f41123631d9d0008dc81db5ece9458"
+        },
+        {
+          "page": 44,
+          "extractable_text_characters": 468,
+          "text_sha256": "50c660436f7193c01cff1d0b0624b10f9cc23dc68d7992d22ed68591ede4bddd"
+        },
+        {
+          "page": 48,
+          "extractable_text_characters": 186,
+          "text_sha256": "8b3ccd1a43215b8be65eb35f709171150b529f4e3fa9b5b3dbffff950fc1035f"
+        },
+        {
+          "page": 50,
+          "extractable_text_characters": 124,
+          "text_sha256": "27fbaa09dd5989b49990a48465b3eef4378bffadb893b4a5ee96c1e79bab3570"
+        },
+        {
+          "page": 51,
+          "extractable_text_characters": 297,
+          "text_sha256": "1b837fd7a16a18efde4565f7201bc49e09a3a14902700e95fcb323f6a1a6ee4d"
+        },
+        {
+          "page": 52,
+          "extractable_text_characters": 224,
+          "text_sha256": "f6d5ba79be4eaa4f65e0acaf54b4bc4f2738127f9e79d790c0342cf493b58198"
+        },
+        {
+          "page": 53,
+          "extractable_text_characters": 110,
+          "text_sha256": "921b7dc570feb1536f4a49610850a94e8cca9ad24fd048317392c89e06882fad"
+        },
+        {
+          "page": 54,
+          "extractable_text_characters": 149,
+          "text_sha256": "099ae77d612a1ee579e569014fb9af96e9e27f4270853aaee1f7ec50ab7d7b6a"
+        },
+        {
+          "page": 55,
+          "extractable_text_characters": 640,
+          "text_sha256": "19f54eb15e5549138840c6693074d2863363d95f17401489bf92efb20d714c83"
+        },
+        {
+          "page": 56,
+          "extractable_text_characters": 482,
+          "text_sha256": "63e390b5b527321023f220b2341792fc8715e4bdc8a1c4e25fd5e01764cd3fbf"
+        },
+        {
+          "page": 57,
+          "extractable_text_characters": 786,
+          "text_sha256": "b5ea2c485cbfcfa9601216f95a039e3cbf4175415a78d7973ef87b2dea1ef65d"
+        },
+        {
+          "page": 58,
+          "extractable_text_characters": 801,
+          "text_sha256": "d65c83f37e31a65aec8b628c99b3f6def2fe91d737a56097a4f7865355abf2bf"
+        },
+        {
+          "page": 60,
+          "extractable_text_characters": 463,
+          "text_sha256": "b607db097a2109207192fab815b8debcd066b93ffdc82e386dcb6b73b2040c91"
+        },
+        {
+          "page": 61,
+          "extractable_text_characters": 792,
+          "text_sha256": "001e448f1e881fbeb830caf69b9a18c30349b051326ea3656bf30f3c5400e20e"
+        },
+        {
+          "page": 62,
+          "extractable_text_characters": 554,
+          "text_sha256": "20b9ac587aac784cd4eb06fb57db8694eb890fbea15778de3aa73d7b124f58b8"
+        },
+        {
+          "page": 63,
+          "extractable_text_characters": 278,
+          "text_sha256": "d9006b04cace8ca4fbd98cb87aa0ff01061a2ca0ae2442ebdb8e0dc8810f1104"
+        },
+        {
+          "page": 64,
+          "extractable_text_characters": 270,
+          "text_sha256": "978127a1d0f202dfc756f07428d6e1f9ea40a21d5bfb920f7e66d279a98ff040"
+        },
+        {
+          "page": 65,
+          "extractable_text_characters": 789,
+          "text_sha256": "b440af30b85606a68106a036e9a141253334a32a0d5d95fdb8f9af744247d75c"
+        },
+        {
+          "page": 66,
+          "extractable_text_characters": 533,
+          "text_sha256": "d71e31d674cccd7f2e0810aef62c301b3f3e4286060a50f71782bce9bd2082f6"
+        },
+        {
+          "page": 68,
+          "extractable_text_characters": 231,
+          "text_sha256": "95eefe024d4e68eb8b617dbbdb10f809ec20c593633c7dc619051ddf80719519"
+        },
+        {
+          "page": 69,
+          "extractable_text_characters": 362,
+          "text_sha256": "47658fbe10bb77ab16db707de253f67147e5ef1f32b0af326ac8c9b35d010be8"
+        },
+        {
+          "page": 70,
+          "extractable_text_characters": 365,
+          "text_sha256": "26b0e6863ca397f546d59e4679d50c2cd6b3b2571492cf5814791c7e2afec0a1"
+        },
+        {
+          "page": 71,
+          "extractable_text_characters": 277,
+          "text_sha256": "23c32c930d7980138958d3539a70aa672533312adea86b0b57668468570b4372"
+        },
+        {
+          "page": 72,
+          "extractable_text_characters": 88,
+          "text_sha256": "26ba3f9c596961b5241e44e2f229ad0802085d2ee6824d041d407e075665f33d"
+        },
+        {
+          "page": 73,
+          "extractable_text_characters": 42,
+          "text_sha256": "9d5f64bbbda3f7a54004e13873fe6063695f53fd7ec856fda4f78b01fa423e3a"
+        },
+        {
+          "page": 74,
+          "extractable_text_characters": 89,
+          "text_sha256": "0c8de249c15ba8a213be64c3f187629ee4c4394b5bc0b3b2bd82defa1c305009"
+        },
+        {
+          "page": 75,
+          "extractable_text_characters": 90,
+          "text_sha256": "9afbaf6c4ae70e2e4b77e5a0d0857375069aba9380a20c0055a6a210e2d4a51b"
+        },
+        {
+          "page": 77,
+          "extractable_text_characters": 852,
+          "text_sha256": "8f7553ab240b2f5b27457ef00363c00a812e1831d14351b5e183de5d2c4a89e8"
+        },
+        {
+          "page": 78,
+          "extractable_text_characters": 267,
+          "text_sha256": "5f8172fd67fd45b27abb597b9920af8e488661e7db7d7771a3cdb8bd33ca77e6"
+        },
+        {
+          "page": 79,
+          "extractable_text_characters": 582,
+          "text_sha256": "029df4bfe7f548a67be6baa51d72520580a58ab1cc4c7a68b8a5c96171d832b2"
+        }
+      ]
+    },
+    {
+      "module": "M3",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "source_sha256": "170206580f302e5a95c65d1cd736c1f20cddc26aa095639885e7a46d2d9fda80",
+      "module_json_sha256": "b3dad046a0dfa93fa161a0b7c067686699a89bf11c67a7f4ddb8338bf4aa4409",
+      "pdf_page_count": 68,
+      "referenced_pages": [
+        {
+          "page": 5,
+          "extractable_text_characters": 534,
+          "text_sha256": "b2a37b7d74af2b240cee59f3ffc3c435b38e2260c0342229fa27841217e075ab"
+        },
+        {
+          "page": 6,
+          "extractable_text_characters": 55,
+          "text_sha256": "ad06e48f69721e50cc3e5831c743835d60108f8419dca2b2ca4677cae77d433d"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 642,
+          "text_sha256": "c897c1e313f02315c6ae21cd78226f64444a5cd9bda2a431c1b21c45f1aae202"
+        },
+        {
+          "page": 8,
+          "extractable_text_characters": 146,
+          "text_sha256": "ce652ea5f6be156c0b54bfe82d7d423e53c063a8021c8042c9895fe5fa116979"
+        },
+        {
+          "page": 9,
+          "extractable_text_characters": 275,
+          "text_sha256": "1bff8e6161c64c35746af8af983323c06043bd97e49d9f12995eb207147e65a1"
+        },
+        {
+          "page": 10,
+          "extractable_text_characters": 539,
+          "text_sha256": "8e29bf17948c466ba44377b3f9308b2cc0c0283c1294734a2e2ec353ddabafe9"
+        },
+        {
+          "page": 11,
+          "extractable_text_characters": 434,
+          "text_sha256": "e0bcd8c2c6d93c39a8b501c32a7b3529904d5389ce506b75f44e025fbceb3c3b"
+        },
+        {
+          "page": 12,
+          "extractable_text_characters": 182,
+          "text_sha256": "688b89739906cb87499dd65abbfcc784e00facc1f92ac6709138ac8360bd799c"
+        },
+        {
+          "page": 13,
+          "extractable_text_characters": 432,
+          "text_sha256": "f52998f66328a9639a7a8ea2a730d5403a34ceed7e623eba154f691d43bfe157"
+        },
+        {
+          "page": 14,
+          "extractable_text_characters": 562,
+          "text_sha256": "e049508b373730a6ac918fc04b336bce22fd616ea03d1726412a3c6bb24277ad"
+        },
+        {
+          "page": 15,
+          "extractable_text_characters": 278,
+          "text_sha256": "64ee6805508fbfc7fa0fa012ffc4421b9b28b23e7a45b7360f3af6fbf922cc28"
+        },
+        {
+          "page": 16,
+          "extractable_text_characters": 296,
+          "text_sha256": "ef379041a70c3018b35e4eb8e43a8b8703e518016cea426ca092e528de1dae44"
+        },
+        {
+          "page": 17,
+          "extractable_text_characters": 104,
+          "text_sha256": "65ad09ff563eb7734658f676f5039b0423cac1861fb08525166b2ecdd501a48b"
+        },
+        {
+          "page": 18,
+          "extractable_text_characters": 134,
+          "text_sha256": "4a54e726d74457eceda6514d5e282b2f6fe281a1def954cc6b843caa4c1e2cdf"
+        },
+        {
+          "page": 19,
+          "extractable_text_characters": 21,
+          "text_sha256": "bbc728376995fdcc0b94dadcee52595147214c0b9921c580808d08653cfd610c"
+        },
+        {
+          "page": 27,
+          "extractable_text_characters": 57,
+          "text_sha256": "7221d753fad1a53e05bc27ee83a0955a849b44685b0bea23b6a74375790f9518"
+        },
+        {
+          "page": 29,
+          "extractable_text_characters": 466,
+          "text_sha256": "e6c302b948a2f110d3ba5497867863e6be9170baff92c8c6e33e755f9761f0b9"
+        },
+        {
+          "page": 30,
+          "extractable_text_characters": 341,
+          "text_sha256": "d5bb98f489cfd9dd1ac6abc19b4a29e0c39766ee354c1c9aa892654c893f9021"
+        },
+        {
+          "page": 33,
+          "extractable_text_characters": 155,
+          "text_sha256": "07fa6c01a6aa90a6ecf55de51a266274db613ba21f241d0ef32f87b0aca8aa70"
+        },
+        {
+          "page": 34,
+          "extractable_text_characters": 336,
+          "text_sha256": "2a2a6b5a73934e8ffb6f8ab6b2fb021b79d4ca2717be5e304065f21e50d47bdb"
+        },
+        {
+          "page": 35,
+          "extractable_text_characters": 407,
+          "text_sha256": "f09620b25bf9dae3816ffe815e6bfbc664a89545cd2f0210941905ebe9965fa6"
+        },
+        {
+          "page": 36,
+          "extractable_text_characters": 613,
+          "text_sha256": "a81cdabfd5ac6a7a96c750505627e225d984668a862278443deb51c511d1cdd0"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 142,
+          "text_sha256": "0e5bd01c3171c2f84a7faede7e7d33472b3b22c8ab3bf1cfbc24d0a8b56e6be1"
+        },
+        {
+          "page": 40,
+          "extractable_text_characters": 237,
+          "text_sha256": "1e09e9e7106151167d866ca960b282cd85271280e2ec77022021bfa264f36abc"
+        },
+        {
+          "page": 47,
+          "extractable_text_characters": 622,
+          "text_sha256": "0703057150ac41b8a810b8c1858cbff233a1c13646f488566aefbf52763b8908"
+        },
+        {
+          "page": 48,
+          "extractable_text_characters": 336,
+          "text_sha256": "57a6336f5dfe670c4a173fb022897b6c1f9c4c7cdfde7b9ac2a6669a053ba596"
+        },
+        {
+          "page": 56,
+          "extractable_text_characters": 215,
+          "text_sha256": "22a3596cd9c0ff5809dd3b3a70ce32771afd4e3114e6f70f88641b20adec2439"
+        },
+        {
+          "page": 57,
+          "extractable_text_characters": 33,
+          "text_sha256": "7055d6e74dd54b5ad4a3d68a4b035efdb3275d4447b4dd61d027b42f670e06d9"
+        },
+        {
+          "page": 58,
+          "extractable_text_characters": 33,
+          "text_sha256": "38005870061771993cba90abf577eb83ce8d94b2e31d46f2b9e45984be60987e"
+        },
+        {
+          "page": 60,
+          "extractable_text_characters": 26,
+          "text_sha256": "92a4bd5979626fb64b328e423efb0f0cd4c2cc1d9e116022c28ff0f6b67706a7"
+        },
+        {
+          "page": 61,
+          "extractable_text_characters": 374,
+          "text_sha256": "da6b60af4a8ba38a8daeeabfd2d72e8f0086807645522bb20546a4488f96fc8e"
+        },
+        {
+          "page": 62,
+          "extractable_text_characters": 287,
+          "text_sha256": "b24d334a834ceb174d9d013f64e75d518fb5786813b4f6378503ac9b26ad636b"
+        },
+        {
+          "page": 63,
+          "extractable_text_characters": 30,
+          "text_sha256": "340924e91c6e47325dcbd217610f728de8017b3e19178d01bdcb185d0138a7f1"
+        },
+        {
+          "page": 64,
+          "extractable_text_characters": 398,
+          "text_sha256": "4e363a254b64c725a723618bb2de598aedae7d432d2e0212311bffc29fef3c76"
+        },
+        {
+          "page": 65,
+          "extractable_text_characters": 663,
+          "text_sha256": "e6505f0462bdbf33ef7cf5cf7cf14577ce8ca4ac3115bdd5dd226e24ab5554c8"
+        },
+        {
+          "page": 66,
+          "extractable_text_characters": 212,
+          "text_sha256": "2111046fa98791ba742ca19189ada0ed017fc19135049cda3da1c80dbed802d1"
+        },
+        {
+          "page": 67,
+          "extractable_text_characters": 47,
+          "text_sha256": "f0ef059467bc10f11e3602b8a8fd9af203a26b5746f439406ac0a490af7b671c"
+        }
+      ]
+    },
+    {
+      "module": "M4",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "source_sha256": "6ca493d7cb66015bda71c1b3b31459530148570cdcaf8361a6ecc4be06c62ac2",
+      "module_json_sha256": "41173927de6d0e98cb14b3c8a1a566fc329b058ac2e1d6624adb7e0d9aed4863",
+      "pdf_page_count": 52,
+      "referenced_pages": [
+        {
+          "page": 6,
+          "extractable_text_characters": 789,
+          "text_sha256": "f708010b1ba206c0c326f1133b8ce19b67487c09941cd36ddaa4b537d92829d8"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 534,
+          "text_sha256": "6561af0ef1d4441000e1797ed3842f1acd935d16cf0ff4351074b7bb92f80e3b"
+        },
+        {
+          "page": 8,
+          "extractable_text_characters": 0,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "page": 9,
+          "extractable_text_characters": 280,
+          "text_sha256": "b55f7229821a6a79704d88b50b3b2f6002ed6340b91251e2d8a1f4155bc86c33"
+        },
+        {
+          "page": 10,
+          "extractable_text_characters": 546,
+          "text_sha256": "38129ab6c7a67d5fa6200944f138f9ef9663f32e9e0f6a454b3048c40805d470"
+        },
+        {
+          "page": 11,
+          "extractable_text_characters": 113,
+          "text_sha256": "687acd26800903f2377a874710e7f9b372bd8849b596b82d9f42728c81ebaae6"
+        },
+        {
+          "page": 12,
+          "extractable_text_characters": 113,
+          "text_sha256": "687acd26800903f2377a874710e7f9b372bd8849b596b82d9f42728c81ebaae6"
+        },
+        {
+          "page": 13,
+          "extractable_text_characters": 113,
+          "text_sha256": "687acd26800903f2377a874710e7f9b372bd8849b596b82d9f42728c81ebaae6"
+        },
+        {
+          "page": 14,
+          "extractable_text_characters": 113,
+          "text_sha256": "687acd26800903f2377a874710e7f9b372bd8849b596b82d9f42728c81ebaae6"
+        },
+        {
+          "page": 15,
+          "extractable_text_characters": 113,
+          "text_sha256": "687acd26800903f2377a874710e7f9b372bd8849b596b82d9f42728c81ebaae6"
+        },
+        {
+          "page": 17,
+          "extractable_text_characters": 406,
+          "text_sha256": "912612e1fed78067eb3f134430611758aaf528fa6dca9ef22437ab959b9a3f84"
+        },
+        {
+          "page": 18,
+          "extractable_text_characters": 527,
+          "text_sha256": "e4fc4e4dde9e52d4be0f5455b5a1dbd10441a751005923d461029cef3bec0893"
+        },
+        {
+          "page": 19,
+          "extractable_text_characters": 472,
+          "text_sha256": "41ef17168218584cc533e6251765dec8b7a828b60bc56b46355bacf6ee55ac15"
+        },
+        {
+          "page": 20,
+          "extractable_text_characters": 262,
+          "text_sha256": "ac7b40ac454c3f45bcf921c2d4972aeda3ef7658ddf19ef98ba65e23b81f9ec7"
+        },
+        {
+          "page": 21,
+          "extractable_text_characters": 375,
+          "text_sha256": "4bc532891f5f2a1bbbc0bb50f273418df6a24392b3d4c7466570176a74930e86"
+        },
+        {
+          "page": 22,
+          "extractable_text_characters": 277,
+          "text_sha256": "e157f38e26c17c54d05fa4bf952b108d0f2d2ddc608e9546fd4f3d37f85a0e91"
+        },
+        {
+          "page": 23,
+          "extractable_text_characters": 591,
+          "text_sha256": "75da920032ae9aaf2e96f80b9e71b672006f2418cfb1aafc73f958a41add3895"
+        },
+        {
+          "page": 31,
+          "extractable_text_characters": 356,
+          "text_sha256": "f11e37571d457411f646aab3945cf17766cdb1f3ad419643f10814276e29a6b4"
+        },
+        {
+          "page": 32,
+          "extractable_text_characters": 414,
+          "text_sha256": "578e833acf7b3f9cddf44566fbda0861eabebaa5e15c911f8e2662e2ede48292"
+        },
+        {
+          "page": 33,
+          "extractable_text_characters": 46,
+          "text_sha256": "259585ddb5d6819a6b9a62c2d8ba7fcc93e1477abd5c335aa7039f9486d478d9"
+        },
+        {
+          "page": 34,
+          "extractable_text_characters": 50,
+          "text_sha256": "5b9c932ff65d0202fb90261ce862487fc403fb8146c646796ffe405c1f888040"
+        },
+        {
+          "page": 35,
+          "extractable_text_characters": 69,
+          "text_sha256": "085953bb95fe8c29f38c4f91bf7551f0f5a5e8b8bd9f7712e7d9523fb70a27c2"
+        },
+        {
+          "page": 36,
+          "extractable_text_characters": 46,
+          "text_sha256": "e0499687e9078aa6330f3b662412cfa687d5ccb65d684d48dc960639bc3d6384"
+        },
+        {
+          "page": 37,
+          "extractable_text_characters": 282,
+          "text_sha256": "891da70a4cff3600a9203a70ce6716658260d833a4ab0b4f43d291cb3e3bbc51"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 52,
+          "text_sha256": "219806083cfa5262fab892913752218a2ef5f7374b3d17666469926215a658cb"
+        },
+        {
+          "page": 43,
+          "extractable_text_characters": 17,
+          "text_sha256": "b86edc9e96b314be4b8166ad03f73f0f195725691203970596f31a67d6f581cb"
+        },
+        {
+          "page": 44,
+          "extractable_text_characters": 621,
+          "text_sha256": "229d053f1f3103c9036537683814f3e4341042a3cbc13a872e5043cf78706b20"
+        },
+        {
+          "page": 45,
+          "extractable_text_characters": 334,
+          "text_sha256": "3e2cc142c5f785aeef12261d84558082ae9b26aa5a031c779a501e550cccfc2b"
+        },
+        {
+          "page": 46,
+          "extractable_text_characters": 300,
+          "text_sha256": "62930be80ea6a225c3048b887d4f28174c7ec35e962f08b89530d81b8d2386fd"
+        },
+        {
+          "page": 48,
+          "extractable_text_characters": 171,
+          "text_sha256": "9045d90e91a1acad67d2c620d0703eb78ae47cb3351899bd299e07d2939afa83"
+        },
+        {
+          "page": 49,
+          "extractable_text_characters": 257,
+          "text_sha256": "5c3c8a423fe0827a49212aee6861b4a11ddcb4c069775a303ef379bf943d8c1d"
+        },
+        {
+          "page": 50,
+          "extractable_text_characters": 630,
+          "text_sha256": "8c096b244ac414cf0ad4dd8e62155ee800ec8aa6f8f44b0f4b8c19316ea8a323"
+        },
+        {
+          "page": 51,
+          "extractable_text_characters": 260,
+          "text_sha256": "db107d5edafcf16b04ceb1ccfe25ade4a49d6083f6d4e85e4975dc1ccb9db3fa"
+        }
+      ]
+    },
+    {
+      "module": "M5",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "source_sha256": "b14f3d0abf907b8c8459e712a42abf1382044c1a5b22aa7f5ab96c39f994312d",
+      "module_json_sha256": "7523823e062f3611891814908ee4e987e312fed0d9882f2cbe6a101875b05e4f",
+      "pdf_page_count": 31,
+      "referenced_pages": [
+        {
+          "page": 5,
+          "extractable_text_characters": 792,
+          "text_sha256": "aee6b10d1f89f9ff7cc0da0ab324a08d791de8aacd1b3250d257eb0051643bfd"
+        },
+        {
+          "page": 6,
+          "extractable_text_characters": 0,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 17,
+          "text_sha256": "ac8968f9182b344738508856855100ef7fee6232652d731337ea9561beee6fd5"
+        },
+        {
+          "page": 8,
+          "extractable_text_characters": 0,
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "page": 10,
+          "extractable_text_characters": 478,
+          "text_sha256": "69491022e2f852e49a6ec04769ae96cbc06ca301cd060e25a61b8e8766c07f2b"
+        },
+        {
+          "page": 11,
+          "extractable_text_characters": 115,
+          "text_sha256": "074918b803af9f3e0e051e8f41965f2c2789fdd646666baa0352f99feb99ff96"
+        },
+        {
+          "page": 12,
+          "extractable_text_characters": 495,
+          "text_sha256": "055c850e8b673c86b8da68bd9ca0d2647f9d20c0d181c34e725909df71db2700"
+        },
+        {
+          "page": 13,
+          "extractable_text_characters": 395,
+          "text_sha256": "4132233c0cbc2ff3a171eb3c52e54b822ac6c8c3e0f3bbae83354d0f6d1b3c54"
+        },
+        {
+          "page": 14,
+          "extractable_text_characters": 698,
+          "text_sha256": "3528f8abfc9bc4f9e5db9c0f9d07c25b630ec373cf4a60ef8875254fd1ebbbef"
+        },
+        {
+          "page": 15,
+          "extractable_text_characters": 473,
+          "text_sha256": "1c521c73ef9466254ae9a9b277d06c67221177529b1304b65b98531bb92053b5"
+        },
+        {
+          "page": 16,
+          "extractable_text_characters": 797,
+          "text_sha256": "cb1a8d4fdd8ba9249a1e20951e9884eaf466efb020d245ab94a4a487feca2ce3"
+        },
+        {
+          "page": 17,
+          "extractable_text_characters": 735,
+          "text_sha256": "a4d4b00fef29d90e503fb510034995e277bef9589c5ee86c720e2f6ac7acefb9"
+        },
+        {
+          "page": 18,
+          "extractable_text_characters": 843,
+          "text_sha256": "8edb80bb79748275329acdbf1ca6cfbc83fb4ebff1c568184c25154b60b6975d"
+        },
+        {
+          "page": 25,
+          "extractable_text_characters": 838,
+          "text_sha256": "b8c8a802dccec337839b93bbc1f278286762b268925eb6a8b10e85ce8eba970c"
+        },
+        {
+          "page": 29,
+          "extractable_text_characters": 108,
+          "text_sha256": "585ef1f6b96f3b39b8ffbf081974878bf5addcb29181e3a0d8639d77ee7c2f1f"
+        },
+        {
+          "page": 30,
+          "extractable_text_characters": 131,
+          "text_sha256": "df29997c04a243062dd6b5590063451deccba551037e21078aa66c7eb426c992"
+        },
+        {
+          "page": 31,
+          "extractable_text_characters": 55,
+          "text_sha256": "9f9f931c6dea87cff96de99163cbe4ebf9c096829a4fd8b30f3e2946596d1ba3"
+        }
+      ]
+    },
+    {
+      "module": "M6",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "source_sha256": "0e4333e3157b6e59ade68cdc8864dc5e8fa4a88200437298e7a2a815c5cdd5f4",
+      "module_json_sha256": "0177a0ec8af0c0e6df040a685100d5b3a1d2959d0051d0f841c5de74ce006ebc",
+      "pdf_page_count": 101,
+      "referenced_pages": [
+        {
+          "page": 5,
+          "extractable_text_characters": 939,
+          "text_sha256": "6453e056f697ed4206fbfe8bd74e81e02ec6dd1f568e7061e5ad4c9f56d95a63"
+        },
+        {
+          "page": 6,
+          "extractable_text_characters": 887,
+          "text_sha256": "ca7db9c342c90541b9ecdf5df962f70d409fa254834b51be64cd7104ba61203f"
+        },
+        {
+          "page": 7,
+          "extractable_text_characters": 1056,
+          "text_sha256": "7b512891ae4d49b0d9a01a2d138730d9100087ce755755c08687b9de2a443f10"
+        },
+        {
+          "page": 23,
+          "extractable_text_characters": 633,
+          "text_sha256": "caebe33ecc7f08219ab24a27ad67fa32b0a51e23ed56de83b2f013103617d36e"
+        },
+        {
+          "page": 24,
+          "extractable_text_characters": 940,
+          "text_sha256": "f4b28ab7b50249684967865a158ad2b3b7a9df55845707bca9fb4b487196c8a4"
+        },
+        {
+          "page": 25,
+          "extractable_text_characters": 1130,
+          "text_sha256": "32812534dfb8664b8c0f466ae4a99f4b4b8326d3a5b67c39f0730bf018a7aac1"
+        },
+        {
+          "page": 26,
+          "extractable_text_characters": 763,
+          "text_sha256": "7793d9c3689aa49ffdbcddec3d1e0f15deaac263595abaa0da056789dcbe9375"
+        },
+        {
+          "page": 38,
+          "extractable_text_characters": 639,
+          "text_sha256": "d4acf95f393ff9749e65cf8d9dfe1f36c40e57a9981c30bb8da19a1eab4130fe"
+        },
+        {
+          "page": 39,
+          "extractable_text_characters": 760,
+          "text_sha256": "e1871d89fce4cf07269509fe12166af2a1151e5e826433558f2e5e5d9afaa3c2"
+        },
+        {
+          "page": 40,
+          "extractable_text_characters": 630,
+          "text_sha256": "c67b7b7513f9765070647352fd669445ec7aa98fcc9205e1ff5949bb6bda4a19"
+        },
+        {
+          "page": 41,
+          "extractable_text_characters": 572,
+          "text_sha256": "b6cb469ca067811512b01a87c904fb1e32e55b8f20c5928df248a29a3c210993"
+        },
+        {
+          "page": 42,
+          "extractable_text_characters": 732,
+          "text_sha256": "088cda5d29a0632154e71eb54abb7b0a300740178ef0d832e472fffbd9311086"
+        },
+        {
+          "page": 43,
+          "extractable_text_characters": 599,
+          "text_sha256": "7ae4b46fe7b403bf4504a4098d6c34f7df50c8bfdb7fcb23a5135c3e3f1534df"
+        },
+        {
+          "page": 44,
+          "extractable_text_characters": 658,
+          "text_sha256": "a13daf4bd4626cb7d7148736bb41612d840fa00f31218a9682870090360911c2"
+        },
+        {
+          "page": 46,
+          "extractable_text_characters": 790,
+          "text_sha256": "976706120116edf34c572b13402e66b5c2b59aa5b911629fd7940d22dd9b0dd2"
+        },
+        {
+          "page": 47,
+          "extractable_text_characters": 677,
+          "text_sha256": "ba9c67210939d994daa0f73ca6876696e463972e32788203bad1c4a651ac27ec"
+        },
+        {
+          "page": 48,
+          "extractable_text_characters": 735,
+          "text_sha256": "5c7196565f748330178d7d09d43d73fafddd140b7d33b900f1753279ab5f0fdf"
+        },
+        {
+          "page": 49,
+          "extractable_text_characters": 595,
+          "text_sha256": "7225e29d0948284bf4e9fc2b8a7551c520e70a76ca93a0775daf4197d7224af3"
+        },
+        {
+          "page": 50,
+          "extractable_text_characters": 565,
+          "text_sha256": "3fd956e6688bb23bf07b646a1dc8e30be8ea919b8a59a4849f25ad3a4f0b7b55"
+        },
+        {
+          "page": 51,
+          "extractable_text_characters": 390,
+          "text_sha256": "c7cf11d94bee942a6cb012a84d31937cde6395bad52639ee2671a347ff971525"
+        },
+        {
+          "page": 52,
+          "extractable_text_characters": 436,
+          "text_sha256": "8e6c1b6957ed448a82e81df6f2da85c2080e4ab3656f335874a708c8ab5e616d"
+        },
+        {
+          "page": 53,
+          "extractable_text_characters": 502,
+          "text_sha256": "b1b3f22a7a171db65b4d4fec99649fef3f74cfb1723175af649b04ba6fa16de6"
+        },
+        {
+          "page": 55,
+          "extractable_text_characters": 643,
+          "text_sha256": "7f6f2b4fa7c70774ea91ba51c22493592715faae09607a63a460ddca344a576d"
+        },
+        {
+          "page": 56,
+          "extractable_text_characters": 601,
+          "text_sha256": "465bcb9efc73966e6d1a7442cfe06a7cc1dc75568c1be0c5e740b2cd4ea25591"
+        },
+        {
+          "page": 57,
+          "extractable_text_characters": 598,
+          "text_sha256": "0aca9e7570bf6a3591725f7608ef7493a896c4717c4faef6bc53a96451cc5d11"
+        },
+        {
+          "page": 58,
+          "extractable_text_characters": 805,
+          "text_sha256": "456b4e02d563cadbc5cc6e9b79b4098bfe7d47b72769306ca4f97c893f2315ab"
+        },
+        {
+          "page": 62,
+          "extractable_text_characters": 718,
+          "text_sha256": "d17b10ee6ef318e830e9610c74d42a41dd0366bc193e6ca4e93c439982c2043f"
+        },
+        {
+          "page": 63,
+          "extractable_text_characters": 370,
+          "text_sha256": "6cd579e83c8bf28a936a6c8cb2df7eb1dfd10804969d9aad4b23dad48547d0a7"
+        },
+        {
+          "page": 64,
+          "extractable_text_characters": 636,
+          "text_sha256": "733d3c7af7f7e07de76844e1075d065393767a443293c3e8ead26461f6a6da21"
+        },
+        {
+          "page": 65,
+          "extractable_text_characters": 662,
+          "text_sha256": "2440536dbf115c6e8147826224930a2d564d86d361072fc1c49d7ba7136cfe95"
+        },
+        {
+          "page": 66,
+          "extractable_text_characters": 298,
+          "text_sha256": "d067c1f9303342e6128bee8cf00e6a139250ba887310779df09271458073db69"
+        },
+        {
+          "page": 67,
+          "extractable_text_characters": 459,
+          "text_sha256": "29c02990a753dcb6e425f62a2501da251658b5c81a94308a3694bafefce98508"
+        },
+        {
+          "page": 68,
+          "extractable_text_characters": 272,
+          "text_sha256": "75f0ab7d512250d483042491ddecc659ecd9d0a7787eab4f6c3f77d713d9a741"
+        },
+        {
+          "page": 70,
+          "extractable_text_characters": 705,
+          "text_sha256": "c30f080237626115761d06a82dde8c58dbad218b0445f329abdb6742c2d3e8fe"
+        },
+        {
+          "page": 71,
+          "extractable_text_characters": 649,
+          "text_sha256": "53092eae6402d88f503da6ec7b8642cda984b289344be04e46df6d29e80a3f53"
+        },
+        {
+          "page": 72,
+          "extractable_text_characters": 777,
+          "text_sha256": "25cfd2de6a0326abdcabf1fb513aef49cc8e09981c2b5adaec6c92a1c7585a6e"
+        },
+        {
+          "page": 74,
+          "extractable_text_characters": 345,
+          "text_sha256": "f3ef507aac7c31340362acb1d9a5b361b0dbc059175945f411f27cae41230ff0"
+        },
+        {
+          "page": 75,
+          "extractable_text_characters": 491,
+          "text_sha256": "3f0923ea721631a0720b3d1fd57e1c37477136210c5120f51437d7e0921baafc"
+        },
+        {
+          "page": 76,
+          "extractable_text_characters": 369,
+          "text_sha256": "b440f6bbe2539636a31ccb7351c80cb6fdb9a282cad39bdcf51d1c7ea4717ab5"
+        },
+        {
+          "page": 78,
+          "extractable_text_characters": 641,
+          "text_sha256": "7a7c6e831430f41fbd5904f6c24441377594af6c9ef0090574f75b4caf35331b"
+        },
+        {
+          "page": 79,
+          "extractable_text_characters": 588,
+          "text_sha256": "1e623f07c295666c95a99f7d2f40deef3de5e5ceb85f4d90a2a52cf606bdae66"
+        },
+        {
+          "page": 80,
+          "extractable_text_characters": 851,
+          "text_sha256": "514160589f02850d4eb66d9a013a838d34d059c9be0d0f4899b0bb57236b429d"
+        },
+        {
+          "page": 81,
+          "extractable_text_characters": 842,
+          "text_sha256": "a24465bc97b59eb976c4d7dbefca403f5aa5696e7230f898a6e917d9f5b9d97c"
+        },
+        {
+          "page": 82,
+          "extractable_text_characters": 784,
+          "text_sha256": "6a3536d1adb17f4c4d621612c8931096bea3563225f9c2639e8fc6b3ed11b7b6"
+        },
+        {
+          "page": 83,
+          "extractable_text_characters": 461,
+          "text_sha256": "d91c128b59970bcfcce0e026595d8e5ccc27b83e6645d7d8ada86ee81d6fe1a8"
+        },
+        {
+          "page": 84,
+          "extractable_text_characters": 967,
+          "text_sha256": "ad3e50cb1183a3237e6f5b17ec3f013f5fd491f254e3c07720a58f26994f29bf"
+        },
+        {
+          "page": 85,
+          "extractable_text_characters": 1049,
+          "text_sha256": "450c59d417de3165397b766f7b62d8a425857e59219d38141d17a0ba1b87def9"
+        },
+        {
+          "page": 86,
+          "extractable_text_characters": 438,
+          "text_sha256": "89333e9676ba34765936c6ee727223ecbd7a69c49d253526c18438cd4c67e66f"
+        },
+        {
+          "page": 87,
+          "extractable_text_characters": 545,
+          "text_sha256": "c3ab3f5db104f1e8e7d7a9c070afd14e9e255935ce627182e191d64fafea4763"
+        },
+        {
+          "page": 88,
+          "extractable_text_characters": 531,
+          "text_sha256": "039443501d061bf9558c84197de22233e6d4dccb2b457659ea03951f5a61b734"
+        },
+        {
+          "page": 89,
+          "extractable_text_characters": 913,
+          "text_sha256": "d39d5847463a32717b850dfc8d497044ff39d6d30def3d7b4979870be2c285e0"
+        },
+        {
+          "page": 90,
+          "extractable_text_characters": 386,
+          "text_sha256": "99711c2dad803de093d45d27988a8051671da5170712854b4a7004dbc010065a"
+        },
+        {
+          "page": 91,
+          "extractable_text_characters": 921,
+          "text_sha256": "b56b54364ce70946e53c423891d6d4ea48b5de7e7d9592a3d31acfb7d6f25e8f"
+        },
+        {
+          "page": 92,
+          "extractable_text_characters": 689,
+          "text_sha256": "7ea08794facb4cc5c39da2c833297671b809c143c691edb2f313ec7f67db6e45"
+        },
+        {
+          "page": 93,
+          "extractable_text_characters": 447,
+          "text_sha256": "4bd5e4f0540b50cbcf65e9541b9603346d87e79d53c7d81cec7b1b8687e450ec"
+        },
+        {
+          "page": 94,
+          "extractable_text_characters": 672,
+          "text_sha256": "ad4f5afd59b5469976bd37e027d85dd9f9424bcfb6de294e8a395f854c299a64"
+        },
+        {
+          "page": 95,
+          "extractable_text_characters": 556,
+          "text_sha256": "297014bef26e7f80dbd98e42de85693ad8d4cdd83f20e93a34aa96dcc9cc5d20"
+        },
+        {
+          "page": 96,
+          "extractable_text_characters": 777,
+          "text_sha256": "1050e8c7af42bb7e4b8bf783dce80c70e51cadbb456fb64b7cd4b3460742914b"
+        },
+        {
+          "page": 97,
+          "extractable_text_characters": 719,
+          "text_sha256": "5cf959a70664fb352a3f2dd72a0d6c58f83d69f9a9667860481482c85072ecb0"
+        },
+        {
+          "page": 98,
+          "extractable_text_characters": 618,
+          "text_sha256": "0d85a64ab277b7c417f7ecbb57ec83f9df51619c5f69a750d5bd435767e1fe94"
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "module": "M1",
+      "section_index": 1,
+      "heading": "Foundations and system components",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        5,
+        6,
+        7,
+        8,
+        11,
+        13,
+        14
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 2,
+      "heading": "System structure and boundaries",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        15,
+        18,
+        20,
+        22
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 3,
+      "heading": "System behavior and modeling principles",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        9,
+        20,
+        21,
+        25
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 4,
+      "heading": "Analytical solutions and simulation",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        26,
+        32,
+        33,
+        34,
+        35
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 5,
+      "heading": "Worked falling-object model and slide correction",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        11,
+        13
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 6,
+      "heading": "Model classifications and the development cycle",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        30,
+        38,
+        39,
+        57
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 7,
+      "heading": "Simulation approaches",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        42,
+        43,
+        44,
+        57
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 8,
+      "heading": "Fidelity, resolution, and modeling paradigms",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        45,
+        46,
+        48,
+        49,
+        50
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 9,
+      "heading": "Simulation participation and applications",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        51,
+        52,
+        53,
+        55,
+        56
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 10,
+      "heading": "MATLAB basics",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        73,
+        80,
+        81,
+        82,
+        83,
+        84
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 11,
+      "heading": "MATLAB arrays and indexing",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        93,
+        95,
+        97,
+        98,
+        99,
+        100,
+        101,
+        102,
+        103,
+        104
+      ]
+    },
+    {
+      "module": "M1",
+      "section_index": 12,
+      "heading": "MATLAB calculations and source cautions",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        88,
+        107,
+        109,
+        111,
+        113,
+        114,
+        116,
+        117
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 1,
+      "heading": "Sets and functions",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 2,
+      "heading": "Probability and random variables",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        22
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 3,
+      "heading": "Distributions and random variates",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 4,
+      "heading": "Input and output modeling",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 5,
+      "heading": "DES elements and clock advance",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        44,
+        48,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        60,
+        61,
+        62
+      ]
+    },
+    {
+      "module": "M2",
+      "section_index": 6,
+      "heading": "Queue behavior and worked example",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        63,
+        64,
+        65,
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        78,
+        79
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 1,
+      "heading": "Continuous systems and modeling strategy",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        5,
+        7,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 2,
+      "heading": "Reservoir and differential-equation classes",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        6,
+        8,
+        10,
+        11
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 3,
+      "heading": "Orbit states and outputs",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        9,
+        11
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 4,
+      "heading": "Predator–prey dynamics",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 5,
+      "heading": "Numerical integration",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        18,
+        19
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 6,
+      "heading": "MATLAB scripts, functions, input and output",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        27,
+        29,
+        30,
+        34,
+        35,
+        36,
+        38,
+        40
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 7,
+      "heading": "MATLAB arrays and plots",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        33,
+        47,
+        48
+      ]
+    },
+    {
+      "module": "M3",
+      "section_index": 8,
+      "heading": "MATLAB selection and loops",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        56,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 1,
+      "heading": "Monte Carlo fundamentals",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        6,
+        7,
+        9,
+        10
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 2,
+      "heading": "Model types, applications, and precision",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 3,
+      "heading": "Four-step procedure and ingredients",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        12,
+        17,
+        18
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 4,
+      "heading": "Estimating π with a quarter circle",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        19,
+        20,
+        21
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 5,
+      "heading": "Sensitivity analysis",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        22,
+        23
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 6,
+      "heading": "MATLAB file input and output",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38
+      ]
+    },
+    {
+      "module": "M4",
+      "section_index": 7,
+      "heading": "MATLAB 2D and 3D plots",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        43,
+        44,
+        45,
+        46,
+        48,
+        49,
+        50,
+        51
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 1,
+      "heading": "Model types and examples",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 2,
+      "heading": "Conceptual and hybrid models",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 3,
+      "heading": "Formal and semiformal tools",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 4,
+      "heading": "Verification and validation",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 5,
+      "heading": "Operations research",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "module": "M5",
+      "section_index": 6,
+      "heading": "Simulink and worked block examples",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        25,
+        29,
+        30,
+        31
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 1,
+      "heading": "Visualization and graphics",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        5,
+        6
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 2,
+      "heading": "Graphics hardware and 3D geometry",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        7,
+        23
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 3,
+      "heading": "Coordinates and transformations",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        24,
+        25,
+        26
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 4,
+      "heading": "Synthetic cameras and projection",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 5,
+      "heading": "Lighting, shading, and textures",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 6,
+      "heading": "Graphics software",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        55,
+        56,
+        57,
+        58
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 7,
+      "heading": "VV&A vocabulary and requirements",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 8,
+      "heading": "Verification, validation, and accreditation",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 9,
+      "heading": "Project types and credibility",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        74,
+        75,
+        76,
+        82
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 10,
+      "heading": "Errors and bounds of validity",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        78,
+        79,
+        80,
+        81
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 11,
+      "heading": "Informal and static methods",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89
+      ]
+    },
+    {
+      "module": "M6",
+      "section_index": 12,
+      "heading": "Dynamic and formal methods",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        96,
+        97,
+        98
+      ]
+    }
+  ],
+  "cards": [
+    {
+      "deck_index": 1,
+      "module": "M3",
+      "module_card_index": 43,
+      "question": "Which values does for v=1:2:5 visit?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        66
+      ]
+    },
+    {
+      "deck_index": 2,
+      "module": "M5",
+      "module_card_index": 22,
+      "question": "What does verification primarily check?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        16,
+        17
+      ]
+    },
+    {
+      "deck_index": 3,
+      "module": "M2",
+      "module_card_index": 21,
+      "question": "What is a limitation of using an empirical distribution built from observed samples?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "deck_index": 4,
+      "module": "M6",
+      "module_card_index": 11,
+      "question": "Why are orthographic projections useful in architectural design and CAD?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "deck_index": 5,
+      "module": "M1",
+      "module_card_index": 31,
+      "question": "Which is a valid MATLAB variable name under the slide rules?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        82
+      ]
+    },
+    {
+      "deck_index": 6,
+      "module": "M3",
+      "module_card_index": 11,
+      "question": "Which states describe the slide’s planetary-orbit example?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "deck_index": 7,
+      "module": "M4",
+      "module_card_index": 30,
+      "question": "After load timetemp.dat in the slide example, what does timetemp(2,:) select?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "deck_index": 8,
+      "module": "M2",
+      "module_card_index": 5,
+      "question": "What is the inverse of f(x)=2x+3 on the real numbers?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "deck_index": 9,
+      "module": "M3",
+      "module_card_index": 27,
+      "question": "For x′=x, x0=1 and h=0.2, what does one explicit midpoint step produce?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "deck_index": 10,
+      "module": "M5",
+      "module_card_index": 6,
+      "question": "What does integrating velocity give in the Easy Pass block diagram?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "deck_index": 11,
+      "module": "M5",
+      "module_card_index": 38,
+      "question": "In the page 29 arithmetic example, what is (1+100)+(50+100)−75−10?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "deck_index": 12,
+      "module": "M6",
+      "module_card_index": 27,
+      "question": "What is the primary deliverable of a simulation software development project?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        74,
+        75,
+        76
+      ]
+    },
+    {
+      "deck_index": 13,
+      "module": "M1",
+      "module_card_index": 15,
+      "question": "Which sequence describes the M&S development cycle presented?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        38
+      ]
+    },
+    {
+      "deck_index": 14,
+      "module": "M2",
+      "module_card_index": 36,
+      "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        77,
+        79
+      ]
+    },
+    {
+      "deck_index": 15,
+      "module": "M4",
+      "module_card_index": 14,
+      "question": "What does the random-number generator supply in the Monte Carlo workflow?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 16,
+      "module": "M1",
+      "module_card_index": 23,
+      "question": "What is the basic idea of finite element modeling?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "deck_index": 17,
+      "module": "M1",
+      "module_card_index": 39,
+      "question": "Which MATLAB operation multiplies corresponding array elements?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        113,
+        114,
+        117
+      ]
+    },
+    {
+      "deck_index": 18,
+      "module": "M2",
+      "module_card_index": 13,
+      "question": "Which distribution is useful when minimum, most likely, and maximum values are known but the exact shape is not?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "deck_index": 19,
+      "module": "M3",
+      "module_card_index": 3,
+      "question": "In the ideal reservoir, which state equation applies?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "deck_index": 20,
+      "module": "M3",
+      "module_card_index": 19,
+      "question": "For positive b,p,r,d, what is the positive Lotka–Volterra equilibrium?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "deck_index": 21,
+      "module": "M3",
+      "module_card_index": 35,
+      "question": "What is the shape of b=(1:3)' in the slide example?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "deck_index": 22,
+      "module": "M4",
+      "module_card_index": 22,
+      "question": "What does sensitivity analysis seek to identify?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "deck_index": 23,
+      "module": "M4",
+      "module_card_index": 38,
+      "question": "Which command plots 3D coordinate vectors?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        50,
+        51
+      ]
+    },
+    {
+      "deck_index": 24,
+      "module": "M5",
+      "module_card_index": 14,
+      "question": "In a concept map, what do nodes represent?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "deck_index": 25,
+      "module": "M5",
+      "module_card_index": 30,
+      "question": "What does operations research use to support complex-system decisions?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 26,
+      "module": "M6",
+      "module_card_index": 3,
+      "question": "Which describes a mathematical vector in the slides?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        24
+      ]
+    },
+    {
+      "deck_index": 27,
+      "module": "M6",
+      "module_card_index": 19,
+      "question": "In an assembly-line simulation, what is the simuland?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        63
+      ]
+    },
+    {
+      "deck_index": 28,
+      "module": "M6",
+      "module_card_index": 35,
+      "question": "What distinguishes static V&V from dynamic V&V?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        87,
+        90
+      ]
+    },
+    {
+      "deck_index": 29,
+      "module": "M1",
+      "module_card_index": 7,
+      "question": "What defines a sampled-data system?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "deck_index": 30,
+      "module": "M2",
+      "module_card_index": 28,
+      "question": "What does the next-event list contain?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        57
+      ]
+    },
+    {
+      "deck_index": 31,
+      "module": "M4",
+      "module_card_index": 6,
+      "question": "Which model shown has a node from an initial stage feeding a subsequent stage?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "deck_index": 32,
+      "module": "M1",
+      "module_card_index": 11,
+      "question": "What does aggregation do in modeling?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "deck_index": 33,
+      "module": "M1",
+      "module_card_index": 19,
+      "question": "Which model type commonly uses differential equations for variables evolving with time?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "deck_index": 34,
+      "module": "M1",
+      "module_card_index": 27,
+      "question": "What is the main intent of a training application?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        55
+      ]
+    },
+    {
+      "deck_index": 35,
+      "module": "M1",
+      "module_card_index": 35,
+      "question": "For a 2-by-3 matrix, what does numel return?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        100
+      ]
+    },
+    {
+      "deck_index": 36,
+      "module": "M2",
+      "module_card_index": 1,
+      "question": "Which set contains elements in both A and B?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "deck_index": 37,
+      "module": "M2",
+      "module_card_index": 9,
+      "question": "What does a random variable associate with each experimental outcome?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "deck_index": 38,
+      "module": "M2",
+      "module_card_index": 17,
+      "question": "What are the two basic stages of random variate generation in the module?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        27,
+        28
+      ]
+    },
+    {
+      "deck_index": 39,
+      "module": "M2",
+      "module_card_index": 32,
+      "question": "What is balking?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "deck_index": 40,
+      "module": "M2",
+      "module_card_index": 40,
+      "question": "In the slide example, when does customer 4 begin service?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "deck_index": 41,
+      "module": "M3",
+      "module_card_index": 7,
+      "question": "What is the first broad step in the slide’s modeling strategy?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "deck_index": 42,
+      "module": "M3",
+      "module_card_index": 15,
+      "question": "Which Lotka–Volterra equation gives prey growth?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "deck_index": 43,
+      "module": "M3",
+      "module_card_index": 23,
+      "question": "Why are numerical solution techniques used for continuous-system equations?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 44,
+      "module": "M3",
+      "module_card_index": 31,
+      "question": "Which command requests text rather than evaluating numerical input?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        34,
+        40
+      ]
+    },
+    {
+      "deck_index": 45,
+      "module": "M3",
+      "module_card_index": 39,
+      "question": "What can a MATLAB LineSpec encode?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "deck_index": 46,
+      "module": "M4",
+      "module_card_index": 10,
+      "question": "Which is the first of the four steps in the slide procedure?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "deck_index": 47,
+      "module": "M4",
+      "module_card_index": 18,
+      "question": "What domain is sampled in the π demonstration?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        19,
+        20
+      ]
+    },
+    {
+      "deck_index": 48,
+      "module": "M4",
+      "module_card_index": 26,
+      "question": "What does the delimiter argument in dlmwrite('data.out', A, ' ') specify?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        34
+      ]
+    },
+    {
+      "deck_index": 49,
+      "module": "M4",
+      "module_card_index": 34,
+      "question": "How does axis square differ from axis equal?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "deck_index": 50,
+      "module": "M5",
+      "module_card_index": 2,
+      "question": "Which type uses directionally connected components with mathematical relationships?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "deck_index": 51,
+      "module": "M5",
+      "module_card_index": 10,
+      "question": "Which description best fits a conceptual model as presented?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "deck_index": 52,
+      "module": "M5",
+      "module_card_index": 18,
+      "question": "What disadvantage of formal modeling does the slide identify?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "deck_index": 53,
+      "module": "M5",
+      "module_card_index": 26,
+      "question": "What is validation primarily concerned with?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "deck_index": 54,
+      "module": "M5",
+      "module_card_index": 34,
+      "question": "What does Simulink provide for dynamic-system modeling?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "deck_index": 55,
+      "module": "M5",
+      "module_card_index": 42,
+      "question": "In the page 31 example, comparing the computed 12 to 12 using equality returns what?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        31
+      ]
+    },
+    {
+      "deck_index": 56,
+      "module": "M6",
+      "module_card_index": 7,
+      "question": "Which three parameters position and orient the slide’s camera?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "deck_index": 57,
+      "module": "M6",
+      "module_card_index": 15,
+      "question": "Which parameters define a spotlight?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        49
+      ]
+    },
+    {
+      "deck_index": 58,
+      "module": "M6",
+      "module_card_index": 23,
+      "question": "What determines which simuland aspects and accuracy levels requirements specify?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        68
+      ]
+    },
+    {
+      "deck_index": 59,
+      "module": "M6",
+      "module_card_index": 31,
+      "question": "A simulator valid for one aircraft type is used to qualify pilots for a different type. Which error is illustrated?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        80
+      ]
+    },
+    {
+      "deck_index": 60,
+      "module": "M6",
+      "module_card_index": 39,
+      "question": "How does comparison testing use multiple models?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        92
+      ]
+    },
+    {
+      "deck_index": 61,
+      "module": "M1",
+      "module_card_index": 3,
+      "question": "What is an entity in system modeling?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 62,
+      "module": "M2",
+      "module_card_index": 24,
+      "question": "In DES, when are modeled state changes represented?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "deck_index": 63,
+      "module": "M4",
+      "module_card_index": 2,
+      "question": "Which situation is especially suited to Monte Carlo?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "deck_index": 64,
+      "module": "M1",
+      "module_card_index": 5,
+      "question": "What is the role of an activity in the slides’ system terminology?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 65,
+      "module": "M1",
+      "module_card_index": 9,
+      "question": "What belongs to establishing a model structure?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "deck_index": 66,
+      "module": "M1",
+      "module_card_index": 13,
+      "question": "Which is an advantage of simulation described in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        34,
+        35
+      ]
+    },
+    {
+      "deck_index": 67,
+      "module": "M1",
+      "module_card_index": 17,
+      "question": "Why are statistical techniques important for stochastic simulation?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        39,
+        57
+      ]
+    },
+    {
+      "deck_index": 68,
+      "module": "M1",
+      "module_card_index": 21,
+      "question": "What does fidelity describe?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        45
+      ]
+    },
+    {
+      "deck_index": 69,
+      "module": "M1",
+      "module_card_index": 25,
+      "question": "Which participation category involves real people operating simulated systems?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        51,
+        52,
+        53
+      ]
+    },
+    {
+      "deck_index": 70,
+      "module": "M1",
+      "module_card_index": 29,
+      "question": "What does MATLAB stand for?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        73
+      ]
+    },
+    {
+      "deck_index": 71,
+      "module": "M1",
+      "module_card_index": 33,
+      "question": "What are the dimensions of a column vector with five elements?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        93
+      ]
+    },
+    {
+      "deck_index": 72,
+      "module": "M1",
+      "module_card_index": 37,
+      "question": "What does repmat(A,2,3) construct?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        104
+      ]
+    },
+    {
+      "deck_index": 73,
+      "module": "M1",
+      "module_card_index": 41,
+      "question": "Which MATLAB function calculates the determinant of square matrix A?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        118
+      ]
+    },
+    {
+      "deck_index": 74,
+      "module": "M2",
+      "module_card_index": 3,
+      "question": "For U={2,4,6,8,10,12} and A={2,4,10}, what is A’s complement?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "deck_index": 75,
+      "module": "M2",
+      "module_card_index": 7,
+      "question": "For the three-sided die with probabilities B=1/6 and C=1/3, what is P(B or C)?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "deck_index": 76,
+      "module": "M2",
+      "module_card_index": 11,
+      "question": "How is P(a<X≤b) calculated from a CDF?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        20,
+        22
+      ]
+    },
+    {
+      "deck_index": 77,
+      "module": "M2",
+      "module_card_index": 15,
+      "question": "If exponential interarrival times have mean 5 time units, what is their rate?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "deck_index": 78,
+      "module": "M2",
+      "module_card_index": 19,
+      "question": "Why select LCG constants and a seed carefully?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        29,
+        30
+      ]
+    },
+    {
+      "deck_index": 79,
+      "module": "M2",
+      "module_card_index": 26,
+      "question": "A resource is busy for 6 hours of a 10-hour observation. What is its utilization?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        52
+      ]
+    },
+    {
+      "deck_index": 80,
+      "module": "M2",
+      "module_card_index": 30,
+      "question": "What are two causes of queues named in the slides?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        63
+      ]
+    },
+    {
+      "deck_index": 81,
+      "module": "M2",
+      "module_card_index": 34,
+      "question": "What is jockeying?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "deck_index": 82,
+      "module": "M2",
+      "module_card_index": 38,
+      "question": "In the slide example, customer 5 arrives at 11 and finishes service at 15. How long is the time in system?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "deck_index": 83,
+      "module": "M3",
+      "module_card_index": 1,
+      "question": "What distinguishes a continuous-state system model?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        5,
+        10
+      ]
+    },
+    {
+      "deck_index": 84,
+      "module": "M3",
+      "module_card_index": 5,
+      "question": "What output does the page 6 reservoir model specify?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "deck_index": 85,
+      "module": "M3",
+      "module_card_index": 9,
+      "question": "What do state equations describe?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "deck_index": 86,
+      "module": "M3",
+      "module_card_index": 13,
+      "question": "In the Kolmogorov model dx/dt=x f(x,y), what is f for positive x?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "deck_index": 87,
+      "module": "M3",
+      "module_card_index": 17,
+      "question": "In the Lotka–Volterra model with positive p, what is the slope of prey per-capita growth versus predator population?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 88,
+      "module": "M3",
+      "module_card_index": 21,
+      "question": "What correction makes the page 16 conserved expression valid for general r?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        15,
+        16,
+        17
+      ]
+    },
+    {
+      "deck_index": 89,
+      "module": "M3",
+      "module_card_index": 25,
+      "question": "For x′=x, x0=1 and h=0.2, what is one forward Euler step?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 90,
+      "module": "M3",
+      "module_card_index": 29,
+      "question": "Which statement contrasts scripts and functions?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "deck_index": 91,
+      "module": "M3",
+      "module_card_index": 33,
+      "question": "What does fprintf format code %s represent?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        36,
+        38
+      ]
+    },
+    {
+      "deck_index": 92,
+      "module": "M3",
+      "module_card_index": 37,
+      "question": "How do you plot values y against x in MATLAB?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "deck_index": 93,
+      "module": "M3",
+      "module_card_index": 41,
+      "question": "What does menu return when a button is selected?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        65
+      ]
+    },
+    {
+      "deck_index": 94,
+      "module": "M4",
+      "module_card_index": 4,
+      "question": "Which statement corrects the slide claim that a simulation result must be known?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        9,
+        17,
+        18
+      ]
+    },
+    {
+      "deck_index": 95,
+      "module": "M4",
+      "module_card_index": 8,
+      "question": "With N grid points per dimension, how many evaluations does a full D-dimensional grid require?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "deck_index": 96,
+      "module": "M4",
+      "module_card_index": 12,
+      "question": "What is the purpose of scoring in the listed components?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 97,
+      "module": "M4",
+      "module_card_index": 16,
+      "question": "How can P(X > α) be estimated using samples from X?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        12,
+        17,
+        18
+      ]
+    },
+    {
+      "deck_index": 98,
+      "module": "M4",
+      "module_card_index": 20,
+      "question": "Why does the π estimator multiply the hit proportion by four?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        19,
+        21
+      ]
+    },
+    {
+      "deck_index": 99,
+      "module": "M4",
+      "module_card_index": 24,
+      "question": "Why can a single derivative-based sensitivity be insufficient for a nonlinear model?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "deck_index": 100,
+      "module": "M4",
+      "module_card_index": 28,
+      "question": "What does save with -ascii do to a character array in the slide example?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        32,
+        36
+      ]
+    },
+    {
+      "deck_index": 101,
+      "module": "M4",
+      "module_card_index": 32,
+      "question": "Which sequence plots a function in 2D as described in the slide?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "deck_index": 102,
+      "module": "M4",
+      "module_card_index": 36,
+      "question": "What does hold on allow in the plotted example?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        48
+      ]
+    },
+    {
+      "deck_index": 103,
+      "module": "M4",
+      "module_card_index": 40,
+      "question": "What is a potential use of randomized moves in optimization?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "deck_index": 104,
+      "module": "M5",
+      "module_card_index": 4,
+      "question": "What can constitute the elements of a spatial model?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "deck_index": 105,
+      "module": "M5",
+      "module_card_index": 8,
+      "question": "The constraint example uses which work-energy relationship?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "deck_index": 106,
+      "module": "M5",
+      "module_card_index": 12,
+      "question": "Which example illustrates textual and graphical conceptual representations?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "deck_index": 107,
+      "module": "M5",
+      "module_card_index": 16,
+      "question": "What is a modeling formalism?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        14
+      ]
+    },
+    {
+      "deck_index": 108,
+      "module": "M5",
+      "module_card_index": 20,
+      "question": "How is UML characterized on the slide?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 109,
+      "module": "M5",
+      "module_card_index": 24,
+      "question": "What inputs does the slide recommend for model stress tests?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "deck_index": 110,
+      "module": "M5",
+      "module_card_index": 28,
+      "question": "When the target system does not exist, what validation option is identified?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "deck_index": 111,
+      "module": "M5",
+      "module_card_index": 32,
+      "question": "What does a linear programming objective specify?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 112,
+      "module": "M5",
+      "module_card_index": 36,
+      "question": "Which use of Simulink occurs before building hardware?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "deck_index": 113,
+      "module": "M5",
+      "module_card_index": 40,
+      "question": "As a separate calculation, what does 1660 > 5000 return?",
+      "source_file": "M5-MAIN - Systems Modeling.pdf",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "deck_index": 114,
+      "module": "M6",
+      "module_card_index": 1,
+      "question": "Why use visualization in simulation?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "deck_index": 115,
+      "module": "M6",
+      "module_card_index": 5,
+      "question": "Which transformation family includes translation, rotation, and scaling?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "deck_index": 116,
+      "module": "M6",
+      "module_card_index": 9,
+      "question": "How is parallel projection specified in the slides?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        43
+      ]
+    },
+    {
+      "deck_index": 117,
+      "module": "M6",
+      "module_card_index": 13,
+      "question": "Which light model illuminates all objects uniformly regardless of location and direction?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "deck_index": 118,
+      "module": "M6",
+      "module_card_index": 17,
+      "question": "What is the main benefit of texture mapping described in the slides?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        53
+      ]
+    },
+    {
+      "deck_index": 119,
+      "module": "M6",
+      "module_card_index": 21,
+      "question": "What does a conceptual model document?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        65
+      ]
+    },
+    {
+      "deck_index": 120,
+      "module": "M6",
+      "module_card_index": 25,
+      "question": "Which question is principally a validation question?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        70,
+        71,
+        72
+      ]
+    },
+    {
+      "deck_index": 121,
+      "module": "M6",
+      "module_card_index": 29,
+      "question": "A valid flight simulator is not used because the authority is not persuaded to certify it. Which error is this?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        78
+      ]
+    },
+    {
+      "deck_index": 122,
+      "module": "M6",
+      "module_card_index": 33,
+      "question": "What does face validation compare?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        85
+      ]
+    },
+    {
+      "deck_index": 123,
+      "module": "M6",
+      "module_card_index": 37,
+      "question": "What does cause–effect graphing validate?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        89
+      ]
+    },
+    {
+      "deck_index": 124,
+      "module": "M6",
+      "module_card_index": 41,
+      "question": "What is the core idea of inductive assertions?",
+      "source_file": "M6-MAIN-Visualization and VV and A.pdf",
+      "pages": [
+        96
+      ]
+    },
+    {
+      "deck_index": 125,
+      "module": "M1",
+      "module_card_index": 1,
+      "question": "Which four precepts underpin the M&S curriculum in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        5
+      ]
+    },
+    {
+      "deck_index": 126,
+      "module": "M2",
+      "module_card_index": 22,
+      "question": "What is one advantage of fitting a theoretical distribution to sample data?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        36,
+        37
+      ]
+    },
+    {
+      "deck_index": 127,
+      "module": "M3",
+      "module_card_index": 44,
+      "question": "What controls repetition in a while loop?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        67
+      ]
+    },
+    {
+      "deck_index": 128,
+      "module": "M1",
+      "module_card_index": 2,
+      "question": "What distinguishes a notional system from a physical system in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        7,
+        8
+      ]
+    },
+    {
+      "deck_index": 129,
+      "module": "M1",
+      "module_card_index": 4,
+      "question": "In a factory model, what is a property of a machine called?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 130,
+      "module": "M1",
+      "module_card_index": 6,
+      "question": "An activity occurring outside the chosen system boundary is called what?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 131,
+      "module": "M1",
+      "module_card_index": 8,
+      "question": "Which is a reason to model rather than directly engage a system?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        21
+      ]
+    },
+    {
+      "deck_index": 132,
+      "module": "M1",
+      "module_card_index": 10,
+      "question": "What does the relevance principle recommend?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        25
+      ]
+    },
+    {
+      "deck_index": 133,
+      "module": "M1",
+      "module_card_index": 12,
+      "question": "When can an analytical solution be useful?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        26,
+        32
+      ]
+    },
+    {
+      "deck_index": 134,
+      "module": "M1",
+      "module_card_index": 14,
+      "question": "Which limitation of simulation is identified in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        35
+      ]
+    },
+    {
+      "deck_index": 135,
+      "module": "M1",
+      "module_card_index": 16,
+      "question": "What makes a simulation deterministic?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        57
+      ]
+    },
+    {
+      "deck_index": 136,
+      "module": "M1",
+      "module_card_index": 18,
+      "question": "What is the central procedure in Monte Carlo simulation?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        42
+      ]
+    },
+    {
+      "deck_index": 137,
+      "module": "M1",
+      "module_card_index": 20,
+      "question": "How does a discrete-event simulation advance time?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        44
+      ]
+    },
+    {
+      "deck_index": 138,
+      "module": "M1",
+      "module_card_index": 22,
+      "question": "What does higher resolution mean in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        46
+      ]
+    },
+    {
+      "deck_index": 139,
+      "module": "M1",
+      "module_card_index": 24,
+      "question": "Which approach combines more than one modeling paradigm?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        50
+      ]
+    },
+    {
+      "deck_index": 140,
+      "module": "M1",
+      "module_card_index": 26,
+      "question": "How is constructive simulation characterized in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        53
+      ]
+    },
+    {
+      "deck_index": 141,
+      "module": "M1",
+      "module_card_index": 28,
+      "question": "What is an acquisition application intended to evaluate before committing funds?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        56
+      ]
+    },
+    {
+      "deck_index": 142,
+      "module": "M1",
+      "module_card_index": 30,
+      "question": "Which MATLAB command displays more detail about workspace variables?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        83
+      ]
+    },
+    {
+      "deck_index": 143,
+      "module": "M1",
+      "module_card_index": 32,
+      "question": "What is the default MATLAB numeric type described in the slides?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        84
+      ]
+    },
+    {
+      "deck_index": 144,
+      "module": "M1",
+      "module_card_index": 34,
+      "question": "In MATLAB, which expression addresses row 2, column 3 of matrix A?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        97,
+        98
+      ]
+    },
+    {
+      "deck_index": 145,
+      "module": "M1",
+      "module_card_index": 36,
+      "question": "Which function reverses matrix columns from left to right?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        102
+      ]
+    },
+    {
+      "deck_index": 146,
+      "module": "M1",
+      "module_card_index": 38,
+      "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        109
+      ]
+    },
+    {
+      "deck_index": 147,
+      "module": "M1",
+      "module_card_index": 40,
+      "question": "If A is 2-by-3 and B is 3-by-4, what is the size of A * B?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        116
+      ]
+    },
+    {
+      "deck_index": 148,
+      "module": "M1",
+      "module_card_index": 42,
+      "question": "Which function returns the natural logarithm of x in MATLAB?",
+      "source_file": "M1-MAIN-Introduction to Modeling and Simulation.pdf",
+      "pages": [
+        88
+      ]
+    },
+    {
+      "deck_index": 149,
+      "module": "M2",
+      "module_card_index": 2,
+      "question": "For A={2,4,10} and B={4,6,8,10}, what is B−A?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        9
+      ]
+    },
+    {
+      "deck_index": 150,
+      "module": "M2",
+      "module_card_index": 4,
+      "question": "When does a function have an inverse on its full codomain?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        10,
+        11
+      ]
+    },
+    {
+      "deck_index": 151,
+      "module": "M2",
+      "module_card_index": 6,
+      "question": "Which three components form a probability space?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "deck_index": 152,
+      "module": "M2",
+      "module_card_index": 8,
+      "question": "How many events are in the full power set of a three-outcome sample space?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        17,
+        18
+      ]
+    },
+    {
+      "deck_index": 153,
+      "module": "M2",
+      "module_card_index": 10,
+      "question": "What does F(x) represent for random variable X?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        20
+      ]
+    },
+    {
+      "deck_index": 154,
+      "module": "M2",
+      "module_card_index": 12,
+      "question": "For a continuous density, what is the total area under its curve?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        22
+      ]
+    },
+    {
+      "deck_index": 155,
+      "module": "M2",
+      "module_card_index": 14,
+      "question": "What is the density of a uniform distribution on [2,6] within that interval?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        23
+      ]
+    },
+    {
+      "deck_index": 156,
+      "module": "M2",
+      "module_card_index": 16,
+      "question": "Which distribution is described as modeling variability around an average with parameters mean and standard deviation?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        26
+      ]
+    },
+    {
+      "deck_index": 157,
+      "module": "M2",
+      "module_card_index": 18,
+      "question": "In a linear congruential generator, how is Uₖ obtained from integer Zₖ and modulus m?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        29
+      ]
+    },
+    {
+      "deck_index": 158,
+      "module": "M2",
+      "module_card_index": 20,
+      "question": "Which belongs to structural rather than data modeling?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        32
+      ]
+    },
+    {
+      "deck_index": 159,
+      "module": "M2",
+      "module_card_index": 23,
+      "question": "What is the purpose of output data analysis?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        39
+      ]
+    },
+    {
+      "deck_index": 160,
+      "module": "M2",
+      "module_card_index": 25,
+      "question": "Which DES element carries information specific to an individual entity?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        51
+      ]
+    },
+    {
+      "deck_index": 161,
+      "module": "M2",
+      "module_card_index": 27,
+      "question": "What does the simulation executive primarily control?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        55
+      ]
+    },
+    {
+      "deck_index": 162,
+      "module": "M2",
+      "module_card_index": 29,
+      "question": "How does next-event time advance differ from fixed-increment advance?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        61,
+        62
+      ]
+    },
+    {
+      "deck_index": 163,
+      "module": "M2",
+      "module_card_index": 31,
+      "question": "Under FCFS, who is selected first from the waiting line?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        66
+      ]
+    },
+    {
+      "deck_index": 164,
+      "module": "M2",
+      "module_card_index": 33,
+      "question": "What is reneging?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        69
+      ]
+    },
+    {
+      "deck_index": 165,
+      "module": "M2",
+      "module_card_index": 35,
+      "question": "What is an interarrival time?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        70
+      ]
+    },
+    {
+      "deck_index": 166,
+      "module": "M2",
+      "module_card_index": 37,
+      "question": "In the slide example, customer 3 arrives at 5 and starts service at 7. How long is the wait?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        78,
+        79
+      ]
+    },
+    {
+      "deck_index": 167,
+      "module": "M2",
+      "module_card_index": 39,
+      "question": "In the slide example, what is the mean queue wait for all six customers?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        79
+      ]
+    },
+    {
+      "deck_index": 168,
+      "module": "M2",
+      "module_card_index": 41,
+      "question": "What is the queue-design tradeoff described by the module?",
+      "source_file": "M2-MAIN-Discrete Event Simulation.pdf",
+      "pages": [
+        68
+      ]
+    },
+    {
+      "deck_index": 169,
+      "module": "M3",
+      "module_card_index": 2,
+      "question": "For the reservoir on page 6, what does q(t) represent?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "deck_index": 170,
+      "module": "M3",
+      "module_card_index": 4,
+      "question": "If initial reservoir contents are 4 and input rate is 2 for 3 time units, what are the final contents?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "deck_index": 171,
+      "module": "M3",
+      "module_card_index": 6,
+      "question": "Which is a listed continuous simulation application?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        7
+      ]
+    },
+    {
+      "deck_index": 172,
+      "module": "M3",
+      "module_card_index": 8,
+      "question": "What must a useful state-variable set provide?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        10
+      ]
+    },
+    {
+      "deck_index": 173,
+      "module": "M3",
+      "module_card_index": 10,
+      "question": "What do output equations address?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        11
+      ]
+    },
+    {
+      "deck_index": 174,
+      "module": "M3",
+      "module_card_index": 12,
+      "question": "What type of equations describe the slide’s predator–prey system?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        8,
+        14
+      ]
+    },
+    {
+      "deck_index": 175,
+      "module": "M3",
+      "module_card_index": 14,
+      "question": "In the model, what effect does increasing predators have on prey per-capita growth?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "deck_index": 176,
+      "module": "M3",
+      "module_card_index": 16,
+      "question": "Which Lotka–Volterra equation gives predator growth?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        14,
+        15
+      ]
+    },
+    {
+      "deck_index": 177,
+      "module": "M3",
+      "module_card_index": 18,
+      "question": "What happens after prey become scarce in the qualitative predator–prey cycle?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        13
+      ]
+    },
+    {
+      "deck_index": 178,
+      "module": "M3",
+      "module_card_index": 20,
+      "question": "With b=p=r=d=1, what is the positive equilibrium?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        15,
+        17
+      ]
+    },
+    {
+      "deck_index": 179,
+      "module": "M3",
+      "module_card_index": 22,
+      "question": "What determines a particular Lotka–Volterra trajectory?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        16
+      ]
+    },
+    {
+      "deck_index": 180,
+      "module": "M3",
+      "module_card_index": 24,
+      "question": "Which is the forward Euler update for x′=f(t,x) with step h?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 181,
+      "module": "M3",
+      "module_card_index": 26,
+      "question": "Which slope does the slide’s midpoint Runge–Kutta update use for the full step?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        19
+      ]
+    },
+    {
+      "deck_index": 182,
+      "module": "M3",
+      "module_card_index": 28,
+      "question": "What file extension do MATLAB scripts and functions use?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        27,
+        29
+      ]
+    },
+    {
+      "deck_index": 183,
+      "module": "M3",
+      "module_card_index": 30,
+      "question": "How can the MATLAB editor be opened from the command prompt?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        30
+      ]
+    },
+    {
+      "deck_index": 184,
+      "module": "M3",
+      "module_card_index": 32,
+      "question": "What does disp(X) do?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "deck_index": 185,
+      "module": "M3",
+      "module_card_index": 34,
+      "question": "What does the newline escape \\n do in fprintf?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        36
+      ]
+    },
+    {
+      "deck_index": 186,
+      "module": "M3",
+      "module_card_index": 36,
+      "question": "Given a=1:2 and b=(1:3)', what shape is a+b with implicit expansion?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        33
+      ]
+    },
+    {
+      "deck_index": 187,
+      "module": "M3",
+      "module_card_index": 38,
+      "question": "What does axis equal specify?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        47
+      ]
+    },
+    {
+      "deck_index": 188,
+      "module": "M3",
+      "module_card_index": 40,
+      "question": "Which construct handles unmatched switch cases?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        64
+      ]
+    },
+    {
+      "deck_index": 189,
+      "module": "M3",
+      "module_card_index": 42,
+      "question": "How can an integer x be tested for evenness in MATLAB?",
+      "source_file": "M3-MAIN - Modeling Continuous Systems.pdf",
+      "pages": [
+        61
+      ]
+    },
+    {
+      "deck_index": 190,
+      "module": "M4",
+      "module_card_index": 1,
+      "question": "What defines a Monte Carlo simulation?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        6,
+        7,
+        17
+      ]
+    },
+    {
+      "deck_index": 191,
+      "module": "M4",
+      "module_card_index": 3,
+      "question": "Where did the slide place the development of the Monte Carlo method?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        6
+      ]
+    },
+    {
+      "deck_index": 192,
+      "module": "M4",
+      "module_card_index": 5,
+      "question": "Which is a limitation of Monte Carlo simulation?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        10,
+        17
+      ]
+    },
+    {
+      "deck_index": 193,
+      "module": "M4",
+      "module_card_index": 7,
+      "question": "What distinguishes the Markov chain illustration from a collection of unrelated points?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        8
+      ]
+    },
+    {
+      "deck_index": 194,
+      "module": "M4",
+      "module_card_index": 9,
+      "question": "For independent finite-variance Monte Carlo samples, what happens to typical standard error if N is quadrupled?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        15
+      ]
+    },
+    {
+      "deck_index": 195,
+      "module": "M4",
+      "module_card_index": 11,
+      "question": "After drawing an input set, what does the slide procedure do next?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        17
+      ]
+    },
+    {
+      "deck_index": 196,
+      "module": "M4",
+      "module_card_index": 13,
+      "question": "What does the sampling rule specify?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 197,
+      "module": "M4",
+      "module_card_index": 15,
+      "question": "What is the function of error estimation?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        18
+      ]
+    },
+    {
+      "deck_index": 198,
+      "module": "M4",
+      "module_card_index": 17,
+      "question": "What is the tail probability P(X > α) for a continuous density f?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        12
+      ]
+    },
+    {
+      "deck_index": 199,
+      "module": "M4",
+      "module_card_index": 19,
+      "question": "Which test identifies a point in the quarter unit circle in the first quadrant?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        19,
+        21
+      ]
+    },
+    {
+      "deck_index": 200,
+      "module": "M4",
+      "module_card_index": 21,
+      "question": "If 785 of 1,000 uniformly sampled square points fall inside the quarter circle, what is the π estimate?",
+      "source_file": "M4-MAIN - Monte Carlo Simulation.pdf",
+      "pages": [
+        19,
+        20,
+        21
+      ]
+    }
+  ],
+  "verification": {
+    "card_count": 200,
+    "unique_normalized_questions": 200,
+    "module_card_counts": {
+      "M1": 42,
+      "M2": 41,
+      "M3": 44,
+      "M4": 31,
+      "M5": 21,
+      "M6": 21
+    },
+    "citation_page_bounds": "passed",
+    "card_shape_and_answers": "passed",
+    "pdf_text": "Extracted per page; zero-length text may indicate an image slide and is not semantic verification.",
+    "semantic_review": "Not automatically established by page or text extraction checks.",
+    "matlab": {
+      "status": "passed",
+      "executable": "D:\\bin\\matlab.exe",
+      "checks": [
+        {
+          "module": "M1",
+          "item": "section 12",
+          "expression": "sign(0)",
+          "expected": "0"
+        },
+        {
+          "module": "M1",
+          "item": "section 12",
+          "expression": "size(sum(ones(2,3)))",
+          "expected": "[1 3]"
+        },
+        {
+          "module": "M3",
+          "item": "section 7",
+          "expression": "size((1:3)' + (1:2))",
+          "expected": "[3 2]"
+        },
+        {
+          "module": "M5",
+          "item": "section 1",
+          "expression": "1000*10^2/(2*5000)",
+          "expected": "10"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "(1+100)+(50+100)-75-10",
+          "expected": "166"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "166*(10*1)",
+          "expected": "1660"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "1660>5000",
+          "expected": "false"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "sqrt(16)+3^2+sign(-5)",
+          "expected": "12"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "(sqrt(16)+3^2+sign(-5))==12",
+          "expected": "true"
+        },
+        {
+          "module": "M5",
+          "item": "section 6",
+          "expression": "strlength(\"Hello FEU Tech\")",
+          "expected": "14"
+        },
+        {
+          "module": "M3",
+          "item": "card 43",
+          "expression": "1:2:5",
+          "expected": "[1 3 5]"
+        },
+        {
+          "module": "M5",
+          "item": "card 38",
+          "expression": "(1+100)+(50+100)-75-10",
+          "expected": "166"
+        },
+        {
+          "module": "M3",
+          "item": "card 35",
+          "expression": "size((1:3)')",
+          "expected": "[3 1]"
+        },
+        {
+          "module": "M1",
+          "item": "card 35",
+          "expression": "numel(ones(2,3))",
+          "expected": "6"
+        },
+        {
+          "module": "M5",
+          "item": "card 42",
+          "expression": "(sqrt(16)+3^2+sign(-5))==12",
+          "expected": "true"
+        },
+        {
+          "module": "M1",
+          "item": "card 33",
+          "expression": "size(ones(5,1))",
+          "expected": "[5 1]"
+        },
+        {
+          "module": "M1",
+          "item": "card 37",
+          "expression": "size(repmat(ones(2,2),2,3))",
+          "expected": "[4 6]"
+        },
+        {
+          "module": "M5",
+          "item": "card 40",
+          "expression": "1660>5000",
+          "expected": "false"
+        },
+        {
+          "module": "M1",
+          "item": "card 38",
+          "expression": "size(sum(ones(2,3)))",
+          "expected": "[1 3]"
+        },
+        {
+          "module": "M1",
+          "item": "card 40",
+          "expression": "size(ones(2,3)*ones(3,4))",
+          "expected": "[2 4]"
+        },
+        {
+          "module": "M3",
+          "item": "card 36",
+          "expression": "size((1:3)' + (1:2))",
+          "expected": "[3 2]"
+        }
+      ]
+    }
+  }
+}
