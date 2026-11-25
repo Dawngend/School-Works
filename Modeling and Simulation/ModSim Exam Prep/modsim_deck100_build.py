@@ -4,7 +4,7 @@ Run this file, then modsim_deck100_check.py. The selection JSON documents module
 manual coding classification, and the exam value of each retained question.
 History, product trivia, repeated definitions, and special-case examples lose
 priority to reviewer traps, general formulas, and MATLAB/Simulink practice.
-The original 200-card deck was captured from git show HEAD before this cut.
+The original 200-card deck comes from the pre-cut commit pinned in the checker.
 """
 
 import json
@@ -59,7 +59,10 @@ def build():
     text = PAYLOAD.read_bytes().decode("utf-8")
     start, end = cards_span(text)
     newline = "\r\n" if "\r\n" in text else "\n"
-    replacement = json.dumps(cards, ensure_ascii=False, indent=2).replace("\n", newline)
+    line_prefix = text[text.rfind("\n", 0, start) + 1:start]
+    indentation = line_prefix[:len(line_prefix) - len(line_prefix.lstrip())]
+    replacement = json.dumps(cards, ensure_ascii=False, indent=2)
+    replacement = replacement.replace("\n", newline + indentation)
     PAYLOAD.write_bytes((text[:start] + replacement + text[end:]).encode("utf-8"))
     print(f"Selected {len(cards)} original cards; only decks[0].cards replaced.")
 

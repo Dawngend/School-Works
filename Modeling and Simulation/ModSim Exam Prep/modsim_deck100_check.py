@@ -1,8 +1,8 @@
-"""Check the 100-card cut against HEAD and its saved original 200-card deck.
+"""Check the cut against the pinned pre-cut commit, including after committing.
 
 Coding is manually classified in the selection manifest, not guessed from
 keywords. Module attribution is independently checked against final_M1-M6.
-Git stores LF while Windows may check out CRLF; comparisons with HEAD ignore
+Git stores LF while Windows may check out CRLF; baseline comparisons ignore
 only that transport difference. Every byte outside the cards value must match.
 """
 
@@ -16,23 +16,44 @@ from modsim_deck100_build import (
     HERE, ORIGINAL, PAYLOAD, ROOT, SELECTION, cards_span, field_span,
 )
 
+BASELINE_COMMIT = "506fc2529d5a8ae2c1fc77c0ba9a318ef80686ef"
+
 
 def require(condition, message):
     if not condition:
         raise ValueError(message)
 
 
+def check_original(original, baseline):
+    missing = sorted(baseline.keys() - original.keys())
+    extra = sorted(original.keys() - baseline.keys())
+    require(not missing and not extra,
+            f"Saved original deck keys differ: missing={missing}, extra={extra}")
+    for key in baseline.keys() - {"cards"}:
+        require(original[key] == baseline[key],
+                f"Saved original deck field differs: {key}")
+    require(len(original["cards"]) == len(baseline["cards"]),
+            "Saved original card count differs from baseline")
+    for index, (saved, expected) in enumerate(zip(original["cards"], baseline["cards"]), 1):
+        fields = sorted(key for key in saved.keys() | expected.keys()
+                        if key not in saved or key not in expected
+                        or saved[key] != expected[key])
+        require(not fields,
+                f"Saved original card {index} differs in {fields}: {expected['question']}")
+
+
 def check():
-    head_bytes = subprocess.check_output(
-        ["git", "show", "HEAD:AndyHub Export/payload_modsim_final.json"], cwd=ROOT,
+    baseline_bytes = subprocess.check_output(
+        ["git", "show", f"{BASELINE_COMMIT}:AndyHub Export/payload_modsim_final.json"],
+        cwd=ROOT,
     )
-    head = json.loads(head_bytes)
+    baseline = json.loads(baseline_bytes)
     text = PAYLOAD.read_bytes().decode("utf-8")
     payload = json.loads(text)
     original = json.loads(ORIGINAL.read_bytes())
     selection = json.loads(SELECTION.read_bytes())
     require(len(original["cards"]) == 200, "Original deck must contain 200 cards")
-    require(original == head["decks"][0], "Saved original deck differs from HEAD")
+    check_original(original, baseline["decks"][0])
     cards = payload["decks"][0]["cards"]
     require(len(cards) == 100, "Deck must contain exactly 100 cards")
     require(len(selection) == 100, "Selection must contain exactly 100 entries")
@@ -74,17 +95,17 @@ def check():
     coding_count = sum(item["coding"] for item in selection)
     require(coding_count >= 30, "At least 30 coding cards required")
 
-    head_text = head_bytes.decode("utf-8").replace("\r\n", "\n")
+    baseline_text = baseline_bytes.decode("utf-8").replace("\r\n", "\n")
     current_text = text.replace("\r\n", "\n")
-    old_start, old_end = cards_span(head_text)
+    old_start, old_end = cards_span(baseline_text)
     new_start, new_end = cards_span(current_text)
-    require(head_text[:old_start] == current_text[:new_start]
-            and head_text[old_end:] == current_text[new_end:],
+    require(baseline_text[:old_start] == current_text[:new_start]
+            and baseline_text[old_end:] == current_text[new_end:],
             "Payload bytes outside decks[0].cards changed (ignoring checkout CRLF)")
-    old_start, old_end = field_span(head_text, "notes")
+    old_start, old_end = field_span(baseline_text, "notes")
     new_start, new_end = field_span(current_text, "notes")
-    require(head_text[old_start:old_end] == current_text[new_start:new_end]
-            and payload["notes"] == head["notes"], "Reviewer notes changed")
+    require(baseline_text[old_start:old_end] == current_text[new_start:new_end]
+            and payload["notes"] == baseline["notes"], "Reviewer notes changed")
     for path in (ORIGINAL, SELECTION, HERE / "modsim_deck100_build.py",
                  HERE / "modsim_deck100_check.py"):
         require("\u2014" not in path.read_bytes().decode("utf-8"),
