@@ -1,0 +1,602 @@
+[
+  {
+    "question": "Which values does for v=1:2:5 visit?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Practice colon step size and the inclusive reachable loop endpoint."
+  },
+  {
+    "question": "What does verification primarily check?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: verification checks implementation against the conceptual model, not reality."
+  },
+  {
+    "question": "What is a limitation of using an empirical distribution built from observed samples?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: empirical resampling cannot supply unobserved tail values."
+  },
+  {
+    "question": "Why are orthographic projections useful in architectural design and CAD?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: orthographic measurement preservation is limited to the projection plane."
+  },
+  {
+    "question": "Which is a valid MATLAB variable name under the slide rules?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Recognize legal MATLAB identifiers and reject reserved words and leading digits."
+  },
+  {
+    "question": "Which states describe the slide’s planetary-orbit example?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: orbital states contain both position and velocity components."
+  },
+  {
+    "question": "After load timetemp.dat in the slide example, what does timetemp(2,:) select?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Practice ASCII load naming and row selection with MATLAB colon indexing."
+  },
+  {
+    "question": "For x′=x, x0=1 and h=0.2, what does one explicit midpoint step produce?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: compute the midpoint method rather than reuse the Euler slope."
+  },
+  {
+    "question": "What does integrating velocity give in the Easy Pass block diagram?",
+    "module": "M5",
+    "coding": true,
+    "reason": "Trap: a velocity integrator produces position, not acceleration."
+  },
+  {
+    "question": "In the page 29 arithmetic example, what is (1+100)+(50+100)−75−10?",
+    "module": "M5",
+    "coding": true,
+    "reason": "Trap: follow both negative Add-block input signs in the reviewed diagram."
+  },
+  {
+    "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: service cannot begin before arrival or before the previous completion."
+  },
+  {
+    "question": "Which MATLAB operation multiplies corresponding array elements?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: distinguish elementwise multiplication from matrix multiplication."
+  },
+  {
+    "question": "For positive b,p,r,d, what is the positive Lotka–Volterra equilibrium?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Keep the general predator-prey equilibrium instead of its unit-parameter special case."
+  },
+  {
+    "question": "Which command plots 3D coordinate vectors?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Recall the executable plotting call for corresponding 3D coordinate vectors."
+  },
+  {
+    "question": "Which describes a mathematical vector in the slides?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: a mathematical vector has direction and magnitude but no fixed location."
+  },
+  {
+    "question": "What distinguishes static V&V from dynamic V&V?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: static V&V does not execute the simulation; dynamic V&V does."
+  },
+  {
+    "question": "What defines a sampled-data system?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: discrete observations do not make continuous dynamics discrete."
+  },
+  {
+    "question": "What does aggregation do in modeling?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: aggregation groups entities rather than guaranteeing accuracy."
+  },
+  {
+    "question": "For a 2-by-3 matrix, what does numel return?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: numel counts every element, unlike the largest-dimension rule for length."
+  },
+  {
+    "question": "What are the two basic stages of random variate generation in the module?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Separate base uniform random numbers from transformed random variates."
+  },
+  {
+    "question": "What is balking?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: balking means never joining, not leaving or changing a queue."
+  },
+  {
+    "question": "Which command requests text rather than evaluating numerical input?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Practice the input text option rather than evaluating an entered expression."
+  },
+  {
+    "question": "What does the delimiter argument in dlmwrite('data.out', A, ' ') specify?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Recognize the explicit delimiter in a MATLAB file-writing call."
+  },
+  {
+    "question": "How does axis square differ from axis equal?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Trap: a square plot box is not the same as equal axis scales."
+  },
+  {
+    "question": "Which description best fits a conceptual model as presented?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: a conceptual overview is not automatically an executable implementation."
+  },
+  {
+    "question": "What is validation primarily concerned with?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: validation concerns useful real-system accuracy rather than correct code."
+  },
+  {
+    "question": "In the page 31 example, comparing the computed 12 to 12 using equality returns what?",
+    "module": "M5",
+    "coding": true,
+    "reason": "Trap: an equality block returns Boolean 1 rather than the arithmetic value."
+  },
+  {
+    "question": "Which three parameters position and orient the slide’s camera?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: camera target position and camera up direction have different roles."
+  },
+  {
+    "question": "What determines which simuland aspects and accuracy levels requirements specify?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: intended application determines the required aspects and accuracy."
+  },
+  {
+    "question": "A simulator valid for one aircraft type is used to qualify pilots for a different type. Which error is illustrated?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: validity for one aircraft does not justify use for another; Type III risk."
+  },
+  {
+    "question": "How does comparison testing use multiple models?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: comparison testing uses matched inputs, not unrelated runs or accreditation."
+  },
+  {
+    "question": "What does fidelity describe?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: fidelity is realism, not model detail or resolution."
+  },
+  {
+    "question": "What does repmat(A,2,3) construct?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: repmat specifies copy counts, not the final element dimensions."
+  },
+  {
+    "question": "How is P(a<X≤b) calculated from a CDF?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: use the correct CDF subtraction and preserve the endpoint inequalities."
+  },
+  {
+    "question": "If exponential interarrival times have mean 5 time units, what is their rate?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: exponential rate is the reciprocal of mean interarrival duration."
+  },
+  {
+    "question": "Why select LCG constants and a seed carefully?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: LCG sequences repeat; constants and seed affect the usable period."
+  },
+  {
+    "question": "What is jockeying?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: jockeying changes lines rather than balking or reneging."
+  },
+  {
+    "question": "What distinguishes a continuous-state system model?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: continuous state does not require identical or constant inputs and outputs."
+  },
+  {
+    "question": "In the Kolmogorov model dx/dt=x f(x,y), what is f for positive x?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: f is a per-capita growth rate, not a total population derivative."
+  },
+  {
+    "question": "What correction makes the page 16 conserved expression valid for general r?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: retain the general r coefficient in the corrected conserved quantity."
+  },
+  {
+    "question": "For x′=x, x0=1 and h=0.2, what is one forward Euler step?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Contrast the numerical Euler result with the retained midpoint calculation."
+  },
+  {
+    "question": "Which statement contrasts scripts and functions?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Trap: scripts use the workspace while functions have explicit input/output interfaces."
+  },
+  {
+    "question": "How do you plot values y against x in MATLAB?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Retain the fundamental executable MATLAB x-versus-y plotting call."
+  },
+  {
+    "question": "With N grid points per dimension, how many evaluations does a full D-dimensional grid require?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: a full multidimensional grid costs N^D, not N times D."
+  },
+  {
+    "question": "Why does the π estimator multiply the hit proportion by four?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: the quarter-circle hit fraction estimates pi/4, requiring multiplication by four."
+  },
+  {
+    "question": "Why can a single derivative-based sensitivity be insufficient for a nonlinear model?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: local derivative sensitivity need not describe a nonlinear model globally."
+  },
+  {
+    "question": "What does save with -ascii do to a character array in the slide example?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Trap: ASCII-saving a character array writes numeric character codes."
+  },
+  {
+    "question": "What does hold on allow in the plotted example?",
+    "module": "M4",
+    "coding": true,
+    "reason": "Trap: hold on retains existing axes content rather than creating a new figure."
+  },
+  {
+    "question": "What is a potential use of randomized moves in optimization?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: randomized optimization moves do not guarantee a global optimum."
+  },
+  {
+    "question": "The constraint example uses which work-energy relationship?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: the work-energy constraint requires squared speed in kinetic energy."
+  },
+  {
+    "question": "How is UML characterized on the slide?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: standardized UML is semiformal rather than a fully formal mathematical model."
+  },
+  {
+    "question": "What inputs does the slide recommend for model stress tests?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: stress tests must exercise boundary inputs, not only average conditions."
+  },
+  {
+    "question": "What does a linear programming objective specify?",
+    "module": "M5",
+    "coding": false,
+    "reason": "Trap: linear programming requires a linear objective, not merely feasibility."
+  },
+  {
+    "question": "As a separate calculation, what does 1660 > 5000 return?",
+    "module": "M5",
+    "coding": true,
+    "reason": "Trap: relational output is Boolean false, not either numeric operand."
+  },
+  {
+    "question": "How is parallel projection specified in the slides?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: parallel projection uses direction rather than a finite center of projection."
+  },
+  {
+    "question": "Which light model illuminates all objects uniformly regardless of location and direction?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: ambient illumination is location-independent, unlike a point light."
+  },
+  {
+    "question": "Which question is principally a validation question?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: identify a validation question among verification and accreditation distractors."
+  },
+  {
+    "question": "A valid flight simulator is not used because the authority is not persuaded to certify it. Which error is this?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: refusal to accredit a valid simulator is Type I and the builder risk."
+  },
+  {
+    "question": "What does face validation compare?",
+    "module": "M6",
+    "coding": false,
+    "reason": "Trap: expert expectation comparison is face validation, not code verification."
+  },
+  {
+    "question": "Which statement corrects the slide claim that a simulation result must be known?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: Monte Carlo estimates an unknown result; it does not require the answer in advance."
+  },
+  {
+    "question": "What distinguishes a notional system from a physical system in the slides?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: a notional system does not yet exist but can still be modeled."
+  },
+  {
+    "question": "In a factory model, what is a property of a machine called?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Distinguish an entity property from an activity or the surrounding environment."
+  },
+  {
+    "question": "An activity occurring outside the chosen system boundary is called what?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: endogenous versus exogenous is relative to the chosen system boundary."
+  },
+  {
+    "question": "Which limitation of simulation is identified in the slides?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: simulation development and interpretation are not automatically quick or cheap."
+  },
+  {
+    "question": "What makes a simulation deterministic?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: randomness and treatment of time are independent classification axes."
+  },
+  {
+    "question": "What does higher resolution mean in the slides?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: higher resolution adds detail without guaranteeing higher fidelity."
+  },
+  {
+    "question": "How is constructive simulation characterized in the slides?",
+    "module": "M1",
+    "coding": false,
+    "reason": "Trap: constructive simulation still permits real human inputs."
+  },
+  {
+    "question": "Which MATLAB command displays more detail about workspace variables?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Choose whos for detailed workspace inspection instead of clearing variables."
+  },
+  {
+    "question": "What is the default MATLAB numeric type described in the slides?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Retain the numeric type used by ordinary MATLAB numeric calculations."
+  },
+  {
+    "question": "In MATLAB, which expression addresses row 2, column 3 of matrix A?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: MATLAB matrix indexing is one-based with row before column."
+  },
+  {
+    "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: default matrix sum reduces rows instead of preserving the matrix shape."
+  },
+  {
+    "question": "If A is 2-by-3 and B is 3-by-4, what is the size of A * B?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: match inner dimensions and retain outer dimensions for matrix products."
+  },
+  {
+    "question": "Which function returns the natural logarithm of x in MATLAB?",
+    "module": "M1",
+    "coding": true,
+    "reason": "Trap: log is the natural-log function, not log10 or exp."
+  },
+  {
+    "question": "For A={2,4,10} and B={4,6,8,10}, what is B−A?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: set difference is directional; B minus A differs from A minus B."
+  },
+  {
+    "question": "When does a function have an inverse on its full codomain?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: an inverse over the full codomain needs both injectivity and surjectivity."
+  },
+  {
+    "question": "How many events are in the full power set of a three-outcome sample space?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: the 2^k event count is for the full power set."
+  },
+  {
+    "question": "What does F(x) represent for random variable X?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: a CDF includes equality at x and is not a pointwise density."
+  },
+  {
+    "question": "For a continuous density, what is the total area under its curve?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: a PDF must integrate to one; this is not a bound on every density height."
+  },
+  {
+    "question": "Which Lotka–Volterra equation gives prey growth?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: prey growth uses prey population x and the predator-dependent rate b-py."
+  },
+  {
+    "question": "Which distribution is described as modeling variability around an average with parameters mean and standard deviation?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: normal parameters use standard deviation, not variance or triangular mode."
+  },
+  {
+    "question": "In a linear congruential generator, how is Uₖ obtained from integer Zₖ and modulus m?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: normalize the LCG integer by its modulus before using it as U."
+  },
+  {
+    "question": "How does next-event time advance differ from fixed-increment advance?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: next-event time advance skips idle intervals instead of rounding events to ticks."
+  },
+  {
+    "question": "What is reneging?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: reneging happens after joining and before service, unlike balking or jockeying."
+  },
+  {
+    "question": "What is an interarrival time?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: interarrival duration is not an absolute arrival timestamp."
+  },
+  {
+    "question": "In the slide example, customer 3 arrives at 5 and starts service at 7. How long is the wait?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: waiting time is service start minus arrival, correcting the slide subtraction."
+  },
+  {
+    "question": "In the slide example, what is the mean queue wait for all six customers?",
+    "module": "M2",
+    "coding": false,
+    "reason": "Trap: average waiting time divides by all customers, including zero waits."
+  },
+  {
+    "question": "If initial reservoir contents are 4 and input rate is 2 for 3 time units, what are the final contents?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: reservoir accumulation must include its initial contents."
+  },
+  {
+    "question": "Which Lotka–Volterra equation gives predator growth?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: predator growth uses predator population y and the prey-dependent rate rx-d."
+  },
+  {
+    "question": "Which slope does the slide’s midpoint Runge–Kutta update use for the full step?",
+    "module": "M3",
+    "coding": false,
+    "reason": "Trap: the slide method is midpoint RK2, using the predicted midpoint slope, not RK4."
+  },
+  {
+    "question": "What does disp(X) do?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Distinguish display output from user input or automatic plotting."
+  },
+  {
+    "question": "What does the newline escape \\n do in fprintf?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Trap: fprintf needs an explicit newline to move subsequent output to a new line."
+  },
+  {
+    "question": "Given a=1:2 and b=(1:3)', what shape is a+b with implicit expansion?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Trap: implicit expansion forms a 3-by-2 array rather than a dimension error."
+  },
+  {
+    "question": "What does axis equal specify?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Trap: axis equal sets equal scale factors, not a square plot box."
+  },
+  {
+    "question": "Which construct handles unmatched switch cases?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Recall the default branch keyword for executable MATLAB switch statements."
+  },
+  {
+    "question": "How can an integer x be tested for evenness in MATLAB?",
+    "module": "M3",
+    "coding": true,
+    "reason": "Trap: MATLAB percent begins a comment; evenness uses mod and equality testing."
+  },
+  {
+    "question": "What defines a Monte Carlo simulation?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Retain one Monte Carlo definition rather than duplicate it across modules."
+  },
+  {
+    "question": "For independent finite-variance Monte Carlo samples, what happens to typical standard error if N is quadrupled?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: independent-sample error scales as inverse square root of N, not inverse N."
+  },
+  {
+    "question": "What does the sampling rule specify?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: the sampling rule maps randomness into the intended input distributions."
+  },
+  {
+    "question": "Which test identifies a point in the quarter unit circle in the first quadrant?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: quarter-circle membership includes the interior, not just its arc."
+  },
+  {
+    "question": "If 785 of 1,000 uniformly sampled square points fall inside the quarter circle, what is the π estimate?",
+    "module": "M4",
+    "coding": false,
+    "reason": "Trap: apply the factor of four to a numerical uniform quarter-circle hit ratio."
+  }
+]

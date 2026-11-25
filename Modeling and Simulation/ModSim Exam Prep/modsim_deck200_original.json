@@ -1,0 +1,1408 @@
+{
+  "name": "ModSim Final Flashcards",
+  "subject": "Modeling and Simulation",
+  "modules_included": "M1, M2, M3, M4, M5, M6",
+  "module_ids": null,
+  "cards": [
+    {
+      "type": "multiple_choice",
+      "question": "Which values does for v=1:2:5 visit?",
+      "correct_answer": "1, 3, 5",
+      "options": "[\"1, 3, 5\", \"1, 2, 3, 4, 5\", \"2, 4\", \"1, 5\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does verification primarily check?",
+      "correct_answer": "Whether the conceptual model was correctly translated into an executable model",
+      "options": "[\"Whether the conceptual model was correctly translated into an executable model\", \"Whether the model is a sufficiently close approximation of the target\", \"Whether the system is profitable\", \"Whether all models use UML\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a limitation of using an empirical distribution built from observed samples?",
+      "correct_answer": "It cannot generate unobserved outlying values",
+      "options": "[\"It cannot generate unobserved outlying values\", \"It can generate only one value in total\", \"It requires no observed data\", \"It always provides a perfect theoretical fit\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are orthographic projections useful in architectural design and CAD?",
+      "correct_answer": "They preserve distances and directions along the projection plane for measurement",
+      "options": "[\"They automatically validate architectural safety\", \"They require no geometric model\", \"They preserve distances and directions along the projection plane for measurement\", \"They make every distant object appear larger\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is a valid MATLAB variable name under the slide rules?",
+      "correct_answer": "value_1",
+      "options": "[\"value_1\", \"1value\", \"value-1\", \"for\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which states describe the slide’s planetary-orbit example?",
+      "correct_answer": "Three-dimensional position and velocity",
+      "options": "[\"Three-dimensional position and velocity\", \"Only mass and temperature\", \"Only elapsed time\", \"Predator and prey populations\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "After load timetemp.dat in the slide example, what does timetemp(2,:) select?",
+      "correct_answer": "The entire second row",
+      "options": "[\"The entire second row\", \"The second column only\", \"The second scalar in the first row\", \"All but the second row\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the inverse of f(x)=2x+3 on the real numbers?",
+      "correct_answer": "(y−3)/2",
+      "options": "[\"(y−3)/2\", \"2y+3\", \"(y+3)/2\", \"2y−3\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For x′=x, x0=1 and h=0.2, what does one explicit midpoint step produce?",
+      "correct_answer": "1.22",
+      "options": "[\"1.22\", \"1.2\", \"1.1\", \"1.4\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does integrating velocity give in the Easy Pass block diagram?",
+      "correct_answer": "Position",
+      "options": "[\"Position\", \"Acceleration\", \"Mass\", \"Force\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the page 29 arithmetic example, what is (1+100)+(50+100)−75−10?",
+      "correct_answer": "166",
+      "options": "[\"166\", \"176\", \"251\", \"151\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the primary deliverable of a simulation software development project?",
+      "correct_answer": "An executable model expected to be reused and maintained",
+      "options": "[\"An existing model’s one-time scenario only\", \"A physical prototype of the simuland\", \"An executable model expected to be reused and maintained\", \"Insight alone, with code never a primary deliverable\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which sequence describes the M&S development cycle presented?",
+      "correct_answer": "Model, code, execute, analyze",
+      "options": "[\"Model, code, execute, analyze\", \"Execute, acquire, discard, model\", \"Visualize, procure, close, eliminate\", \"Sample, stop, delete, deploy\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In an initially idle single-server FCFS queue, how is service start determined for a customer after the first?",
+      "correct_answer": "The later of arrival and the preceding service completion",
+      "options": "[\"The later of arrival and the preceding service completion\", \"The earlier of arrival and preceding completion\", \"Arrival minus service time\", \"Always zero\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the random-number generator supply in the Monte Carlo workflow?",
+      "correct_answer": "Random numbers used to generate samples",
+      "options": "[\"Random numbers used to generate samples\", \"The final answer without computations\", \"A replacement for the output model\", \"A guaranteed analytical solution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the basic idea of finite element modeling?",
+      "correct_answer": "Decompose a complicated object into small elements and model them",
+      "options": "[\"Decompose a complicated object into small elements and model them\", \"Replace all physical laws with random numbers\", \"Represent only aggregate populations\", \"Require real people to operate real systems\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which MATLAB operation multiplies corresponding array elements?",
+      "correct_answer": "A .* B",
+      "options": "[\"A .* B\", \"A * B\", \"A + B followed by det\", \"A transpose B\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which distribution is useful when minimum, most likely, and maximum values are known but the exact shape is not?",
+      "correct_answer": "Triangular",
+      "options": "[\"Triangular\", \"Normal\", \"Exponential\", \"Uniform with no specified bounds\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the ideal reservoir, which state equation applies?",
+      "correct_answer": "dq/dt=x(t)",
+      "options": "[\"dq/dt=x(t)\", \"dq/dt=q(t)\", \"x(t)=q(t)²\", \"dq/dt=−q(t)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For positive b,p,r,d, what is the positive Lotka–Volterra equilibrium?",
+      "correct_answer": "(d/r, b/p)",
+      "options": "[\"(d/r, b/p)\", \"(b/p, d/r)\", \"(p/b, r/d)\", \"(b+d, p+r)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the shape of b=(1:3)' in the slide example?",
+      "correct_answer": "3-by-1 column",
+      "options": "[\"3-by-1 column\", \"1-by-3 row\", \"3-by-3 matrix\", \"1-by-1 scalar\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does sensitivity analysis seek to identify?",
+      "correct_answer": "How input uncertainty contributes to output uncertainty",
+      "options": "[\"How input uncertainty contributes to output uncertainty\", \"Only the name of the input file\", \"Whether every output is deterministic\", \"The exact value of π\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which command plots 3D coordinate vectors?",
+      "correct_answer": "plot3(x,y,z)",
+      "options": "[\"plot3(x,y,z)\", \"plot(x,y) only\", \"xlabel(z)\", \"dlmwrite(x,y,z)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In a concept map, what do nodes represent?",
+      "correct_answer": "System concepts or elements",
+      "options": "[\"System concepts or elements\", \"Only output errors\", \"Solver iterations\", \"Proofs of model accuracy\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does operations research use to support complex-system decisions?",
+      "correct_answer": "Mathematical models to optimize performance factors",
+      "options": "[\"Mathematical models to optimize performance factors\", \"Only informal sketches with no objectives\", \"Only graphical interface templates\", \"Solely manual debugging\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which describes a mathematical vector in the slides?",
+      "correct_answer": "It has length and direction but no location",
+      "options": "[\"It has size and shape but no direction\", \"It is necessarily a point on a surface\", \"It has length and direction but no location\", \"It has location but neither length nor direction\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In an assembly-line simulation, what is the simuland?",
+      "correct_answer": "The automobile assembly process being represented",
+      "options": "[\"The authority granting accreditation\", \"The model’s randomly generated output only\", \"The automobile assembly process being represented\", \"The model’s source code only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What distinguishes static V&V from dynamic V&V?",
+      "correct_answer": "Static methods assess characteristics without executing a simulation; dynamic methods execute the model",
+      "options": "[\"Dynamic methods cannot compare numeric results\", \"Static methods are identical to accreditation\", \"Static methods assess characteristics without executing a simulation; dynamic methods execute the model\", \"Static methods always use real-time animation\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What defines a sampled-data system?",
+      "correct_answer": "It is intrinsically continuous but information is available at discrete times",
+      "options": "[\"It is intrinsically continuous but information is available at discrete times\", \"Its state changes only at events\", \"It has no outside activities\", \"It has no measurable variables\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the next-event list contain?",
+      "correct_answer": "Scheduled future event times",
+      "options": "[\"Scheduled future event times\", \"Only completed customer waits\", \"All possible distributions\", \"A list of model authors\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which model shown has a node from an initial stage feeding a subsequent stage?",
+      "correct_answer": "Two-stage Monte Carlo",
+      "options": "[\"Two-stage Monte Carlo\", \"A single fixed equation without stages\", \"A bar chart\", \"A square plot\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does aggregation do in modeling?",
+      "correct_answer": "Groups individual entities into larger entities",
+      "options": "[\"Groups individual entities into larger entities\", \"Converts all variables into constants\", \"Guarantees exact predictions\", \"Removes the model boundary\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which model type commonly uses differential equations for variables evolving with time?",
+      "correct_answer": "Continuous simulation",
+      "options": "[\"Continuous simulation\", \"Constructive simulation\", \"Live simulation\", \"Static physical modeling\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main intent of a training application?",
+      "correct_answer": "Produce learning in the participant",
+      "options": "[\"Produce learning in the participant\", \"Calculate a matrix determinant\", \"Eliminate the need for testing\", \"Guarantee acquisition funding\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For a 2-by-3 matrix, what does numel return?",
+      "correct_answer": "6",
+      "options": "[\"6\", \"3\", \"2\", \"5\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which set contains elements in both A and B?",
+      "correct_answer": "A∩B",
+      "options": "[\"A∩B\", \"A∪B\", \"A−B\", \"Aᶜ\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does a random variable associate with each experimental outcome?",
+      "correct_answer": "A real number",
+      "options": "[\"A real number\", \"A queue discipline\", \"A different sample space\", \"A simulation clock\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the two basic stages of random variate generation in the module?",
+      "correct_answer": "Generate a uniform random number, then transform it",
+      "options": "[\"Generate a uniform random number, then transform it\", \"Calculate the sample mean, then discard it\", \"Schedule an event, then stop\", \"Select a queue, then set its capacity\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is balking?",
+      "correct_answer": "Deciding not to enter the waiting line",
+      "options": "[\"Deciding not to enter the waiting line\", \"Leaving after joining but before service\", \"Switching from one line to another\", \"Finishing service immediately\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the slide example, when does customer 4 begin service?",
+      "correct_answer": "9",
+      "options": "[\"9\", \"8\", \"13\", \"7\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the first broad step in the slide’s modeling strategy?",
+      "correct_answer": "Translate the physical system into quantitative equations",
+      "options": "[\"Translate the physical system into quantitative equations\", \"Select a plot color\", \"Discard the governing physics\", \"Set all state variables to zero\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Lotka–Volterra equation gives prey growth?",
+      "correct_answer": "dx/dt=x(b−py)",
+      "options": "[\"dx/dt=x(b−py)\", \"dx/dt=y(rx−d)\", \"dx/dt=b+py\", \"dx/dt=x(rx−d)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are numerical solution techniques used for continuous-system equations?",
+      "correct_answer": "Many equations are not analytically integrable",
+      "options": "[\"Many equations are not analytically integrable\", \"All derivatives are zero\", \"Numerical methods eliminate modeling assumptions\", \"Continuous time is always integer-valued\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which command requests text rather than evaluating numerical input?",
+      "correct_answer": "input(\"Enter text\", \"s\")",
+      "options": "[\"input(\\\"Enter text\\\", \\\"s\\\")\", \"input(\\\"Enter text\\\") without a text option\", \"disp(\\\"s\\\")\", \"plot(\\\"s\\\")\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What can a MATLAB LineSpec encode?",
+      "correct_answer": "Color, line style, and marker",
+      "options": "[\"Color, line style, and marker\", \"Only input prompts\", \"Variable scope and file names\", \"Only numeric precision\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is the first of the four steps in the slide procedure?",
+      "correct_answer": "Define distributions for the random inputs",
+      "options": "[\"Define distributions for the random inputs\", \"Aggregate all outputs\", \"Plot the final result\", \"Assume the exact answer\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What domain is sampled in the π demonstration?",
+      "correct_answer": "The unit square containing a quarter unit circle",
+      "options": "[\"The unit square containing a quarter unit circle\", \"The entire infinite plane\", \"Only the circle boundary\", \"A cube of side two\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the delimiter argument in dlmwrite('data.out', A, ' ') specify?",
+      "correct_answer": "A space between values",
+      "options": "[\"A space between values\", \"A red marker\", \"The number of matrix rows\", \"The plot title\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does axis square differ from axis equal?",
+      "correct_answer": "It makes the plot box square rather than specifically equalizing axis scale factors",
+      "options": "[\"It makes the plot box square rather than specifically equalizing axis scale factors\", \"It saves a square matrix to ASCII\", \"It sets a red asterisk marker\", \"It always plots a square function\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which type uses directionally connected components with mathematical relationships?",
+      "correct_answer": "Functional",
+      "options": "[\"Functional\", \"Spatial\", \"Concept map\", \"Face validation\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which description best fits a conceptual model as presented?",
+      "correct_answer": "An informal overview communicating key system functionality",
+      "options": "[\"An informal overview communicating key system functionality\", \"An executable implementation guaranteed free of bugs\", \"A complete numerical solver specification\", \"A mandatory optimization algorithm\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What disadvantage of formal modeling does the slide identify?",
+      "correct_answer": "Complexity and tedious design and implementation",
+      "options": "[\"Complexity and tedious design and implementation\", \"Inability to analyze dynamic systems\", \"Mandatory dependence on physical hardware\", \"Lack of mathematical rules\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is validation primarily concerned with?",
+      "correct_answer": "Whether the model approximates the target well enough to provide useful results",
+      "options": "[\"Whether the model approximates the target well enough to provide useful results\", \"Whether source code has the correct indentation\", \"Whether a diagram has arrows\", \"Whether execution uses maximum inputs only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does Simulink provide for dynamic-system modeling?",
+      "correct_answer": "A graphical editor, block libraries, and solvers",
+      "options": "[\"A graphical editor, block libraries, and solvers\", \"Only a text editor without simulation\", \"Only physical testing equipment\", \"A replacement for all MATLAB algorithms\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the page 31 example, comparing the computed 12 to 12 using equality returns what?",
+      "correct_answer": "1, true",
+      "options": "[\"1, true\", \"0, false\", \"−1\", \"24\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which three parameters position and orient the slide’s camera?",
+      "correct_answer": "Camera location, target location, and up direction",
+      "options": "[\"Simulation time, event count, and queue length\", \"Near plane, model credibility, and screen resolution\", \"Camera location, target location, and up direction\", \"Light color, surface texture, and pixel depth\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which parameters define a spotlight?",
+      "correct_answer": "Location, direction, and cutoff angle",
+      "options": "[\"Six clipping planes alone\", \"Only color and an image file\", \"Location, direction, and cutoff angle\", \"Location, target, and camera up vector\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What determines which simuland aspects and accuracy levels requirements specify?",
+      "correct_answer": "The intended application",
+      "options": "[\"The graphics API vendor\", \"Whether the model is open source\", \"The intended application\", \"The number of animation frames alone\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A simulator valid for one aircraft type is used to qualify pilots for a different type. Which error is illustrated?",
+      "correct_answer": "Type III: using a model inappropriate for its intended application",
+      "options": "[\"Type II: never executing the model\", \"No error because any valid model is valid for every purpose\", \"Type III: using a model inappropriate for its intended application\", \"Type I: refusing to use a valid model\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does comparison testing use multiple models?",
+      "correct_answer": "Run them with the same inputs and compare their results",
+      "options": "[\"Compare only their source file names\", \"Accredit each model without execution\", \"Run them with the same inputs and compare their results\", \"Use unrelated inputs and assume differences prove validity\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is an entity in system modeling?",
+      "correct_answer": "An object of interest in the system",
+      "options": "[\"An object of interest in the system\", \"A property of an object\", \"A change-causing process\", \"The system boundary\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In DES, when are modeled state changes represented?",
+      "correct_answer": "At separated event times",
+      "options": "[\"At separated event times\", \"Continuously at every real-valued instant\", \"Only once before the clock starts\", \"Only at the end of the experiment\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which situation is especially suited to Monte Carlo?",
+      "correct_answer": "Estimating output uncertainty from uncertain inputs",
+      "options": "[\"Estimating output uncertainty from uncertain inputs\", \"Proving every simulated result is exact\", \"Avoiding all probability assumptions\", \"Eliminating the need for a model\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the role of an activity in the slides’ system terminology?",
+      "correct_answer": "It is a process that causes system changes",
+      "options": "[\"It is a process that causes system changes\", \"It is a property of an entity\", \"It is the system boundary\", \"It is always external to the system\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What belongs to establishing a model structure?",
+      "correct_answer": "Determining the boundary and identifying entities, attributes, and activities",
+      "options": "[\"Determining the boundary and identifying entities, attributes, and activities\", \"Only collecting final output statistics\", \"Executing a model before identifying its boundary\", \"Removing all entities from consideration\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is an advantage of simulation described in the slides?",
+      "correct_answer": "Testing changes and policies without affecting the real system",
+      "options": "[\"Testing changes and policies without affecting the real system\", \"Eliminating all uncertainty in predictions\", \"Removing the need for domain expertise\", \"Guaranteeing that modeling is inexpensive\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why are statistical techniques important for stochastic simulation?",
+      "correct_answer": "Random inputs produce random outputs that need analysis",
+      "options": "[\"Random inputs produce random outputs that need analysis\", \"They remove all random variation\", \"They guarantee a single output for every input distribution\", \"They replace model construction\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does fidelity describe?",
+      "correct_answer": "How closely a model or simulation matches reality",
+      "options": "[\"How closely a model or simulation matches reality\", \"The number of rows in a matrix\", \"The duration of a simulation run\", \"The number of input distributions\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which participation category involves real people operating simulated systems?",
+      "correct_answer": "Virtual simulation",
+      "options": "[\"Virtual simulation\", \"Live simulation\", \"Constructive simulation\", \"Analytical solution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does MATLAB stand for?",
+      "correct_answer": "Matrix Laboratory",
+      "options": "[\"Matrix Laboratory\", \"Mathematical Logic Table\", \"Model Analysis Testing Language\", \"Machine Learning Tabulator\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are the dimensions of a column vector with five elements?",
+      "correct_answer": "5 by 1",
+      "options": "[\"5 by 1\", \"1 by 5\", \"5 by 5\", \"1 by 1\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does repmat(A,2,3) construct?",
+      "correct_answer": "A 2-by-3 arrangement of copies of A",
+      "options": "[\"A 2-by-3 arrangement of copies of A\", \"A matrix with exactly 2 rows and 3 columns regardless of A\", \"The second and third elements of A\", \"A rotated copy of A\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which MATLAB function calculates the determinant of square matrix A?",
+      "correct_answer": "det(A)",
+      "options": "[\"det(A)\", \"size(A)\", \"numel(A)\", \"repmat(A,2,2)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For U={2,4,6,8,10,12} and A={2,4,10}, what is A’s complement?",
+      "correct_answer": "{6,8,12}",
+      "options": "[\"{6,8,12}\", \"{2,4,10}\", \"{4,6,8,10}\", \"{12}\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For the three-sided die with probabilities B=1/6 and C=1/3, what is P(B or C)?",
+      "correct_answer": "1/2",
+      "options": "[\"1/2\", \"1/6\", \"2/3\", \"5/6\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How is P(a<X≤b) calculated from a CDF?",
+      "correct_answer": "F(b)−F(a)",
+      "options": "[\"F(b)−F(a)\", \"F(a)−F(b)\", \"F(a)+F(b)\", \"1−F(b)−F(a)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If exponential interarrival times have mean 5 time units, what is their rate?",
+      "correct_answer": "0.2 per time unit",
+      "options": "[\"0.2 per time unit\", \"5 per time unit\", \"25 per time unit\", \"1 per time unit\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why select LCG constants and a seed carefully?",
+      "correct_answer": "The sequence eventually repeats, so a long period is desirable",
+      "options": "[\"The sequence eventually repeats, so a long period is desirable\", \"The sequence can never repeat\", \"The modulus determines service discipline\", \"A seed removes the need for a distribution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A resource is busy for 6 hours of a 10-hour observation. What is its utilization?",
+      "correct_answer": "60%",
+      "options": "[\"60%\", \"40%\", \"6%\", \"166.7%\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What are two causes of queues named in the slides?",
+      "correct_answer": "Variation in arrivals and service",
+      "options": "[\"Variation in arrivals and service\", \"Constant arrival and service definitions alone\", \"Only the number of report pages\", \"The use of a simulation clock\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is jockeying?",
+      "correct_answer": "Switching lines in an effort to reduce waiting",
+      "options": "[\"Switching lines in an effort to reduce waiting\", \"Leaving without entering any line\", \"Leaving after joining but before service\", \"Serving the shortest job first\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the slide example, customer 5 arrives at 11 and finishes service at 15. How long is the time in system?",
+      "correct_answer": "4",
+      "options": "[\"4\", \"2\", \"11\", \"15\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What distinguishes a continuous-state system model?",
+      "correct_answer": "State variables evolve continuously over time",
+      "options": "[\"State variables evolve continuously over time\", \"Input and output must be identical\", \"All variables must be integers\", \"Outputs cannot vary\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What output does the page 6 reservoir model specify?",
+      "correct_answer": "y(t)=q(t)",
+      "options": "[\"y(t)=q(t)\", \"y(t)=dq/dt always\", \"y(t)=0\", \"y(t)=1/q(t)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What do state equations describe?",
+      "correct_answer": "How the state changes with an independent variable",
+      "options": "[\"How the state changes with an independent variable\", \"Only how to format output text\", \"The user interface color\", \"The file extension\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the Kolmogorov model dx/dt=x f(x,y), what is f for positive x?",
+      "correct_answer": "Per-capita prey growth rate",
+      "options": "[\"Per-capita prey growth rate\", \"Predator population\", \"Total prey population\", \"Elapsed time\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the Lotka–Volterra model with positive p, what is the slope of prey per-capita growth versus predator population?",
+      "correct_answer": "−p",
+      "options": "[\"−p\", \"p\", \"r\", \"d\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What correction makes the page 16 conserved expression valid for general r?",
+      "correct_answer": "Replace −x with −rx",
+      "options": "[\"Replace −x with −rx\", \"Replace −py with +py\", \"Remove both logarithms\", \"Replace b ln y with b/y\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For x′=x, x0=1 and h=0.2, what is one forward Euler step?",
+      "correct_answer": "1.2",
+      "options": "[\"1.2\", \"1.02\", \"1.22\", \"0.8\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement contrasts scripts and functions?",
+      "correct_answer": "Scripts use the workspace; functions can accept inputs and return outputs",
+      "options": "[\"Scripts use the workspace; functions can accept inputs and return outputs\", \"Scripts always have local variables and functions never do\", \"Only scripts have .m files\", \"Functions cannot return values\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does fprintf format code %s represent?",
+      "correct_answer": "Text",
+      "options": "[\"Text\", \"An integer only\", \"A matrix inverse\", \"A loop condition\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How do you plot values y against x in MATLAB?",
+      "correct_answer": "plot(x,y)",
+      "options": "[\"plot(x,y)\", \"input(x,y)\", \"fprintf(x,y)\", \"switch(x,y)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does menu return when a button is selected?",
+      "correct_answer": "The selected button number",
+      "options": "[\"The selected button number\", \"Always the displayed title\", \"A differential equation\", \"The plot axis limits\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which statement corrects the slide claim that a simulation result must be known?",
+      "correct_answer": "The desired result can be unknown and estimated from simulated outputs",
+      "options": "[\"The desired result can be unknown and estimated from simulated outputs\", \"The result must be specified before sampling\", \"No model or sampling rule is needed\", \"Every output must equal its expectation\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "With N grid points per dimension, how many evaluations does a full D-dimensional grid require?",
+      "correct_answer": "N^D",
+      "options": "[\"N^D\", \"N + D\", \"N/D\", \"D^N in all cases\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of scoring in the listed components?",
+      "correct_answer": "Combine individual run results into an estimate",
+      "options": "[\"Combine individual run results into an estimate\", \"Generate the model source code\", \"Set the plot color\", \"Guarantee zero error\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How can P(X > α) be estimated using samples from X?",
+      "correct_answer": "Average the indicators 1[X > α]",
+      "options": "[\"Average the indicators 1[X > α]\", \"Average α without drawing X\", \"Count only samples below α and divide by α\", \"Plot X without counting samples\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why does the π estimator multiply the hit proportion by four?",
+      "correct_answer": "The quarter-circle area is π/4 of the unit-square area",
+      "options": "[\"The quarter-circle area is π/4 of the unit-square area\", \"The square has four random-number generators\", \"The circle radius is four\", \"Four points are required per run\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why can a single derivative-based sensitivity be insufficient for a nonlinear model?",
+      "correct_answer": "It describes sensitivity locally and may change elsewhere",
+      "options": "[\"It describes sensitivity locally and may change elsewhere\", \"Derivatives are never computable\", \"Nonlinear models have no inputs\", \"The derivative always equals zero\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does save with -ascii do to a character array in the slide example?",
+      "correct_answer": "Writes numerical character codes",
+      "options": "[\"Writes numerical character codes\", \"Preserves the literal text as ordinary characters\", \"Plots each letter\", \"Encrypts the text\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which sequence plots a function in 2D as described in the slide?",
+      "correct_answer": "Define x, calculate y, then call plot(x,y)",
+      "options": "[\"Define x, calculate y, then call plot(x,y)\", \"Call zlabel before defining data\", \"Use load to draw every curve automatically\", \"Call axis square instead of plot\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does hold on allow in the plotted example?",
+      "correct_answer": "Adding a subsequent plot without replacing the current one",
+      "options": "[\"Adding a subsequent plot without replacing the current one\", \"Appending matrix rows to a file\", \"Changing a 2D plot into a 3D plot\", \"Sampling from a distribution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a potential use of randomized moves in optimization?",
+      "correct_answer": "Escaping a local minimum, without a guarantee of finding the global minimum",
+      "options": "[\"Escaping a local minimum, without a guarantee of finding the global minimum\", \"Making local minima impossible in all functions\", \"Determining the global minimum with one sample\", \"Replacing the objective function\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What can constitute the elements of a spatial model?",
+      "correct_answer": "Spaces or entities within spaces",
+      "options": "[\"Spaces or entities within spaces\", \"Only equations without variables\", \"Only events with timestamps\", \"Only debugging commands\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "The constraint example uses which work-energy relationship?",
+      "correct_answer": "½mv² = F_f d",
+      "options": "[\"½mv² = F_f d\", \"mv = F_f/d\", \"½mv = F_f d²\", \"m/v = F_f d\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which example illustrates textual and graphical conceptual representations?",
+      "correct_answer": "Easy Pass toll collection",
+      "options": "[\"Easy Pass toll collection\", \"A weather satellite launch\", \"A stock market portfolio\", \"A chemical refinery\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is a modeling formalism?",
+      "correct_answer": "A methodology with precise modeling and simulation rules",
+      "options": "[\"A methodology with precise modeling and simulation rules\", \"Any informal sketch regardless of rules\", \"A specific Simulink solver\", \"An expert’s subjective assessment\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How is UML characterized on the slide?",
+      "correct_answer": "Standardized semiformal object-oriented graphical notation",
+      "options": "[\"Standardized semiformal object-oriented graphical notation\", \"A purely numerical optimization solver\", \"A real-world validation data set\", \"A hardware-only programming language\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What inputs does the slide recommend for model stress tests?",
+      "correct_answer": "Maximum and minimum boundary conditions",
+      "options": "[\"Maximum and minimum boundary conditions\", \"Only average inputs\", \"Only randomly chosen midrange inputs\", \"No input values\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When the target system does not exist, what validation option is identified?",
+      "correct_answer": "Use a similar system or knowledgeable expert judgment",
+      "options": "[\"Use a similar system or knowledgeable expert judgment\", \"Skip validation and assume accuracy\", \"Always use only syntax checking\", \"Replace all outputs with zeros\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does a linear programming objective specify?",
+      "correct_answer": "A linear quantity to maximize or minimize",
+      "options": "[\"A linear quantity to maximize or minimize\", \"The only permitted graphical shape\", \"A guarantee that every feasible point is optimal\", \"A random arrival-time distribution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which use of Simulink occurs before building hardware?",
+      "correct_answer": "Explore and simulate system designs",
+      "options": "[\"Explore and simulate system designs\", \"Guarantee that no later hardware testing is required\", \"Remove all system constraints\", \"Measure a nonexistent device directly\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "As a separate calculation, what does 1660 > 5000 return?",
+      "correct_answer": "0, false",
+      "options": "[\"0, false\", \"1, true\", \"1660\", \"5000\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Why use visualization in simulation?",
+      "correct_answer": "To convey large or time-varying information visually",
+      "options": "[\"To convey large or time-varying information visually\", \"To eliminate all model assumptions\", \"To replace every numerical output with audio\", \"To prove a model valid automatically\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which transformation family includes translation, rotation, and scaling?",
+      "correct_answer": "Affine transformations",
+      "options": "[\"Affine transformations\", \"Hypothesis tests\", \"Texture compression\", \"Accreditation decisions\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How is parallel projection specified in the slides?",
+      "correct_answer": "By a direction of projection and six clipping planes",
+      "options": "[\"By a direction of projection and six clipping planes\", \"By a finite center of projection alone\", \"By point-light color and intensity\", \"By validation and accreditation criteria\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which light model illuminates all objects uniformly regardless of location and direction?",
+      "correct_answer": "Ambient light",
+      "options": "[\"Ambient light\", \"Spotlight\", \"Point light with distance attenuation\", \"A finite perspective camera\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the main benefit of texture mapping described in the slides?",
+      "correct_answer": "Richer visual appearance without greatly increasing geometric complexity",
+      "options": "[\"Richer visual appearance without greatly increasing geometric complexity\", \"Proof that the model is accurate\", \"Elimination of all light sources\", \"Conversion of a conceptual model into requirements\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does a conceptual model document?",
+      "correct_answer": "Represented and omitted simuland aspects and model assumptions",
+      "options": "[\"Represented and omitted simuland aspects and model assumptions\", \"Only the final simulation results\", \"Only the source code’s syntax\", \"The authority’s accreditation decision alone\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which question is principally a validation question?",
+      "correct_answer": "How close are model results to the simuland’s behavior?",
+      "options": "[\"How close are model results to the simuland’s behavior?\", \"Does source code implement its conceptual specification?\", \"Is the executable delivered in the required format?\", \"Has the responsible authority issued certification?\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "A valid flight simulator is not used because the authority is not persuaded to certify it. Which error is this?",
+      "correct_answer": "Type I error, associated with model builder’s risk",
+      "options": "[\"Type I error, associated with model builder’s risk\", \"Type II error, associated with model user’s risk\", \"Type III error, associated with model accreditor’s risk\", \"A correct accreditation decision by definition\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does face validation compare?",
+      "correct_answer": "Simulation results with knowledgeable observers’ expectations of simuland behavior",
+      "options": "[\"Simulation results with knowledgeable observers’ expectations of simuland behavior\", \"Program code with its design specification only\", \"An accreditation certificate with a budget\", \"Two programming languages without executing a simulation\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does cause–effect graphing validate?",
+      "correct_answer": "Important cause-and-effect relationships in the simuland against those in the conceptual model",
+      "options": "[\"Important cause-and-effect relationships in the simuland against those in the conceptual model\", \"The choice of graphics card against the budget\", \"The accreditation signature against a software license\", \"Only the formatting of simulation output\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the core idea of inductive assertions?",
+      "correct_answer": "Prove that beginning assertions and execution-path instructions imply ending assertions",
+      "options": "[\"Prove that beginning assertions and execution-path instructions imply ending assertions\", \"Ask experts whether an animation looks plausible\", \"Compare unrelated model outputs without running them\", \"Officially certify all future applications\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which four precepts underpin the M&S curriculum in the slides?",
+      "correct_answer": "Modeling, simulation, visualization, and analysis",
+      "options": "[\"Modeling, simulation, visualization, and analysis\", \"Planning, purchasing, staffing, and disposal\", \"Sampling, sorting, searching, and storage\", \"Hardware, software, networking, and security\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is one advantage of fitting a theoretical distribution to sample data?",
+      "correct_answer": "It can smooth irregularities caused by limited samples",
+      "options": "[\"It can smooth irregularities caused by limited samples\", \"It guarantees a good fit for every dataset\", \"It only generates previously recorded values\", \"It eliminates all modeling effort\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What controls repetition in a while loop?",
+      "correct_answer": "A logical condition",
+      "options": "[\"A logical condition\", \"A mandatory fixed count only\", \"The plot title\", \"The filename extension\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What distinguishes a notional system from a physical system in the slides?",
+      "correct_answer": "It is a plan or concept for something physical that does not yet exist",
+      "options": "[\"It is a plan or concept for something physical that does not yet exist\", \"It already exists physically\", \"It must be a computer program\", \"It cannot be modeled\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In a factory model, what is a property of a machine called?",
+      "correct_answer": "An attribute",
+      "options": "[\"An attribute\", \"An activity\", \"An environment\", \"A simulation run\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "An activity occurring outside the chosen system boundary is called what?",
+      "correct_answer": "Exogenous",
+      "options": "[\"Exogenous\", \"Endogenous\", \"Continuous\", \"Aggregate\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is a reason to model rather than directly engage a system?",
+      "correct_answer": "The system may be dangerous or may not yet exist",
+      "options": "[\"The system may be dangerous or may not yet exist\", \"Models always reproduce every detail\", \"Modeling never requires data\", \"Analytical solutions are always impossible\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the relevance principle recommend?",
+      "correct_answer": "Include only aspects relevant to the investigation",
+      "options": "[\"Include only aspects relevant to the investigation\", \"Represent every physical detail\", \"Use only randomly generated data\", \"Avoid defining system inputs\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When can an analytical solution be useful?",
+      "correct_answer": "When the model is simple enough for mathematical methods to yield the desired information",
+      "options": "[\"When the model is simple enough for mathematical methods to yield the desired information\", \"Only when all system behavior is random\", \"Only when the actual system is inaccessible\", \"When no mathematical representation exists\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which limitation of simulation is identified in the slides?",
+      "correct_answer": "Model development and interpretation can require expertise, time, and expense",
+      "options": "[\"Model development and interpretation can require expertise, time, and expense\", \"It cannot represent complex systems\", \"It never uses numerical methods\", \"It cannot help identify bottlenecks\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What makes a simulation deterministic?",
+      "correct_answer": "A given input set produces a unique determined output",
+      "options": "[\"A given input set produces a unique determined output\", \"All inputs are random variables\", \"The system necessarily advances by events\", \"The model is always physical\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the central procedure in Monte Carlo simulation?",
+      "correct_answer": "Repeatedly sample input distributions and calculate outputs",
+      "options": "[\"Repeatedly sample input distributions and calculate outputs\", \"Advance exclusively from one event to the next\", \"Solve only a single differential equation analytically\", \"Operate real equipment with real people\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does a discrete-event simulation advance time?",
+      "correct_answer": "From one event to the next",
+      "options": "[\"From one event to the next\", \"Only in fixed one-second increments\", \"By ignoring event occurrences\", \"Only backward from the final state\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does higher resolution mean in the slides?",
+      "correct_answer": "More detail is included in the simulation",
+      "options": "[\"More detail is included in the simulation\", \"The simulation necessarily matches reality perfectly\", \"The model cannot be aggregated\", \"The simulation has no random input\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which approach combines more than one modeling paradigm?",
+      "correct_answer": "Hybrid modeling",
+      "options": "[\"Hybrid modeling\", \"Data-based modeling alone\", \"Finite element modeling alone\", \"Physics-based modeling alone\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How is constructive simulation characterized in the slides?",
+      "correct_answer": "Real people provide inputs executed by simulated people in simulated systems",
+      "options": "[\"Real people provide inputs executed by simulated people in simulated systems\", \"Real people operate real systems\", \"Only physical models can be used\", \"No human inputs are permitted\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is an acquisition application intended to evaluate before committing funds?",
+      "correct_answer": "Cost-effectiveness and correctness of a proposed system",
+      "options": "[\"Cost-effectiveness and correctness of a proposed system\", \"Only the color of visualization graphics\", \"Only the length of a MATLAB vector\", \"Whether all physical systems are continuous\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which MATLAB command displays more detail about workspace variables?",
+      "correct_answer": "whos",
+      "options": "[\"whos\", \"clear\", \"quit\", \"format\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the default MATLAB numeric type described in the slides?",
+      "correct_answer": "double",
+      "options": "[\"double\", \"int8\", \"logical\", \"char\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In MATLAB, which expression addresses row 2, column 3 of matrix A?",
+      "correct_answer": "A(2,3)",
+      "options": "[\"A(2,3)\", \"A(3,2)\", \"A[2,3]\", \"A(0,2)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which function reverses matrix columns from left to right?",
+      "correct_answer": "fliplr",
+      "options": "[\"fliplr\", \"flipud\", \"reshape\", \"numel\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For an r-by-c matrix with r greater than 1, what is the shape of sum(A) using the default dimension?",
+      "correct_answer": "1 by c",
+      "options": "[\"1 by c\", \"r by 1\", \"r by c\", \"1 by 1 in every case\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If A is 2-by-3 and B is 3-by-4, what is the size of A * B?",
+      "correct_answer": "2 by 4",
+      "options": "[\"2 by 4\", \"3 by 3\", \"4 by 2\", \"2 by 3\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which function returns the natural logarithm of x in MATLAB?",
+      "correct_answer": "log(x)",
+      "options": "[\"log(x)\", \"log10(x)\", \"log2(x)\", \"exp(x)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For A={2,4,10} and B={4,6,8,10}, what is B−A?",
+      "correct_answer": "{6,8}",
+      "options": "[\"{6,8}\", \"{2}\", \"{4,10}\", \"{2,6,8}\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "When does a function have an inverse on its full codomain?",
+      "correct_answer": "When it is one-to-one and onto",
+      "options": "[\"When it is one-to-one and onto\", \"When it is onto only\", \"When every input maps to two outputs\", \"When its range is empty\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which three components form a probability space?",
+      "correct_answer": "Sample space, event σ-algebra and probability measure",
+      "options": "[\"Sample space, event σ-algebra and probability measure\", \"Domain, slope and intercept\", \"Queue, server and customer\", \"Mean, median and mode\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How many events are in the full power set of a three-outcome sample space?",
+      "correct_answer": "8",
+      "options": "[\"8\", \"3\", \"6\", \"9\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does F(x) represent for random variable X?",
+      "correct_answer": "P(X≤x)",
+      "options": "[\"P(X≤x)\", \"P(X>x) always\", \"The mean of X\", \"The density at x for every distribution\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For a continuous density, what is the total area under its curve?",
+      "correct_answer": "1",
+      "options": "[\"1\", \"0\", \"Its mean\", \"Its standard deviation\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the density of a uniform distribution on [2,6] within that interval?",
+      "correct_answer": "1/4",
+      "options": "[\"1/4\", \"1/6\", \"1/2\", \"4\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which distribution is described as modeling variability around an average with parameters mean and standard deviation?",
+      "correct_answer": "Normal",
+      "options": "[\"Normal\", \"Triangular\", \"Exponential only\", \"Discrete uniform only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In a linear congruential generator, how is Uₖ obtained from integer Zₖ and modulus m?",
+      "correct_answer": "Uₖ=Zₖ/m",
+      "options": "[\"Uₖ=Zₖ/m\", \"Uₖ=m/Zₖ\", \"Uₖ=Zₖ+m\", \"Uₖ=Zₖm\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which belongs to structural rather than data modeling?",
+      "correct_answer": "Defining entities and processes",
+      "options": "[\"Defining entities and processes\", \"Estimating interarrival times\", \"Specifying failure rates\", \"Estimating service-time distributions\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the purpose of output data analysis?",
+      "correct_answer": "Turn simulation output into information about system performance",
+      "options": "[\"Turn simulation output into information about system performance\", \"Define the system’s physical entities only\", \"Replace all random inputs with constants\", \"Ensure every run has the same output\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which DES element carries information specific to an individual entity?",
+      "correct_answer": "Attribute",
+      "options": "[\"Attribute\", \"Global clock\", \"Report generator\", \"Event list\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the simulation executive primarily control?",
+      "correct_answer": "Advancement of simulated time and execution of events",
+      "options": "[\"Advancement of simulated time and execution of events\", \"Only the physical location of servers\", \"Only the choice of chart colors\", \"The number of real-world customers\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How does next-event time advance differ from fixed-increment advance?",
+      "correct_answer": "It jumps to the next scheduled event and skips inactive intervals",
+      "options": "[\"It jumps to the next scheduled event and skips inactive intervals\", \"It always updates every fixed minute\", \"It forces all events to interval boundaries\", \"It cannot update state variables\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Under FCFS, who is selected first from the waiting line?",
+      "correct_answer": "The customer who arrived earliest",
+      "options": "[\"The customer who arrived earliest\", \"The most recent arrival\", \"The customer with the longest service time\", \"A randomly selected customer in every case\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is reneging?",
+      "correct_answer": "Leaving a line after joining but before being served",
+      "options": "[\"Leaving a line after joining but before being served\", \"Deciding not to join the line\", \"Switching to a different line\", \"Receiving service out of order\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is an interarrival time?",
+      "correct_answer": "The interval between successive arrivals",
+      "options": "[\"The interval between successive arrivals\", \"The time from service start to service completion\", \"The total waiting time of all customers\", \"The clock time of the first departure\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the slide example, customer 3 arrives at 5 and starts service at 7. How long is the wait?",
+      "correct_answer": "2",
+      "options": "[\"2\", \"0\", \"1\", \"7\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the slide example, what is the mean queue wait for all six customers?",
+      "correct_answer": "4/6 time units",
+      "options": "[\"4/6 time units\", \"4 time units\", \"19/6 time units\", \"2 time units\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the queue-design tradeoff described by the module?",
+      "correct_answer": "Service cost versus waiting cost",
+      "options": "[\"Service cost versus waiting cost\", \"Only the number of colors in the animation\", \"Probability versus set membership\", \"Server names versus customer names\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For the reservoir on page 6, what does q(t) represent?",
+      "correct_answer": "Current contents",
+      "options": "[\"Current contents\", \"Input rate\", \"Reservoir capacity\", \"Elapsed time\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If initial reservoir contents are 4 and input rate is 2 for 3 time units, what are the final contents?",
+      "correct_answer": "10",
+      "options": "[\"10\", \"6\", \"12\", \"2\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is a listed continuous simulation application?",
+      "correct_answer": "Missile trajectory simulation",
+      "options": "[\"Missile trajectory simulation\", \"Only alphabetic sorting\", \"Static file compression\", \"Password hashing\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What must a useful state-variable set provide?",
+      "correct_answer": "Sufficient information for relevant dynamics at required accuracy",
+      "options": "[\"Sufficient information for relevant dynamics at required accuracy\", \"Only the final output\", \"Only integer values\", \"A list of software filenames\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What do output equations address?",
+      "correct_answer": "Quantities the simulation consumer needs",
+      "options": "[\"Quantities the simulation consumer needs\", \"The operating system version\", \"Only the numerical step size\", \"The names of all source files\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What type of equations describe the slide’s predator–prey system?",
+      "correct_answer": "Coupled first-order ordinary differential equations",
+      "options": "[\"Coupled first-order ordinary differential equations\", \"Only algebraic equations\", \"A single integer counter\", \"A sorting rule\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "In the model, what effect does increasing predators have on prey per-capita growth?",
+      "correct_answer": "It decreases",
+      "options": "[\"It decreases\", \"It always increases\", \"It becomes unrelated to predators\", \"It becomes the predator population\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which Lotka–Volterra equation gives predator growth?",
+      "correct_answer": "dy/dt=y(rx−d)",
+      "options": "[\"dy/dt=y(rx−d)\", \"dy/dt=x(b−py)\", \"dy/dt=y(b−py)\", \"dy/dt=rx+d\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What happens after prey become scarce in the qualitative predator–prey cycle?",
+      "correct_answer": "Predators starve and their population declines",
+      "options": "[\"Predators starve and their population declines\", \"Predators necessarily increase forever\", \"Prey cannot recover\", \"Both populations instantly become constant\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "With b=p=r=d=1, what is the positive equilibrium?",
+      "correct_answer": "(1,1)",
+      "options": "[\"(1,1)\", \"(0,1)\", \"(2,2)\", \"(1,0)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What determines a particular Lotka–Volterra trajectory?",
+      "correct_answer": "Parameters and initial conditions",
+      "options": "[\"Parameters and initial conditions\", \"Only the file extension\", \"Only the output label\", \"The marker color\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is the forward Euler update for x′=f(t,x) with step h?",
+      "correct_answer": "x_next=x+h f(t,x)",
+      "options": "[\"x_next=x+h f(t,x)\", \"x_next=x−h always\", \"x_next=h/f(t,x)\", \"x_next=f(t,x) only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which slope does the slide’s midpoint Runge–Kutta update use for the full step?",
+      "correct_answer": "The slope at the predicted midpoint",
+      "options": "[\"The slope at the predicted midpoint\", \"Only the initial slope\", \"The final exact slope\", \"A slope fixed at zero\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What file extension do MATLAB scripts and functions use?",
+      "correct_answer": ".m",
+      "options": "[\".m\", \".csv\", \".exe\", \".pdf\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How can the MATLAB editor be opened from the command prompt?",
+      "correct_answer": "Type edit",
+      "options": "[\"Type edit\", \"Type disp only\", \"Type plot only\", \"Type switch only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does disp(X) do?",
+      "correct_answer": "Displays X without printing the variable name",
+      "options": "[\"Displays X without printing the variable name\", \"Reads X from a user\", \"Deletes X\", \"Plots X automatically\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the newline escape \\n do in fprintf?",
+      "correct_answer": "Starts a new line",
+      "options": "[\"Starts a new line\", \"Computes a remainder\", \"Stops MATLAB\", \"Creates an array\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Given a=1:2 and b=(1:3)', what shape is a+b with implicit expansion?",
+      "correct_answer": "3-by-2",
+      "options": "[\"3-by-2\", \"1-by-2\", \"3-by-1\", \"2-by-3\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does axis equal specify?",
+      "correct_answer": "Equal scale factors on both axes",
+      "options": "[\"Equal scale factors on both axes\", \"A square plot box regardless of scale\", \"A hidden x-axis\", \"An automatic title\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which construct handles unmatched switch cases?",
+      "correct_answer": "otherwise",
+      "options": "[\"otherwise\", \"elseif\", \"while\", \"xlabel\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "How can an integer x be tested for evenness in MATLAB?",
+      "correct_answer": "mod(x,2)==0",
+      "options": "[\"mod(x,2)==0\", \"x % 2 == 0\", \"x/2 == 0 for every even x\", \"x==2 only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What defines a Monte Carlo simulation?",
+      "correct_answer": "Repeated random sampling and model evaluation",
+      "options": "[\"Repeated random sampling and model evaluation\", \"A single fixed input and exact calculation\", \"Only plotting observed data\", \"Solving every model symbolically\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Where did the slide place the development of the Monte Carlo method?",
+      "correct_answer": "Los Alamos in the 1940s",
+      "options": "[\"Los Alamos in the 1940s\", \"Geneva in the 1890s\", \"London in the 1800s\", \"Silicon Valley in the 2000s\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which is a limitation of Monte Carlo simulation?",
+      "correct_answer": "High precision may require many samples",
+      "options": "[\"High precision may require many samples\", \"It cannot handle deterministic computations\", \"It always gives an exact answer\", \"It cannot use computers\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What distinguishes the Markov chain illustration from a collection of unrelated points?",
+      "correct_answer": "It depicts transitions between states",
+      "options": "[\"It depicts transitions between states\", \"It has no states\", \"It forbids transitions\", \"It is a 2D plot command\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "For independent finite-variance Monte Carlo samples, what happens to typical standard error if N is quadrupled?",
+      "correct_answer": "It is halved",
+      "options": "[\"It is halved\", \"It is doubled\", \"It is quartered\", \"It is unchanged\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "After drawing an input set, what does the slide procedure do next?",
+      "correct_answer": "Perform a deterministic computation using that set",
+      "options": "[\"Perform a deterministic computation using that set\", \"Discard it without evaluation\", \"Choose the final answer\", \"Redefine every distribution from the output\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What does the sampling rule specify?",
+      "correct_answer": "How to draw values from the input distributions",
+      "options": "[\"How to draw values from the input distributions\", \"How to save a plot\", \"Which result must be known in advance\", \"How to eliminate all uncertainty\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the function of error estimation?",
+      "correct_answer": "Assess statistical uncertainty in the simulation output",
+      "options": "[\"Assess statistical uncertainty in the simulation output\", \"Make every run identical\", \"Replace the sampling rule\", \"Set the number of axes\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "What is the tail probability P(X > α) for a continuous density f?",
+      "correct_answer": "∫ from α to infinity of f(x) dx",
+      "options": "[\"∫ from α to infinity of f(x) dx\", \"∫ from negative infinity to α of f(x) dx\", \"f(α) alone\", \"α times f(0)\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "Which test identifies a point in the quarter unit circle in the first quadrant?",
+      "correct_answer": "x² + y² ≤ 1",
+      "options": "[\"x² + y² ≤ 1\", \"x + y > 2\", \"x² + y² > 1\", \"x = y only\"]",
+      "times_missed": 0
+    },
+    {
+      "type": "multiple_choice",
+      "question": "If 785 of 1,000 uniformly sampled square points fall inside the quarter circle, what is the π estimate?",
+      "correct_answer": "3.14",
+      "options": "[\"3.14\", \"0.785\", \"1.57\", \"4.00\"]",
+      "times_missed": 0
+    }
+  ]
+}
