@@ -1,0 +1,832 @@
+{
+  "notes": [],
+  "decks": [
+    {
+      "name": "ModSim Clarence MCQ Study Guides",
+      "subject": "Modeling and Simulation",
+      "modules_included": "M1, M2, M3, M4, M5, M6",
+      "module_ids": null,
+      "cards": [
+        {
+          "type": "multiple_choice",
+          "question": "Most operational discrete-event models are:",
+          "correct_answer": "Dynamic, stochastic, discrete",
+          "options": "[\"Static, deterministic, continuous\", \"Dynamic, deterministic, continuous\", \"Static, stochastic, continuous\", \"Dynamic, stochastic, discrete\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which supporting field is used to generate random variates and analyze stochastic output?",
+          "correct_answer": "Probability and statistics",
+          "options": "[\"Human factors\", \"Computer animation\", \"File management\", \"Probability and statistics\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is one stochastic simulation run insufficient for a firm conclusion?",
+          "correct_answer": "Replication and statistical analysis are needed",
+          "options": "[\"Simulation never supports decisions\", \"Models capture every detail\", \"Replication and statistical analysis are needed\", \"Outputs require no interpretation\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Exploring a design space to gain insight into an incompletely understood situation is primarily:",
+          "correct_answer": "Experimentation application",
+          "options": "[\"Acquisition disposal\", \"Formatting\", \"Experimentation application\", \"Training application\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If A is 3 x 4, B must have how many rows for A*B?",
+          "correct_answer": "4",
+          "options": "[\"3\", \"7\", \"4\", \"12\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which approach is useful when a real system cannot be engaged and available observations drive the model?",
+          "correct_answer": "Data-based modeling",
+          "options": "[\"Analytical deduction only\", \"Data-based modeling\", \"Live simulation\", \"Physical modeling only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A vertical vector with five elements has dimensions:",
+          "correct_answer": "5 x 1",
+          "options": "[\"5 x 1\", \"1 x 5\", \"5 x 5\", \"1 x 1\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does reshape change while preserving the same elements?",
+          "correct_answer": "Dimensions",
+          "options": "[\"Data type\", \"Variable name\", \"Numerical values\", \"Dimensions\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Grouping households into income brackets applies:",
+          "correct_answer": "Aggregation",
+          "options": "[\"Aggregation\", \"Fidelity\", \"Accuracy\", \"Resolution\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which function returns matrix row and column counts?",
+          "correct_answer": "size",
+          "options": "[\"size\", \"length\", \"det\", \"numel\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A temperature model based on differential equations is:",
+          "correct_answer": "Continuous simulation",
+          "options": "[\"Discrete-event simulation\", \"Constructive simulation\", \"Static simulation\", \"Continuous simulation\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Including vehicle color in a delay-only traffic study violates:",
+          "correct_answer": "Relevance",
+          "options": "[\"Scale\", \"Block building\", \"Aggregation\", \"Relevance\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which method derives equations from basic physical principles?",
+          "correct_answer": "Physics-based modeling",
+          "options": "[\"Physics-based modeling\", \"Agent-based modeling\", \"Data-based modeling\", \"Aggregate modeling\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Comparing fleet cost-effectiveness before committing funds is an M&S application for:",
+          "correct_answer": "Acquisition",
+          "options": "[\"Acquisition\", \"Entertainment\", \"Visualization\", \"Training\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which function returns the total number of elements in any array?",
+          "correct_answer": "numel",
+          "options": "[\"size\", \"reshape\", \"length\", \"numel\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which operator transposes a MATLAB row vector?",
+          "correct_answer": "Apostrophe",
+          "options": "[\"Comma\", \"Semicolon\", \"Colon\", \"Apostrophe\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Real people operating real systems describes:",
+          "correct_answer": "Live simulation",
+          "options": "[\"Web-based simulation\", \"Constructive simulation\", \"Virtual simulation\", \"Live simulation\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which operator performs element-by-element multiplication?",
+          "correct_answer": ".*",
+          "options": "[\"*\", \"^\", \".*\", \"./\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A customer switches from one line to another to reduce waiting. This is:",
+          "correct_answer": "Jockeying",
+          "options": "[\"Reneging\", \"Jockeying\", \"Faffing\", \"Balking\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "An LCG whose period p equals its modulus m is called a:",
+          "correct_answer": "Full-cycle generator",
+          "options": "[\"Fixed-increment generator\", \"Full-cycle generator\", \"Density generator\", \"Empirical generator\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is output data analysis necessary in a stochastic simulation?",
+          "correct_answer": "Simulation results must be processed into useful performance information",
+          "options": "[\"One output value always equals the true performance\", \"It prevents random-number generation\", \"It converts DES into a continuous model\", \"Simulation results must be processed into useful performance information\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A major limitation of direct sample-data use is that:",
+          "correct_answer": "Rare legal values absent from the sample cannot be generated",
+          "options": "[\"It automatically smooths sample irregularities\", \"Rare legal values absent from the sample cannot be generated\", \"It creates an unlimited stream efficiently\", \"It always generates illegal values\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "For a random variable X, what does F(x) represent?",
+          "correct_answer": "P(X is less than or equal to x)",
+          "options": "[\"The derivative of X\", \"P(X is greater than x)\", \"P(X is less than or equal to x)\", \"The sample-space size\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Let A = {1, 2, 3} and B = {3, 4}. What is A intersection B?",
+          "correct_answer": "{3}",
+          "options": "[\"{1, 2}\", \"{3}\", \"{1, 2, 3, 4}\", \"{}\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A customer arrives at time 6, begins service at 9, and service lasts 4 minutes. How long does the customer spend in the system?",
+          "correct_answer": "7 minutes",
+          "options": "[\"13 minutes\", \"3 minutes\", \"7 minutes\", \"4 minutes\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which subprogram advances the clock to the next scheduled event?",
+          "correct_answer": "Timing subprogram",
+          "options": "[\"Timing subprogram\", \"Library subprogram\", \"Report generator\", \"Initialization subprogram\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which condition is required of a valid probability measure?",
+          "correct_answer": "P(S) = 1",
+          "options": "[\"P(S) = 1\", \"P(S) = 0\", \"Disjoint probabilities are multiplied\", \"P(E) may be negative\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A server is busy for 42 minutes during a 60-minute run. What is its utilization?",
+          "correct_answer": "70%",
+          "options": "[\"60%\", \"42%\", \"30%\", \"70%\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which combination characterizes DES in the module?",
+          "correct_answer": "Stochastic, dynamic, discrete",
+          "options": "[\"Static, deterministic, continuous\", \"Static, stochastic, continuous\", \"Deterministic, static, discrete\", \"Stochastic, dynamic, discrete\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which is an advantage of a fitted theoretical distribution?",
+          "correct_answer": "It smooths irregularities from limited sample data",
+          "options": "[\"It can only produce observed values\", \"It guarantees a perfect fit\", \"It smooths irregularities from limited sample data\", \"It eliminates fitting effort\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A rule maps each experimental outcome to a real number. In probability, this rule defines a:",
+          "correct_answer": "Random variable",
+          "options": "[\"Sigma algebra\", \"Simulation clock\", \"Queue discipline\", \"Random variable\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Two disjoint events have probabilities 0.35 and 0.25. What is the probability of their union?",
+          "correct_answer": "0.60",
+          "options": "[\"0.875\", \"0.60\", \"0.10\", \"0.35\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A customer joins a line but leaves before service. This behavior is:",
+          "correct_answer": "Reneging",
+          "options": "[\"Jockeying\", \"Reneging\", \"FIFO\", \"Balking\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Interarrival times, service times, schedules, failure rates, and travel times belong primarily to:",
+          "correct_answer": "Data modeling",
+          "options": "[\"Clock initialization only\", \"Data modeling\", \"Structural modeling\", \"Queue discipline only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why are LCG constants and the seed selected carefully?",
+          "correct_answer": "To produce a long cycle before repetition",
+          "options": "[\"To produce a long cycle before repetition\", \"To eliminate the modulus\", \"To force all values to equal the mean\", \"To make every output truly nonnumeric\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In a linear congruential generator, what is Z■?",
+          "correct_answer": "The seed",
+          "options": "[\"The probability density\", \"The cycle length\", \"The seed\", \"The modulus\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In a single-server queue, a customer arrives at time 6 and the previous service ends at time 9. When does service begin?",
+          "correct_answer": "9",
+          "options": "[\"15\", \"7\", \"9\", \"6\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A customer sees a long line and decides not to enter it. This behavior is:",
+          "correct_answer": "Balking",
+          "options": "[\"Reneging\", \"Balking\", \"Faffing\", \"Jockeying\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Simulating a missile trajectory is an example of continuous modeling in:",
+          "correct_answer": "Military applications",
+          "options": "[\"Retail accounting\", \"Document formatting\", \"Set theory\", \"Military applications\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which command adds grid lines to a plot?",
+          "correct_answer": "grid on",
+          "options": "[\"disp\", \"axis equal\", \"grid on\", \"switch\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What do state-variable equations describe?",
+          "correct_answer": "How system state changes with respect to the independent variable",
+          "options": "[\"The file location of the model\", \"How system state changes with respect to the independent variable\", \"Only the initial values of outputs\", \"Only the desired report format\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "The particular predator-prey trajectories depend on parameters and:",
+          "correct_answer": "Initial conditions at time zero",
+          "options": "[\"MATLAB window size\", \"Plot marker color\", \"Initial conditions at time zero\", \"Script filename only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is \\n commonly included at the end of an fprintf format string?",
+          "correct_answer": "To move output to a new line",
+          "options": "[\"To suppress all text\", \"To move output to a new line\", \"To convert a number to a matrix\", \"To multiply the output\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What keyword closes a MATLAB if statement?",
+          "correct_answer": "end",
+          "options": "[\"endif only\", \"stop\", \"close\", \"end\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the effect of axis equal?",
+          "correct_answer": "It uses equal scale factors on both axes",
+          "options": "[\"It uses equal scale factors on both axes\", \"It creates a square matrix\", \"It forces equal x and y values\", \"It deletes axis labels\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which control structure is best when the number of repetitions is known in advance?",
+          "correct_answer": "for loop",
+          "options": "[\"for loop\", \"input command\", \"while loop only\", \"switch statement\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "When no switch case matches, which block is executed?",
+          "correct_answer": "otherwise",
+          "options": "[\"defaultcase\", \"continue\", \"otherwise\", \"elseif\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Variables created inside a MATLAB function are generally:",
+          "correct_answer": "Local to the function",
+          "options": "[\"Always stored in the base workspace\", \"Automatically global\", \"Required to be strings\", \"Local to the function\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A dam-embankment behavior study belongs to which continuous-system application area?",
+          "correct_answer": "Civil engineering",
+          "options": "[\"Queueing only\", \"Civil engineering\", \"Text processing\", \"Inventory counting\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A conservation law that remains constant along a predator-prey trajectory is useful because it:",
+          "correct_answer": "Characterizes allowable solution orbits",
+          "options": "[\"Makes populations integer-valued\", \"Removes all parameters\", \"Eliminates both differential equations\", \"Characterizes allowable solution orbits\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "If an Euler simulation is inaccurate because the step is too large, the most direct improvement is to:",
+          "correct_answer": "Reduce the time-step size",
+          "options": "[\"Delete the initial condition\", \"Replace time with an integer label\", \"Increase every state value\", \"Reduce the time-step size\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary purpose of an output equation?",
+          "correct_answer": "To calculate quantities required by the simulation consumer",
+          "options": "[\"To select the integration step automatically\", \"To define the operating system\", \"To calculate quantities required by the simulation consumer\", \"To replace all state equations\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which command opens the MATLAB editor from the command prompt?",
+          "correct_answer": "edit",
+          "options": "[\"input\", \"edit\", \"plot\", \"disp\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In the same notation, y represents the:",
+          "correct_answer": "Predator population",
+          "options": "[\"Prey population\", \"Numerical error\", \"Output label\", \"Predator population\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In g=rx-d, increasing prey population x has what effect on predator per-capita growth g?",
+          "correct_answer": "It increases g",
+          "options": "[\"It increases g\", \"It forces g to zero\", \"It decreases g\", \"It removes parameter r\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which fprintf format code is appropriate for a string?",
+          "correct_answer": "%s",
+          "options": "[\"%s\", \"%e\", \"%d\", \"%g\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "For v = 1.0:-0.2:0.0, how many loop iterations occur?",
+          "correct_answer": "6",
+          "options": "[\"10\", \"2\", \"6\", \"5\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does error estimation describe in a Monte Carlo study?",
+          "correct_answer": "Statistical error as a function of run count and other parameters",
+          "options": "[\"The spelling errors in source code\", \"The exact deterministic answer\", \"Statistical error as a function of run count and other parameters\", \"Only computer storage space\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which field is identified as an application area of Monte Carlo simulation?",
+          "correct_answer": "Finance and project management",
+          "options": "[\"Keyboard configuration only\", \"Document pagination only\", \"Finance and project management\", \"Grammar correction only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why must each line have the same number of values for the basic load approach?",
+          "correct_answer": "The data must form a rectangular matrix",
+          "options": "[\"MATLAB requires every file to be a square\", \"The command reads only strings\", \"Different rows would change the filename\", \"The data must form a rectangular matrix\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why identify the inputs with the greatest influence on output?",
+          "correct_answer": "To prioritize research and model refinement",
+          "options": "[\"To avoid defining input bounds\", \"To eliminate the model output\", \"To guarantee all inputs are equally important\", \"To prioritize research and model refinement\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does a MATLAB diary file record?",
+          "correct_answer": "Keystrokes and resulting text output",
+          "options": "[\"Only probability densities\", \"Keystrokes and resulting text output\", \"Compiled C++ code exclusively\", \"Only 3D coordinates\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What occurs immediately after random inputs are generated in the four-step Monte Carlo process?",
+          "correct_answer": "A deterministic computation is performed using them",
+          "options": "[\"The final result is reported without computation\", \"A deterministic computation is performed using them\", \"All distributions are replaced by constants\", \"The model is deleted\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the final step of the four-step Monte Carlo process?",
+          "correct_answer": "Aggregate individual-run results",
+          "options": "[\"Convert every output to text\", \"Remove random values\", \"Choose only the largest input\", \"Aggregate individual-run results\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which command identifies plotted data series by name?",
+          "correct_answer": "legend",
+          "options": "[\"legend\", \"axis square\", \"load\", \"xlabel\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why does the geometric estimate of pi generally improve with more points?",
+          "correct_answer": "The sampled area proportion tends to stabilize",
+          "options": "[\"Randomness disappears completely\", \"The true value of pi changes\", \"The square becomes smaller\", \"The sampled area proportion tends to stabilize\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which function creates a three-dimensional bar chart?",
+          "correct_answer": "bar3",
+          "options": "[\"bar\", \"bar3\", \"plot\", \"stem\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Monte Carlo simulation originated during the 1940s in work associated with:",
+          "correct_answer": "Los Alamos National Laboratory",
+          "options": "[\"Airport queue design\", \"Spreadsheet plotting\", \"MATLAB file export\", \"Los Alamos National Laboratory\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which command reads a compatible numeric text file into MATLAB?",
+          "correct_answer": "load",
+          "options": "[\"legend\", \"hold on\", \"title\", \"load\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which practice most fundamentally defines Monte Carlo simulation?",
+          "correct_answer": "Repeatedly sampling uncertain inputs across many runs",
+          "options": "[\"Solving one deterministic case exactly\", \"Replacing all inputs with their averages\", \"Repeatedly sampling uncertain inputs across many runs\", \"Advancing a clock only when events occur\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A data file has rows with unequal numbers of numeric values. Based on the module, what is the best conclusion?",
+          "correct_answer": "Basic load is not suitable without restructuring the data",
+          "options": "[\"Basic load is not suitable without restructuring the data\", \"save -ascii will repair it during reading\", \"load will automatically invent missing values\", \"plot3 should be used to read it\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Before sampling an uncertain input, what must the modeler define?",
+          "correct_answer": "Its probability distribution",
+          "options": "[\"Its exact future value\", \"A queue discipline\", \"A 3D viewing angle\", \"Its probability distribution\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In the geometric estimation of pi, random points are generated within:",
+          "correct_answer": "A square containing a quarter-circle arc",
+          "options": "[\"A queue containing servers\", \"A text file containing characters\", \"A square containing a quarter-circle arc\", \"A three-dimensional bar chart\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is a grid helpful in a 3D visualization?",
+          "correct_answer": "It improves spatial interpretation of plotted values",
+          "options": "[\"It calculates simulation error\", \"It generates random samples\", \"It improves spatial interpretation of plotted values\", \"It converts the plot to ASCII\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which command adds a title to a plot?",
+          "correct_answer": "title",
+          "options": "[\"load\", \"dlmwrite\", \"title\", \"plot3\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which statement accurately describes a key limitation of Monte Carlo results?",
+          "correct_answer": "They approximate true values rather than guarantee exact values",
+          "options": "[\"They require no sampling\", \"They cannot be generated by computers\", \"They approximate true values rather than guarantee exact values\", \"They are always deterministic constants\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which MATLAB function is another way to export a numeric array as a delimited file?",
+          "correct_answer": "dlmwrite",
+          "options": "[\"bar3\", \"input\", \"dlmwrite\", \"xlabel\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary goal of operations research?",
+          "correct_answer": "Optimize system performance to support decisions such as maximizing profit or minimizing cost",
+          "options": "[\"Validate software syntax\", \"Optimize system performance to support decisions such as maximizing profit or minimizing cost\", \"Create only informal pictures\", \"Remove mathematical models from decisions\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which UML tool is most appropriate for showing interactions between objects over time?",
+          "correct_answer": "Sequence diagram",
+          "options": "[\"Use case only\", \"Conceptual paragraph\", \"Class diagram\", \"Sequence diagram\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the primary purpose of a conceptual model?",
+          "correct_answer": "Quickly communicate the system's main qualities and capabilities",
+          "options": "[\"Replace verification and validation\", \"Provide executable code with no ambiguity\", \"Prove mathematical optimality\", \"Quickly communicate the system's main qualities and capabilities\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which is a major advantage of formal models?",
+          "correct_answer": "They support unambiguous representation and rigorous analysis",
+          "options": "[\"They require no mathematical knowledge\", \"They eliminate the need for requirements\", \"They support unambiguous representation and rigorous analysis\", \"They are always faster and easier to design\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In a concept map, directed arcs primarily indicate:",
+          "correct_answer": "Interactions between connected elements",
+          "options": "[\"Interactions between connected elements\", \"The cost of each node\", \"The file format used\", \"The validity score of the model\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the simplest form of a conceptual model identified in the module?",
+          "correct_answer": "A picture of the system",
+          "options": "[\"A stress-test report\", \"A full Simulink solver\", \"A linear-programming tableau\", \"A picture of the system\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is Simulink integration with MATLAB valuable?",
+          "correct_answer": "MATLAB algorithms can be incorporated and results exported for further analysis",
+          "options": "[\"It removes the need for simulation\", \"It limits models to one block\", \"It prevents all use of MATLAB code\", \"MATLAB algorithms can be incorporated and results exported for further analysis\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which UML tool focuses on how users or external actors use a system?",
+          "correct_answer": "Use case",
+          "options": "[\"Statechart only\", \"Use case\", \"Sequence diagram only\", \"Constraint equation\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which of the following is a stochastic OR method mentioned in the module?",
+          "correct_answer": "Markov chains",
+          "options": "[\"Manual code review\", \"Linear programming only\", \"UML class modeling\", \"Markov chains\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does model validation primarily ask?",
+          "correct_answer": "Is the model a sufficiently close approximation of the target system for its purpose?",
+          "options": "[\"Does the code compile with no syntax errors?\", \"Is the model a sufficiently close approximation of the target system for its purpose?\", \"Is every input at a boundary?\", \"Are all UML arrows labeled?\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which other stochastic OR method is identified?",
+          "correct_answer": "Queuing theory",
+          "options": "[\"ASCII export\", \"Formal debugging\", \"Queuing theory\", \"Sequence diagramming\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which UML tool is most appropriate for representing system or software classes and their relationships?",
+          "correct_answer": "Class diagram",
+          "options": "[\"Statechart only\", \"Activity diagram\", \"Stress test\", \"Class diagram\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does model verification primarily ask?",
+          "correct_answer": "Was the conceptual model translated correctly into the executable model?",
+          "options": "[\"Is UML a formalism?\", \"Is the business profit maximal?\", \"Was the conceptual model translated correctly into the executable model?\", \"Is the model close enough to the real target system?\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In a concept map, nodes represent:",
+          "correct_answer": "System concepts or elements",
+          "options": "[\"Only mathematical errors\", \"Simulation run times only\", \"Objective-function coefficients only\", \"System concepts or elements\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A model is run with minimum and maximum boundary inputs. This is a:",
+          "correct_answer": "Model stress test",
+          "options": "[\"Concept map\", \"Face validation\", \"Class diagram\", \"Model stress test\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which model type in Fishwick's perspective is primarily state-event focused?",
+          "correct_answer": "Declarative model",
+          "options": "[\"Spatial model\", \"Constraint model\", \"Declarative model\", \"Functional model\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which question should a useful conceptual model help answer?",
+          "correct_answer": "What is the system and what does it do?",
+          "options": "[\"What is the exact optimum of every objective?\", \"Which compiler produced the model?\", \"What is the system and what does it do?\", \"What is every line of executable code?\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why are conceptual models often informal?",
+          "correct_answer": "They prioritize rapid communication over detailed precision",
+          "options": "[\"They cannot use figures\", \"They prioritize rapid communication over detailed precision\", \"They exist only for statistical testing\", \"They must be mathematically executable\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A model represents rooms as elements and tracks entities inside them. It is best classified as:",
+          "correct_answer": "Spatial",
+          "options": "[\"Functional only\", \"Declarative\", \"Linear programming\", \"Spatial\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A system has physical-flow, software-control, and spatial phases. Which strategy is best?",
+          "correct_answer": "Connect suitable model types in a hybrid model",
+          "options": "[\"Use one informal picture for all analyses\", \"Connect suitable model types in a hybrid model\", \"Ignore phases that require different representations\", \"Use validation instead of modeling\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Why is orthographic projection useful in CAD and architecture?",
+          "correct_answer": "It preserves distances and directions along the projection plane",
+          "options": "[\"It removes accurate measurement\", \"It preserves distances and directions along the projection plane\", \"It exaggerates perspective depth\", \"It requires cone-shaped light\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is a Type I VV&A error?",
+          "correct_answer": "A valid model is not used",
+          "options": "[\"An invalid model is used\", \"A model valid elsewhere is misapplied\", \"A verified model is documented\", \"A valid model is not used\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which graphics API was developed by Microsoft for Windows and Xbox?",
+          "correct_answer": "Direct3D",
+          "options": "[\"OpenSceneGraph\", \"Direct3D\", \"Java 3D\", \"OpenGL\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A complex high-risk model has limited data and several possible failure modes. Which V&V strategy is strongest?",
+          "correct_answer": "Combine suitable inspection, static, dynamic, statistical, and expert methods",
+          "options": "[\"Use exactly one method regardless of context\", \"Accredit first and validate later\", \"Rely only on attractive visualization\", \"Combine suitable inspection, static, dynamic, statistical, and expert methods\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which cells are mainly responsible for low-light vision?",
+          "correct_answer": "Rods",
+          "options": "[\"Rods\", \"Pixels\", \"Vertices\", \"Cones\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which transformation changes an object's orientation?",
+          "correct_answer": "Rotation",
+          "options": "[\"Rotation\", \"Texture mapping\", \"Translation\", \"Clipping\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Accreditation is best described as:",
+          "correct_answer": "Official certification that a model is acceptable for a specific purpose",
+          "options": "[\"Official certification that a model is acceptable for a specific purpose\", \"A graphics transformation\", \"A technical method for debugging code\", \"A comparison of source files\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "In 3D graphics, a mathematical point represents:",
+          "correct_answer": "A location with no size or shape",
+          "options": "[\"A polygon surface only\", \"Direction and length without location\", \"A location with no size or shape\", \"A color with intensity\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which graphics API is cross-platform and widely used for professional high-performance graphics?",
+          "correct_answer": "OpenGL",
+          "options": "[\"Flash\", \"OpenGL\", \"XNA Game Studio\", \"Direct3D only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What does a synthetic camera produce from 3D objects and camera parameters?",
+          "correct_answer": "A 2D projected image",
+          "options": "[\"A conceptual requirement\", \"A probability distribution\", \"A verified executable model\", \"A 2D projected image\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "How does a vector differ from a point?",
+          "correct_answer": "A vector has direction and length but no fixed location",
+          "options": "[\"A vector has location but no direction\", \"A vector always has four polygons\", \"A vector must represent color\", \"A vector has direction and length but no fixed location\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What property is preserved by affine transformations?",
+          "correct_answer": "Collinearity and ratios of distances along a line",
+          "options": "[\"Collinearity and ratios of distances along a line\", \"Perspective depth\", \"All absolute distances in every direction\", \"Object color under all lights\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which light best models sunlight?",
+          "correct_answer": "Directional light",
+          "options": "[\"Ambient light only\", \"Directional light\", \"Spotlight with a narrow cone\", \"Point light at the object\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is a Type III VV&A error?",
+          "correct_answer": "A model valid for another purpose is used for an inappropriate application",
+          "options": "[\"A model is verified before validation\", \"An invalid model is correctly rejected\", \"A valid model is not used\", \"A model valid for another purpose is used for an inappropriate application\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What characterizes perspective projection?",
+          "correct_answer": "The camera is at a finite distance and acts as the center of projection",
+          "options": "[\"Projection rays are always parallel\", \"It has no projectors\", \"The camera is at a finite distance and acts as the center of projection\", \"The camera is at infinity\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Validation primarily examines:",
+          "correct_answer": "How accurately the model and results represent the simuland",
+          "options": "[\"Whether the graphics API is cross-platform\", \"Whether code matches its specification only\", \"How accurately the model and results represent the simuland\", \"Whether an authority approves use\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Verification primarily examines:",
+          "correct_answer": "Transformational accuracy from requirements to conceptual and executable models",
+          "options": "[\"Official permission to use a model\", \"Only the visual quality of results\", \"Transformational accuracy from requirements to conceptual and executable models\", \"Representational accuracy against the simuland only\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "A one-time exercise uses existing models for a specific objective. This is a:",
+          "correct_answer": "Simulation event",
+          "options": "[\"Formal proof\", \"Simulation software development project\", \"Simulation event\", \"Conceptual-model inspection\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "What is the referent?",
+          "correct_answer": "The developers' body of knowledge about the simuland",
+          "options": "[\"The output produced during execution\", \"The developers' body of knowledge about the simuland\", \"The graphics pipeline\", \"The authority granting accreditation\"]",
+          "times_missed": 0
+        },
+        {
+          "type": "multiple_choice",
+          "question": "Which cells are primarily responsible for color vision?",
+          "correct_answer": "Cones",
+          "options": "[\"Projectors\", \"Polygons\", \"Rods\", \"Cones\"]",
+          "times_missed": 0
+        }
+      ]
+    }
+  ]
+}
